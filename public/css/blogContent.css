@@ -1,0 +1,43 @@
+.blog-content-row {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+.blog-content-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #324762;
+  margin-bottom: 1.5rem;
+}
+
+.blog-content-date {
+  font-size: 1.2rem;
+  color: #2289ff;
+  margin-bottom: 1.5rem;
+}
+
+.blog-section-separator {
+  margin: 3rem 0;
+}
+
+.blog-content-textSectionTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #324762;
+  margin-bottom: 1.5rem;
+}
+
+.blog-content-text,
+.blog-content-list-text {
+  margin-bottom: 1.5rem;
+  line-height: 2.8rem;
+}
+
+.blog-content-listTitle {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.blog-content-list-text {
+  margin-right: 1.5rem;
+}/*# sourceMappingURL=blogContent.css.map */

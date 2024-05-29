@@ -1,0 +1,40 @@
+nav.navbar.navbar-expand-xl.fixed-top  
+  .container.navbar-container
+    button.navbar-toggler.collapsed(type='button' data-bs-toggle='offcanvas' data-bs-target='#navbarContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    a.navbar-brand.mobile-navbar-brand(href='/')
+      img.navbar-logo(src='/img/logo.png' alt='DiraBulgarit logo')  
+    .dropstart.currency-mobile-dropdown-btn
+      button.btn.btn-secondary.dropdown-toggle.currency-dropdown-btn(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+        img.navbar-currency-icon.mobile-navbar-active-currency-icon(src=`/img/icons/${currency.active}.svg` alt='Euro currency icon') 
+      ul.dropdown-menu.text-end.currency-dropdown-menu
+        li.currency-dropdown-menu-item 
+          img.navbar-currency-icon.mobile-navbar-not-active-currency-icon(src=`/img/icons/${currency.notActive}.svg` alt='NIS currency icon')   
+    div.offcanvas.offcanvas-end.w-auto.text-end(tabindex='-1' id='navbarContent' aria-labelledby='offcanvasNavbarLabel')
+      div.offcanvas-body 
+        div.btn-cta--container
+          button.btn-cta.btn-cta--offcanvas תאמו פגישה
+        ul.navbar-nav.align-items-xl-center.justify-content-xl-evenly
+          li.nav-item.currency-nav-item
+            .dropend
+              button.btn.btn-secondary.dropdown-toggle.currency-dropdown-btn(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                img.navbar-currency-icon.navbar-active-currency-icon(src=`/img/icons/${currency.active}.svg` alt='Euro currency icon' data-currency='euro') 
+              ul.dropdown-menu.currency-dropdown-menu
+                li.currency-dropdown-menu-item 
+                  img.navbar-currency-icon.navbar-not-active-currency-icon(src=`/img/icons/${currency.notActive}.svg` alt='NIS currency icon' data-currency='nis') 
+          li.nav-item.nav-item.align-content-center
+            a.nav-link.nav-el(href='/pricing') מחירון
+          li.nav-item.nav-item.align-content-center
+            a.nav-link.nav-el(href='/blog') חשוב לדעת
+          li.nav-item.nav-item.align-content-center
+            a.nav-link.nav-el(href='/about') מי אנחנו
+          li.nav-item.align-content-center
+            a.nav-link.nav-el(href='/invest') איך להשקיע בבולגריה
+          li.nav-item.nav-item.align-content-center
+            a.nav-link.nav-el(href='/q&a') שאלות ותשובות
+          li.nav-item.nav-item.align-content-center
+            a.nav-link.nav-el(href='/search') חיפוש נכס
+          li.nav-item.nav-item.align-content-center
+            a.nav-link.nav-el.homepage-link(href='/') עמוד ראשי
+    a.navbar-brand.laptop-navbar-brand(href='/')
+      img.navbar-logo(src='/img/logo.png' alt='DiraBulgarit logo')    

@@ -1,0 +1,45 @@
+@import 'variables';
+
+.blog-content-row {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+.blog-content-title {
+  font-size: $h4;
+  font-weight: 600;
+  color: $text-color-tertiary;
+  margin-bottom: 1.5rem;
+}
+
+.blog-content-date {
+  font-size: $h7;
+  color: $text-color-secondary;
+  margin-bottom: 1.5rem;
+}
+
+.blog-section-separator {
+  margin: 3rem 0;
+}
+
+.blog-content-textSectionTitle {
+  font-size: $h5;
+  font-weight: 600;
+  color: $text-color-tertiary;
+  margin-bottom: 1.5rem;
+}
+
+.blog-content-text,
+.blog-content-list-text {
+  margin-bottom: 1.5rem;
+  line-height: 2.8rem;
+}
+
+.blog-content-listTitle {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.blog-content-list-text {
+  margin-right: 1.5rem;
+}

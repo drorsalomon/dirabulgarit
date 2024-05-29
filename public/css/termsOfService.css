@@ -1,0 +1,24 @@
+.termsOfService-container {
+  margin: 5rem 0;
+}
+
+.termsOfService-headline-row {
+  margin-bottom: 3rem;
+}
+
+.termsOfService-headline {
+  font-size: 3.4rem;
+  font-weight: 600;
+  color: #324762;
+}
+
+.termsOfService-text-headline {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #324762;
+  margin-bottom: 1.5rem;
+}
+
+.termsOfService-text {
+  margin-bottom: 1.5rem;
+}/*# sourceMappingURL=termsOfService.css.map */

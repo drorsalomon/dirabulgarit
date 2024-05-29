@@ -1,0 +1,26 @@
+@import 'variables';
+
+.termsOfService-container {
+  margin: 5rem 0;
+}
+
+.termsOfService-headline-row {
+  margin-bottom: 3rem;
+}
+
+.termsOfService-headline {
+  font-size: $h3;
+  font-weight: 600;
+  color: $text-color-tertiary;
+}
+
+.termsOfService-text-headline {
+  font-size: $h4;
+  font-weight: 600;
+  color: $text-color-tertiary;
+  margin-bottom: 1.5rem;
+}
+
+.termsOfService-text {
+  margin-bottom: 1.5rem;
+}

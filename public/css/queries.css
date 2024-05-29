@@ -1,0 +1,613 @@
+@media only screen and (min-width: 360px) {
+  .search-filter-dropdown--btn {
+    font-size: 1.6rem !important;
+  }
+  .pagination-page-btn {
+    font-size: 1.6rem;
+  }
+  .mainpage-why-bulgaria-bg-video-container {
+    height: 60rem;
+  }
+  .asset-gallery-carousel-item {
+    height: 47rem !important;
+  }
+  .qanda-headline-img {
+    height: 27rem;
+  }
+  .pricing-card-text {
+    font-size: 1.2rem;
+  }
+  .pricing-premium-badge {
+    width: 15rem;
+  }
+}
+@media only screen and (min-width: 425px) {
+  .pricing-premium-badge {
+    width: 20rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .hero-container {
+    height: 60rem;
+  }
+  .hero-headline {
+    font-size: 4.8rem;
+  }
+  .mainpage-about-container {
+    height: 65rem;
+  }
+  .mainpage-about-headline {
+    font-size: 4.8rem;
+  }
+  .mainpage-howitworks-text {
+    font-size: 1.6rem;
+  }
+  .mainpage-why-bulgaria-bg-video-container {
+    height: 45rem;
+  }
+  .reviews-carousel-item {
+    height: 42rem;
+  }
+  .mainpage-reviews-review {
+    font-size: 1.6rem;
+  }
+  .asset-card-body-row {
+    font-size: 1.6rem;
+  }
+  .search-headline {
+    font-size: 3.4rem;
+  }
+  .asset-card-img {
+    height: 25rem;
+  }
+  .asset-card-sold-badge,
+  .asset-card-exclusive-badge {
+    font-size: 2.4rem !important;
+  }
+  .asset-gallery-zoomIn-icon {
+    height: 4rem;
+    width: 4rem;
+  }
+  .asset-gallery-carousel-item {
+    height: 58rem !important;
+  }
+  .qanda-headline-img,
+  .invest-headline-img,
+  .about-headline-img {
+    height: 31rem;
+  }
+  .qanda-headline,
+  .invest-headline,
+  .about-headline {
+    font-size: 3.4rem;
+  }
+  .accordion-button {
+    font-size: 2rem !important;
+  }
+  .accordion-body {
+    font-size: 1.6rem !important;
+  }
+  .about-partners-card {
+    height: 58rem !important;
+  }
+  .calendly-text-headline {
+    font-size: 2.4rem;
+  }
+  .calendly-inline-widget {
+    width: 40rem;
+  }
+  .pricing-premium-badge {
+    width: 14.3rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero-container {
+    height: 85rem;
+  }
+  .hero-headline {
+    font-size: 6rem;
+  }
+  .hero-text {
+    font-size: 3.4rem;
+  }
+  .search-filter-options--btn {
+    font-size: 1.6rem !important;
+  }
+  .search-filter-option--text {
+    font-size: 1.6rem;
+  }
+  input[type=text]::-webkit-input-placeholder {
+    font-size: 1.2rem;
+  }
+  input[type=text]::-moz-placeholder {
+    font-size: 1.2rem;
+  }
+  input[type=text]:-ms-input-placeholder {
+    font-size: 1.2rem;
+  }
+  input[type=text]::-ms-input-placeholder {
+    font-size: 1.2rem;
+  }
+  input[type=text]::placeholder {
+    font-size: 1.2rem;
+  }
+  .mainpage-about-container {
+    height: 90rem;
+  }
+  .mainpage-about-tag {
+    font-size: 2.4rem;
+  }
+  .mainpage-about-headline {
+    font-size: 6rem;
+  }
+  .mainpage-about-text {
+    font-size: 3.4rem;
+  }
+  .mainpage-howitworks-label {
+    font-size: 2.4rem;
+  }
+  .mainpage-why-bulgaria-bg-video-container {
+    height: 45rem;
+  }
+  .mainpage-why-bulgaria-tag {
+    font-size: 2.4rem;
+  }
+  .invest-guide-btn-container {
+    top: 85%;
+  }
+  .mainpage-hot-assets-tag {
+    font-size: 2.4rem;
+  }
+  .asset-card-title-col {
+    height: 11rem !important;
+  }
+  .asset-card-img {
+    height: 20rem;
+  }
+  .asset-card-sold-badge,
+  .asset-card-exclusive-badge {
+    font-size: 2rem !important;
+  }
+  .mainpage-rec-tag {
+    font-size: 2.4rem;
+  }
+  .reviews-carousel {
+    -webkit-transform: skewX(-8deg);
+    -ms-transform: skewX(-8deg);
+    transform: skewX(-8deg);
+  }
+  .reviews-carousel-item {
+    height: 34rem;
+  }
+  .mainpage-reviews-img {
+    height: 13rem;
+    width: 13rem;
+    -webkit-transform: translateX(-3rem) skewX(8deg);
+    -ms-transform: translateX(-3rem) skewX(8deg);
+    transform: translateX(-3rem) skewX(8deg);
+  }
+  .mainpage-reviews-name {
+    margin-right: 1rem;
+    -webkit-transform: translateX(-3rem) skewX(8deg);
+    -ms-transform: translateX(-3rem) skewX(8deg);
+    transform: translateX(-3rem) skewX(8deg);
+  }
+  .mainpage-reviews-prof {
+    -webkit-transform: translateX(-3rem) skewX(8deg);
+    -ms-transform: translateX(-3rem) skewX(8deg);
+    transform: translateX(-3rem) skewX(8deg);
+  }
+  .mainpage-reviews-review {
+    -webkit-transform: translateX(-3rem) skewX(8deg);
+    -ms-transform: translateX(-3rem) skewX(8deg);
+    transform: translateX(-3rem) skewX(8deg);
+  }
+  .search-headline-img {
+    height: 30rem;
+  }
+  .search-headline {
+    top: 30%;
+    font-size: 3.4rem;
+    line-height: 5rem;
+  }
+  .calendly-text-headline {
+    font-size: 3.4rem;
+  }
+  .calendly-inline-widget {
+    width: 55rem;
+  }
+  .asset-gallery-mainImage {
+    height: 23.3rem;
+  }
+  .asset-gallery-zoomIn-icon {
+    height: 5rem;
+    width: 5rem;
+  }
+  .asset-gallery-thumbnails-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .asset-details-description-smallViewport-container,
+  .asset-btn-smallViewport-container {
+    display: none;
+  }
+  .asset-details-description-middleViewport-col,
+  .asset-btn-middleViewport-container {
+    display: block;
+  }
+  .pricing-tag {
+    font-size: 2.4rem;
+  }
+  .pricing-premium-badge {
+    width: 17.5rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .btn-cta,
+  .btn-cta--offcanvas,
+  .invest-guide-btn,
+  .blog-card-btn,
+  .section-headline-cta-btn,
+  .share-btn,
+  .error-btn {
+    -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    outline: 2px solid;
+    outline-color: #2289ff;
+    outline-offset: 0px;
+  }
+  .btn-cta:hover,
+  .btn-cta--offcanvas:hover,
+  .invest-guide-btn:hover,
+  .blog-card-btn:hover,
+  .share-btn:hover,
+  .error-btn:hover {
+    -webkit-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    transform: translateY(-4px);
+    color: #ffffff;
+    background-color: #2289ff;
+    border-color: #2289ff;
+    border: 1px solid #2289ff;
+    -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 25px;
+  }
+  .btn-cta-white,
+  .btn-cta-asset,
+  .share-btn,
+  .share-btn-white {
+    -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .btn-cta-white:hover,
+  .btn-cta-asset:hover,
+  .share-btn-white:hover {
+    border: 1px solid;
+    -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 25px;
+    -webkit-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  .section-headline-cta-btn:hover {
+    -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 25px;
+    -webkit-filter: brightness(90%);
+    filter: brightness(90%);
+  }
+  .asset-back-to-results-btn {
+    -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .asset-back-to-results-btn:hover {
+    color: #ffffff;
+    background-color: #2289ff;
+    border-color: #ffffff;
+    -webkit-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  .mainpage-search-container {
+    display: block;
+  }
+  .mainpage-search-modal-open-btn-container {
+    display: none;
+  }
+  .mainpage-search-headline {
+    font-size: 3.4rem;
+  }
+  .mainpage-howitworks-container,
+  .mainpage-rec-container,
+  .mainpage-pricing-container {
+    padding-bottom: 8rem;
+  }
+  .mainpage-why-bulgaria-bg-video-container {
+    height: 50rem;
+  }
+  .invest-guide-btn-container {
+    top: 85%;
+  }
+  .asset-card-img {
+    height: 26rem;
+  }
+  .asset-card-sold-badge,
+  .asset-card-exclusive-badge {
+    font-size: 2.4rem !important;
+  }
+  .reviews-carousel-item {
+    height: 30rem;
+  }
+  .search-container {
+    display: block;
+  }
+  .search-modal-open-btn-container {
+    display: none;
+  }
+  .search-headline-img {
+    height: 80rem;
+  }
+  .search-headline {
+    top: 20%;
+  }
+  .search-container {
+    top: 80%;
+  }
+  .search-headline {
+    font-size: 4.8rem;
+  }
+  input[type=text]::-webkit-input-placeholder {
+    font-size: 1.6rem;
+  }
+  input[type=text]::-moz-placeholder {
+    font-size: 1.6rem;
+  }
+  input[type=text]:-ms-input-placeholder {
+    font-size: 1.6rem;
+  }
+  input[type=text]::-ms-input-placeholder {
+    font-size: 1.6rem;
+  }
+  input[type=text]::placeholder {
+    font-size: 1.6rem;
+  }
+  .search-headline {
+    line-height: 6rem;
+  }
+  .asset-search-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .asset-modal-open-btn-container {
+    display: none;
+  }
+  .asset-search-container {
+    margin: 4rem 0;
+  }
+  .asset-headline-row {
+    margin-top: 0rem !important;
+  }
+  .asset-headline {
+    margin-bottom: 4rem;
+  }
+  .asset-gallery-mainImage {
+    height: 33rem;
+  }
+  .asset-gallery-carousel-item {
+    height: 58rem !important;
+  }
+  .qanda-headline-img,
+  .invest-headline-img,
+  .about-headline-img {
+    height: 37rem;
+  }
+  .qanda-headline,
+  .invest-headline,
+  .about-headline {
+    font-size: 4.2rem;
+  }
+  .qanda-cta-btn {
+    width: 17rem !important;
+    height: 5.6rem !important;
+  }
+  .about-cta-btn {
+    width: 17rem !important;
+    height: 5.6rem !important;
+  }
+  .blog-card {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .blog-card:hover {
+    -webkit-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  .calendly-col {
+    height: 95rem;
+  }
+  .pricing-premium-badge {
+    width: 14.2rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .navbar-nav {
+    width: 100%;
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .nav-item {
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
+    padding: 0;
+    border-top: none;
+  }
+  .nav-link {
+    padding: 0 !important;
+  }
+  .btn__cta--container {
+    margin: 0;
+  }
+  .btn-cta--offcanvas {
+    border: 1px solid #2289ff !important;
+  }
+  .offcanvas-active-link {
+    color: none;
+  }
+  .nav-el {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s !important;
+  }
+  .nav-el:hover {
+    -webkit-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  .mobile-navbar-brand {
+    display: none;
+  }
+  .currency-mobile-dropdown-btn {
+    display: none;
+  }
+  .currency-nav-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .laptop-navbar-brand {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .hero-container {
+    height: 80rem;
+  }
+  .mainpage-about-container {
+    height: 85rem;
+  }
+  .asset-card-img {
+    height: 20rem;
+  }
+  .asset-card-sold-badge,
+  .asset-card-exclusive-badge {
+    font-size: 2rem !important;
+  }
+  .reviews-carousel-item {
+    height: 27rem;
+  }
+  .mainpage-reviews-img {
+    height: 16rem;
+    width: 16rem;
+  }
+  .asset-gallery-mainImage {
+    height: 43rem;
+  }
+  .asset-gallery-zoomIn-icon {
+    height: 6rem;
+    width: 6rem;
+  }
+  .qanda-headline,
+  .invest-headline,
+  .about-headline {
+    font-size: 4.8rem;
+  }
+  .qanda-cta-btn:hover,
+  .about-cta-btn:hover {
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .about-partners-card {
+    height: 62rem !important;
+  }
+  .calendly-col {
+    height: 95rem;
+  }
+  .calendly-text-container {
+    top: 15%;
+  }
+  .calendly-text-headline {
+    font-size: 4.2rem;
+  }
+  .calendly-text {
+    font-size: 2rem;
+  }
+  .error-btn:hover {
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
+  }
+  .pricing-premium-badge {
+    width: 19rem;
+  }
+  .footer-row,
+  .qanda-questions-accordion-row {
+    max-width: 99.2rem;
+    margin: auto !important;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .mainpage-hot-assets-row,
+  .mainpage-howitworks-container,
+  .mainpage-rec-container,
+  .pricing-cards-row,
+  .search-results-filters-container,
+  .search-results-container,
+  .error-main-container {
+    max-width: 140rem;
+    margin: auto !important;
+  }
+  .qanda-questions-accordion-container,
+  .about-container,
+  .partners-container,
+  .about-rec-row,
+  .pricing-container,
+  .search-container,
+  .asset-search-container,
+  .asset-headline-container,
+  .asset-details-container,
+  .asset-amenities-container,
+  .asset-video-container,
+  .asset-map-container,
+  .asset-related-assets-container {
+    max-width: 150rem;
+    margin: auto !important;
+  }
+  .hero-container {
+    height: 65rem;
+  }
+  .mainpage-about-container {
+    height: 70rem;
+  }
+  .asset-gallery-thumbnail {
+    height: 7rem;
+    width: 12rem;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    margin: 0 2rem;
+  }
+  .about-partners-card {
+    height: 58rem !important;
+  }
+  .pricing-premium-badge {
+    width: 15.5rem;
+  }
+}/*# sourceMappingURL=queries.css.map */

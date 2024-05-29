@@ -1,0 +1,84 @@
+@import 'variables';
+
+.qanda-headline-row {
+  margin-bottom: 5rem;
+}
+
+.qanda-headline-col {
+  position: relative;
+  text-align: center;
+  padding: 0 !important;
+}
+
+.qanda-headline-img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 25rem;
+  width: 100%;
+  -webkit-filter: brightness(40%);
+  filter: brightness(40%);
+}
+
+.qanda-headline {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: $h4;
+  font-weight: 600;
+  color: $bg-color-primary;
+}
+
+.qanda-questions-headline-row {
+  margin-bottom: 5rem;
+}
+
+.qanda-questions-headline {
+  font-size: $h3;
+  font-weight: 600;
+  color: $text-color-secondary;
+}
+
+.accordion {
+  margin-bottom: 5rem;
+  border-color: $bg-color-primary !important;
+}
+
+.accordion-button {
+  color: $text-color-tertiary !important;
+  background-color: $bg-color-primary !important;
+  font-size: $h6 !important;
+  font-weight: 600;
+  height: 7rem !important;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.accordion-button:hover {
+  color: $text-color-secondary !important;
+}
+
+.accordion-button:focus {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border-color: rgba(0, 0, 0, 0.125) !important;
+}
+
+.accordion-button.collapsed::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+}
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+}
+
+.accordion-body {
+  font-size: $h7;
+  color: $text-color-primary !important;
+  line-height: 2.7rem;
+  padding: 1rem 2rem !important;
+  margin: 1rem 0;
+  border-right: 4px solid $text-color-secondary;
+}

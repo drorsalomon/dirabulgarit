@@ -1,0 +1,32 @@
+@import 'variables';
+
+.siteMap-container {
+  margin: 5rem 0;
+}
+
+.siteMap-headline-row {
+  margin-bottom: 3rem;
+}
+
+.siteMap-headline {
+  font-size: $h3;
+  font-weight: 600;
+  color: $text-color-tertiary;
+}
+
+.siteMap-links-col {
+  margin-bottom: 2rem;
+}
+
+.siteMap-links {
+  font-size: $h6;
+  color: $text-color-primary;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.siteMap-links:hover {
+  color: $text-color-secondary;
+}

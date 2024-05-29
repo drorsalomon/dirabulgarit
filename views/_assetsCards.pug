@@ -1,0 +1,95 @@
+.col-10.col-md-5.col-xl-3.px-4
+    .card.asset-card(data-slug=`${asset.slug}`)
+        div.asset-card-img-container
+            if asset.sold
+                .span.badge.asset-card-sold-badge נמכר 
+            if asset.exclusive && !asset.sold
+                .span.badge.asset-card-exclusive-badge נכס בבלעדיות  
+            img.card-img-top.asset-card-img(src=`${asset.mainImage}` alt=`${asset.name}` loading="lazy")
+        .card-body
+            .container-fluid
+                .row.asset-card-body-row
+                    .col-12.p-1.asset-card-title-col.d-flex.align-items-center.justify-content-center
+                        div.card-headline-container
+                            .card-title.asset-card-title(dir='rtl')= asset.name
+                    .col-12
+                        if asset.project
+                            div.card-text-container
+                                span= asset.project 
+                                img.card-icon(src='/img/icons/building-svgrepo-com.svg' alt='Building Icon') 
+                        else
+                            div.card-text-container
+                                span= `-`
+                                img.card-icon(src='/img/icons/building-svgrepo-com.svg' alt='Building Icon')        
+                        if asset.price   
+                            div.card-text-container       
+                                span.asset-price(data-europrice=`${asset.priceBeginningAt === true ? 'החל מ' : ''}${euroSymbol + new Intl.NumberFormat().format(asset.price)}` data-nisprice=`${asset.priceBeginningAt === true ? 'החל מ' : ''}${nisSymbol + new Intl.NumberFormat().format(asset.priceNis)}`)= `${asset.priceBeginningAt === true ? 'החל מ' : '' }` + `${currencySymbol}` + `${currencySymbol === '€' ? new Intl.NumberFormat().format(asset.price) : new Intl.NumberFormat().format(asset.priceNis)}`
+                                img.card-icon(src='/img/icons/price-tag-svgrepo-com.svg' alt='Price tag icon')
+                        else
+                            div.card-text-container       
+                                span.asset-price= `-`
+                                img.card-icon(src='/img/icons/price-tag-svgrepo-com.svg' alt='Price tag icon')    
+                        if asset.city  
+                            div.card-text-container
+                                span(dir='rtl')= asset.city
+                                img.card-icon(src='/img/icons/map-svgrepo-com.svg' alt='Map Icon')
+                        else
+                            div.card-text-container
+                                span(dir='rtl')= `-`
+                                img.card-icon(src='/img/icons/map-svgrepo-com.svg' alt='Map Icon')
+                        if asset.type
+                            div.card-text-container    
+                                span= asset.type
+                                img.card-icon(src='/img/icons/house-svgrepo-com.svg' alt='House Icon')
+                        else 
+                            div.card-text-container    
+                                span= `-`
+                                img.card-icon(src='/img/icons/house-svgrepo-com.svg' alt='House Icon')
+                        if asset.oceanView   
+                            div.card-text-container  
+                                span(dir='rtl')= asset.oceanView 
+                                img.card-icon(src='/img/icons/ocean-sunset-svgrepo-com.svg' alt='Sunset ocean icon')
+                        else
+                            div.card-text-container  
+                                span(dir='rtl')= `-` 
+                                img.card-icon(src='/img/icons/ocean-sunset-svgrepo-com.svg' alt='Sunset ocean icon')   
+                        if asset.sm
+                            div.card-text-container    
+                                span(dir='rtl')= asset.sm
+                                img.card-icon(src='/img/icons/ruler-svgrepo-com.svg' alt='Ruler Icon')
+                        else
+                            div.card-text-container    
+                                span(dir='rtl')= `-`
+                                img.card-icon(src='/img/icons/ruler-svgrepo-com.svg' alt='Ruler Icon')
+                        if asset.floor 
+                            div.card-text-container    
+                                span(dir='rtl')= asset.floor 
+                                img.card-icon(src='/img/icons/floor-plan-svgrepo-com.svg' alt='Floor plan icob')
+                        else  
+                            div.card-text-container    
+                                span(dir='rtl')= `-`
+                                img.card-icon(src='/img/icons/floor-plan-svgrepo-com.svg' alt='Floor plan icob')  
+                        if asset.rooms       
+                            div.card-text-container    
+                                span= asset.rooms
+                                img.card-icon(src='/img/icons/living-room-sofa-svgrepo-com.svg' alt='Living Room Icon')
+                        else  
+                            div.card-text-container    
+                                span= `-`
+                                img.card-icon(src='/img/icons/living-room-sofa-svgrepo-com.svg' alt='Living Room Icon')  
+                        if asset.bathrooms     
+                            div.card-text-container    
+                                span= asset.bathrooms
+                                img.card-icon(src='/img/icons/bath-bathroom-bathtub-svgrepo-com.svg' alt='Bathtub Icon')
+                        else 
+                            div.card-text-container    
+                                span= `-`
+                                img.card-icon(src='/img/icons/bath-bathroom-bathtub-svgrepo-com.svg' alt='Bathtub Icon')    
+                        if asset.terraces     
+                            div.card-text-container.card-text-last-container    
+                                span= asset.terraces
+                                img.card-icon(src='/img/icons/balcony-window-svgrepo-com.svg' alt='Balcony Icon')
+                        else  
+                            div.card-text-container.card-text-last-container    
+                                span= `-`
+                                img.card-icon(src='/img/icons/balcony-window-svgrepo-com.svg' alt='Balcony Icon')      

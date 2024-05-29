@@ -1,0 +1,974 @@
+@import 'variables';
+@import 'header';
+@import 'footer';
+@import 'qAndA';
+@import 'search';
+@import 'searchResults';
+@import 'asset';
+@import 'invest';
+@import 'about';
+@import 'blog';
+@import 'blogContent';
+@import 'calendly';
+@import 'pricing';
+@import 'error';
+@import 'privacy';
+@import 'termsOfService';
+@import 'siteMap';
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.main-container {
+  font-family: 'Rubik', sans-serif;
+  font-size: $h6;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  background-color: $bg-color-primary;
+  color: $text-color-primary;
+  padding: 0 !important;
+}
+
+.header-col {
+  margin-bottom: 8rem;
+}
+
+.content-col,
+.footer-col {
+  padding: 0 !important;
+}
+
+.hero-container,
+.mainpage-search-container,
+.mainpage-about-container,
+.mainpage-howitworks-container {
+  margin-bottom: 5rem;
+}
+
+// ***** Animations *****
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  }
+
+  70% {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 25px;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 25px;
+  }
+}
+
+@-webkit-keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-10rem);
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    -webkit-transform: translateX(1rem);
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-10rem);
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    -webkit-transform: translateX(1rem);
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+@-webkit-keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(10rem);
+    transform: translateX(10rem);
+  }
+
+  80% {
+    -webkit-transform: translateX(-1rem);
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(10rem);
+    transform: translateX(10rem);
+  }
+
+  80% {
+    -webkit-transform: translateX(-1rem);
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+.pulse {
+  -webkit-animation: pulse 1.5s;
+  animation: pulse 1.5s;
+}
+
+// ***** Buttons *****
+.btn-cta,
+.btn-cta-white,
+.btn-cta--offcanvas,
+.btn-cta-asset,
+.invest-guide-btn,
+.blog-card-btn,
+.section-headline-cta-btn,
+.error-btn {
+  width: 15rem;
+  height: 5rem;
+  border-radius: 3rem;
+  font-size: $h6;
+  font-weight: 600;
+  -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+}
+
+.btn-cta,
+.btn-cta--offcanvas,
+.invest-guide-btn,
+.blog-card-btn,
+.section-headline-cta-btn,
+.error-btn {
+  border: 1px solid $text-color-secondary;
+  color: $bg-color-primary;
+  background-color: $text-color-secondary;
+}
+
+.btn-cta:focus {
+  opacity: 1;
+}
+
+.btn-cta-white,
+.btn-cta-asset,
+.share-btn-white {
+  background-color: $bg-color-primary;
+  color: $text-color-secondary;
+  -webkit-transform: translateY(-1px);
+  -ms-transform: translateY(-1px);
+  transform: translateY(-1px);
+  border: none;
+  -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 2px solid;
+  outline-color: $bg-color-primary;
+  outline-offset: 0px;
+}
+
+.section-headline-cta-btn {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.share-btn,
+.share-btn-white {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 3rem;
+  font-size: $h6;
+  font-weight: 600;
+  -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  margin-left: 1.5rem;
+  border: none;
+}
+
+.share-btn {
+  background-color: $text-color-secondary;
+}
+
+.share-btn-icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+// ***** Hero *****
+
+.hero-container {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.8)), to(rgba(26, 113, 212, 0.8))), url('/img/ObzorBurgas.webp');
+  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.8), rgba(26, 113, 212, 0.8)), url('/img/ObzorBurgas.webp');
+  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.8), rgba(26, 113, 212, 0.8)), url('/img/ObzorBurgas.webp');
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  height: 80rem;
+  padding: 0 !important;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.hero-text-col {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 0 !important;
+}
+
+.hero-headline {
+  font-size: $h2;
+  font-weight: 600;
+  color: $bg-color-primary;
+  margin-bottom: 6rem;
+  -webkit-animation-name: moveInLeft;
+  animation-name: moveInLeft;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.hero-text {
+  font-size: $h4;
+  font-weight: 600;
+  color: $bg-color-primary;
+  -webkit-animation: moveInRight 1s ease-out;
+  animation: moveInRight 1s ease-out;
+  margin-bottom: 4rem;
+}
+
+.hero-cta-btn-container {
+  text-align: center;
+}
+
+// ***** Main Page Search *****
+
+.mainpage-search-container {
+  display: none;
+}
+
+.mainpage-search-modal-open-btn-container {
+  margin: 0 2rem 5rem 2rem;
+}
+
+.mainpage-search-headline {
+  font-size: $h5;
+  font-weight: 600;
+  color: $text-color-secondary;
+  margin-bottom: 2rem;
+}
+
+.mainpage-search-text {
+  margin-bottom: 2rem;
+}
+
+.mainpage-search-modal-open-btn {
+  width: 17rem;
+  height: 5.6rem;
+  border-radius: 3rem;
+  border: 1px solid currentColor;
+  font-size: $h6;
+  font-weight: 600;
+  color: $bg-color-primary;
+  background-color: $text-color-secondary;
+  border-color: $text-color-secondary;
+  -webkit-box-shadow: rgba(34, 137, 255, 0.15) 0px 15px 40px 0px;
+  box-shadow: rgba(34, 137, 255, 0.15) 0px 15px 40px 0px;
+}
+
+.search-modal-title {
+  font-size: $h6;
+  color: $text-color-primary;
+  margin-left: 2rem;
+}
+
+.search-filter-title--headline {
+  margin-bottom: 1rem;
+}
+
+.search-modal-icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.search-modal-footer {
+  display: block !important;
+}
+
+.search-row {
+  background-color: $bg-color-primary;
+  text-align: center;
+  padding: 4rem;
+  border-radius: 4rem;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-bottom: 13.2rem;
+}
+
+.search-col {
+  padding: 2rem;
+}
+
+.search-filter-dropdown--btn {
+  font-weight: 600 !important;
+  color: $text-color-primary !important;
+  background-color: $bg-color-primary !important;
+  border: 1px solid $text-color-secondary !important;
+  border-radius: 1rem !important;
+}
+
+.search-filter-dropdown--btn::after {
+  margin-right: 0.8rem;
+}
+
+.search-filter-options-dropdown--list {
+  padding: 1rem !important;
+  border-radius: 7rem;
+  border: 1px solid $bg-color-primary !important;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.search-price-input-top-col {
+  margin-bottom: 2rem;
+}
+
+.search-filter-options--headline {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.search-filter-option--text {
+  font-size: $h7;
+  font-weight: 600;
+}
+
+.search-filter-options--col {
+  margin-bottom: 1rem;
+}
+
+.search-filter-options--btn {
+  color: $text-color-primary !important;
+  border: 1px solid $text-color-primary !important;
+  border-radius: 0.5rem !important;
+  font-size: $h7 !important;
+}
+
+.search-filter-options--btn.active {
+  color: $text-color-secondary !important;
+  border: 1px solid $text-color-secondary !important;
+  background-color: $bg-color-faded !important;
+}
+
+.search-filter-input {
+  font-size: $h6;
+  text-align: right;
+  color: $text-color-primary;
+  padding-right: 1rem;
+  border: 1px solid $text-color-secondary;
+  border-radius: 5rem;
+  width: 20rem;
+  height: 4rem;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: $input-border-glow;
+  -webkit-box-shadow: 0 0 10px $input-border-glow;
+  box-shadow: 0 0 10px $input-border-glow;
+}
+
+.btn-search {
+  width: 17rem;
+  height: 7rem;
+  border-radius: 5rem;
+  border: 1px solid $text-color-secondary;
+  font-size: $h6;
+  font-weight: 600;
+  color: $bg-color-primary;
+  background-color: $text-color-secondary;
+  border-color: $text-color-secondary;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-shadow: rgba(34, 137, 255, 0.15) 0px 15px 40px 0px;
+  box-shadow: rgba(34, 137, 255, 0.15) 0px 15px 40px 0px;
+}
+
+.btn-search:hover {
+  -webkit-filter: brightness(90%);
+  filter: brightness(90%);
+}
+
+.clear-search {
+  font-size: $h6;
+  font-weight: 600;
+  color: $text-color-primary;
+}
+
+.clear-search--text {
+  cursor: pointer;
+}
+
+.search-price-icon {
+  width: 3.3rem;
+  height: 3.3rem;
+  color: $text-color-secondary;
+}
+
+.price-divider {
+  font-size: $h4;
+}
+
+.search-price-input-max,
+.search-price-input-min,
+.modal-search-price-input-max,
+.modal-search-price-input-min {
+  font-size: $h6;
+  color: $text-color-primary;
+  height: 3rem;
+  padding-right: 1rem;
+  border: 1px solid $text-color-secondary;
+  border-radius: 3rem;
+}
+
+.search-price-input-max:focus,
+.search-price-input-min:focus,
+.modal-search-price-input-max:focus,
+.modal-search-price-input-min:focus {
+  outline: none;
+  border-color: $input-border-glow;
+  -webkit-box-shadow: 0 0 10px $input-border-glow;
+  box-shadow: 0 0 10px $input-border-glow;
+}
+
+input[type='text']::-webkit-input-placeholder {
+  font-size: $h6;
+  text-align: right;
+  margin-right: 1rem;
+}
+
+input[type='text']::-moz-placeholder {
+  font-size: $h6;
+  text-align: right;
+  margin-right: 1rem;
+}
+
+input[type='text']:-ms-input-placeholder {
+  font-size: $h6;
+  text-align: right;
+  margin-right: 1rem;
+}
+
+input[type='text']::-ms-input-placeholder {
+  font-size: $h6;
+  text-align: right;
+  margin-right: 1rem;
+}
+
+input[type='text']::placeholder {
+  font-size: $h6;
+  text-align: right;
+  margin-right: 1rem;
+}
+
+.input-error {
+  outline: 1px solid red;
+}
+
+// ***** Main Page About Us *****
+
+.mainpage-about-container {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.8)), to(rgba(26, 113, 212, 0.8))), url('/img/SozopolBurgas.webp');
+  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.8), rgba(26, 113, 212, 0.8)), url('/img/SozopolBurgas.webp');
+  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.8), rgba(26, 113, 212, 0.8)), url('/img/SozopolBurgas.webp');
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  height: 85rem;
+  -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+}
+
+.mainpage-about-text-col {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 0 !important;
+}
+
+.mainpage-about-tag {
+  font-size: $h5;
+  font-weight: 600;
+  color: $bg-color-primary;
+  margin-bottom: 1rem;
+}
+
+.mainpage-about-headline {
+  font-size: $h2;
+  font-weight: 600;
+  color: $bg-color-primary;
+  margin-bottom: 2.5rem;
+}
+
+.mainpage-about-text {
+  font-size: $h4;
+  font-weight: 600;
+  color: $bg-color-primary;
+  margin-bottom: 4rem;
+}
+
+// ***** Main Page How It Works *****
+.mainpage-howitworks-row {
+  text-align: center;
+}
+
+.mainpage-howitworks-maintext--col {
+  margin-bottom: 5rem;
+}
+
+.mainpage-howitworks-label {
+  font-size: $h5;
+  font-weight: 600;
+  color: $text-color-secondary;
+  margin-bottom: 1rem;
+}
+
+.mainpage-howitworks-mainheadline {
+  font-size: $h3;
+  font-weight: 600;
+  color: $text-color-tertiary;
+  margin-bottom: 2rem;
+}
+
+.mainpage-howitworks-steps--col {
+  margin-bottom: 3rem;
+}
+
+.mainpage-howitworks-icon {
+  width: 6rem;
+  height: 6rem;
+  color: $text-color-secondary;
+  margin-bottom: 1.5rem;
+}
+
+.mainpage-howitworks-headline {
+  font-size: $h5;
+  font-weight: 600;
+  color: $text-color-tertiary;
+  margin-bottom: 1rem;
+}
+
+.mainpage-howitworks-text {
+  font-size: $h7;
+}
+
+// ***** Main Page Why Bulgaria *****
+.mainpage-why-bulgaria-col {
+  position: relative;
+  text-align: center;
+  padding: 0 !important;
+}
+
+.mainpage-why-bulgaria-bg-video-container {
+  top: 0;
+  left: 0;
+  height: 65rem;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.3;
+  overflow: hidden;
+}
+
+.mainpage-why-bulgaria-bg-video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.mainpage-why-bulgaria-text-container {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.mainpage-why-bulgaria-tag {
+  color: $text-color-secondary;
+  font-size: $h5;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.mainpage-why-bulgaria-headline {
+  font-size: $h3;
+  font-weight: 600;
+  color: $text-color-tertiary;
+  margin-bottom: 2rem;
+}
+
+.invest-guide-btn-container {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+// ***** Main Page Hot Assets *****
+
+.mainpage-hot-assets-container {
+  background-color: $bg-color-secondary;
+  padding: 5rem 0 !important;
+  margin-bottom: 5rem;
+}
+
+.mainpage-hot-assets-row {
+  margin: 0 2rem 5rem 2rem !important;
+}
+
+.mainpage-hot-assets-headline-col {
+  margin-bottom: 5rem;
+}
+
+.mainpage-hot-assets-tag {
+  color: $text-color-secondary;
+  font-size: $h5;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.mainpage-hot-assets-headline {
+  font-size: $h3;
+  font-weight: 600;
+  color: $text-color-tertiary;
+}
+
+.asset-card {
+  cursor: pointer;
+  border-color: $bg-color-primary !important;
+  -webkit-box-shadow: rgba(66, 116, 173, 0.07) 0px 7px 40px 0px;
+  box-shadow: rgba(66, 116, 173, 0.07) 0px 7px 40px 0px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-bottom: 3rem;
+}
+
+.asset-card:hover {
+  -webkit-transform: translateY(-8px);
+  -ms-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+
+.asset-card-img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.asset-card-sold-badge,
+.asset-card-exclusive-badge {
+  font-size: $h5 !important;
+  color: $bg-color-primary;
+  position: absolute;
+  top: 10%;
+  left: unset;
+  right: 0;
+  padding: 0.5rem 3rem !important;
+  z-index: 100;
+}
+
+.asset-card-sold-badge {
+  background-color: $asset-sold;
+}
+
+.asset-card-exclusive-badge {
+  background-color: $text-color-secondary;
+}
+
+.asset-card-img {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  width: 17rem;
+  height: 17rem;
+}
+
+.asset-card-title {
+  font-size: $h5;
+  font-weight: 600;
+  color: $text-color-tertiary;
+}
+
+.card-text-container {
+  border-bottom: 1px solid $bg-color-secondary;
+  padding: 1.5rem;
+}
+
+.card-text-last-container {
+  border: none;
+}
+
+.asset-card-body-row {
+  text-align: center;
+  font-size: $h7;
+  margin-top: 1rem;
+}
+
+.card-icon {
+  margin-left: 0.5rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  color: $text-color-secondary;
+}
+
+// ***** Reviews *****
+
+.mainpage-rec-container {
+  text-align: center;
+}
+
+.mainpage-rec-maintext-col {
+  margin-bottom: 3rem;
+}
+
+.mainpage-rec-tag {
+  color: $text-color-secondary;
+  font-size: $h5;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.mainpage-rec-headline {
+  font-size: $h3;
+  font-weight: 600;
+  color: $text-color-tertiary;
+}
+
+.reviews-carousel {
+  margin-bottom: 5rem;
+}
+
+.reviews-carousel-inner {
+  background-color: $bg-color-secondary !important;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.reviews-carousel-item {
+  border: none !important;
+  background-color: $bg-color-secondary !important;
+  padding: 4rem;
+  height: 45rem;
+}
+
+.reviews-carousel-item.active {
+  background-color: $bg-color-secondary !important;
+}
+
+.mainpage-reviews-img {
+  height: 10rem;
+  width: 10rem;
+  margin-bottom: 2rem;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  shape-outside: circle(50% at 50% 50%);
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.mainpage-reviews-name {
+  font-size: $h6;
+  color: $text-color-secondary;
+  margin-bottom: 0.5rem;
+}
+
+.mainpage-reviews-prof {
+  font-size: $h6;
+  color: $text-color-primary;
+  margin-bottom: 1rem;
+}
+
+.mainpage-reviews-review {
+  font-size: $h7;
+  color: $text-color-primary;
+}
+
+.mainpage-reviews-carousel-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232289ff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.mainpage-reviews-carousel-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232289ff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.reviews-btn-container {
+  margin-bottom: 5rem;
+}
+
+// ***** Pricing *****
+.mainpage-pricing-container {
+  background-color: $bg-color-secondary;
+}
+
+.mainpage-pricing-headline-row {
+  padding-top: 5rem;
+}
+
+.pricing-tag {
+  color: $text-color-secondary;
+  font-size: $h5;
+  font-weight: 600;
+}
+
+.mainpage-pricing-headline {
+  font-size: $h3;
+  font-weight: 600;
+  color: $text-color-tertiary;
+  margin-bottom: 5rem;
+}
+
+.pricing-cards-row {
+  margin: 0 2rem 5rem 2rem !important;
+}
+
+.pricing-card-basic,
+.pricing-card-plus,
+.pricing-card-premium {
+  border-radius: 3rem !important;
+  margin-bottom: 5rem;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.pricing-card-basic:hover,
+.pricing-card-plus:hover,
+.pricing-card-premium:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.pricing-card-basic {
+  border: 2px solid $bg-color-tertiary !important;
+}
+
+.pricing-card-plus {
+  border: 2px solid $text-color-tertiary !important;
+}
+
+.pricing-card-premium {
+  border: 2px solid $text-color-secondary !important;
+  overflow: hidden;
+}
+
+.pricing-premium-col {
+  position: relative;
+}
+
+.pricing-premium-badge {
+  font-size: $h7 !important;
+  color: $bg-color-primary;
+  background-color: $text-color-secondary;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 10%;
+  right: 67%;
+  width: 12.8rem;
+}
+
+.pricing-card-main-title,
+.pricing-card-tertiary-title {
+  font-size: $h3;
+  font-weight: 600;
+  color: $text-color-tertiary !important;
+}
+
+.pricing-card-secondary-title {
+  font-size: $h6;
+  color: $text-color-primary !important;
+}
+
+.pricing-card-text {
+  font-size: $h8;
+  color: $text-color-primary !important;
+}

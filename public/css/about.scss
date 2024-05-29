@@ -1,0 +1,122 @@
+@import 'variables';
+
+.about-headline-row {
+  margin-bottom: 5rem;
+}
+
+.about-headline-col {
+  position: relative;
+  text-align: center;
+  padding: 0 !important;
+}
+
+.about-headline-img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 20rem;
+  width: 100%;
+  -webkit-filter: brightness(40%);
+  filter: brightness(40%);
+}
+
+.about-headline {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: $h4;
+  font-weight: 600;
+  color: $bg-color-primary;
+}
+
+.about-questions-headline-row {
+  margin-bottom: 5rem;
+}
+
+.about-row {
+  margin-bottom: 5rem;
+}
+
+.about-text-name {
+  font-size: $h3;
+  font-weight: 600;
+  color: $text-color-tertiary;
+  margin-bottom: 1rem;
+}
+
+.about-text-role {
+  font-size: $h5;
+  font-weight: 400;
+  color: $text-color-secondary;
+  margin-bottom: 1rem;
+}
+
+.about-text {
+  margin-bottom: 1rem;
+  line-height: 3rem;
+}
+
+.about-img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 2rem !important;
+  -webkit-filter: brightness(80%);
+  filter: brightness(80%);
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.about-partners-headline-row {
+  margin-bottom: 3rem;
+}
+
+.about-partners-headline {
+  font-size: $h3;
+  font-weight: 600;
+  color: $text-color-secondary;
+}
+
+.about-partners-card {
+  height: 57rem !important;
+  border: none !important;
+  border-radius: 1rem !important;
+  margin-bottom: 3rem;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.about-partners-img {
+  border-top-left-radius: 1rem !important;
+  border-top-right-radius: 1rem !important;
+}
+
+.about-partners-card-name {
+  font-size: $h5;
+  font-weight: 600;
+  color: $text-color-tertiary !important;
+}
+
+.about-partners-card-prof {
+  color: $text-color-secondary !important;
+  border-bottom: solid 1px $bg-color-secondary;
+  padding-bottom: 1rem !important;
+}
+
+.about-partners-text-container {
+  border: none !important;
+}
+
+.about-partners-card-text {
+  font-size: $h6 !important;
+  color: $text-color-primary !important;
+}
+
+.about-rec-row {
+  margin: 0 2rem !important;
+}
+
+.about-reviews-headline {
+  color: $text-color-secondary !important;
+}

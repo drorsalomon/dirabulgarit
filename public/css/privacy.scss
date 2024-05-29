@@ -1,0 +1,19 @@
+@import 'variables';
+
+.privacy-container {
+  margin: 5rem 0;
+}
+
+.privacy-headline-row {
+  margin-bottom: 3rem;
+}
+
+.privacy-headline {
+  font-size: $h3;
+  font-weight: 600;
+  color: $text-color-tertiary;
+}
+
+.privacy-text {
+  margin-bottom: 1.5rem;
+}

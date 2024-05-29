@@ -1,0 +1,54 @@
+@import 'variables';
+
+.calendly-row {
+  margin-bottom: 5rem;
+}
+
+.calendly-col {
+  position: relative;
+  background-color: $text-color-secondary !important;
+  height: 95rem;
+  border-radius: 1rem;
+}
+
+.calendly-text-container {
+  text-align: right;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.calendly-text-headline {
+  font-size: $h5;
+  font-weight: 600;
+  color: $bg-color-primary;
+  margin-bottom: 1.5rem;
+}
+
+.calendly-text {
+  color: $bg-color-primary;
+}
+
+.calendly-widget-container {
+  position: absolute;
+  height: 60rem;
+  top: 85%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.calendly-inline-widget {
+  height: 65rem;
+  width: 25rem;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

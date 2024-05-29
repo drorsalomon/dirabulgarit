@@ -1,0 +1,286 @@
+extends base 
+
+block content
+
+    .container-fluid.hero-container
+        .row.d-flex.align-items-center.justify-content-center                    
+            .col-10.col-lg-8.hero-text-col 
+                h1.hero-headline(dir='rtl') מרכז הנדל"ן הבולגרי לישראלים
+                div.hero-text(dir='rtl') אתר הנדל"ן הבולגרי הגדול ביותר עבור ישראלים, אלפי נכסים, אלפי הזדמנויות, פרויקטים חדשים ובלעדיים, דירות יד שנייה, דירות נופש, ודירות למגורים - "דירה בולגרית" מאגדת עבורך את הנדל"ן בבולגריה ומלווה אותך כל הדרך אל הנכס
+                div.hero-cta-btn-container
+                    button.btn-cta-white תאמו פגישה 
+
+    div.mainpage-search-modal-open-btn-container.text-center
+        div.mainpage-search-headline חיפוש נכס
+        div.mainpage-search-text לחצו על כפתור החיפוש ומצאו את הנכס שהכי מתאים למבוקשכם
+        button.mainpage-search-modal-open-btn(data-bs-toggle="modal" data-bs-target="#searchModal") חפשו נכס 
+
+    .container.d-flex.justify-content-center
+        .mainpage-search-container.w-75   
+            div.mainpage-search-headline.text-center חיפוש נכס
+            include _searchForm
+
+        include _searchModal       
+
+    .container-fluid.mainpage-about-container.overflow-hidden
+        .row.mainpage-about-row.align-items-center
+            .col-10.col-lg-8.mainpage-about-text-col
+                div.mainpage-about-tag מי אנחנו
+                div.mainpage-about-headline(dir='rtl') דירה בולגרית - נדל"ן ישראלי בבולגריה
+                div.mainpage-about-text(dir='rtl') צוות מקצועי עתיר ניסיון ששם לו מטרה אחת - ללוות משקיעים ישראלים בדרך להשקעות מוצלחות בשוק הנדל"ן הבולגרי. נהיה לצדכם משלב ההתעניינות ועד שלב קבלת המפתח.
+                button.btn-cta-white תאמו פגישה 
+
+    .container-fluid.d-flex.mainpage-howitworks-container 
+        .row.mainpage-howitworks-row.align-items-center.justify-content-center.flex-lg-row-reverse.flex-md-row-reverse.mx-4
+            .col-12.mainpage-howitworks-maintext--col
+                div.mainpage-howitworks-label התהליך
+                div.mainpage-howitworks-mainheadline איך זה עובד     
+                div.mainpage-howitworks-maintext דירה בולגרית מלווה באופן אישי ופרטני את לקוחותיה לאורך כל תהליך רכישת הנכס החל משלב החיפוש ועד שלב סגירת העסקה     
+            .col-12.col-md-6.col-lg-4.col-xl-6.col.mainpage-howitworks-steps--col
+                div.mainpage-howitworks-icon--background
+                    svg.bi.mainpage-howitworks-icon
+                        use(xlink:href='/img/icons/clipboard.svg#clipboard')
+                div.mainpage-howitworks-headline צרכים והעדפות       
+                div.mainpage-howitworks-text נערוך אתכם פגישת וידאו כדי להבין את הצרכים וההעדפות שלכם       
+            .col-12.col-md-6.col-lg-4.col-xl-6.col.mainpage-howitworks-steps--col
+                div.mainpage-howitworks-icon--background
+                    svg.bi.mainpage-howitworks-icon
+                        use(xlink:href='/img/icons/binoculars.svg#binoculars')
+                div.mainpage-howitworks-headline איתור נכס      
+                div.mainpage-howitworks-text נציג לכם מגוון נכסים לפי הקריטריונים המועדפים עליכם      
+            .col-12.col-md-6.col-lg-4.col-xl-6.col.mainpage-howitworks-steps--col
+                div.mainpage-howitworks-icon--background
+                    svg.bi.mainpage-howitworks-icon
+                        use(xlink:href='/img/icons/house.svg#house')
+                div.mainpage-howitworks-headline סיור נכסים     
+                div.mainpage-howitworks-text נלווה אתכם בשטח לראיית כל הנכסים שמצאו חן בעינייכם      
+            .col-12.col-md-6.col-lg-4.col-xl-6.col.mainpage-howitworks-steps--col
+                div.mainpage-howitworks-icon--background
+                    svg.bi.mainpage-howitworks-icon
+                        use(xlink:href='/img/icons/search.svg#search')
+                div.mainpage-howitworks-headline בדיקה משפטית       
+                div.mainpage-howitworks-text נערוך בדיקה משפטית מקיפה של הנכס בעזרת הייעוץ המשפטי שלנו בבולגריה      
+            .col-12.col-md-6.col-lg-4.col-xl-6.col.mainpage-howitworks-steps--col
+                div.mainpage-howitworks-icon--background
+                    svg.bi.mainpage-howitworks-icon
+                        use(xlink:href='/img/icons/euro-howitworks.svg#euro-howitworks')
+                div.mainpage-howitworks-headline הצעת מחיר     
+                div.mainpage-howitworks-text נסייע לכם לגבש הצעת מחיר הוגנת עבור הנכס וננהל משא ומתן עם המוכר 
+            .col-12.col-md-6.col-lg-4.col-xl-6.col.mainpage-howitworks-steps--col
+                div.mainpage-howitworks-icon--background
+                    img.mainpage-howitworks-icon(src='/img/icons/handshake-svgrepo-com.svg' alt='Handshake Icon') 
+                div.mainpage-howitworks-headline ליווי      
+                div.mainpage-howitworks-text נלווה אתכם בכל התהליך משלב איתור הנכס ועד לאחר קבלת המפתח   
+
+    .container-fluid.mainpage-why-bulgaria-container
+        .row.mainpage-why-bulgaria-row.align-items-center.justify-content-center 
+            .col.mainpage-why-bulgaria-col
+                div.mainpage-why-bulgaria-bg-video-container
+                    video(autoplay muted loop).mainpage-why-bulgaria-bg-video
+                        source(src='/videos/burgas-video-1080p.mp4' type='video/mp4')
+                div.mainpage-why-bulgaria-text-container.w-75.text-center       
+                    div.mainpage-why-bulgaria-tag השקעה          
+                    div.mainpage-why-bulgaria-headline(dir='rtl') אז למה בולגריה?
+                    div.mainpage-why-bulgaria-text(dir='rtl') הכלכלה הבולגרית נמצאת בצמיחה מתמדת שנובעת מריבוי ההשקעות במדינה ובחברותה באיחוד האירופי. מחירי הנדל"ן במדינה הינם נגישים וישנה תשואה גבוהה על ההשכרה, ביחוד באזורים התיירותיים כמו בורגס ובנסקו. הכנו עבורכם מדריך השקעה מפורט בכדי לעזור לכם בצעדים הראשונים לעבר העסקה הנחשקת.
+                div.invest-guide-btn-container
+                    button.invest-guide-btn למדריך ההשקעה
+
+    .container-fluid.mainpage-hot-assets-container
+        .row.mainpage-hot-assets-row.d-felx.justify-content-center
+            .col-12.mainpage-hot-assets-headline-col
+                .row.text-center
+                    div.mainpage-hot-assets-tag מומלץ  
+                    div.mainpage-hot-assets-headline נכסים חמים להשקעה
+            each asset in hotAssets
+                include _assetsCards
+            
+    .container-fluid.mainpage-rec-container            
+        .row.mx-4.justify-content-center
+            .col-12.mainpage-rec-maintext-col.text-center
+                div.mainpage-rec-tag המלצות 
+                div.mainpage-rec-headline מה אומרים עלינו
+            .col-12.col-md-10.reviews-carousel-col           
+                #reviewsCarousel.carousel.slide.text-center.reviews-carousel(data-bs-touch='true' data-bs-interval='15000' data-bs-ride='carousel')
+                    .carousel-inner.reviews-carousel-inner
+                        .carousel-item.active.reviews-carousel-item
+                            .row.d-flex.justify-content-center.align-items-center
+                                .col-12.col-md-5.col-xl-4
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/guyAvitanRec.webp' alt='Image of Guy Avitan the recommender')
+                                .col-md-7.col-xl-8.text-center
+                                    div.mainpage-reviews-name(dir='rtl') גיא אביטן
+                                    div.mainpage-reviews-prof(dir='rtl') כוחות הביטחון
+                                    div.mainpage-reviews-review.fst-italic(dir='rtl') "יהלי, תודה רבה על הליווי מתחילת הדרך בשלב מציאת הנכס שהכי מתאים לי בפרוייקט של Aria בה מצאת לי דירת שני חדרים, ההתנהלות מול הקבלן, העזרה בניסוח וניתוח החוזה והעידכונים השוטפים במהלך הבניה. אני יודע שזה לא הנכס האחרון שאקנה עם הליווי שלך"
+                        .carousel-item.reviews-carousel-item
+                            .row.d-flex.justify-content-center.align-items-center
+                                .col-12.col-md-5.col-xl-4    
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/eliToledoRec.webp' alt='Image of Eli Toledo the recommender')
+                                .col-md-7.col-xl-8.text-center
+                                    div.mainpage-reviews-name(dir='rtl') אלי טולדו
+                                    div.mainpage-reviews-prof(dir='rtl') נהג אוטובוס בדן
+                                    div.mainpage-reviews-review.fst-italic(dir='rtl') "אני רוצה להודות ליועצת הנדל"ן יהלי סמואלס על הטיפול המסור והמקצועי ברכישת דירה נהדרת בבולגריה. לאורך כל הדרך השרת תחושה שאפשר לסמוך עליך, להתייעץ איתך ולקבל מענה ראוי ומהיר. בנוסף, ראוי לציין את רוחב ליבך והאכפתיות, ממש כמו אחת מהמשפחה! אני בטוח שכל מי שיזכה לשירותייך בהמשך יהנה כמוני. "
+                        .carousel-item.reviews-carousel-item
+                            .row.d-flex.justify-content-center.align-items-center
+                                .col-12.col-md-5.col-xl-4      
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/avatarImg.jpg' alt='Avatar Image')
+                                .col-md-7.col-xl-8.text-center
+                                    div.mainpage-reviews-name(dir='rtl') זוהר דוד
+                                    div.mainpage-reviews-prof(dir='rtl') עורך דין
+                                    div.mainpage-reviews-review.fst-italic(dir='rtl') "אני רוצה לומר תודה ענקית ליהלי, שבליווי מסור, נחוש, אכפתי ומדוייק, הצליחה להביא עסקה שלעיתים נראתה בלתי אפשרית לסיום מוצלח. אנו מאושרים עם הדירה החדשה, המהממת שלנו בבנסקו, אין ספק כי נמשיך איתה לעסקה נוספת בבולגריה, אורית וזוהר."
+                        .carousel-item.reviews-carousel-item
+                            .row.d-flex.justify-content-center.align-items-center
+                                .col-12.col-md-5.col-xl-4     
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/avatarImg.jpg' alt='Avatar Image')
+                                .col-md-7.col-xl-8.text-center
+                                    div.mainpage-reviews-name(dir='rtl') חיים כלים
+                                    div.mainpage-reviews-prof(dir='rtl') כוחות הביטחון
+                                    div.mainpage-reviews-review.fst-italic(dir='rtl') "ליהלי התוודענו לראשונה כשחיפשנו אפיק השקעה בחו"ל ובחרנו בבורגס, יהלי המליצה לנו בחום על אתר בתחילת בניה "Aria", בהמשך הדרך הסתבר לנו כי יהלי מנהלת יעילה ונמרצת שנענתה תמיד לכל שאלה ובקשה שהעלינו...יישר כוח!"
+                        .carousel-item.reviews-carousel-item
+                            .row.d-flex.justify-content-center.align-items-center
+                                .col-12.col-md-5.col-xl-4     
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/dianGilRec.webp' alt='Avatar Image')
+                                .col-md-7.col-xl-8.text-center
+                                    div.mainpage-reviews-name(dir='rtl') דיאן וגיל
+                                    div.mainpage-reviews-prof(dir='rtl') קיבוץ מגידו
+                                    div.mainpage-reviews-review.fst-italic(dir='rtl') "הגענו ליהלי בעקבות המלצה של חבר שרכש דרכה דירה בבולגריה. נהלנו מספר שיחות עם יהלי שבהן היא תמיד היתה זמינה וענתה על כל השאלות עם המון סבלנות ונתנה תחושה של בטחון ושהיא מלווה אותנו לאורך כל הדרך. רכשנו לבסוף דירת 2 חדרים בפרויקט Euphoria שבבורגס."
+                        .carousel-item.reviews-carousel-item
+                            .row.d-flex.justify-content-center.align-items-center
+                                .col-12.col-md-5.col-xl-4      
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/avatarImg.jpg' alt='Avatar Image')
+                                .col-md-7.col-xl-8.text-center
+                                    div.mainpage-reviews-name(dir='rtl') ניסים קסבי
+                                    div.mainpage-reviews-prof(dir='rtl') מורה נהיגה
+                                    div.mainpage-reviews-review.fst-italic(dir='rtl') "רכשתי דירה בפרוייקט "Aria" בבורגס, בליווי מלא של יהלי. היא דאגה להכל. כל התקשורת מול הקבלן, הליווי מול הבנקים, כל תהליך הרכישה. בלעדיה זה לא היה קורה. מאז כבר מכרתי את הדירה ושוב כל התהליך בוצע ע"י יהלי ורכשתי דירה נוספת גדולה יותר. ממליץ בחום ובאהבה לכל המתעניין לעבוד עם יהלי ולהעזר בשירותיה המעולים."
+                        .carousel-item.reviews-carousel-item
+                            .row.d-flex.justify-content-center.align-items-center
+                                .col-12.col-md-5.col-xl-4      
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/avatarImg.jpg' alt='Avatar Image')
+                                .col-md-7.col-xl-8.text-center
+                                    div.mainpage-reviews-name(dir='rtl') רמי השאול
+                                    div.mainpage-reviews-prof(dir='rtl') כוחות הבטחון
+                                    div.mainpage-reviews-review.fst-italic(dir='rtl') "יהלי היקרה, תודה רבה לך על עבודה מקצועית ושירותית מאוד. קיבלתי מעטפת מלאה ואוזן קשבת לכל החששות שלי. אין ספק שהעסקה נסגרה בזכותך. ליווי צמוד ושוטף מול החברה המוכרת שאין שני לו. קניתי בפרויקט אופוריה בבורגס דירת 2 חדרים."
+                        .carousel-item.reviews-carousel-item
+                            .row.d-flex.justify-content-center.align-items-center
+                                .col-12.col-md-5.col-xl-4      
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/raniKurnitzRec.webp' alt='Avatar Image')
+                                .col-md-7.col-xl-8.text-center
+                                    div.mainpage-reviews-name(dir='rtl') רני קרוצניק
+                                    div.mainpage-reviews-prof(dir='rtl') מנהל פרויקטי בינוי
+                                    div.mainpage-reviews-review.fst-italic(dir='rtl') "רכשתי שתי דירות דרך דירה בולגרית, דירה במתחם נופש בסבטי ולאס ודירת מגורים בפרויקט חדש שנבנה בבורגס. הצוות של דירה בולגרית טיפל בהכל, החל ממציאת הנכס ועד ניהול משא ומתן וחתימת החוזה מול המוכרים. מאז הצוות ממשיך לעקוב ולטפל בהכל על מנת להשביח את ההשקעה. למי שמחפש להשקיע בראש שקט, זה הצוות שאתם מחפשים"
+                    button.carousel-control-prev(type='button' data-bs-target='#reviewsCarousel' data-bs-slide='prev')
+                        span.carousel-control-prev-icon.mainpage-reviews-carousel-prev-icon(aria-hidden='true')
+                        span.visually-hidden Previous
+                    button.carousel-control-next(type='button' data-bs-target='#reviewsCarousel' data-bs-slide='next')
+                        span.carousel-control-next-icon.mainpage-reviews-carousel-next-icon(aria-hidden='true')
+                        span.visually-hidden Next
+
+    .container-fluid.mainpage-pricing-container.justify-content-center              
+        .row.mx-4.justify-content-center.mainpage-pricing-headline-row
+            .col-12.pricing-maintext-col.text-center
+                div.pricing-tag לבחירתכם 
+                div.mainpage-pricing-headline מחירון חבילות ליווי                        
+        .row.justify-content-center.pricing-cards-row.flex-md-row-reverse               
+            .col-12.col-sm-7.col-md-6.col-lg-4.col-xl-4.col-xxl-3.mx-xxl-5.p-xxs-0.p-med-1
+                .card.pricing-card-basic
+                    .card-body
+                        .container-fluid
+                            .row.pricing-card-body-row
+                                .col-12
+                                    .card-title.pricing-card-main-title(dir='rtl') בסיס
+                                    .card-title.pricing-card-secondary-title(dir='rtl') איתור הנכס ואיסוף מסמכים
+                                    .card-title.pricing-card-tertiary-title(dir='rtl') 3000€ + מע"מ
+                                .col-12.my-5
+                                    div.card-text-container.text-end
+                                        span.pricing-card-text איתור נכס על פי נתוני ודרישות הלקוח
+                                        img.card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check Icon') 
+                                    div.card-text-container.text-end       
+                                        span.pricing-card-text סיור פיזי או סיור און ליין
+                                        img.card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check icon')
+                                    div.card-text-container.text-end
+                                        span.pricing-card-text בדיקה משפטית של הנכס 
+                                        img.card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check Icon')
+                                    div.card-text-container.text-end    
+                                        span.pricing-card-text ליקוט ניירת משפטית של הנכס 
+                                        img.card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check Icon')
+                                    div.card-text-container.text-end  
+                                        span.pricing-card-text כתיבת חוזה ראשוני עם עורך דין 
+                                        img.card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='check icon')
+                                    div.card-text-container.text-end    
+                                        span.pricing-card-text כתיבת וחתימת חוזה סופי בלשכת נטוריון
+                                        img.card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='check Icon')
+                                    div.card-text-container.text-end    
+                                        span.pricing-card-text ליווי הלקוח בפתיחת חשבון בנק 
+                                        img.card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='x Icon')
+                                    div.card-text-container.text-end    
+                                        span.pricing-card-text השכרת הנכס וניהול הנכס 
+                                        img.card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='x Icon')                                      
+            .col-12.col-sm-7.col-md-6.col-lg-4.col-xl-4.col-xxl-3.mx-xxl-5
+                .card.pricing-card-plus
+                    .card-body
+                        .container-fluid
+                            .row.pricing-card-body-row
+                                .col-12
+                                    .card-title.pricing-card-main-title(dir='rtl') פלוס
+                                    .card-title.pricing-card-secondary-title(dir='rtl') סגירת חוזה ופתיחת חשבון בנק
+                                    .card-title.pricing-card-tertiary-title(dir='rtl') 3990€ + מע"מ
+                                .col-12.my-5
+                                    div.card-text-container.text-end
+                                        span.pricing-card-text איתור נכס על פי נתוני ודרישות הלקוח
+                                        img.card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check Icon') 
+                                    div.card-text-container.text-end       
+                                        span.pricing-card-text סיור פיזי או סיור און ליין
+                                        img.card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check icon')
+                                    div.card-text-container.text-end
+                                        span.pricing-card-text בדיקה משפטית של הנכס 
+                                        img.card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check Icon')
+                                    div.card-text-container.text-end    
+                                        span.pricing-card-text ליקוט ניירת משפטית של הנכס 
+                                        img.card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check Icon')
+                                    div.card-text-container.text-end  
+                                        span.pricing-card-text כתיבת חוזה ראשוני עם עורך דין 
+                                        img.card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check icon')
+                                    div.card-text-container.text-end    
+                                        span.pricing-card-text כתיבת וחתימת חוזה סופי בלשכת נטוריון
+                                        img.card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check Icon')
+                                    div.card-text-container.text-end    
+                                        span.pricing-card-text ליווי הלקוח בפתיחת חשבון בנק 
+                                        img.card-icon(src='/img/icons/check-svgrepo-com.svg' alt='x Icon')
+                                    div.card-text-container.text-end    
+                                        span.pricing-card-text השכרת הנכס וניהול הנכס 
+                                        img.card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='x Icon')                                    
+            .col-12.col-sm-7.col-md-6.col-lg-4.col-xl-4.col-xxl-3.mx-xxl-5
+                .card.pricing-card-premium
+                    .card-body
+                        .container-fluid
+                            .row.pricing-card-body-row
+                                .col-12.justify-content-center.pricing-premium-col 
+                                    .span.badge.pricing-premium-badge המשתלם ביותר 
+                                    .card-title.pricing-card-main-title(dir='rtl') פרימיום
+                                    .card-title.pricing-card-secondary-title(dir='rtl') ליווי צמוד לאורך כל הדרך וניהול הנכס
+                                    .card-title.pricing-card-tertiary-title(dir='rtl') 4990€ + מע"מ
+                                .col-12.my-5
+                                    div.card-text-container.text-end
+                                        span.pricing-card-text איתור נכס על פי נתוני ודרישות הלקוח
+                                        img.card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check Icon') 
+                                    div.card-text-container.text-end       
+                                        span.pricing-card-text סיור פיזי או סיור און ליין
+                                        img.card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check icon')
+                                    div.card-text-container.text-end
+                                        span.pricing-card-text בדיקה משפטית של הנכס 
+                                        img.card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check Icon')
+                                    div.card-text-container.text-end    
+                                        span.pricing-card-text ליקוט ניירת משפטית של הנכס 
+                                        img.card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check Icon')
+                                    div.card-text-container.text-end  
+                                        span.pricing-card-text כתיבת חוזה ראשוני עם עורך דין 
+                                        img.card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check icon')
+                                    div.card-text-container.text-end    
+                                        span.pricing-card-text כתיבת וחתימת חוזה סופי בלשכת נטוריון
+                                        img.card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check Icon')
+                                    div.card-text-container.text-end    
+                                        span.pricing-card-text ליווי הלקוח בפתיחת חשבון בנק 
+                                        img.card-icon(src='/img/icons/check-svgrepo-com.svg' alt='x Icon')
+                                    div.card-text-container.text-end    
+                                        span.pricing-card-text השכרת הנכס וניהול הנכס 
+                                        img.card-icon(src='/img/icons/check-svgrepo-com.svg' alt='x Icon')    
+            .col-12.text-center.py-5    
+                button.btn-cta.pricing-cta-btn תאמו פגישה                                  

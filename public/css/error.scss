@@ -1,0 +1,41 @@
+@import 'variables';
+
+.error-main-container {
+  margin: 4rem 0;
+}
+
+.error-text-col {
+  text-align: right;
+}
+
+.error-headline {
+  font-size: $h0;
+  font-weight: 600;
+  color: $text-color-secondary;
+}
+
+.error-border {
+  background-color: $text-color-secondary;
+  height: 0.5rem;
+  border-radius: 20rem;
+  margin-bottom: 5rem;
+}
+
+.error-text {
+  font-size: $h5;
+  font-weight: 600;
+  color: $text-color-tertiary;
+  margin-bottom: 2rem;
+}
+
+.error-img-col {
+  display: none;
+}
+
+.error-img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 40rem;
+  height: 55rem;
+  border-radius: 8rem 8rem 2rem;
+}
