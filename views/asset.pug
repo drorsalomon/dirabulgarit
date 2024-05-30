@@ -16,11 +16,11 @@ block content
                 h1.asset-headline(dir='rtl')= `${asset.name}`           
 
     #assetModal.modal.fade.asset-gallery-modal.text-center(tabindex='-1' aria-labelledby='assetModalLabel' aria-hidden='true')
-        .modal-dialog.modal-dialog-centered.modal-xl
+        .modal-dialog.modal-dialog-centered
             .asset-gallery-modal-content.modal-content
-                div.text-end
+                div.text-end.fixed-top.p-3
                     button.btn-close.asset-gallery-modal-close-btn(type='button' data-bs-dismiss='modal' aria-label='Close')
-                #assetCarousel.carousel.slide.carousel-fade 
+                #assetCarousel.carousel.slide
                     .carousel-inner.asset-modal-carousel-inner
                     button.carousel-control-prev(type='button' data-bs-target='#assetCarousel' data-bs-slide='prev')
                         span.carousel-control-prev-icon.asset-gallery-carousel-prev-icon(aria-hidden='true')
@@ -150,7 +150,7 @@ block content
                         each text in asset.description.listTwo.listTwoText 
                             div.asset-details-description(dir='rtl')!= `● ` + text        
                 div.asset-btn-smallViewport-container.text-center
-                    button.btn-cta-asset תאמו פגישה
+                    button.btn-cta-asset.to-calendly-btn תאמו פגישה
                     button.share-btn-white
                         img.share-btn-icon(src='/img/icons/share-svgrepo-com-outline.svg' alt='Share icon')   
             .col-md-12.col-xl-10.asset-details-description-middleViewport-col
@@ -169,7 +169,7 @@ block content
                         each text in asset.description.listTwo.listTwoText 
                             div.asset-details-description(dir='rtl')!= `● ` + text 
                 div.asset-btn-middleViewport-container.text-center
-                    button.btn-cta-asset תאמו פגישה
+                    button.btn-cta-asset.to-calendly-btn תאמו פגישה
                     button.share-btn-white
                         img.share-btn-icon(src='/img/icons/share-svgrepo-com-outline.svg' alt='Share icon')  
 

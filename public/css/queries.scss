@@ -31,6 +31,11 @@
     font-size: $h7;
   }
 
+  .pricing-card-icon {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+
   .pricing-premium-badge {
     width: 16rem;
   }
@@ -111,6 +116,16 @@
     height: 58rem !important;
   }
 
+  .asset-gallery-carousel-prev-icon {
+    width: 4rem !important;
+    height: 4rem !important;
+  }
+
+  .asset-gallery-carousel-next-icon {
+    width: 4rem !important;
+    height: 4rem !important;
+  }
+
   // ***** Q & A *****
   // ***** Invest *****
   // ***** About *****
@@ -148,6 +163,11 @@
   }
 
   // ***** Pricing *****
+  .pricing-card-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
   .pricing-premium-badge {
     width: 15.7rem;
   }
@@ -339,6 +359,11 @@
   }
 
   // ***** Pricing *****
+  .pricing-card-icon {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+
   .pricing-tag {
     font-size: $h4;
   }
@@ -463,6 +488,18 @@
   }
 
   // ***** Asset Card *****
+  .asset-card {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  .asset-card:hover {
+    -webkit-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+
   .asset-card-img {
     height: 26rem;
   }
@@ -727,6 +764,17 @@
   // ***** Asset *****
   .asset-gallery-mainImage {
     height: 43rem;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 7% !important;
+  }
+
+  .asset-gallery-carousel-prev-icon,
+  .asset-gallery-carousel-next-icon {
+    background-color: rgba(255, 255, 255, 0.488) !important;
+    padding: 2rem !important;
   }
 
   .asset-gallery-zoomIn-icon {

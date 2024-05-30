@@ -724,16 +724,7 @@ input[type='text']::placeholder {
   border-color: $bg-color-primary !important;
   -webkit-box-shadow: rgba(66, 116, 173, 0.07) 0px 7px 40px 0px;
   box-shadow: rgba(66, 116, 173, 0.07) 0px 7px 40px 0px;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
   margin-bottom: 3rem;
-}
-
-.asset-card:hover {
-  -webkit-transform: translateY(-8px);
-  -ms-transform: translateY(-8px);
-  transform: translateY(-8px);
 }
 
 .asset-card-img-container {
@@ -965,4 +956,9 @@ input[type='text']::placeholder {
 .pricing-card-text {
   font-size: $h8;
   color: $text-color-primary !important;
+}
+
+.pricing-card-icon {
+  width: 1.3rem;
+  height: 1.3rem;
 }

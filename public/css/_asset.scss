@@ -40,6 +40,7 @@
   outline: none !important;
   border: none !important;
   color: $text-color-secondary !important;
+
   border-radius: 10rem !important;
   background-image: url("data:image/svg+xml;charset=utf8,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%232289ff' viewBox='0 0 16 16' %3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") !important;
 }
@@ -51,10 +52,6 @@
   box-shadow: none !important;
 }
 
-.asset-modal-carousel-inner {
-  width: 100% !important;
-}
-
 .asset-gallery-modal-content,
 .asset-gallery-modal-content .active,
 .asset-gallery-carousel-item .active {
@@ -64,32 +61,30 @@
 
 .asset-gallery-carousel-item {
   width: 100% !important;
-  height: 63rem !important;
-  overflow-y: scroll;
-  scrollbar-color: $text-color-secondary $text-color-primary;
-  scrollbar-width: thin;
 }
 
 .asset-gallery-carousel-item img {
   width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  width: 5% !important;
+.modal-dialog {
+  max-width: 100% !important;
+}
+
+.asset-gallery-carousel-prev-icon,
+.asset-gallery-carousel-next-icon {
+  width: 2rem !important;
+  height: 2rem !important;
 }
 
 .asset-gallery-carousel-prev-icon {
-  width: 5rem !important;
-  height: 5rem !important;
-  padding: 1rem !important;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232289ff' viewBox='0 0 8 8' %3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8' %3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
 }
 
 .asset-gallery-carousel-next-icon {
-  width: 5rem !important;
-  height: 5rem !important;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232289ff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8' %3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
 
 .asset-gallery-mainImage-modal {

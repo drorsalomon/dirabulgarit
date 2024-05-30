@@ -124,12 +124,12 @@ if (config.Elements.assetMainImg)
     config.Elements.assetThumbnailImgs.forEach((thumbNail) => {
       if (thumbNail.src === config.Elements.assetMainImg.src) {
         let markup = `<div class="carousel-item asset-gallery-carousel-item active align-content-center">
-                        <img src="${thumbNail.src}" alt="Asset image">
+                        <img class="img-fluid" src="${thumbNail.src}" alt="Asset image">
                       </div> `;
         document.querySelector('.carousel-inner').insertAdjacentHTML('afterbegin', markup);
       } else {
         let markup = `<div class="carousel-item asset-gallery-carousel-item align-content-center">
-                        <img src="${thumbNail.src}" alt="Asset image">
+                        <img class="img-fluid" src="${thumbNail.src}" alt="Asset image">
                       </div>`;
         document.querySelector('.carousel-inner').insertAdjacentHTML('afterbegin', markup);
       }
@@ -147,33 +147,11 @@ if (config.Elements.shareBtnWhite)
   });
 
 // CTA Button to Calendly
-if (config.Elements.ctaBtn)
-  config.Elements.ctaBtn.forEach((el) => {
+if (config.Elements.toCalendlyBtn)
+  config.Elements.toCalendlyBtn.forEach((el) => {
     el.addEventListener('click', function (e) {
       window.location.pathname = '/calendly';
     });
-  });
-
-// CTA Button to Calendly
-if (config.Elements.ctaBtnWhite)
-  config.Elements.ctaBtnWhite.forEach((el) => {
-    el.addEventListener('click', function (e) {
-      window.location.pathname = '/calendly';
-    });
-  });
-
-// CTA Button to Calendly
-if (config.Elements.sectionHeadlineCtaBtn)
-  config.Elements.sectionHeadlineCtaBtn.forEach((el) => {
-    el.addEventListener('click', function (e) {
-      window.location.pathname = '/calendly';
-    });
-  });
-
-// CTA Button to Calendly
-if (config.Elements.assetCtaBtn)
-  config.Elements.assetCtaBtn.addEventListener('click', function (e) {
-    window.location.pathname = '/calendly';
   });
 
 // Invest guide btn

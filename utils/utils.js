@@ -69,28 +69,28 @@ exports.buildMongooseQuery = (filter) => {
   let mongooseQuery = {};
 
   // If city filter has values, include it in the query
-  if (filter.city && filter.city.length > 0) {
-    mongooseQuery.city = { $in: sanitizer.sanitize(filter.city) };
+  if (Array.isArray(filter.city) && filter.city.length > 0) {
+    mongooseQuery.city = { $in: filter.city.map((city) => sanitizer.sanitize(city)) };
   }
 
   // If rooms filter has values, include it in the query
-  if (filter.rooms && filter.rooms.length > 0) {
-    mongooseQuery.rooms = { $in: sanitizer.sanitize(filter.rooms) };
+  if (Array.isArray(filter.rooms) && filter.rooms.length > 0) {
+    mongooseQuery.rooms = { $in: filter.rooms.map((room) => sanitizer.sanitize(room)) };
   }
 
   // If type filter has values, include it in the query
-  if (filter.type && filter.type.length > 0) {
-    mongooseQuery.type = { $in: sanitizer.sanitize(filter.type) };
+  if (Array.isArray(filter.type) && filter.type.length > 0) {
+    mongooseQuery.type = { $in: filter.type.map((type) => sanitizer.sanitize(type)) };
   }
 
   // If project filter has values, include it in the query
-  if (filter.project && filter.project.length > 0) {
-    mongooseQuery.project = { $in: sanitizer.sanitize(filter.project) };
+  if (Array.isArray(filter.project) && filter.project.length > 0) {
+    mongooseQuery.project = { $in: filter.project.map((project) => sanitizer.sanitize(project)) };
   }
 
-  // If oceanView filter has a value, include it in the query
-  if (filter.oceanView && filter.oceanView.length > 0) {
-    mongooseQuery.oceanView = { $in: sanitizer.sanitize(filter.oceanView) };
+  // If oceanView filter has values, include it in the query
+  if (Array.isArray(filter.oceanView) && filter.oceanView.length > 0) {
+    mongooseQuery.oceanView = { $in: filter.oceanView.map((view) => sanitizer.sanitize(view)) };
   }
 
   // If priceMin and priceMax filters have values, include them in the query
