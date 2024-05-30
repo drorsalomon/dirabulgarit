@@ -138,19 +138,12 @@ if (config.Elements.assetMainImg)
 
 if (config.Elements.shareBtn)
   config.Elements.shareBtn.addEventListener('click', async () => {
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: 'מצאתי עמוד ממש מעניין!',
-          text: 'מצאתי עמוד ממש מעניין!',
-          url: window.location.href,
-        });
-      } catch (error) {
-        console.error('Error sharing:', error);
-      }
-    } else {
-      alert('תקלה! לצערנו שיתוף העמוד לא נתמך על ידי הדפדפן שלך.');
-    }
+    utils.addNavigator();
+  });
+
+if (config.Elements.shareBtnWhite)
+  config.Elements.shareBtnWhite.addEventListener('click', async () => {
+    utils.addNavigator();
   });
 
 // CTA Button to Calendly
@@ -167,6 +160,20 @@ if (config.Elements.ctaBtnWhite)
     el.addEventListener('click', function (e) {
       window.location.pathname = '/calendly';
     });
+  });
+
+// CTA Button to Calendly
+if (config.Elements.sectionHeadlineCtaBtn)
+  config.Elements.sectionHeadlineCtaBtn.forEach((el) => {
+    el.addEventListener('click', function (e) {
+      window.location.pathname = '/calendly';
+    });
+  });
+
+// CTA Button to Calendly
+if (config.Elements.assetCtaBtn)
+  config.Elements.assetCtaBtn.addEventListener('click', function (e) {
+    window.location.pathname = '/calendly';
   });
 
 // Invest guide btn

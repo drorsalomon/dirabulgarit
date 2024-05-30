@@ -3,8 +3,11 @@ export const Elements = {
   ctaBtn: document.querySelectorAll('.btn-cta'),
   ctaBtnWhite: document.querySelectorAll('.btn-cta-white'),
   pricingCtaBtn: document.querySelector('.pricing-cta-btn'),
+  assetCtaBtn: document.querySelector('.btn-cta-asset'),
   investGuideBtn: document.querySelector('.invest-guide-btn'),
+  sectionHeadlineCtaBtn: document.querySelectorAll('.section-headline-cta-btn'),
   shareBtn: document.querySelector('.share-btn'),
+  shareBtnWhite: document.querySelector('.share-btn-white'),
   backToSearchResultsBtn: document.querySelector('.asset-back-to-results-btn'),
   errorBtn: document.querySelector('.error-btn'),
   // Navbar

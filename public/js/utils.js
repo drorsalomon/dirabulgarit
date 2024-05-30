@@ -334,3 +334,19 @@ export const animatePulse = (elements) => {
     }
   });
 };
+
+export const addNavigator = async () => {
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: 'מצאתי עמוד ממש מעניין!',
+        text: 'מצאתי עמוד ממש מעניין!',
+        url: window.location.href,
+      });
+    } catch (error) {
+      console.error('Error sharing:', error);
+    }
+  } else {
+    alert('תקלה! לצערנו שיתוף העמוד לא נתמך על ידי הדפדפן שלך.');
+  }
+};

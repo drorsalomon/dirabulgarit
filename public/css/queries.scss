@@ -32,7 +32,7 @@
   }
 
   .pricing-premium-badge {
-    width: 15rem;
+    width: 16rem;
   }
 }
 
@@ -149,7 +149,7 @@
 
   // ***** Pricing *****
   .pricing-premium-badge {
-    width: 14.3rem;
+    width: 15.7rem;
   }
 }
 
@@ -344,7 +344,7 @@
   }
 
   .pricing-premium-badge {
-    width: 17.5rem;
+    width: 19.5rem;
   }
 }
 
@@ -603,8 +603,24 @@
   }
 
   // ***** Pricing *****
+  .pricing-card-basic,
+  .pricing-card-plus,
+  .pricing-card-premium {
+    -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .pricing-card-basic:hover,
+  .pricing-card-plus:hover,
+  .pricing-card-premium:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
   .pricing-premium-badge {
-    width: 14.2rem;
+    width: 15.8rem;
   }
 }
 
@@ -764,7 +780,7 @@
 
   // ***** Pricing *****
   .pricing-premium-badge {
-    width: 19rem;
+    width: 21rem;
   }
 
   // ***** Footer *****
@@ -834,6 +850,6 @@
 
   // ***** Pricing *****
   .pricing-premium-badge {
-    width: 15.5rem;
+    width: 18rem;
   }
 }
