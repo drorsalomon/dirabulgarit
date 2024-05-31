@@ -8,9 +8,6 @@
   .mainpage-why-bulgaria-bg-video-container {
     height: 60rem;
   }
-  .asset-gallery-carousel-item {
-    height: 47rem !important;
-  }
   .qanda-headline-img {
     height: 27rem;
   }
@@ -436,6 +433,10 @@
   .asset-gallery-carousel-item {
     height: 58rem !important;
   }
+  .carousel-icon-container {
+    background-color: rgba(255, 255, 255, 0.488) !important;
+    padding: 0.8rem !important;
+  }
   .qanda-headline-img,
   .invest-headline-img,
   .about-headline-img {
@@ -566,11 +567,6 @@
   .carousel-control-prev,
   .carousel-control-next {
     width: 7% !important;
-  }
-  .asset-gallery-carousel-prev-icon,
-  .asset-gallery-carousel-next-icon {
-    background-color: rgba(255, 255, 255, 0.488) !important;
-    padding: 2rem !important;
   }
   .asset-gallery-zoomIn-icon {
     height: 6rem;

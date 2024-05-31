@@ -6,7 +6,6 @@ const router = express.Router();
 router.post('/:currency', viewsController.setCurrency);
 
 router.use(viewsController.getCurrency);
-//router.post('/upload', viewsController.uploadImages);
 
 router.get('/', viewsController.getOverview);
 router.get('/search', viewsController.getSearch);

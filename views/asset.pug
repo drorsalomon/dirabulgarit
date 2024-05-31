@@ -18,16 +18,22 @@ block content
     #assetModal.modal.fade.asset-gallery-modal.text-center(tabindex='-1' aria-labelledby='assetModalLabel' aria-hidden='true')
         .modal-dialog.modal-dialog-centered
             .asset-gallery-modal-content.modal-content
-                div.text-end.fixed-top.p-3
-                    button.btn-close.asset-gallery-modal-close-btn(type='button' data-bs-dismiss='modal' aria-label='Close')
+                .row.justify-content-around
+                    .col-6    
+                        div.text-end.px-4 
+                            div.asset-gallery-img-text(dir='rtl')= `${asset.name}` 
+                    .col-6
+                        div.text-end.p-3 
+                            button.btn-close.asset-gallery-modal-close-btn.p-2(type='button' data-bs-dismiss='modal' aria-label='Close')
                 #assetCarousel.carousel.slide
                     .carousel-inner.asset-modal-carousel-inner
                     button.carousel-control-prev(type='button' data-bs-target='#assetCarousel' data-bs-slide='prev')
-                        span.carousel-control-prev-icon.asset-gallery-carousel-prev-icon(aria-hidden='true')
-                        span.visually-hidden Previous
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-prev-icon.asset-gallery-carousel-prev-icon(aria-hidden='true')
                     button.carousel-control-next(type='button' data-bs-target='#assetCarousel' data-bs-slide='next')
-                        span.carousel-control-next-icon.asset-gallery-carousel-next-icon(aria-hidden='true')
-                        span.visually-hidden Next
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-next-icon.asset-gallery-carousel-next-icon(aria-hidden='true')                           
+            
 
     .container-fluid.asset-details-container
         .row.asset-details-row.mx-4.gx-md-5.justify-content-center
