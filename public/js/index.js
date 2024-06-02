@@ -154,6 +154,18 @@ if (config.Elements.toCalendlyBtn)
     });
   });
 
+// To About btn
+if (config.Elements.toAboutBtn)
+  config.Elements.toAboutBtn.addEventListener('click', function (e) {
+    window.location.pathname = '/about';
+  });
+
+// To blog btn
+if (config.Elements.toBlogBtn)
+  config.Elements.toBlogBtn.addEventListener('click', function (e) {
+    window.location.pathname = '/blog';
+  });
+
 // Invest guide btn
 if (config.Elements.investGuideBtn)
   config.Elements.investGuideBtn.addEventListener('click', function (e) {
@@ -173,19 +185,13 @@ if (config.Elements.errorBtn)
   });
 
 // Asset Card
-if (config.Elements.assetCards)
-  config.Elements.assetCards.forEach((el) => {
-    el.addEventListener('click', function (e) {
-      window.location.pathname = `/asset/${el.dataset.slug}`;
-    });
-  });
+if (config.Elements.assetCards) utils.getPageBySlug(config.Elements.assetCards, 'asset');
 
-if (config.Elements.blogCards)
-  config.Elements.blogCards.forEach((el) => {
-    el.addEventListener('click', function (e) {
-      window.location.pathname = `/blog/${el.dataset.slug}`;
-    });
-  });
+// Main Page Blog Buttons
+if (config.Elements.mainPageBlogBtn) utils.getPageBySlug(config.Elements.mainPageBlogBtn, 'blog');
+
+// Blog Cards
+if (config.Elements.blogCards) utils.getPageBySlug(config.Elements.blogCards, 'blog');
 
 // Add text to search dd buttons and fix price min-max user input
 if (config.Elements.searchDdBtnCity) utils.ddBtnTextSetter(config.Elements.searchDdBtnCity, config.Elements.searchFilterBtnCity);
@@ -396,7 +402,7 @@ if (config.Elements.paginationPrevPageBtn && config.Elements.paginationNextPageB
 }
 
 // Animate pulse for buttons
-const animatedElementsArray = [config.Elements.ctaBtnWhite[0], config.Elements.ctaBtnWhite[1], config.Elements.pricingCtaBtn];
+const animatedElementsArray = [config.Elements.ctaBtnWhite[0], config.Elements.pricingCtaBtn];
 
 document.addEventListener('scroll', () => {
   utils.animatePulse(animatedElementsArray);

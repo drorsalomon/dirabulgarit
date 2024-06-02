@@ -28,7 +28,16 @@ block content
                 div.mainpage-about-tag מי אנחנו
                 div.mainpage-about-headline(dir='rtl') דירה בולגרית - נדל"ן ישראלי בבולגריה
                 div.mainpage-about-text(dir='rtl') צוות מקצועי עתיר ניסיון ששם לו מטרה אחת - ללוות משקיעים ישראלים בדרך להשקעות מוצלחות בשוק הנדל"ן הבולגרי. נהיה לצדכם משלב ההתעניינות ועד שלב קבלת המפתח.
-                button.btn-cta-white.to-calendly-btn תאמו פגישה 
+            .col-10.col-lg-8.mainpage-about-images-col 
+                .row.justify-content-center 
+                    .col-12.col-sm-4
+                        img.mainpage-about-img(src="/img/Seven-Rila-Lakes-Bulgaria.webp" alt="Seven rila lakes in bulgaria" loading="lazy")
+                    .col-12.col-sm-4
+                        img.mainpage-about-img(src="/img/sofia-flowers.webp" alt="A flower garden in Sofia Bulgaria" loading="lazy")
+                    .col-12.col-sm-4
+                        img.mainpage-about-img(src="/img/sofia-skyline.webp" alt="Sofia Bulgaria downtown skyline" loading="lazy")
+                    .col-12.col-sm-4.my-4
+                        button.btn-cta-white.to-about-btn הכירו את הצוות
 
     .container-fluid.d-flex.mainpage-howitworks-container 
         .row.mainpage-howitworks-row.align-items-center.justify-content-center.flex-lg-row-reverse.flex-md-row-reverse.mx-4
@@ -283,4 +292,67 @@ block content
                                         span.pricing-card-text השכרת הנכס וניהול הנכס 
                                         img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='x Icon')    
             .col-12.text-center.py-5    
-                button.btn-cta.pricing-cta-btn.to-calendly-btn תאמו פגישה                                  
+                button.btn-cta.pricing-cta-btn.to-calendly-btn תאמו פגישה  
+
+    .container-fluid.mainpage-blog-container
+        .row.mainpage-blog-headline-row.d-felx.justify-content-center
+            .col-12.mainpage-blog-headline-col
+                .row.text-center
+                    div.mainpage-blog-tag חשוב לדעת
+                    div.mainpage-blog-headline כתבות נבחרות מהבלוג שלנו
+        .row.mainpage-blog-cards-row.d-felx.justify-content-center.flex-md-row-reverse.mx-4 
+            .col-12.col-md-6.col-lg-3
+                .card.mainpage-blog-card.py-3
+                    .card-body
+                        .container-fluid
+                            .row.mainpage-blog-card-body-row.text-center
+                                .col-12
+                                    img.mainpage-blog-icon(src='/img/icons/israel-shekel-currency-symbol-svgrepo-com-white.svg' alt='Israel flag Icon')
+                                    .card-title.mainpage-blog-card-title הסיבות לפופולריות של בולגריה בקרב ישראלים
+                                .col-12.my-2
+                                    div.d-flex.align-content-center.justify-content-end.py-3 
+                                        span.mainpage-blog-card-text(dir="rtl") בהתחשב במדינות הפופולריות ביותר לרכישת נכס בחו"ל בקרב ישראלים, כדאי להדגיש את בולגריה. נופי ים יפים, אקלים מתון, מספר רב של אטרקציות ומונומנטים אדריכליים מושכים את אזרחי ישראל...
+                                .col-12.my-2        
+                                    button.mainpage-blog-card-btn(data-slug="הסיבות-לפופולריות-של-בולגריה-בקרב-רוכשי-נכסים-ישראלים") להמשך קריאה
+            .col-12.col-md-6.col-lg-3
+                .card.mainpage-blog-card.py-3
+                    .card-body
+                        .container-fluid
+                            .row.mainpage-blog-card-body-row.text-center
+                                .col-12
+                                    img.mainpage-blog-icon(src='/img/icons/graph-property-svgrepo-com-white.svg' alt='House Graph Icon')
+                                    .card-title.mainpage-blog-card-title ניתוח מחירי הנכסים בבולגריה בשנת 2024
+                                .col-12.my-2
+                                    div.d-flex.align-content-center.justify-content-end.py-3 
+                                        span.mainpage-blog-card-text(dir="rtl") בהשוואה לשאר מדינות באירופה, בולגריה קטנה אך מעניינת מאוד. בולגריה היא יעד פופולרי בקרב תיירים בגלל הנופים הציוריים, הארכיטקטורה המרתקת, הים העדין והפסגות המושלגות זרם...
+                                .col-12.my-2.align-content-end      
+                                    button.mainpage-blog-card-btn(data-slug="ניתוח-מחירי-הנכסים-בבולגריה-בשנת-2024") להמשך קריאה
+            .col-12.col-md-6.col-lg-3
+                .card.mainpage-blog-card.py-3
+                    .card-body
+                        .container-fluid
+                            .row.mainpage-blog-card-body-row.text-center
+                                .col-12.justify-content-center
+                                    img.mainpage-blog-icon(src='/img/icons/mountaint-landscape-svgrepo-com-white.svg' alt='House Graph Icon')
+                                    .card-title.mainpage-blog-card-title  מבט מקיף על איכות החיים בבולגריה
+                                .col-12.my-2
+                                    div.d-flex.align-content-center.justify-content-end.py-3 
+                                        span.mainpage-blog-card-text(dir="rtl") בולגריה היא מדינה טובה לחיות בה. יש לה אקלים מתון, אקולוגיה נקייה, נופים מהפנטים ואתרי נופש רבים ותושבים מאוד ידידותיים ומסבירי פנים. אנשים המבקרים בבולגריה מדברים לעתים...
+                                .col-12.my-2        
+                                    button.mainpage-blog-card-btn(data-slug="לחבק-את-בולגריה-מבט-מקיף-על-איכות-החיים-במדינה") להמשך קריאה
+            .col-12.col-md-6.col-lg-3
+                .card.mainpage-blog-card.py-3
+                    .card-body
+                        .container-fluid
+                            .row.mainpage-blog-card-body-row.text-center
+                                .col-12.justify-content-center
+                                    img.mainpage-blog-icon(src='/img/icons/house-thumbs-up-svgrepo-com-white.svg' alt='House with thumbs up Icon')
+                                    .card-title.mainpage-blog-card-title(dir="rtl") באיזה סוג נכס כדאי להשקיע בבולגריה?
+                                .col-12.my-2
+                                    div.d-flex.align-content-center.justify-content-end.py-3 
+                                        span.mainpage-blog-card-text(dir="rtl") בולגריה היא מדינה טובה להשקעה. עם עלות דיור נמוכה יחסית, לבולגריה יש פוטנציאל פנאי גדול, יתר על כן, מאז 2007 היא חברה באיחוד האירופי. כל זר יכול לקנות דירות בבולגריה באופן חופשי...
+                                .col-12.my-2        
+                                    button.mainpage-blog-card-btn(data-slug="באיזה-סוג-נכס-כדאי-להשקיע-בבולגריה?") להמשך קריאה
+        .row.mainpage-blog-btn-row.d-felx.justify-content-center
+            .col-12.text-center.py-3    
+                button.btn-cta.to-blog-btn לעמוד הבלוג  

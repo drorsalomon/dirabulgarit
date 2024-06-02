@@ -302,6 +302,14 @@ export const clearDuplicates = (searchFilterObj) => {
   return searchFilterObj.oceanView;
 };
 
+export const getPageBySlug = (elementArray, page) => {
+  elementArray.forEach((el) => {
+    el.addEventListener('click', function (e) {
+      window.location.pathname = `/${page}/${el.dataset.slug}`;
+    });
+  });
+};
+
 export const inView = (element) => {
   if (element) {
     const elementHeight = element.clientHeight;

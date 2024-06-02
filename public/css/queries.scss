@@ -57,11 +57,24 @@
 
   // ***** Main Page About *****
   .mainpage-about-container {
-    height: 65rem;
+    height: 85rem;
+  }
+
+  .mainpage-about-text-col {
+    top: 39%;
+  }
+
+  .mainpage-about-images-col {
+    top: 73%;
   }
 
   .mainpage-about-headline {
     font-size: $h1;
+  }
+
+  .mainpage-about-img {
+    width: 15rem;
+    height: 10rem;
   }
 
   // ***** How it works *****
@@ -214,7 +227,15 @@
 
   // ***** Main Page About *****
   .mainpage-about-container {
-    height: 90rem;
+    height: 100rem;
+  }
+
+  .mainpage-about-text-col {
+    top: 39%;
+  }
+
+  .mainpage-about-images-col {
+    top: 75%;
   }
 
   .mainpage-about-tag {
@@ -227,6 +248,11 @@
 
   .mainpage-about-text {
     font-size: $h3;
+  }
+
+  .mainpage-about-img {
+    width: 20rem;
+    height: 15rem;
   }
 
   // ***** How it works *****
@@ -305,6 +331,11 @@
     -webkit-transform: translateX(-3rem) skewX(8deg);
     -ms-transform: translateX(-3rem) skewX(8deg);
     transform: translateX(-3rem) skewX(8deg);
+  }
+
+  // ***** Main Page Blog *****
+  .mainpage-blog-tag {
+    font-size: $h4;
   }
 
   // ***** Search *****
@@ -407,15 +438,20 @@
 
   .btn-cta-white,
   .btn-cta-asset,
+  .mainpage-blog-card-btn,
   .share-btn,
   .share-btn-white {
     -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
     -o-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
     transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    outline: 2px solid;
+    outline-color: $bg-color-primary;
+    outline-offset: 0px;
   }
 
   .btn-cta-white:hover,
   .btn-cta-asset:hover,
+  .mainpage-blog-card-btn:hover,
   .share-btn-white:hover {
     border: 1px solid;
     -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -735,7 +771,20 @@
 
   // ***** Main Page About *****
   .mainpage-about-container {
-    height: 85rem;
+    height: 105rem;
+  }
+
+  .mainpage-about-text-col {
+    top: 36%;
+  }
+
+  .mainpage-about-images-col {
+    top: 73%;
+  }
+
+  .mainpage-about-img {
+    width: 23rem;
+    height: 18rem;
   }
 
   // ***** Asset Card *****
@@ -869,7 +918,20 @@
 
   // ***** Main Page About *****
   .mainpage-about-container {
-    height: 70rem;
+    height: 100rem;
+  }
+
+  .mainpage-about-text-col {
+    top: 34%;
+  }
+
+  .mainpage-about-images-col {
+    top: 68%;
+  }
+
+  .mainpage-about-img {
+    width: 27rem;
+    height: 22rem;
   }
 
   // ***** Asset *****

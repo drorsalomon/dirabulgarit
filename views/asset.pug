@@ -21,11 +21,11 @@ block content
                 .row.justify-content-around
                     .col-6    
                         div.text-end.px-4 
-                            div.asset-gallery-img-text(dir='rtl')= `${asset.name}` 
+                            div.asset-gallery-img-text(dir='rtl')= `${asset.project}` 
                     .col-6
                         div.text-end.p-3 
                             button.btn-close.asset-gallery-modal-close-btn.p-2(type='button' data-bs-dismiss='modal' aria-label='Close')
-                #assetCarousel.carousel.slide
+                #assetCarousel.carousel.slide(data-bs-touch='true' data-bs-interval='30000' data-bs-ride='carousel')
                     .carousel-inner.asset-modal-carousel-inner
                     button.carousel-control-prev(type='button' data-bs-target='#assetCarousel' data-bs-slide='prev')
                         div.carousel-icon-container.d-flex.align-content-center.justify-content-center

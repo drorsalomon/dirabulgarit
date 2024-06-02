@@ -90,6 +90,7 @@ exports.buildMongooseQuery = (filter) => {
 
   // If oceanView filter has values, include it in the query
   if (Array.isArray(filter.oceanView) && filter.oceanView.length > 0) {
+    console.log(filter.oceanView);
     mongooseQuery.oceanView = { $in: filter.oceanView.map((view) => sanitizer.sanitize(view)) };
   }
 

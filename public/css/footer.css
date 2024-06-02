@@ -1,6 +1,7 @@
 footer {
   background-color: #2289ff;
   color: #ffffff;
+  border-top-left-radius: 8rem;
 }
 
 .footer-logo-col {
