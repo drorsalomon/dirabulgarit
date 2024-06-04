@@ -43,8 +43,8 @@ export const getFormData = (cityFilter, roomsFilter, typeFilet, projectFilter, o
     type: [],
     project: [],
     oceanView: [],
-    priceMin: '0',
-    priceMax: '1000000',
+    priceMin: '',
+    priceMax: '',
     id: '',
     name: '',
   };
@@ -61,26 +61,33 @@ export const getFormData = (cityFilter, roomsFilter, typeFilet, projectFilter, o
     if (el.classList.contains('active')) searchFilterObj.type.push(el.innerText);
   });
 
-  projectFilter.forEach((el) => {
-    if (el.classList.contains('active')) searchFilterObj.project.push(el.innerText);
-  });
-
   oceanViewFilter.forEach((el) => {
     if (el.classList.contains('active')) searchFilterObj.oceanView.push(el.innerText);
   });
 
-  if (priceMinInput.value) searchFilterObj.priceMin = parseInt(priceMinInput.value.replace(/,|€/gi, ''));
+  projectFilter.forEach((el) => {
+    if (el.classList.contains('active')) searchFilterObj.project.push(el.innerText);
+  });
 
-  if (priceMaxInput.value) searchFilterObj.priceMax = parseInt(priceMaxInput.value.replace(/,|€/gi, ''));
+  if (searchFilterObj.project.length > 0) {
+    searchFilterObj = emptyFilterObjBesideProjects(searchFilterObj);
+    return searchFilterObj;
+  }
+
+  if (priceMinInput.value) searchFilterObj.priceMin = parseInt(priceMinInput.value.replace(/,|€|₪/gi, ''));
+
+  if (priceMaxInput.value) searchFilterObj.priceMax = parseInt(priceMaxInput.value.replace(/,|€|₪/gi, ''));
 
   if (idInput.value) {
     searchFilterObj = emptyFilterObj(searchFilterObj);
     searchFilterObj.id = idInput.value;
+    return searchFilterObj;
   }
 
   if (nameInput.value) {
     searchFilterObj = emptyFilterObj(searchFilterObj);
     searchFilterObj.name = nameInput.value;
+    return searchFilterObj;
   }
 
   return searchFilterObj;
@@ -90,13 +97,31 @@ const emptyFilterObj = (filterObj) => {
   filterObj = {
     city: [],
     rooms: [],
+    type: [],
+    project: [],
     oceanView: [],
-    priceMin: '0',
-    priceMax: '1000000',
+    priceMin: '',
+    priceMax: '',
     id: '',
     name: '',
   };
   return filterObj;
+};
+
+const emptyFilterObjBesideProjects = (filterObj) => {
+  let emptyFilterObj = {
+    city: [],
+    rooms: [],
+    type: [],
+    project: [],
+    oceanView: [],
+    priceMin: '',
+    priceMax: '',
+    id: '',
+    name: '',
+  };
+  emptyFilterObj.project = filterObj.project;
+  return emptyFilterObj;
 };
 
 export const btnAddActive = (searchFilterObj, filterBtn, type, notModal = true, ddBtn) => {
@@ -227,9 +252,19 @@ export const priceInputSetter = (inputMin, inputMax, onLoad = false, notModal = 
           ddBtn.innerText = ddBtn.dataset.original;
           ddBtn.appendChild(priceText);
         }
+      } else if (!inputMin.value && !inputMax.value) {
+        //inputMin.value = currencySymbol + '0';
+        // inputMax.value = currencySymbol + '1,000,000';
+        if (notModal) {
+          const priceText = document.createTextNode(' (' + currencySymbol + '0' + ' - ' + currencySymbol + '1,000,000' + ')');
+          ddBtn.innerText = ddBtn.dataset.original;
+          ddBtn.appendChild(priceText);
+        }
       }
     });
   } else {
+    console.log(inputMin.value);
+    console.log(inputMax.value);
     inputMin.value = inputMin.value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     inputMax.value = inputMax.value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     if (inputMin.value && inputMax.value) {
@@ -256,6 +291,14 @@ export const priceInputSetter = (inputMin, inputMax, onLoad = false, notModal = 
         ddBtn.innerText = ddBtn.dataset.original;
         ddBtn.appendChild(priceText);
       }
+    } else if (!inputMin.value && !inputMax.value) {
+      //inputMin.value = currencySymbol + inputMin.value;
+      //inputMax.value = currencySymbol + '1,000,000';
+      if (notModal) {
+        const priceText = document.createTextNode(' (' + currencySymbol + '0' + ' - ' + currencySymbol + '1,000,000' + ')');
+        ddBtn.innerText = ddBtn.dataset.original;
+        ddBtn.appendChild(priceText);
+      }
     }
   }
 };
@@ -267,8 +310,8 @@ export const clearSearchChoices = (searchFilterObj, ddBtn, filterBtn, input) => 
     type: [],
     project: [],
     oceanView: [],
-    priceMin: '0',
-    priceMax: '1000000',
+    priceMin: '',
+    priceMax: '',
     id: '',
     name: '',
   };

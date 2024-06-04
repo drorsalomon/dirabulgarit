@@ -122,12 +122,12 @@ form.search-form
                 li
                     .row.d-flex.align-items-center.justify-content-center
                         .col-auto.d-flex                                                                               
-                            input.search-input.search-price-input-max.price-input.flex-fill(type='text' placeholder="€1,000,000" maxlength="10" dir='rtl')                                                                                                      
+                            input.search-input.search-price-input-max.price-input.flex-fill(type='text' placeholder=`${currencySymbol}1,000,000` maxlength="10" dir='rtl')                                                                                                      
                         .col-auto
                             div.price-divider-container.text-center    
                                 span.price-divider -     
                         .col-auto.d-flex                                                                      
-                            input.search-input.search-price-input-min.price-input.flex-fill(type='text' placeholder="€0" maxlength="10" dir='rtl') 
+                            input.search-input.search-price-input-min.price-input.flex-fill(type='text' placeholder=`${currencySymbol}0` maxlength="10" dir='rtl') 
         .col-6.search-col.d-flex
             input.search-input.search-filter-input.search-input__id.flex-fill(type='text' placeholder='חיפוש לפי מספר נכס' aria-label='Username' aria-describedby='basic-addon1')
         .col-6.search-col.d-flex

@@ -22,6 +22,12 @@ html(lang="en")
             script(defer src='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.js')
             script(defer src='https://unpkg.com/axios/dist/axios.min.js')
             script(defer src='/js/bundle.js')
+            script(async src="https://www.googletagmanager.com/gtag/js?id=G-W0YWPR71R9")
+            script.
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-W0YWPR71R9');
             title דירה בולגרית
 
     body

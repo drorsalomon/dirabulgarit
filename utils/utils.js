@@ -95,7 +95,13 @@ exports.buildMongooseQuery = (filter) => {
   }
 
   // If priceMin and priceMax filters have values, include them in the query
-  if (filter.priceMin && filter.priceMax) {
+  if (!filter.priceMin && !filter.priceMax) {
+    mongooseQuery.price = { $gte: 0, $lte: 1000000 };
+  } else if (filter.priceMin && !filter.priceMax) {
+    mongooseQuery.price = { $gte: sanitizer.sanitize(filter.priceMin), $lte: 1000000 };
+  } else if (!filter.priceMin && filter.priceMax) {
+    mongooseQuery.price = { $gte: 0, $lte: sanitizer.sanitize(filter.priceMax) };
+  } else if (filter.priceMin && filter.priceMax) {
     mongooseQuery.price = { $gte: sanitizer.sanitize(filter.priceMin), $lte: sanitizer.sanitize(filter.priceMax) };
   }
 
