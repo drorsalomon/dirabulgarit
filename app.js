@@ -39,6 +39,8 @@ app.use(
           'https://*.cloudflare.com',
           'https://assets.calendly.com',
           'https://www.youtube.com',
+          'https://www.googletagmanager.com',
+          'https://www.google-analytics.com',
         ],
         frameSrc: ["'self'", 'https://calendly.com', 'https://www.youtube.com/'],
         objectSrc: ["'none'"],
