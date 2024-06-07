@@ -1,14 +1,11 @@
 const express = require('express');
 const viewsController = require('../controllers/viewsController');
-const importDevData = require('../dev-data/data/import-dev-data');
 
 const router = express.Router();
 
 router.post('/:currency', viewsController.setCurrency);
 
 router.use(viewsController.getCurrency);
-
-//router.use('/upload', importDevData.uploadImages);
 
 router.get('/', viewsController.getOverview);
 router.get('/search', viewsController.getSearch);
