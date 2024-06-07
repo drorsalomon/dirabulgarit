@@ -7,11 +7,46 @@ block content
             .col.calendly-col
                 div.calendly-text-container.text-center 
                     h1.calendly-text-headline(dir='rtl') אתם מוזמנים ליצור איתנו קשר!
-                    div.calendly-text(dir='rtl')  בחרו את התאריך והזמן שהכי נוחים לכם מהאפשרויות הפתוחות.            
-                    div.calendly-widget-container
-                        <div class="calendly-inline-widget" data-url="https://calendly.com/d/cpyw-n8j-8fp/adasdd?text_color=5c5e64&primary_color=2289ff"></div>
+                    div.calendly-text(dir='rtl') <strong>1.</strong> אתם יכולים <strong>להשאיר לנו פרטים</strong> ונחזור אליכם בהקדם
+                    div#crmWebToEntityForm.crmWebToEntityForm
+                        form.contact-us-form#webform6296617000000479035(action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads6296617000000479035 method='POST' accept-charset='UTF-8' novalidate)
+                            input(type='text' style='display:none;' name='xnQsjsdp' value='59a0780e6b2791aec2fc494a0d52812511ef98c0f6123210fdc332d6fa0b9e22')
+                            input#zc_gad(type='hidden' name='zc_gad' value='')
+                            input(type='text' style='display:none;' name='xmIwtLD' value='7334e6acba558f934b954c69f5851611538edbf846a3d2f15f807f241012015c2f9c9c0839f214a112e56e062e05be4f')
+                            input(type='text' style='display:none;' name='actionType' value='TGVhZHM=')
+                            input(type='text' style='display:none;' name='returnURL' value='https://www.dirabulgarit.com/calendly')
+                            .row.contact-us-row.align-items-center
+                                .col-12.contact-us-col.d-flex.justify-content-end
+                                    input.contact-us-input.contact-us-name-input.form-control(type='text' name='Last Name' maxlength='200' placeholder='שם' aria-label='name' aria-describedby='basic-addon1' required)                            
+                                    .invalid-tooltip אנא הכניסו שם
+                                .col-12.contact-us-col.d-flex.justify-content-end
+                                    input.contact-us-input.contact-us-phone-input.form-control(type='text' name='Phone' maxlength='10' placeholder='טלפון' aria-label='phone' aria-describedby='basic-addon1' pattern='[0-9]{10}' required)
+                                    .invalid-tooltip.contact-us-phone-invalid אנא הכניסו מספר טלפון תקין
+                                .col-12.contact-us-col.d-flex.justify-content-end 
+                                    input.contact-us-input.contact-us-email-input.form-control(type='email' ftype='email' autocomplete='false' name='Email' crmlabel='' maxlength='100' placeholder='אימייל  ' aria-label='email' aria-describedby='basic-addon1' pattern='[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}' required)
+                                    .invalid-tooltip.contact-us-email-invalid אנא הכניסו אימייל תקין
+                                .col-12.contact-us-col
+                                    input.contact-us-button.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='שליחה' title='Submit')
+                                    input.contact-us-button.mx-3(type='reset' class='zcwf_button' name='reset' value='ניקוי' title='Reset')
+                    div.calendly-text(dir='rtl') <strong>2.</strong> אתם יכולים לבחור סוכן בלחיצה על הכפתור ולקבוע <strong>פגישת וידאו</strong> בזמן שמתאים לכם  
+                    .dropdown.calendly-agents-dropdown
+                        button.btn.btn-secondary.dropdown-toggle.calendly-agents-button(type='button' data-bs-toggle='dropdown' aria-expanded='false' dir='rtl') בחרו סוכן
+                        ul.dropdown-menu.calendly-agents-list
+                            li
+                                span.dropdown-item.calendly-agents-choice.calendly-agent-yeheli(data-agent='yeheli' dir='rtl') יהלי סמואלס 
+                                    img.calendly-agent-img(src='/img/yeheli-circle.jpeg' alt='Yeheli Samuels picture')
+                            li
+                                span.dropdown-item.calendly-agents-choice.calendly-agent-shimon(data-agent='shimon' dir='rtl') שמעון שלמה 
+                                    img.calendly-agent-img(src='/img/shimon-circle.jpg' alt='Shimon Shlomo picture')
+                            li
+                                span.dropdown-item.calendly-agents-choice.calendly-agent-olga(data-agent='olga' dir='rtl') אולגה בילביץ'
+                                    img.calendly-agent-img(src='/img/olga-circle.jpg' alt='Olga Bilevich picture')         
+                    div.calendly-widget-container.calendly-widget-yeheli
+                        <div class="calendly-inline-widget" data-url="https://calendly.com/yeheli/video-meeting-dira-bulgarit?text_color=5c5e64&primary_color=2289ff"></div>
                         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
-
-
-                
+                    div.calendly-widget-container.calendly-widget-shimon
+                        <div class="calendly-inline-widget" data-url="https://calendly.com/simon-ekke/meet-with-me?text_color=5c5e64&primary_color=2289ff"></div>
+                        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                    div.calendly-widget-container.calendly-widget-olga
+                        <div class="calendly-inline-widget" data-url="https://calendly.com/ola-mgkm/meet-with-me?text_color=5c5e64&primary_color=2289ff"></div>
+                        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>

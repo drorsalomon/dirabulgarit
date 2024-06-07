@@ -7,14 +7,14 @@
 .calendly-col {
   position: relative;
   background-color: $text-color-secondary !important;
-  height: 95rem;
+  height: 125rem;
   border-radius: 1rem;
 }
 
 .calendly-text-container {
   text-align: right;
   position: absolute;
-  top: 15%;
+  top: 22%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -22,7 +22,7 @@
 }
 
 .calendly-text-headline {
-  font-size: $h5;
+  font-size: $h4;
   font-weight: 600;
   color: $bg-color-primary;
   margin-bottom: 1.5rem;
@@ -30,23 +30,103 @@
 
 .calendly-text {
   color: $bg-color-primary;
+  margin-bottom: 1.5rem;
+}
+
+.contact-us-col {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.contact-us-input {
+  font-size: $h6 !important;
+  text-align: right !important;
+  color: $text-color-primary !important;
+  border: 1px solid $text-color-secondary !important;
+  border-radius: 5rem !important;
+  height: 4rem !important;
+}
+
+.contact-us-input:focus {
+  outline: none;
+  border-color: $input-border-glow !important;
+  -webkit-box-shadow: 0 0 10px $input-border-glow !important;
+  box-shadow: 0 0 10px $input-border-glow !important;
+}
+
+.invalid-tooltip {
+  font-size: $h7 !important;
+}
+
+.contact-us-button {
+  margin-bottom: 2rem;
+  width: 9rem !important;
+  height: 3rem !important;
+  background-color: $bg-color-primary;
+  color: $text-color-secondary;
+  border: none;
+  -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+}
+
+.calendly-agents-button {
+  color: $text-color-secondary !important;
+  background-color: $bg-color-primary !important;
+  width: 13rem;
+  height: 4rem !important;
+  border-radius: 3rem !important;
+  border: 1px solid $bg-color-primary !important;
+  font-size: $h6 !important;
+  font-weight: 600 !important;
+  -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+}
+
+.calendly-agents-button::after {
+  margin-right: 1.5rem;
+}
+
+.calendly-agents-list {
+  border: none !important;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15) !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+.calendly-agents-choice {
+  font-size: $h6;
+  color: $text-color-primary !important;
+  margin: 0 !important;
+  cursor: pointer;
+}
+
+.calendly-agents-choice:hover {
+  background-color: $bg-color-faded !important;
+}
+
+.calendly-agent-img {
+  height: 3rem;
+  border-radius: 50%;
+  margin-right: 1rem;
 }
 
 .calendly-widget-container {
   position: absolute;
-  height: 60rem;
-  top: 85%;
+  height: fit-content;
+  top: 235%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  display: none;
 }
 
 .calendly-inline-widget {
   height: 65rem;
   width: 25rem;
   position: absolute;
-  top: 110%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);

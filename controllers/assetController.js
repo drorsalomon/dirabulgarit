@@ -12,7 +12,6 @@ let assetsArray = [];
 exports.getSearchResults = catchAsync(async (req, res, next) => {
   try {
     mongooseQuery = Utils.buildMongooseQuery(req.body.filter);
-
     // Define sort options based on the 'sort' variable
     let sortOptions;
     if (req.params.sort === 'price') {

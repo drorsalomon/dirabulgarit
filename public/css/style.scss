@@ -183,7 +183,8 @@ body {
 .blog-card-btn,
 .mainpage-blog-card-btn,
 .section-headline-cta-btn,
-.error-btn {
+.error-btn,
+.contact-us-button {
   width: 15rem;
   height: 5rem;
   border-radius: 3rem;
@@ -452,16 +453,8 @@ body {
   color: $bg-color-primary;
   background-color: $text-color-secondary;
   border-color: $text-color-secondary;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
   -webkit-box-shadow: rgba(34, 137, 255, 0.15) 0px 15px 40px 0px;
   box-shadow: rgba(34, 137, 255, 0.15) 0px 15px 40px 0px;
-}
-
-.btn-search:hover {
-  -webkit-filter: brightness(90%);
-  filter: brightness(90%);
 }
 
 .clear-search {

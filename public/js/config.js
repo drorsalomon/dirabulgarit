@@ -73,6 +73,21 @@ export const Elements = {
   assetPrice: document.querySelectorAll('.asset-price'),
   // Blog
   blogCards: document.querySelectorAll('.blog-card'),
+  // Contact Us
+  contactUsForm: document.querySelector('.contact-us-form'),
+  contactUsNameInput: document.querySelector('.contact-us-name-input'),
+  contactUsPhoneInput: document.querySelector('.contact-us-phone-input'),
+  contactUsEmailInput: document.querySelector('.contact-us-email-input'),
+  contactUsPhoneInvalid: document.querySelector('.contact-us-phone-invalid '),
+  contactUsEmailInvalid: document.querySelector('.contact-us-email-invalid '),
+  calendlyAgentsBtn: document.querySelector('.calendly-agents-button'),
+  calendlyAgentsChoices: document.querySelectorAll('.calendly-agents-choice'),
+  calendlyWidgetYeheli: document.querySelector('.calendly-widget-yeheli'),
+  calendlyWidgetShimon: document.querySelector('.calendly-widget-shimon'),
+  calendlyWidgetOlga: document.querySelector('.calendly-widget-olga'),
+  calendlyAgentYeheli: document.querySelector('.calendly-agent-yeheli'),
+  calendlyAgentShimon: document.querySelector('.calendly-agent-shimon'),
+  calendlyAgentOlga: document.querySelector('.calendly-agent-olga'),
 };
 
 export const CURRENCY_KEY = 'currency';

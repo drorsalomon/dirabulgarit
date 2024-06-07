@@ -4,7 +4,7 @@ const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 const dotenv = require('dotenv');
 const axios = require('axios');
-const schedule = require('node-schedule');
+const cron = require('node-cron');
 const Utils = require('../utils/utils');
 const moment = require('moment');
 
@@ -45,26 +45,33 @@ const euroToNisExchange = async () => {
   }
 };
 
-const dailyAssetPriceNisUpdate = schedule.scheduleJob('0 0 0 * * *', async function () {
-  try {
-    let counter = 0;
-    let currentTimeDate = new Date();
-    console.log(`***** Daily price update STARTED at: ${currentTimeDate.toLocaleString()} *****`);
-    const euroToNisRate = await euroToNisExchange();
-    console.log('1 Euro = ' + euroToNisRate + ' Nis');
-    const assets = await Asset.find({});
-    for (let asset of assets) {
-      if (asset.price !== undefined) {
-        const newPriceNis = asset.price * euroToNisRate;
-        await Asset.updateOne({ _id: asset._id }, { $set: { priceNis: Math.floor(newPriceNis) } });
-        console.log(`Updated Asset priceNis to: ${Math.floor(newPriceNis)}, Asset ${++counter} out of ${assets.length}`);
+const dailyAssetPriceNisUpdate = cron.schedule(
+  '0 0 * * *',
+  async function () {
+    try {
+      let counter = 0;
+      let currentTimeDate = new Date();
+      console.log(`***** Daily price update STARTED at: ${currentTimeDate.toLocaleString()} *****`);
+      const euroToNisRate = await euroToNisExchange();
+      console.log('1 Euro = ' + euroToNisRate + ' Nis');
+      const assets = await Asset.find({});
+      for (let asset of assets) {
+        if (asset.price !== undefined) {
+          const newPriceNis = asset.price * euroToNisRate;
+          await Asset.updateOne({ _id: asset._id }, { $set: { priceNis: Math.floor(newPriceNis) } });
+          console.log(`Updated Asset priceNis to: ${Math.floor(newPriceNis)}, Asset ${++counter} out of ${assets.length}`);
+        }
       }
+      console.log(`***** Daily price update ENDED at: ${currentTimeDate.toLocaleString()} *****`);
+    } catch (err) {
+      console.error(err);
     }
-    console.log(`***** Daily price update ENDED at: ${currentTimeDate.toLocaleString()} *****`);
-  } catch (err) {
-    console.error(err);
-  }
-});
+  },
+  {
+    scheduled: true,
+    timezone: 'Israel',
+  },
+);
 
 exports.setCurrency = catchAsync(async (req, res, next) => {
   try {
@@ -162,3 +169,44 @@ exports.getTermsOfService = (req, res) => {
 exports.getSiteMap = (req, res) => {
   res.status(200).render('siteMap');
 };
+
+exports.getCalendlyLead = catchAsync(async (req, res) => {
+  try {
+    const calendlyLeadCreatedAt = req.body.created_at;
+    const calendlyLeadName = req.body.payload.name;
+    const calendlyLeadQuestions = req.body.payload.questions_and_answers;
+    console.log(calendlyLeadCreatedAt);
+    console.log(calendlyLeadName);
+    console.log(calendlyLeadQuestions);
+    // Map the Calendly data to Zoho CRM Lead fields
+    // const leadData = {
+    //   data: [
+    //     {
+    //       First_Name: calendlyLeadName,
+    //       Last_Name: invitee.last_name,
+    //       Email: invitee.email,
+    //       Description: `Calendly Event: ${event.name}`,
+    //     },
+    //   ],
+    // };
+
+    // Zoho CRM API endpoint
+    // const zohoUrl = 'https://www.zohoapis.com/crm/v2/Leads';
+
+    // // Zoho CRM OAuth token (replace with your actual token)
+    // const zohoAuthToken = 'YOUR_ZOHO_AUTH_TOKEN';
+
+    // // Send a POST request to Zoho CRM to create a new lead
+    // const response = await axios.post(zohoUrl, leadData, {
+    //     headers: {
+    //         'Authorization': `Zoho-oauthtoken ${zohoAuthToken}`,
+    //         'Content-Type': 'application/json'
+    //     }
+    // });
+
+    res.status(200).json(response.data);
+  } catch (error) {
+    console.error('Error creating lead in Zoho CRM:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
