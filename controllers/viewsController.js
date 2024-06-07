@@ -177,7 +177,10 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
     const calendlyLeadQuestions = req.body.payload.questions_and_answers;
     const calendlyLeadEventTime = req.body.payload.scheduled_event.start_time;
 
-    console.log(req.body);
+    console.log('LEAD NAME: ' + calendlyLeadName);
+    console.log('LEAD EMAIL: ' + calendlyLeadEmail);
+    console.log('LEAD QUESTION: ' + calendlyLeadQuestions[0].answer);
+    console.log('LEAD EVENT TIME:' + calendlyLeadEventTime);
 
     // Map the Calendly data to Zoho CRM Lead fields
     const leadData = {
