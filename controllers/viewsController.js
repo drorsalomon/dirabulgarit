@@ -172,41 +172,38 @@ exports.getSiteMap = (req, res) => {
 
 exports.getCalendlyLead = catchAsync(async (req, res) => {
   try {
-    const calendlyLeadCreatedAt = req.body.created_at;
     const calendlyLeadName = req.body.payload.name;
+    const calendlyLeadEmail = req.body.payload.email;
     const calendlyLeadQuestions = req.body.payload.questions_and_answers;
-    console.log(calendlyLeadCreatedAt);
-    console.log(calendlyLeadName);
-    console.log(calendlyLeadQuestions);
+    const calendlyLeadEventTime = req.body.payload.scheduled_event.start_time;
+
     // Map the Calendly data to Zoho CRM Lead fields
-    // const leadData = {
-    //   data: [
-    //     {
-    //       First_Name: calendlyLeadName,
-    //       Last_Name: invitee.last_name,
-    //       Email: invitee.email,
-    //       Description: `Calendly Event: ${event.name}`,
-    //     },
-    //   ],
-    // };
+    const leadData = {
+      data: [
+        {
+          Last_Name: calendlyLeadName,
+          Email: calendlyLeadEmail,
+          Phone: calendlyLeadQuestions[0].answer,
+          Description: `Meeting time: ${calendlyLeadEventTime} /// Additional Information: ${calendlyLeadQuestions[1].answer}`,
+          Lead_Source: 'Calendly',
+        },
+      ],
+    };
 
-    // Zoho CRM API endpoint
-    // const zohoUrl = 'https://www.zohoapis.com/crm/v2/Leads';
+    // Send a POST request to Zoho CRM to create a new lead
+    const res = await axios({
+      method: 'POST',
+      url: process.env.ZOHO_URL,
+      data: leadData,
+      headers: {
+        Authorization: `Zoho-oauthtoken ${process.env.ZOHO_ACCESS_TOKEN}`,
+        'Content-Type': 'application/json',
+      },
+    });
 
-    // // Zoho CRM OAuth token (replace with your actual token)
-    // const zohoAuthToken = 'YOUR_ZOHO_AUTH_TOKEN';
-
-    // // Send a POST request to Zoho CRM to create a new lead
-    // const response = await axios.post(zohoUrl, leadData, {
-    //     headers: {
-    //         'Authorization': `Zoho-oauthtoken ${zohoAuthToken}`,
-    //         'Content-Type': 'application/json'
-    //     }
-    // });
-
-    res.status(200).json(response.data);
+    res.status(200).json(res);
   } catch (error) {
-    console.error('Error creating lead in Zoho CRM:', error);
+    console.error('Error creating lead in Zoho CRM:', error.data.data);
     res.status(500).send('Internal Server Error');
   }
 });

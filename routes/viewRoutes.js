@@ -3,6 +3,7 @@ const viewsController = require('../controllers/viewsController');
 
 const router = express.Router();
 
+router.post('/calendly-webhook', viewsController.getCalendlyLead);
 router.post('/:currency', viewsController.setCurrency);
 
 router.use(viewsController.getCurrency);
@@ -18,6 +19,5 @@ router.get('/pricing', viewsController.getPricing);
 router.get('/privacy', viewsController.getPrivacy);
 router.get('/terms-of-service', viewsController.getTermsOfService);
 router.get('/site-map', viewsController.getSiteMap);
-router.post('/calendly-webhook', viewsController.getCalendlyLead);
 
 module.exports = router;

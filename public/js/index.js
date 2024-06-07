@@ -433,7 +433,6 @@ if (config.Elements.contactUsEmailInput)
 if (config.Elements.calendlyAgentsChoices)
   config.Elements.calendlyAgentsChoices.forEach((el) => {
     el.addEventListener('click', function (e) {
-      console.log(el.dataset.agent);
       if (el.dataset.agent === 'yeheli') {
         config.Elements.calendlyWidgetYeheli.style.display = 'block';
         el.classList.add('search-results-filters-active');
