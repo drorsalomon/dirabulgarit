@@ -201,23 +201,9 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
       },
     });
 
-    console.log('Zoho CRM Response:', response.data);
-
-    res.status(200).json(response.data);
+    res.status(200).json(res);
   } catch (error) {
-    if (error.response) {
-      // The request was made and the server responded with a status code
-      // that falls out of the range of 2xx
-      console.error('Error response from Zoho CRM:', error.response.data);
-      res.status(500).json({ error: error.response.data });
-    } else if (error.request) {
-      // The request was made but no response was received
-      console.error('No response received from Zoho CRM:', error.request);
-      res.status(500).json({ error: 'No response from Zoho CRM' });
-    } else {
-      // Something happened in setting up the request that triggered an Error
-      console.error('Error creating lead in Zoho CRM:', error.message);
-      res.status(500).json({ error: error.message });
-    }
+    console.error('Error creating lead in Zoho CRM:', error);
+    res.status(500).send('Internal Server Error');
   }
 });
