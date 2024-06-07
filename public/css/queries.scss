@@ -34,6 +34,11 @@
   .pricing-premium-badge {
     width: 16rem;
   }
+
+  // ***** Contact Us *****
+  .calendly-widget-container {
+    top: 200%;
+  }
 }
 
 // Chrome - Mobile
@@ -161,9 +166,17 @@
     height: 58rem !important;
   }
 
-  // ***** Calendly *****
+  // ***** Contact Us *****
+  .calendly-col {
+    height: 135rem;
+  }
+
+  .calendly-text-container {
+    top: 25%;
+  }
+
   .calendly-widget-container {
-    top: 238%;
+    top: 223%;
   }
 
   .calendly-inline-widget {
@@ -349,7 +362,7 @@
     line-height: 5rem;
   }
 
-  // ***** Calendly *****
+  // ***** Contact Us *****
   .calendly-text-headline {
     font-size: $h3;
   }
@@ -359,7 +372,7 @@
   }
 
   .calendly-widget-container {
-    top: 236%;
+    top: 225%;
   }
 
   // ***** Asset *****
@@ -685,9 +698,9 @@
     transform: translateY(-8px);
   }
 
-  // ***** Calendly *****
+  // ***** Contact Us *****
   .calendly-widget-container {
-    top: 257%;
+    top: 245%;
   }
 
   // ***** Pricing *****
@@ -860,7 +873,7 @@
     height: 62rem !important;
   }
 
-  // ***** Calendly *****
+  // ***** Contact Us *****
   .calendly-text-headline {
     font-size: $h2;
   }
@@ -870,7 +883,7 @@
   }
 
   .calendly-widget-container {
-    top: 246%;
+    top: 235%;
   }
 
   // ***** Error *****
@@ -966,10 +979,5 @@
   // ***** Pricing *****
   .pricing-premium-badge {
     width: 18rem;
-  }
-
-  // ***** Calendly *****
-  .calendly-widget-container {
-    top: 247%;
   }
 }

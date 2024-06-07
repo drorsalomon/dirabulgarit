@@ -22,40 +22,40 @@ app.set('views', path.join(__dirname, 'views'));
 // Global Middlewares
 
 // Set security HTTP requests
-// app.use(
-//   helmet({
-//     crossOriginEmbedderPolicy: false,
-//     contentSecurityPolicy: {
-//       directives: {
-//         defaultSrc: ["'self'", 'data:', 'blob:', 'https:', 'ws:'],
-//         baseUri: ["'self'"],
-//         fontSrc: ["'self'", 'https:', 'data:'],
-//         scriptSrc: [
-//           "'unsafe-inline'",
-//           "'self'",
-//           'https:',
-//           'http:',
-//           'blob:',
-//           'https://*.mapbox.com',
-//           'https://*.cloudflare.com',
-//           'https://assets.calendly.com',
-//           'https://www.youtube.com',
-//           'https://www.googletagmanager.com',
-//           'https://crm.zoho.com/crm/WebToLeadForm',
-//         ],
-//         frameSrc: ["'self'", 'https://calendly.com', 'https://www.youtube.com/'],
-//         objectSrc: ["'none'"],
-//         styleSrc: ["'self'", 'https:', "'unsafe-inline'"],
-//         workerSrc: ["'self'", 'data:', 'blob:', 'https://*.tiles.mapbox.com', 'https://api.mapbox.com', 'https://events.mapbox.com', 'https://calendly.com'],
-//         childSrc: ["'self'", 'blob:'],
-//         imgSrc: ["'self'", 'data:', 'blob:', 'http:'],
-//         formAction: ["'self'", 'https://crm.zoho.com/crm/WebToLeadForm'],
-//         connectSrc: ["'self'", "'unsafe-inline'", 'data:', 'blob:', 'https://*.mapbox.com', 'https://bundle.js:*', 'https://calendly.com', 'ws://127.0.0.1:*/'],
-//         upgradeInsecureRequests: [],
-//       },
-//     },
-//   }),
-// );
+app.use(
+  helmet({
+    crossOriginEmbedderPolicy: false,
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'", 'data:', 'blob:', 'https:', 'ws:'],
+        baseUri: ["'self'"],
+        fontSrc: ["'self'", 'https:', 'data:'],
+        scriptSrc: [
+          "'unsafe-inline'",
+          "'self'",
+          'https:',
+          'http:',
+          'blob:',
+          'https://*.mapbox.com',
+          'https://*.cloudflare.com',
+          'https://assets.calendly.com',
+          'https://www.youtube.com',
+          'https://www.googletagmanager.com',
+          'https://crm.zoho.com/crm/WebToLeadForm',
+        ],
+        frameSrc: ["'self'", 'https://calendly.com', 'https://www.youtube.com/'],
+        objectSrc: ["'none'"],
+        styleSrc: ["'self'", 'https:', "'unsafe-inline'"],
+        workerSrc: ["'self'", 'data:', 'blob:', 'https://*.tiles.mapbox.com', 'https://api.mapbox.com', 'https://events.mapbox.com', 'https://calendly.com'],
+        childSrc: ["'self'", 'blob:'],
+        imgSrc: ["'self'", 'data:', 'blob:', 'http:'],
+        formAction: ["'self'", 'https://crm.zoho.com/crm/WebToLeadForm'],
+        connectSrc: ["'self'", "'unsafe-inline'", 'data:', 'blob:', 'https://*.mapbox.com', 'https://bundle.js:*', 'https://calendly.com', 'ws://127.0.0.1:*/'],
+        upgradeInsecureRequests: [],
+      },
+    },
+  }),
+);
 
 // Rate limiter
 const limiter = rateLimit({

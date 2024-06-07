@@ -21,6 +21,9 @@
   .pricing-premium-badge {
     width: 16rem;
   }
+  .calendly-widget-container {
+    top: 200%;
+  }
 }
 @media only screen and (min-width: 425px) {
   .pricing-premium-badge {
@@ -109,8 +112,14 @@
   .about-partners-card {
     height: 58rem !important;
   }
+  .calendly-col {
+    height: 135rem;
+  }
+  .calendly-text-container {
+    top: 25%;
+  }
   .calendly-widget-container {
-    top: 238%;
+    top: 223%;
   }
   .calendly-inline-widget {
     width: 40rem;
@@ -253,7 +262,7 @@
     width: 55rem;
   }
   .calendly-widget-container {
-    top: 236%;
+    top: 225%;
   }
   .asset-gallery-mainImage {
     height: 23.3rem;
@@ -508,7 +517,7 @@
     transform: translateY(-8px);
   }
   .calendly-widget-container {
-    top: 257%;
+    top: 245%;
   }
   .pricing-card-basic,
   .pricing-card-plus,
@@ -645,7 +654,7 @@
     font-size: 2rem;
   }
   .calendly-widget-container {
-    top: 246%;
+    top: 235%;
   }
   .error-btn:hover {
     -webkit-transform: none !important;
@@ -717,8 +726,5 @@
   }
   .pricing-premium-badge {
     width: 18rem;
-  }
-  .calendly-widget-container {
-    top: 247%;
   }
 }/*# sourceMappingURL=queries.css.map */
