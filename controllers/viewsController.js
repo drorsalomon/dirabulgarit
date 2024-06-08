@@ -254,7 +254,7 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
       },
     });
 
-    res.status(200).json(res);
+    res.status(200).json({ status: 'success' });
   } catch (error) {
     console.error('Error creating lead in Zoho CRM:', error);
     res.status(500).send('Internal Server Error');
