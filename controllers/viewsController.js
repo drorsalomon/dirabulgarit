@@ -270,7 +270,7 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
       });
       console.log(response.data);
       const leadsArray = response.data.data;
-      const leadID = '';
+      let leadID = '';
 
       for (lead of leadsArray) {
         if (lead.Last_Name === calendlyLeadName && lead.Email === calendlyLeadEmail && lead.Phone === calendlyLeadQuestions[0].answer) leadID = lead.id;
