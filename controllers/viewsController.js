@@ -225,11 +225,20 @@ const getZohoRefreshToken = cron.schedule(
 
 exports.getCalendlyLead = catchAsync(async (req, res) => {
   try {
+    const eventId = req.body.event.uuid;
+
+    if (processedEvents[eventId]) {
+      console.log(`Event with ID ${eventId} has already been processed. Ignoring.`);
+      return res.status(200).json({ status: 'success' }); // Respond with success status
+    }
+
+    processedEvents[eventId] = true;
+
     const calendlyLeadName = req.body.payload.name;
     const calendlyLeadEmail = req.body.payload.email;
     const calendlyLeadQuestions = req.body.payload.questions_and_answers;
     const calendlyLeadEventTime = req.body.payload.scheduled_event.start_time;
-    console.log(req.body.payload);
+
     // Map the Calendly data to Zoho CRM Lead fields
     const leadData = {
       data: [
@@ -239,6 +248,7 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
           Phone: calendlyLeadQuestions[0].answer,
           Description: `Meeting time: ${calendlyLeadEventTime} /// Additional Information: ${calendlyLeadQuestions[1].answer}`,
           Lead_Source: 'Calendly',
+          Lead_Status: 'Active - Meeting Set',
         },
       ],
     };
