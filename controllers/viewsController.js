@@ -255,12 +255,42 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
           Description: `Meeting time: ${calendlyLeadEventTime} /// Additional Information: ${calendlyLeadQuestions[1].answer}`,
           Lead_Source: 'Calendly',
           Lead_Status: 'Active - Meeting Set',
+          Skype_ID: eventUri,
         },
       ],
     };
 
+    if (req.body.payload.cancellation) {
+      const response = await axios({
+        method: 'GET',
+        url: process.env.ZOHO_URL,
+        params: { Skype_ID: eventUri },
+        headers: {
+          Authorization: `Zoho-oauthtoken ${process.env.ZOHO_ACCESS_TOKEN}`,
+          'Content-Type': 'application/json',
+        },
+      });
+
+      const leadID = response.data.id;
+
+      await axios({
+        method: 'PUT',
+        url: process.env.ZOHO_URL,
+        data: {
+          id: leadID,
+          Lead_Status: 'Canceled',
+        },
+        headers: {
+          Authorization: `Zoho-oauthtoken ${process.env.ZOHO_ACCESS_TOKEN}`,
+          'Content-Type': 'application/json',
+        },
+      });
+
+      return res.status(200).json({ status: 'success' });
+    }
+
     // Send a POST request to Zoho CRM to create a new lead
-    const response = await axios({
+    await axios({
       method: 'POST',
       url: process.env.ZOHO_URL,
       data: leadData,
