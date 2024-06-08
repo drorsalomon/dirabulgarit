@@ -278,12 +278,14 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
 
       await axios({
         method: 'PUT',
-        url: process.env.ZOHO_URL,
-        body: {
-          data: {
-            id: leadID,
-            Lead_Status: 'Canceled',
-          },
+        url: `${process.env.ZOHO_URL}/${leadID}`,
+        data: {
+          data: [
+            {
+              id: leadID,
+              Lead_Status: 'Canceled',
+            },
+          ],
         },
         headers: {
           Authorization: `Zoho-oauthtoken ${process.env.ZOHO_ACCESS_TOKEN}`,
