@@ -248,7 +248,6 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
           Phone: calendlyLeadQuestions[0].answer,
           Description: `Meeting time: ${calendlyLeadEventTime} /// Additional Information: ${calendlyLeadQuestions[1].answer}`,
           Lead_Source: 'Calendly',
-          Lead_Status: 'Active - Meeting Set',
         },
       ],
     };
