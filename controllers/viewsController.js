@@ -255,7 +255,6 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
           Description: `Meeting time: ${calendlyLeadEventTime} /// Additional Information: ${calendlyLeadQuestions[1].answer}`,
           Lead_Source: 'Calendly',
           Lead_Status: 'Active - Meeting Set',
-          Skype_ID: eventUri,
         },
       ],
     };
