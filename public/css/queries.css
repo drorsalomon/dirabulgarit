@@ -11,6 +11,9 @@
   .qanda-headline-img {
     height: 27rem;
   }
+  .about-partners-card {
+    height: 58rem !important;
+  }
   .pricing-card-text {
     font-size: 1.2rem;
   }
@@ -26,6 +29,9 @@
   }
 }
 @media only screen and (min-width: 425px) {
+  .about-partners-card {
+    height: 62rem !important;
+  }
   .pricing-premium-badge {
     width: 20rem;
   }
@@ -283,6 +289,9 @@
   .asset-details-description-middleViewport-col,
   .asset-btn-middleViewport-container {
     display: block;
+  }
+  .about-partners-card {
+    height: 57rem !important;
   }
   .pricing-card-icon {
     width: 2.3rem;

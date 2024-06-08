@@ -21,6 +21,11 @@
     height: 27rem;
   }
 
+  // ***** About *****
+  .about-partners-card {
+    height: 58rem !important;
+  }
+
   // ***** Pricing *****
   .pricing-card-text {
     font-size: $h7;
@@ -43,6 +48,11 @@
 
 // Chrome - Mobile
 @media only screen and (min-width: 425px) {
+  // ***** About *****
+  .about-partners-card {
+    height: 62rem !important;
+  }
+
   // ***** Pricing *****
   .pricing-premium-badge {
     width: 20rem;
@@ -399,6 +409,11 @@
   .asset-details-description-middleViewport-col,
   .asset-btn-middleViewport-container {
     display: block;
+  }
+
+  // ***** About *****
+  .about-partners-card {
+    height: 57rem !important;
   }
 
   // ***** Pricing *****
