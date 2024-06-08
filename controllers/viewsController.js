@@ -268,7 +268,7 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
           'Content-Type': 'application/json',
         },
       });
-
+      console.log(response.data);
       const leadsArray = response.data;
       const leadID = '';
 
