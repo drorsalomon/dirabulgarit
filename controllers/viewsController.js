@@ -262,15 +262,19 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
     if (req.body.payload.cancellation) {
       const response = await axios({
         method: 'GET',
-        url: process.env.ZOHO_URL,
-        params: { Last_Name: calendlyLeadName, Email: calendlyLeadEmail, Phone: calendlyLeadQuestions[0].answer },
+        url: process.env.ZOHO_GET_LEAD_URL,
         headers: {
           Authorization: `Zoho-oauthtoken ${process.env.ZOHO_ACCESS_TOKEN}`,
           'Content-Type': 'application/json',
         },
       });
 
-      const leadID = response.data.id;
+      const leadsArray = response.data;
+      const leadID = '';
+
+      for (lead of leadsArray) {
+        if (lead.Last_Name === calendlyLeadName && lead.Email === calendlyLeadEmail && lead.Phone === calendlyLeadQuestions[0].answer) leadID = lead.id;
+      }
 
       await axios({
         method: 'PUT',
