@@ -228,7 +228,7 @@ const getZohoRefreshToken = cron.schedule(
 exports.getCalendlyLead = catchAsync(async (req, res) => {
   try {
     const eventId = req.body.event.uuid;
-
+    console.log(processedEvents);
     if (processedEvents[eventId]) {
       console.log(`Event with ID ${eventId} has already been processed. Ignoring.`);
       return res.status(200).json({ status: 'success' }); // Respond with success status
