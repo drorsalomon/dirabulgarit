@@ -263,7 +263,7 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
       const response = await axios({
         method: 'GET',
         url: process.env.ZOHO_URL,
-        params: { Skype_ID: eventUri },
+        params: { Last_Name: calendlyLeadName, Email: calendlyLeadEmail, Phone: calendlyLeadQuestions[0].answer },
         headers: {
           Authorization: `Zoho-oauthtoken ${process.env.ZOHO_ACCESS_TOKEN}`,
           'Content-Type': 'application/json',
