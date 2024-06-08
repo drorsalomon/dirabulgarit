@@ -269,7 +269,7 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
         },
       });
       console.log(response.data);
-      const leadsArray = response.data;
+      const leadsArray = response.data.data;
       const leadID = '';
 
       for (lead of leadsArray) {
