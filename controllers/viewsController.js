@@ -186,7 +186,6 @@ const getZohoToken = async () => {
 };
 
 const updateHerokuConfigVar = async (accessToken) => {
-  console.log(accessToken);
   try {
     const res = await axios({
       method: 'PATCH',
@@ -207,12 +206,13 @@ const updateHerokuConfigVar = async (accessToken) => {
 };
 
 const getZohoRefreshToken = cron.schedule(
-  '*/3 * * * *',
+  '*/50 * * * *',
   async function () {
     try {
+      let currentTimeDate = new Date();
       const zohoToken = await getZohoToken();
       await updateHerokuConfigVar(zohoToken);
-      console.log('***** Zoho Access Token Updated *****');
+      console.log(`***** Zoho Access Token Updated at ${currentTimeDate.toLocaleString()} *****`);
     } catch (err) {
       console.error(err);
     }
