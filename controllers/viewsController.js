@@ -206,7 +206,7 @@ const updateHerokuConfigVar = async (accessToken) => {
 };
 
 const getZohoRefreshToken = cron.schedule(
-  '*/50 * * * *',
+  '*/5 * * * *',
   async function () {
     try {
       let currentTimeDate = new Date();
@@ -229,7 +229,7 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
     const calendlyLeadEmail = req.body.payload.email;
     const calendlyLeadQuestions = req.body.payload.questions_and_answers;
     const calendlyLeadEventTime = req.body.payload.scheduled_event.start_time;
-
+    console.log(req.body.payload);
     // Map the Calendly data to Zoho CRM Lead fields
     const leadData = {
       data: [
@@ -244,7 +244,7 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
     };
 
     // Send a POST request to Zoho CRM to create a new lead
-    const res = await axios({
+    const response = await axios({
       method: 'POST',
       url: process.env.ZOHO_URL,
       data: leadData,
