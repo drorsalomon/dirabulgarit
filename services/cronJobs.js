@@ -33,12 +33,11 @@ const dailyAssetPriceNisUpdate = cron.schedule(
   },
 );
 const getZohoRefreshToken = cron.schedule(
-  '*/2 * * * *',
+  '10,50 * * * *',
   async function () {
     try {
       let currentTimeDate = new Date();
       const zohoToken = await zohoService.getZohoToken();
-      console.log('Zoho Token:', zohoToken);
       await zohoService.updateHerokuConfigVar(zohoToken);
       console.log(`***** Zoho Access Token Updated at ${currentTimeDate.toLocaleString()} *****`);
     } catch (err) {

@@ -20,7 +20,6 @@ exports.getZohoToken = async () => {
 };
 
 exports.updateHerokuConfigVar = async (accessToken) => {
-  console.log('Updating Heroku config with accessToken:', accessToken);
   try {
     await axios({
       method: 'PATCH',
