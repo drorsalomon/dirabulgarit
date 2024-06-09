@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 
 dotenv.config({ path: './config.env' });
 
-exports.getZohoToken = catchAsync(async () => {
+exports.getZohoToken = async () => {
   try {
     const res = await axios({
       method: 'POST',
@@ -17,9 +17,9 @@ exports.getZohoToken = catchAsync(async () => {
     console.log(err);
     throw err;
   }
-});
+};
 
-exports.updateHerokuConfigVar = catchAsync(async (accessToken) => {
+exports.updateHerokuConfigVar = async (accessToken) => {
   console.log('Updating Heroku config with accessToken:', accessToken);
   try {
     await axios({
@@ -38,4 +38,4 @@ exports.updateHerokuConfigVar = catchAsync(async (accessToken) => {
     console.log(err);
     throw err;
   }
-});
+};
