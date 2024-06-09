@@ -12,7 +12,7 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
     const eventUri = req.body.payload.uri;
 
     // Check if the event has already been processed
-    if (processedEvents.has(eventUri)) {
+    if (processedEvents.has(eventUri) && !req.body.payload.cancellation) {
       console.log(`Event with URI ${eventUri} has already been processed. Ignoring.`);
       return res.status(200).json({ status: 'success' }); // Respond with success status
     }
