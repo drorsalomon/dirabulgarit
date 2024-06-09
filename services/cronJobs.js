@@ -33,20 +33,14 @@ const dailyAssetPriceNisUpdate = cron.schedule(
   },
 );
 
-let lastRunTime = null;
-
 const getZohoRefreshToken = cron.schedule(
-  '* * * * *',
+  '10,50 * * * *',
   async function () {
     try {
       let currentTimeDate = new Date();
-      if (!lastRunTime || currentTime - lastRunTime >= 50 * 60 * 1000) {
-        // 50 minutes in milliseconds
-        const zohoToken = await zohoService.getZohoToken();
-        await zohoService.updateHerokuConfigVar(zohoToken);
-        console.log(`***** Zoho Access Token Updated at ${currentTimeDate.toLocaleString()} *****`);
-        lastRunTime = currentTime;
-      }
+      const zohoToken = await zohoService.getZohoToken();
+      await zohoService.updateHerokuConfigVar(zohoToken);
+      console.log(`***** Zoho Access Token Updated at ${currentTimeDate.toLocaleString()} *****`);
     } catch (err) {
       console.error(err);
     }

@@ -68,7 +68,11 @@ const limiter = rateLimit({
   windowMs: 60 * 60 * 1000,
   message: 'יותר מדי בקשות, אנא נסו שוב בעוד שעה',
 });
+app.use('/', limiter);
 app.use('/search', limiter);
+app.use('/search', limiter);
+app.use('asset/search-results', limiter);
+app.use('asset/:slug', limiter);
 
 app.use(compression());
 
