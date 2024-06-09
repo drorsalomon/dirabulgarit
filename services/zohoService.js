@@ -20,6 +20,7 @@ exports.getZohoToken = catchAsync(async () => {
 });
 
 exports.updateHerokuConfigVar = catchAsync(async (accessToken) => {
+  console.log(accessToken);
   try {
     await axios({
       method: 'PATCH',
