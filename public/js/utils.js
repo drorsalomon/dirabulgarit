@@ -347,7 +347,7 @@ export const getPageBySlug = (elementArray, page) => {
   elementArray.forEach((el) => {
     el.addEventListener('click', function (e) {
       const baseUrl = `/${page}/${el.dataset.slug}`;
-      window.location.pathname = baseUrl;
+      window.location.replace(baseUrl);
     });
   });
 };
