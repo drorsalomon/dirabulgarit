@@ -60,8 +60,6 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
         return res.status(404).json({ status: 'error', message: 'Lead not found' });
       }
 
-      console.log(`Updating lead with ID: ${leadID}`);
-
       await axios({
         method: 'PUT',
         url: `${process.env.ZOHO_URL}/${leadID}`,
