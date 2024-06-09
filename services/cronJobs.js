@@ -53,3 +53,8 @@ const getZohoRefreshToken = cron.schedule(
     },
   ),
 );
+
+module.exports = {
+  dailyAssetPriceNisUpdate,
+  getZohoRefreshToken,
+};

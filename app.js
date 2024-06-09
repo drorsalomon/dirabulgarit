@@ -13,6 +13,7 @@ const viewRouter = require('./routes/viewRoutes');
 const assetRouter = require('./routes/assetRoutes');
 const blogRouter = require('./routes/blogRoutes');
 const apiRouter = require('./routes/apiRoutes');
+const { dailyAssetPriceNisUpdate, getZohoRefreshToken } = require('./services/cronJobs');
 
 // Start express app
 const app = express();
@@ -88,6 +89,9 @@ app.use('/', viewRouter);
 app.use('/asset', assetRouter);
 app.use('/blog', blogRouter);
 app.use('/api', apiRouter);
+
+dailyAssetPriceNisUpdate.start();
+getZohoRefreshToken.start();
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
