@@ -50,7 +50,7 @@ app.use(
         styleSrc: ["'self'", 'https:', "'unsafe-inline'"],
         workerSrc: ["'self'", 'data:', 'blob:', 'https://*.tiles.mapbox.com', 'https://api.mapbox.com', 'https://events.mapbox.com', 'https://calendly.com'],
         childSrc: ["'self'", 'blob:'],
-        imgSrc: ["'self'", 'data:', 'blob:'],
+        imgSrc: ["'self'", 'data:', 'blob:', 'http:'],
         formAction: ["'self'", 'https://crm.zoho.com/crm/WebToLeadForm'],
         connectSrc: ["'self'", "'unsafe-inline'", 'data:', 'blob:', 'https://*.mapbox.com', 'https://bundle.js:*', 'https://calendly.com', 'ws://127.0.0.1:*/'],
         upgradeInsecureRequests: [],
@@ -59,16 +59,12 @@ app.use(
   }),
 );
 
-// Trust the first hop of the proxy
-app.set('trust proxy', 1);
-
 // Rate limiter
 const limiter = rateLimit({
   max: 50,
   windowMs: 60 * 60 * 1000,
   message: 'יותר מדי בקשות, אנא נסו שוב בעוד שעה',
 });
-
 app.use('/search', limiter);
 
 app.use(compression());
