@@ -346,6 +346,7 @@ export const clearDuplicates = (searchFilterObj) => {
 export const getPageBySlug = (elementArray, page) => {
   elementArray.forEach((el) => {
     el.addEventListener('click', function (e) {
+      window.location.pathname = '';
       window.location.pathname = `/${page}/${el.dataset.slug}`;
     });
   });
