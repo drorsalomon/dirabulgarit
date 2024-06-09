@@ -50,7 +50,7 @@ app.use(
         styleSrc: ["'self'", 'https:', "'unsafe-inline'"],
         workerSrc: ["'self'", 'data:', 'blob:', 'https://*.tiles.mapbox.com', 'https://api.mapbox.com', 'https://events.mapbox.com', 'https://calendly.com'],
         childSrc: ["'self'", 'blob:'],
-        imgSrc: ["'self'", 'data:', 'blob:', 'http:'],
+        imgSrc: ["'self'", 'data:', 'blob:', 'https:'],
         formAction: ["'self'", 'https://crm.zoho.com/crm/WebToLeadForm'],
         connectSrc: ["'self'", "'unsafe-inline'", 'data:', 'blob:', 'https://*.mapbox.com', 'https://bundle.js:*', 'https://calendly.com', 'ws://127.0.0.1:*/'],
         upgradeInsecureRequests: [],
