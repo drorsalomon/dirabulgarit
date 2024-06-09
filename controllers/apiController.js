@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 
 dotenv.config({ path: './config.env' });
 
-const processedEvents = {};
+const processedEvents = new Set();
 
 exports.getCalendlyLead = catchAsync(async (req, res) => {
   try {
@@ -12,13 +12,13 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
     const eventUri = req.body.payload.uri;
 
     // Check if the event has already been processed
-    if (processedEvents[eventUri] && !req.body.payload.cancellation) {
+    if (processedEvents.has(eventUri)) {
       console.log(`Event with URI ${eventUri} has already been processed. Ignoring.`);
       return res.status(200).json({ status: 'success' }); // Respond with success status
     }
 
     // Mark the event as processed
-    processedEvents[eventUri] = true;
+    processedEvents.add(eventUri);
 
     const calendlyLeadName = req.body.payload.name;
     const calendlyLeadEmail = req.body.payload.email;
@@ -69,7 +69,7 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
           data: [
             {
               id: leadID,
-              Lead_Status: 'Canceled',
+              Lead_Status: 'Meeting Canceled',
             },
           ],
         },
