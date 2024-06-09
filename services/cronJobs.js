@@ -38,6 +38,7 @@ const getZohoRefreshToken = cron.schedule(
     try {
       let currentTimeDate = new Date();
       const zohoToken = await zohoService.getZohoToken();
+      console.log('Zoho Token:', zohoToken);
       await zohoService.updateHerokuConfigVar(zohoToken);
       console.log(`***** Zoho Access Token Updated at ${currentTimeDate.toLocaleString()} *****`);
     } catch (err) {
