@@ -35,7 +35,7 @@ const dailyAssetPriceNisUpdate = cron.schedule(
 );
 
 const getZohoRefreshToken = cron.schedule(
-  '*/5 * * * *',
+  '10,50 * * * *',
   catchAsync(
     async function () {
       try {
