@@ -159,6 +159,9 @@ exports.getBlog = catchAsync(async (req, res, next) => {
 exports.getCalendly = (req, res) => {
   res.status(200).render('calendly');
 };
+exports.getContactUsConfirm = (req, res) => {
+  res.status(200).render('contactUsConfirm');
+};
 exports.getPricing = (req, res) => {
   res.status(200).render('pricing');
 };

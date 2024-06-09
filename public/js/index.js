@@ -33,7 +33,6 @@ window.onload = function () {
   });
 
   if (config.Elements.searchForm || config.Elements.modalSearchForm) {
-    console.log(JSON.parse(localStorage.getItem(config.FILTER_KEY)));
     const searchFilterObj = JSON.parse(localStorage.getItem(config.FILTER_KEY));
 
     // Fill search form data on load

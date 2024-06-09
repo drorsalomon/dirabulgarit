@@ -263,8 +263,6 @@ export const priceInputSetter = (inputMin, inputMax, onLoad = false, notModal = 
       }
     });
   } else {
-    console.log(inputMin.value);
-    console.log(inputMax.value);
     inputMin.value = inputMin.value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     inputMax.value = inputMax.value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     if (inputMin.value && inputMax.value) {
