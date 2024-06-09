@@ -13,7 +13,7 @@ export const filterAssets = async (filter, sort, type, pageNumber, resPerPage) =
       const totalAssets = res.data.data.totalAssets;
       const totalPages = res.data.data.totalPages;
       const pageNumber = res.data.data.pageNumber;
-      window.location.href = `/asset/search-results?q=${encodeURIComponent(JSON.stringify(filter))}&sort=${sort}&type=${type}&totalAssets=${totalAssets}&totalPages=${encodeURIComponent(JSON.stringify(totalPages))}&pageNumber=${pageNumber}`;
+      window.location.href = `/asset/search-results?sort=${sort}&type=${type}&totalAssets=${totalAssets}&totalPages=${encodeURIComponent(JSON.stringify(totalPages))}&pageNumber=${pageNumber}`;
     }
   } catch (err) {
     console.log(err);
