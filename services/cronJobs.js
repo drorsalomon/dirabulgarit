@@ -1,5 +1,5 @@
-const { currencyExchange } = require('./currencyExchange');
-const { zohoService } = require('./zohoService');
+const currencyExchange = require('./currencyExchange');
+const zohoService = require('./zohoService');
 const Asset = require('../models/assetModel');
 const catchAsync = require('../utils/catchAsync');
 const cron = require('node-cron');
