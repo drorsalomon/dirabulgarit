@@ -1,12 +1,10 @@
 const currencyExchange = require('./currencyExchange');
 const zohoService = require('./zohoService');
 const Asset = require('../models/assetModel');
-const catchAsync = require('../utils/catchAsync');
 const cron = require('node-cron');
 
 const dailyAssetPriceNisUpdate = cron.schedule(
   '0 0 * * *',
-
   async function () {
     try {
       let counter = 0;

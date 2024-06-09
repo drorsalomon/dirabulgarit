@@ -1,5 +1,4 @@
 const axios = require('axios');
-const catchAsync = require('../utils/catchAsync');
 const dotenv = require('dotenv');
 
 dotenv.config({ path: './config.env' });
