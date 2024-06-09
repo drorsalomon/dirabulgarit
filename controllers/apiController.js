@@ -55,6 +55,13 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
         if (lead.Last_Name === calendlyLeadName && lead.Email === calendlyLeadEmail && lead.Phone === calendlyLeadQuestions[0].answer) leadID = lead.id;
       }
 
+      if (!leadID) {
+        console.error('Lead ID not found.');
+        return res.status(404).json({ status: 'error', message: 'Lead not found' });
+      }
+
+      console.log(`Updating lead with ID: ${leadID}`);
+
       await axios({
         method: 'PUT',
         url: `${process.env.ZOHO_URL}/${leadID}`,
@@ -88,7 +95,13 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
 
     res.status(200).json({ status: 'success' });
   } catch (error) {
-    console.error('Error creating lead in Zoho CRM:', error);
+    console.error('Error creating lead in Zoho CRM:');
+    console.error('Message:', error.message);
+    if (error.response) {
+      console.error('Status:', error.response.status);
+      console.error('Data:', error.response.data);
+    }
+    console.error('Stack:', error.stack);
     res.status(500).send('Internal Server Error');
   }
 });
