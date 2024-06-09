@@ -246,8 +246,6 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
     const calendlyLeadEmail = req.body.payload.email;
     const calendlyLeadQuestions = req.body.payload.questions_and_answers;
     const calendlyLeadEventTime = req.body.payload.scheduled_event.start_time;
-    console.log(calendlyLeadQuestions[1]);
-    //calendlyLeadQuestions[1].answer === undefined ? '-' : calendlyLeadQuestions[1].answer;
 
     // Map the Calendly data to Zoho CRM Lead fields
     const leadData = {
@@ -256,7 +254,7 @@ exports.getCalendlyLead = catchAsync(async (req, res) => {
           Last_Name: calendlyLeadName,
           Email: calendlyLeadEmail,
           Phone: calendlyLeadQuestions[0].answer,
-          Description: `Meeting time: ${calendlyLeadEventTime} /// Additional Information: ${calendlyLeadQuestions[1]}`,
+          Description: `Meeting time: ${calendlyLeadEventTime} /// Additional Information: ${calendlyLeadQuestions[1] === undefined ? '-' : calendlyLeadQuestions[1].answer}`,
           Lead_Source: 'Calendly',
           Lead_Status: 'Active - Meeting Set',
         },
