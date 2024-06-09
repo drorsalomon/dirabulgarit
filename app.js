@@ -12,6 +12,7 @@ const globalErrorHandler = require('./controllers/errorController');
 const viewRouter = require('./routes/viewRoutes');
 const assetRouter = require('./routes/assetRoutes');
 const blogRouter = require('./routes/blogRoutes');
+const apiRouter = require('./routes/apiRoutes');
 
 // Start express app
 const app = express();
@@ -86,6 +87,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use('/', viewRouter);
 app.use('/asset', assetRouter);
 app.use('/blog', blogRouter);
+app.use('/api', apiRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));

@@ -3,11 +3,8 @@ const viewsController = require('../controllers/viewsController');
 
 const router = express.Router();
 
-router.post('/calendly-webhook', viewsController.getCalendlyLead);
-router.post('/:currency', viewsController.setCurrency);
-
 router.use(viewsController.getCurrency);
-
+router.post('/:currency', viewsController.setCurrency);
 router.get('/', viewsController.getOverview);
 router.get('/search', viewsController.getSearch);
 router.get('/q&a', viewsController.getQAndA);

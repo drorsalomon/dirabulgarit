@@ -232,7 +232,7 @@ if (config.Elements.priceInput)
       // Don't allow number to start with zero
       this.value = this.value.replace(/^0+/, '');
 
-      // Add $ symbol if it's not already there and the user is typing
+      // Add symbol if it's not already there and the user is typing
       if (!this.value.startsWith(euroSymbol) && this.value !== '') {
         this.value = euroSymbol + this.value;
       }
