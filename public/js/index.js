@@ -9,6 +9,7 @@ if (config.Elements.mapBox && config.Elements.mapBox.dataset.long && config.Elem
 }
 
 window.onload = function () {
+  console.log(JSON.parse(localStorage.getItem(config.CURRENCY_KEY)));
   // Set default currency
   if (!JSON.parse(localStorage.getItem(config.CURRENCY_KEY))) {
     localStorage.setItem(config.CURRENCY_KEY, JSON.stringify(config.DEFAULT_CURRENCY));
