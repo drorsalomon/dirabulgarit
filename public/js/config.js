@@ -8,7 +8,7 @@ export const Elements = {
   mainPageBlogBtn: document.querySelectorAll('.mainpage-blog-card-btn '),
   toBlogBtn: document.querySelector('.to-blog-btn'),
   shareBtn: document.querySelector('.share-btn'),
-  shareBtnWhite: document.querySelector('.share-btn-white'),
+  shareBtnWhite: document.querySelectorAll('.share-btn-white'),
   backToSearchResultsBtn: document.querySelector('.asset-back-to-results-btn'),
   errorBtn: document.querySelector('.error-btn'),
   // Navbar

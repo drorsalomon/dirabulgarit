@@ -142,8 +142,10 @@ if (config.Elements.shareBtn)
   });
 
 if (config.Elements.shareBtnWhite)
-  config.Elements.shareBtnWhite.addEventListener('click', async () => {
-    utils.addNavigator();
+  config.Elements.shareBtnWhite.forEach((el) => {
+    el.addEventListener('click', function (e) {
+      utils.addNavigator();
+    });
   });
 
 // CTA Button to Calendly
