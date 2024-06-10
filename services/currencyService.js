@@ -12,7 +12,7 @@ const setCurrency = (req, res) => {
       active: req.body.activeCurrency,
       notActive: req.body.notActiveCurrency,
     };
-
+    res.locals.currency = currency;
     res.status(200).json({
       status: 'success',
       data: {
