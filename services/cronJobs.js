@@ -4,7 +4,7 @@ const Asset = require('../models/assetModel');
 const cron = require('node-cron');
 
 const dailyAssetPriceNisUpdate = cron.schedule(
-  '*/5 * * * *',
+  '0 0 * * *',
   async function () {
     try {
       let counter = 0;
