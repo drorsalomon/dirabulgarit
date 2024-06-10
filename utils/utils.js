@@ -112,9 +112,9 @@ exports.buildMongooseQuery = (filter) => {
   }
 
   if (filter.name) {
-    mongooseQuery = {};
-    mongooseQuery.name = sanitizer.sanitize(filter.name);
-    return mongooseQuery;
+    const sanitizedName = sanitizer.sanitize(filter.name);
+    const regex = new RegExp(sanitizedName, 'i'); // 'i' for case-insensitive search
+    mongooseQuery.name = { $regex: regex };
   }
 
   return mongooseQuery;

@@ -1,12 +1,11 @@
 import axios from 'axios';
 import * as config from './config';
-//import { showAlert } from './alerts';
 
-export const getCurrency = async (activeCurrency, notActiveCurrency) => {
+export const setCurrency = async (activeCurrency, notActiveCurrency) => {
   try {
     const res = await axios({
       method: 'POST',
-      url: `/${activeCurrency}`,
+      url: `/api/${activeCurrency}`,
       data: { activeCurrency, notActiveCurrency },
     });
     if (res.data.status === 'success') {

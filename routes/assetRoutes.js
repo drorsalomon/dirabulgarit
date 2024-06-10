@@ -1,10 +1,10 @@
 const express = require('express');
 const assetController = require('../controllers/assetController');
-const viewsController = require('../controllers/viewsController');
+const currencyService = require('../services/currencyService');
 
 const router = express.Router();
 
-router.use(viewsController.getCurrency);
+router.use(currencyService.getCurrency);
 
 router.get('/search-results', assetController.renderSearchResults);
 router.get('/:slug', assetController.getAsset);

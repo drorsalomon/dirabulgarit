@@ -1,10 +1,11 @@
 const express = require('express');
 const viewsController = require('../controllers/viewsController');
+const currencyService = require('../services/currencyService');
 
 const router = express.Router();
 
-router.use(viewsController.getCurrency);
-router.post('/:currency', viewsController.setCurrency);
+router.use(currencyService.getCurrency);
+
 router.get('/', viewsController.getOverview);
 router.get('/search', viewsController.getSearch);
 router.get('/q&a', viewsController.getQAndA);

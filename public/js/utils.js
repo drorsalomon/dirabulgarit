@@ -1,5 +1,5 @@
 import * as config from './config';
-import { getCurrency } from './currency';
+import { setCurrency } from './currency';
 
 const switchCurrencyHtml = (ddBtn, priceInput, isEuro = true) => {
   if (isEuro) {
@@ -23,11 +23,11 @@ export const switchCurrency = (activeCur, notActiveCur) => {
   notActiveCur.src = tempSrc;
   if (activeCur.src.includes(config.DEFAULT_CURRENCY)) {
     localStorage.setItem(config.CURRENCY_KEY, JSON.stringify(config.DEFAULT_CURRENCY));
-    getCurrency(JSON.parse(localStorage.getItem(config.CURRENCY_KEY)), config.NIS_CURRENCY);
+    setCurrency(JSON.parse(localStorage.getItem(config.CURRENCY_KEY)), config.NIS_CURRENCY);
     switchCurrencyHtml(config.Elements.searchDdBtnPrice, config.Elements.priceInput);
   } else {
     localStorage.setItem(config.CURRENCY_KEY, JSON.stringify(config.NIS_CURRENCY));
-    getCurrency(JSON.parse(localStorage.getItem(config.CURRENCY_KEY)), config.DEFAULT_CURRENCY);
+    setCurrency(JSON.parse(localStorage.getItem(config.CURRENCY_KEY)), config.DEFAULT_CURRENCY);
     switchCurrencyHtml(config.Elements.searchDdBtnPrice, config.Elements.priceInput, false);
   }
 };

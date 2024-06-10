@@ -1,46 +1,14 @@
 const Asset = require('../models/assetModel');
 const Blog = require('../models/blogModel');
+const { currency, euroSymbol, nisSymbol } = require('../services/currencyService');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 const Utils = require('../utils/utils');
 const moment = require('moment');
 
-let currency = {
-  active: 'euro',
-  notActive: 'nis',
-};
-
-let euroToNis = 0;
-const euroSymbol = '€';
-const nisSymbol = '₪';
-
-exports.setCurrency = (req, res) => {
-  try {
-    currency = {
-      active: req.body.activeCurrency,
-      notActive: req.body.notActiveCurrency,
-    };
-
-    res.locals.currency = currency;
-    res.status(200).json({
-      status: 'success',
-      data: {
-        currency,
-        euroToNis,
-      },
-    });
-  } catch (err) {
-    console.log(err);
-  }
-};
-
-exports.getCurrency = (req, res, next) => {
-  res.locals.currency = currency;
-  next();
-};
+const currencySymbol = currency.active === 'euro' ? '€' : '₪';
 
 exports.getOverview = catchAsync(async (req, res, next) => {
-  const currencySymbol = currency.active === 'euro' ? '€' : '₪';
   let sortOptions = { project: 1 };
   const hotAssets = await Asset.find({ hotAsset: true }).sort(sortOptions);
   if (!hotAssets) return next(new AppError('Could not find the requested hot assets!', 404));
@@ -55,7 +23,6 @@ exports.getOverview = catchAsync(async (req, res, next) => {
 });
 
 exports.getSearch = catchAsync(async (req, res, next) => {
-  const currencySymbol = currency.active === 'euro' ? '€' : '₪';
   let sortOptions = { project: 1 };
   const hotAssets = await Asset.find({ hotAsset: true }).sort(sortOptions);
   if (!hotAssets) return next(new AppError('Could not find the requested hot assets!', 404));

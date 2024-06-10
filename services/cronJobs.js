@@ -7,9 +7,8 @@ const dailyAssetPriceNisUpdate = cron.schedule(
   '0 0 * * *',
   async function () {
     try {
-      let counter = 0;
       let currentTimeDate = new Date();
-      console.log(`***** Daily price update STARTED at: ${currentTimeDate.toLocaleString()} *****`);
+      console.log(`***** Daily nis asset price update STARTED at: ${currentTimeDate.toLocaleString()} *****`);
       const euroToNisRate = await currencyExchange.euroToNisExchange();
       console.log('1 Euro = ' + euroToNisRate + ' Nis');
       const assets = await Asset.find({});
@@ -17,10 +16,9 @@ const dailyAssetPriceNisUpdate = cron.schedule(
         if (asset.price !== undefined) {
           const newPriceNis = asset.price * euroToNisRate;
           await Asset.updateOne({ _id: asset._id }, { $set: { priceNis: Math.floor(newPriceNis) } });
-          console.log(`Updated Asset priceNis to: ${Math.floor(newPriceNis)}, Asset ${++counter} out of ${assets.length}`);
         }
       }
-      console.log(`***** Daily price update ENDED at: ${currentTimeDate.toLocaleString()} *****`);
+      console.log(`***** Daily nis asset price update ENDED successfully at: ${currentTimeDate.toLocaleString()} *****`);
     } catch (err) {
       console.error(err);
     }
@@ -32,7 +30,7 @@ const dailyAssetPriceNisUpdate = cron.schedule(
 );
 
 const getZohoRefreshToken = cron.schedule(
-  '10,50 * * * *',
+  '*/2 * * * *',
   async function () {
     try {
       let currentTimeDate = new Date();

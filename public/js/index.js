@@ -1,4 +1,5 @@
 import { filterAssets } from './asset';
+import { setCurrency } from './currency';
 import { displayMap } from './mapbox';
 import * as config from './config';
 import * as utils from './utils';
@@ -7,13 +8,18 @@ if (config.Elements.mapBox && config.Elements.mapBox.dataset.long && config.Elem
   displayMap(config.Elements.mapBox.dataset.long, config.Elements.mapBox.dataset.lat, config.Elements.mapBox.dataset.title);
 }
 
-// Set 'active-link' class on navbar links every time the page is loaded
 window.onload = function () {
   // Set default currency
   if (!JSON.parse(localStorage.getItem(config.CURRENCY_KEY))) {
     localStorage.setItem(config.CURRENCY_KEY, JSON.stringify(config.DEFAULT_CURRENCY));
+    setCurrency(JSON.parse(localStorage.getItem(config.CURRENCY_KEY)), config.NIS_CURRENCY);
+  } else if (JSON.parse(localStorage.getItem(config.CURRENCY_KEY)) === config.DEFAULT_CURRENCY) {
+    setCurrency(JSON.parse(localStorage.getItem(config.CURRENCY_KEY)), config.NIS_CURRENCY);
+  } else if (JSON.parse(localStorage.getItem(config.CURRENCY_KEY)) === config.NIS_CURRENCY) {
+    setCurrency(JSON.parse(localStorage.getItem(config.CURRENCY_KEY)), config.DEFAULT_CURRENCY);
   }
 
+  // Set 'active-link' class on navbar links every time the page is loaded
   let href = window.location.href;
   href = href.substring(href.lastIndexOf('/') + 1);
   // For homepage link
