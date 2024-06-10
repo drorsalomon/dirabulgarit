@@ -70,15 +70,15 @@ app.use(
 );
 
 // Trust the 'X-Forwarded-For' header set by the proxy
-app.set('trust proxy', true);
+// app.set('trust proxy', true);
 
-// Rate limiter
-const limiter = rateLimit({
-  max: 1000,
-  windowMs: 60 * 60 * 1000,
-  message: 'Too many requests, please try again in 1 hour.',
-});
-app.use(limiter);
+// // Rate limiter
+// const limiter = rateLimit({
+//   max: 10000,
+//   windowMs: 60 * 60 * 1000,
+//   message: 'Too many requests, please try again in 1 hour.',
+// });
+// app.use(limiter);
 
 app.use(compression());
 
