@@ -1,6 +1,5 @@
 const express = require('express');
 const viewsController = require('../controllers/viewsController');
-const currencyService = require('../services/currencyService');
 
 const router = express.Router();
 
