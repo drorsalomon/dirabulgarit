@@ -19,8 +19,8 @@ export const Elements = {
   currencyIcon: document.querySelectorAll('.navbar-currency-icon'),
   activeCurrencyIcon: document.querySelector('.navbar-active-currency-icon'),
   notActiveCurrencyIcon: document.querySelector('.navbar-not-active-currency-icon'),
-  mobileNotActiveCurrencyIcon: document.querySelector('.mobile-navbar-not-active-currency-icon'),
   mobileActiveCurrencyIcon: document.querySelector('.mobile-navbar-active-currency-icon'),
+  mobileNotActiveCurrencyIcon: document.querySelector('.mobile-navbar-not-active-currency-icon'),
   // Search Form
   searchForm: document.querySelector('.search-form'),
   searchDdBtn: document.querySelectorAll('.search-filter-dropdown--btn'),
@@ -90,6 +90,10 @@ export const Elements = {
   calendlyAgentOlga: document.querySelector('.calendly-agent-olga'),
 };
 
+export const euroIconSrc = '/img/icons/euro.svg';
+export const euroIconAlt = 'Euro currency icon';
+export const nisIconSrc = '/img/icons/nis.svg';
+export const nisIconAlt = 'Nis currency icon';
 export const CURRENCY_KEY = 'currency';
 export const DEFAULT_CURRENCY = 'euro';
 export const NIS_CURRENCY = 'nis';

@@ -58,7 +58,7 @@ block content
                 if asset.price     
                     div.assets-details-features 
                         span.assets-details-features-text <strong>מחיר: </strong>
-                        span.asset-price(data-europrice=`${asset.priceBeginningAt === true ? 'החל מ' : ''}${euroSymbol + new Intl.NumberFormat().format(asset.price)}` data-nisprice=`${asset.priceBeginningAt === true ? 'החל מ' : ''}${nisSymbol + new Intl.NumberFormat().format(asset.priceNis)}`)= `${asset.priceBeginningAt === true ? 'החל מ' : '' }` + `${currencySymbol}` + `${currencySymbol === '€' ? new Intl.NumberFormat().format(asset.price) : new Intl.NumberFormat().format(asset.priceNis)}`
+                        span.asset-price(data-europrice=`${asset.priceBeginningAt === true ? 'החל מ' : ''}€${new Intl.NumberFormat().format(asset.price)}` data-nisprice=`${asset.priceBeginningAt === true ? 'החל מ' : ''}₪${new Intl.NumberFormat().format(asset.priceNis)}`)
                         img.assets-details-features-icon(src='/img/icons/price-tag-svgrepo-com-white.svg' alt='Price Tag Icon')       
                 if asset.project     
                     div.assets-details-features 

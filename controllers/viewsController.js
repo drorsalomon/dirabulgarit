@@ -1,12 +1,9 @@
 const Asset = require('../models/assetModel');
 const Blog = require('../models/blogModel');
-const { currency, euroSymbol, nisSymbol } = require('../services/currencyService');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 const Utils = require('../utils/utils');
 const moment = require('moment');
-
-const currencySymbol = currency.active === 'euro' ? '€' : '₪';
 
 exports.getOverview = catchAsync(async (req, res, next) => {
   let sortOptions = { project: 1 };
@@ -15,9 +12,6 @@ exports.getOverview = catchAsync(async (req, res, next) => {
 
   res.status(200).render('overview', {
     title: 'Overview Page',
-    currencySymbol,
-    euroSymbol,
-    nisSymbol,
     hotAssets,
   });
 });
@@ -29,9 +23,6 @@ exports.getSearch = catchAsync(async (req, res, next) => {
 
   res.status(200).render('search', {
     title: 'Search Page',
-    currencySymbol,
-    euroSymbol,
-    nisSymbol,
     hotAssets,
   });
 });

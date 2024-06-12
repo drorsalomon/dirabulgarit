@@ -5,11 +5,10 @@ nav.navbar.navbar-expand-xl.fixed-top
     a.navbar-brand.mobile-navbar-brand(href='/')
       img.navbar-logo(src='/img/logo.png' alt='DiraBulgarit logo')  
     .dropstart.currency-mobile-dropdown-btn
-      button.btn.btn-secondary.dropdown-toggle.currency-dropdown-btn(type='button' data-bs-toggle='dropdown' aria-expanded='false')
-        img.navbar-currency-icon.mobile-navbar-active-currency-icon(src=`/img/icons/${currency.active}.svg` alt='Euro currency icon') 
+      button.btn.btn-secondary.dropdown-toggle.currency-dropdown-btn.mobile-currency-ddbtn(type='button' data-bs-toggle='dropdown' aria-expanded='false')
       ul.dropdown-menu.text-end.currency-dropdown-menu
         li.currency-dropdown-menu-item 
-          img.navbar-currency-icon.mobile-navbar-not-active-currency-icon(src=`/img/icons/${currency.notActive}.svg` alt='NIS currency icon')   
+          img.navbar-currency-icon.mobile-navbar-not-active-currency-icon(src='' alt='')   
     div.offcanvas.offcanvas-end.w-auto.text-end(tabindex='-1' id='navbarContent' aria-labelledby='offcanvasNavbarLabel')
       div.offcanvas-body 
         div.btn-cta--container
@@ -17,11 +16,10 @@ nav.navbar.navbar-expand-xl.fixed-top
         ul.navbar-nav.align-items-xl-center.justify-content-xl-evenly
           li.nav-item.currency-nav-item
             .dropend
-              button.btn.btn-secondary.dropdown-toggle.currency-dropdown-btn(type='button' data-bs-toggle='dropdown' aria-expanded='false')
-                img.navbar-currency-icon.navbar-active-currency-icon(src=`/img/icons/${currency.active}.svg` alt='Euro currency icon' data-currency='euro') 
+              button.btn.btn-secondary.dropdown-toggle.currency-dropdown-btn.currency-ddbtn(type='button' data-bs-toggle='dropdown' aria-expanded='false')
               ul.dropdown-menu.currency-dropdown-menu
                 li.currency-dropdown-menu-item 
-                  img.navbar-currency-icon.navbar-not-active-currency-icon(src=`/img/icons/${currency.notActive}.svg` alt='NIS currency icon' data-currency='nis') 
+                  img.navbar-currency-icon.navbar-not-active-currency-icon(src='' alt='') 
           li.nav-item.nav-item.align-content-center
             a.nav-link.nav-el(href='/pricing') מחירון
           li.nav-item.nav-item.align-content-center

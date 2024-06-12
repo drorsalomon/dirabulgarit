@@ -4,8 +4,6 @@ const currencyService = require('../services/currencyService');
 
 const router = express.Router();
 
-router.use(currencyService.getCurrency);
-
 router.get('/', viewsController.getOverview);
 router.get('/search', viewsController.getSearch);
 router.get('/q&a', viewsController.getQAndA);

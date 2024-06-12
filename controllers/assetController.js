@@ -3,9 +3,6 @@ const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 const Utils = require('../utils/utils');
 
-const euroSymbol = '€';
-const nisSymbol = '₪';
-
 let assetsArray = [];
 
 // Middleware for getting filtered (sort, limit ect) search results using the user query and requested options
@@ -51,7 +48,6 @@ exports.getSearchResults = catchAsync(async (req, res, next) => {
 });
 
 exports.renderSearchResults = catchAsync(async (req, res, next) => {
-  const currencySymbol = res.locals.currency.active === 'euro' ? '€' : '₪';
   const assets = assetsArray;
   const totalAssets = req.query.totalAssets;
   const totalPages = JSON.parse(req.query.totalPages);
@@ -63,14 +59,10 @@ exports.renderSearchResults = catchAsync(async (req, res, next) => {
     totalAssets,
     totalPages,
     pageNumber,
-    currencySymbol,
-    euroSymbol,
-    nisSymbol,
   });
 });
 
 exports.getAsset = catchAsync(async (req, res, next) => {
-  const currencySymbol = res.locals.currency.active === 'euro' ? '€' : '₪';
   const asset = await Asset.findOne({ slug: req.params.slug });
   if (!asset) return next(new AppError('Could not find the requested asset!', 404));
 
@@ -82,8 +74,5 @@ exports.getAsset = catchAsync(async (req, res, next) => {
     title: 'Asset Page',
     asset,
     hotAssets,
-    currencySymbol,
-    euroSymbol,
-    nisSymbol,
   });
 });

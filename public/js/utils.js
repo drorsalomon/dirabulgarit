@@ -1,7 +1,66 @@
 import * as config from './config';
-import { setCurrency } from './currency';
 
-const switchCurrencyHtml = (ddBtn, priceInput, isEuro = true) => {
+export const switchCurrencyIconsSrcOnLoad = (isEuro = true) => {
+  if (isEuro) {
+    let markupLaptop = `<img class="navbar-currency-icon navbar-active-currency-icon" src="${config.euroIconSrc}" alt="${config.euroIconAlt}">`;
+    document.querySelector('.currency-ddbtn').insertAdjacentHTML('afterbegin', markupLaptop);
+    let markupMobile = `<img class=" navbar-currency-icon mobile-navbar-active-currency-icon" src="${config.euroIconSrc}" alt="${config.euroIconAlt}">`;
+    document.querySelector('.mobile-currency-ddbtn').insertAdjacentHTML('afterbegin', markupMobile);
+    config.Elements.notActiveCurrencyIcon.src = config.nisIconSrc;
+    config.Elements.notActiveCurrencyIcon.alt = config.nisIconAlt;
+    config.Elements.mobileNotActiveCurrencyIcon.src = config.nisIconSrc;
+    config.Elements.mobileNotActiveCurrencyIcon.alt = config.nisIconAlt;
+  } else {
+    let markupLaptop = `<img class="navbar-currency-icon navbar-active-currency-icon" src="${config.nisIconSrc}" alt="${config.nisIconAlt}">`;
+    document.querySelector('.currency-ddbtn').insertAdjacentHTML('afterbegin', markupLaptop);
+    let markupMobile = `<img class=" navbar-currency-icon mobile-navbar-active-currency-icon" src="${config.nisIconSrc}" alt="${config.nisIconAlt}">`;
+    document.querySelector('.mobile-currency-ddbtn').insertAdjacentHTML('afterbegin', markupMobile);
+    config.Elements.notActiveCurrencyIcon.src = config.euroIconSrc;
+    config.Elements.notActiveCurrencyIcon.alt = config.euroIconAlt;
+    config.Elements.mobileNotActiveCurrencyIcon.src = config.euroIconSrc;
+    config.Elements.mobileNotActiveCurrencyIcon.alt = config.euroIconAlt;
+  }
+};
+
+export const switchSearchPriceCurrencyHtmlOnLoad = (priceInput, isEuro = true) => {
+  if (isEuro) {
+    if (priceInput)
+      priceInput.forEach((el) => {
+        if (!el.value) el.placeholder = '€' + el.placeholder;
+      });
+  } else {
+    if (priceInput)
+      priceInput.forEach((el) => {
+        if (!el.value) el.placeholder = '₪' + el.placeholder;
+      });
+  }
+};
+
+export const switchCurrencyIconsSrc = (isEuro = true) => {
+  const activeCurrencyIcon = document.querySelector('.navbar-active-currency-icon');
+  const mobileActiveCurrencyIcon = document.querySelector('.mobile-navbar-active-currency-icon');
+  if (isEuro) {
+    activeCurrencyIcon.src = config.euroIconSrc;
+    activeCurrencyIcon.alt = config.euroIconAlt;
+    mobileActiveCurrencyIcon.src = config.euroIconSrc;
+    mobileActiveCurrencyIcon.alt = config.euroIconAlt;
+    config.Elements.notActiveCurrencyIcon.src = config.nisIconSrc;
+    config.Elements.notActiveCurrencyIcon.alt = config.nisIconAlt;
+    config.Elements.mobileNotActiveCurrencyIcon.src = config.nisIconSrc;
+    config.Elements.mobileNotActiveCurrencyIcon.alt = config.nisIconAlt;
+  } else {
+    activeCurrencyIcon.src = config.nisIconSrc;
+    activeCurrencyIcon.alt = config.nisIconAlt;
+    mobileActiveCurrencyIcon.src = config.nisIconSrc;
+    mobileActiveCurrencyIcon.alt = config.nisIconAlt;
+    config.Elements.notActiveCurrencyIcon.src = config.euroIconSrc;
+    config.Elements.notActiveCurrencyIcon.alt = config.euroIconAlt;
+    config.Elements.mobileNotActiveCurrencyIcon.src = config.euroIconSrc;
+    config.Elements.mobileNotActiveCurrencyIcon.alt = config.euroIconAlt;
+  }
+};
+
+const switchSearchPriceCurrencyHtml = (ddBtn, priceInput, isEuro = true) => {
   if (isEuro) {
     if (ddBtn) ddBtn.innerText = ddBtn.innerText.replace(/₪/gi, '€');
     if (priceInput)
@@ -17,18 +76,29 @@ const switchCurrencyHtml = (ddBtn, priceInput, isEuro = true) => {
   }
 };
 
-export const switchCurrency = (activeCur, notActiveCur) => {
-  const tempSrc = activeCur.src;
-  activeCur.src = notActiveCur.src;
-  notActiveCur.src = tempSrc;
-  if (activeCur.src.includes(config.DEFAULT_CURRENCY)) {
+export const switchAssetPriceCurrency = () => {
+  const currencySymbol = JSON.parse(localStorage.getItem(config.CURRENCY_KEY)) === 'euro' ? '€' : '₪';
+  if (config.Elements.assetPrice)
+    config.Elements.assetPrice.forEach((el) => {
+      if (currencySymbol === '₪') {
+        el.innerText = el.dataset.nisprice;
+      } else {
+        el.innerText = el.dataset.europrice;
+      }
+    });
+};
+
+export const switchCurrency = (currencyIconSrc) => {
+  if (currencyIconSrc.includes(config.euroIconSrc)) {
     localStorage.setItem(config.CURRENCY_KEY, JSON.stringify(config.DEFAULT_CURRENCY));
-    setCurrency(JSON.parse(localStorage.getItem(config.CURRENCY_KEY)), config.NIS_CURRENCY);
-    switchCurrencyHtml(config.Elements.searchDdBtnPrice, config.Elements.priceInput);
+    switchCurrencyIconsSrc();
+    switchAssetPriceCurrency();
+    switchSearchPriceCurrencyHtml(config.Elements.searchDdBtnPrice, config.Elements.priceInput);
   } else {
     localStorage.setItem(config.CURRENCY_KEY, JSON.stringify(config.NIS_CURRENCY));
-    setCurrency(JSON.parse(localStorage.getItem(config.CURRENCY_KEY)), config.DEFAULT_CURRENCY);
-    switchCurrencyHtml(config.Elements.searchDdBtnPrice, config.Elements.priceInput, false);
+    switchCurrencyIconsSrc(false);
+    switchAssetPriceCurrency();
+    switchSearchPriceCurrencyHtml(config.Elements.searchDdBtnPrice, config.Elements.priceInput, false);
   }
 };
 
@@ -219,13 +289,12 @@ export const priceInputSetter = (inputMin, inputMax, onLoad = false, notModal = 
       const currencySymbol = JSON.parse(localStorage.getItem(config.CURRENCY_KEY)) === 'euro' ? '€' : '₪';
       inputMin.value = inputMin.value.replace(/,|€|₪/gi, '');
       inputMax.value = inputMax.value.replace(/,|€|₪/gi, '');
-
+      // If user inputs max value in min input or min value at max input -> reverse values and show on DD btn
       if (inputMin.value && inputMax.value && parseInt(inputMin.value, 10) > parseInt(inputMax.value, 10)) {
         const minValue = inputMax.value;
         inputMax.value = inputMin.value;
         inputMin.value = minValue;
       }
-
       inputMin.value = inputMin.value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
       inputMax.value = inputMax.value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
       if (inputMin.value && inputMax.value) {
@@ -237,7 +306,6 @@ export const priceInputSetter = (inputMin, inputMax, onLoad = false, notModal = 
           ddBtn.appendChild(priceText);
         }
       } else if (!inputMin.value && inputMax.value) {
-        inputMin.value = currencySymbol + '0';
         inputMax.value = currencySymbol + inputMax.value;
         if (notModal) {
           const priceText = document.createTextNode(' (' + inputMin.value + ' - ' + inputMax.value + ')');
@@ -246,15 +314,12 @@ export const priceInputSetter = (inputMin, inputMax, onLoad = false, notModal = 
         }
       } else if (inputMin.value && !inputMax.value) {
         inputMin.value = currencySymbol + inputMin.value;
-        inputMax.value = currencySymbol + '1,000,000';
         if (notModal) {
           const priceText = document.createTextNode(' (' + inputMin.value + ' - ' + inputMax.value + ')');
           ddBtn.innerText = ddBtn.dataset.original;
           ddBtn.appendChild(priceText);
         }
       } else if (!inputMin.value && !inputMax.value) {
-        //inputMin.value = currencySymbol + '0';
-        // inputMax.value = currencySymbol + '1,000,000';
         if (notModal) {
           const priceText = document.createTextNode(' (' + currencySymbol + '0' + ' - ' + currencySymbol + '1,000,000' + ')');
           ddBtn.innerText = ddBtn.dataset.original;
@@ -274,7 +339,6 @@ export const priceInputSetter = (inputMin, inputMax, onLoad = false, notModal = 
         ddBtn.appendChild(priceText);
       }
     } else if (!inputMin.value && inputMax.value) {
-      inputMin.value = currencySymbol + '0';
       inputMax.value = currencySymbol + inputMax.value;
       if (notModal) {
         const priceText = document.createTextNode(' (' + inputMin.value + ' - ' + inputMax.value + ')');
@@ -283,15 +347,12 @@ export const priceInputSetter = (inputMin, inputMax, onLoad = false, notModal = 
       }
     } else if (inputMin.value && !inputMax.value) {
       inputMin.value = currencySymbol + inputMin.value;
-      inputMax.value = currencySymbol + '1,000,000';
       if (notModal) {
         const priceText = document.createTextNode(' (' + inputMin.value + ' - ' + inputMax.value + ')');
         ddBtn.innerText = ddBtn.dataset.original;
         ddBtn.appendChild(priceText);
       }
     } else if (!inputMin.value && !inputMax.value) {
-      //inputMin.value = currencySymbol + inputMin.value;
-      //inputMax.value = currencySymbol + '1,000,000';
       if (notModal) {
         const priceText = document.createTextNode(' (' + currencySymbol + '0' + ' - ' + currencySymbol + '1,000,000' + ')');
         ddBtn.innerText = ddBtn.dataset.original;
@@ -389,8 +450,8 @@ export const addNavigator = async () => {
   if (navigator.share) {
     try {
       await navigator.share({
-        title: 'מצאתי עמוד ממש מעניין!',
-        text: 'מצאתי עמוד ממש מעניין!',
+        title: 'מצאתי עמוד ממש מעניין באתר דירה בולגרית!',
+        text: 'מצאתי עמוד ממש מעניין באתר דירה בולגרית!',
         url: window.location.href,
       });
     } catch (error) {

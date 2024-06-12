@@ -1,5 +1,4 @@
 import { filterAssets } from './asset';
-import { setCurrency } from './currency';
 import { displayMap } from './mapbox';
 import * as config from './config';
 import * as utils from './utils';
@@ -9,14 +8,21 @@ if (config.Elements.mapBox && config.Elements.mapBox.dataset.long && config.Elem
 }
 
 window.onload = function () {
-  // Set default currency
-  if (!JSON.parse(localStorage.getItem(config.CURRENCY_KEY))) {
-    localStorage.setItem(config.CURRENCY_KEY, JSON.stringify(config.DEFAULT_CURRENCY));
-    setCurrency(JSON.parse(localStorage.getItem(config.CURRENCY_KEY)), config.NIS_CURRENCY);
-  } else if (JSON.parse(localStorage.getItem(config.CURRENCY_KEY)) === config.DEFAULT_CURRENCY) {
-    setCurrency(JSON.parse(localStorage.getItem(config.CURRENCY_KEY)), config.NIS_CURRENCY);
-  } else if (JSON.parse(localStorage.getItem(config.CURRENCY_KEY)) === config.NIS_CURRENCY) {
-    setCurrency(JSON.parse(localStorage.getItem(config.CURRENCY_KEY)), config.DEFAULT_CURRENCY);
+  // If currency isn't set or currency is Euro
+  if (!JSON.parse(localStorage.getItem(config.CURRENCY_KEY)) || JSON.parse(localStorage.getItem(config.CURRENCY_KEY)) === config.DEFAULT_CURRENCY) {
+    // Set default currency
+    if (!JSON.parse(localStorage.getItem(config.CURRENCY_KEY))) {
+      localStorage.setItem(config.CURRENCY_KEY, JSON.stringify(config.DEFAULT_CURRENCY));
+    }
+    utils.switchCurrencyIconsSrcOnLoad();
+    utils.switchAssetPriceCurrency();
+    utils.switchSearchPriceCurrencyHtmlOnLoad(config.Elements.priceInput);
+  }
+  // If currency is Nis
+  else if (JSON.parse(localStorage.getItem(config.CURRENCY_KEY)) === config.NIS_CURRENCY) {
+    utils.switchCurrencyIconsSrcOnLoad(false);
+    utils.switchAssetPriceCurrency(false);
+    utils.switchSearchPriceCurrencyHtmlOnLoad(config.Elements.priceInput, false);
   }
 
   // Set 'active-link' class on navbar links every time the page is loaded
@@ -101,14 +107,16 @@ if (config.Elements.navbarToggler)
     });
   });
 
+// Currency switch on large screen
 if (config.Elements.notActiveCurrencyIcon)
   config.Elements.notActiveCurrencyIcon.addEventListener('click', async (e) => {
-    utils.switchCurrency(config.Elements.activeCurrencyIcon, config.Elements.notActiveCurrencyIcon);
+    utils.switchCurrency(config.Elements.notActiveCurrencyIcon.src);
   });
 
+// Currency switch on mobile screen
 if (config.Elements.mobileNotActiveCurrencyIcon)
   config.Elements.mobileNotActiveCurrencyIcon.addEventListener('click', async (e) => {
-    utils.switchCurrency(config.Elements.mobileActiveCurrencyIcon, config.Elements.mobileNotActiveCurrencyIcon);
+    utils.switchCurrency(config.Elements.mobileNotActiveCurrencyIcon.src);
   });
 
 // Asset Gallery Image Switch listener
