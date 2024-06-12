@@ -106,13 +106,14 @@ export const reverseString = (s) => {
   return s.split('').reverse().join('');
 };
 
-export const getFormData = (cityFilter, roomsFilter, typeFilet, projectFilter, oceanViewFilter, priceMinInput, priceMaxInput, idInput, nameInput) => {
+export const getFormData = (cityFilter, roomsFilter, typeFilet, projectFilter, oceanViewFilter, currency, priceMinInput, priceMaxInput, idInput, nameInput) => {
   let searchFilterObj = {
     city: [],
     rooms: [],
     type: [],
     project: [],
     oceanView: [],
+    currency: '',
     priceMin: '',
     priceMax: '',
     id: '',
@@ -143,6 +144,8 @@ export const getFormData = (cityFilter, roomsFilter, typeFilet, projectFilter, o
     searchFilterObj = emptyFilterObjBesideProjects(searchFilterObj);
     return searchFilterObj;
   }
+
+  if (currency) searchFilterObj.currency = currency;
 
   if (priceMinInput.value) searchFilterObj.priceMin = parseInt(priceMinInput.value.replace(/,|€|₪/gi, ''));
 

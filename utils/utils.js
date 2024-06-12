@@ -91,18 +91,30 @@ exports.buildMongooseQuery = (filter) => {
   // If oceanView filter has values, include it in the query
   if (Array.isArray(filter.oceanView) && filter.oceanView.length > 0) {
     console.log(filter.oceanView);
-    mongooseQuery.oceanView = { $in: filter.oceanView.map((view) => sanitizer.sanitize(view)) };
+    mongooseQuery.oceanView = { $in: filter.oceanView.map((oceanView) => sanitizer.sanitize(oceanView)) };
   }
 
   // If priceMin and priceMax filters have values, include them in the query
-  if (!filter.priceMin && !filter.priceMax) {
-    mongooseQuery.price = { $gte: 0, $lte: 1000000 };
-  } else if (filter.priceMin && !filter.priceMax) {
-    mongooseQuery.price = { $gte: sanitizer.sanitize(filter.priceMin), $lte: 1000000 };
-  } else if (!filter.priceMin && filter.priceMax) {
-    mongooseQuery.price = { $gte: 0, $lte: sanitizer.sanitize(filter.priceMax) };
-  } else if (filter.priceMin && filter.priceMax) {
-    mongooseQuery.price = { $gte: sanitizer.sanitize(filter.priceMin), $lte: sanitizer.sanitize(filter.priceMax) };
+  if (filter.currency === 'euro') {
+    if (!filter.priceMin && !filter.priceMax) {
+      mongooseQuery.price = { $gte: 0, $lte: 1000000 };
+    } else if (filter.priceMin && !filter.priceMax) {
+      mongooseQuery.price = { $gte: sanitizer.sanitize(filter.priceMin), $lte: 1000000 };
+    } else if (!filter.priceMin && filter.priceMax) {
+      mongooseQuery.price = { $gte: 0, $lte: sanitizer.sanitize(filter.priceMax) };
+    } else if (filter.priceMin && filter.priceMax) {
+      mongooseQuery.price = { $gte: sanitizer.sanitize(filter.priceMin), $lte: sanitizer.sanitize(filter.priceMax) };
+    }
+  } else {
+    if (!filter.priceMin && !filter.priceMax) {
+      mongooseQuery.priceNis = { $gte: 0, $lte: 1000000 };
+    } else if (filter.priceMin && !filter.priceMax) {
+      mongooseQuery.priceNis = { $gte: sanitizer.sanitize(filter.priceMin), $lte: 1000000 };
+    } else if (!filter.priceMin && filter.priceMax) {
+      mongooseQuery.priceNis = { $gte: 0, $lte: sanitizer.sanitize(filter.priceMax) };
+    } else if (filter.priceMin && filter.priceMax) {
+      mongooseQuery.priceNis = { $gte: sanitizer.sanitize(filter.priceMin), $lte: sanitizer.sanitize(filter.priceMax) };
+    }
   }
 
   if (filter.id) {
