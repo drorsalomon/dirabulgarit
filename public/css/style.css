@@ -1651,6 +1651,17 @@ body {
   width: 2rem;
 }
 
+.whatsapp-widget {
+  height: 4rem;
+  width: 4rem;
+  z-index: 100;
+  margin: 0 0 4rem 0;
+}
+
+.whatsapp-widget a {
+  margin-left: 0.3rem;
+}
+
 .hero-container {
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.8)), to(rgba(26, 113, 212, 0.8))), url("/img/ObzorBurgas.webp");
   background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.8), rgba(26, 113, 212, 0.8)), url("/img/ObzorBurgas.webp");

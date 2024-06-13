@@ -14,13 +14,13 @@ window.onload = function () {
     if (!JSON.parse(localStorage.getItem(config.CURRENCY_KEY))) {
       localStorage.setItem(config.CURRENCY_KEY, JSON.stringify(config.DEFAULT_CURRENCY));
     }
-    utils.switchCurrencyIconsSrcOnLoad();
+    utils.switchCurrencyIconsSrc();
     utils.switchAssetPriceCurrency();
     utils.switchSearchPriceCurrencyHtmlOnLoad(config.Elements.priceInput);
   }
   // If currency is Nis
   else if (JSON.parse(localStorage.getItem(config.CURRENCY_KEY)) === config.NIS_CURRENCY) {
-    utils.switchCurrencyIconsSrcOnLoad(false);
+    utils.switchCurrencyIconsSrc(false);
     utils.switchAssetPriceCurrency(false);
     utils.switchSearchPriceCurrencyHtmlOnLoad(config.Elements.priceInput, false);
   }

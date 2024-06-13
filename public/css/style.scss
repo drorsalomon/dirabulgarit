@@ -255,6 +255,18 @@ body {
   width: 2rem;
 }
 
+// ***** Whatsapp Widget *****
+.whatsapp-widget {
+  height: 4rem;
+  width: 4rem;
+  z-index: 100;
+  margin: 0 0 4rem 0;
+}
+
+.whatsapp-widget a {
+  margin-left: 0.3rem;
+}
+
 // ***** Hero *****
 
 .hero-container {

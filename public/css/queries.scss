@@ -206,6 +206,12 @@
 
 // Medium
 @media only screen and (min-width: 768px) {
+  // ***** Whatsapp Widget *****
+  .whatsapp-widget {
+    height: 6rem;
+    width: 6rem;
+  }
+
   // ***** Main Page Hero *****
   .hero-container {
     height: 85rem;

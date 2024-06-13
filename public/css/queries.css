@@ -139,6 +139,10 @@
   }
 }
 @media only screen and (min-width: 768px) {
+  .whatsapp-widget {
+    height: 6rem;
+    width: 6rem;
+  }
   .hero-container {
     height: 85rem;
   }

@@ -1,27 +1,5 @@
 import * as config from './config';
 
-export const switchCurrencyIconsSrcOnLoad = (isEuro = true) => {
-  if (isEuro) {
-    let markupLaptop = `<img class="navbar-currency-icon navbar-active-currency-icon" src="${config.euroIconSrc}" alt="${config.euroIconAlt}">`;
-    document.querySelector('.currency-ddbtn').insertAdjacentHTML('afterbegin', markupLaptop);
-    let markupMobile = `<img class=" navbar-currency-icon mobile-navbar-active-currency-icon" src="${config.euroIconSrc}" alt="${config.euroIconAlt}">`;
-    document.querySelector('.mobile-currency-ddbtn').insertAdjacentHTML('afterbegin', markupMobile);
-    config.Elements.notActiveCurrencyIcon.src = config.nisIconSrc;
-    config.Elements.notActiveCurrencyIcon.alt = config.nisIconAlt;
-    config.Elements.mobileNotActiveCurrencyIcon.src = config.nisIconSrc;
-    config.Elements.mobileNotActiveCurrencyIcon.alt = config.nisIconAlt;
-  } else {
-    let markupLaptop = `<img class="navbar-currency-icon navbar-active-currency-icon" src="${config.nisIconSrc}" alt="${config.nisIconAlt}">`;
-    document.querySelector('.currency-ddbtn').insertAdjacentHTML('afterbegin', markupLaptop);
-    let markupMobile = `<img class=" navbar-currency-icon mobile-navbar-active-currency-icon" src="${config.nisIconSrc}" alt="${config.nisIconAlt}">`;
-    document.querySelector('.mobile-currency-ddbtn').insertAdjacentHTML('afterbegin', markupMobile);
-    config.Elements.notActiveCurrencyIcon.src = config.euroIconSrc;
-    config.Elements.notActiveCurrencyIcon.alt = config.euroIconAlt;
-    config.Elements.mobileNotActiveCurrencyIcon.src = config.euroIconSrc;
-    config.Elements.mobileNotActiveCurrencyIcon.alt = config.euroIconAlt;
-  }
-};
-
 export const switchSearchPriceCurrencyHtmlOnLoad = (priceInput, isEuro = true) => {
   if (isEuro) {
     if (priceInput)
@@ -37,22 +15,20 @@ export const switchSearchPriceCurrencyHtmlOnLoad = (priceInput, isEuro = true) =
 };
 
 export const switchCurrencyIconsSrc = (isEuro = true) => {
-  const activeCurrencyIcon = document.querySelector('.navbar-active-currency-icon');
-  const mobileActiveCurrencyIcon = document.querySelector('.mobile-navbar-active-currency-icon');
   if (isEuro) {
-    activeCurrencyIcon.src = config.euroIconSrc;
-    activeCurrencyIcon.alt = config.euroIconAlt;
-    mobileActiveCurrencyIcon.src = config.euroIconSrc;
-    mobileActiveCurrencyIcon.alt = config.euroIconAlt;
+    config.Elements.activeCurrencyIcon.src = config.euroIconSrc;
+    config.Elements.activeCurrencyIcon.alt = config.euroIconAlt;
+    config.Elements.mobileActiveCurrencyIcon.src = config.euroIconSrc;
+    config.Elements.mobileActiveCurrencyIcon.alt = config.euroIconAlt;
     config.Elements.notActiveCurrencyIcon.src = config.nisIconSrc;
     config.Elements.notActiveCurrencyIcon.alt = config.nisIconAlt;
     config.Elements.mobileNotActiveCurrencyIcon.src = config.nisIconSrc;
     config.Elements.mobileNotActiveCurrencyIcon.alt = config.nisIconAlt;
   } else {
-    activeCurrencyIcon.src = config.nisIconSrc;
-    activeCurrencyIcon.alt = config.nisIconAlt;
-    mobileActiveCurrencyIcon.src = config.nisIconSrc;
-    mobileActiveCurrencyIcon.alt = config.nisIconAlt;
+    config.Elements.activeCurrencyIcon.src = config.nisIconSrc;
+    config.Elements.activeCurrencyIcon.alt = config.nisIconAlt;
+    config.Elements.mobileActiveCurrencyIcon.src = config.nisIconSrc;
+    config.Elements.mobileActiveCurrencyIcon.alt = config.nisIconAlt;
     config.Elements.notActiveCurrencyIcon.src = config.euroIconSrc;
     config.Elements.notActiveCurrencyIcon.alt = config.euroIconAlt;
     config.Elements.mobileNotActiveCurrencyIcon.src = config.euroIconSrc;
