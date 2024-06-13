@@ -78,11 +78,6 @@ exports.buildMongooseQuery = (filter) => {
     mongooseQuery.rooms = { $in: filter.rooms.map((room) => sanitizer.sanitize(room)) };
   }
 
-  // If type filter has values, include it in the query
-  if (Array.isArray(filter.type) && filter.type.length > 0) {
-    mongooseQuery.type = { $in: filter.type.map((type) => sanitizer.sanitize(type)) };
-  }
-
   // If project filter has values, include it in the query
   if (Array.isArray(filter.project) && filter.project.length > 0) {
     mongooseQuery.project = { $in: filter.project.map((project) => sanitizer.sanitize(project)) };
@@ -90,7 +85,6 @@ exports.buildMongooseQuery = (filter) => {
 
   // If oceanView filter has values, include it in the query
   if (Array.isArray(filter.oceanView) && filter.oceanView.length > 0) {
-    console.log(filter.oceanView);
     mongooseQuery.oceanView = { $in: filter.oceanView.map((oceanView) => sanitizer.sanitize(oceanView)) };
   }
 

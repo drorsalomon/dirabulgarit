@@ -5,14 +5,12 @@ const Utils = require('../utils/utils');
 
 let assetsArray = [];
 
-// Middleware for getting filtered (sort, limit ect) search results using the user query and requested options
 exports.getSearchResults = catchAsync(async (req, res, next) => {
   try {
     mongooseQuery = Utils.buildMongooseQuery(req.body.filter);
-    // Define sort options based on the 'sort' variable
     let sortOptions;
     if (req.params.sort === 'price') {
-      sortOptions = { price: parseInt(req.params.type) === 1 ? 1 : -1 }; // Sort by price ascending or descending
+      sortOptions = { price: parseInt(req.params.type) === 1 ? 1 : -1 };
     } else {
       sortOptions = { date: parseInt(req.params.type) === 1 ? 1 : -1 };
     }
@@ -20,7 +18,6 @@ exports.getSearchResults = catchAsync(async (req, res, next) => {
     const totalAssetsArray = await Asset.find(mongooseQuery);
     const totalAssets = totalAssetsArray.length;
 
-    // Execute the Mongoose query
     const assets = await Asset.find(mongooseQuery)
       .sort(sortOptions)
       .skip((req.params.pageNumber - 1) * req.params.resPerPage)
