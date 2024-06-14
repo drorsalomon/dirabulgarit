@@ -265,8 +265,8 @@ if (config.Elements.searchForm)
     let searchFilterObj = utils.getFormData(
       config.Elements.searchFilterBtnCity,
       config.Elements.searchFilterBtnRooms,
-      config.Elements.searchFilterBtnProject,
       config.Elements.searchFilterBtnOceanView,
+      config.Elements.searchFilterBtnProject,
       JSON.parse(localStorage.getItem(config.CURRENCY_KEY)),
       config.Elements.priceInputMin,
       config.Elements.priceInputMax,
@@ -295,8 +295,8 @@ if (config.Elements.modalSearchForm)
     let searchFilterObj = utils.getFormData(
       config.Elements.modalSearchFilterBtnCity,
       config.Elements.modalSearchFilterBtnRooms,
-      config.Elements.modalSearchFilterBtnProject,
       config.Elements.modalSearchFilterBtnOceanView,
+      config.Elements.modalSearchFilterBtnProject,
       JSON.parse(localStorage.getItem(config.CURRENCY_KEY)),
       config.Elements.modalPriceInputMin,
       config.Elements.modalPriceInputMax,

@@ -141,7 +141,6 @@ const emptyFilterObj = (filterObj) => {
   filterObj = {
     city: [],
     rooms: [],
-    type: [],
     project: [],
     oceanView: [],
     priceMin: '',
@@ -156,7 +155,6 @@ const emptyFilterObjBesideProjects = (filterObj) => {
   let emptyFilterObj = {
     city: [],
     rooms: [],
-    type: [],
     project: [],
     oceanView: [],
     priceMin: '',
@@ -193,16 +191,6 @@ export const btnAddActive = (searchFilterObj, filterBtn, type, notModal = true, 
     if (type === 'rooms') {
       for (const rooms of searchFilterObj.rooms) {
         if (el.innerText === rooms) {
-          el.classList.add('active');
-        }
-        if (notModal) {
-          ddBtnTextSetter(ddBtn, filterBtn, true);
-        }
-      }
-    }
-    if (type === 'type') {
-      for (const type of searchFilterObj.type) {
-        if (el.innerText === type) {
           el.classList.add('active');
         }
         if (notModal) {
@@ -340,7 +328,6 @@ export const clearSearchChoices = (searchFilterObj, ddBtn, filterBtn, input) => 
   const emptySearchFilterObj = {
     city: [],
     rooms: [],
-    type: [],
     project: [],
     oceanView: [],
     priceMin: '',
