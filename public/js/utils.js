@@ -424,14 +424,16 @@ export const addNavigator = async () => {
 };
 
 export const checkIfFavorite = (assetId) => {
-  const favoriteAssetArray = JSON.parse(localStorage.getItem(config.FAVORITE_KEY));
-  favoriteAssetArray.forEach((el) => {
-    if (el === assetId) {
-      config.Elements.assetFavoriteIcon.forEach((icon) => {
-        icon.src = config.assetFavoriteIconFullSrc;
-      });
-    }
-  });
+  if (JSON.parse(localStorage.getItem(config.FAVORITE_KEY))) {
+    const favoriteAssetArray = JSON.parse(localStorage.getItem(config.FAVORITE_KEY));
+    favoriteAssetArray.forEach((el) => {
+      if (el === assetId) {
+        config.Elements.assetFavoriteIcon.forEach((icon) => {
+          icon.src = config.assetFavoriteIconFullSrc;
+        });
+      }
+    });
+  }
 };
 
 export const addToFavorite = (assetId) => {
