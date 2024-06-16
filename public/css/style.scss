@@ -12,6 +12,7 @@
 @import 'calendly';
 @import 'contactUsConfirm';
 @import 'pricing';
+@import 'favoriteAssets';
 @import 'error';
 @import 'privacy';
 @import 'termsOfService';
@@ -58,7 +59,8 @@ body {
 .mainpage-search-container,
 .mainpage-about-container,
 .mainpage-howitworks-container,
-.mainpage-blog-container {
+.mainpage-blog-container,
+.mainpage-contact-us-container {
   margin-bottom: 5rem;
 }
 
@@ -200,7 +202,8 @@ body {
 .invest-guide-btn,
 .blog-card-btn,
 .section-headline-cta-btn,
-.error-btn {
+.error-btn,
+.mobile-asset-favorite-btn {
   border: 1px solid $text-color-secondary;
   color: $bg-color-primary;
   background-color: $text-color-secondary;
@@ -213,7 +216,8 @@ body {
 .btn-cta-white,
 .btn-cta-asset,
 .mainpage-blog-card-btn,
-.share-btn-white {
+.share-btn-white,
+.asset-favorite-btn-white {
   background-color: $bg-color-primary;
   color: $text-color-secondary;
   -webkit-transform: translateY(-1px);
@@ -234,7 +238,9 @@ body {
 }
 
 .share-btn,
-.share-btn-white {
+.share-btn-white,
+.mobile-asset-favorite-btn,
+.asset-favorite-btn-white {
   width: 5rem;
   height: 5rem;
   border-radius: 3rem;
@@ -246,13 +252,24 @@ body {
   border: none;
 }
 
+.asset-favorite-btn {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+
+.asset-favorite-btn-white {
+  margin-right: 1.5rem;
+}
+
 .share-btn {
   background-color: $text-color-secondary;
 }
 
-.share-btn-icon {
-  height: 2rem;
-  width: 2rem;
+.share-btn-icon,
+.header-favorite-btn-icon,
+.favorite-btn-icon {
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
 // ***** Whatsapp Widget *****
@@ -1039,4 +1056,31 @@ input[type='text']::placeholder {
 .mainpage-blog-card-title {
   font-size: $h4;
   font-weight: 600;
+}
+
+// ***** Contact Us *****
+.mainpage-contact-us-container {
+  padding: 5rem 0 10rem 0;
+  margin-bottom: 0;
+  background-color: $bg-color-secondary;
+}
+
+.mainpage-contact-us-tag {
+  font-size: $h5;
+  font-weight: 600;
+  color: $text-color-secondary;
+  margin-bottom: 1rem;
+}
+
+.mainpage-contact-us-headline {
+  font-size: $h3;
+  font-weight: 600;
+  color: $text-color-tertiary;
+  margin-bottom: 5rem;
+}
+
+.mainpage-contact-us-col {
+  background-color: $text-color-secondary;
+  border-radius: 2rem;
+  padding-top: 5rem;
 }

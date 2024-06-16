@@ -7,7 +7,7 @@
 .calendly-col {
   position: relative;
   background-color: $text-color-secondary !important;
-  height: 145rem;
+  height: 165rem;
   border-radius: 1rem;
 }
 
@@ -47,7 +47,15 @@
   height: 4rem !important;
 }
 
-.contact-us-input:focus {
+.contact-us-textarea {
+  font-size: $h6 !important;
+  text-align: right !important;
+  color: $text-color-primary !important;
+  border: 1px solid $text-color-secondary !important;
+}
+
+.contact-us-input:focus,
+.contact-us-textarea:focus {
   outline: none;
   border-color: $input-border-glow !important;
   -webkit-box-shadow: 0 0 10px $input-border-glow !important;
@@ -114,7 +122,7 @@
 .calendly-widget-container {
   position: absolute;
   height: fit-content;
-  top: 195%;
+  top: 180%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);

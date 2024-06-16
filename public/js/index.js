@@ -1,4 +1,5 @@
 import { filterAssets } from './asset';
+import { getFavoriteAssets } from './favoriteAssets';
 import { displayMap } from './mapbox';
 import * as config from './config';
 import * as utils from './utils';
@@ -80,6 +81,12 @@ window.onload = function () {
       config.Elements.searchInput,
     );
   }
+  if (config.Elements.assetFavoriteIcon) {
+    config.Elements.assetFavoriteIcon.forEach((el) => {
+      const assetId = config.Elements.assetId.textContent;
+      utils.checkIfFavorite(assetId);
+    });
+  }
 };
 
 // Set 'offcanvas-active-link' class on offcanvas links every time the offcanvas toggler is clicked
@@ -113,10 +120,38 @@ if (config.Elements.notActiveCurrencyIcon)
     utils.switchCurrency(config.Elements.notActiveCurrencyIcon.src);
   });
 
-// Currency switch on mobile screen
 if (config.Elements.mobileNotActiveCurrencyIcon)
   config.Elements.mobileNotActiveCurrencyIcon.addEventListener('click', async (e) => {
     utils.switchCurrency(config.Elements.mobileNotActiveCurrencyIcon.src);
+    config.Elements.mobileCurrencyDdBtn.click();
+  });
+
+if (config.Elements.favoriteBtn)
+  config.Elements.favoriteBtn.addEventListener('click', async (e) => {
+    getFavoriteAssets(JSON.parse(localStorage.getItem(config.FAVORITE_KEY)));
+  });
+
+if (config.Elements.mobileFavoriteBtn)
+  config.Elements.mobileFavoriteBtn.addEventListener('click', async (e) => {
+    getFavoriteAssets(JSON.parse(localStorage.getItem(config.FAVORITE_KEY)));
+  });
+
+if (config.Elements.assetFavoriteBtn)
+  config.Elements.assetFavoriteBtn.forEach((el) => {
+    el.addEventListener('click', function (e) {
+      if (config.Elements.assetId) {
+        const assetId = config.Elements.assetId.textContent;
+        config.Elements.assetFavoriteIcon.forEach((icon) => {
+          if (icon.src.includes(config.assetFavoriteIconOutlineSrc)) {
+            utils.addToFavorite(assetId);
+            icon.src = config.assetFavoriteIconFullSrc;
+          } else {
+            utils.removeFromFavorite(assetId);
+            icon.src = config.assetFavoriteIconOutlineSrc;
+          }
+        });
+      }
+    });
   });
 
 // Asset Gallery Image Switch listener

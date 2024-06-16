@@ -25,9 +25,11 @@ block content
                                 .col-12.contact-us-col.d-flex.justify-content-end 
                                     input.contact-us-input.contact-us-email-input.form-control(type='email' ftype='email' autocomplete='false' name='Email' crmlabel='' maxlength='100' placeholder='אימייל  ' aria-label='email' aria-describedby='basic-addon1' pattern='[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}' required)
                                     .invalid-tooltip.contact-us-email-invalid אנא הכניסו אימייל תקין
+                                .col-12.contact-us-col.d-flex.justify-content-end     
+                                    textarea.contact-us-textarea.contact-us-description-input.form-control(id='Description' name='Description' dir='rtl' aria-label="With textarea" rows="5" placeholder='יש עוד משהו שהייתם רוצים שנדע?')
                                 .col-12.contact-us-col
-                                    input.contact-us-button.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='שליחה' title='Submit')
                                     input.contact-us-button.mx-3(type='reset' class='zcwf_button' name='reset' value='ניקוי' title='Reset')
+                                    input.contact-us-button.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='שליחה' title='Submit')
                     div.calendly-text(dir='rtl') <strong>2.</strong> אתם יכולים לבחור יועץ בלחיצה על הכפתור ולקבוע <strong>פגישת וידאו</strong> בזמן שמתאים לכם  
                     .dropdown.calendly-agents-dropdown
                         button.btn.btn-secondary.dropdown-toggle.calendly-agents-button(type='button' data-bs-toggle='dropdown' aria-expanded='false' dir='rtl') בחרו יועץ

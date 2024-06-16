@@ -1,0 +1,18 @@
+extends base 
+
+block content
+
+    .container-fluid.favorite-assets-headline-container
+        .row.favorite-assets-headline-row.justify-content-center 
+            .col-10.favorite-assets-headline-col 
+                h1.favorite-assets-headline(dir='rtl') נכסים מועדפים
+
+    .container-fluid.favorite-assets-container
+        .row.favorite-assets-row.d-flex.justify-content-center.mx-2
+            if assetsArray !== null && assetsArray.length > 0
+                each asset in assetsArray    
+                    include _assetsCards
+            else
+                div.no-search-results-found.text-center טרם בחרתם נכסים מועדפים
+                div.no-search-results-found-img-container.text-center  
+                    img(src="/img/logo-grey.png" alt="dira bulgarit logo").no-search-results-found-img           

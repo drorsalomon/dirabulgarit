@@ -73,3 +73,18 @@ exports.getAsset = catchAsync(async (req, res, next) => {
     hotAssets,
   });
 });
+
+exports.getFavoriteAssets = catchAsync(async (req, res, next) => {
+  let sortOptions = { price: 1 };
+  const assets = await Asset.find({ id: { $in: req.body.favoriteAssets } }).sort(sortOptions);
+  assetsArray = assets;
+  if (!assets) return next(new AppError('Could not find the requested asset!', 404));
+  res.status(200).json({ status: 'success' });
+});
+
+exports.renderFavoriteAssets = catchAsync(async (req, res, next) => {
+  res.render('favoriteAssets', {
+    title: 'Favorite assets Page',
+    assetsArray,
+  });
+});

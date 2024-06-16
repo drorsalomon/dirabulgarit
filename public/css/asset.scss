@@ -24,6 +24,7 @@
 .asset-video-container,
 .asset-map-container,
 .asset-back-to-results-container,
+.asset-contact-us-container,
 .asset-related-assets-container {
   margin-bottom: 4rem;
 }
@@ -163,6 +164,10 @@
   padding: 4rem 1rem !important;
 }
 
+.mobile-asset-favorite-btn-container {
+  margin-bottom: 2rem;
+}
+
 .asset-details-description-middleViewport-col {
   display: none;
   margin-top: 4rem !important;
@@ -205,6 +210,7 @@
 
 .asset-amenities-headline,
 .asset-map-headline,
+.asset-contact-us-container-headline,
 .asset-related-assets-headline {
   font-size: $h4;
   font-weight: 600;
@@ -253,4 +259,10 @@
   -webkit-transform: translateY(-1px);
   -ms-transform: translateY(-1px);
   transform: translateY(-1px);
+}
+
+.asset-contact-us-container-col {
+  background-color: $text-color-secondary;
+  border-radius: 2rem;
+  padding-top: 5rem;
 }

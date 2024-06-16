@@ -16,4 +16,14 @@ router.get('/privacy', viewsController.getPrivacy);
 router.get('/terms-of-service', viewsController.getTermsOfService);
 router.get('/site-map', viewsController.getSiteMap);
 
+// Route to serve sitemap.xml
+router.get('/sitemap.xml', (req, res) => {
+  res.sendFile(path.join(__dirname, '../sitemap.xml'));
+});
+
+// Route to serve robots.txt
+router.get('/robots.txt', (req, res) => {
+  res.sendFile(path.join(__dirname, '../robots.txt'));
+});
+
 module.exports = router;

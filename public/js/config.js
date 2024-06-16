@@ -19,8 +19,11 @@ export const Elements = {
   currencyIcon: document.querySelectorAll('.navbar-currency-icon'),
   activeCurrencyIcon: document.querySelector('.navbar-active-currency-icon'),
   notActiveCurrencyIcon: document.querySelector('.navbar-not-active-currency-icon'),
+  mobileCurrencyDdBtn: document.querySelector('.mobile-currency-dropdown-btn'),
   mobileActiveCurrencyIcon: document.querySelector('.mobile-navbar-active-currency-icon'),
   mobileNotActiveCurrencyIcon: document.querySelector('.mobile-navbar-not-active-currency-icon'),
+  favoriteBtn: document.querySelector('.asset-favorite-btn'),
+  mobileFavoriteBtn: document.querySelector('.mobile-asset-favorite-btn'),
   // Search Form
   searchForm: document.querySelector('.search-form'),
   searchDdBtn: document.querySelectorAll('.search-filter-dropdown--btn'),
@@ -70,7 +73,10 @@ export const Elements = {
   assetModalMainImg: document.querySelector('.asset-gallery-mainImage-modal'),
   carouselInner: document.querySelector('.carousel-inner'),
   mapBox: document.getElementById('map'),
+  assetId: document.querySelector('.asset-details-id'),
   assetPrice: document.querySelectorAll('.asset-price'),
+  assetFavoriteBtn: document.querySelectorAll('.asset-favorite-btn-white'),
+  assetFavoriteIcon: document.querySelectorAll('.favorite-btn-icon'),
   // Blog
   blogCards: document.querySelectorAll('.blog-card'),
   // Contact Us
@@ -78,6 +84,7 @@ export const Elements = {
   contactUsNameInput: document.querySelector('.contact-us-name-input'),
   contactUsPhoneInput: document.querySelector('.contact-us-phone-input'),
   contactUsEmailInput: document.querySelector('.contact-us-email-input'),
+  contactUsDescriptionInput: document.querySelector('.contact-us-description-input'),
   contactUsPhoneInvalid: document.querySelector('.contact-us-phone-invalid '),
   contactUsEmailInvalid: document.querySelector('.contact-us-email-invalid '),
   calendlyAgentsBtn: document.querySelector('.calendly-agents-button'),
@@ -91,12 +98,18 @@ export const Elements = {
 };
 
 export const euroIconSrc = '/img/icons/euro.svg';
+export const mobileEuroIconSrc = '/img/icons/euro-white.svg';
 export const euroIconAlt = 'Euro currency icon';
 export const nisIconSrc = '/img/icons/nis.svg';
+export const mobileNisIconSrc = '/img/icons/nis-white.svg';
 export const nisIconAlt = 'Nis currency icon';
 export const CURRENCY_KEY = 'currency';
 export const DEFAULT_CURRENCY = 'euro';
 export const NIS_CURRENCY = 'nis';
+
+export const FAVORITE_KEY = 'favorite';
+export const assetFavoriteIconOutlineSrc = '/img/icons/heart-empty-svgrepo-com-outline.svg';
+export const assetFavoriteIconFullSrc = '/img/icons/heart-svgrepo-com-full.svg';
 
 export const SORT_KEY = 'sort';
 export const TYPE_KEY = 'type';

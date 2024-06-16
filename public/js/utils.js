@@ -18,20 +18,20 @@ export const switchCurrencyIconsSrc = (isEuro = true) => {
   if (isEuro) {
     config.Elements.activeCurrencyIcon.src = config.euroIconSrc;
     config.Elements.activeCurrencyIcon.alt = config.euroIconAlt;
-    config.Elements.mobileActiveCurrencyIcon.src = config.euroIconSrc;
+    config.Elements.mobileActiveCurrencyIcon.src = config.mobileEuroIconSrc;
     config.Elements.mobileActiveCurrencyIcon.alt = config.euroIconAlt;
     config.Elements.notActiveCurrencyIcon.src = config.nisIconSrc;
     config.Elements.notActiveCurrencyIcon.alt = config.nisIconAlt;
-    config.Elements.mobileNotActiveCurrencyIcon.src = config.nisIconSrc;
+    config.Elements.mobileNotActiveCurrencyIcon.src = config.mobileNisIconSrc;
     config.Elements.mobileNotActiveCurrencyIcon.alt = config.nisIconAlt;
   } else {
     config.Elements.activeCurrencyIcon.src = config.nisIconSrc;
     config.Elements.activeCurrencyIcon.alt = config.nisIconAlt;
-    config.Elements.mobileActiveCurrencyIcon.src = config.nisIconSrc;
+    config.Elements.mobileActiveCurrencyIcon.src = config.mobileNisIconSrc;
     config.Elements.mobileActiveCurrencyIcon.alt = config.nisIconAlt;
     config.Elements.notActiveCurrencyIcon.src = config.euroIconSrc;
     config.Elements.notActiveCurrencyIcon.alt = config.euroIconAlt;
-    config.Elements.mobileNotActiveCurrencyIcon.src = config.euroIconSrc;
+    config.Elements.mobileNotActiveCurrencyIcon.src = config.mobileEuroIconSrc;
     config.Elements.mobileNotActiveCurrencyIcon.alt = config.euroIconAlt;
   }
 };
@@ -65,7 +65,7 @@ export const switchAssetPriceCurrency = () => {
 };
 
 export const switchCurrency = (currencyIconSrc) => {
-  if (currencyIconSrc.includes(config.euroIconSrc)) {
+  if (currencyIconSrc.includes(config.euroIconSrc) || currencyIconSrc.includes(config.mobileEuroIconSrc)) {
     localStorage.setItem(config.CURRENCY_KEY, JSON.stringify(config.DEFAULT_CURRENCY));
     switchCurrencyIconsSrc();
     switchAssetPriceCurrency();
@@ -421,4 +421,38 @@ export const addNavigator = async () => {
   } else {
     alert('תקלה! לצערנו שיתוף העמוד לא נתמך על ידי הדפדפן שלך.');
   }
+};
+
+export const checkIfFavorite = (assetId) => {
+  const favoriteAssetArray = JSON.parse(localStorage.getItem(config.FAVORITE_KEY));
+  favoriteAssetArray.forEach((el) => {
+    if (el === assetId) {
+      config.Elements.assetFavoriteIcon.forEach((icon) => {
+        icon.src = config.assetFavoriteIconFullSrc;
+      });
+    }
+  });
+};
+
+export const addToFavorite = (assetId) => {
+  let addToArray = true;
+  const favoriteAssetArray = JSON.parse(localStorage.getItem(config.FAVORITE_KEY));
+  favoriteAssetArray.forEach((el) => {
+    if (el === assetId) {
+      addToArray = false;
+    }
+  });
+  if (addToArray) {
+    favoriteAssetArray.push(assetId);
+    localStorage.setItem(config.FAVORITE_KEY, JSON.stringify(favoriteAssetArray));
+  }
+};
+
+export const removeFromFavorite = (assetId) => {
+  const favoriteAssetArray = JSON.parse(localStorage.getItem(config.FAVORITE_KEY));
+  const index = favoriteAssetArray.findIndex((el) => el === assetId);
+  if (index !== -1) {
+    favoriteAssetArray.splice(index, 1);
+  }
+  localStorage.setItem(config.FAVORITE_KEY, JSON.stringify(favoriteAssetArray));
 };

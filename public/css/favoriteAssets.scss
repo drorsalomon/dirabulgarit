@@ -1,0 +1,15 @@
+@import 'variables';
+
+.favorite-assets-headline-container {
+  margin: 5rem 0;
+}
+
+.favorite-assets-headline-row {
+  margin-bottom: 5rem;
+}
+
+.favorite-assets-headline {
+  font-size: $h3;
+  font-weight: 600;
+  color: $text-color-secondary;
+}

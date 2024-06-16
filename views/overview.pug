@@ -8,7 +8,7 @@ block content
                 h1.hero-headline(dir='rtl') מרכז הנדל"ן הבולגרי לישראלים
                 div.hero-text(dir='rtl') אתר הנדל"ן הבולגרי הגדול ביותר עבור ישראלים, מאות נכסים, מאות הזדמנויות, פרויקטים חדשים ובלעדיים, דירות יד שנייה, דירות נופש, ודירות למגורים - "דירה בולגרית" מאגדת עבורך את הנדל"ן בבולגריה ומלווה אותך כל הדרך אל הנכס
                 div.hero-cta-btn-container
-                    button.btn-cta-white.to-calendly-btn תאמו פגישה           
+                    button.btn-cta-white.to-calendly-btn צרו קשר          
 
     div.mainpage-search-modal-open-btn-container.text-center
         div.mainpage-search-headline חיפוש נכס
@@ -292,7 +292,7 @@ block content
                                         span.pricing-card-text השכרת הנכס וניהול הנכס 
                                         img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='x Icon')    
             .col-12.text-center.py-5    
-                button.btn-cta.pricing-cta-btn.to-calendly-btn תאמו פגישה  
+                button.btn-cta.pricing-cta-btn.to-calendly-btn צרו קשר 
 
     .container-fluid.mainpage-blog-container
         .row.mainpage-blog-headline-row.d-felx.justify-content-center
@@ -356,3 +356,35 @@ block content
         .row.mainpage-blog-btn-row.d-felx.justify-content-center
             .col-12.text-center.py-3    
                 button.btn-cta.to-blog-btn לעמוד הבלוג  
+
+
+    .container-fluid.mainpage-contact-us-container
+        .row.mainpage-contact-us-headline-row.d-felx.justify-content-center
+            .col-12.mainpage-contact-us-headline-col
+                .row.text-center
+                    div.mainpage-contact-us-tag צרו קשר
+                    div.mainpage-contact-us-headline השאירו פרטים ואחד היועצים שלנו יצור עמכם קשר בהקדם
+        .row.mainpage-contact-us-row.d-felx.justify-content-center.mx-4
+            .col-12.mainpage-contact-us-col.w-75.text-center 
+                div#crmWebToEntityForm.crmWebToEntityForm
+                    form.contact-us-form#webform6296617000000479035(action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads6296617000000479035 method='POST' accept-charset='UTF-8' novalidate)
+                        input(type='text' style='display:none;' name='xnQsjsdp' value='59a0780e6b2791aec2fc494a0d52812511ef98c0f6123210fdc332d6fa0b9e22')
+                        input#zc_gad(type='hidden' name='zc_gad' value='')
+                        input(type='text' style='display:none;' name='xmIwtLD' value='7334e6acba558f934b954c69f5851611538edbf846a3d2f15f807f241012015c2f9c9c0839f214a112e56e062e05be4f')
+                        input(type='text' style='display:none;' name='actionType' value='TGVhZHM=')
+                        input(type='text' style='display:none;' name='returnURL' value='https://www.dirabulgarit.com/contact-us-confirm')
+                        .row.contact-us-row.align-items-center
+                            .col-12.contact-us-col.d-flex.justify-content-end
+                                input.contact-us-input.contact-us-name-input.form-control(type='text' name='Last Name' maxlength='200' placeholder='שם' aria-label='name' aria-describedby='basic-addon1' required)                            
+                                .invalid-tooltip אנא הכניסו שם
+                            .col-12.contact-us-col.d-flex.justify-content-end
+                                input.contact-us-input.contact-us-phone-input.form-control(type='text' name='Phone' maxlength='10' placeholder='טלפון' aria-label='phone' aria-describedby='basic-addon1' pattern='[0-9]{10}' required)
+                                .invalid-tooltip.contact-us-phone-invalid אנא הכניסו מספר טלפון תקין
+                            .col-12.contact-us-col.d-flex.justify-content-end 
+                                input.contact-us-input.contact-us-email-input.form-control(type='email' ftype='email' autocomplete='false' name='Email' crmlabel='' maxlength='100' placeholder='אימייל  ' aria-label='email' aria-describedby='basic-addon1' pattern='[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}' required)
+                                .invalid-tooltip.contact-us-email-invalid אנא הכניסו אימייל תקין
+                            .col-12.contact-us-col.d-flex.justify-content-end     
+                                textarea.contact-us-textarea.contact-us-description-input.form-control(id='Description' name='Description' dir='rtl' aria-label="With textarea" rows="5" placeholder='יש עוד משהו שהייתם רוצים שנדע?')
+                            .col-12.contact-us-col
+                                input.contact-us-button.mx-3(type='reset' class='zcwf_button' name='reset' value='ניקוי' title='Reset')        
+                                input.contact-us-button.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='שליחה' title='Submit')

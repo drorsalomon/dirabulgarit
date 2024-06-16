@@ -1,40 +1,54 @@
 nav.navbar.navbar-expand-xl.fixed-top  
   .container.navbar-container
-    button.navbar-toggler.collapsed(type='button' data-bs-toggle='offcanvas' data-bs-target='#navbarContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
-      span.navbar-toggler-icon
-    a.navbar-brand.mobile-navbar-brand(href='/')
-      img.navbar-logo(src='/img/logo.png' alt='DiraBulgarit logo')  
-    .dropstart.currency-mobile-dropdown-btn
-      button.btn.btn-secondary.dropdown-toggle.currency-dropdown-btn(type='button' data-bs-toggle='dropdown' aria-expanded='false')
-        img.navbar-currency-icon.mobile-navbar-active-currency-icon(src='/img/icons/placeholder-thin-svgrepo-com-white.svg' alt='')   
-      ul.dropdown-menu.text-end.currency-dropdown-menu
-        li.currency-dropdown-menu-item 
-          img.navbar-currency-icon.mobile-navbar-not-active-currency-icon(src='' alt='')   
+    .container.navbar-mobile-container
+      .row
+        .col-2.d-flex.align-content-center
+          button.navbar-toggler.collapsed(type='button' data-bs-toggle='offcanvas' data-bs-target='#navbarContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        .col-10.text-end
+          a.navbar-brand.mobile-navbar-brand(href='/')
+            img.navbar-logo(src='/img/logo.png' alt='DiraBulgarit logo')  
     div.offcanvas.offcanvas-end.w-auto.text-end(tabindex='-1' id='navbarContent' aria-labelledby='offcanvasNavbarLabel')
-      div.offcanvas-body 
+      div.offcanvas-body
         div.btn-cta--container
-          button.btn-cta.btn-cta--offcanvas.to-calendly-btn תאמו פגישה
+          button.btn-cta.btn-cta--offcanvas.to-calendly-btn צרו קשר
+        button.mobile-asset-favorite-btn
+          img.header-favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline-white.svg' alt='Heart icon') 
+        button.btn.btn-secondary.dropdown-toggle.currency-dropdown-btn.mobile-currency-dropdown-btn(type='button' data-bs-toggle='collapse' data-bs-target="#currencyBtnCollapse" aria-expanded="false" aria-controls="currencyBtnCollapse")
+          img.navbar-currency-icon.mobile-navbar-active-currency-icon(src='/img/icons/placeholder-thin-svgrepo-com-white.svg' alt='')   
+        div.collapse.mobile-currency-collapse(id="currencyBtnCollapse")
+          img.navbar-currency-icon.mobile-navbar-not-active-currency-icon(src='' alt='')       
+        //-button.btn.btn-secondary.dropdown-toggle.lang-dropdown-btn.mobile-lang-dropdown-btn(type='button' data-bs-toggle='collapse' data-bs-target="#langBtnCollapse" aria-expanded="false" aria-controls="langBtnCollapse")
+          img.navbar-lang-icon.mobile-navbar-active-lang-icon(src='/img/icons/flag-for-flag-israel-svgrepo-com.svg' alt='')   
+        //-div.collapse(id="langBtnCollapse")
+          div
+            img.navbar-lang-icon.mobile-navbar-not-active-lang-icon(src='/img/icons/flag-for-flag-russia-svgrepo-com.svg' alt='')       
+          div
+            img.navbar-lang-icon.mobile-navbar-not-active-lang-icon(src='/img/icons/flag-for-flag-united-states-svgrepo-com.svg' alt='')       
         ul.navbar-nav.align-items-xl-center.justify-content-xl-evenly
-          li.nav-item.currency-nav-item
+          li.nav-item
+            button.asset-favorite-btn
+              img.header-favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline.svg' alt='Heart icon') 
+          li.nav-item.currency-nav-item  
             .dropend
               button.btn.btn-secondary.dropdown-toggle.currency-dropdown-btn(type='button' data-bs-toggle='dropdown' aria-expanded='false')
                 img.navbar-currency-icon.navbar-active-currency-icon(src='/img/icons/placeholder-thin-svgrepo-com-white.svg' alt='')   
               ul.dropdown-menu.currency-dropdown-menu
                 li.currency-dropdown-menu-item 
                   img.navbar-currency-icon.navbar-not-active-currency-icon(src='' alt='') 
-          li.nav-item.nav-item.align-content-center
+          li.nav-item
             a.nav-link.nav-el(href='/pricing') מחירון
-          li.nav-item.nav-item.align-content-center
+          li.nav-item
             a.nav-link.nav-el(href='/blog') חשוב לדעת
-          li.nav-item.nav-item.align-content-center
+          li.nav-item
             a.nav-link.nav-el(href='/about') מי אנחנו
-          li.nav-item.align-content-center
+          li.nav-item
             a.nav-link.nav-el(href='/invest') איך להשקיע בבולגריה
-          li.nav-item.nav-item.align-content-center
+          li.nav-item
             a.nav-link.nav-el(href='/q&a') שאלות ותשובות
-          li.nav-item.nav-item.align-content-center
+          li.nav-item
             a.nav-link.nav-el(href='/search') חיפוש נכס
-          li.nav-item.nav-item.align-content-center
+          li.nav-item
             a.nav-link.nav-el.homepage-link(href='/') עמוד ראשי
     a.navbar-brand.laptop-navbar-brand(href='/')
       img.navbar-logo(src='/img/logo.png' alt='DiraBulgarit logo')    

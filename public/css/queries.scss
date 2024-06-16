@@ -42,7 +42,7 @@
 
   // ***** Contact Us *****
   .calendly-widget-container {
-    top: 200%;
+    top: 182%;
   }
 }
 
@@ -178,7 +178,7 @@
 
   // ***** Contact Us *****
   .calendly-col {
-    height: 135rem;
+    height: 150rem;
   }
 
   .calendly-text-container {
@@ -186,7 +186,7 @@
   }
 
   .calendly-widget-container {
-    top: 223%;
+    top: 198%;
   }
 
   .calendly-inline-widget {
@@ -367,6 +367,11 @@
     font-size: $h4;
   }
 
+  // ***** Main Page Contact Us *****
+  .mainpage-contact-us-tag {
+    font-size: $h4;
+  }
+
   // ***** Search *****
   .search-headline-img {
     height: 30rem;
@@ -385,10 +390,6 @@
 
   .calendly-inline-widget {
     width: 55rem;
-  }
-
-  .calendly-widget-container {
-    top: 225%;
   }
 
   // ***** Asset *****
@@ -476,8 +477,7 @@
 
   .btn-cta-white,
   .btn-cta-asset,
-  .mainpage-blog-card-btn,
-  .share-btn-white {
+  .mainpage-blog-card-btn {
     -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
     -o-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
     transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -488,8 +488,7 @@
 
   .btn-cta-white:hover,
   .btn-cta-asset:hover,
-  .mainpage-blog-card-btn:hover,
-  .share-btn-white:hover {
+  .mainpage-blog-card-btn:hover {
     border: 1px solid;
     -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -498,6 +497,19 @@
     -webkit-transform: translateY(-4px);
     -ms-transform: translateY(-4px);
     transform: translateY(-4px);
+  }
+
+  .share-btn-white,
+  .asset-favorite-btn-white {
+    -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .share-btn-white:hover,
+  .asset-favorite-btn-white:hover {
+    -webkit-filter: brightness(90%);
+    filter: brightness(90%);
   }
 
   .section-headline-cta-btn:hover {
@@ -651,7 +663,8 @@
     display: flex;
   }
 
-  .asset-modal-open-btn-container {
+  .asset-modal-open-btn-container,
+  .mobile-asset-favorite-btn-container {
     display: none;
   }
 
@@ -720,7 +733,7 @@
 
   // ***** Contact Us *****
   .calendly-widget-container {
-    top: 245%;
+    top: 210%;
   }
 
   // ***** Pricing *****
@@ -756,6 +769,13 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+  }
+
+  .navbar-mobile-container,
+  .mobile-asset-favorite-btn,
+  .mobile-currency-dropdown-btn,
+  .mobile-currency-collapse {
+    display: none !important;
   }
 
   .nav-item {
@@ -903,7 +923,7 @@
   }
 
   .calendly-widget-container {
-    top: 235%;
+    top: 205%;
   }
 
   // ***** Error *****
