@@ -438,12 +438,15 @@ export const checkIfFavorite = (assetId) => {
 
 export const addToFavorite = (assetId) => {
   let addToArray = true;
-  const favoriteAssetArray = JSON.parse(localStorage.getItem(config.FAVORITE_KEY));
-  favoriteAssetArray.forEach((el) => {
-    if (el === assetId) {
-      addToArray = false;
-    }
-  });
+  let favoriteAssetArray = [];
+  if (JSON.parse(localStorage.getItem(config.FAVORITE_KEY))) {
+    favoriteAssetArray = JSON.parse(localStorage.getItem(config.FAVORITE_KEY));
+    favoriteAssetArray.forEach((el) => {
+      if (el === assetId) {
+        addToArray = false;
+      }
+    });
+  }
   if (addToArray) {
     favoriteAssetArray.push(assetId);
     localStorage.setItem(config.FAVORITE_KEY, JSON.stringify(favoriteAssetArray));
