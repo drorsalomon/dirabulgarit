@@ -1751,7 +1751,7 @@ body {
   font-size: 4.2rem;
   font-weight: 600;
   color: #ffffff;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
   -webkit-animation-name: moveInLeft;
   animation-name: moveInLeft;
   -webkit-animation-duration: 1s;
@@ -2050,7 +2050,7 @@ input[type=text]::placeholder {
   font-size: 2.4rem;
   font-weight: 600;
   color: #ffffff;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
 }
 
 .mainpage-about-img {
