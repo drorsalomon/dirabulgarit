@@ -12,7 +12,7 @@ nav {
 }
 
 .btn-cta--container {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .navbar-toggler,
@@ -45,10 +45,6 @@ nav {
   transform: rotate(-180deg);
   padding: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.btn__cta--container {
-  margin: 2rem;
 }
 
 .btn-cta--offcanvas {
@@ -101,13 +97,24 @@ nav {
   display: none;
 }
 
-.currency-dropdown-btn {
+.mobile-currency-dropdown-btn,
+.mobile-navbar-not-active-currency-icon {
+  margin-right: 4.5rem;
+}
+
+.mobile-navbar-not-active-currency-icon {
+  margin-bottom: 1rem;
+}
+
+.currency-dropdown-btn,
+.lang-dropdown-btn {
   background-color: rgba(255, 255, 255, 0) !important;
   padding: 0 !important;
   border: none !important;
 }
 
-.currency-dropdown-btn::after {
+.currency-dropdown-btn::after,
+.lang-dropdown-btn::after {
   display: none !important;
 }
 
@@ -117,7 +124,8 @@ nav {
   padding: 0 !important;
 }
 
-.navbar-currency-icon {
+.navbar-currency-icon,
+.navbar-lang-icon {
   cursor: pointer;
   width: 3rem;
   height: 3rem;

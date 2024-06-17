@@ -861,6 +861,10 @@ a:hover {
   padding-top: 5rem;
 }
 
+.asset-related-assets-row {
+  display: none !important;
+}
+
 .invest-headline-row {
   margin-bottom: 7rem;
 }
@@ -2174,6 +2178,10 @@ input[type=text]::placeholder {
   transform: translate(-50%, -50%);
 }
 
+.mainpage-hot-assets-row {
+  display: none !important;
+}
+
 .mainpage-hot-assets-container {
   background-color: #f7f7f7;
   padding: 5rem 0 !important;
@@ -2252,10 +2260,6 @@ input[type=text]::placeholder {
   padding: 1.5rem;
 }
 
-.card-text-last-container {
-  border: none;
-}
-
 .asset-card-body-row {
   text-align: center;
   font-size: 1.2rem;
@@ -2266,7 +2270,28 @@ input[type=text]::placeholder {
   margin-left: 0.5rem;
   width: 2.3rem;
   height: 2.3rem;
-  color: #2289ff;
+}
+
+.mobile-asset-card-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #324762;
+}
+
+.mobile-card-text-container {
+  font-size: 1rem;
+  border-bottom: 1px solid #f7f7f7;
+  padding: 1rem 0.5rem;
+}
+
+.mobile-card-icon {
+  margin-left: 0.3rem;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.card-text-last-container {
+  border: none;
 }
 
 .mainpage-rec-container {

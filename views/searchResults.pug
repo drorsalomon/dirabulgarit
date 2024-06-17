@@ -31,10 +31,14 @@ block content
                                 a.dropdown-item.search-results-filters(data-sort='price' data-type=-1) מחיר - מהיקר לזול
 
     .container-fluid.search-results-container
-        .row.mainpage-hot-assets-row.d-felx.justify-content-center.mx-2
+        .row.mainpage-hot-assets-row.justify-content-center.mx-2
             if assets !== null && assets.length > 0
                 each asset in assets    
                     include _assetsCards
+        .row.mobile-mainpage-hot-assets-row.justify-content-center         
+            if assets !== null && assets.length > 0
+                each asset in assets
+                    include _mobileAssetsCards                 
                     
                 if totalPages.length > 1                        
                     .pagination-Container

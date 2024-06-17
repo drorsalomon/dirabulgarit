@@ -1,0 +1,69 @@
+.col-11.col-sm-10
+    .card.asset-card(data-slug=`${asset.slug}`)
+        div.asset-card-img-container
+            if asset.sold
+                .span.badge.asset-card-sold-badge נמכר 
+            if asset.exclusive && !asset.sold
+                .span.badge.asset-card-exclusive-badge נכס בבלעדיות  
+            img.card-img-top.asset-card-img(src=`${asset.mainImage}` alt=`${asset.name}` loading="lazy")
+        .card-body
+            .container-fluid
+                .row.asset-card-body-row
+                    .col-12.p-1.asset-card-title-col.d-flex.align-items-center.justify-content-center
+                        div.card-headline-container
+                            .card-title.mobile-asset-card-title(dir='rtl')= asset.name
+                    .col-6
+                        if asset.project
+                            div.mobile-card-text-container
+                                span= asset.project 
+                                img.mobile-card-icon(src='/img/icons/building-svgrepo-com.svg' alt='Building Icon') 
+                        else
+                            div.mobile-card-text-container
+                                span= `-`
+                                img.mobile-card-icon(src='/img/icons/building-svgrepo-com.svg' alt='Building Icon')        
+                    .col-6    
+                        if asset.price   
+                            div.mobile-card-text-container       
+                                span.asset-price(data-europrice=`${asset.priceBeginningAt === true ? 'החל מ' : ''}€${ new Intl.NumberFormat().format(asset.price)}` data-nisprice=`${asset.priceBeginningAt === true ? 'החל מ' : ''}₪${new Intl.NumberFormat().format(asset.priceNis)}`)
+                                img.mobile-card-icon(src='/img/icons/price-tag-svgrepo-com.svg' alt='Price tag icon')
+                        else
+                            div.mobile-card-text-container       
+                                span -
+                                img.mobile-card-icon(src='/img/icons/price-tag-svgrepo-com.svg' alt='Price tag icon')  
+                    .col-6              
+                        if asset.city  
+                            div.mobile-card-text-container
+                                span(dir='rtl')= asset.city
+                                img.mobile-card-icon(src='/img/icons/map-svgrepo-com.svg' alt='Map Icon')
+                        else
+                            div.mobile-card-text-container
+                                span(dir='rtl')= `-`
+                                img.mobile-card-icon(src='/img/icons/map-svgrepo-com.svg' alt='Map Icon')
+                    .col-6    
+                        if asset.type
+                            div.mobile-card-text-container    
+                                span= asset.type
+                                img.mobile-card-icon(src='/img/icons/house-svgrepo-com.svg' alt='House Icon')
+                        else 
+                            div.mobile-card-text-container    
+                                span= `-`
+                                img.mobile-card-icon(src='/img/icons/house-svgrepo-com.svg' alt='House Icon')
+                    .col-6            
+                        if asset.sm
+                            div.mobile-card-text-container.card-text-last-container    
+                                span(dir='rtl')= asset.sm
+                                img.mobile-card-icon(src='/img/icons/ruler-svgrepo-com.svg' alt='Ruler Icon')
+                        else
+                            div.mobile-card-text-container.card-text-last-container    
+                                span(dir='rtl')= `-`
+                                img.mobile-card-icon(src='/img/icons/ruler-svgrepo-com.svg' alt='Ruler Icon')
+                    .col-6    
+                        if asset.rooms       
+                            div.mobile-card-text-container.card-text-last-container    
+                                span= asset.rooms
+                                img.mobile-card-icon(src='/img/icons/living-room-sofa-svgrepo-com.svg' alt='Living Room Icon')
+                        else  
+                            div.mobile-card-text-container.card-text-last-container    
+                                span= `-`
+                                img.mobile-card-icon(src='/img/icons/living-room-sofa-svgrepo-com.svg' alt='Living Room Icon')  
+                                              

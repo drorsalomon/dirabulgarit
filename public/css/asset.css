@@ -263,4 +263,8 @@
   background-color: #2289ff;
   border-radius: 2rem;
   padding-top: 5rem;
+}
+
+.asset-related-assets-row {
+  display: none !important;
 }/*# sourceMappingURL=asset.css.map */

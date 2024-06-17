@@ -5,7 +5,7 @@
 .calendly-col {
   position: relative;
   background-color: #2289ff !important;
-  height: 145rem;
+  height: 165rem;
   border-radius: 1rem;
 }
 
@@ -120,7 +120,7 @@
 .calendly-widget-container {
   position: absolute;
   height: fit-content;
-  top: 195%;
+  top: 180%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);

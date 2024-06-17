@@ -129,6 +129,21 @@
     font-size: $h4 !important;
   }
 
+  // ***** Mobile Asset Card *****
+  .mobile-asset-card-title {
+    font-size: $h5;
+  }
+
+  .mobile-card-text-container {
+    font-size: $h7;
+  }
+
+  .mobile-card-icon {
+    margin-left: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
   // ***** Asset *****
   .asset-gallery-zoomIn-icon {
     height: 4rem;
@@ -303,6 +318,15 @@
   }
 
   // ***** Asset Card *****
+  .mobile-mainpage-hot-assets-row,
+  .mobile-asset-related-assets-row {
+    display: none !important;
+  }
+
+  .mainpage-hot-assets-row,
+  .asset-related-assets-row {
+    display: flex !important;
+  }
   .mainpage-hot-assets-tag {
     font-size: $h4;
   }

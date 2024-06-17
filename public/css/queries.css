@@ -84,6 +84,17 @@
   .asset-card-exclusive-badge {
     font-size: 2.4rem !important;
   }
+  .mobile-asset-card-title {
+    font-size: 2rem;
+  }
+  .mobile-card-text-container {
+    font-size: 1.2rem;
+  }
+  .mobile-card-icon {
+    margin-left: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+  }
   .asset-gallery-zoomIn-icon {
     height: 4rem;
     width: 4rem;
@@ -206,6 +217,14 @@
   }
   .invest-guide-btn-container {
     top: 85%;
+  }
+  .mobile-mainpage-hot-assets-row,
+  .mobile-asset-related-assets-row {
+    display: none !important;
+  }
+  .mainpage-hot-assets-row,
+  .asset-related-assets-row {
+    display: flex !important;
   }
   .mainpage-hot-assets-tag {
     font-size: 2.4rem;

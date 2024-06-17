@@ -242,8 +242,13 @@ block content
                                 input.contact-us-button.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='שליחה' title='Submit')
 	
     .container-fluid.asset-related-assets-container
-        .row.asset-related-assets-row.d-felx.justify-content-center.mx-2
-            .col-10.asset-related-assests-healine-col
+        .row.asset-related-assets-row.justify-content-center.mx-2
+            .col-10.asset-related-assets-headline-col
                 div.asset-related-assets-headline.text-center נכסים מעניינים נוספים
             each asset in hotAssets
                 include _assetsCards
+        .row.mobile-asset-related-assets-row.justify-content-center.mx-2
+            .col-10.asset-related-assets-headline-col
+                div.asset-related-assets-headline.text-center נכסים מעניינים נוספים
+            each asset in hotAssets
+                include _mobileAssetsCards            

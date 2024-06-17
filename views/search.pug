@@ -16,6 +16,9 @@ block content
     include _searchModal
 
     .container-fluid.search-results-container
-        .row.mainpage-hot-assets-row.d-felx.justify-content-center.mx-2
+        .row.mainpage-hot-assets-row.justify-content-center.mx-2
             each asset in hotAssets
                 include _assetsCards
+        .row.mobile-mainpage-hot-assets-row.justify-content-center         
+            each asset in hotAssets
+                include _mobileAssetsCards            

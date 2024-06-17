@@ -95,13 +95,20 @@ block content
                     button.invest-guide-btn למדריך ההשקעה
 
     .container-fluid.mainpage-hot-assets-container
-        .row.mainpage-hot-assets-row.d-felx.justify-content-center
+        .row.mainpage-hot-assets-row.justify-content-center
             .col-12.mainpage-hot-assets-headline-col
                 .row.text-center
                     div.mainpage-hot-assets-tag מומלץ  
                     div.mainpage-hot-assets-headline נכסים חמים להשקעה
             each asset in hotAssets
                 include _assetsCards
+        .row.mobile-mainpage-hot-assets-row.justify-content-center         
+            .col-12.mainpage-hot-assets-headline-col
+                .row.text-center
+                    div.mainpage-hot-assets-tag מומלץ  
+                    div.mainpage-hot-assets-headline נכסים חמים להשקעה
+            each asset in hotAssets
+                include _mobileAssetsCards    
             
     .container-fluid.mainpage-rec-container            
         .row.mx-4.justify-content-center

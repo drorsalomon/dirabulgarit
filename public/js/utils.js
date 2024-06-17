@@ -283,7 +283,7 @@ export const priceInputSetter = (inputMin, inputMax, onLoad = false, notModal = 
         }
       } else if (!inputMin.value && !inputMax.value) {
         if (notModal) {
-          const priceText = document.createTextNode(' (' + currencySymbol + '0' + ' - ' + currencySymbol + '1,000,000' + ')');
+          const priceText = document.createTextNode(' (' + currencySymbol + '0' + ' - ' + currencySymbol + '10,000,000' + ')');
           ddBtn.innerText = ddBtn.dataset.original;
           ddBtn.appendChild(priceText);
         }
@@ -316,7 +316,7 @@ export const priceInputSetter = (inputMin, inputMax, onLoad = false, notModal = 
       }
     } else if (!inputMin.value && !inputMax.value) {
       if (notModal) {
-        const priceText = document.createTextNode(' (' + currencySymbol + '0' + ' - ' + currencySymbol + '1,000,000' + ')');
+        const priceText = document.createTextNode(' (' + currencySymbol + '0' + ' - ' + currencySymbol + '10,000,000' + ')');
         ddBtn.innerText = ddBtn.dataset.original;
         ddBtn.appendChild(priceText);
       }
