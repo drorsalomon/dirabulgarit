@@ -167,10 +167,19 @@ footer {
   width: 18rem;
 }
 
+.footer-text-container {
+  margin-bottom: 2rem;
+}
+
 .footer-text {
   margin-bottom: 2rem;
   color: #ffffff;
   text-decoration: none;
+}
+
+.footer-icon {
+  height: 2rem;
+  margin-left: 1rem;
 }
 
 .footer-social {
@@ -863,6 +872,69 @@ a:hover {
 
 .asset-related-assets-row {
   display: none !important;
+}
+
+.project-main-image-container,
+.project-gallery-container,
+.project-details-container,
+.project-numbers-container {
+  margin-bottom: 5rem;
+}
+
+.project-main-image-col {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("/img/atlantis-aria-3-project-cover-image.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60rem;
+  width: 100%;
+}
+
+.project-main-image-headline {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 10rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.project-gallery-image {
+  height: 25rem;
+  border-radius: 0.5rem;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+.project-gallery-headline,
+.project-details-headline {
+  font-size: 3.4rem;
+  font-weight: 600;
+  color: #324762;
+  margin-bottom: 2rem;
+}
+
+.project-details-text {
+  line-height: 3rem;
+}
+
+.project-numbers-floors-number,
+.project-numbers-apartments-number,
+.project-numbers-start-number,
+.project-numbers-end-number {
+  color: #cfa336;
+  font-size: 4.8rem;
+  font-weight: 600;
+}
+
+.project-numbers-text {
+  font-size: 2rem;
 }
 
 .invest-headline-row {
@@ -1724,9 +1796,9 @@ body {
 }
 
 .hero-container {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.8)), to(rgba(26, 113, 212, 0.8))), url("/img/ObzorBurgas.webp");
-  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.8), rgba(26, 113, 212, 0.8)), url("/img/ObzorBurgas.webp");
-  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.8), rgba(26, 113, 212, 0.8)), url("/img/ObzorBurgas.webp");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.4)), to(rgba(26, 113, 212, 0.4))), url("/img/hero-burgas.webp");
+  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.4), rgba(26, 113, 212, 0.4)), url("/img/hero-burgas.webp");
+  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.4), rgba(26, 113, 212, 0.4)), url("/img/hero-burgas.webp");
   background-size: cover;
   background-position: top;
   position: relative;
@@ -1999,15 +2071,15 @@ input[type=text]::placeholder {
 }
 
 .mainpage-about-container {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.8)), to(rgba(26, 113, 212, 0.8))), url("/img/SozopolBurgas.webp");
-  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.8), rgba(26, 113, 212, 0.8)), url("/img/SozopolBurgas.webp");
-  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.8), rgba(26, 113, 212, 0.8)), url("/img/SozopolBurgas.webp");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.4)), to(rgba(26, 113, 212, 0.4))), url("/img/about-us-sozopol.webp");
+  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.4), rgba(26, 113, 212, 0.4)), url("/img/about-us-sozopol.webp");
+  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.4), rgba(26, 113, 212, 0.4)), url("/img/about-us-sozopol.webp");
   background-size: cover;
   background-position: top;
   position: relative;
   height: 160rem;
-  -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
-  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  -webkit-clip-path: polygon(0 7%, 100% 0, 100% 90%, 0 97%);
+  clip-path: polygon(0 7%, 100% 0, 100% 90%, 0 97%);
 }
 
 .mainpage-about-text-col {

@@ -2,6 +2,14 @@ extends base
 
 block content 
 
+    .container-fluid.hero-video-container
+        .row.hero-video-row.align-items-center.justify-content-center 
+            .col.hero-video-col
+                div.hero-video-bg-video-container
+                    div.ratio.ratio-16x9
+                        video(autoplay muted loop).hero-video
+                            source(src='/videos/hero-video-1080p.mp4' type='video/mp4')
+    
     .container-fluid.hero-container
         .row.d-flex.align-items-center.justify-content-center                    
             .col-10.col-lg-8.hero-text-col 
@@ -35,9 +43,9 @@ block content
                     .col-12.col-sm-4
                         img.mainpage-about-img(src="/img/sofia-flowers.webp" alt="A flower garden in Sofia Bulgaria" loading="lazy")
                     .col-12.col-sm-4
-                        img.mainpage-about-img(src="/img/sofia-skyline.webp" alt="Sofia Bulgaria downtown skyline" loading="lazy")
+                        img.mainpage-about-img(src="/img/about-us-burgas.webp" alt="Burgas black sea" loading="lazy")
                     .col-12.col-sm-4.my-4
-                        button.btn-cta-white.to-about-btn הכירו את הצוות
+                        button.btn-cta-white.to-about-btn הכירו את הצוות                   
 
     .container-fluid.d-flex.mainpage-howitworks-container 
         .row.mainpage-howitworks-row.align-items-center.justify-content-center.flex-lg-row-reverse.flex-md-row-reverse.mx-4

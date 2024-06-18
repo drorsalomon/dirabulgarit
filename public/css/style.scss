@@ -5,6 +5,7 @@
 @import 'search';
 @import 'searchResults';
 @import 'asset';
+@import 'project';
 @import 'invest';
 @import 'about';
 @import 'blog';
@@ -287,9 +288,9 @@ body {
 // ***** Hero *****
 
 .hero-container {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.8)), to(rgba(26, 113, 212, 0.8))), url('/img/ObzorBurgas.webp');
-  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.8), rgba(26, 113, 212, 0.8)), url('/img/ObzorBurgas.webp');
-  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.8), rgba(26, 113, 212, 0.8)), url('/img/ObzorBurgas.webp');
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.4)), to(rgba(26, 113, 212, 0.4))), url('/img/hero-burgas.webp');
+  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.4), rgba(26, 113, 212, 0.4)), url('/img/hero-burgas.webp');
+  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.4), rgba(26, 113, 212, 0.4)), url('/img/hero-burgas.webp');
   background-size: cover;
   background-position: top;
   position: relative;
@@ -566,16 +567,18 @@ input[type='text']::placeholder {
 // ***** Main Page About Us *****
 
 .mainpage-about-container {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.8)), to(rgba(26, 113, 212, 0.8))), url('/img/SozopolBurgas.webp');
-  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.8), rgba(26, 113, 212, 0.8)), url('/img/SozopolBurgas.webp');
-  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.8), rgba(26, 113, 212, 0.8)), url('/img/SozopolBurgas.webp');
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.4)), to(rgba(26, 113, 212, 0.4))),
+    url('/img/about-us-sozopol.webp');
+  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.4), rgba(26, 113, 212, 0.4)), url('/img/about-us-sozopol.webp');
+  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.4), rgba(26, 113, 212, 0.4)), url('/img/about-us-sozopol.webp');
   background-size: cover;
   background-position: top;
   position: relative;
   height: 160rem;
-  -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
-  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  -webkit-clip-path: polygon(0 7%, 100% 0, 100% 90%, 0 97%);
+  clip-path: polygon(0 7%, 100% 0, 100% 90%, 0 97%);
 }
+//polygon(0 0, 100% 0, 100% 90%, 0 100%);
 
 .mainpage-about-text-col {
   position: absolute;
