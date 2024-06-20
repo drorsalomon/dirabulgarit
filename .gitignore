@@ -5,4 +5,4 @@ node_modules/
 ToDo.txt
 dev-data/
 services/imageService.js
-public/videos/hero-video-1080p.mp4
+public/videos
