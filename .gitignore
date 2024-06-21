@@ -5,3 +5,4 @@ node_modules/
 ToDo.txt
 dev-data/
 services/imageService.js
+..bfg-report/
