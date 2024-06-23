@@ -11,6 +11,7 @@ const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const viewRouter = require('./routes/viewRoutes');
 const assetRouter = require('./routes/assetRoutes');
+//const projectRouter = require('./routes/projectRoutes');
 const blogRouter = require('./routes/blogRoutes');
 const apiRouter = require('./routes/apiRoutes');
 const { dailyAssetPriceNisUpdate, getZohoRefreshToken } = require('./services/cronJobs');
@@ -43,6 +44,8 @@ app.use(
           'https://assets.calendly.com',
           'https://www.youtube.com',
           'https://www.googletagmanager.com',
+          'https://www.google-analytics.com',
+          'https://ssl.google-analytics.com',
           'https://crm.zoho.com/crm/WebToLeadForm',
         ],
         frameSrc: ["'self'", 'https://calendly.com', 'https://www.youtube.com/'],
@@ -62,6 +65,9 @@ app.use(
           'https://calendly.com',
           'ws://127.0.0.1:*/',
           'wss://www.dirabulgarit.com:56451/',
+          'https://www.googletagmanager.com',
+          'https://www.google-analytics.com',
+          'https://ssl.google-analytics.com',
         ],
         upgradeInsecureRequests: [],
       },
@@ -100,6 +106,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 app.use('/', viewRouter);
 app.use('/asset', assetRouter);
+//app.use('/project', projectRouter);
 app.use('/blog', blogRouter);
 app.use('/api', apiRouter);
 
