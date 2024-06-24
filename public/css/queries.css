@@ -715,8 +715,8 @@
     display: none;
   }
   .dropdown-submenu > .dropdown-menu {
-    top: -10%;
-    right: 97%;
+    top: -11%;
+    right: 95.5%;
     display: none;
   }
   .assets-catalog-dropdown:hover > .dropdown-menu,
