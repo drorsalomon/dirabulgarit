@@ -4,8 +4,10 @@
 .project-gallery-container,
 .project-details-container,
 .project-amenities-container,
+.project-mid-image-container,
 .project-map-container,
-.project-assets-container {
+.project-assets-container,
+.project-installment-scheme-container {
   margin-bottom: 5rem !important;
 }
 
@@ -43,34 +45,6 @@
   cursor: zoom-in;
 }
 
-.project-gallery-headline,
-.project-details-headline,
-.project-amenities-headline,
-.project-map-headline,
-.project-assets-headline,
-.project-contact-us-headline {
-  font-size: $h3;
-  font-weight: 600;
-  color: $text-color-tertiary;
-  margin-bottom: 2rem;
-}
-
-.project-details-text {
-  line-height: 3rem;
-}
-
-.project-details-sub-headline {
-  font-size: $h4;
-  font-weight: 600;
-  color: $text-color-tertiary;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.project-details-container {
-  margin-bottom: 2rem;
-}
-
 .project-numbers-buildings-number,
 .project-numbers-floors-number,
 .project-numbers-apartments-number,
@@ -92,6 +66,42 @@
   margin-bottom: 5rem;
 }
 
+.project-gallery-headline,
+.project-details-headline,
+.project-amenities-headline,
+.project-map-headline,
+.project-assets-headline,
+.project-installment-scheme-headline,
+.project-contact-us-headline {
+  font-size: $h3;
+  font-weight: 600;
+  color: $text-color-tertiary;
+  margin-bottom: 2rem;
+}
+
+.project-details-container {
+  margin-bottom: 2rem;
+}
+
+.project-details-text {
+  line-height: 3rem;
+}
+
+.project-details-sub-headline {
+  font-size: $h4;
+  font-weight: 600;
+  color: $text-color-tertiary;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-details-img {
+  margin: 3rem 0 2rem 0;
+  height: 20rem;
+  width: 30rem;
+  border-radius: 0.5rem;
+}
+
 .project-amenities-icon {
   height: 10rem;
   margin-bottom: 1rem;
@@ -103,9 +113,48 @@
   margin-bottom: 4rem;
 }
 
+.project-mid-image-container {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)),
+    url('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982818-atlantis-aria-3-building.webp');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 53rem;
+  height: 60rem;
+  width: 100%;
+}
+
 .project-map {
   height: 50rem;
   border-radius: 2rem;
+}
+
+.project-installment-scheme-table {
+  width: 70rem !important;
+}
+
+.project-installment-table-head {
+  background-color: $text-color-secondary;
+  color: $bg-color-primary;
+}
+
+.project-installment-scheme-table-col {
+  overflow-x: scroll !important;
+}
+
+.project-installment-scheme-table th,
+.project-installment-scheme-table td {
+  font-size: $h7;
+}
+
+.project-installment-scheme-table th {
+  padding: 0 1rem 0 1rem;
+}
+
+.project-installment-scheme-table td {
+  padding: 2rem 1rem 2rem 1rem;
 }
 
 .project-contact-us-container {

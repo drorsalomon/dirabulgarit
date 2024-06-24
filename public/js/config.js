@@ -15,6 +15,8 @@ export const Elements = {
   activeNavLinks: document.querySelectorAll('.nav-link'),
   navbarToggler: document.querySelector('.navbar-toggler'),
   homePageLink: document.querySelector('.homepage-link'),
+  assetCatalogDdBtn: document.querySelector('.assets-catalog-dropdown-btn'),
+  projectsDdBtn: document.querySelector('.projects-dropdown-btn'),
   currencyDdBtn: document.querySelector('.currency-dropdown-btn'),
   currencyIcon: document.querySelectorAll('.navbar-currency-icon'),
   activeCurrencyIcon: document.querySelector('.navbar-active-currency-icon'),
@@ -24,6 +26,10 @@ export const Elements = {
   mobileNotActiveCurrencyIcon: document.querySelector('.mobile-navbar-not-active-currency-icon'),
   favoriteBtn: document.querySelector('.asset-favorite-btn'),
   mobileFavoriteBtn: document.querySelector('.mobile-asset-favorite-btn'),
+  // Overview
+  heroHeadline: document.querySelector('.hero-headline'),
+  heroText: document.querySelector('.hero-text'),
+  hotAssetsContainer: document.querySelector('.mainpage-hot-assets-container'),
   // Search Form
   searchForm: document.querySelector('.search-form'),
   searchDdBtn: document.querySelectorAll('.search-filter-dropdown--btn'),
@@ -61,6 +67,7 @@ export const Elements = {
   // Search Results
   searchResultsFiltersDdBtn: document.querySelector('.search-results-filters-sort--btn'),
   searchResultsFilters: document.querySelectorAll('.search-results-filters'),
+  searchResultsContainer: document.querySelectorAll('.search-results-container'),
   // Pagination
   paginationPrevPageBtn: document.querySelector('.pagination-prev-page-btn'),
   paginationNextPageBtn: document.querySelector('.pagination-next-page-btn'),
@@ -77,6 +84,7 @@ export const Elements = {
   assetPrice: document.querySelectorAll('.asset-price'),
   assetFavoriteBtn: document.querySelectorAll('.asset-favorite-btn-white'),
   assetFavoriteIcon: document.querySelectorAll('.favorite-btn-icon'),
+  relatedAssetsContainer: document.querySelectorAll('.asset-related-assets-container'),
   // Blog
   blogCards: document.querySelectorAll('.blog-card'),
   // Contact Us
@@ -95,6 +103,12 @@ export const Elements = {
   calendlyAgentYeheli: document.querySelector('.calendly-agent-yeheli'),
   calendlyAgentShimon: document.querySelector('.calendly-agent-shimon'),
   calendlyAgentOlga: document.querySelector('.calendly-agent-olga'),
+  // Projects
+  projectAssetsContainer: document.querySelector('.project-assets-container'),
+  projectBuildingsNumber: document.querySelector('.project-numbers-buildings-number'),
+  projectFloorsNumber: document.querySelector('.project-numbers-floors-number'),
+  projectApartmentsNumber: document.querySelector('.project-numbers-apartments-number'),
+  projectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number'),
 };
 
 export const euroIconSrc = '/img/icons/euro.svg';

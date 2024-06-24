@@ -11,7 +11,7 @@ const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const viewRouter = require('./routes/viewRoutes');
 const assetRouter = require('./routes/assetRoutes');
-//const projectRouter = require('./routes/projectRoutes');
+const projectRouter = require('./routes/projectRoutes');
 const blogRouter = require('./routes/blogRoutes');
 const apiRouter = require('./routes/apiRoutes');
 const { dailyAssetPriceNisUpdate, getZohoRefreshToken } = require('./services/cronJobs');
@@ -106,7 +106,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 app.use('/', viewRouter);
 app.use('/asset', assetRouter);
-//app.use('/project', projectRouter);
+app.use('/project', projectRouter);
 app.use('/blog', blogRouter);
 app.use('/api', apiRouter);
 

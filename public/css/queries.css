@@ -151,6 +151,29 @@
   .pricing-premium-badge {
     width: 15.7rem;
   }
+  .project-main-image-headline {
+    left: 35%;
+    font-size: 4.8rem;
+  }
+  .project-gallery-image {
+    height: 17rem;
+    width: 26rem;
+  }
+  .project-details-img {
+    height: 30rem;
+    width: 45rem;
+  }
+  .project-mid-image-container {
+    background-size: contain;
+    height: 60rem;
+  }
+  .project-installment-scheme-table {
+    width: 95rem !important;
+  }
+  .project-installment-scheme-table th,
+  .project-installment-scheme-table td {
+    font-size: 1.6rem;
+  }
 }
 @media only screen and (min-width: 768px) {
   .whatsapp-widget {
@@ -328,6 +351,21 @@
   }
   .pricing-premium-badge {
     width: 19.5rem;
+  }
+  .project-main-image-headline {
+    left: 27%;
+  }
+  .project-gallery-image {
+    height: 17rem;
+    width: 23rem;
+  }
+  .project-details-img {
+    height: 40rem;
+    width: 60rem;
+  }
+  .project-mid-image-container {
+    background-size: contain;
+    height: 80rem;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -580,6 +618,24 @@
   .pricing-premium-badge {
     width: 15.8rem;
   }
+  .project-main-image-headline {
+    left: 22%;
+  }
+  .project-gallery-image {
+    height: 20rem;
+    width: 30rem;
+  }
+  .project-details-img {
+    height: 50rem;
+    width: 75rem;
+  }
+  .project-mid-image-container {
+    height: 34rem;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982831-atlantis-aria-3-project.jpg");
+  }
+  .project-installment-scheme-table {
+    width: 90rem !important;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .navbar-nav {
@@ -629,6 +685,44 @@
   .mobile-navbar-brand {
     display: none;
   }
+  .assets-catalog-dropdown-btn {
+    margin: 0 0.3rem 0 0 !important;
+  }
+  .assets-catalog-dropdown-menu,
+  .projects-dropdown-menu {
+    background-color: #ffffff !important;
+  }
+  .assets-catalog-dropdown-item,
+  .projects-dropdown-btn,
+  .projects-dropdown-item {
+    color: #5c5e64 !important;
+    margin: 0 !important;
+    padding: 1rem 2rem 1rem 2rem !important;
+  }
+  .projects-dropdown-btn::after {
+    vertical-align: 0.2rem !important;
+    transform: rotate(90deg);
+  }
+  .assets-catalog-dropdown-item:hover,
+  .projects-dropdown-item:hover {
+    background-color: rgba(199, 223, 251, 0.4784313725) !important;
+  }
+  .dropdown-submenu {
+    position: relative;
+  }
+  .assets-catalog-dropdown > .dropdown-menu {
+    top: 100%;
+    display: none;
+  }
+  .dropdown-submenu > .dropdown-menu {
+    top: -10%;
+    right: 97%;
+    display: none;
+  }
+  .assets-catalog-dropdown:hover > .dropdown-menu,
+  .dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+  }
   .currency-mobile-dropdown-btn {
     display: none;
   }
@@ -641,6 +735,13 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .active-link {
+    color: #2289ff !important;
+  }
+  .nav-item:has(.active-link) {
+    border-bottom: solid 2px #2289ff !important;
+    height: 3rem;
   }
   .hero-container {
     height: 80rem;
@@ -719,6 +820,24 @@
     max-width: 99.2rem;
     margin: auto !important;
   }
+  .project-main-image-headline {
+    left: 32%;
+    font-size: 10rem;
+  }
+  .project-gallery-image {
+    height: 20rem;
+    width: 37rem;
+  }
+  .project-details-img {
+    height: 55rem;
+    width: 85rem;
+  }
+  .project-mid-image-container {
+    height: 45rem;
+  }
+  .project-installment-scheme-table {
+    width: 110rem !important;
+  }
 }
 @media only screen and (min-width: 1400px) {
   .mainpage-hot-assets-row,
@@ -776,5 +895,15 @@
   }
   .pricing-premium-badge {
     width: 18rem;
+  }
+  .project-main-image-headline {
+    left: 28%;
+  }
+  .project-gallery-image {
+    height: 25rem;
+    width: 43rem;
+  }
+  .project-installment-scheme-table-col {
+    overflow-x: auto !important;
   }
 }/*# sourceMappingURL=queries.css.map */

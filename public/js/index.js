@@ -3,10 +3,7 @@ import { getFavoriteAssets } from './favoriteAssets';
 import { displayMap } from './mapbox';
 import * as config from './config';
 import * as utils from './utils';
-
-if (config.Elements.mapBox && config.Elements.mapBox.dataset.long && config.Elements.mapBox.dataset.lat) {
-  displayMap(config.Elements.mapBox.dataset.long, config.Elements.mapBox.dataset.lat, config.Elements.mapBox.dataset.title);
-}
+import * as animation from './animation';
 
 window.onload = function () {
   // If currency isn't set or currency is Euro
@@ -26,6 +23,27 @@ window.onload = function () {
     utils.switchSearchPriceCurrencyHtmlOnLoad(config.Elements.priceInput, false);
   }
 
+  // Header dropdown menu click (project catalog)
+  let dropdownSubmenus = document.querySelectorAll('.projects-dropdown .dropdown-toggle');
+  dropdownSubmenus.forEach(function (dropdownToggle) {
+    dropdownToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      let submenu = this.nextElementSibling;
+      if (submenu) {
+        submenu.classList.toggle('show');
+      }
+    });
+  });
+
+  document.querySelectorAll('.dropdown').forEach(function (dropdown) {
+    dropdown.addEventListener('hidden.bs.dropdown', function () {
+      this.querySelectorAll('.dropdown-menu.show').forEach(function (submenu) {
+        submenu.classList.remove('show');
+      });
+    });
+  });
+
   // Set 'active-link' class on navbar links every time the page is loaded
   let href = window.location.href;
   href = href.substring(href.lastIndexOf('/') + 1);
@@ -37,14 +55,14 @@ window.onload = function () {
     let linkString = link.toString();
     if (linkString.includes(href) && href) {
       link.classList.toggle('active-link');
+      if ((href && href.includes('search-results')) || linkString.includes('search') || linkString.includes('project')) {
+        config.Elements.assetCatalogDdBtn.classList.toggle('active-link');
+      }
+      if (href && linkString.includes('project')) config.Elements.projectsDdBtn.classList.toggle('active-link');
     }
-    if (href && href.includes('search-results') && linkString.includes('search')) link.classList.toggle('active-link');
-  });
-  // Asset gallery main-thumbnail opacity setter
-  config.Elements.assetThumbnailImgs.forEach((thumbnailImg) => {
-    if (thumbnailImg.src === config.Elements.assetMainImg.src) thumbnailImg.style.opacity = '1';
   });
 
+  // Search from and search modal user input
   if (config.Elements.searchForm || config.Elements.modalSearchForm) {
     const searchFilterObj = JSON.parse(localStorage.getItem(config.FILTER_KEY));
 
@@ -87,6 +105,11 @@ window.onload = function () {
       utils.checkIfFavorite(assetId);
     });
   }
+
+  // Asset gallery main-thumbnail opacity setter
+  config.Elements.assetThumbnailImgs.forEach((thumbnailImg) => {
+    if (thumbnailImg.src === config.Elements.assetMainImg.src) thumbnailImg.style.opacity = '1';
+  });
 };
 
 // Set 'offcanvas-active-link' class on offcanvas links every time the offcanvas toggler is clicked
@@ -94,7 +117,10 @@ if (config.Elements.navbarToggler)
   config.Elements.navbarToggler.addEventListener('click', async (e) => {
     e.preventDefault();
     let href = window.location.href;
+    let subHref = href.substring(href.lastIndexOf('/') - 7);
     href = href.substring(href.lastIndexOf('/') + 1);
+    config.Elements.assetCatalogDdBtn.classList.remove('offcanvas-active-link');
+    config.Elements.projectsDdBtn.classList.remove('offcanvas-active-link');
     // For homepage link
     if (!href && !config.Elements.homePageLink.classList.contains('offcanvas-active-link')) {
       config.Elements.homePageLink.classList.remove('active-link');
@@ -103,13 +129,17 @@ if (config.Elements.navbarToggler)
     config.Elements.activeNavLinks.forEach((link) => {
       let linkString = link.toString();
       link.style.color = 'white';
-      if (linkString.includes(href) && href && !link.classList.contains('offcanvas-active-link')) {
+      if (href && linkString.includes(href) && !link.classList.contains('offcanvas-active-link')) {
         link.classList.toggle('offcanvas-active-link');
         link.classList.toggle('active-link');
       }
-      if (href && href.includes('search-results') && linkString.includes('search') && !link.classList.contains('offcanvas-active-link')) {
-        link.classList.toggle('offcanvas-active-link');
-        link.classList.remove('active-link');
+      if ((href && href.includes('search-results')) || href.includes('search') || subHref.includes('project')) {
+        config.Elements.assetCatalogDdBtn.classList.remove('active-link');
+        config.Elements.assetCatalogDdBtn.classList.add('offcanvas-active-link');
+      }
+      if (href && subHref.includes('project')) {
+        config.Elements.projectsDdBtn.classList.remove('active-link');
+        config.Elements.projectsDdBtn.classList.add('offcanvas-active-link');
       }
     });
   });
@@ -153,6 +183,11 @@ if (config.Elements.assetFavoriteBtn)
       }
     });
   });
+
+// Map display
+if (config.Elements.mapBox && config.Elements.mapBox.dataset.long && config.Elements.mapBox.dataset.lat) {
+  displayMap(config.Elements.mapBox.dataset.long, config.Elements.mapBox.dataset.lat, config.Elements.mapBox.dataset.title);
+}
 
 // Asset Gallery Image Switch listener
 if (config.Elements.assetThumbnailImgs)
@@ -514,9 +549,20 @@ if (config.Elements.calendlyAgentsChoices)
     });
   });
 
-// Animate pulse for buttons
-const animatedElementsArray = [config.Elements.ctaBtnWhite[0], config.Elements.pricingCtaBtn];
-
+// Scroll event listener for animations
 document.addEventListener('scroll', () => {
-  utils.animatePulse(animatedElementsArray);
+  animation.debounce(animation.handleScroll());
 });
+
+// Counter and fade in animations
+if (config.Elements.projectBuildingsNumber) animation.animateCounter(config.Elements.projectBuildingsNumber, 3);
+if (config.Elements.projectFloorsNumber) animation.animateCounter(config.Elements.projectFloorsNumber, 9);
+if (config.Elements.projectApartmentsNumber) animation.animateCounter(config.Elements.projectApartmentsNumber, 210);
+if (config.Elements.projectParkingSpotsNumber) animation.animateCounter(config.Elements.projectParkingSpotsNumber, 250);
+if (config.Elements.hotAssetsContainer || config.Elements.projectAssetsContainer) {
+  animation.animateFadeIn(config.Elements.assetCards);
+} else if (config.Elements.searchResultsContainer || config.Elements.relatedAssetsContainer) {
+  config.Elements.assetCards.forEach((card) => {
+    card.style.opacity = 1;
+  });
+}

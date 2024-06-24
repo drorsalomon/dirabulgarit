@@ -47,6 +47,62 @@ nav {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.assets-catalog-dropdown-menu,
+.projects-dropdown-menu {
+  font-size: 1.6rem !important;
+  background-color: #2289ff !important;
+  border: none !important;
+}
+
+.assets-catalog-dropdown-btn::after,
+.projects-dropdown-btn::after {
+  margin-right: 1rem;
+}
+
+.projects-dropdown-btn:focus {
+  background-color: transparent !important;
+}
+
+.projects-dropdown-btn:active {
+  background-color: transparent !important;
+}
+
+.projects-dropdown-btn:hover {
+  background-color: transparent !important;
+}
+
+.assets-catalog-dropdown-item {
+  margin: 0.5rem 2rem 0.5rem 0 !important;
+}
+
+.projects-dropdown-btn {
+  margin: 1rem 0 0 0 !important;
+  padding: 0 !important;
+}
+
+.assets-catalog-dropdown-item,
+.projects-dropdown-item {
+  color: #ffffff !important;
+}
+
+.projects-dropdown-item {
+  margin-top: 1rem;
+}
+
+.dropdown-menu {
+  position: static;
+  float: none;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.dropdown-submenu > .dropdown-menu.show {
+  display: block;
+}
+
 .btn-cta--offcanvas {
   border: 1px solid #ffffff !important;
 }
@@ -60,15 +116,6 @@ nav {
   text-decoration: none;
   cursor: pointer;
   margin: 0;
-}
-
-.active-link {
-  color: #2289ff !important;
-}
-
-.nav-item:has(.active-link) {
-  border-bottom: solid 2px #2289ff !important;
-  height: 3rem;
 }
 
 .navbar-brand {
@@ -877,14 +924,18 @@ a:hover {
 .project-main-image-container,
 .project-gallery-container,
 .project-details-container,
-.project-numbers-container {
-  margin-bottom: 5rem;
+.project-amenities-container,
+.project-mid-image-container,
+.project-map-container,
+.project-assets-container,
+.project-installment-scheme-container {
+  margin-bottom: 5rem !important;
 }
 
 .project-main-image-col {
   position: relative;
   padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("/img/atlantis-aria-3-project-cover-image.png");
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144895-atlantis-aria-3-3.webp");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -896,36 +947,28 @@ a:hover {
 .project-main-image-headline {
   position: absolute;
   top: 50%;
-  left: 30%;
+  left: 40%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  font-size: 10rem;
+  font-size: 4.2rem;
   font-weight: 600;
   color: #ffffff;
 }
 
 .project-gallery-image {
-  height: 25rem;
+  height: 17rem;
+  width: 28rem;
   border-radius: 0.5rem;
+  margin-bottom: 3rem;
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
 }
 
-.project-gallery-headline,
-.project-details-headline {
-  font-size: 3.4rem;
-  font-weight: 600;
-  color: #324762;
-  margin-bottom: 2rem;
-}
-
-.project-details-text {
-  line-height: 3rem;
-}
-
+.project-numbers-buildings-number,
 .project-numbers-floors-number,
 .project-numbers-apartments-number,
+.project-numbers-parking-spots-number,
 .project-numbers-start-number,
 .project-numbers-end-number {
   color: #cfa336;
@@ -933,8 +976,108 @@ a:hover {
   font-weight: 600;
 }
 
+.project-numbers-container {
+  margin-bottom: 2rem;
+}
+
 .project-numbers-text {
   font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 5rem;
+}
+
+.project-gallery-headline,
+.project-details-headline,
+.project-amenities-headline,
+.project-map-headline,
+.project-assets-headline,
+.project-installment-scheme-headline,
+.project-contact-us-headline {
+  font-size: 3.4rem;
+  font-weight: 600;
+  color: #324762;
+  margin-bottom: 2rem;
+}
+
+.project-details-container {
+  margin-bottom: 2rem;
+}
+
+.project-details-text {
+  line-height: 3rem;
+}
+
+.project-details-sub-headline {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #324762;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-details-img {
+  margin: 3rem 0 2rem 0;
+  height: 20rem;
+  width: 30rem;
+  border-radius: 0.5rem;
+}
+
+.project-amenities-icon {
+  height: 10rem;
+  margin-bottom: 1rem;
+}
+
+.project-amenities-text {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 4rem;
+}
+
+.project-mid-image-container {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982818-atlantis-aria-3-building.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 53rem;
+  height: 60rem;
+  width: 100%;
+}
+
+.project-map {
+  height: 50rem;
+  border-radius: 2rem;
+}
+
+.project-installment-scheme-table {
+  width: 70rem !important;
+}
+
+.project-installment-table-head {
+  background-color: #2289ff;
+  color: #ffffff;
+}
+
+.project-installment-scheme-table-col {
+  overflow-x: scroll !important;
+}
+
+.project-installment-scheme-table th,
+.project-installment-scheme-table td {
+  font-size: 1.2rem;
+}
+
+.project-installment-scheme-table th {
+  padding: 0 1rem 0 1rem;
+}
+
+.project-installment-scheme-table td {
+  padding: 2rem 1rem 2rem 1rem;
+}
+
+.project-contact-us-container {
+  margin-bottom: 10rem;
 }
 
 .invest-headline-row {
@@ -1685,6 +1828,24 @@ body {
     transform: translate(0);
   }
 }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.moveInRight {
+  -webkit-animation: moveInRight 1.5s;
+  animation: moveInRight 1.5s;
+}
+
+.moveInLeft {
+  -webkit-animation: moveInLeft 1.5s;
+  animation: moveInLeft 1.5s;
+}
+
 .pulse {
   -webkit-animation: pulse 1.5s;
   animation: pulse 1.5s;
@@ -1824,20 +1985,12 @@ body {
   font-weight: 600;
   color: #ffffff;
   margin-bottom: 4rem;
-  -webkit-animation-name: moveInLeft;
-  animation-name: moveInLeft;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
 }
 
 .hero-text {
   font-size: 2.4rem;
   font-weight: 600;
   color: #ffffff;
-  -webkit-animation: moveInRight 1s ease-out;
-  animation: moveInRight 1s ease-out;
   margin-bottom: 4rem;
 }
 
@@ -2287,6 +2440,18 @@ input[type=text]::placeholder {
   -webkit-box-shadow: rgba(66, 116, 173, 0.07) 0px 7px 40px 0px;
   box-shadow: rgba(66, 116, 173, 0.07) 0px 7px 40px 0px;
   margin-bottom: 3rem;
+  opacity: 0;
+}
+
+.asset-card.visible {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .asset-card-img-container {

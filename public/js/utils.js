@@ -374,39 +374,6 @@ export const getPageBySlug = (elementArray, page) => {
   });
 };
 
-export const inView = (element) => {
-  if (element) {
-    const elementHeight = element.clientHeight;
-
-    // get window height
-    const windowHeight = window.innerHeight;
-    // get number of pixels that the document is scrolled
-    const scrollY = window.scrollY;
-
-    // get current scroll position (distance from the top of the page to the bottom of the current viewport)
-    const scrollPosition = scrollY + windowHeight;
-
-    // get element position (distance from the top of the page to the bottom of the element)
-    const elementPosition = element.getBoundingClientRect().top + scrollY + elementHeight;
-
-    // is scroll position greater than element position? (is element in view?)
-    if (scrollPosition > elementPosition) {
-      return true;
-    }
-
-    return false;
-  }
-  // }
-};
-
-export const animatePulse = (elements) => {
-  elements.forEach((element) => {
-    if (inView(element)) {
-      element.classList.add('pulse');
-    }
-  });
-};
-
 export const addNavigator = async () => {
   if (navigator.share) {
     try {
