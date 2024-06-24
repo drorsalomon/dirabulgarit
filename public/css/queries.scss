@@ -2,6 +2,15 @@
 
 // X-Small
 @media only screen and (min-width: 360px) {
+  // ***** Reviews *****
+  .carousel-control-prev {
+    margin-left: -0.5rem;
+  }
+
+  .carousel-control-next {
+    margin-right: -0.5rem;
+  }
+
   // ***** Search *****
   .search-filter-dropdown--btn {
     font-size: $h6 !important;
@@ -114,6 +123,14 @@
 
   .mainpage-reviews-review {
     font-size: $h6;
+  }
+
+  .carousel-control-prev {
+    margin-left: -1rem;
+  }
+
+  .carousel-control-next {
+    margin-right: -1rem;
   }
 
   // ***** Asset Card *****
@@ -421,6 +438,14 @@
     transform: translateX(-3rem) skewX(8deg);
   }
 
+  .carousel-control-prev {
+    margin-left: -2rem;
+  }
+
+  .carousel-control-next {
+    margin-right: -2rem;
+  }
+
   // ***** Main Page Blog *****
   .mainpage-blog-tag {
     font-size: $h4;
@@ -514,6 +539,11 @@
   .project-mid-image-container {
     background-size: contain;
     height: 80rem;
+  }
+
+  // ***** Footer *****
+  .footer-border {
+    width: 15rem;
   }
 }
 
@@ -860,6 +890,11 @@
   .project-installment-scheme-table {
     width: 90rem !important;
   }
+
+  // ***** Footer *****
+  .footer-border {
+    width: 18rem;
+  }
 }
 
 // x-Large
@@ -1038,6 +1073,14 @@
     width: 16rem;
   }
 
+  .carousel-control-prev {
+    margin-left: 0rem;
+  }
+
+  .carousel-control-next {
+    margin-right: 0rem;
+  }
+
   // ***** Asset *****
   .asset-gallery-mainImage {
     height: 43rem;
@@ -1182,6 +1225,15 @@
   .mainpage-about-img {
     width: 27rem;
     height: 22rem;
+  }
+
+  // ***** Reviews *****
+  .mainpage-reviews-carousel-prev-icon {
+    margin-left: -3rem;
+  }
+
+  .mainpage-reviews-carousel-next-icon {
+    margin-right: -3rem;
   }
 
   // ***** Asset *****

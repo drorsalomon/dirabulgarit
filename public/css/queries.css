@@ -1,4 +1,10 @@
 @media only screen and (min-width: 360px) {
+  .carousel-control-prev {
+    margin-left: -0.5rem;
+  }
+  .carousel-control-next {
+    margin-right: -0.5rem;
+  }
   .search-filter-dropdown--btn {
     font-size: 1.6rem !important;
   }
@@ -73,6 +79,12 @@
   }
   .mainpage-reviews-review {
     font-size: 1.6rem;
+  }
+  .carousel-control-prev {
+    margin-left: -1rem;
+  }
+  .carousel-control-next {
+    margin-right: -1rem;
   }
   .asset-card-body-row {
     font-size: 1.6rem;
@@ -299,6 +311,12 @@
     -ms-transform: translateX(-3rem) skewX(8deg);
     transform: translateX(-3rem) skewX(8deg);
   }
+  .carousel-control-prev {
+    margin-left: -2rem;
+  }
+  .carousel-control-next {
+    margin-right: -2rem;
+  }
   .mainpage-blog-tag {
     font-size: 2.4rem;
   }
@@ -366,6 +384,9 @@
   .project-mid-image-container {
     background-size: contain;
     height: 80rem;
+  }
+  .footer-border {
+    width: 15rem;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -636,6 +657,9 @@
   .project-installment-scheme-table {
     width: 90rem !important;
   }
+  .footer-border {
+    width: 18rem;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .navbar-nav {
@@ -773,6 +797,12 @@
     height: 16rem;
     width: 16rem;
   }
+  .carousel-control-prev {
+    margin-left: 0rem;
+  }
+  .carousel-control-next {
+    margin-right: 0rem;
+  }
   .asset-gallery-mainImage {
     height: 43rem;
   }
@@ -881,6 +911,12 @@
   .mainpage-about-img {
     width: 27rem;
     height: 22rem;
+  }
+  .mainpage-reviews-carousel-prev-icon {
+    margin-left: -3rem;
+  }
+  .mainpage-reviews-carousel-next-icon {
+    margin-right: -3rem;
   }
   .asset-gallery-thumbnail {
     height: 7rem;

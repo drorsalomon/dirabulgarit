@@ -227,9 +227,6 @@ body {
   border: 1px solid $text-color-secondary;
   color: $bg-color-primary;
   background-color: $text-color-secondary;
-  outline: 2px solid;
-  outline-color: $text-color-secondary;
-  outline-offset: 0px;
 }
 
 .btn-cta:focus {
@@ -249,9 +246,6 @@ body {
   border: none;
   -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
-  outline: 2px solid;
-  outline-color: $bg-color-primary;
-  outline-offset: 0px;
 }
 
 .section-headline-cta-btn {
@@ -969,14 +963,12 @@ input[type='text']::placeholder {
 }
 
 .mainpage-reviews-carousel-prev-icon {
-  padding-left: 3rem !important;
-  margin-left: 2rem;
+  margin-left: 0.5rem;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232289ff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
 }
 
 .mainpage-reviews-carousel-next-icon {
-  padding-right: 3rem !important;
-  margin-right: 2rem;
+  margin-right: 0.5rem;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232289ff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
 

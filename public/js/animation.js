@@ -56,12 +56,9 @@ export const animatePulse = (elements) => {
 // Animate pulse for buttons
 const animatedElementsArray = [config.Elements.ctaBtnWhite[0], config.Elements.pricingCtaBtn];
 
-export const handleScrollMoveIn = () => {
+export const handleScroll = () => {
   animateMoveInRight(config.Elements.heroHeadline);
   animateMoveInLeft(config.Elements.heroText);
-};
-
-export const handleScrollPulse = () => {
   animatePulse(animatedElementsArray);
 };
 
