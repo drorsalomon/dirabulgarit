@@ -23,6 +23,12 @@ window.onload = function () {
     utils.switchSearchPriceCurrencyHtmlOnLoad(config.Elements.priceInput, false);
   }
 
+  // On load animation
+  if (config.Elements.heroHeadline && config.Elements.heroText && window.innerWidth < 768) {
+    config.Elements.heroHeadline.classList.add('moveInRight');
+    config.Elements.heroText.classList.add('moveInLeft');
+  }
+
   // Header dropdown menu click (project catalog)
   let dropdownSubmenus = document.querySelectorAll('.projects-dropdown .dropdown-toggle');
   dropdownSubmenus.forEach(function (dropdownToggle) {
@@ -550,8 +556,14 @@ if (config.Elements.calendlyAgentsChoices)
   });
 
 // Scroll event listener for animations
+if (window.innerWidth >= 992) {
+  document.addEventListener('scroll', () => {
+    animation.debounce(animation.handleScrollMoveIn());
+  });
+}
+
 document.addEventListener('scroll', () => {
-  animation.debounce(animation.handleScroll());
+  animation.debounce(animation.handleScrollPulse());
 });
 
 // Counter and fade in animations

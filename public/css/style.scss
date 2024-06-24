@@ -227,6 +227,9 @@ body {
   border: 1px solid $text-color-secondary;
   color: $bg-color-primary;
   background-color: $text-color-secondary;
+  outline: 2px solid;
+  outline-color: $text-color-secondary;
+  outline-offset: 0px;
 }
 
 .btn-cta:focus {
@@ -246,6 +249,9 @@ body {
   border: none;
   -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 2px solid;
+  outline-color: $bg-color-primary;
+  outline-offset: 0px;
 }
 
 .section-headline-cta-btn {

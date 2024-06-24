@@ -1,5 +1,3 @@
-@import 'variables';
-
 .project-main-image-container,
 .project-gallery-container,
 .project-details-container,
@@ -14,8 +12,7 @@
 .project-main-image-col {
   position: relative;
   padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)),
-    url('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144895-atlantis-aria-3-3.webp');
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144895-atlantis-aria-3-3.webp");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,9 +28,9 @@
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  font-size: $h2;
+  font-size: 4.2rem;
   font-weight: 600;
-  color: $bg-color-primary;
+  color: #ffffff;
 }
 
 .project-gallery-image {
@@ -51,8 +48,8 @@
 .project-numbers-parking-spots-number,
 .project-numbers-start-number,
 .project-numbers-end-number {
-  color: $text-color-counter;
-  font-size: $h1;
+  color: #cfa336;
+  font-size: 4.8rem;
   font-weight: 600;
 }
 
@@ -61,7 +58,7 @@
 }
 
 .project-numbers-text {
-  font-size: $h5;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 5rem;
 }
@@ -73,9 +70,9 @@
 .project-assets-headline,
 .project-installment-scheme-headline,
 .project-contact-us-headline {
-  font-size: $h3;
+  font-size: 3.4rem;
   font-weight: 600;
-  color: $text-color-tertiary;
+  color: #324762;
   margin-bottom: 2rem;
 }
 
@@ -88,9 +85,9 @@
 }
 
 .project-details-sub-headline {
-  font-size: $h4;
+  font-size: 2.4rem;
   font-weight: 600;
-  color: $text-color-tertiary;
+  color: #324762;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -108,7 +105,7 @@
 }
 
 .project-amenities-text {
-  font-size: $h5;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 4rem;
 }
@@ -116,8 +113,7 @@
 .project-mid-image-container {
   position: relative;
   padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)),
-    url('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982818-atlantis-aria-3-building.webp');
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982818-atlantis-aria-3-building.webp");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -136,8 +132,8 @@
 }
 
 .project-installment-table-head {
-  background-color: $text-color-secondary;
-  color: $bg-color-primary;
+  background-color: #2289ff;
+  color: #ffffff;
 }
 
 .project-installment-scheme-table-col {
@@ -146,7 +142,7 @@
 
 .project-installment-scheme-table th,
 .project-installment-scheme-table td {
-  font-size: $h7;
+  font-size: 1.2rem;
 }
 
 .project-installment-scheme-table th {
@@ -159,4 +155,4 @@
 
 .project-contact-us-container {
   margin-bottom: 10rem;
-}
+}/*# sourceMappingURL=project.css.map */

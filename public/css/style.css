@@ -1051,7 +1051,7 @@ a:hover {
 }
 
 .project-installment-scheme-table {
-  width: 70rem !important;
+  width: 85rem !important;
 }
 
 .project-installment-table-head {
@@ -1880,6 +1880,9 @@ body {
   border: 1px solid #2289ff;
   color: #ffffff;
   background-color: #2289ff;
+  outline: 2px solid;
+  outline-color: #2289ff;
+  outline-offset: 0px;
 }
 
 .btn-cta:focus {
@@ -1899,6 +1902,9 @@ body {
   border: none;
   -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 2px solid;
+  outline-color: #ffffff;
+  outline-offset: 0px;
 }
 
 .section-headline-cta-btn {

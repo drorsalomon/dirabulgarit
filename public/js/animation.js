@@ -30,14 +30,18 @@ const inView = (element) => {
 };
 
 export const animateMoveInRight = (element) => {
-  if (inView(element)) {
-    element.classList.add('moveInRight');
+  if (window.innerWidth >= 992) {
+    if (inView(element)) {
+      element.classList.add('moveInRight');
+    }
   }
 };
 
 export const animateMoveInLeft = (element) => {
-  if (inView(element)) {
-    element.classList.add('moveInLeft');
+  if (window.innerWidth >= 992) {
+    if (inView(element)) {
+      element.classList.add('moveInLeft');
+    }
   }
 };
 
@@ -52,9 +56,12 @@ export const animatePulse = (elements) => {
 // Animate pulse for buttons
 const animatedElementsArray = [config.Elements.ctaBtnWhite[0], config.Elements.pricingCtaBtn];
 
-export const handleScroll = () => {
+export const handleScrollMoveIn = () => {
   animateMoveInRight(config.Elements.heroHeadline);
   animateMoveInLeft(config.Elements.heroText);
+};
+
+export const handleScrollPulse = () => {
   animatePulse(animatedElementsArray);
 };
 
