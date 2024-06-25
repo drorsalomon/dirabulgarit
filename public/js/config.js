@@ -103,12 +103,20 @@ export const Elements = {
   calendlyAgentYeheli: document.querySelector('.calendly-agent-yeheli'),
   calendlyAgentShimon: document.querySelector('.calendly-agent-shimon'),
   calendlyAgentOlga: document.querySelector('.calendly-agent-olga'),
-  // Projects
+  // PROJECTS
   projectAssetsContainer: document.querySelector('.project-assets-container'),
-  projectBuildingsNumber: document.querySelector('.project-numbers-buildings-number'),
-  projectFloorsNumber: document.querySelector('.project-numbers-floors-number'),
-  projectApartmentsNumber: document.querySelector('.project-numbers-apartments-number'),
-  projectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number'),
+  // Atlantis Aria 3
+  aa3ProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-atlantis-aria-3'),
+  aa3ProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-atlantis-aria-3'),
+  aa3ProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlantis-aria-3'),
+  aa3ProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlantis-aria-3'),
+  // Atlantis Euphoria
+  aeProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-atlantis-euphoria'),
+  aeProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-atlantis-euphoria'),
+  aeProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlantis-euphoria'),
+  aeProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlantis-euphoria'),
+  aeProjectAreaNumber: document.querySelector('.project-numbers-area-number-atlantis-euphoria'),
+  aeProjectGreenAreaNumber: document.querySelector('.project-numbers-green-area-number-atlantis-euphoria'),
 };
 
 export const euroIconSrc = '/img/icons/euro.svg';

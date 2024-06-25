@@ -12,3 +12,14 @@ exports.getAtlantisAria3 = catchAsync(async (req, res) => {
     projectAssets,
   });
 });
+
+exports.getAtlantisEuphoria = catchAsync(async (req, res) => {
+  let sortOptions = { price: 1 };
+  const projectAssets = await Asset.find({ project: 'Atlantis Euphoria' }).sort(sortOptions);
+  if (!projectAssets) return next(new AppError('Could not find the requested asset!', 404));
+
+  res.status(200).render('projects/atlantisEuphoria', {
+    title: 'Atlantis Euphoria',
+    projectAssets,
+  });
+});

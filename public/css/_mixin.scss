@@ -1,0 +1,36 @@
+@import 'variables';
+
+@mixin projectBackgroundImage($url) {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url($url);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60rem;
+  width: 100%;
+}
+
+@mixin projectHeadline($percentLeft) {
+  position: absolute;
+  top: 50%;
+  left: $percentLeft;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  color: $bg-color-primary;
+}
+
+@mixin projectMiddleImage($url, $size, $height) {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url($url);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: $size;
+  height: $height;
+  width: 100%;
+}

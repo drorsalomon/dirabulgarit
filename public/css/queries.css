@@ -163,8 +163,26 @@
   .pricing-premium-badge {
     width: 15.7rem;
   }
-  .project-main-image-headline {
+  .project-main-image-headline.project-main-image-headline-atlantis-aria-3 {
+    position: absolute;
+    top: 50%;
     left: 35%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 4.8rem;
+  }
+  .project-main-image-headline.project-main-image-headline-atlantis-euphoria {
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
     font-size: 4.8rem;
   }
   .project-gallery-image {
@@ -175,9 +193,16 @@
     height: 30rem;
     width: 45rem;
   }
-  .project-mid-image-container {
+  .project-mid-image-container.project-mid-image-container-atlantis-aria-3 {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982818-atlantis-aria-3-building.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: contain;
     height: 60rem;
+    width: 100%;
   }
   .project-installment-scheme-table {
     width: 95rem !important;
@@ -370,8 +395,25 @@
   .pricing-premium-badge {
     width: 19.5rem;
   }
-  .project-main-image-headline {
-    left: 27%;
+  .project-main-image-headline.project-main-image-headline-atlantis-aria-3 {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .project-main-image-headline.project-main-image-headline-atlantis-euphoria {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
   }
   .project-gallery-image {
     height: 17rem;
@@ -381,9 +423,16 @@
     height: 40rem;
     width: 60rem;
   }
-  .project-mid-image-container {
+  .project-mid-image-container.project-mid-image-container-atlantis-euphoria {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/euphoria-images/1719320290027-atlantis-euphoria-middle-image.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: contain;
-    height: 80rem;
+    height: 60rem;
+    width: 100%;
   }
   .footer-border {
     width: 15rem;
@@ -639,8 +688,25 @@
   .pricing-premium-badge {
     width: 15.8rem;
   }
-  .project-main-image-headline {
-    left: 22%;
+  .project-main-image-headline.project-main-image-headline-atlantis-aria-3 {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .project-main-image-headline.project-main-image-headline-atlantis-euphoria {
+    position: absolute;
+    top: 50%;
+    left: 23%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
   }
   .project-gallery-image {
     height: 20rem;
@@ -650,9 +716,16 @@
     height: 50rem;
     width: 75rem;
   }
-  .project-mid-image-container {
-    height: 34rem;
+  .project-mid-image-container.project-mid-image-container-atlantis-aria-3 {
+    position: relative;
+    padding: 0 !important;
     background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982831-atlantis-aria-3-project.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 34rem;
+    width: 100%;
   }
   .project-installment-scheme-table {
     width: 90rem !important;
@@ -739,7 +812,7 @@
     display: none;
   }
   .dropdown-submenu > .dropdown-menu {
-    top: -11%;
+    top: -2%;
     right: 95.5%;
     display: none;
   }
@@ -850,8 +923,26 @@
     max-width: 99.2rem;
     margin: auto !important;
   }
-  .project-main-image-headline {
+  .project-main-image-headline.project-main-image-headline-atlantis-aria-3 {
+    position: absolute;
+    top: 50%;
     left: 32%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 10rem;
+  }
+  .project-main-image-headline.project-main-image-headline-atlantis-euphoria {
+    position: absolute;
+    top: 50%;
+    left: 37%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
     font-size: 10rem;
   }
   .project-gallery-image {
@@ -862,8 +953,27 @@
     height: 55rem;
     width: 85rem;
   }
-  .project-mid-image-container {
+  .project-mid-image-container.project-mid-image-container-atlantis-aria-3 {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982831-atlantis-aria-3-project.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     height: 45rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-atlantis-euphoria {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/euphoria-images/1719320290027-atlantis-euphoria-middle-image.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 45rem;
+    width: 100%;
   }
   .project-installment-scheme-table {
     width: 110rem !important;
@@ -932,12 +1042,40 @@
   .pricing-premium-badge {
     width: 18rem;
   }
-  .project-main-image-headline {
+  .project-main-image-headline.project-main-image-headline-atlantis-aria-3 {
+    position: absolute;
+    top: 50%;
     left: 28%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .project-main-image-headline.project-main-image-headline-atlantis-euphoria {
+    position: absolute;
+    top: 50%;
+    left: 33%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
   }
   .project-gallery-image {
     height: 25rem;
     width: 43rem;
+  }
+  .project-mid-image-container.project-mid-image-container-atlantis-euphoria {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/euphoria-images/1719320290027-atlantis-euphoria-middle-image.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 155rem 75rem;
+    height: 50rem;
+    width: 100%;
   }
   .project-installment-scheme-table-col {
     overflow-x: auto !important;

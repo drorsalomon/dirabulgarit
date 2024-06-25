@@ -62,7 +62,7 @@ export const handleScroll = () => {
   animatePulse(animatedElementsArray);
 };
 
-export const animateCounter = (element, endNum) => {
+export const animateCounter = (element, endNum, text) => {
   let currentCount = 0;
   const targetCount = endNum;
   const duration = 2000; // Animation duration in milliseconds
@@ -74,7 +74,12 @@ export const animateCounter = (element, endNum) => {
       element.innerText = Math.floor(currentCount);
       requestAnimationFrame(updateCounter);
     } else {
-      element.innerText = targetCount;
+      if (text) {
+        console.log(text);
+        element.innerText = `${targetCount} ${text}`;
+      } else {
+        element.innerText = targetCount;
+      }
     }
   };
 

@@ -211,7 +211,7 @@ footer {
   background-color: rgba(255, 255, 255, 0.2);
   height: 1px;
   margin-bottom: 2rem;
-  width: 15rem;
+  width: 18rem;
 }
 
 .footer-text-container {
@@ -937,7 +937,7 @@ a:hover {
   margin-bottom: 5rem !important;
 }
 
-.project-main-image-col {
+.project-main-image-col.project-main-image-col-atlantis-aria-3 {
   position: relative;
   padding: 0 !important;
   background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144895-atlantis-aria-3-3.webp");
@@ -948,17 +948,39 @@ a:hover {
   height: 60rem;
   width: 100%;
 }
+.project-main-image-col.project-main-image-col-atlantis-euphoria {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/euphoria-images/1716710316107-One-bedroom-apartment-with-east-exposure-euphoria-2.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60rem;
+  width: 100%;
+}
 
-.project-main-image-headline {
+.project-main-image-headline.project-main-image-headline-atlantis-aria-3 {
   position: absolute;
   top: 50%;
   left: 40%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  font-size: 4.2rem;
   font-weight: 600;
   color: #ffffff;
+  font-size: 4.2rem;
+}
+.project-main-image-headline.project-main-image-headline-atlantis-euphoria {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 4.2rem;
 }
 
 .project-gallery-image {
@@ -974,6 +996,8 @@ a:hover {
 .project-numbers-floors-number,
 .project-numbers-apartments-number,
 .project-numbers-parking-spots-number,
+.project-numbers-area-number,
+.project-numbers-green-area-number,
 .project-numbers-start-number,
 .project-numbers-end-number {
   color: #cfa336;
@@ -1038,7 +1062,7 @@ a:hover {
   margin-bottom: 4rem;
 }
 
-.project-mid-image-container {
+.project-mid-image-container.project-mid-image-container-atlantis-aria-3 {
   position: relative;
   padding: 0 !important;
   background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982818-atlantis-aria-3-building.webp");
@@ -1046,6 +1070,17 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 53rem;
+  height: 60rem;
+  width: 100%;
+}
+.project-mid-image-container.project-mid-image-container-atlantis-euphoria {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/euphoria-images/1719320290027-atlantis-euphoria-middle-image.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 65rem 45rem;
   height: 60rem;
   width: 100%;
 }

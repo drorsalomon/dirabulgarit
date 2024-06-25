@@ -556,11 +556,20 @@ if (window.innerWidth >= 992) {
   });
 }
 
-// Counter and fade in animations
-if (config.Elements.projectBuildingsNumber) animation.animateCounter(config.Elements.projectBuildingsNumber, 3);
-if (config.Elements.projectFloorsNumber) animation.animateCounter(config.Elements.projectFloorsNumber, 9);
-if (config.Elements.projectApartmentsNumber) animation.animateCounter(config.Elements.projectApartmentsNumber, 210);
-if (config.Elements.projectParkingSpotsNumber) animation.animateCounter(config.Elements.projectParkingSpotsNumber, 250);
+// Counter animation
+// Atlantis aria 3
+if (config.Elements.aa3ProjectBuildingsNumber) animation.animateCounter(config.Elements.aa3ProjectBuildingsNumber, 3);
+if (config.Elements.aa3ProjectFloorsNumber) animation.animateCounter(config.Elements.aa3ProjectFloorsNumber, 9);
+if (config.Elements.aa3ProjectApartmentsNumber) animation.animateCounter(config.Elements.aa3ProjectApartmentsNumber, 210);
+if (config.Elements.aa3ProjectParkingSpotsNumber) animation.animateCounter(config.Elements.aa3ProjectParkingSpotsNumber, 250);
+// Atlantis euphoria
+if (config.Elements.aeProjectBuildingsNumber) animation.animateCounter(config.Elements.aeProjectBuildingsNumber, 6);
+if (config.Elements.aeProjectFloorsNumber) animation.animateCounter(config.Elements.aeProjectFloorsNumber, 9);
+if (config.Elements.aeProjectApartmentsNumber) animation.animateCounter(config.Elements.aeProjectApartmentsNumber, 292);
+if (config.Elements.aeProjectParkingSpotsNumber) animation.animateCounter(config.Elements.aeProjectParkingSpotsNumber, 320);
+if (config.Elements.aeProjectAreaNumber) animation.animateCounter(config.Elements.aeProjectAreaNumber, 27955, 'מ"ר');
+if (config.Elements.aeProjectGreenAreaNumber) animation.animateCounter(config.Elements.aeProjectGreenAreaNumber, 5200, 'מ"ר');
+// Fade in animation
 if (config.Elements.hotAssetsContainer || config.Elements.projectAssetsContainer) {
   animation.animateFadeIn(config.Elements.assetCards);
 } else if (config.Elements.searchResultsContainer || config.Elements.relatedAssetsContainer) {
