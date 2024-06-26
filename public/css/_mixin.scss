@@ -8,10 +8,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  top: 0;
-  left: 0;
+  height: 60rem;
   width: 100%;
-  height: 100vh;
 }
 
 @mixin projectHeadline($percentLeft) {
@@ -33,8 +31,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: $size;
-  top: 0;
-  left: 0;
+  height: $height;
   width: 100%;
-  height: 100vh;
 }

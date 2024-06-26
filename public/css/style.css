@@ -933,10 +933,8 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  top: 0;
-  left: 0;
+  height: 60rem;
   width: 100%;
-  height: 100vh;
 }
 .project-main-image-col.project-main-image-col-atlantis-aria-3 {
   position: relative;
@@ -946,10 +944,8 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  top: 0;
-  left: 0;
+  height: 60rem;
   width: 100%;
-  height: 100vh;
 }
 .project-main-image-col.project-main-image-col-atlantis-euphoria {
   position: relative;
@@ -959,10 +955,8 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  top: 0;
-  left: 0;
+  height: 60rem;
   width: 100%;
-  height: 100vh;
 }
 
 .project-main-image-headline.project-main-image-headline-atlantis-aria-3 {
@@ -1075,10 +1069,8 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 53rem;
-  top: 0;
-  left: 0;
+  height: 60rem;
   width: 100%;
-  height: 100vh;
 }
 .project-mid-image-container.project-mid-image-container-atlantis-aria-3 {
   position: relative;
@@ -1088,10 +1080,8 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 53rem;
-  top: 0;
-  left: 0;
+  height: 60rem;
   width: 100%;
-  height: 100vh;
 }
 .project-mid-image-container.project-mid-image-container-atlantis-euphoria {
   position: relative;
@@ -1101,10 +1091,8 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 65rem 45rem;
-  top: 0;
-  left: 0;
+  height: 60rem;
   width: 100%;
-  height: 100vh;
 }
 
 .project-map {
