@@ -557,7 +557,10 @@ if (window.innerWidth >= 992) {
 }
 
 // Counter animation
-// Atlantis aria 3
+// Atlantis Aria 2
+if (config.Elements.aa2ProjectApartmentsNumber) animation.animateCounter(config.Elements.aa2ProjectApartmentsNumber, 159);
+if (config.Elements.aa2ProjectParkingSpotsNumber) animation.animateCounter(config.Elements.aa2ProjectParkingSpotsNumber, 174);
+// Atlantis Aria 3
 if (config.Elements.aa3ProjectBuildingsNumber) animation.animateCounter(config.Elements.aa3ProjectBuildingsNumber, 3);
 if (config.Elements.aa3ProjectFloorsNumber) animation.animateCounter(config.Elements.aa3ProjectFloorsNumber, 9);
 if (config.Elements.aa3ProjectApartmentsNumber) animation.animateCounter(config.Elements.aa3ProjectApartmentsNumber, 210);

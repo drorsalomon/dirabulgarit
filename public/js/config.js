@@ -105,6 +105,9 @@ export const Elements = {
   calendlyAgentOlga: document.querySelector('.calendly-agent-olga'),
   // PROJECTS
   projectAssetsContainer: document.querySelector('.project-assets-container'),
+  // Atlantis Aria 2
+  aa2ProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlantis-aria-2'),
+  aa2ProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlantis-aria-2'),
   // Atlantis Aria 3
   aa3ProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-atlantis-aria-3'),
   aa3ProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-atlantis-aria-3'),

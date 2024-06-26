@@ -207,17 +207,17 @@ block content
             .row.asset-map-row.mx-4.justify-content-center 
                 .col-10.asset-map-healine-col
                     div.asset-map-headline מיקום
-                .col-10.asset-map-col
+                .col-12.col-xl-10.asset-map-col
                     div.asset-map(id='map' data-long=`${asset.location.coordinates[0]}` data-lat=`${asset.location.coordinates[1]}` data-title=`${asset.location.title}`)
 
     .container.asset-back-to-results-container.text-center.py-xxl-5
         button.asset-back-to-results-btn.w-75 חזרה לעמוד הקודם
 
     .container.asset-contact-us-container.text-center
-        .row.asset-contact-us-container-row.mx-4.justify-content-center 
+        .row.asset-contact-us-container-row.mx-3.justify-content-center 
             .col-10.asset-contact-us-container-headline-col
                 div.asset-contact-us-container-headline צרו קשר
-            .col-10.asset-contact-us-container-col
+            .col-12.col-md-10.col-xl-8.asset-contact-us-container-col
                 div#crmWebToEntityForm.crmWebToEntityForm
                     form.contact-us-form#webform6296617000000479035(action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads6296617000000479035 method='POST' accept-charset='UTF-8' novalidate)
                         input(type='text' style='display:none;' name='xnQsjsdp' value='59a0780e6b2791aec2fc494a0d52812511ef98c0f6123210fdc332d6fa0b9e22')

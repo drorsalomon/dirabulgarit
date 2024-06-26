@@ -387,21 +387,9 @@ a:hover {
   filter: brightness(40%);
 }
 
-.search-headline {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-size: 2.4rem;
-  font-weight: 600;
-  color: #ffffff;
-}
-
 .search-modal-open-btn-container {
   position: absolute;
-  top: 70%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -867,10 +855,10 @@ a:hover {
 .asset-map-headline,
 .asset-contact-us-container-headline,
 .asset-related-assets-headline {
-  font-size: 2.4rem;
+  font-size: 3.4rem;
   font-weight: 600;
   color: #324762;
-  text-align: end;
+  text-align: center;
   margin-bottom: 3rem;
 }
 
@@ -897,7 +885,7 @@ a:hover {
 }
 
 .asset-map {
-  height: 50rem;
+  height: 35rem;
   border-radius: 2rem;
 }
 
@@ -937,6 +925,17 @@ a:hover {
   margin-bottom: 5rem !important;
 }
 
+.project-main-image-col.project-main-image-col-atlantis-aria-2 {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-2-images/1716487726018-One-bedroom-apartment-in-Atlantis-Aria-2-1.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60rem;
+  width: 100%;
+}
 .project-main-image-col.project-main-image-col-atlantis-aria-3 {
   position: relative;
   padding: 0 !important;
@@ -1062,6 +1061,17 @@ a:hover {
   margin-bottom: 4rem;
 }
 
+.project-mid-image-container.project-mid-image-container-atlantis-aria-2 {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-2-images/1716717336291-a3_94k-scaled.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 53rem;
+  height: 60rem;
+  width: 100%;
+}
 .project-mid-image-container.project-mid-image-container-atlantis-aria-3 {
   position: relative;
   padding: 0 !important;
@@ -1086,7 +1096,7 @@ a:hover {
 }
 
 .project-map {
-  height: 50rem;
+  height: 35rem;
   border-radius: 2rem;
 }
 

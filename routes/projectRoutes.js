@@ -3,6 +3,7 @@ const projectController = require('../controllers/projectController');
 
 const router = express.Router();
 
+router.get('/atlantis-aria-2', projectController.getAtlantisAria2);
 router.get('/atlantis-aria-3', projectController.getAtlantisAria3);
 router.get('/atlantis-euphoria', projectController.getAtlantisEuphoria);
 

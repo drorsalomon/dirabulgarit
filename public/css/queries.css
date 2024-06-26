@@ -89,9 +89,6 @@
   .asset-card-body-row {
     font-size: 1.6rem;
   }
-  .search-headline {
-    font-size: 3.4rem;
-  }
   .asset-card-img {
     height: 25rem;
   }
@@ -192,6 +189,17 @@
   .project-details-img {
     height: 30rem;
     width: 45rem;
+  }
+  .project-mid-image-container.project-mid-image-container-atlantis-aria-2 {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-2-images/1716717336291-a3_94k-scaled.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 90rem;
+    height: 60rem;
+    width: 100%;
   }
   .project-mid-image-container.project-mid-image-container-atlantis-aria-3 {
     position: relative;
@@ -351,11 +359,6 @@
   .search-headline-img {
     height: 30rem;
   }
-  .search-headline {
-    top: 30%;
-    font-size: 3.4rem;
-    line-height: 5rem;
-  }
   .calendly-text-headline {
     font-size: 3.4rem;
   }
@@ -422,6 +425,17 @@
   .project-details-img {
     height: 40rem;
     width: 60rem;
+  }
+  .project-mid-image-container.project-mid-image-container-atlantis-aria-2 {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-2-images/1716717336291-a3_94k-scaled.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 120rem;
+    height: 70rem;
+    width: 100%;
   }
   .project-mid-image-container.project-mid-image-container-atlantis-euphoria {
     position: relative;
@@ -583,16 +597,10 @@
     display: none;
   }
   .search-headline-img {
-    height: 80rem;
-  }
-  .search-headline {
-    top: 20%;
+    height: 75rem;
   }
   .search-container {
-    top: 80%;
-  }
-  .search-headline {
-    font-size: 4.8rem;
+    top: 65%;
   }
   input[type=text]::-webkit-input-placeholder {
     font-size: 1.6rem;
@@ -608,9 +616,6 @@
   }
   input[type=text]::placeholder {
     font-size: 1.6rem;
-  }
-  .search-headline {
-    line-height: 6rem;
   }
   .asset-search-container {
     display: -webkit-box;
@@ -715,6 +720,17 @@
   .project-details-img {
     height: 50rem;
     width: 75rem;
+  }
+  .project-mid-image-container.project-mid-image-container-atlantis-aria-2 {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-2-images/1716478681900-Two-bedroom-apartment-C-808-in-Atlantis-Aria-2-2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 60rem;
+    width: 100%;
   }
   .project-mid-image-container.project-mid-image-container-atlantis-aria-3 {
     position: relative;
@@ -887,6 +903,9 @@
     height: 6rem;
     width: 6rem;
   }
+  .asset-map {
+    height: 45rem;
+  }
   .qanda-headline,
   .invest-headline,
   .about-headline {
@@ -953,6 +972,17 @@
     height: 55rem;
     width: 85rem;
   }
+  .project-mid-image-container.project-mid-image-container-atlantis-aria-2 {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-2-images/1716478681900-Two-bedroom-apartment-C-808-in-Atlantis-Aria-2-2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 45rem;
+    width: 100%;
+  }
   .project-mid-image-container.project-mid-image-container-atlantis-aria-3 {
     position: relative;
     padding: 0 !important;
@@ -974,6 +1004,9 @@
     background-size: contain;
     height: 45rem;
     width: 100%;
+  }
+  .project-map {
+    height: 45rem;
   }
   .project-installment-scheme-table {
     width: 110rem !important;
@@ -1065,6 +1098,17 @@
   .project-gallery-image {
     height: 25rem;
     width: 43rem;
+  }
+  .project-mid-image-container.project-mid-image-container-atlantis-aria-2 {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-2-images/1716478681900-Two-bedroom-apartment-C-808-in-Atlantis-Aria-2-2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 155rem 75rem;
+    height: 50rem;
+    width: 100%;
   }
   .project-mid-image-container.project-mid-image-container-atlantis-euphoria {
     position: relative;

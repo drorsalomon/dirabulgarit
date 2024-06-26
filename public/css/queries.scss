@@ -139,10 +139,6 @@
     font-size: $h6;
   }
 
-  .search-headline {
-    font-size: $h3;
-  }
-
   .asset-card-img {
     height: 25rem;
   }
@@ -265,6 +261,13 @@
   }
 
   .project-mid-image-container {
+    &.project-mid-image-container-atlantis-aria-2 {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-2-images/1716717336291-a3_94k-scaled.jpg',
+        100% 90rem,
+        60rem
+      );
+    }
     &.project-mid-image-container-atlantis-aria-3 {
       @include projectMiddleImage(
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982818-atlantis-aria-3-building.webp',
@@ -474,12 +477,6 @@
     height: 30rem;
   }
 
-  .search-headline {
-    top: 30%;
-    font-size: $h3;
-    line-height: 5rem;
-  }
-
   // ***** Contact Us *****
   .calendly-text-headline {
     font-size: $h3;
@@ -556,6 +553,13 @@
   }
 
   .project-mid-image-container {
+    &.project-mid-image-container-atlantis-aria-2 {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-2-images/1716717336291-a3_94k-scaled.jpg',
+        100% 120rem,
+        70rem
+      );
+    }
     &.project-mid-image-container-atlantis-euphoria {
       @include projectMiddleImage(
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/euphoria-images/1719320290027-atlantis-euphoria-middle-image.webp',
@@ -750,19 +754,11 @@
   }
 
   .search-headline-img {
-    height: 80rem;
-  }
-
-  .search-headline {
-    top: 20%;
+    height: 75rem;
   }
 
   .search-container {
-    top: 80%;
-  }
-
-  .search-headline {
-    font-size: $h1;
+    top: 65%;
   }
 
   input[type='text']::-webkit-input-placeholder {
@@ -783,10 +779,6 @@
 
   input[type='text']::placeholder {
     font-size: $h6;
-  }
-
-  .search-headline {
-    line-height: 6rem;
   }
 
   // ***** Asset *****
@@ -912,6 +904,13 @@
   }
 
   .project-mid-image-container {
+    &.project-mid-image-container-atlantis-aria-2 {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-2-images/1716478681900-Two-bedroom-apartment-C-808-in-Atlantis-Aria-2-2.jpg',
+        contain,
+        60rem
+      );
+    }
     &.project-mid-image-container-atlantis-aria-3 {
       @include projectMiddleImage(
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982831-atlantis-aria-3-project.jpg',
@@ -1130,6 +1129,10 @@
     width: 6rem;
   }
 
+  .asset-map {
+    height: 45rem;
+  }
+
   // ***** Q & A *****
   // ***** Invest *****
   // ***** About *****
@@ -1206,6 +1209,13 @@
   }
 
   .project-mid-image-container {
+    &.project-mid-image-container-atlantis-aria-2 {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-2-images/1716478681900-Two-bedroom-apartment-C-808-in-Atlantis-Aria-2-2.jpg',
+        contain,
+        45rem
+      );
+    }
     &.project-mid-image-container-atlantis-aria-3 {
       @include projectMiddleImage(
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982831-atlantis-aria-3-project.jpg',
@@ -1220,6 +1230,10 @@
         45rem
       );
     }
+  }
+
+  .project-map {
+    height: 45rem;
   }
 
   .project-installment-scheme-table {
@@ -1328,6 +1342,13 @@
   }
 
   .project-mid-image-container {
+    &.project-mid-image-container-atlantis-aria-2 {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-2-images/1716478681900-Two-bedroom-apartment-C-808-in-Atlantis-Aria-2-2.jpg',
+        155rem 75rem,
+        50rem
+      );
+    }
     &.project-mid-image-container-atlantis-euphoria {
       @include projectMiddleImage(
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/euphoria-images/1719320290027-atlantis-euphoria-middle-image.webp',

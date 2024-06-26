@@ -23,21 +23,9 @@
   filter: brightness(40%);
 }
 
-.search-headline {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-size: $h4;
-  font-weight: 600;
-  color: $bg-color-primary;
-}
-
 .search-modal-open-btn-container {
   position: absolute;
-  top: 70%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
