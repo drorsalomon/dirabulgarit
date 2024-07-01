@@ -16,54 +16,54 @@
                         if asset.project
                             div.mobile-card-text-container
                                 span= asset.project 
-                                img.mobile-card-icon(src='/img/icons/building-svgrepo-com.svg' alt='Building Icon') 
+                                img.mobile-card-icon(src='/img/icons/building-svgrepo-com.svg' alt='לוגו של בניין') 
                         else
                             div.mobile-card-text-container
                                 span= `-`
-                                img.mobile-card-icon(src='/img/icons/building-svgrepo-com.svg' alt='Building Icon')        
+                                img.mobile-card-icon(src='/img/icons/building-svgrepo-com.svg' alt='לוגו של בניין')        
                     .col-6    
                         if asset.price   
                             div.mobile-card-text-container       
                                 span.asset-price(data-europrice=`${asset.priceBeginningAt === true ? 'החל מ' : ''}€${ new Intl.NumberFormat().format(asset.price)}` data-nisprice=`${asset.priceBeginningAt === true ? 'החל מ' : ''}₪${new Intl.NumberFormat().format(asset.priceNis)}`)
-                                img.mobile-card-icon(src='/img/icons/price-tag-svgrepo-com.svg' alt='Price tag icon')
+                                img.mobile-card-icon(src='/img/icons/price-tag-svgrepo-com.svg' alt='לוגו של תג מחיר')
                         else
                             div.mobile-card-text-container       
                                 span -
-                                img.mobile-card-icon(src='/img/icons/price-tag-svgrepo-com.svg' alt='Price tag icon')  
+                                img.mobile-card-icon(src='/img/icons/price-tag-svgrepo-com.svg' alt='לוגו של תג מחיר')  
                     .col-6              
                         if asset.city  
                             div.mobile-card-text-container
                                 span(dir='rtl')= asset.city
-                                img.mobile-card-icon(src='/img/icons/map-svgrepo-com.svg' alt='Map Icon')
+                                img.mobile-card-icon(src='/img/icons/map-svgrepo-com.svg' alt='אייקון של מפה')
                         else
                             div.mobile-card-text-container
                                 span(dir='rtl')= `-`
-                                img.mobile-card-icon(src='/img/icons/map-svgrepo-com.svg' alt='Map Icon')
+                                img.mobile-card-icon(src='/img/icons/map-svgrepo-com.svg' alt='אייקון של מפה')
                     .col-6    
                         if asset.type
                             div.mobile-card-text-container    
                                 span= asset.type
-                                img.mobile-card-icon(src='/img/icons/house-svgrepo-com.svg' alt='House Icon')
+                                img.mobile-card-icon(src='/img/icons/house-svgrepo-com.svg' alt='אייקון של בית')
                         else 
                             div.mobile-card-text-container    
                                 span= `-`
-                                img.mobile-card-icon(src='/img/icons/house-svgrepo-com.svg' alt='House Icon')
+                                img.mobile-card-icon(src='/img/icons/house-svgrepo-com.svg' alt='אייקון של בית')
                     .col-6            
                         if asset.sm
                             div.mobile-card-text-container.card-text-last-container    
                                 span(dir='rtl')= asset.sm
-                                img.mobile-card-icon(src='/img/icons/ruler-svgrepo-com.svg' alt='Ruler Icon')
+                                img.mobile-card-icon(src='/img/icons/ruler-svgrepo-com.svg' alt='אייקון של סרגל')
                         else
                             div.mobile-card-text-container.card-text-last-container    
                                 span(dir='rtl')= `-`
-                                img.mobile-card-icon(src='/img/icons/ruler-svgrepo-com.svg' alt='Ruler Icon')
+                                img.mobile-card-icon(src='/img/icons/ruler-svgrepo-com.svg' alt='אייקון של סרגל')
                     .col-6    
                         if asset.rooms       
                             div.mobile-card-text-container.card-text-last-container    
                                 span= asset.rooms
-                                img.mobile-card-icon(src='/img/icons/living-room-sofa-svgrepo-com.svg' alt='Living Room Icon')
+                                img.mobile-card-icon(src='/img/icons/living-room-sofa-svgrepo-com.svg' alt='אייקון של סלון')
                         else  
                             div.mobile-card-text-container.card-text-last-container    
                                 span= `-`
-                                img.mobile-card-icon(src='/img/icons/living-room-sofa-svgrepo-com.svg' alt='Living Room Icon')  
+                                img.mobile-card-icon(src='/img/icons/living-room-sofa-svgrepo-com.svg' alt='אייקון של סלון')  
                                               

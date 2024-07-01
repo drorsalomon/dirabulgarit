@@ -881,7 +881,7 @@ a:hover {
 
 .asset-video {
   width: 100%;
-  height: 40rem;
+  height: 25rem;
 }
 
 .asset-map {
@@ -920,6 +920,7 @@ a:hover {
 .project-amenities-container,
 .project-mid-image-container,
 .project-map-container,
+.project-video-container,
 .project-assets-container,
 .project-installment-scheme-container {
   margin-bottom: 5rem !important;
@@ -1878,6 +1879,14 @@ body {
     transform: translate(0);
   }
 }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -1995,6 +2004,17 @@ body {
   width: 2.5rem;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 .whatsapp-widget {
   height: 4rem;
   width: 4rem;
@@ -2007,9 +2027,9 @@ body {
 }
 
 .hero-container {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.4)), to(rgba(26, 113, 212, 0.4))), url("/img/hero-burgas.webp");
-  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.4), rgba(26, 113, 212, 0.4)), url("/img/hero-burgas.webp");
-  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.4), rgba(26, 113, 212, 0.4)), url("/img/hero-burgas.webp");
+  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.6), rgba(26, 113, 212, 0.6)), url("/img/hero-burgas.webp");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.6)), to(rgba(26, 113, 212, 0.6))), url("/img/hero-burgas.webp");
+  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.6), rgba(26, 113, 212, 0.6)), url("/img/hero-burgas.webp");
   background-size: cover;
   background-position: top;
   position: relative;
@@ -2274,9 +2294,9 @@ input[type=text]::placeholder {
 }
 
 .mainpage-about-container {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.4)), to(rgba(26, 113, 212, 0.4))), url("/img/about-us-sozopol.webp");
-  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.4), rgba(26, 113, 212, 0.4)), url("/img/about-us-sozopol.webp");
-  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.4), rgba(26, 113, 212, 0.4)), url("/img/about-us-sozopol.webp");
+  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.6), rgba(26, 113, 212, 0.6)), url("/img/about-us-sozopol.webp");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.6)), to(rgba(26, 113, 212, 0.6))), url("/img/about-us-sozopol.webp");
+  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.6), rgba(26, 113, 212, 0.6)), url("/img/about-us-sozopol.webp");
   background-size: cover;
   background-position: top;
   position: relative;
@@ -2345,6 +2365,7 @@ input[type=text]::placeholder {
 .mainpage-about-img:hover {
   outline: 1rem solid #ffffff;
   -webkit-transform: scale(1.05) translateY(-0.5rem);
+  -ms-transform: scale(1.05) translateY(-0.5rem);
   transform: scale(1.05) translateY(-0.5rem);
   -webkit-box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
   box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);

@@ -52,97 +52,97 @@ block content
             .col-12.col-md-5.col-lg-4.col-xl-3.asset-details-features-col 
                 div.mobile-asset-favorite-btn-container.text-end
                     button.asset-favorite-btn-white
-                        img.favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline.svg' alt='Heart icon') 
+                        img.favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline.svg' alt='אייקון של לב') 
                 if asset.id   
                     div.assets-details-features 
                         span.asset-details-id(dir='rtl')= asset.id 
                         span.assets-details-features-text(dir='rtl') <strong>מספר נכס: </strong>
-                        img.assets-details-features-icon(src='/img/icons/hashtag-svgrepo-com-white.svg' alt='Hashtag Icon')       
+                        img.assets-details-features-icon(src='/img/icons/hashtag-svgrepo-com-white.svg' alt='אייקון של מספר')       
                 if asset.price     
                     div.assets-details-features 
                         span.assets-details-features-text <strong>מחיר: </strong>
                         span.asset-price(data-europrice=`${asset.priceBeginningAt === true ? 'החל מ' : ''}€${new Intl.NumberFormat().format(asset.price)}` data-nisprice=`${asset.priceBeginningAt === true ? 'החל מ' : ''}₪${new Intl.NumberFormat().format(asset.priceNis)}`)
-                        img.assets-details-features-icon(src='/img/icons/price-tag-svgrepo-com-white.svg' alt='Price Tag Icon')       
+                        img.assets-details-features-icon(src='/img/icons/price-tag-svgrepo-com-white.svg' alt='אייקון של תג מחיר')       
                 if asset.project     
                     div.assets-details-features 
                         span= asset.project 
                         span.assets-details-features-text(dir='rtl') <strong>פרויקט: </strong> 
-                        img.assets-details-features-icon(src='/img/icons/building-svgrepo-com-white.svg' alt='Building Icon')       
+                        img.assets-details-features-icon(src='/img/icons/building-svgrepo-com-white.svg' alt='אייקון של בניין')       
                 if asset.city 
                     div.assets-details-features 
                         span(dir='rtl')= asset.city 
                         span.assets-details-features-text(dir='rtl') <strong>עיר: </strong> 
-                        img.assets-details-features-icon(src='/img/icons/map-svgrepo-com-white.svg' alt='Map Icon')       
+                        img.assets-details-features-icon(src='/img/icons/map-svgrepo-com-white.svg' alt='אייקון של מפה')       
                 if asset.type
                     div.assets-details-features 
                         span.assets-details-features-text <strong>סוג נכס: </strong> 
                         span= asset.type 
-                        img.assets-details-features-icon(src='/img/icons/house-svgrepo-com-white.svg' alt='House Icon')       
+                        img.assets-details-features-icon(src='/img/icons/house-svgrepo-com-white.svg' alt='אייקון של בית')       
                 if asset.sm
                     div.assets-details-features 
                         span.assets-details-features-text <strong>שטח: </strong> 
                         span= asset.sm 
-                        img.assets-details-features-icon(src='/img/icons/ruler-svgrepo-com-white.svg' alt='Ruler Icon')       
+                        img.assets-details-features-icon(src='/img/icons/ruler-svgrepo-com-white.svg' alt='אייקון של סרגל')       
                 if asset.oceanView
                     div.assets-details-features 
                         span.assets-details-features-text <strong>קרבה לים: </strong> 
                         span= asset.oceanView 
-                        img.assets-details-features-icon(src='/img/icons/ocean-sunset-svgrepo-com-white.svg' alt='Ocean Sunset Icon')       
+                        img.assets-details-features-icon(src='/img/icons/ocean-sunset-svgrepo-com-white.svg' alt='אייקון של שמש שוקעת בים')       
                 if asset.rooms
                     div.assets-details-features 
                         span.assets-details-features-text <strong>חדרים: </strong>
                         span= asset.rooms  
-                        img.assets-details-features-icon(src='/img/icons/living-room-sofa-svgrepo-com-white.svg' alt='Rooms Icon')       
+                        img.assets-details-features-icon(src='/img/icons/living-room-sofa-svgrepo-com-white.svg' alt='אייקון של סלון')       
                 if asset.bedrooms
                     div.assets-details-features 
                         span.assets-details-features-text <strong>חדרי שינה: </strong>
                         span= asset.bedrooms  
-                        img.assets-details-features-icon(src='/img/icons/bed-bedroom-comfortable-svgrepo-com-white.svg' alt='Bedroom Icon')       
+                        img.assets-details-features-icon(src='/img/icons/bed-bedroom-comfortable-svgrepo-com-white.svg' alt='אייקון של חדר שינה')       
                 if asset.bathrooms
                     div.assets-details-features 
                         span.assets-details-features-text <strong>שירותים: </strong> 
                         span= asset.bathrooms 
-                        img.assets-details-features-icon(src='/img/icons/bath-bathroom-bathtub-svgrepo-com-white.svg' alt='Bathroom Icon')       
+                        img.assets-details-features-icon(src='/img/icons/bath-bathroom-bathtub-svgrepo-com-white.svg' alt='אייקון של מקלחת')       
                 if asset.terraces 
                     div.assets-details-features 
                         span.assets-details-features-text <strong>מרפסות: </strong> 
                         span= asset.terraces 
-                        img.assets-details-features-icon(src='/img/icons/balcony-window-svgrepo-com-white.svg' alt='Balcony Icon')       
+                        img.assets-details-features-icon(src='/img/icons/balcony-window-svgrepo-com-white.svg' alt='אייקון של מרפסת')       
                 if asset.floor
                     div.assets-details-features 
                         span.assets-details-features-text <strong>קומה: </strong> 
                         span= asset.floor 
-                        img.assets-details-features-icon(src='/img/icons/floor-plan-svgrepo-com-white.svg' alt='Floor Plan Icon')       
+                        img.assets-details-features-icon(src='/img/icons/floor-plan-svgrepo-com-white.svg' alt='אייקון של תוכנית קומה בבניין')       
                 if asset.parking
                     div.assets-details-features 
                         span.assets-details-features-text <strong>חניה: </strong> 
                         span= asset.parking 
-                        img.assets-details-features-icon(src='/img/icons/parking-svgrepo-com-white.svg' alt='Floor Plan Icon')       
+                        img.assets-details-features-icon(src='/img/icons/parking-svgrepo-com-white.svg' alt='אייקון של חניה')       
                 if asset.windDirections
                     div.assets-details-features 
                         span.assets-details-features-text <strong>כיווני אוויר: </strong> 
                         span= asset.windDirections 
-                        img.assets-details-features-icon(src='/img/icons/wind-svgrepo-com-white.svg' alt='Wind Icon')       
+                        img.assets-details-features-icon(src='/img/icons/wind-svgrepo-com-white.svg' alt='אייקון של רוח נושבת')       
                 if asset.readiness 
                     div.assets-details-features 
                         span= asset.readiness
                         span.assets-details-features-text(dir='rtl') <strong>תאריך כניסה: </strong> 
-                        img.assets-details-features-icon(src='/img/icons/date-svgrepo-com-white.svg' alt='Calender Icon')   
+                        img.assets-details-features-icon(src='/img/icons/date-svgrepo-com-white.svg' alt='אייקון של לוח שנה')   
                 if asset.maintenanceFee
                     div.assets-details-features 
                         span(dir='rtl')= asset.maintenanceFee
                         span.assets-details-features-text(dir='rtl') <strong>תחזוקה: </strong> 
-                        img.assets-details-features-icon(src='/img/icons/maintenance-svgrepo-com-white.svg' alt='Wrench Icon')       
+                        img.assets-details-features-icon(src='/img/icons/maintenance-svgrepo-com-white.svg' alt='אייקון של מפתח שבדי')       
                 if asset.furnished && asset.furnished === true
                     div.assets-details-features 
                         span(dir='rtl') כן
                         span.assets-details-features-text(dir='rtl') <strong>ריהוט: </strong> 
-                        img.assets-details-features-icon(src='/img/icons/furniture-svgrepo-com-white.svg' alt='Furniture Icon')  
+                        img.assets-details-features-icon(src='/img/icons/furniture-svgrepo-com-white.svg' alt='אייקון של ריהוט')  
                 if asset.yearBuilt
                     div.assets-details-features 
                         span(dir='rtl')= asset.yearBuilt
                         span.assets-details-features-text(dir='rtl') <strong>שנת בנייה: </strong> 
-                        img.assets-details-features-icon(src='/img/icons/crane-tool-svgrepo-com-white.svg' alt='Construction crane Icon')               
+                        img.assets-details-features-icon(src='/img/icons/crane-tool-svgrepo-com-white.svg' alt='אייקון של מנוף בניין')               
                 if asset.description.text
                     div.asset-details-description-smallViewport-container
                         each text in asset.description.text
@@ -160,7 +160,7 @@ block content
                 div.asset-btn-smallViewport-container.text-center
                     button.btn-cta-asset.to-calendly-btn צרו קשר
                     button.share-btn-white
-                        img.share-btn-icon(src='/img/icons/share-svgrepo-com-outline.svg' alt='Share icon')   
+                        img.share-btn-icon(src='/img/icons/share-svgrepo-com-outline.svg' alt='אייקון שיתוף דף')   
             .col-md-12.col-xl-10.asset-details-description-middleViewport-col
                 if asset.description.text
                     div.assets-details-description-container.assets
@@ -178,10 +178,10 @@ block content
                             div.asset-details-description(dir='rtl')!= `● ` + text 
                 div.asset-btn-middleViewport-container.text-center
                     button.asset-favorite-btn-white
-                        img.favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline.svg' alt='Heart icon') 
+                        img.favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline.svg' alt='אייקון של לב') 
                     button.btn-cta-asset.to-calendly-btn צרו קשר
                     button.share-btn-white
-                        img.share-btn-icon(src='/img/icons/share-svgrepo-com-outline.svg' alt='Share icon')  
+                        img.share-btn-icon(src='/img/icons/share-svgrepo-com-outline.svg' alt='אייקון של שיתוף דף')  
 
     .container-fluid.asset-amenities-container.py-xxl-5
         .row.asset-amenities-row.mx-4.justify-content-center 
@@ -194,13 +194,14 @@ block content
                             .col-12.col-md-6.col-lg-4.col-xl-3
                                 div.asset-amenities-details-container
                                     span(dir='rtl')= amenity
-                                    img.assets-details-features-icon(src='/img/icons/check-svgrepo-com.svg' alt='Check Icon') 
+                                    img.assets-details-features-icon(src='/img/icons/check-svgrepo-com.svg' alt='אייקון של סימן וי') 
 
     if asset.videoURL    
         .container-fluid.asset-video-container.py-xxl-3
             .row.asset-video-row.mx-4.justify-content-center 
-                .col-10.asset-video-col.text-center
+                .col-12.col-md-10.asset-video-col.text-center(role="region" aria-labelledby="assetVideoDescription")
                     iframe(src=`${asset.videoURL}` frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen).asset-video                    
+                span.visually-hidden(id="assetVideoDescription")=`וידאו של הנכס ${asset.name}`
     
     if asset.location.coordinates[0] && asset.location.coordinates[1]
         .container-fluid.asset-map-container.py-xxl-3
@@ -227,16 +228,16 @@ block content
                         input(type='text' style='display:none;' name='returnURL' value='https://www.dirabulgarit.com/contact-us-confirm')
                         .row.contact-us-row.align-items-center
                             .col-12.contact-us-col.d-flex.justify-content-end
-                                input.contact-us-input.contact-us-name-input.form-control(type='text' name='Last Name' maxlength='200' placeholder='שם' aria-label='name' aria-describedby='basic-addon1' required)                            
+                                input.contact-us-input.contact-us-name-input.form-control(type='text' name='Last Name' maxlength='200' placeholder='שם' aria-label='שם' aria-describedby='basic-addon1' required)                            
                                 .invalid-tooltip אנא הכניסו שם
                             .col-12.contact-us-col.d-flex.justify-content-end
-                                input.contact-us-input.contact-us-phone-input.form-control(type='text' name='Phone' maxlength='10' placeholder='טלפון' aria-label='phone' aria-describedby='basic-addon1' pattern='[0-9]{10}' required)
+                                input.contact-us-input.contact-us-phone-input.form-control(type='text' name='Phone' maxlength='10' placeholder='טלפון' aria-label='טלפון' aria-describedby='basic-addon1' pattern='[0-9]{10}' required)
                                 .invalid-tooltip.contact-us-phone-invalid אנא הכניסו מספר טלפון תקין
                             .col-12.contact-us-col.d-flex.justify-content-end 
-                                input.contact-us-input.contact-us-email-input.form-control(type='email' ftype='email' autocomplete='false' name='Email' crmlabel='' maxlength='100' placeholder='אימייל  ' aria-label='email' aria-describedby='basic-addon1' pattern='[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}' required)
+                                input.contact-us-input.contact-us-email-input.form-control(type='email' ftype='email' autocomplete='false' name='Email' crmlabel='' maxlength='100' placeholder='אימייל  ' aria-label='אימייל' aria-describedby='basic-addon1' pattern='[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}' required)
                                 .invalid-tooltip.contact-us-email-invalid אנא הכניסו אימייל תקין
                             .col-12.contact-us-col.d-flex.justify-content-end     
-                                textarea.contact-us-textarea.contact-us-description-input.form-control(id='Description' name='Description' dir='rtl' aria-label="With textarea" rows="5")=`הייתי רוצה לשמוע עוד פרטים על הנכס "${asset.name}" שמספרו "${asset.id}"`
+                                textarea.contact-us-textarea.contact-us-description-input.form-control(id='Description' name='Description' dir='rtl' aria-label="תיאור הבקשה" rows="5")=`הייתי רוצה לשמוע עוד פרטים על הנכס "${asset.name}" שמספרו "${asset.id}"`
                             .col-12.contact-us-col
                                 input.contact-us-button.mx-3(type='reset' class='zcwf_button' name='reset' value='ניקוי' title='Reset')
                                 input.contact-us-button.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='שליחה' title='Submit')

@@ -3,18 +3,18 @@ nav.navbar.navbar-expand-xl.fixed-top
     .container.navbar-mobile-container
       .row
         .col-2.d-flex.align-content-center
-          button.navbar-toggler.collapsed(type='button' data-bs-toggle='offcanvas' data-bs-target='#navbarContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+          button.navbar-toggler.collapsed(type='button' data-bs-toggle='offcanvas' data-bs-target='#navbarContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='פתיחת תפריט קישורים')
             span.navbar-toggler-icon
         .col-10.text-end
           a.navbar-brand.mobile-navbar-brand(href='/')
-            img.navbar-logo(src='/img/logo.png' alt='DiraBulgarit logo')  
+            img.navbar-logo(src='/img/logo.png' alt='לוגו של דירה בולגרית')  
     div.offcanvas.offcanvas-end.w-auto.text-end(tabindex='-1' id='navbarContent' aria-labelledby='offcanvasNavbarLabel')
       div.offcanvas-body
         div.btn-cta--container
-          button.btn-cta.btn-cta--offcanvas.to-calendly-btn צרו קשר
+          button.btn-cta.btn-cta--offcanvas.to-calendly-btn(aria-label='מעבר לעמוד יצירת קשר') צרו קשר
         button.mobile-asset-favorite-btn
           img.header-favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline-white.svg' alt='Heart icon') 
-        button.btn.btn-secondary.dropdown-toggle.currency-dropdown-btn.mobile-currency-dropdown-btn(type='button' data-bs-toggle='collapse' data-bs-target="#currencyBtnCollapse" aria-expanded="false" aria-controls="currencyBtnCollapse")
+        button.btn.btn-secondary.dropdown-toggle.currency-dropdown-btn.mobile-currency-dropdown-btn(type='button' data-bs-toggle='collapse' data-bs-target="#currencyBtnCollapse" aria-expanded="false" aria-controls="currencyBtnCollapse" aria-label='בחירת מטבע לתצוגה באתר')
           img.navbar-currency-icon.mobile-navbar-active-currency-icon(src='/img/icons/placeholder-thin-svgrepo-com-white.svg' alt='')   
         div.collapse.mobile-currency-collapse(id="currencyBtnCollapse")
           img.navbar-currency-icon.mobile-navbar-not-active-currency-icon(src='' alt='')       
@@ -28,10 +28,10 @@ nav.navbar.navbar-expand-xl.fixed-top
         ul.navbar-nav.align-items-xl-center.justify-content-xl-evenly
           li.nav-item
             button.asset-favorite-btn
-              img.header-favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline.svg' alt='Heart icon') 
+              img.header-favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline.svg' alt='אייקון של לב') 
           li.nav-item.currency-nav-item  
             .dropend
-              button.btn.btn-secondary.dropdown-toggle.currency-dropdown-btn(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+              button.btn.btn-secondary.dropdown-toggle.currency-dropdown-btn(type='button' data-bs-toggle='dropdown' aria-expanded='false' aria-label='בחירת מטבע לתצוגה באתר')
                 img.navbar-currency-icon.navbar-active-currency-icon(src='/img/icons/placeholder-thin-svgrepo-com-white.svg' alt='')   
               ul.dropdown-menu.currency-dropdown-menu
                 li.currency-dropdown-menu-item 
@@ -47,7 +47,7 @@ nav.navbar.navbar-expand-xl.fixed-top
           li.nav-item
             a.nav-link.nav-el(href='/q&a') שאלות ותשובות
           li.nav-item.dropdown.assets-catalog-dropdown
-            a.nav-link.dropdown-toggle.assets-catalog-dropdown-btn(role="button" data-bs-toggle="dropdown" aria-expanded="false" dir='rtl') קטלוג נכסים
+            a.nav-link.dropdown-toggle.assets-catalog-dropdown-btn(role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label='פתיחת תפריט פרויקטים' dir='rtl') קטלוג נכסים
             ul.dropdown-menu.assets-catalog-dropdown-menu
               li
                 a.nav-link.dropdown-item.assets-catalog-dropdown-item.text-end(href='/search') חיפוש נכס
@@ -63,4 +63,4 @@ nav.navbar.navbar-expand-xl.fixed-top
           li.nav-item
             a.nav-link.nav-el.homepage-link(href='/') עמוד ראשי
     a.navbar-brand.laptop-navbar-brand(href='/')
-      img.navbar-logo(src='/img/logo.png' alt='DiraBulgarit logo')    
+      img.navbar-logo(src='/img/logo.png' alt='לוגו של דירה בולגרית')    

@@ -124,10 +124,10 @@ export const Elements = {
 
 export const euroIconSrc = '/img/icons/euro.svg';
 export const mobileEuroIconSrc = '/img/icons/euro-white.svg';
-export const euroIconAlt = 'Euro currency icon';
+export const euroIconAlt = 'אייקון של מטבע היורו';
 export const nisIconSrc = '/img/icons/nis.svg';
 export const mobileNisIconSrc = '/img/icons/nis-white.svg';
-export const nisIconAlt = 'Nis currency icon';
+export const nisIconAlt = 'אייקון של מטבע השקל';
 export const CURRENCY_KEY = 'currency';
 export const DEFAULT_CURRENCY = 'euro';
 export const NIS_CURRENCY = 'nis';

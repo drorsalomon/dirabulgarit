@@ -9,23 +9,25 @@ block content
     .container-fluid.hero-video-container
         .row.hero-video-row.align-items-center.justify-content-center 
             .col.hero-video-col
-                div.hero-video-bg-video-container
+                div.hero-video-bg-video-container(role="img" aria-labelledby="heroVideoDescription")
                     div.ratio.ratio-16x9
                         video(autoplay muted loop).hero-video
                             source(src='/videos/hero-video-1080p.webm' type='video/webm')
+                    span.visually-hidden(id="heroVideoDescription") וידאו שמראה את איזור חוף הים בסאני ביץ', בורגס בולגריה, את הטיילת בעיר ואת פארק המים המקומי           
     
-    .container-fluid.hero-container
+    .container-fluid.hero-container(role="img" aria-labelledby="heroImageDescription")
+        span.visually-hidden(id="heroImageDescription") תמונה של קומפלקסים למגורים שיושבים על חוף הים בבורגס בולגריה
         .row.d-flex.align-items-center.justify-content-center                    
             .col-10.col-lg-8.hero-text-col 
                 h1.hero-headline(dir='rtl') מרכז הנדל"ן הבולגרי לישראלים
                 div.hero-text(dir='rtl') אתר הנדל"ן הבולגרי הגדול ביותר עבור ישראלים, מאות נכסים, מאות הזדמנויות, פרויקטים חדשים ובלעדיים, דירות יד שנייה, דירות נופש, ודירות למגורים - "דירה בולגרית" מאגדת עבורך את הנדל"ן בבולגריה ומלווה אותך כל הדרך אל הנכס
                 div.hero-cta-btn-container
-                    button.btn-cta-white.to-calendly-btn צרו קשר          
+                    button.btn-cta-white.to-calendly-btn(aria-label='מעבר לעמוד יצירת קשר') צרו קשר          
 
     div.mainpage-search-modal-open-btn-container.text-center
         div.mainpage-search-headline חיפוש נכס
         div.mainpage-search-text לחצו על כפתור החיפוש ומצאו את הנכס שהכי מתאים למבוקשכם
-        button.mainpage-search-modal-open-btn(data-bs-toggle="modal" data-bs-target="#searchModal") חפשו נכס 
+        button.mainpage-search-modal-open-btn(data-bs-toggle="modal" data-bs-target="#searchModal" aria-label='פתיחת תפריט חיפוש נכס') חפשו נכס 
 
     .container.d-flex.justify-content-center
         .mainpage-search-container.w-75   
@@ -34,7 +36,8 @@ block content
 
         include _searchModal       
 
-    .container-fluid.mainpage-about-container.overflow-hidden
+    .container-fluid.mainpage-about-container.overflow-hidden(role="img" aria-labelledby="aboutUsImageDescription")
+        span.visually-hidden(id="aboutUsImageDescription") תמונה של בתים שיושבים על מפרצון בשפת הים השחור בבורגס בולגריה
         .row.mainpage-about-row.align-items-center
             .col-10.col-lg-8.mainpage-about-text-col
                 div.mainpage-about-tag מי אנחנו
@@ -43,11 +46,11 @@ block content
             .col-10.col-lg-8.mainpage-about-images-col 
                 .row.justify-content-center 
                     .col-12.col-sm-4
-                        img.mainpage-about-img(src="/img/Seven-Rila-Lakes-Bulgaria.webp" alt="Seven rila lakes in bulgaria" loading="lazy")
+                        img.mainpage-about-img(src="/img/Seven-Rila-Lakes-Bulgaria.webp" alt="אגם סוון רילה בבולגריה" loading="lazy")
                     .col-12.col-sm-4
-                        img.mainpage-about-img(src="/img/sofia-flowers.webp" alt="A flower garden in Sofia Bulgaria" loading="lazy")
+                        img.mainpage-about-img(src="/img/sofia-flowers.webp" alt="גן פרחים בסופיה בולגריה" loading="lazy")
                     .col-12.col-sm-4
-                        img.mainpage-about-img(src="/img/about-us-burgas.webp" alt="Burgas black sea" loading="lazy")
+                        img.mainpage-about-img(src="/img/about-us-burgas.webp" alt="הים השחור בחוף בורגס" loading="lazy")
                     .col-12.col-sm-4.my-4
                         button.btn-cta-white.to-about-btn הכירו את הצוות                   
 
@@ -59,46 +62,52 @@ block content
                 div.mainpage-howitworks-maintext דירה בולגרית מלווה באופן אישי ופרטני את לקוחותיה לאורך כל תהליך רכישת הנכס החל משלב החיפוש ועד שלב סגירת העסקה     
             .col-12.col-md-6.col-lg-4.col-xl-6.col.mainpage-howitworks-steps--col
                 div.mainpage-howitworks-icon--background
-                    svg.bi.mainpage-howitworks-icon
+                    svg.bi.mainpage-howitworks-icon(aria-labelledby="howItWorkIconClipboard")
+                        title(id="howItWorkIconClipboard") אייקון של לוח כתיבה עם לב במרכזו
                         use(xlink:href='/img/icons/clipboard.svg#clipboard')
                 div.mainpage-howitworks-headline צרכים והעדפות       
                 div.mainpage-howitworks-text נערוך אתכם פגישת וידאו כדי להבין את הצרכים וההעדפות שלכם       
             .col-12.col-md-6.col-lg-4.col-xl-6.col.mainpage-howitworks-steps--col
                 div.mainpage-howitworks-icon--background
-                    svg.bi.mainpage-howitworks-icon
+                    svg.bi.mainpage-howitworks-icon(aria-labelledby="howItWorkIconBinoculars")
+                        title(id="howItWorkIconBinoculars") אייקון של משקפת
                         use(xlink:href='/img/icons/binoculars.svg#binoculars')
                 div.mainpage-howitworks-headline איתור נכס      
                 div.mainpage-howitworks-text נציג לכם מגוון נכסים לפי הקריטריונים המועדפים עליכם      
             .col-12.col-md-6.col-lg-4.col-xl-6.col.mainpage-howitworks-steps--col
                 div.mainpage-howitworks-icon--background
-                    svg.bi.mainpage-howitworks-icon
+                    svg.bi.mainpage-howitworks-icon(aria-labelledby="howItWorkIconHouse")
+                        title(id="howItWorkIconHouse") אייקון של בית
                         use(xlink:href='/img/icons/house.svg#house')
                 div.mainpage-howitworks-headline סיור נכסים     
                 div.mainpage-howitworks-text נלווה אתכם בשטח לראיית כל הנכסים שמצאו חן בעינייכם      
             .col-12.col-md-6.col-lg-4.col-xl-6.col.mainpage-howitworks-steps--col
                 div.mainpage-howitworks-icon--background
-                    svg.bi.mainpage-howitworks-icon
+                    svg.bi.mainpage-howitworks-icon(aria-labelledby="howItWorkIconSearch")
+                        title(id="howItWorkIconSearch") אייקון של זכוכית מגדלת
                         use(xlink:href='/img/icons/search.svg#search')
                 div.mainpage-howitworks-headline בדיקה משפטית       
                 div.mainpage-howitworks-text נערוך בדיקה משפטית מקיפה של הנכס בעזרת הייעוץ המשפטי שלנו בבולגריה      
             .col-12.col-md-6.col-lg-4.col-xl-6.col.mainpage-howitworks-steps--col
                 div.mainpage-howitworks-icon--background
-                    svg.bi.mainpage-howitworks-icon
+                    svg.bi.mainpage-howitworks-icon(aria-labelledby="howItWorkIconEuro")
+                        title(id="howItWorkIconEuro") אייקון של מטבע היורו
                         use(xlink:href='/img/icons/euro-howitworks.svg#euro-howitworks')
                 div.mainpage-howitworks-headline הצעת מחיר     
                 div.mainpage-howitworks-text נסייע לכם לגבש הצעת מחיר הוגנת עבור הנכס וננהל משא ומתן עם המוכר 
             .col-12.col-md-6.col-lg-4.col-xl-6.col.mainpage-howitworks-steps--col
                 div.mainpage-howitworks-icon--background
-                    img.mainpage-howitworks-icon(src='/img/icons/handshake-svgrepo-com.svg' alt='Handshake Icon') 
+                    img.mainpage-howitworks-icon(src='/img/icons/handshake-svgrepo-com.svg' alt='אייקון של לחיצת ידיים') 
                 div.mainpage-howitworks-headline ליווי      
                 div.mainpage-howitworks-text נלווה אתכם בכל התהליך משלב איתור הנכס ועד לאחר קבלת המפתח   
 
     .container-fluid.mainpage-why-bulgaria-container
         .row.mainpage-why-bulgaria-row.align-items-center.justify-content-center 
             .col.mainpage-why-bulgaria-col
-                div.mainpage-why-bulgaria-bg-video-container
+                div.mainpage-why-bulgaria-bg-video-container(role="img" aria-labelledby="whyBulgariaDescription")
                     video(autoplay muted loop).mainpage-why-bulgaria-bg-video
                         source(src='/videos/burgas-video-1080p.mp4' type='video/mp4')
+                    span.visually-hidden(id="whyBulgariaDescription") וידאו שמראה את העיר בורגס ממבט על
                 div.mainpage-why-bulgaria-text-container.w-75.text-center       
                     div.mainpage-why-bulgaria-tag השקעה          
                     div.mainpage-why-bulgaria-headline(dir='rtl') אז למה בולגריה?
@@ -133,7 +142,7 @@ block content
                         .carousel-item.active.reviews-carousel-item
                             .row.d-flex.justify-content-center.align-items-center
                                 .col-12.col-md-5.col-xl-4
-                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/guyAvitanRec.webp' alt='Image of Guy Avitan the recommender')
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/guyAvitanRec.webp' alt='תמונה של הממליץ גיא אביטן')
                                 .col-md-7.col-xl-8.text-center
                                     div.mainpage-reviews-name(dir='rtl') גיא אביטן
                                     div.mainpage-reviews-prof(dir='rtl') כוחות הביטחון
@@ -141,7 +150,7 @@ block content
                         .carousel-item.reviews-carousel-item
                             .row.d-flex.justify-content-center.align-items-center
                                 .col-12.col-md-5.col-xl-4    
-                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/eliToledoRec.webp' alt='Image of Eli Toledo the recommender')
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/eliToledoRec.webp' alt='תמונה של הממליץ אלי טולדו')
                                 .col-md-7.col-xl-8.text-center
                                     div.mainpage-reviews-name(dir='rtl') אלי טולדו
                                     div.mainpage-reviews-prof(dir='rtl') נהג אוטובוס בדן
@@ -149,7 +158,7 @@ block content
                         .carousel-item.reviews-carousel-item
                             .row.d-flex.justify-content-center.align-items-center
                                 .col-12.col-md-5.col-xl-4      
-                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/avatarImg.jpg' alt='Avatar Image')
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/avatarImg.jpg' alt='תמונת אוואטר אנונימי')
                                 .col-md-7.col-xl-8.text-center
                                     div.mainpage-reviews-name(dir='rtl') זוהר דוד
                                     div.mainpage-reviews-prof(dir='rtl') עורך דין
@@ -157,7 +166,7 @@ block content
                         .carousel-item.reviews-carousel-item
                             .row.d-flex.justify-content-center.align-items-center
                                 .col-12.col-md-5.col-xl-4     
-                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/avatarImg.jpg' alt='Avatar Image')
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/avatarImg.jpg' alt='תמונת אוואטר אנונימי')
                                 .col-md-7.col-xl-8.text-center
                                     div.mainpage-reviews-name(dir='rtl') חיים כלים
                                     div.mainpage-reviews-prof(dir='rtl') כוחות הביטחון
@@ -165,7 +174,7 @@ block content
                         .carousel-item.reviews-carousel-item
                             .row.d-flex.justify-content-center.align-items-center
                                 .col-12.col-md-5.col-xl-4     
-                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/dianGilRec.webp' alt='Avatar Image')
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/dianGilRec.webp' alt='תמונה של הממליצים דיאן וגיל')
                                 .col-md-7.col-xl-8.text-center
                                     div.mainpage-reviews-name(dir='rtl') דיאן וגיל
                                     div.mainpage-reviews-prof(dir='rtl') קיבוץ מגידו
@@ -173,7 +182,7 @@ block content
                         .carousel-item.reviews-carousel-item
                             .row.d-flex.justify-content-center.align-items-center
                                 .col-12.col-md-5.col-xl-4      
-                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/avatarImg.jpg' alt='Avatar Image')
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/avatarImg.jpg' alt='תמונת אוואטר אנונימי')
                                 .col-md-7.col-xl-8.text-center
                                     div.mainpage-reviews-name(dir='rtl') ניסים קסבי
                                     div.mainpage-reviews-prof(dir='rtl') מורה נהיגה
@@ -181,7 +190,7 @@ block content
                         .carousel-item.reviews-carousel-item
                             .row.d-flex.justify-content-center.align-items-center
                                 .col-12.col-md-5.col-xl-4      
-                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/avatarImg.jpg' alt='Avatar Image')
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/avatarImg.jpg' alt='תמונת אוואטר אנונימי')
                                 .col-md-7.col-xl-8.text-center
                                     div.mainpage-reviews-name(dir='rtl') רמי השאול
                                     div.mainpage-reviews-prof(dir='rtl') כוחות הבטחון
@@ -189,7 +198,7 @@ block content
                         .carousel-item.reviews-carousel-item
                             .row.d-flex.justify-content-center.align-items-center
                                 .col-12.col-md-5.col-xl-4      
-                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/raniKurnitzRec.webp' alt='Avatar Image')
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/raniKurnitzRec.webp' alt='תמונה של הממליץ רני קרוצניק')
                                 .col-md-7.col-xl-8.text-center
                                     div.mainpage-reviews-name(dir='rtl') רני קרוצניק
                                     div.mainpage-reviews-prof(dir='rtl') מנהל פרויקטי בינוי
@@ -219,28 +228,28 @@ block content
                                 .col-12.my-5
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3
                                         span.pricing-card-text איתור נכס על פי נתוני ודרישות הלקוח
-                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check Icon') 
+                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='אייקון שלי וי') 
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3       
                                         span.pricing-card-text סיור פיזי או סיור און ליין
-                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check icon')
+                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='אייקון של וי')
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3
                                         span.pricing-card-text בדיקה משפטית של הנכס 
-                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check Icon')
+                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='אייקון שלי וי')
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3    
                                         span.pricing-card-text ליקוט ניירת משפטית של הנכס 
-                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check Icon')
+                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='אייקון שלי וי')
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3  
                                         span.pricing-card-text כתיבת חוזה ראשוני עם עורך דין 
-                                        img.card-icon.pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='check icon')
+                                        img.card-icon.pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='אייקון של איקס')
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3    
                                         span.pricing-card-text כתיבת וחתימת חוזה סופי בלשכת נטוריון
-                                        img.card-icon.pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='check Icon')
+                                        img.card-icon.pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='אייקון שלי איקס')
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3    
                                         span.pricing-card-text ליווי הלקוח בפתיחת חשבון בנק 
-                                        img.card-icon.pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='x Icon')
+                                        img.card-icon.pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='אייקון של איקס')
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3    
                                         span.pricing-card-text השכרת הנכס וניהול הנכס 
-                                        img.card-icon.pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='x Icon')                                      
+                                        img.card-icon.pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='אייקון של איקס')                                      
             .col-12.col-sm-7.col-md-6.col-lg-4.col-xl-4.col-xxl-3.mx-xxl-5
                 .card.pricing-card-plus
                     .card-body
@@ -253,28 +262,28 @@ block content
                                 .col-12.my-5
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3
                                         span.pricing-card-text איתור נכס על פי נתוני ודרישות הלקוח
-                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check Icon') 
+                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='אייקון שלי וי') 
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3       
                                         span.pricing-card-text סיור פיזי או סיור און ליין
-                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check icon')
+                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='אייקון של וי')
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3
                                         span.pricing-card-text בדיקה משפטית של הנכס 
-                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check Icon')
+                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='אייקון שלי וי')
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3    
                                         span.pricing-card-text ליקוט ניירת משפטית של הנכס 
-                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check Icon')
+                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='אייקון שלי וי')
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3  
                                         span.pricing-card-text כתיבת חוזה ראשוני עם עורך דין 
-                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check icon')
+                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='אייקון של וי')
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3    
                                         span.pricing-card-text כתיבת וחתימת חוזה סופי בלשכת נטוריון
-                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check Icon')
+                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='אייקון שלי וי')
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3    
                                         span.pricing-card-text ליווי הלקוח בפתיחת חשבון בנק 
-                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='x Icon')
+                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='אייקון שלי וי')
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3    
                                         span.pricing-card-text השכרת הנכס וניהול הנכס 
-                                        img.card-icon.pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='x Icon')                                    
+                                        img.card-icon.pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='אייקון של איקס')                                    
             .col-12.col-sm-7.col-md-6.col-lg-4.col-xl-4.col-xxl-3.mx-xxl-5
                 .card.pricing-card-premium
                     .card-body
@@ -288,30 +297,30 @@ block content
                                 .col-12.my-5
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3
                                         span.pricing-card-text איתור נכס על פי נתוני ודרישות הלקוח
-                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check Icon') 
+                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='אייקון שלי וי') 
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3       
                                         span.pricing-card-text סיור פיזי או סיור און ליין
-                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check icon')
+                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='אייקון של וי')
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3
                                         span.pricing-card-text בדיקה משפטית של הנכס 
-                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check Icon')
+                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='אייקון שלי וי')
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3    
                                         span.pricing-card-text ליקוט ניירת משפטית של הנכס 
-                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check Icon')
+                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='אייקון שלי וי')
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3  
                                         span.pricing-card-text כתיבת חוזה ראשוני עם עורך דין 
-                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check icon')
+                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='אייקון של וי')
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3    
                                         span.pricing-card-text כתיבת וחתימת חוזה סופי בלשכת נטוריון
-                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='check Icon')
+                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='אייקון שלי וי')
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3    
                                         span.pricing-card-text ליווי הלקוח בפתיחת חשבון בנק 
-                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='x Icon')
+                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='אייקון שלי וי')
                                     div.card-text-container.d-flex.align-content-center.justify-content-end.py-3    
                                         span.pricing-card-text השכרת הנכס וניהול הנכס 
-                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='x Icon')    
+                                        img.card-icon.pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='אייקון שלי וי')    
             .col-12.text-center.py-5    
-                button.btn-cta.pricing-cta-btn.to-calendly-btn צרו קשר 
+                button.btn-cta.pricing-cta-btn.to-calendly-btn(aria-label='מעבר לעמוד יצירת קשר') צרו קשר 
 
     .container-fluid.mainpage-blog-container
         .row.mainpage-blog-headline-row.d-felx.justify-content-center
@@ -326,7 +335,7 @@ block content
                         .container-fluid
                             .row.mainpage-blog-card-body-row.text-center
                                 .col-12
-                                    img.mainpage-blog-icon(src='/img/icons/israel-shekel-currency-symbol-svgrepo-com-white.svg' alt='Israel flag Icon')
+                                    img.mainpage-blog-icon(src='/img/icons/israel-shekel-currency-symbol-svgrepo-com-white.svg' alt='אייקון של דגל ישראל')
                                     .card-title.mainpage-blog-card-title הסיבות לפופולריות של בולגריה בקרב ישראלים
                                 .col-12.my-2
                                     div.d-flex.align-content-center.justify-content-end.py-3 
@@ -339,7 +348,7 @@ block content
                         .container-fluid
                             .row.mainpage-blog-card-body-row.text-center
                                 .col-12
-                                    img.mainpage-blog-icon(src='/img/icons/graph-property-svgrepo-com-white.svg' alt='House Graph Icon')
+                                    img.mainpage-blog-icon(src='/img/icons/graph-property-svgrepo-com-white.svg' alt='אייקון של גרף עם בית בראש כל עמודה')
                                     .card-title.mainpage-blog-card-title ניתוח מחירי הנכסים בבולגריה בשנת 2024
                                 .col-12.my-2
                                     div.d-flex.align-content-center.justify-content-end.py-3 
@@ -352,7 +361,7 @@ block content
                         .container-fluid
                             .row.mainpage-blog-card-body-row.text-center
                                 .col-12.justify-content-center
-                                    img.mainpage-blog-icon(src='/img/icons/mountaint-landscape-svgrepo-com-white.svg' alt='House Graph Icon')
+                                    img.mainpage-blog-icon(src='/img/icons/mountaint-landscape-svgrepo-com-white.svg' alt='אייקון של הרים עם שמש ועננים מעליהם')
                                     .card-title.mainpage-blog-card-title  מבט מקיף על איכות החיים בבולגריה
                                 .col-12.my-2
                                     div.d-flex.align-content-center.justify-content-end.py-3 
@@ -365,7 +374,7 @@ block content
                         .container-fluid
                             .row.mainpage-blog-card-body-row.text-center
                                 .col-12.justify-content-center
-                                    img.mainpage-blog-icon(src='/img/icons/house-thumbs-up-svgrepo-com-white.svg' alt='House with thumbs up Icon')
+                                    img.mainpage-blog-icon(src='/img/icons/house-thumbs-up-svgrepo-com-white.svg' alt='אייקון של בית עם יד שעושה לייק בתוכו')
                                     .card-title.mainpage-blog-card-title(dir="rtl") באיזה סוג נכס כדאי להשקיע בבולגריה?
                                 .col-12.my-2
                                     div.d-flex.align-content-center.justify-content-end.py-3 
@@ -394,16 +403,16 @@ block content
                         input(type='text' style='display:none;' name='returnURL' value='https://www.dirabulgarit.com/contact-us-confirm')
                         .row.contact-us-row.align-items-center
                             .col-12.contact-us-col.d-flex.justify-content-end
-                                input.contact-us-input.contact-us-name-input.form-control(type='text' name='Last Name' maxlength='200' placeholder='שם' aria-label='name' aria-describedby='basic-addon1' required)                            
+                                input.contact-us-input.contact-us-name-input.form-control(type='text' name='Last Name' maxlength='200' placeholder='שם' aria-label='שם' aria-describedby='basic-addon1' required)                            
                                 .invalid-tooltip אנא הכניסו שם
                             .col-12.contact-us-col.d-flex.justify-content-end
-                                input.contact-us-input.contact-us-phone-input.form-control(type='text' name='Phone' maxlength='10' placeholder='טלפון' aria-label='phone' aria-describedby='basic-addon1' pattern='[0-9]{10}' required)
+                                input.contact-us-input.contact-us-phone-input.form-control(type='text' name='Phone' maxlength='10' placeholder='טלפון' aria-label='טלפון' aria-describedby='basic-addon1' pattern='[0-9]{10}' required)
                                 .invalid-tooltip.contact-us-phone-invalid אנא הכניסו מספר טלפון תקין
                             .col-12.contact-us-col.d-flex.justify-content-end 
-                                input.contact-us-input.contact-us-email-input.form-control(type='email' ftype='email' autocomplete='false' name='Email' crmlabel='' maxlength='100' placeholder='אימייל  ' aria-label='email' aria-describedby='basic-addon1' pattern='[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}' required)
+                                input.contact-us-input.contact-us-email-input.form-control(type='email' ftype='email' autocomplete='false' name='Email' crmlabel='' maxlength='100' placeholder='אימייל  ' aria-label='אימייל' aria-describedby='basic-addon1' pattern='[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}' required)
                                 .invalid-tooltip.contact-us-email-invalid אנא הכניסו אימייל תקין
                             .col-12.contact-us-col.d-flex.justify-content-end     
-                                textarea.contact-us-textarea.contact-us-description-input.form-control(id='Description' name='Description' dir='rtl' aria-label="With textarea" rows="5" placeholder='יש עוד משהו שהייתם רוצים שנדע?')
+                                textarea.contact-us-textarea.contact-us-description-input.form-control(id='Description' name='Description' dir='rtl' aria-label="תיאור הבקשה" rows="5" placeholder='יש עוד משהו שהייתם רוצים שנדע?')
                             .col-12.contact-us-col
                                 input.contact-us-button.mx-3(type='reset' class='zcwf_button' name='reset' value='ניקוי' title='Reset')        
                                 input.contact-us-button.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='שליחה' title='Submit')

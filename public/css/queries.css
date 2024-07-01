@@ -295,6 +295,8 @@
   }
   .mainpage-hot-assets-row,
   .asset-related-assets-row {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
   }
   .mainpage-hot-assets-tag {
@@ -384,6 +386,9 @@
   .asset-details-description-middleViewport-col,
   .asset-btn-middleViewport-container {
     display: block;
+  }
+  .asset-video {
+    height: 30rem;
   }
   .about-partners-card {
     height: 57rem !important;
@@ -645,6 +650,9 @@
     background-color: rgba(255, 255, 255, 0.488) !important;
     padding: 0.8rem !important;
   }
+  .asset-video {
+    height: 35rem;
+  }
   .qanda-headline-img,
   .invest-headline-img,
   .about-headline-img {
@@ -814,6 +822,8 @@
   }
   .projects-dropdown-btn::after {
     vertical-align: 0.2rem !important;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
     transform: rotate(90deg);
   }
   .assets-catalog-dropdown-item:hover,
@@ -1068,6 +1078,9 @@
   .carousel-control-prev,
   .carousel-control-next {
     margin: 0 2rem;
+  }
+  .asset-video {
+    height: 40rem;
   }
   .about-partners-card {
     height: 58rem !important;

@@ -173,6 +173,15 @@ body {
   }
 }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -292,6 +301,18 @@ body {
   width: 2.5rem;
 }
 
+// Visually hidden for screen readers
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 // ***** Whatsapp Widget *****
 .whatsapp-widget {
   height: 4rem;
@@ -307,9 +328,9 @@ body {
 // ***** Hero *****
 
 .hero-container {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.4)), to(rgba(26, 113, 212, 0.4))), url('/img/hero-burgas.webp');
-  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.4), rgba(26, 113, 212, 0.4)), url('/img/hero-burgas.webp');
-  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.4), rgba(26, 113, 212, 0.4)), url('/img/hero-burgas.webp');
+  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.6), rgba(26, 113, 212, 0.6)), url('/img/hero-burgas.webp');
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.6)), to(rgba(26, 113, 212, 0.6))), url('/img/hero-burgas.webp');
+  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.6), rgba(26, 113, 212, 0.6)), url('/img/hero-burgas.webp');
   background-size: cover;
   background-position: top;
   position: relative;
@@ -578,10 +599,10 @@ input[type='text']::placeholder {
 // ***** Main Page About Us *****
 
 .mainpage-about-container {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.4)), to(rgba(26, 113, 212, 0.4))),
+  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.6), rgba(26, 113, 212, 0.6)), url('/img/about-us-sozopol.webp');
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.6)), to(rgba(26, 113, 212, 0.6))),
     url('/img/about-us-sozopol.webp');
-  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.4), rgba(26, 113, 212, 0.4)), url('/img/about-us-sozopol.webp');
-  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.4), rgba(26, 113, 212, 0.4)), url('/img/about-us-sozopol.webp');
+  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.6), rgba(26, 113, 212, 0.6)), url('/img/about-us-sozopol.webp');
   background-size: cover;
   background-position: top;
   position: relative;
@@ -589,7 +610,6 @@ input[type='text']::placeholder {
   -webkit-clip-path: polygon(0 7%, 100% 0, 100% 90%, 0 97%);
   clip-path: polygon(0 7%, 100% 0, 100% 90%, 0 97%);
 }
-//polygon(0 0, 100% 0, 100% 90%, 0 100%);
 
 .mainpage-about-text-col {
   position: absolute;
@@ -651,6 +671,7 @@ input[type='text']::placeholder {
 .mainpage-about-img:hover {
   outline: 1rem solid $bg-color-primary;
   -webkit-transform: scale(1.05) translateY(-0.5rem);
+  -ms-transform: scale(1.05) translateY(-0.5rem);
   transform: scale(1.05) translateY(-0.5rem);
   -webkit-box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
   box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);

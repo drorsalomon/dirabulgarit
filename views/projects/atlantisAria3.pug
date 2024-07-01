@@ -2,7 +2,8 @@ extends ../base
 
 block content 
 
-    .container-fluid.project-main-image-container
+    .container-fluid.project-main-image-container(role="img" aria-labelledby="aa3MainImageDescription")
+        span.visually-hidden(id="aa3MainImageDescription") תמונה של בנייני המגורים בפרויקט אטלאנטיס אריה 3
         .row.project-main-image-row
             .col.project-main-image-col.project-main-image-col-atlantis-aria-3 
                 h1.project-main-image-headline.project-main-image-headline-atlantis-aria-3 Atlantis Aria 3       
@@ -13,17 +14,17 @@ block content
                 div.project-gallery-headline גלריה
         .row.project-gallery-row.text-center.mx-2
             .col-12.col-sm-6.col-md-4.project-gallery-col 
-                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144867-atlantis-aria-3-1.webp' alt='Atlantis Aria 3 image' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144867-atlantis-aria-3-1.webp' alt='תמונה של הפרויקט אטלאנטיס אריה 3' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
             .col-12.col-sm-6.col-md-4.project-gallery-col 
-                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144871-atlantis-aria-3-2.webp' alt='Atlantis Aria 3 image' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144871-atlantis-aria-3-2.webp' alt='תמונה של הפרויקט אטלאנטיס אריה 3' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
             .col-12.col-sm-6.col-md-4.project-gallery-col 
-                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982803-atlantis-aria-3-10.webp' alt='Atlantis Aria 3 image' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")  
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982803-atlantis-aria-3-10.webp' alt='תמונה של הפרויקט אטלאנטיס אריה 3' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")  
             .col-12.col-sm-6.col-md-4.project-gallery-col 
-                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718792648416-atlantis-aria-3-5.webp' alt='Atlantis Aria 3 image' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718792648416-atlantis-aria-3-5.webp' alt='תמונה של הפרויקט אטלאנטיס אריה 3' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
             .col-12.col-sm-6.col-md-4.project-gallery-col 
-                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718792648421-atlantis-aria-3-6.webp' alt='Atlantis Aria 3 image' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718792648421-atlantis-aria-3-6.webp' alt='תמונה של הפרויקט אטלאנטיס אריה 3' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
             .col-12.col-sm-6.col-md-4.project-gallery-col 
-                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144895-atlantis-aria-3-3.webp' alt='Atlantis Aria 3 image' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144895-atlantis-aria-3-3.webp' alt='תמונה של הפרויקט אטלאנטיס אריה 3' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
 
     #projectModal.modal.fade.asset-gallery-modal.text-center(tabindex='-1' aria-labelledby='projectModalLabel' aria-hidden='true')
         .modal-dialog.modal-dialog-centered
@@ -38,37 +39,37 @@ block content
                 #projectCarousel.carousel.slide(data-bs-touch='true' data-bs-interval='30000' data-bs-ride='carousel')
                     .carousel-inner.asset-modal-carousel-inner
                         .carousel-item.asset-gallery-carousel-item.align-content-center.active
-                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144867-atlantis-aria-3-1.webp' alt='Atlantis Aria 3') 
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144867-atlantis-aria-3-1.webp' alt='תמונה של הפרויקט אטלנטיס אריה 3') 
                         .carousel-item.asset-gallery-carousel-item.align-content-center
-                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144871-atlantis-aria-3-2.webp' alt='Atlantis Aria 3') 
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144871-atlantis-aria-3-2.webp' alt='תמונה של הפרויקט אטלנטיס אריה 3') 
                         .carousel-item.asset-gallery-carousel-item.align-content-center
-                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144895-atlantis-aria-3-3.webp' alt='Atlantis Aria 3') 
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144895-atlantis-aria-3-3.webp' alt='תמונה של הפרויקט אטלנטיס אריה 3') 
                         .carousel-item.asset-gallery-carousel-item.align-content-center
-                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144903-atlantis-aria-3-4.webp' alt='Atlantis Aria 3') 
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144903-atlantis-aria-3-4.webp' alt='תמונה של הפרויקט אטלנטיס אריה 3') 
                         .carousel-item.asset-gallery-carousel-item.align-content-center
-                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718792648416-atlantis-aria-3-5.webp' alt='Atlantis Aria 3') 
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718792648416-atlantis-aria-3-5.webp' alt='תמונה של הפרויקט אטלנטיס אריה 3') 
                         .carousel-item.asset-gallery-carousel-item.align-content-center
-                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718792648421-atlantis-aria-3-6.webp' alt='Atlantis Aria 3') 
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718792648421-atlantis-aria-3-6.webp' alt='תמונה של הפרויקט אטלנטיס אריה 3') 
                         .carousel-item.asset-gallery-carousel-item.align-content-center
-                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982770-atlantis-aria-3-7.webp' alt='Atlantis Aria 3') 
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982770-atlantis-aria-3-7.webp' alt='תמונה של הפרויקט אטלנטיס אריה 3') 
                         .carousel-item.asset-gallery-carousel-item.align-content-center
-                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982775-atlantis-aria-3-8.webp' alt='Atlantis Aria 3') 
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982775-atlantis-aria-3-8.webp' alt='תמונה של הפרויקט אטלנטיס אריה 3') 
                         .carousel-item.asset-gallery-carousel-item.align-content-center
-                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982795-atlantis-aria-3-9.webp' alt='Atlantis Aria 3') 
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982795-atlantis-aria-3-9.webp' alt='תמונה של הפרויקט אטלנטיס אריה 3') 
                         .carousel-item.asset-gallery-carousel-item.align-content-center
-                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982803-atlantis-aria-3-10.webp' alt='Atlantis Aria 3') 
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982803-atlantis-aria-3-10.webp' alt='תמונה של הפרויקט אטלנטיס אריה 3') 
                         .carousel-item.asset-gallery-carousel-item.align-content-center
-                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982809-atlantis-aria-3-11.webp' alt='Atlantis Aria 3') 
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982809-atlantis-aria-3-11.webp' alt='תמונה של הפרויקט אטלנטיס אריה 3') 
                         .carousel-item.asset-gallery-carousel-item.align-content-center
-                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982812-atlantis-aria-3-12.webp' alt='Atlantis Aria 3') 
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982812-atlantis-aria-3-12.webp' alt='תמונה של הפרויקט אטלנטיס אריה 3') 
                         .carousel-item.asset-gallery-carousel-item.align-content-center
-                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982818-atlantis-aria-3-13.webp' alt='Atlantis Aria 3') 
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982818-atlantis-aria-3-13.webp' alt='תמונה של הפרויקט אטלנטיס אריה 3') 
                         .carousel-item.asset-gallery-carousel-item.align-content-center
-                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144908-atlantis-aria-3-building-A-garden-floor-plan.webp' alt='Atlantis Aria 3') 
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144908-atlantis-aria-3-building-A-garden-floor-plan.webp' alt='תמונה של הפרויקט אטלנטיס אריה 3') 
                         .carousel-item.asset-gallery-carousel-item.align-content-center
-                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144917-atlantis-aria-3-building-A-middle-floor-plan.webp' alt='Atlantis Aria 3') 
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144917-atlantis-aria-3-building-A-middle-floor-plan.webp' alt='תמונה של הפרויקט אטלנטיס אריה 3') 
                         .carousel-item.asset-gallery-carousel-item.align-content-center
-                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144921-atlantis-aria-3-building-A-penthouse-floor-plan.webp' alt='Atlantis Aria 3') 
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144921-atlantis-aria-3-building-A-penthouse-floor-plan.webp' alt='תמונה של הפרויקט אטלנטיס אריה 3') 
                     button.carousel-control-prev(type='button' data-bs-target='#projectCarousel' data-bs-slide='prev')
                         div.carousel-icon-container.d-flex.align-content-center.justify-content-center
                             span.carousel-control-prev-icon.asset-gallery-carousel-prev-icon(aria-hidden='true')
@@ -116,7 +117,7 @@ block content
                 div.project-details-text(dir='rtl') כחלק מתכנון הרובע כשילוב של בנייני מגורים מודרניים וכמו כן שמורה על הטבע, הולך להיבנות פראק רחב וירוק בגודל של כ50 דונמים.
                 div.project-details-text(dir='rtl') הרובע מתוכנן להיות מאוכלס בעיקרו על ידי משפחות צעירות ולכן יהיה ניתן למצוא בו גני ילדים, פארקים עם מתקני שעשועים וכמו כן אזורים יעודיים לפיקניקים ועל האש.
                 div.project-detail-img-container.d-flex.justify-content-center   
-                    img.project-details-img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982826-atlantis-aria-3-horizont.webp' alt='Horizont neighborhood in burgas')
+                    img.project-details-img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982826-atlantis-aria-3-horizont.webp' alt='תרשים גיאוגרפי של רובע הוריזונט בבורגס בולגריה')
                 div.project-details-text.text-center(dir='rtl') <i>רובע הוריזונט</i>
                 div.project-details-sub-headline(dir='rtl') מאפייני הבניינים
                 div.project-details-text(dir='rtl') גובה הדירות בפרויקט יהיה 2.7 מ'. כל הדירות יצוידו בלוחות חשמל, מתגים ושקעים, מדי מים עם קריאה אפשרות מרחוק, סיפונים ודלתות כניסה ממתכת.     
@@ -134,34 +135,35 @@ block content
                 div.project-amenities-headline שירותים בפרויקט
         .row.project-amenities-row.text-end.mx-5
             .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
-                img.project-amenities-icon(src='/img/icons/atlantis-fence.svg' alt='Fence Icon')
+                img.project-amenities-icon(src='/img/icons/atlantis-fence.svg' alt='אייקון של גדר')
                 div.project-amenities-text דירות גן עם חצר פרטית
             .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
-                img.project-amenities-icon(src='/img/icons/atlantis-car.svg' alt='Car Icon')
+                img.project-amenities-icon(src='/img/icons/atlantis-car.svg' alt='אייקון של רכב חונה עם גגון מעליו')
                 div.project-amenities-text חניות מקורות
             .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
-                img.project-amenities-icon(src='/img/icons/atlantis-leaf.svg' alt='Leaf Icon')
+                img.project-amenities-icon(src='/img/icons/atlantis-leaf.svg' alt='אייקון של עלה')
                 div.project-amenities-text אזורי טבע ירוקים
             .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
-                img.project-amenities-icon(src='/img/icons/atlantis-nfc.svg' alt='NFC Icon')
+                img.project-amenities-icon(src='/img/icons/atlantis-nfc.svg' alt='אייקון של צ\יפ nfc')
                 div.project-amenities-text(dir='rtl') בקרת כניסה לבניין עם NFC
             .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
-                img.project-amenities-icon(src='/img/icons/atlantis-parking.svg' alt='Parking Icon')
+                img.project-amenities-icon(src='/img/icons/atlantis-parking.svg' alt='אייקון חניה')
                 div.project-amenities-text חניות פרטיות
             .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
-                img.project-amenities-icon(src='/img/icons/atlantis-camera.svg' alt='CCTV Icon')
+                img.project-amenities-icon(src='/img/icons/atlantis-camera.svg' alt='אייקון של מצלמות אבטחה')
                 div.project-amenities-text מצלמות אבטחה מסביב לשעון
             .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
-                img.project-amenities-icon(src='/img/icons/atlantis-bbq.svg' alt='bbq Icon')
+                img.project-amenities-icon(src='/img/icons/atlantis-bbq.svg' alt='אייקון של מנגל')
                 div.project-amenities-text אזורי מנגל ופיקניק         
             .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
-                img.project-amenities-icon(src='/img/icons/atlantis-yoga.svg' alt='Yoga Icon')
+                img.project-amenities-icon(src='/img/icons/atlantis-yoga.svg' alt='אייקון של אישה עושה יוגה')
                 div.project-amenities-text מתחמי יוגה           
             .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
-                img.project-amenities-icon(src='/img/icons/atlantis-workout.svg' alt='Dumbell Icon')
+                img.project-amenities-icon(src='/img/icons/atlantis-workout.svg' alt='אייקון של משקולת')
                 div.project-amenities-text מתחמי כושר             
 
-    .container-fluid.project-mid-image-container.project-mid-image-container-atlantis-aria-3
+    .container-fluid.project-mid-image-container.project-mid-image-container-atlantis-aria-3(role="img" aria-labelledby="aa3MidImageDescription")
+        span.visually-hidden(id="aa3MidImageDescription") תמונה של פרויקט המגורים אטלאנטיס אריה 3
     
     .container-fluid.project-map-container
         .row.project-map-row.text-center.mx-2.justify-content-center 
@@ -228,16 +230,16 @@ block content
                         input(type='text' style='display:none;' name='returnURL' value='https://www.dirabulgarit.com/contact-us-confirm')
                         .row.contact-us-row.align-items-center
                             .col-12.contact-us-col.d-flex.justify-content-end
-                                input.contact-us-input.contact-us-name-input.form-control(type='text' name='Last Name' maxlength='200' placeholder='שם' aria-label='name' aria-describedby='basic-addon1' required)                            
+                                input.contact-us-input.contact-us-name-input.form-control(type='text' name='Last Name' maxlength='200' placeholder='שם' aria-label='שם' aria-describedby='basic-addon1' required)                            
                                 .invalid-tooltip אנא הכניסו שם
                             .col-12.contact-us-col.d-flex.justify-content-end
-                                input.contact-us-input.contact-us-phone-input.form-control(type='text' name='Phone' maxlength='10' placeholder='טלפון' aria-label='phone' aria-describedby='basic-addon1' pattern='[0-9]{10}' required)
+                                input.contact-us-input.contact-us-phone-input.form-control(type='text' name='Phone' maxlength='10' placeholder='טלפון' aria-label='טלפון' aria-describedby='basic-addon1' pattern='[0-9]{10}' required)
                                 .invalid-tooltip.contact-us-phone-invalid אנא הכניסו מספר טלפון תקין
                             .col-12.contact-us-col.d-flex.justify-content-end 
-                                input.contact-us-input.contact-us-email-input.form-control(type='email' ftype='email' autocomplete='false' name='Email' crmlabel='' maxlength='100' placeholder='אימייל  ' aria-label='email' aria-describedby='basic-addon1' pattern='[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}' required)
+                                input.contact-us-input.contact-us-email-input.form-control(type='email' ftype='email' autocomplete='false' name='Email' crmlabel='' maxlength='100' placeholder='אימייל  ' aria-label='אימייל' aria-describedby='basic-addon1' pattern='[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}' required)
                                 .invalid-tooltip.contact-us-email-invalid אנא הכניסו אימייל תקין
                             .col-12.contact-us-col.d-flex.justify-content-end     
-                                textarea.contact-us-textarea.contact-us-description-input.form-control(id='Description' name='Description' dir='rtl' aria-label="With textarea" rows="5") הייתי רוצה לשמוע עוד פרטים על פרויקט "Atlantis Aria 3"
+                                textarea.contact-us-textarea.contact-us-description-input.form-control(id='Description' name='Description' dir='rtl' aria-label="תיאור הבקשה" rows="5") הייתי רוצה לשמוע עוד פרטים על פרויקט "Atlantis Aria 3"
                             .col-12.contact-us-col
                                 input.contact-us-button.mx-3(type='reset' class='zcwf_button' name='reset' value='ניקוי' title='Reset')
                                 input.contact-us-button.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='שליחה' title='Submit')

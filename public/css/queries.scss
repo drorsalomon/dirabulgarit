@@ -393,6 +393,8 @@
 
   .mainpage-hot-assets-row,
   .asset-related-assets-row {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
   }
   .mainpage-hot-assets-tag {
@@ -510,6 +512,10 @@
   .asset-details-description-middleViewport-col,
   .asset-btn-middleViewport-container {
     display: block;
+  }
+
+  .asset-video {
+    height: 30rem;
   }
 
   // ***** About *****
@@ -818,6 +824,10 @@
     padding: 0.8rem !important;
   }
 
+  .asset-video {
+    height: 35rem;
+  }
+
   // ***** Q & A *****
   // ***** Invest *****
   // ***** About *****
@@ -1009,6 +1019,8 @@
 
   .projects-dropdown-btn::after {
     vertical-align: 0.2rem !important;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
     transform: rotate(90deg);
   }
 
@@ -1313,6 +1325,10 @@
   .carousel-control-prev,
   .carousel-control-next {
     margin: 0 2rem;
+  }
+
+  .asset-video {
+    height: 40rem;
   }
 
   // ***** About *****
