@@ -11,11 +11,10 @@ html(lang="he")
                     // HEADER
                     include _header 
                 .col-12.content-col
-                    <div id="whatsapp-widget" class="whatsapp-widget position-fixed bottom-0 start-0">
-                        <a href="https://wa.me/972523111172" target="_blank">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" id="whatsapp-icon">
-                        </a>
-                    </div>    
+                    #whatsapp-widget.whatsapp-widget.position-fixed.start-0
+                        a(href='https://wa.me/972523111172' target='_blank')
+                            img#whatsapp-icon.whatsapp-widget-icon(src='/img/icons/whatsapp-svgrepo-com.svg' alt='WhatsApp')
+
                     // Content
                     block content                   
                 .col-12.footer-col        

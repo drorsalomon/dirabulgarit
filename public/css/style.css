@@ -48,8 +48,7 @@ nav {
 }
 
 .assets-catalog-dropdown-menu,
-.projects-dropdown-menu,
-.commercial-dropdown-menu {
+.projects-dropdown-menu {
   font-size: 1.6rem !important;
   background-color: #2289ff !important;
   border: none !important;
@@ -1021,8 +1020,7 @@ a:hover {
 .project-amenities-headline,
 .project-map-headline,
 .project-assets-headline,
-.project-installment-scheme-headline,
-.project-contact-us-headline {
+.project-installment-scheme-headline {
   font-size: 3.4rem;
   font-weight: 600;
   color: #324762;
@@ -1130,6 +1128,32 @@ a:hover {
 
 .project-contact-us-container {
   margin-bottom: 10rem;
+}
+
+.asset-contact-us-container-fixed {
+  z-index: 99999;
+  padding: 0 !important;
+}
+
+.contact-us-fixed-headline {
+  color: #ffffff;
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.asset-contact-us-fixed-col {
+  background-color: #2289ff;
+  padding: 1rem;
+}
+
+.contact-us-fixed-row {
+  margin-left: 2rem !important;
+  margin-right: 0 !important;
+}
+
+.contact-us-fixed-col {
+  margin-bottom: 1.5rem;
 }
 
 .invest-headline-row {
@@ -2019,12 +2043,17 @@ body {
 .whatsapp-widget {
   height: 4rem;
   width: 4rem;
+  bottom: 22rem;
   z-index: 100;
   margin: 0 0 4rem 0;
 }
 
 .whatsapp-widget a {
   margin-left: 0.3rem;
+}
+
+.whatsapp-widget-icon {
+  height: 5rem;
 }
 
 .hero-container {

@@ -78,8 +78,7 @@
 .project-amenities-headline,
 .project-map-headline,
 .project-assets-headline,
-.project-installment-scheme-headline,
-.project-contact-us-headline {
+.project-installment-scheme-headline {
   font-size: $h3;
   font-weight: 600;
   color: $text-color-tertiary;
@@ -177,4 +176,30 @@
 
 .project-contact-us-container {
   margin-bottom: 10rem;
+}
+
+.asset-contact-us-container-fixed {
+  z-index: 99999;
+  padding: 0 !important;
+}
+
+.contact-us-fixed-headline {
+  color: $bg-color-primary;
+  font-size: $h4;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.asset-contact-us-fixed-col {
+  background-color: $text-color-secondary;
+  padding: 1rem;
+}
+
+.contact-us-fixed-row {
+  margin-left: 2rem !important;
+  margin-right: 0 !important;
+}
+
+.contact-us-fixed-col {
+  margin-bottom: 1.5rem;
 }

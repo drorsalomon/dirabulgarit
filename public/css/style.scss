@@ -317,12 +317,17 @@ body {
 .whatsapp-widget {
   height: 4rem;
   width: 4rem;
+  bottom: 22rem;
   z-index: 100;
   margin: 0 0 4rem 0;
 }
 
 .whatsapp-widget a {
   margin-left: 0.3rem;
+}
+
+.whatsapp-widget-icon {
+  height: 5rem;
 }
 
 // ***** Hero *****
