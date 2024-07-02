@@ -48,7 +48,8 @@ nav {
 }
 
 .assets-catalog-dropdown-menu,
-.projects-dropdown-menu {
+.projects-dropdown-menu,
+.commercial-dropdown-menu {
   font-size: 1.6rem !important;
   background-color: #2289ff !important;
   border: none !important;
