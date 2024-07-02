@@ -1154,3 +1154,36 @@ input[type='text']::placeholder {
   border-radius: 2rem;
   padding-top: 5rem;
 }
+
+.contact-us-fixed-col {
+  background-color: $text-color-tertiary;
+  padding: 1rem;
+}
+
+.contact-us-fixed-row {
+  margin-left: 2rem !important;
+  margin-right: 0 !important;
+}
+
+.contact-us-fixed-headline {
+  color: $bg-color-primary;
+  font-size: $h7;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.contact-us-input-fixed-col {
+  margin-bottom: 1.5rem;
+}
+
+.contact-us-button-fixed {
+  font-weight: 600;
+  width: 20rem !important;
+  height: 4rem !important;
+  background-color: $bg-color-primary;
+  color: $text-color-tertiary;
+  border: none;
+  border-radius: 1rem;
+  -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+}

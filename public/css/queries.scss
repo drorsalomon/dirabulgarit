@@ -55,6 +55,10 @@
     top: 182%;
   }
 
+  .contact-us-fixed-headline {
+    font-size: $h6;
+  }
+
   // ***** Footer *****
   .footer-icon {
     display: inline;
@@ -225,6 +229,10 @@
 
   .calendly-inline-widget {
     width: 40rem;
+  }
+
+  .contact-us-fixed-headline {
+    font-size: $h5;
   }
 
   // ***** Pricing *****
@@ -485,6 +493,18 @@
 
   .calendly-inline-widget {
     width: 55rem;
+  }
+
+  .contact-us-fixed-bottom-col {
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-us-fixed-headline {
+    font-size: $h4;
+  }
+
+  .contact-us-button-fixed {
+    width: 15rem !important;
   }
 
   // ***** Asset *****
@@ -870,6 +890,17 @@
     top: 210%;
   }
 
+  .contact-us-button-fixed {
+    width: 13rem !important;
+    -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .contact-us-button-fixed:hover {
+    filter: brightness(90%);
+  }
+
   // ***** Pricing *****
   .pricing-card-basic,
   .pricing-card-plus,
@@ -1177,6 +1208,10 @@
     top: 205%;
   }
 
+  .contact-us-button-fixed {
+    width: 17rem !important;
+  }
+
   // ***** Error *****
   .error-btn:hover {
     -webkit-transform: none !important;
@@ -1338,6 +1373,11 @@
   // ***** Pricing *****
   .pricing-premium-badge {
     width: 18rem;
+  }
+
+  // ***** Contact Us *****
+  .contact-us-button-fixed {
+    width: 20rem !important;
   }
 
   // ***** Project *****
