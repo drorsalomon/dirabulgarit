@@ -99,10 +99,8 @@ export const Elements = {
   calendlyAgentsChoices: document.querySelectorAll('.calendly-agents-choice'),
   calendlyWidgetYeheli: document.querySelector('.calendly-widget-yeheli'),
   calendlyWidgetShimon: document.querySelector('.calendly-widget-shimon'),
-  calendlyWidgetOlga: document.querySelector('.calendly-widget-olga'),
   calendlyAgentYeheli: document.querySelector('.calendly-agent-yeheli'),
   calendlyAgentShimon: document.querySelector('.calendly-agent-shimon'),
-  calendlyAgentOlga: document.querySelector('.calendly-agent-olga'),
   // PROJECTS
   projectAssetsContainer: document.querySelector('.project-assets-container'),
   // Atlantis Aria 2

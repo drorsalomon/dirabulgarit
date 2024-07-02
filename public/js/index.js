@@ -524,24 +524,9 @@ if (config.Elements.calendlyAgentsChoices)
 
         config.Elements.calendlyWidgetShimon.style.display = 'none';
         config.Elements.calendlyAgentShimon.classList.remove('search-results-filters-active');
-
-        config.Elements.calendlyWidgetOlga.style.display = 'none';
-        config.Elements.calendlyAgentOlga.classList.remove('search-results-filters-active');
       } else if (el.dataset.agent === 'shimon') {
         config.Elements.calendlyWidgetShimon.style.display = 'block';
         el.classList.add('search-results-filters-active');
-
-        config.Elements.calendlyWidgetYeheli.style.display = 'none';
-        config.Elements.calendlyAgentYeheli.classList.remove('search-results-filters-active');
-
-        config.Elements.calendlyWidgetOlga.style.display = 'none';
-        config.Elements.calendlyAgentOlga.classList.remove('search-results-filters-active');
-      } else if (el.dataset.agent === 'olga') {
-        config.Elements.calendlyWidgetOlga.style.display = 'block';
-        el.classList.add('search-results-filters-active');
-
-        config.Elements.calendlyWidgetShimon.style.display = 'none';
-        config.Elements.calendlyAgentShimon.classList.remove('search-results-filters-active');
 
         config.Elements.calendlyWidgetYeheli.style.display = 'none';
         config.Elements.calendlyAgentYeheli.classList.remove('search-results-filters-active');
