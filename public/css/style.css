@@ -1126,15 +1126,6 @@ a:hover {
   padding: 2rem 1rem 2rem 1rem;
 }
 
-.project-contact-us-container {
-  margin-bottom: 10rem;
-}
-
-.asset-contact-us-container-fixed {
-  z-index: 99999;
-  padding: 0 !important;
-}
-
 .invest-headline-row {
   margin-bottom: 7rem;
 }
@@ -2843,6 +2834,11 @@ input[type=text]::placeholder {
   background-color: #2289ff;
   border-radius: 2rem;
   padding-top: 5rem;
+}
+
+.asset-contact-us-container-fixed {
+  z-index: 100;
+  padding: 0 !important;
 }
 
 .contact-us-fixed-col {

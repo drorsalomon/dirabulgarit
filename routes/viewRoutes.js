@@ -10,7 +10,7 @@ router.get('/q&a', viewsController.getQAndA);
 router.get('/invest', viewsController.getInvest);
 router.get('/about', viewsController.getAbout);
 router.get('/blog', viewsController.getBlog);
-router.get('/calendly', viewsController.getCalendly);
+router.get('/contact-us', viewsController.getContactUs);
 router.get('/contact-us-confirm', viewsController.getContactUsConfirm);
 router.get('/pricing', viewsController.getPricing);
 router.get('/privacy', viewsController.getPrivacy);

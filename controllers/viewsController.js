@@ -52,8 +52,8 @@ exports.getBlog = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.getCalendly = (req, res) => {
-  res.status(200).render('calendly');
+exports.getContactUs = (req, res) => {
+  res.status(200).render('contactUs');
 };
 exports.getContactUsConfirm = (req, res) => {
   res.status(200).render('contactUsConfirm');

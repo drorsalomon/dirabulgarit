@@ -10,7 +10,7 @@
 @import 'about';
 @import 'blog';
 @import 'blogContent';
-@import 'calendly';
+@import 'contactUs';
 @import 'contactUsConfirm';
 @import 'pricing';
 @import 'favoriteAssets';
@@ -1153,6 +1153,11 @@ input[type='text']::placeholder {
   background-color: $text-color-secondary;
   border-radius: 2rem;
   padding-top: 5rem;
+}
+
+.asset-contact-us-container-fixed {
+  z-index: 100;
+  padding: 0 !important;
 }
 
 .contact-us-fixed-col {

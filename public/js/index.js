@@ -236,7 +236,7 @@ if (config.Elements.shareBtnWhite)
 if (config.Elements.toCalendlyBtn)
   config.Elements.toCalendlyBtn.forEach((el) => {
     el.addEventListener('click', function (e) {
-      window.location.pathname = '/calendly';
+      window.location.pathname = '/contact-us';
     });
   });
 
