@@ -14,6 +14,7 @@ router.get('/contact-us', viewsController.getContactUs);
 router.get('/contact-us-confirm', viewsController.getContactUsConfirm);
 router.get('/pricing', viewsController.getPricing);
 router.get('/privacy', viewsController.getPrivacy);
+router.get('/accessibility', viewsController.getAccessibility);
 router.get('/terms-of-service', viewsController.getTermsOfService);
 router.get('/site-map', viewsController.getSiteMap);
 

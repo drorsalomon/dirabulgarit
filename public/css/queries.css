@@ -49,6 +49,9 @@
   }
 }
 @media only screen and (min-width: 576px) {
+  #enable-toolbar-trigger {
+    bottom: 64rem !important;
+  }
   .hero-container {
     height: 60rem;
   }
@@ -227,6 +230,9 @@
   }
 }
 @media only screen and (min-width: 768px) {
+  #enable-toolbar-trigger {
+    top: -19rem !important;
+  }
   .whatsapp-widget {
     bottom: 17rem;
   }

@@ -194,7 +194,7 @@ block content
     .container-fluid.asset-amenities-container.py-xxl-5
         .row.asset-amenities-row.mx-4.justify-content-center 
             .col-10.asset-amenities-headline-col
-                div.asset-amenities-headline שירותים נוספים
+                h2.asset-amenities-headline שירותים נוספים
             .col-10.asset-amenities-col
                 .row.asset-amenities-details-row.flex-md-row-reverse
                     if asset.amenities
@@ -215,7 +215,7 @@ block content
         .container-fluid.asset-map-container.py-xxl-3
             .row.asset-map-row.mx-4.justify-content-center 
                 .col-10.asset-map-healine-col
-                    div.asset-map-headline מיקום
+                    h2.asset-map-headline מיקום
                 .col-12.col-xl-10.asset-map-col
                     div.asset-map(id='map' data-long=`${asset.location.coordinates[0]}` data-lat=`${asset.location.coordinates[1]}` data-title=`${asset.location.title}`)
 
@@ -225,12 +225,12 @@ block content
     .container-fluid.asset-related-assets-container
         .row.asset-related-assets-row.justify-content-center.mx-2
             .col-10.asset-related-assets-headline-col
-                div.asset-related-assets-headline.text-center נכסים מעניינים נוספים
+                h2.asset-related-assets-headline.text-center נכסים מעניינים נוספים
             each asset in hotAssets
                 include _assetsCards
         .row.mobile-asset-related-assets-row.justify-content-center.mx-2
             .col-10.asset-related-assets-headline-col
-                div.asset-related-assets-headline.text-center נכסים מעניינים נוספים
+                h2.asset-related-assets-headline.text-center נכסים מעניינים נוספים
             each asset in hotAssets
                 include _mobileAssetsCards  
 

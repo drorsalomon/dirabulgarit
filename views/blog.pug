@@ -22,7 +22,7 @@ block content
                                 img.blog-card-img.img-fluid(src=`${blog.imgSrc}` alt=`${blog.imgAlt}` loading="lazy")
                             .col-md-8
                                 .card-body
-                                    div.card-title.blog-card-title(dir='rtl')= blog.blogTitle
+                                    h2.card-title.blog-card-title(dir='rtl')= blog.blogTitle
                                     div.blog-card-date= `${moment(blog.date).format('DD.MM.YYYY')}`
                                     div.card-text.blog-card-text(dir='rtl')= blog.sectionOneTexts[0]
                                     div.text-center.py-3

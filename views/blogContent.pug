@@ -16,49 +16,49 @@ block content
                 h1.blog-content-title(dir='rtl')= blog.blogTitle
                 div.blog-content-date(dir='rtl')= `${moment(blog.date).format('DD.MM.YYYY')}`
                 if blog.sectionOneTitle     
-                    div.blog-content-textSectionTitle(dir='rtl')= blog.sectionOneTitle
+                    h2.blog-content-textSectionTitle(dir='rtl')= blog.sectionOneTitle
                 if blog.sectionOneTexts
                     each text in blog.sectionOneTexts
                         div.blog-content-text(dir='rtl')= text
                 div.blog-section-separator        
                 if blog.sectionTwoTitle     
-                    div.blog-content-textSectionTitle(dir='rtl')= blog.sectionTwoTitle
+                    h2.blog-content-textSectionTitle(dir='rtl')= blog.sectionTwoTitle
                 if blog.sectionTwoTexts
                     each text in blog.sectionTwoTexts
                         div.blog-content-text(dir='rtl')= text
                 div.blog-section-separator          
                 if blog.sectionThreeTitle     
-                    div.blog-content-textSectionTitle(dir='rtl')= blog.sectionThreeTitle
+                    h2.blog-content-textSectionTitle(dir='rtl')= blog.sectionThreeTitle
                 if blog.sectionThreeTexts
                     each text in blog.sectionThreeTexts
                         div.blog-content-text(dir='rtl')= text
                 div.blog-section-separator          
                 if blog.sectionFourTitle     
-                    div.blog-content-textSectionTitle(dir='rtl')= blog.sectionFourTitle
+                    h2.blog-content-textSectionTitle(dir='rtl')= blog.sectionFourTitle
                 if blog.sectionFourTexts
                     each text in blog.sectionFourTexts
                         div.blog-content-text(dir='rtl')= text
                 div.blog-section-separator          
                 if blog.sectionFiveTitle     
-                    div.blog-content-textSectionTitle(dir='rtl')= blog.sectionFiveTitle
+                    h2.blog-content-textSectionTitle(dir='rtl')= blog.sectionFiveTitle
                 if blog.sectionFiveTexts
                     each text in blog.sectionFiveTexts
                         div.blog-content-text(dir='rtl')= text
                 div.blog-section-separator          
                 if blog.listOne.listOneTitle
-                    div.blog-content-listTitle(dir='rtl')= blog.listOne.listOneTitle
+                    h2.blog-content-listTitle(dir='rtl')= blog.listOne.listOneTitle
                 if blog.listOne.listOneTexts
                     each text in blog.listOne.listOneTexts  
                         div.blog-content-list-text(dir='rtl')= `● ` + text 
                 div.blog-section-separator          
                 if blog.listTwo.listTwoTitle
-                    div.blog-content-listTitle(dir='rtl')= blog.listTwo.listTwoTitle
+                    h2.blog-content-listTitle(dir='rtl')= blog.listTwo.listTwoTitle
                 if blog.listTwo.listTwoTexts
                     each text in blog.listTwo.listTwoTexts  
                         div.blog-content-list-text(dir='rtl')= `● ` + text 
                 div.blog-section-separator          
                 if blog.listThree.listThreeTitle
-                    div.blog-content-listTitle(dir='rtl')= blog.listThree.listThreeTitle
+                    h2.blog-content-listTitle(dir='rtl')= blog.listThree.listThreeTitle
                 if blog.listThree.listThreeTexts
                     each text in blog.listThree.listThreeTexts  
                         div.blog-content-list-text(dir='rtl')= `● ` + text 

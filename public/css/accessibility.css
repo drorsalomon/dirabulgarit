@@ -1,0 +1,29 @@
+.accessibility-container {
+  margin: 5rem 0;
+}
+
+.accessibility-headline-row {
+  margin-bottom: 3rem;
+}
+
+.accessibility-headline {
+  font-size: 3.4rem;
+  font-weight: 600;
+  color: #324762;
+}
+
+.accessibility-text-headline {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #324762;
+  margin-bottom: 1.5rem;
+}
+
+.accessibility-text {
+  margin-bottom: 1.5rem;
+}
+
+.accessibility-text a {
+  text-decoration: none;
+  color: #2289ff;
+}/*# sourceMappingURL=accessibility.css.map */

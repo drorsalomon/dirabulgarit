@@ -64,6 +64,9 @@ exports.getPricing = (req, res) => {
 exports.getPrivacy = (req, res) => {
   res.status(200).render('privacy');
 };
+exports.getAccessibility = (req, res) => {
+  res.status(200).render('accessibility');
+};
 exports.getTermsOfService = (req, res) => {
   res.status(200).render('termsOfService');
 };

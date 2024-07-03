@@ -16,6 +16,7 @@
 @import 'favoriteAssets';
 @import 'error';
 @import 'privacy';
+@import 'accessibility';
 @import 'termsOfService';
 @import 'siteMap';
 
@@ -317,7 +318,7 @@ body {
 .whatsapp-widget {
   height: 4rem;
   width: 4rem;
-  bottom: 22rem;
+  bottom: 27rem;
   z-index: 100;
   margin: 0 0 4rem 0;
 }

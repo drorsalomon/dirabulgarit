@@ -28,13 +28,13 @@ block content
                     button.btn-cta-white.to-calendly-btn(aria-label='מעבר לעמוד יצירת קשר') צרו קשר          
 
     div.mainpage-search-modal-open-btn-container.text-center
-        div.mainpage-search-headline חיפוש נכס
+        h2.mainpage-search-headline חיפוש נכס
         div.mainpage-search-text לחצו על כפתור החיפוש ומצאו את הנכס שהכי מתאים למבוקשכם
         button.mainpage-search-modal-open-btn(data-bs-toggle="modal" data-bs-target="#searchModal" aria-label='פתיחת תפריט חיפוש נכס') חפשו נכס 
 
     .container.d-flex.justify-content-center
         .mainpage-search-container.w-75   
-            div.mainpage-search-headline.text-center חיפוש נכס
+            h2.mainpage-search-headline.text-center חיפוש נכס
             include _searchForm
 
         include _searchModal       
@@ -43,8 +43,8 @@ block content
         span.visually-hidden(id="aboutUsImageDescription") תמונה של בתים שיושבים על מפרצון בשפת הים השחור בבורגס בולגריה
         .row.mainpage-about-row.align-items-center
             .col-10.col-lg-8.mainpage-about-text-col
-                div.mainpage-about-tag מי אנחנו
-                div.mainpage-about-headline(dir='rtl') דירה בולגרית - נדל"ן ישראלי בבולגריה
+                h2.mainpage-about-tag מי אנחנו
+                h3.mainpage-about-headline(dir='rtl') דירה בולגרית - נדל"ן ישראלי בבולגריה
                 div.mainpage-about-text(dir='rtl') צוות מקצועי עתיר ניסיון ששם לו מטרה אחת - ללוות משקיעים ישראלים בדרך להשקעות מוצלחות בשוק הנדל"ן הבולגרי. נהיה לצדכם משלב ההתעניינות ועד שלב קבלת המפתח.
             .col-10.col-lg-8.mainpage-about-images-col 
                 .row.justify-content-center 
@@ -60,8 +60,8 @@ block content
     .container-fluid.d-flex.mainpage-howitworks-container 
         .row.mainpage-howitworks-row.align-items-center.justify-content-center.flex-lg-row-reverse.flex-md-row-reverse.mx-4
             .col-12.mainpage-howitworks-maintext--col
-                div.mainpage-howitworks-label התהליך
-                div.mainpage-howitworks-mainheadline איך זה עובד     
+                h2.mainpage-howitworks-label התהליך
+                h3.mainpage-howitworks-mainheadline איך זה עובד     
                 div.mainpage-howitworks-maintext דירה בולגרית מלווה באופן אישי ופרטני את לקוחותיה לאורך כל תהליך רכישת הנכס החל משלב החיפוש ועד שלב סגירת העסקה     
             .col-12.col-md-6.col-lg-4.col-xl-6.col.mainpage-howitworks-steps--col
                 div.mainpage-howitworks-icon--background
@@ -112,8 +112,8 @@ block content
                         source(src='/videos/burgas-video-1080p.mp4' type='video/mp4')
                     span.visually-hidden(id="whyBulgariaDescription") וידאו שמראה את העיר בורגס ממבט על
                 div.mainpage-why-bulgaria-text-container.w-75.text-center       
-                    div.mainpage-why-bulgaria-tag השקעה          
-                    div.mainpage-why-bulgaria-headline(dir='rtl') אז למה בולגריה?
+                    h2.mainpage-why-bulgaria-tag השקעה          
+                    h3.mainpage-why-bulgaria-headline(dir='rtl') אז למה בולגריה?
                     div.mainpage-why-bulgaria-text(dir='rtl') הכלכלה הבולגרית נמצאת בצמיחה מתמדת שנובעת מריבוי ההשקעות במדינה ובחברותה באיחוד האירופי. מחירי הנדל"ן במדינה הינם נגישים וישנה תשואה גבוהה על ההשכרה, ביחוד באזורים התיירותיים כמו בורגס ובנסקו. הכנו עבורכם מדריך השקעה מפורט בכדי לעזור לכם בצעדים הראשונים לעבר העסקה הנחשקת.
                 div.invest-guide-btn-container
                     button.invest-guide-btn למדריך ההשקעה
@@ -122,8 +122,8 @@ block content
         .row.mainpage-hot-assets-row.justify-content-center
             .col-12.mainpage-hot-assets-headline-col
                 .row.text-center
-                    div.mainpage-hot-assets-tag מומלץ  
-                    div.mainpage-hot-assets-headline נכסים חמים להשקעה
+                    h2.mainpage-hot-assets-tag מומלץ  
+                    h3.mainpage-hot-assets-headline נכסים חמים להשקעה
             each asset in hotAssets
                 include _assetsCards
         .row.mobile-mainpage-hot-assets-row.justify-content-center.mx-1         
@@ -137,8 +137,8 @@ block content
     .container-fluid.mainpage-rec-container            
         .row.mx-4.justify-content-center
             .col-12.mainpage-rec-maintext-col.text-center
-                div.mainpage-rec-tag המלצות 
-                div.mainpage-rec-headline מה אומרים עלינו
+                h2.mainpage-rec-tag המלצות 
+                h3.mainpage-rec-headline מה אומרים עלינו
             .col-12.col-md-10.reviews-carousel-col           
                 #reviewsCarousel.carousel.slide.text-center.reviews-carousel(data-bs-touch='true' data-bs-interval='15000' data-bs-ride='carousel')
                     .carousel-inner.reviews-carousel-inner
@@ -216,8 +216,8 @@ block content
     .container-fluid.mainpage-pricing-container.justify-content-center              
         .row.mx-4.justify-content-center.mainpage-pricing-headline-row
             .col-12.pricing-maintext-col.text-center
-                div.pricing-tag לבחירתכם 
-                div.mainpage-pricing-headline מחירון חבילות ליווי                        
+                h2.pricing-tag לבחירתכם 
+                h3.mainpage-pricing-headline מחירון חבילות ליווי                        
         .row.justify-content-center.pricing-cards-row.flex-md-row-reverse               
             .col-12.col-sm-7.col-md-6.col-lg-4.col-xl-4.col-xxl-3.mx-xxl-5.p-xxs-0.p-med-1
                 .card.pricing-card-basic
@@ -329,8 +329,8 @@ block content
         .row.mainpage-blog-headline-row.d-felx.justify-content-center
             .col-12.mainpage-blog-headline-col
                 .row.text-center
-                    div.mainpage-blog-tag חשוב לדעת
-                    div.mainpage-blog-headline כתבות נבחרות מהבלוג שלנו
+                    h2.mainpage-blog-tag חשוב לדעת
+                    h3.mainpage-blog-headline כתבות נבחרות מהבלוג שלנו
         .row.mainpage-blog-cards-row.d-felx.justify-content-center.flex-md-row-reverse.mx-4 
             .col-12.col-md-6.col-lg-3
                 .card.mainpage-blog-card.py-3
@@ -393,8 +393,8 @@ block content
         .row.mainpage-contact-us-headline-row.d-felx.justify-content-center
             .col-12.col-md-10.col-xl-8.mainpage-contact-us-headline-col
                 .row.text-center
-                    div.mainpage-contact-us-tag צרו קשר
-                    div.mainpage-contact-us-headline השאירו פרטים ואחד היועצים שלנו יצור עמכם קשר בהקדם
+                    h2.mainpage-contact-us-tag צרו קשר
+                    h3.mainpage-contact-us-headline השאירו פרטים ואחד היועצים שלנו יצור עמכם קשר בהקדם
         .row.mainpage-contact-us-row.d-felx.justify-content-center.mx-4
             .col-12.col-md-10.col-xl-8.mainpage-contact-us-col.text-center 
                 div#crmWebToEntityForm.crmWebToEntityForm

@@ -30,6 +30,7 @@
 .asset-gallery-modal {
   background: rgba(0, 0, 0, 0.83) !important;
   margin: 0;
+  z-index: 2247483648 !important;
 }
 
 .asset-gallery-modal-close-btn {
