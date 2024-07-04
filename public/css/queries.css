@@ -52,6 +52,9 @@
   #enable-toolbar-trigger {
     bottom: 64rem !important;
   }
+  .whatsapp-widget-icon {
+    height: 4rem;
+  }
   .hero-container {
     height: 60rem;
   }

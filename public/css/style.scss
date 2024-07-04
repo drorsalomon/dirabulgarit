@@ -314,6 +314,11 @@ body {
   border: 0;
 }
 
+// ***** Enable Widget *****
+.keyboard-shorcut {
+  display: none !important;
+}
+
 // ***** Whatsapp Widget *****
 .whatsapp-widget {
   height: 4rem;

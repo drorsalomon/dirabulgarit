@@ -2074,6 +2074,10 @@ body {
   border: 0;
 }
 
+.keyboard-shorcut {
+  display: none !important;
+}
+
 .whatsapp-widget {
   height: 4rem;
   width: 4rem;
