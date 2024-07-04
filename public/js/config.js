@@ -118,6 +118,12 @@ export const Elements = {
   aeProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlantis-euphoria'),
   aeProjectAreaNumber: document.querySelector('.project-numbers-area-number-atlantis-euphoria'),
   aeProjectGreenAreaNumber: document.querySelector('.project-numbers-green-area-number-atlantis-euphoria'),
+  // Atlantis Barcode
+  abProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-atlantis-barcode'),
+  abProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-atlantis-barcode'),
+  abProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlantis-barcode'),
+  abProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlantis-barcode'),
+  abProjectAreaNumber: document.querySelector('.project-numbers-area-number-atlantis-barcode'),
 };
 
 export const euroIconSrc = '/img/icons/euro.svg';

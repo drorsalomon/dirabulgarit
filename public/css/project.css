@@ -43,6 +43,17 @@
   height: 60rem;
   width: 100%;
 }
+.project-main-image-col.project-main-image-col-atlantis-barcode {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-images/1716491612432-Two-bedroom-apartment-A43-in-Atlantis-Barcode-2.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60rem;
+  width: 100%;
+}
 
 .project-main-image-headline.project-main-image-headline-atlantis-aria-3 {
   position: absolute;
@@ -56,6 +67,17 @@
   font-size: 4.2rem;
 }
 .project-main-image-headline.project-main-image-headline-atlantis-euphoria {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 4.2rem;
+}
+.project-main-image-headline.project-main-image-headline-atlantis-barcode {
   position: absolute;
   top: 50%;
   left: 40%;
@@ -175,6 +197,17 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 65rem 45rem;
+  height: 60rem;
+  width: 100%;
+}
+.project-mid-image-container.project-mid-image-container-atlantis-barcode {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-images/1720087071323-atlantis-barcode-project-mid-image.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   height: 60rem;
   width: 100%;
 }

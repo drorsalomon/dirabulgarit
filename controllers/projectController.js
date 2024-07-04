@@ -34,3 +34,14 @@ exports.getAtlantisEuphoria = catchAsync(async (req, res) => {
     projectAssets,
   });
 });
+
+exports.getAtlantisBarcode = catchAsync(async (req, res) => {
+  let sortOptions = { price: 1 };
+  const projectAssets = await Asset.find({ project: 'Atlantis Barcode' }).sort(sortOptions);
+  if (!projectAssets) return next(new AppError('Could not find the requested asset!', 404));
+
+  res.status(200).render('projects/atlantisBarcode', {
+    title: 'Atlantis Barcode',
+    projectAssets,
+  });
+});

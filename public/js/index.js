@@ -550,13 +550,19 @@ if (config.Elements.aa3ProjectBuildingsNumber) animation.animateCounter(config.E
 if (config.Elements.aa3ProjectFloorsNumber) animation.animateCounter(config.Elements.aa3ProjectFloorsNumber, 9);
 if (config.Elements.aa3ProjectApartmentsNumber) animation.animateCounter(config.Elements.aa3ProjectApartmentsNumber, 210);
 if (config.Elements.aa3ProjectParkingSpotsNumber) animation.animateCounter(config.Elements.aa3ProjectParkingSpotsNumber, 250);
-// Atlantis euphoria
+// Atlantis Euphoria
 if (config.Elements.aeProjectBuildingsNumber) animation.animateCounter(config.Elements.aeProjectBuildingsNumber, 6);
 if (config.Elements.aeProjectFloorsNumber) animation.animateCounter(config.Elements.aeProjectFloorsNumber, 9);
 if (config.Elements.aeProjectApartmentsNumber) animation.animateCounter(config.Elements.aeProjectApartmentsNumber, 292);
 if (config.Elements.aeProjectParkingSpotsNumber) animation.animateCounter(config.Elements.aeProjectParkingSpotsNumber, 320);
 if (config.Elements.aeProjectAreaNumber) animation.animateCounter(config.Elements.aeProjectAreaNumber, 27955, 'מ"ר');
 if (config.Elements.aeProjectGreenAreaNumber) animation.animateCounter(config.Elements.aeProjectGreenAreaNumber, 5200, 'מ"ר');
+// Atlantis Barcode
+if (config.Elements.abProjectBuildingsNumber) animation.animateCounter(config.Elements.abProjectBuildingsNumber, 2);
+if (config.Elements.abProjectFloorsNumber) animation.animateCounter(config.Elements.abProjectFloorsNumber, 8);
+if (config.Elements.abProjectApartmentsNumber) animation.animateCounter(config.Elements.abProjectApartmentsNumber, 93);
+if (config.Elements.abProjectParkingSpotsNumber) animation.animateCounter(config.Elements.abProjectParkingSpotsNumber, 106);
+if (config.Elements.abProjectAreaNumber) animation.animateCounter(config.Elements.abProjectAreaNumber, 9634, 'מ"ר');
 // Fade in animation
 if (config.Elements.hotAssetsContainer || config.Elements.projectAssetsContainer) {
   animation.animateFadeIn(config.Elements.assetCards);

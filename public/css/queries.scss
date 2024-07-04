@@ -261,6 +261,10 @@
       @include projectHeadline(38%);
       font-size: $h1;
     }
+    &.project-main-image-headline-atlantis-barcode {
+      @include projectHeadline(38%);
+      font-size: $h1;
+    }
   }
 
   .project-gallery-image {
@@ -573,6 +577,9 @@
     }
 
     &.project-main-image-headline-atlantis-euphoria {
+      @include projectHeadline(30%);
+    }
+    &.project-main-image-headline-atlantis-barcode {
       @include projectHeadline(30%);
     }
   }
@@ -941,6 +948,9 @@
     &.project-main-image-headline-atlantis-euphoria {
       @include projectHeadline(23%);
     }
+    &.project-main-image-headline-atlantis-barcode {
+      @include projectHeadline(23%);
+    }
   }
 
   .project-gallery-image {
@@ -1252,6 +1262,10 @@
       @include projectHeadline(37%);
       font-size: $h0;
     }
+    &.project-main-image-headline-atlantis-barcode {
+      @include projectHeadline(37%);
+      font-size: $h0;
+    }
   }
 
   .project-gallery-image {
@@ -1284,6 +1298,13 @@
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/euphoria-images/1719320290027-atlantis-euphoria-middle-image.webp',
         contain,
         45rem
+      );
+    }
+    &.project-mid-image-container-atlantis-barcode {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-images/1720087071323-atlantis-barcode-project-mid-image.webp',
+        120rem 70rem,
+        60rem
       );
     }
   }
@@ -1399,6 +1420,9 @@
     &.project-main-image-headline-atlantis-euphoria {
       @include projectHeadline(33%);
     }
+    &.project-main-image-headline-atlantis-barcode {
+      @include projectHeadline(33%);
+    }
   }
 
   .project-gallery-image {
@@ -1419,6 +1443,13 @@
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/euphoria-images/1719320290027-atlantis-euphoria-middle-image.webp',
         155rem 75rem,
         50rem
+      );
+    }
+    &.project-mid-image-container-atlantis-barcode {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-images/1720087071323-atlantis-barcode-project-mid-image.webp',
+        155rem 80rem,
+        60rem
       );
     }
   }

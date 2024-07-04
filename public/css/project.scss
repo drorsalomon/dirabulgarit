@@ -27,6 +27,11 @@
       'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/euphoria-images/1716710316107-One-bedroom-apartment-with-east-exposure-euphoria-2.webp'
     );
   }
+  &.project-main-image-col-atlantis-barcode {
+    @include projectBackgroundImage(
+      'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-images/1716491612432-Two-bedroom-apartment-A43-in-Atlantis-Barcode-2.png'
+    );
+  }
 }
 
 .project-main-image-headline {
@@ -36,6 +41,10 @@
   }
 
   &.project-main-image-headline-atlantis-euphoria {
+    @include projectHeadline(40%);
+    font-size: $h2;
+  }
+  &.project-main-image-headline-atlantis-barcode {
     @include projectHeadline(40%);
     font-size: $h2;
   }
@@ -138,6 +147,13 @@
     @include projectMiddleImage(
       'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/euphoria-images/1719320290027-atlantis-euphoria-middle-image.webp',
       65rem 45rem,
+      60rem
+    );
+  }
+  &.project-mid-image-container-atlantis-barcode {
+    @include projectMiddleImage(
+      'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-images/1720087071323-atlantis-barcode-project-mid-image.webp',
+      contain,
       60rem
     );
   }
