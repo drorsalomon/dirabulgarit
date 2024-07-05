@@ -319,11 +319,15 @@ body {
   display: none !important;
 }
 
+#enable-toolbar-trigger {
+  display: none;
+}
+
 // ***** Whatsapp Widget *****
 .whatsapp-widget {
+  display: none;
   height: 4rem;
   width: 4rem;
-  bottom: 27rem;
   z-index: 100;
   margin: 0 0 4rem 0;
 }
@@ -333,7 +337,7 @@ body {
 }
 
 .whatsapp-widget-icon {
-  height: 5rem;
+  height: 4rem;
 }
 
 // ***** Hero *****

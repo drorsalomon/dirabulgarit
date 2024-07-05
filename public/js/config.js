@@ -1,4 +1,7 @@
 export const Elements = {
+  // Widgets
+  whatsappWidget: document.querySelector('.whatsapp-widget'),
+  enableWidget: document.getElementById('enable-toolbar-trigger'),
   // Buttons
   toCalendlyBtn: document.querySelectorAll('.to-calendly-btn'),
   ctaBtnWhite: document.querySelectorAll('.btn-cta-white'),
@@ -124,6 +127,13 @@ export const Elements = {
   abProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlantis-barcode'),
   abProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlantis-barcode'),
   abProjectAreaNumber: document.querySelector('.project-numbers-area-number-atlantis-barcode'),
+  // Atlantis L6
+  al6ProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-atlantis-l6'),
+  al6ProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-atlantis-l6'),
+  al6ProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlantis-l6'),
+  al6ProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlantis-l6'),
+  al6ProjectAreaNumber: document.querySelector('.project-numbers-area-number-atlantis-l6'),
+  al6ProjectGreenAreaNumber: document.querySelector('.project-numbers-green-area-number-atlantis-l6'),
 };
 
 export const euroIconSrc = '/img/icons/euro.svg';

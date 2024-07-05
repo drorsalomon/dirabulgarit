@@ -6,6 +6,67 @@ import * as utils from './utils';
 import * as animation from './animation';
 
 window.onload = function () {
+  // Widgets
+  if (config.Elements.whatsappWidget) {
+    const href = window.location.href;
+    const enableWidget = document.getElementById('enable-toolbar-trigger');
+    const enableWidgetIcon = document.getElementById('enable-toolbar-trigger-svg');
+    if (href.includes('asset') || href.includes('project')) {
+      if (window.innerWidth >= 300 && window.innerWidth < 576) {
+        config.Elements.whatsappWidget.style.display = 'block';
+        config.Elements.whatsappWidget.style.bottom = '250px';
+
+        enableWidget.style.display = 'block';
+        enableWidget.style.top = '-230px';
+        enableWidget.style.left = '-3px !important';
+        enableWidgetIcon.style.height = '40px';
+        enableWidgetIcon.style.width = '40px';
+      } else if (window.innerWidth >= 576 && window.innerWidth < 768) {
+        config.Elements.whatsappWidget.style.display = 'block';
+        config.Elements.whatsappWidget.style.bottom = '255px';
+
+        enableWidget.style.display = 'block';
+        enableWidget.style.left = '-3px !important';
+        enableWidgetIcon.style.height = '50px';
+        enableWidgetIcon.style.width = '50px';
+      } else if (window.innerWidth >= 768) {
+        config.Elements.whatsappWidget.style.display = 'block';
+        config.Elements.whatsappWidget.style.bottom = '160px';
+
+        enableWidget.style.display = 'block';
+        enableWidget.style.top = '-145px';
+        enableWidget.style.left = '-3px !important';
+        enableWidgetIcon.style.height = '50px';
+        enableWidgetIcon.style.width = '50px';
+      }
+    } else {
+      if (window.innerWidth >= 300 && window.innerWidth < 576) {
+        config.Elements.whatsappWidget.style.display = 'block';
+        config.Elements.whatsappWidget.style.bottom = '35px';
+
+        enableWidget.style.display = 'block';
+        enableWidget.style.top = '-15px';
+        enableWidgetIcon.style.height = '40px';
+        enableWidgetIcon.style.width = '40px';
+      } else if (window.innerWidth >= 576 && window.innerWidth < 768) {
+        config.Elements.whatsappWidget.style.display = 'block';
+        config.Elements.whatsappWidget.style.bottom = '35px';
+
+        enableWidget.style.display = 'block';
+        enableWidget.style.top = '-15px';
+        enableWidgetIcon.style.height = '50px';
+        enableWidgetIcon.style.width = '50px';
+      } else if (window.innerWidth >= 768) {
+        config.Elements.whatsappWidget.style.display = 'block';
+        config.Elements.whatsappWidget.style.bottom = '35px';
+
+        enableWidget.style.display = 'block';
+        enableWidget.style.top = '-15px';
+        enableWidgetIcon.style.height = '50px';
+        enableWidgetIcon.style.width = '50px';
+      }
+    }
+  }
   // If currency isn't set or currency is Euro
   if (!JSON.parse(localStorage.getItem(config.CURRENCY_KEY)) || JSON.parse(localStorage.getItem(config.CURRENCY_KEY)) === config.DEFAULT_CURRENCY) {
     // Set default currency
@@ -563,6 +624,13 @@ if (config.Elements.abProjectFloorsNumber) animation.animateCounter(config.Eleme
 if (config.Elements.abProjectApartmentsNumber) animation.animateCounter(config.Elements.abProjectApartmentsNumber, 93);
 if (config.Elements.abProjectParkingSpotsNumber) animation.animateCounter(config.Elements.abProjectParkingSpotsNumber, 106);
 if (config.Elements.abProjectAreaNumber) animation.animateCounter(config.Elements.abProjectAreaNumber, 9634, 'מ"ר');
+// Atlantis L6
+if (config.Elements.al6ProjectBuildingsNumber) animation.animateCounter(config.Elements.al6ProjectBuildingsNumber, 3);
+if (config.Elements.al6ProjectFloorsNumber) animation.animateCounter(config.Elements.al6ProjectFloorsNumber, 9);
+if (config.Elements.al6ProjectApartmentsNumber) animation.animateCounter(config.Elements.al6ProjectApartmentsNumber, 183);
+if (config.Elements.al6ProjectParkingSpotsNumber) animation.animateCounter(config.Elements.al6ProjectParkingSpotsNumber, 181);
+if (config.Elements.al6ProjectAreaNumber) animation.animateCounter(config.Elements.al6ProjectAreaNumber, 19063, 'מ"ר');
+if (config.Elements.al6ProjectGreenAreaNumber) animation.animateCounter(config.Elements.al6ProjectGreenAreaNumber, 16187, 'מ"ר');
 // Fade in animation
 if (config.Elements.hotAssetsContainer || config.Elements.projectAssetsContainer) {
   animation.animateFadeIn(config.Elements.assetCards);

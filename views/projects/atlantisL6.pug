@@ -1,0 +1,236 @@
+extends ../base
+
+block head
+    meta(property="og:title" content="Atlantis L6")
+    meta(property="og:description" content="פרויקט אטלאנטיס L6 בסופיה בולגריה")
+    meta(property="og:image" content="https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161868-atlantis-L6-project-6.webp")
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../_headLinksScripts
+
+block content 
+
+    .container-fluid.project-main-image-container(role="img" aria-labelledby="aeMainImageDescription")
+        span.visually-hidden(id="aeMainImageDescription") תמונה של בנייני המגורים בפרויקט אטלאנטיס L6
+        .row.project-main-image-row
+            .col.project-main-image-col.project-main-image-col-atlantis-l6  
+                h1.project-main-image-headline.project-main-image-headline-atlantis-l6 Atlantis L6  
+
+    .container-fluid.project-gallery-container
+        .row.project-gallery-headline-row.text-center.mx-2
+            .col-12.project-gallery-headline-col.p-0    
+                h2.project-gallery-headline גלריה
+        .row.project-gallery-row.text-center.mx-2
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1716468145480-one-bedroom-apartment-A-201-L6-project-1.jpg' alt='תמונה של אטלאנטיס L6' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1716468145487-one-bedroom-apartment-A-201-L6-project-2.jpg' alt='תמונה של אטלאנטיס L6' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1716468145509-one-bedroom-apartment-A-201-L6-project-3.jpg' alt='תמונה של אטלאנטיס L6' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")  
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161885-atlantis-L6-project-9.webp' alt='תמונה של אטלאנטיס L6' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161891-atlantis-L6-project-10.webp' alt='תמונה של אטלאנטיס L6' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161897-atlantis-L6-project-11.webp' alt='תמונה של אטלאנטיס L6' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")   
+
+    #projectModal.modal.fade.asset-gallery-modal.text-center(tabindex='-1' aria-labelledby='projectModalLabel' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered
+            .asset-gallery-modal-content.modal-content
+                .row.d-flex
+                    .col-6.align-content-center
+                        div.text-start.px-4
+                            div.asset-gallery-img-text Atlantis Barcode 
+                    .col-6
+                        div.text-end.p-3
+                            button.btn-close.asset-gallery-modal-close-btn.p-2.my-auto(type='button' data-bs-dismiss='modal' aria-label='Close')
+                #projectCarousel.carousel.slide(data-bs-touch='true' data-bs-interval='30000' data-bs-ride='carousel')
+                    .carousel-inner.asset-modal-carousel-inner
+                        .carousel-item.asset-gallery-carousel-item.align-content-center.active
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1716468145480-one-bedroom-apartment-A-201-L6-project-1.jpg' alt='תמונה של הפרויקט אטלאנטיס L6') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1716468145487-one-bedroom-apartment-A-201-L6-project-2.jpg' alt='תמונה של הפרויקט אטלאנטיס L6') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1716468145509-one-bedroom-apartment-A-201-L6-project-3.jpg' alt='תמונה של הפרויקט אטלאנטיס L6') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1716468145520-one-bedroom-apartment-A-201-L6-project-4.jpg' alt='תמונה של הפרויקט אטלאנטיס L6') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161822-atlantis-L6-project-1.webp' alt='תמונה של הפרויקט אטלאנטיס L6') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161822-atlantis-L6-project-2.webp' alt='תמונה של הפרויקט אטלאנטיס L6') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161843-atlantis-L6-project-3.webp' alt='תמונה של הפרויקט אטלאנטיס L6') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161852-atlantis-L6-project-4.webp' alt='תמונה של הפרויקט אטלאנטיס L6') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161860-atlantis-L6-project-5.webp' alt='תמונה של הפרויקט אטלאנטיס L6') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161868-atlantis-L6-project-6.webp' alt='תמונה של הפרויקט אטלאנטיס L6') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161873-atlantis-L6-project-7.webp' alt='תמונה של הפרויקט אטלאנטיס L6') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161878-atlantis-L6-project-8.webp' alt='תמונה של הפרויקט אטלאנטיס L6') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161885-atlantis-L6-project-9.webp' alt='תמונה של הפרויקט אטלאנטיס L6') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161891-atlantis-L6-project-10.webp' alt='תמונה של הפרויקט אטלאנטיס L6') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161897-atlantis-L6-project-11.webp' alt='תמונה של הפרויקט אטלאנטיס L6') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161903-atlantis-L6-project-12.webp' alt='תמונה של הפרויקט אטלאנטיס L6') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161907-atlantis-L6-project-13.webp' alt='תמונה של הפרויקט אטלאנטיס L6') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161911-atlantis-L6-project-14.webp' alt='תמונה של הפרויקט אטלאנטיס L6') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161916-atlantis-L6-project-15.webp' alt='תמונה של הפרויקט אטלאנטיס L6') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161921-atlantis-L6-project-16.webp' alt='תמונה של הפרויקט אטלאנטיס L6') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161923-atlantis-L6-project-17.webp' alt='תמונה של הפרויקט אטלאנטיס L6') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161927-atlantis-L6-project-18.webp' alt='תמונה של הפרויקט אטלאנטיס L6') 
+                    button.carousel-control-prev(type='button' data-bs-target='#projectCarousel' data-bs-slide='prev')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-prev-icon.asset-gallery-carousel-prev-icon(aria-hidden='true')
+                    button.carousel-control-next(type='button' data-bs-target='#projectCarousel' data-bs-slide='next')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-next-icon.asset-gallery-carousel-next-icon(aria-hidden='true')
+
+    .container-fluid.project-numbers-container
+        .row.project-numbers-row.text-end.justify-content-center.mx-5.flex-md-row-reverse
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-buildings-number.project-numbers-buildings-number-atlantis-l6           
+                div.project-numbers-text בניינים        
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-floors-number.project-numbers-floors-number-atlantis-l6           
+                div.project-numbers-text קומות        
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-apartments-number.project-numbers-apartments-number-atlantis-l6          
+                div.project-numbers-text דירות
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-parking-spots-number.project-numbers-parking-spots-number-atlantis-l6          
+                div.project-numbers-text חניות
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-area-number.project-numbers-area-number-atlantis-l6(dir='rtl')  
+                div.project-numbers-text שטח בנוי
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-green-area-number.project-numbers-green-area-number-atlantis-l6(dir='rtl')      
+                div.project-numbers-text שטחים ירוקים
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-start-number 2022         
+                div.project-numbers-text תחילת בנייה
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center   
+                div.project-numbers-end-number 2026
+                div.project-numbers-text סיום בנייה                                        
+
+    .container-fluid.project-details-container
+        .row.project-details-row.text-end.mx-5.justify-content-center
+            .col-12.project-details-headline-col.p-0.text-center
+                h2.project-details-headline Atlantis L6
+            .col-10.project-details-headline-col.p-0.text-end
+                div.project-details-text(dir='rtl') אנו שמחים להציג בפניכם את הפרויקט החדש של קבוצת אטלאנטיס בולגריה: <strong>Atlantis L6</strong>. הפרויקט שוכן בלב שכונת ליולין החדשה בסופיה ומבטיח שילוב הרמוני של נוחות עירונית וחיים שלווים.     
+                div.project-details-text(dir='rtl') זה לא סתם עוד מתחם דירות. L6 מסתכל אל העתיד - כמו כל פרויקט של אטלנטיס בולגריה.
+                div.project-details-text(dir='rtl') חזיתות מרשימות, שטחים משותפים מרווחים, דירות מגוונות בחלוקה פונקציונלית ופתרונות חוץ ופנים נעימים. הכל כאן נועד כדי לגרום לכם להרגיש בבית.     
+                div.project-details-text(dir='rtl') מתחם מגורים L6 מורכב משלושה בניינים בני מספר קומות שונות. הארכיטקטורה שלהם מתוכננת כך שהם יהיו בהרמוניה זה עם זה ועם הסביבה והתוצאה הסופית מושכת עיניים מרחוק.
+                h3.project-details-sub-headline(dir='rtl') מיקום
+                div.project-details-text(dir='rtl') פרויקט אטלאנטיס L6 ממוקם באחד האיזורים המתפתחים ביותר בעיר סופיה. האזור קרוב למספר מקומות מפתח בעיר אך באותו זמן הוא מספיק רחוק מהאזורים הסואנים כדי לספק שקט ושלווה לדייריו. הפרויקט נמצא במרחק של עד 5 דקות נסיעה ממרכזי קניות, קניון, תחנת מטארו ותחנת רכבת.
+                h3.project-details-sub-headline(dir='rtl') שכונת ליולין
+                div.project-details-text(dir='rtl') ליולין היא אחת השכונות המתפתחות ביותר בסופיה. היא תוכננה באופן שמאפשר להתמודד עם אוכלוסיית העיר הגדלה ללא בעיות התשתית שעמן מתמודדים בתוך העיר. 
+                div.project-details-text(dir='rtl') לאחר ביצוע מספר מחקרים בשיטת "תחביר החלל", קבוצת אטלאנטיס בולגריה קיבלה הערכה אמיתית של התשתית הבנויה, התקשורת של המקום והזדמנויות ההשקעה העתידיות באזור. המיקום של L6 הוא תוצאה של מחקר מקיף, ולא ניחוש. בדיוק מסיבה זו, הפרויקט מחמיא לעיר הבירה בצורה מושלמת.
+                div.project-detail-img-container.d-flex.justify-content-center   
+                    img.project-details-img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1716468145533-one-bedroom-apartment-A-201-L6-project-6.jpg' alt='תרשים גיאוגרפי של רובע ליולין בסופיה בולגריה')
+                div.project-details-text.text-center(dir='rtl') <i>שכונת ליולין</i>
+                h3.project-details-sub-headline(dir='rtl') מאפייני הבניינים
+                div.project-details-text(dir='rtl') הקונספט העיצובי מאזן בין חזית לבנה לגימור נחושת בקו אלגנטי כולל. המשחק הזה בין חומרים ממסגר את כל ההיקף של שלושת הבניינים, ויוצר מרפסות עמוקות וחלונות ראווה גדולים.
+                div.project-details-text(dir='rtl') תחושת המרווח במתחם מועצמת על ידי נוחות הפארק הפנימי והחללים הגדולים בין הבניינים.
+                div.project-details-text(dir='rtl') פרויקט אטלאנטיס L6 נושא את המסר הברור שעיצוב טוב, חומרים איכותיים ותפקוד נוח שייך לאנשים בכל חלק של העיר.
+                div.project-details-text(dir='rtl') אזור הטבע השקט של ווסט פארק נמצא במרחק הליכה קצר ממתחם המגורים. במתחם ישנם מעל 4 דונם של שטחים ירוקים עם חדר כושר ומגרש משחקים לילדים. כמו כן לכל משפחה גם יהיה מחסן מיוחד לאופניים ועגלות תינוק. לזה אנחנו קוראים אורח חיים ירוק.
+                h3.project-details-sub-headline(dir='rtl') בידוד
+                div.project-details-text(dir='rtl') חזית תוחמת קירות בעובי 25 ס"מ – Wienerberger Porotherm 25 בלוקים קרמיים. קירות בין נכסים בודדים בעובי 25 ס"מ – ווינרברגר פורותרם 25 בלוקים קרמיים.
+                h3.project-details-sub-headline(dir='rtl') בנייה
+                div.project-details-text(dir='rtl') כל הקירות והתקרות במגורים ובשטחים המשותפים יבוצעו בגימור טיח של Knauf, Baumit או Mapei - שכבה אחת.
+                h3.project-details-sub-headline(dir='rtl') דלתות
+                div.project-details-text(dir='rtl') דלתות כניסה לדירה – יורוסטיל, אלומיל או סוליד55. 
+                div.project-details-text(dir='rtl') דלתות כניסה – דלתות אלומיניום עם ויטרינות מזוגגות התואמות לנגרות אלומיל או אתם הנבחרות.
+                div.project-details-text(dir='rtl') דלתות מוסך – דלתות מוסך חתכיות עם חלק מזוגג מהסגמנט האחרון - Hörmann או Novoferm. 
+                div.project-details-text(dir='rtl') דלתות במחסנים למוסכים – דלתות פלדה נובופרם.
+
+    .container-fluid.project-amenities-container
+        .row.project-amenities-headline-row.text-center.mx-5
+            .col-12.project-amenities-headline-col.p-0
+                h2.project-amenities-headline שירותים בפרויקט
+        .row.project-amenities-row.text-end.mx-5.justify-content-end 
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/atlantis-bicycle.svg' alt='אייקון של אופניים')
+                div.project-amenities-text חניות אופניים
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/atlantis-car.svg' alt='אייקון של רכב חונה עם גגון מעליו')
+                div.project-amenities-text חניות מקורות
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/atlantis-leaf.svg' alt='אייקון של עלה')
+                div.project-amenities-text אזורי טבע ירוקים
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/atlantis-nfc.svg' alt='אייקון של צ\יפ nfc')
+                div.project-amenities-text(dir='rtl') בקרת כניסה לבניין עם NFC
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/atlantis-parking.svg' alt='אייקון חניה')
+                div.project-amenities-text חניות פרטיות
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/atlantis-camera.svg' alt='אייקון של מצלמות אבטחה')
+                div.project-amenities-text מצלמות אבטחה מסביב לשעון            
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/atlantis-workout.svg' alt='אייקון של משקולת')
+                div.project-amenities-text מתחמי כושר 
+
+    .container-fluid.project-mid-image-container.project-mid-image-container-atlantis-l6(role="img" aria-labelledby="al6MidImageDescription")
+        span.visually-hidden(id="al6MidImageDescription") תמונה של פרויקט המגורים אטלאנטיס L6    
+
+    .container-fluid.project-map-container
+        .row.project-map-row.text-center.mx-2.justify-content-center 
+            .col-12.project-map-healine-col
+                h2.project-map-headline מיקום
+            .col-12.col-md-10.project-map-col
+                div.project-map(id='map' data-long=23.244787 data-lat=42.709491 data-title='Atlantis L6')   
+
+    .container-fluid.project-assets-container
+        .row.asset-related-assets-row.justify-content-center.mx-5.text-center
+            .col-12.project-assets-headline-col
+                h2.project-assets-headline נכסים זמינים בפרויקט
+            each asset in projectAssets
+                include ../_assetsCards
+        .row.mobile-asset-related-assets-row.justify-content-center.mx-1.text-center
+            .col-12.project-assets-headline-col
+                h2.project-assets-headline נכסים זמינים בפרויקט
+            each asset in projectAssets
+                include ../_mobileAssetsCards 
+
+    .container-fluid.asset-contact-us-container-fixed.position-fixed.text-center.bottom-0
+        .row
+            .col-12.contact-us-fixed-col.py-3
+                div#crmWebToEntityForm.crmWebToEntityForm
+                    form.contact-us-form#webform6296617000000479035(action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads6296617000000479035 method='POST' accept-charset='UTF-8' novalidate)
+                        input(type='text' style='display:none;' name='xnQsjsdp' value='59a0780e6b2791aec2fc494a0d52812511ef98c0f6123210fdc332d6fa0b9e22')
+                        input#zc_gad(type='hidden' name='zc_gad' value='')
+                        input(type='text' style='display:none;' name='xmIwtLD' value='7334e6acba558f934b954c69f5851611538edbf846a3d2f15f807f241012015c2f9c9c0839f214a112e56e062e05be4f')
+                        input(type='text' style='display:none;' name='actionType' value='TGVhZHM=')
+                        input(type='text' style='display:none;' name='returnURL' value='https://www.dirabulgarit.com/contact-us-confirm')
+                        .row.contact-us-fixed-row.align-items-center.flex-row-reverse.d-flex.justify-content-center
+                            .col-12.contact-us-headline-col
+                                div.contact-us-fixed-headline השאירו פרטים ונחזור אליכם בהקדם האפשרי
+                            .col-6.col-md-2.contact-us-input-fixed-col
+                                input.contact-us-input.contact-us-input.contact-us-name-input.form-control(type='text' name='Last Name' maxlength='200' placeholder='שם' aria-label='שם' aria-describedby='basic-addon1' required)                            
+                                .invalid-tooltip אנא הכניסו שם
+                            .col-6.col-md-2.contact-us-input-fixed-col
+                                input.contact-us-input.contact-us-phone-input.form-control(type='text' name='Phone' maxlength='10' placeholder='טלפון' aria-label='טלפון' aria-describedby='basic-addon1' pattern='[0-9]{10}' required)
+                                .invalid-tooltip.contact-us-phone-invalid אנא הכניסו מספר טלפון תקין
+                            .col-6.col-md-2.contact-us-input-fixed-col
+                                input.contact-us-input.contact-us-email-input.form-control(type='email' ftype='email' autocomplete='false' name='Email' crmlabel='' maxlength='100' placeholder='אימייל  ' aria-label='אימייל' aria-describedby='basic-addon1' pattern='[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}' required)
+                                .invalid-tooltip.contact-us-email-invalid אנא הכניסו אימייל תקין
+                            .col-6.col-md-3.contact-us-input-fixed-col    
+                                textarea.contact-us-textarea.contact-us-description-input.form-control(id='Description' name='Description' dir='rtl' aria-label="תיאור הבקשה" rows="2") הייתי רוצה לשמוע עוד פרטים על פרויקט "Atlantis L6"
+                            .col-12.col-md-3.col-lg-2.contact-us-fixed-bottom-col 
+                                input.contact-us-button-fixed.my-2.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='שליחה' title='Submit')                                                                                          
+
+                
+            

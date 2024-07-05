@@ -49,12 +49,6 @@
   }
 }
 @media only screen and (min-width: 576px) {
-  #enable-toolbar-trigger {
-    bottom: 64rem !important;
-  }
-  .whatsapp-widget-icon {
-    height: 4rem;
-  }
   .hero-container {
     height: 60rem;
   }
@@ -205,6 +199,17 @@
     color: #ffffff;
     font-size: 4.8rem;
   }
+  .project-main-image-headline.project-main-image-headline-atlantis-l6 {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 4.8rem;
+  }
   .project-gallery-image {
     height: 17rem;
     width: 26rem;
@@ -235,6 +240,17 @@
     height: 60rem;
     width: 100%;
   }
+  .project-mid-image-container.project-mid-image-container-atlantis-l6 {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720175986393-atlantis-L6-project-building.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 90rem;
+    height: 70rem;
+    width: 100%;
+  }
   .project-installment-scheme-table {
     width: 95rem !important;
   }
@@ -244,9 +260,6 @@
   }
 }
 @media only screen and (min-width: 768px) {
-  #enable-toolbar-trigger {
-    top: -19rem !important;
-  }
   .whatsapp-widget {
     bottom: 17rem;
   }
@@ -467,6 +480,16 @@
     font-weight: 600;
     color: #ffffff;
   }
+  .project-main-image-headline.project-main-image-headline-atlantis-l6 {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
   .project-gallery-image {
     height: 17rem;
     width: 23rem;
@@ -494,6 +517,17 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    height: 60rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-atlantis-l6 {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161873-atlantis-L6-project-7.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 53rem;
     height: 60rem;
     width: 100%;
   }
@@ -784,6 +818,16 @@
     font-weight: 600;
     color: #ffffff;
   }
+  .project-main-image-headline.project-main-image-headline-atlantis-l6 {
+    position: absolute;
+    top: 50%;
+    left: 18%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
   .project-gallery-image {
     height: 20rem;
     width: 30rem;
@@ -812,6 +856,17 @@
     background-repeat: no-repeat;
     background-size: contain;
     height: 34rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-atlantis-l6 {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161873-atlantis-L6-project-7.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 60rem;
     width: 100%;
   }
   .project-installment-scheme-table {
@@ -1051,6 +1106,17 @@
     color: #ffffff;
     font-size: 10rem;
   }
+  .project-main-image-headline.project-main-image-headline-atlantis-l6 {
+    position: absolute;
+    top: 50%;
+    left: 26%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 10rem;
+  }
   .project-gallery-image {
     height: 20rem;
     width: 37rem;
@@ -1096,6 +1162,17 @@
     position: relative;
     padding: 0 !important;
     background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-images/1720087071323-atlantis-barcode-project-mid-image.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 120rem 70rem;
+    height: 60rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-atlantis-l6 {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161873-atlantis-L6-project-7.webp");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -1209,6 +1286,16 @@
     font-weight: 600;
     color: #ffffff;
   }
+  .project-main-image-headline.project-main-image-headline-atlantis-l6 {
+    position: absolute;
+    top: 50%;
+    left: 23%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
   .project-gallery-image {
     height: 25rem;
     width: 43rem;
@@ -1239,6 +1326,17 @@
     position: relative;
     padding: 0 !important;
     background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-images/1720087071323-atlantis-barcode-project-mid-image.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 155rem 80rem;
+    height: 60rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-atlantis-l6 {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161873-atlantis-L6-project-7.webp");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

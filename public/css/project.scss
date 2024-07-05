@@ -32,6 +32,9 @@
       'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-images/1720087071095-atlantis-barcode-project-1.webp'
     );
   }
+  &.project-main-image-col-atlantis-l6 {
+    @include projectBackgroundImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161868-atlantis-L6-project-6.webp');
+  }
 }
 
 .project-main-image-headline {
@@ -45,6 +48,10 @@
     font-size: $h2;
   }
   &.project-main-image-headline-atlantis-barcode {
+    @include projectHeadline(40%);
+    font-size: $h2;
+  }
+  &.project-main-image-headline-atlantis-l6 {
     @include projectHeadline(40%);
     font-size: $h2;
   }
@@ -154,6 +161,13 @@
     @include projectMiddleImage(
       'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-images/1720087071323-atlantis-barcode-project-mid-image.webp',
       contain,
+      60rem
+    );
+  }
+  &.project-mid-image-container-atlantis-l6 {
+    @include projectMiddleImage(
+      'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720175986393-atlantis-L6-project-building.webp',
+      100% 53rem,
       60rem
     );
   }
