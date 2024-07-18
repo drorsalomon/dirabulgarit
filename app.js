@@ -1,5 +1,6 @@
 const path = require('path');
 const express = require('express');
+const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
@@ -7,6 +8,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const hpp = require('hpp');
 const compression = require('compression');
 const session = require('express-session');
+const MongoStore = require('connect-mongo');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -23,6 +25,8 @@ const { dailyAssetPriceNisUpdate, getZohoRefreshToken } = require('./services/cr
 
 // Start express app
 const app = express();
+
+dotenv.config({ path: './config.env' });
 
 // Global Middlewares
 
@@ -105,6 +109,7 @@ app.use(
 
 // Serving static files
 app.use(express.static(path.join(__dirname, '/public')));
+
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
@@ -113,19 +118,26 @@ app.use(
     secret: 'language',
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: false }, // Set secure to true if using https
+    store: MongoStore.create({
+      mongoUrl: process.env.DB.replace('<password>', process.env.DB_PASSWORD),
+      collectionName: 'sessions',
+    }),
+    cookie: { secure: true }, // Set secure to true if using https
   }),
 );
-
-app.use((req, res, next) => {
-  res.locals.lang = req.session.language || 'he'; // Default language is 'en'
-  next();
-});
 
 app.post('/select-language', (req, res) => {
   req.session.language = req.body.language;
   res.locals.lang = req.session.language;
   res.status(200).json({ status: 'success' });
+});
+
+app.use((req, res, next) => {
+  if (!req.session.language) {
+    req.session.language = 'he'; // Default language is 'he'
+  }
+  res.locals.lang = req.session.language;
+  next();
 });
 
 // Hebrew
