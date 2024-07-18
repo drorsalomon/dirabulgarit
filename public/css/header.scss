@@ -41,12 +41,24 @@ nav {
   align-items: right;
 }
 
+.en-navbar-nav {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
 .nav-item {
   -webkit-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   transform: rotate(-180deg);
   padding: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.en-nav-item {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 .assets-catalog-dropdown-menu,
@@ -155,6 +167,11 @@ nav {
   margin-right: 4rem;
 }
 
+.en-mobile-navbar-not-active-currency-icon {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
 .mobile-navbar-not-active-currency-icon,
 .mobile-navbar-not-active-lang-icon {
   margin-bottom: 1rem;
@@ -166,6 +183,11 @@ nav {
 
 .mobile-navbar-not-active-lang-icon {
   margin-right: 1.2rem;
+}
+
+.en-mobile-navbar-not-active-lang-icon {
+  margin-right: 0;
+  margin-left: 9.5rem;
 }
 
 .currency-dropdown-btn,

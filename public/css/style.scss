@@ -19,7 +19,6 @@
 @import 'accessibility';
 @import 'termsOfService';
 @import 'siteMap';
-@import 'enHeader';
 
 * {
   margin: 0;
@@ -808,6 +807,10 @@ input[type='text']::placeholder {
   transform: translate(-50%, -50%);
 }
 
+.en-invest-guide-btn-container {
+  top: 92.5%;
+}
+
 // ***** Main Page Hot Assets *****
 .mainpage-hot-assets-row {
   display: none !important;
@@ -1150,6 +1153,10 @@ input[type='text']::placeholder {
 
 .en-pricing-card-icon {
   margin-right: 0.6rem;
+}
+
+.en-mainpage-pricing-btn-container {
+  margin-bottom: 5rem;
 }
 
 // ***** Blog *****

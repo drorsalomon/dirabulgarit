@@ -17,6 +17,9 @@
   .mainpage-why-bulgaria-bg-video-container {
     height: 60rem;
   }
+  .en-invest-guide-btn-container {
+    top: 91%;
+  }
   .qanda-headline-img {
     height: 27rem;
   }
@@ -679,8 +682,7 @@
     font-size: 3.4rem;
   }
   .mainpage-howitworks-container,
-  .mainpage-rec-container,
-  .mainpage-pricing-container {
+  .mainpage-rec-container {
     padding-bottom: 8rem;
   }
   .mainpage-why-bulgaria-bg-video-container {
