@@ -113,6 +113,9 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
+// Trust proxy settings
+app.set('trust proxy', 1); // Trust the first proxy if behind a reverse proxy (like Nginx)
+
 app.use(
   session({
     secret: 'language',
@@ -123,7 +126,9 @@ app.use(
       collectionName: 'sessions',
     }),
     cookie: {
-      secure: false, // Only send the cookie over HTTPS
+      secure: true, // Only send the cookie over HTTPS
+      httpOnly: true, // Prevents client-side JavaScript from accessing the cookie
+      sameSite: 'strict', // Prevents the browser from sending this cookie along with cross-site requests
     },
   }),
 );
