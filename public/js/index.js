@@ -92,12 +92,10 @@ window.onload = function () {
       localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.DEFAULT_LANGUAGE));
     }
     utils.switchLanguageIconsSrc();
-    loadLang(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
   }
   // If language is English
   else if (JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.EN_LANGUAGE) {
     utils.switchLanguageIconsSrc(false);
-    loadLang(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
   }
 
   // Header dropdown menu click (project catalog)

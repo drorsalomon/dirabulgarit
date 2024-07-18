@@ -122,15 +122,11 @@ app.use(
       mongoUrl: process.env.DB.replace('<password>', process.env.DB_PASSWORD),
       collectionName: 'sessions',
     }),
-    cookie: { secure: true }, // Set secure to true if using https
+    cookie: {
+      secure: false, // Only send the cookie over HTTPS
+    },
   }),
 );
-
-app.post('/select-language', (req, res) => {
-  req.session.language = req.body.language;
-  res.locals.lang = req.session.language;
-  res.status(200).json({ status: 'success' });
-});
 
 app.use((req, res, next) => {
   if (!req.session.language) {
@@ -138,6 +134,12 @@ app.use((req, res, next) => {
   }
   res.locals.lang = req.session.language;
   next();
+});
+
+app.post('/select-language', (req, res) => {
+  req.session.language = req.body.language;
+  res.locals.lang = req.session.language;
+  res.status(200).json({ status: 'success' });
 });
 
 // Hebrew

@@ -8,6 +8,7 @@ const Utils = require('../utils/utils');
 const moment = require('moment');
 
 exports.getOverview = catchAsync(async (req, res, next) => {
+  console.log(res.locals.lang);
   let sortOptions = { project: 1 };
   const hotAssets =
     res.locals.lang === 'he' ? await Asset.find({ hotAsset: true }).sort(sortOptions) : await enAsset.find({ hotAsset: true }).sort(sortOptions);
