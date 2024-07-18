@@ -1,0 +1,29 @@
+extends base 
+
+block head
+    meta(property="og:image" content='/img/hero-burgas.webp')
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../he/_headLinksScripts
+
+block content
+
+    .container-fluid.search-results-main-container
+        .row.search-headline-row
+            .col.search-headline-col 
+                img.search-headline-img(src='/img/sectionCover-1.webp' alt='Image of Burgas, Bulgaria view') 
+                div.search-modal-open-btn-container
+                    button.search-modal-open-btn(data-bs-toggle="modal" data-bs-target="#searchModal") Property Search
+
+    .search-container.w-75
+        include _searchForm  
+                
+    include _searchModal
+
+    .container-fluid.search-results-container
+        .row.mainpage-hot-assets-row.justify-content-center.mx-2
+            each asset in hotAssets
+                include _assetsCards
+        .row.mobile-mainpage-hot-assets-row.justify-content-center         
+            each asset in hotAssets
+                include _mobileAssetsCards            

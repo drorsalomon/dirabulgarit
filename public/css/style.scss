@@ -19,6 +19,7 @@
 @import 'accessibility';
 @import 'termsOfService';
 @import 'siteMap';
+@import 'enHeader';
 
 * {
   margin: 0;
@@ -355,6 +356,10 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
+.en-hero-container {
+  height: 100rem;
+}
+
 .hero-text-col {
   position: absolute;
   top: 45%;
@@ -432,6 +437,12 @@ body {
 .search-modal-icon {
   height: 2rem;
   width: 2rem;
+}
+
+.en-search-modal-icon {
+  margin-right: 0.5rem;
+  height: 2.3rem;
+  width: 2.3rem;
 }
 
 .search-modal-footer {
@@ -866,6 +877,18 @@ input[type='text']::placeholder {
   z-index: 100;
 }
 
+.en-asset-card-sold-badge,
+.en-asset-card-exclusive-badge {
+  font-size: $h6 !important;
+  color: $bg-color-primary;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: unset;
+  padding: 0.5rem 1rem !important;
+  z-index: 100;
+}
+
 .asset-card-sold-badge {
   background-color: $asset-sold;
 }
@@ -902,6 +925,11 @@ input[type='text']::placeholder {
   margin-left: 0.5rem;
   width: 2.3rem;
   height: 2.3rem;
+}
+
+.en-card-icon {
+  margin-left: 0;
+  margin-right: 0.5rem;
 }
 
 // ***** Mobile Asset Cards *****
@@ -964,6 +992,10 @@ input[type='text']::placeholder {
   background-color: $bg-color-secondary !important;
   padding: 4rem;
   height: 45rem;
+}
+
+.en-reviews-carousel-item {
+  height: 55rem;
 }
 
 .reviews-carousel-item.active {
@@ -1072,9 +1104,26 @@ input[type='text']::placeholder {
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
   position: absolute;
-  top: 10%;
-  right: 63%;
+  top: 0;
+  left: 0;
   width: 13rem;
+  transform-origin: top left;
+  margin: 6rem 0 0 -3rem;
+}
+
+.en-pricing-premium-badge {
+  font-size: $h7 !important;
+  color: $bg-color-primary;
+  background-color: $text-color-secondary;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 13rem;
+  transform-origin: top right;
+  margin: 6rem -3rem 0 0;
 }
 
 .pricing-card-main-title,
@@ -1097,6 +1146,10 @@ input[type='text']::placeholder {
 .pricing-card-icon {
   width: 1.3rem;
   height: 1.3rem;
+}
+
+.en-pricing-card-icon {
+  margin-right: 0.6rem;
 }
 
 // ***** Blog *****

@@ -1,0 +1,124 @@
+form.search-form
+    .row.search-row.align-items-center.flex-lg-row-reverse.m-4
+        .col-6.search-col.d-flex
+            button.btn.btn-primary.dropdown-toggle.search-filter-dropdown--btn.search-filter-dd--btn__city.flex-fill(type='button' data-he='עיר' data-en='City' data-bs-toggle='dropdown' data-bs-auto-close="outside" aria-expanded='false' aria-label='Open city search filter menu') City
+            ul.dropdown-menu.search-filter-options-dropdown--list
+                li 
+                    .container-fluid
+                        .row.search-filter-options--headline
+                            span.search-filter-option--text Multi-selection Available
+                        .row.text-start.d.flex.justify-content-start 
+                            .col-6.col-md-4.search-filter-options--col.d-flex  
+                                button.btn.search-filter-options--btn.search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Add Sunny Beach to search' dir='rtl') Sunny Beach
+                            .col-6.col-md-4.search-filter-options--col.d-flex  
+                                button.btn.search-filter-options--btn.search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Add Sofia to search' dir='rtl') Sofia
+                            .col-6.col-md-4.search-filter-options--col.d-flex  
+                                button.btn.search-filter-options--btn.search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Add Burgas to search' dir='rtl') Burgas
+                            .col-6.col-md-4.search-filter-options--col.d-flex  
+                                button.btn.search-filter-options--btn.search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Add Sveti Vlas to search' dir='rtl') Sveti Vlas
+                            //-.col-6.col-md-4.search-filter-options--col.d-flex  
+                                button.btn.search-filter-options--btn.search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' dir='rtl') סרפובו
+                            //-.col-6.col-md-4.search-filter-options--col.d-flex  
+                                button.btn.search-filter-options--btn.search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' dir='rtl') סבטי ולאס
+                            //-.col-6.col-md-4.search-filter-options--col.d-flex  
+                                button.btn.search-filter-options--btn.search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' dir='rtl') נסבר
+                            //-.col-6.col-md-4.search-filter-options--col.d-flex  
+                                button.btn.search-filter-options--btn.search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' dir='rtl') פומריי
+                            //-.col-6.col-md-4.search-filter-options--col.d-flex  
+                                button.btn.search-filter-options--btn.search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' dir='rtl') אהלוי
+                            //-.col-6.col-md-4.search-filter-options--col.d-flex 
+                                button.btn.search-filter-options--btn.search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' dir='rtl') רבדה
+                            //-.col-6.col-md-4.search-filter-options--col.d-flex 
+                                button.btn.search-filter-options--btn.search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' dir='rtl') אלכסנדרובו 
+                            //-.col-6.col-md-4.search-filter-options--col.d-flex 
+                                button.btn.search-filter-options--btn.search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' dir='rtl') אובזור 
+                            //-.col-6.col-md-4.search-filter-options--col.d-flex 
+                                button.btn.search-filter-options--btn.search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' dir='rtl') אלניט 
+                            //-.col-6.col-md-4.search-filter-options--col.d-flex  
+                                    button.btn.search-filter-options--btn.search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' dir='rtl') טנקובו
+                            //-.col-6.col-md-4.search-filter-options--col.d-flex  
+                                button.btn.search-filter-options--btn.search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' dir='rtl') לאקה
+                            //-.col-6.col-md-4.search-filter-options--col.d-flex  
+                                button.btn.search-filter-options--btn.search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' dir='rtl') קושריצה               
+        .col-6.search-col.d-flex
+            button.btn.btn-primary.dropdown-toggle.search-filter-dropdown--btn.search-filter-dd--btn__rooms.flex-fill(type='button' data-he='חדרים' data-en='Rooms' data-bs-toggle='dropdown' data-bs-auto-close="outside" aria-expanded='false' aria-label='Open rooms search filter menu') Rooms
+            ul.dropdown-menu.search-filter-options-dropdown--list
+                li 
+                    .container.search-filter-options--container.text-center
+                        .row.search-filter-options--headline
+                            span.search-filter-option--text Multi-selection Available
+                        .row
+                            .col-4.search-filter-options--col.d-flex  
+                                button.btn.search-filter-options--btn.search-filter--btn__rooms.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Add Studio to search') Studio
+                            .col-4.search-filter-options--col.d-flex  
+                                button.btn.search-filter-options--btn.search-filter--btn__rooms.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Add Two Rooms to search') Two Rooms
+                            .col-4.search-filter-options--col.d-flex    
+                                button.btn.search-filter-options--btn.search-filter--btn__rooms.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Add Three Rooms to search') Three Rooms
+                            .col-4.search-filter-options--col.d-flex 
+                                button.btn.search-filter-options--btn.search-filter--btn__rooms.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Add Four Rooms to search') Four Rooms
+        .col-6.search-col.d-flex
+            button.btn.btn-primary.dropdown-toggle.search-filter-dropdown--btn.search-filter-dd--btn__oceanView.flex-fill(type='button' data-he='קרבה לים' data-en='To Sea' data-bs-toggle='dropdown' data-bs-auto-close="outside" aria-expanded='false' aria-label='Open To Sea search filter menu') To Sea
+            ul.dropdown-menu.search-filter-options-dropdown--list
+                li 
+                    .container-fluid.search-filter-options--container
+                        .row.search-filter-options--headline
+                            span.search-filter-option--text Multi-selection Available
+                        .row.flex-lg-row-reverse
+                            .col-6.search-filter-options--col.d-flex 
+                                button.btn.search-filter-options--btn.search-filter--btn__oceanView.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Add to 300m to search') To 300m
+                            .col-6.search-filter-options--col.d-flex 
+                                button.btn.search-filter-options--btn.search-filter--btn__oceanView.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Add first line to search') First Line
+                            .col-4.search-filter-options--col.d-flex 
+                                button.btn.search-filter-options--btn.search-filter--btn__oceanView.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' dir='rtl' aria-label='Add 2km and above to search') 2km and above
+                            .col-4.search-filter-options--col.d-flex 
+                                button.btn.search-filter-options--btn.search-filter--btn__oceanView.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Add to 1km to search') To 1km
+                            .col-4.search-filter-options--col.d-flex 
+                                button.btn.search-filter-options--btn.search-filter--btn__oceanView.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Add to 600m to search') To 600m
+        .col-6.search-col.d-flex
+            button.btn.btn-primary.dropdown-toggle.search-filter-dropdown--btn.search-filter-dd--btn__price.flex-fill(type='button' data-he='מחיר' data-en='Price' data-bs-toggle='dropdown' data-bs-auto-close="outside" aria-expanded='false' aria-label='Open price search filter menu') Price
+            ul.dropdown-menu.search-filter-options-dropdown--list.search-price-dropdown-list
+                li
+                    .row.d-flex.align-items-center.justify-content-center
+                        .col-auto.d-flex                                                                               
+                            input.search-input.search-price-input-max.en-search-filter-input.price-input.flex-fill(type='text' data-eurosymbol='€' data-nissymbol='₪' placeholder='10,000,000' maxlength="10")                                                                                                      
+                        .col-auto
+                            div.price-divider-container.text-center    
+                                span.price-divider -     
+                        .col-auto.d-flex                                                                      
+                            input.search-input.search-price-input-min.en-search-filter-input.price-input.flex-fill(type='text' data-eurosymbol='€' data-nissymbol='₪' placeholder='0' maxlength="10") 
+        .col-12.search-col.d-flex
+            button.btn.btn-primary.dropdown-toggle.search-filter-dropdown--btn.search-filter-dd--btn__project.flex-fill(type='button' data-he='פרויקט' data-en='Project' data-bs-toggle='dropdown' data-bs-auto-close="outside" aria-expanded='false' aria-label='Open project search filter menu') Project
+            ul.dropdown-menu.search-filter-options-dropdown--list
+                li 
+                    .container.search-filter-options--container.text-center
+                        .row.search-filter-options--headline
+                                    span.search-filter-option--text Multi-selection Available
+                        .row
+                            .col-4.search-filter-options--col.d-flex 
+                                button.btn.search-filter-options--btn.search-filter--btn__project.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Add Atlantis Aria to search') Atlantis Aria
+                            .col-4.search-filter-options--col.d-flex  
+                                button.btn.search-filter-options--btn.search-filter--btn__project.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Add Atlantis Aria 2 to search') Atlantis Aria 2
+                            .col-4.search-filter-options--col.d-flex  
+                                button.btn.search-filter-options--btn.search-filter--btn__project.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Add Atlantis Aria 3 to search') Atlantis Aria 3
+                            .col-4.search-filter-options--col.d-flex 
+                                button.btn.search-filter-options--btn.search-filter--btn__project.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Add Atlantis Euphoria to search') Atlantis Euphoria
+                            .col-4.search-filter-options--col.d-flex    
+                                button.btn.search-filter-options--btn.search-filter--btn__project.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Add Atlantis Resort to search') Atlantis Resort
+                            .col-4.search-filter-options--col.d-flex  
+                                button.btn.search-filter-options--btn.search-filter--btn__project.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Add Atlantis Barcode to search') Atlantis Barcode
+                            .col-4.search-filter-options--col.d-flex  
+                                button.btn.search-filter-options--btn.search-filter--btn__project.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Add Atlantis L6 to search') Atlantis L6
+                            .col-4.search-filter-options--col.d-flex  
+                                button.btn.search-filter-options--btn.search-filter--btn__project.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Add J\'Adore Secret Garden to search') J'Adore Secret Garden
+        .col-6.search-col.d-flex
+            input.search-input.search-filter-input.en-search-filter-input.search-input__id.flex-fill(type='text' placeholder='Search by property ID' aria-label='Username' aria-describedby='basic-addon1')
+        .col-6.search-col.d-flex
+            input.search-input.search-filter-input.en-search-filter-input.search-input__name.flex-fill(type='text' placeholder='Search By property name' aria-label='Username' aria-describedby='basic-addon1')
+        .col-6.search-col.d-flex
+            div.clear-search.flex-fill 
+                span.clear-search--text Clear Search
+        .col-6.search-col.d-flex
+            button.btn-search.flex-fill(type='submit' aria-label='Execute Search') Search  
+
+
+

@@ -75,8 +75,7 @@ export const animateCounter = (element, endNum, text) => {
       requestAnimationFrame(updateCounter);
     } else {
       if (text) {
-        console.log(text);
-        element.innerText = `${targetCount} ${text}`;
+        element.innerText = `${targetCount}${text}`;
       } else {
         element.innerText = targetCount;
       }

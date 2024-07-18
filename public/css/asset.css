@@ -109,6 +109,13 @@
   cursor: zoom-in;
 }
 
+.en-asset-gallery-mainImage {
+  border-top-left-radius: 0;
+  border-top-right-radius: 7rem;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 7rem;
+}
+
 .asset-gallery-zoomIn-icon {
   height: 3rem;
   width: 3rem;
@@ -146,6 +153,13 @@
   transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+.en-asset-gallery-thumbnail {
+  border-top-left-radius: 0;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 2rem;
+}
+
 .asset-gallery-thumbnail:hover {
   opacity: 1;
 }
@@ -157,6 +171,15 @@
   background-color: #2289ff;
   border-top-left-radius: 7rem;
   border-bottom-right-radius: 7rem;
+}
+
+.en-asset-details-features-col,
+.en-asset-details-description-middleViewport-col {
+  text-align: left;
+  border-top-left-radius: 0;
+  border-top-right-radius: 7rem;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 7rem;
 }
 
 .asset-details-features-col {
@@ -223,6 +246,10 @@
   font-weight: 400;
   color: #5c5e64;
   text-align: right;
+}
+
+.en-asset-amenities-details-row {
+  text-align: left;
 }
 
 .asset-amenities-details-container {

@@ -1,4 +1,5 @@
 import * as config from './config';
+import { switchLang } from './language';
 
 export const switchSearchPriceCurrencyHtmlOnLoad = (priceInput, isEuro = true) => {
   if (isEuro) {
@@ -75,6 +76,76 @@ export const switchCurrency = (currencyIconSrc) => {
     switchCurrencyIconsSrc(false);
     switchAssetPriceCurrency();
     switchSearchPriceCurrencyHtml(config.Elements.searchDdBtnPrice, config.Elements.priceInput, false);
+  }
+};
+
+export const switchLanguageIconsSrc = (isHebrew = true) => {
+  if (isHebrew) {
+    config.Elements.activeLangIcon.src = config.heIconSrc;
+    config.Elements.activeLangIcon.alt = config.heIconAlt;
+    config.Elements.mobileActiveLangIcon.src = config.heIconSrc;
+    config.Elements.mobileActiveLangIcon.alt = config.heIconAlt;
+    config.Elements.notActiveLangIcon.src = config.enIconSrc;
+    config.Elements.notActiveLangIcon.alt = config.enIconAlt;
+    config.Elements.mobileNotActiveLangIcon.src = config.enIconSrc;
+    config.Elements.mobileNotActiveLangIcon.alt = config.enIconAlt;
+  } else {
+    config.Elements.activeLangIcon.src = config.enIconSrc;
+    config.Elements.activeLangIcon.alt = config.enIconAlt;
+    config.Elements.mobileActiveLangIcon.src = config.enIconSrc;
+    config.Elements.mobileActiveLangIcon.alt = config.enIconAlt;
+    config.Elements.notActiveLangIcon.src = config.heIconSrc;
+    config.Elements.notActiveLangIcon.alt = config.heIconAlt;
+    config.Elements.mobileNotActiveLangIcon.src = config.heIconSrc;
+    config.Elements.mobileNotActiveLangIcon.alt = config.heIconAlt;
+  }
+};
+
+export const modifyUrl = (inputStr, part) => {
+  // Function to add '/en' after the part
+  function addEn(str, part) {
+    let partIndex = str.indexOf(part);
+    if (partIndex === -1) return str;
+
+    // Check if inputStr and part are the same
+    let toAdd = str === part ? 'en' : 'en/';
+
+    return str.slice(0, partIndex + part.length) + toAdd + str.slice(partIndex + part.length);
+  }
+
+  // Function to remove '/en' after the part
+  function removeEn(str, part) {
+    let partIndex = str.indexOf(part);
+    if (partIndex === -1) return str;
+    let enIndex = str.indexOf('en', partIndex + part.length);
+    if (enIndex === partIndex + part.length) {
+      return str.slice(0, enIndex) + str.slice(enIndex + 3);
+    }
+    return str;
+  }
+
+  // Apply conditions
+  if (JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE) {
+    inputStr = removeEn(inputStr, part);
+  }
+  if (JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.EN_LANGUAGE) {
+    inputStr = addEn(inputStr, part);
+  }
+
+  return inputStr;
+};
+
+export const switchLanguage = (langIconSrc, href) => {
+  if (langIconSrc.includes(config.heIconSrc)) {
+    localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.DEFAULT_LANGUAGE));
+    switchLanguageIconsSrc();
+    href = modifyUrl(href, config.baseProdUrl);
+    switchLang(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)), href);
+  } else {
+    localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.EN_LANGUAGE));
+    switchLanguageIconsSrc(false);
+    href = modifyUrl(href, config.baseProdUrl);
+    switchLang(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)), href);
   }
 };
 
@@ -215,28 +286,28 @@ export const ddBtnTextSetter = (ddBtn, filterBtn, onLoad = false) => {
   if (!onLoad) {
     filterBtn.forEach((el) => {
       el.addEventListener('click', function (e) {
-        ddBtn.innerText = ddBtn.dataset.original;
+        ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
         let counter = 0;
         let chosenFilters = '';
         // If filter btn has 'active class, add to counter and show number in DD btn
         for (let i = 0; i < filterBtn.length; i++) {
           if (filterBtn[i].classList.contains('active')) {
             chosenFilters = document.createTextNode(' (' + ++counter + ')');
-            ddBtn.innerText = ddBtn.dataset.original;
+            ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
             ddBtn.appendChild(chosenFilters);
           }
         }
       });
     });
   } else {
-    ddBtn.innerText = ddBtn.dataset.original;
+    ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
     let counter = 0;
     let chosenFilters = '';
     // If filter btn has 'active class, add to counter and show number in DD btn
     for (let i = 0; i < filterBtn.length; i++) {
       if (filterBtn[i].classList.contains('active')) {
         chosenFilters = document.createTextNode(' (' + ++counter + ')');
-        ddBtn.innerText = ddBtn.dataset.original;
+        ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
         ddBtn.appendChild(chosenFilters);
       }
     }
@@ -264,27 +335,27 @@ export const priceInputSetter = (inputMin, inputMax, onLoad = false, notModal = 
         inputMax.value = currencySymbol + inputMax.value;
         if (notModal) {
           const priceText = document.createTextNode(' (' + inputMin.value + ' - ' + inputMax.value + ')');
-          ddBtn.innerText = ddBtn.dataset.original;
+          ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
           ddBtn.appendChild(priceText);
         }
       } else if (!inputMin.value && inputMax.value) {
         inputMax.value = currencySymbol + inputMax.value;
         if (notModal) {
-          const priceText = document.createTextNode(' (' + inputMin.value + ' - ' + inputMax.value + ')');
-          ddBtn.innerText = ddBtn.dataset.original;
+          const priceText = document.createTextNode(' (' + (inputMin.value = inputMin.placeholder) + ' - ' + inputMax.value + ')');
+          ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
           ddBtn.appendChild(priceText);
         }
       } else if (inputMin.value && !inputMax.value) {
         inputMin.value = currencySymbol + inputMin.value;
         if (notModal) {
-          const priceText = document.createTextNode(' (' + inputMin.value + ' - ' + inputMax.value + ')');
-          ddBtn.innerText = ddBtn.dataset.original;
+          const priceText = document.createTextNode(' (' + inputMin.value + ' - ' + (inputMax.value = inputMax.placeholder) + ')');
+          ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
           ddBtn.appendChild(priceText);
         }
       } else if (!inputMin.value && !inputMax.value) {
         if (notModal) {
           const priceText = document.createTextNode(' (' + currencySymbol + '0' + ' - ' + currencySymbol + '10,000,000' + ')');
-          ddBtn.innerText = ddBtn.dataset.original;
+          ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
           ddBtn.appendChild(priceText);
         }
       }
@@ -297,27 +368,27 @@ export const priceInputSetter = (inputMin, inputMax, onLoad = false, notModal = 
       inputMax.value = currencySymbol + inputMax.value;
       if (notModal) {
         const priceText = document.createTextNode(' (' + inputMin.value + ' - ' + inputMax.value + ')');
-        ddBtn.innerText = ddBtn.dataset.original;
+        ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
         ddBtn.appendChild(priceText);
       }
     } else if (!inputMin.value && inputMax.value) {
       inputMax.value = currencySymbol + inputMax.value;
       if (notModal) {
-        const priceText = document.createTextNode(' (' + inputMin.value + ' - ' + inputMax.value + ')');
-        ddBtn.innerText = ddBtn.dataset.original;
+        const priceText = document.createTextNode(' (' + (inputMin.value = inputMin.placeholder) + ' - ' + inputMax.value + ')');
+        ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
         ddBtn.appendChild(priceText);
       }
     } else if (inputMin.value && !inputMax.value) {
       inputMin.value = currencySymbol + inputMin.value;
       if (notModal) {
-        const priceText = document.createTextNode(' (' + inputMin.value + ' - ' + inputMax.value + ')');
-        ddBtn.innerText = ddBtn.dataset.original;
+        const priceText = document.createTextNode(' (' + inputMin.value + ' - ' + (inputMax.value = inputMax.placeholder) + ')');
+        ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
         ddBtn.appendChild(priceText);
       }
     } else if (!inputMin.value && !inputMax.value) {
       if (notModal) {
         const priceText = document.createTextNode(' (' + currencySymbol + '0' + ' - ' + currencySymbol + '10,000,000' + ')');
-        ddBtn.innerText = ddBtn.dataset.original;
+        ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
         ddBtn.appendChild(priceText);
       }
     }
@@ -338,11 +409,11 @@ export const clearSearchChoices = (searchFilterObj, ddBtn, filterBtn, input) => 
   searchFilterObj = emptySearchFilterObj;
   localStorage.setItem(config.FILTER_KEY, JSON.stringify(searchFilterObj));
   ddBtn.forEach((el) => {
-    if (!el.innerText.includes('מחיר')) {
-      el.innerText = el.dataset.original;
+    if (!el.innerText.includes('מחיר') || !el.innerText.includes('price')) {
+      el.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? el.dataset.he : el.dataset.en;
     } else {
       el.innerText =
-        el.dataset.original +
+        el.dataset.he +
         ` (${JSON.parse(localStorage.getItem(config.CURRENCY_KEY)) === 'euro' ? '€' : '₪'}0 - ${JSON.parse(localStorage.getItem(config.CURRENCY_KEY)) === 'euro' ? '€' : '₪'}1,000,000)`;
     }
   });
@@ -368,7 +439,10 @@ export const clearDuplicates = (searchFilterObj) => {
 export const getPageBySlug = (elementArray, page) => {
   elementArray.forEach((el) => {
     el.addEventListener('click', function (e) {
-      const baseUrl = `/${page}/${el.dataset.slug}`;
+      const baseUrl =
+        JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE
+          ? `/${page}/${el.dataset.slug}`
+          : `${config.baseProdUrl}${JSON.parse(localStorage.getItem(config.LANGUAGE_KEY))}/${page}/${el.dataset.slug}`;
       window.location.assign(baseUrl);
     });
   });

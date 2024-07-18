@@ -1,0 +1,421 @@
+extends base 
+
+block head
+    title Real Estate Investments in Bulgaria: hundreds of investments properties and opportunities | Dira Bulgarit
+    meta(name='description' content='Real estate investments in Bulgaria are only made with Dira Bulgarit! A company that offers hundreds of properties and apartments for investment in Bulgaria, and professional support from the search phase to receiving the property key. For more details click >>')
+    meta(property="og:image" content='/img/hero-burgas.webp')
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../he/_headLinksScripts
+
+block content 
+   
+    .container-fluid.hero-video-container
+        .row.hero-video-row.align-items-center.justify-content-center 
+            .col.hero-video-col
+                div.hero-video-bg-video-container(role="img" aria-labelledby="heroVideoDescription")
+                    div.ratio.ratio-16x9
+                        video(autoplay muted loop).hero-video
+                            source(src='/videos/hero-video-1080p.webm' type='video/webm')
+                    span.visually-hidden(id="heroVideoDescription") Video showing the seaside area in Sunny Beach, Burgas Bulgaria, the city promenade and the local water park
+    
+    .container-fluid.hero-container.en-hero-container(role="img" aria-labelledby="heroImageDescription")
+        span.visually-hidden(id="heroImageDescription") Image of apartment complexes on the Burgas city coast in Bulgaria
+        .row.d-flex.align-items-center.justify-content-center                    
+            .col-10.col-lg-8.hero-text-col 
+                h1.hero-headline Real Estate Investments in Bulgaria
+                div.hero-text The largest Bulgarian real estate website for Israelis - hundreds of properties, hundreds of opportunities, new and exclusive projects, resale apartments, holiday apartments, and residential apartments - "Dira Bulgarit" aggregates the real estate market in Bulgaria for you and accompanies you all the way to the property
+                div.hero-cta-btn-container
+                    button.btn-cta-white.to-calendly-btn(aria-label='Open the Contact Us page') Contact Us  
+
+    div.mainpage-search-modal-open-btn-container.text-center
+        h2.mainpage-search-headline Property Search
+        div.mainpage-search-text Press the search button and find a property to your liking
+        button.mainpage-search-modal-open-btn(data-bs-toggle="modal" data-bs-target="#searchModal" aria-label='Open property search modal') Search property  
+
+    .container.d-flex.justify-content-center
+        .mainpage-search-container.w-75   
+            h2.mainpage-search-headline.text-center Property Search
+            include _searchForm
+
+        include _searchModal  
+
+    .container-fluid.mainpage-about-container.overflow-hidden(role="img" aria-labelledby="aboutUsImageDescription")
+        span.visually-hidden(id="aboutUsImageDescription") Image of houses located on an alcove of the black sea in Burgas
+        .row.mainpage-about-row.align-items-center
+            .col-10.col-lg-8.mainpage-about-text-col
+                h2.mainpage-about-tag About Us
+                h3.mainpage-about-headline Dira Bulgarit - Israeli Real Estate in Bulgaria
+                div.mainpage-about-text A highly experienced professional team with one goal - to guide Israeli investors on the way to successful investments in the Bulgarian real estate market.
+            .col-10.col-lg-8.mainpage-about-images-col.my-md-5.my-lg-1
+                .row.justify-content-center 
+                    .col-12.col-sm-4
+                        img.mainpage-about-img(src="/img/Seven-Rila-Lakes-Bulgaria.webp" alt="Seven rila lake in Bulgaria" loading="lazy")
+                    .col-12.col-sm-4
+                        img.mainpage-about-img(src="/img/sofia-flowers.webp" alt="A flower garden in Sofia Bulgaria" loading="lazy")
+                    .col-12.col-sm-4
+                        img.mainpage-about-img(src="/img/about-us-burgas.webp" alt="Burgas beach" loading="lazy")
+                    .col-12.col-sm-4.my-4
+                        button.btn-cta-white.to-about-btn Meet The Team   
+
+    .container-fluid.d-flex.mainpage-howitworks-container 
+        .row.mainpage-howitworks-row.align-items-center.justify-content-center.mx-4
+            .col-12.mainpage-howitworks-maintext--col
+                h2.mainpage-howitworks-label The Process
+                h3.mainpage-howitworks-mainheadline How It Works    
+                div.mainpage-howitworks-maintext Dira Bulgarit personally and individually accompanies its clients throughout the entire process of purchasing the property, from the search phase to the closing phase    
+            .col-12.col-md-6.col-xl-6.col.mainpage-howitworks-steps--col
+                div.mainpage-howitworks-icon--background
+                    svg.bi.mainpage-howitworks-icon(aria-labelledby="howItWorkIconClipboard")
+                        title(id="howItWorkIconClipboard") Sketch board with a heart in its center icon
+                        use(xlink:href='/img/icons/clipboard.svg#clipboard')
+                div.mainpage-howitworks-headline Needs & Preferences      
+                div.mainpage-howitworks-text We will hold a video meeting with you to understand your needs and preferences      
+            .col-12.col-md-6.col-xl-6.col.mainpage-howitworks-steps--col
+                div.mainpage-howitworks-icon--background
+                    svg.bi.mainpage-howitworks-icon(aria-labelledby="howItWorkIconBinoculars")
+                        title(id="howItWorkIconBinoculars") Binoculars icon
+                        use(xlink:href='/img/icons/binoculars.svg#binoculars')
+                div.mainpage-howitworks-headline Property Locating     
+                div.mainpage-howitworks-text We will present you a variety of properties according to your preferred criteria     
+            .col-12.col-md-6.col-xl-6.col.mainpage-howitworks-steps--col
+                div.mainpage-howitworks-icon--background
+                    svg.bi.mainpage-howitworks-icon(aria-labelledby="howItWorkIconHouse")
+                        title(id="howItWorkIconHouse") House Icon
+                        use(xlink:href='/img/icons/house.svg#house')
+                div.mainpage-howitworks-headline Property Tour    
+                div.mainpage-howitworks-text We will accompany you on the ground and tour all the properties that you liked     
+            .col-12.col-md-6.col-xl-6.col.mainpage-howitworks-steps--col
+                div.mainpage-howitworks-icon--background
+                    svg.bi.mainpage-howitworks-icon(aria-labelledby="howItWorkIconSearch")
+                        title(id="howItWorkIconSearch") Magnifying glass icon
+                        use(xlink:href='/img/icons/search.svg#search')
+                div.mainpage-howitworks-headline Legal Review      
+                div.mainpage-howitworks-text We will conduct a comprehensive legal review of the property with the help of our legal advice in Bulgaria     
+            .col-12.col-md-6.col-xl-6.col.mainpage-howitworks-steps--col
+                div.mainpage-howitworks-icon--background
+                    svg.bi.mainpage-howitworks-icon(aria-labelledby="howItWorkIconEuro")
+                        title(id="howItWorkIconEuro") Euro currency icon
+                        use(xlink:href='/img/icons/euro-howitworks.svg#euro-howitworks')
+                div.mainpage-howitworks-headline Property Bid    
+                div.mainpage-howitworks-text We will help you formulate a fair price offer for the property and negotiate with the seller
+            .col-12.col-md-6.col-xl-6.col.mainpage-howitworks-steps--col
+                div.mainpage-howitworks-icon--background
+                    img.mainpage-howitworks-icon(src='/img/icons/handshake-svgrepo-com.svg' alt='Handshake icon') 
+                div.mainpage-howitworks-headline Guide      
+                div.mainpage-howitworks-text We will accompany you through the entire process from the stage of locating the property to after receiving the key                     
+
+    .container-fluid.mainpage-why-bulgaria-container
+        .row.mainpage-why-bulgaria-row.align-items-center.justify-content-center 
+            .col.mainpage-why-bulgaria-col
+                div.mainpage-why-bulgaria-bg-video-container(role="img" aria-labelledby="whyBulgariaDescription")
+                    video(autoplay muted loop).mainpage-why-bulgaria-bg-video
+                        source(src='/videos/burgas-video-1080p.mp4' type='video/mp4')
+                    span.visually-hidden(id="whyBulgariaDescription") A video that shows the city of Burgas from a bird's eye view
+                div.mainpage-why-bulgaria-text-container.w-75.text-center       
+                    h2.mainpage-why-bulgaria-tag Investment          
+                    h3.mainpage-why-bulgaria-headline Why Bulgaria?
+                    div.mainpage-why-bulgaria-text The Bulgarian economy is in constant growth due to the many investments in the country and its membership in the European Union. Real estate prices in the country are accessible and there is a high return on renting, especially in the tourist areas such as Burgas and Bansko. We have prepared a detailed investment guide for you to help you take the first steps towards the desired deal.
+                div.invest-guide-btn-container.my-xxs-4.my-xs-2.my-md-4.my-lg-1
+                    button.invest-guide-btn Investment Guide
+
+    .container-fluid.mainpage-hot-assets-container
+        .row.mainpage-hot-assets-row.justify-content-center
+            .col-12.mainpage-hot-assets-headline-col
+                .row.text-center
+                    h2.mainpage-hot-assets-tag Recommended   
+                    h3.mainpage-hot-assets-headline Hot Investment Opportunities
+            each asset in hotAssets
+                include _assetsCards
+        .row.mobile-mainpage-hot-assets-row.justify-content-center.mx-1         
+            .col-12.mainpage-hot-assets-headline-col
+                .row.text-center
+                    div.mainpage-hot-assets-tag Recommended  
+                    div.mainpage-hot-assets-headline Hot Investment Opportunities
+            each asset in hotAssets
+                include _mobileAssetsCards   
+
+    .container-fluid.mainpage-rec-container            
+        .row.mx-4.justify-content-center
+            .col-12.mainpage-rec-maintext-col.text-center
+                h2.mainpage-rec-tag Recommendations   
+                h3.mainpage-rec-headline What Our Customers Say About Us
+            .col-12.col-md-10.reviews-carousel-col           
+                #reviewsCarousel.carousel.slide.text-center.reviews-carousel(data-bs-touch='true' data-bs-interval='15000' data-bs-ride='carousel')
+                    .carousel-inner.reviews-carousel-inner
+                        .carousel-item.active.reviews-carousel-item.en-reviews-carousel-item
+                            .row.d-flex.justify-content-center.align-items-center
+                                .col-12.col-md-5.col-xl-4
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/guyAvitanRec.webp' alt='Image of the recommender Guy Avitan')
+                                .col-md-7.col-xl-8.text-center
+                                    div.mainpage-reviews-name Guy Avitan
+                                    div.mainpage-reviews-prof Armed Forces
+                                    div.mainpage-reviews-review.fst-italic "Yahli, thank you very much for the support from the beginning of the journey while I was finding the property that suits me best in the Aria project where you found me a two-room apartment, the dealings with the contractor, the help in drafting and analyzing the contract and the regular updates during construction. I know this will not be the last property that I'll buy with your support"
+                        .carousel-item.reviews-carousel-item.en-reviews-carousel-item
+                            .row.d-flex.justify-content-center.align-items-center
+                                .col-12.col-md-5.col-xl-4    
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/eliToledoRec.webp' alt='Image of the recommender Eli Toldo')
+                                .col-md-7.col-xl-8.text-center
+                                    div.mainpage-reviews-name Eli Toldo
+                                    div.mainpage-reviews-prof Bus Driver
+                                    div.mainpage-reviews-review.fst-italic "I would like to thank the real estate consultant Yeheli Samuels for the dedicated and professional care in purchasing a wonderful apartment in Bulgaria. All along the way you gave me a feeling that you could be trusted, consulted and gave a proper and quick response to my queries. In addition, it's worth noting the breadth of your heart and caring - just like one of the family! I'm sure that everyone who receives your services in the future will enjoy it as much as I did."
+                        .carousel-item.reviews-carousel-item.en-reviews-carousel-item
+                            .row.d-flex.justify-content-center.align-items-center
+                                .col-12.col-md-5.col-xl-4      
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/avatarImg.jpg' alt='Anonymous Avatar Image')
+                                .col-md-7.col-xl-8.text-center
+                                    div.mainpage-reviews-name Zohar David
+                                    div.mainpage-reviews-prof Lawyer
+                                    div.mainpage-reviews-review.fst-italic "I want to say a huge thank you to Yeheli, who with dedicated, determined, caring and precise guidance, managed to bring a deal that sometimes seemed impossible to a successful conclusion. We are happy with our new, stunning apartment in Bansko, there is no doubt that we will continue with her for another deal in Bulgaria."
+                        .carousel-item.reviews-carousel-item.en-reviews-carousel-item
+                            .row.d-flex.justify-content-center.align-items-center
+                                .col-12.col-md-5.col-xl-4     
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/avatarImg.jpg' alt='Anonymous Avatar Image')
+                                .col-md-7.col-xl-8.text-center
+                                    div.mainpage-reviews-name Haim Klim
+                                    div.mainpage-reviews-prof Armed Forces
+                                    div.mainpage-reviews-review.fst-italic "We first became acquainted with Yaheli when we were looking for an investment channel abroad and chose Burgas. Yaheli warmly recommended us a project at the beginning of its construction called "Atlantis Aria", later on we found out that Yaheli is an efficient and energetic manager who always responded to every question and request we made... Good luck!"
+                        .carousel-item.reviews-carousel-item.en-reviews-carousel-item
+                            .row.d-flex.justify-content-center.align-items-center
+                                .col-12.col-md-5.col-xl-4     
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/dianGilRec.webp' alt='Image of the recommenders Dian and Gil')
+                                .col-md-7.col-xl-8.text-center
+                                    div.mainpage-reviews-name Dian and Gil
+                                    div.mainpage-reviews-prof Kibutz Megido
+                                    div.mainpage-reviews-review.fst-italic "We came to Yeheli following the recommendation of a friend who purchased an apartment in Bulgaria through her. We had several conversations with Yeheli in which she was always available and answered all our questions with a lot of patience and gave us a sense of security and that she was accompanying us all the way. We finally purchased a two-room apartment in the Euphoria project in Burgas."
+                        .carousel-item.reviews-carousel-item.en-reviews-carousel-item
+                            .row.d-flex.justify-content-center.align-items-center
+                                .col-12.col-md-5.col-xl-4      
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/avatarImg.jpg' alt='Anonymous Avatar Image')
+                                .col-md-7.col-xl-8.text-center
+                                    div.mainpage-reviews-name Nissim Ksbi
+                                    div.mainpage-reviews-prof Driving Instructor
+                                    div.mainpage-reviews-review.fst-italic "I purchased an apartment in the "Atlantis Aria" project in Burgas, with the full support of Yeheli. She took care of everything. All communication with the contractor, the bureaucracy with the banks, the entire purchase process. Without her this would not have happened. I have since sold the apartment and again the whole process was carried out by Yeheli And I bought another bigger apartment. I warmly and lovingly recommend to anyone interested to work with Yeheli and use her excellent services."
+                        .carousel-item.reviews-carousel-item.en-reviews-carousel-item
+                            .row.d-flex.justify-content-center.align-items-center
+                                .col-12.col-md-5.col-xl-4      
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/avatarImg.jpg' alt='Anonymous Avatar Image')
+                                .col-md-7.col-xl-8.text-center
+                                    div.mainpage-reviews-name Rammi Hashaol
+                                    div.mainpage-reviews-prof Armed Forces
+                                    div.mainpage-reviews-review.fst-italic "Dear Yeheli, thank you very much for your professional and very serviceable work. I received a full envelope and an attentive ear for all my concerns. There is no doubt that the deal was closed thanks to you. Close and ongoing support with the well-known company is second to none. I bought a 2-room apartment in the Euphoria project in Burgas."
+                        .carousel-item.reviews-carousel-item.en-reviews-carousel-item
+                            .row.d-flex.justify-content-center.align-items-center
+                                .col-12.col-md-5.col-xl-4      
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/raniKurnitzRec.webp' alt='Image of the recommender Rani Kroznitz')
+                                .col-md-7.col-xl-8.text-center
+                                    div.mainpage-reviews-name Rani Kroznitz
+                                    div.mainpage-reviews-prof Project Manager
+                                    div.mainpage-reviews-review.fst-italic "I purchased two apartments through Dira Bulgarit, an apartment in a holiday complex in Sveti Vlas and a residential apartment in a new project built in Burgas. The team of Dira Bulgarit took care of everything, from finding the property to negotiating and signing the contract with the sellers. Since then, the team continues to monitor and handle everything in order to improve the investment For those looking to invest with peace of mind. This is the team you're looking for!"
+                    button.carousel-control-prev(type='button' data-bs-target='#reviewsCarousel' data-bs-slide='prev')
+                        span.carousel-control-prev-icon.mainpage-reviews-carousel-prev-icon(aria-hidden='true')
+                        span.visually-hidden Previous
+                    button.carousel-control-next(type='button' data-bs-target='#reviewsCarousel' data-bs-slide='next')
+                        span.carousel-control-next-icon.mainpage-reviews-carousel-next-icon(aria-hidden='true')
+                        span.visually-hidden Next    
+
+    .container-fluid.mainpage-pricing-container.justify-content-center              
+        .row.mx-4.justify-content-center.mainpage-pricing-headline-row
+            .col-12.pricing-maintext-col.text-center
+                h2.pricing-tag For Your Choice 
+                h3.mainpage-pricing-headline Pricing                       
+        .row.justify-content-center.pricing-cards-row         
+            .col-12.col-sm-7.col-md-6.col-lg-4.col-xl-4.col-xxl-3.mx-xxl-5.p-xxs-0.p-med-1
+                .card.pricing-card-basic
+                    .card-body
+                        .container-fluid
+                            .row.pricing-card-body-row
+                                .col-12
+                                    .card-title.pricing-card-main-title Base
+                                    .card-title.pricing-card-secondary-title Property locating and paperwork Collection
+                                    .card-title.pricing-card-tertiary-title 3000€ + Tax
+                                .col-12.my-5
+                                    div.card-text-container.d-flex.align-content-center.py-3
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon') 
+                                        span.pricing-card-text Property location by customer demands
+                                    div.card-text-container.d-flex.align-content-center.py-3       
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sing icon')
+                                        span.pricing-card-text Physical or on-line property tour
+                                    div.card-text-container.d-flex.align-content-center.py-3
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
+                                        span.pricing-card-text Property legal check
+                                    div.card-text-container.d-flex.align-content-center.py-3    
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
+                                        span.pricing-card-text Property legal paperwork collection
+                                    div.card-text-container.d-flex.align-content-center.py-3  
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='X sign icon')
+                                        span.pricing-card-text Writing initial contract with a lawyer
+                                    div.card-text-container.d-flex.align-content-center.py-3    
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='אייקון שלי איקס')
+                                        span.pricing-card-text Writing and signing final contract with notary
+                                    div.card-text-container.d-flex.align-content-center.py-3    
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='X sign icon')
+                                        span.pricing-card-text Opening a bank account with the customer
+                                    div.card-text-container.d-flex.align-content-center.py-3    
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='X sign icon')                                      
+                                        span.pricing-card-text Renting and managing the property
+            .col-12.col-sm-7.col-md-6.col-lg-4.col-xl-4.col-xxl-3.mx-xxl-5
+                .card.pricing-card-plus
+                    .card-body
+                        .container-fluid
+                            .row.pricing-card-body-row
+                                .col-12
+                                    .card-title.pricing-card-main-title Plus
+                                    .card-title.pricing-card-secondary-title Final contract and opening a bank account
+                                    .card-title.pricing-card-tertiary-title 3990€ + Tax
+                                .col-12.my-5
+                                    div.card-text-container.d-flex.align-content-center.py-3
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon') 
+                                        span.pricing-card-text Property location by customer demands
+                                    div.card-text-container.d-flex.align-content-center.py-3       
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sing icon')
+                                        span.pricing-card-text Physical or on-line property tour
+                                    div.card-text-container.d-flex.align-content-center.py-3
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
+                                        span.pricing-card-text Property legal check
+                                    div.card-text-container.d-flex.align-content-center.py-3    
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
+                                        span.pricing-card-text Property legal paperwork collection
+                                    div.card-text-container.d-flex.align-content-center.py-3  
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sing icon')
+                                        span.pricing-card-text Writing initial contract with a lawyer
+                                    div.card-text-container.d-flex.align-content-center.py-3    
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
+                                        span.pricing-card-text Writing and signing final contract with notary
+                                    div.card-text-container.d-flex.align-content-center.py-3    
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
+                                        span.pricing-card-text Opening a bank account with the customer
+                                    div.card-text-container.d-flex.align-content-center.py-3    
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='X sign icon')                                    
+                                        span.pricing-card-text Renting and managing the property
+            .col-12.col-sm-7.col-md-6.col-lg-4.col-xl-4.col-xxl-3.mx-xxl-5
+                .card.pricing-card-premium
+                    .card-body
+                        .container-fluid
+                            .row.pricing-card-body-row
+                                .col-12.justify-content-center.pricing-premium-col 
+                                    .span.badge.en-pricing-premium-badge Best Value
+                                    .card-title.pricing-card-main-title Premium
+                                    .card-title.pricing-card-secondary-title Full customer service and property management
+                                    .card-title.pricing-card-tertiary-title 4990€ + Tax
+                                .col-12.my-5
+                                    div.card-text-container.d-flex.align-content-center.py-3
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon') 
+                                        span.pricing-card-text Property location by customer demands
+                                    div.card-text-container.d-flex.align-content-center.py-3       
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sing icon')
+                                        span.pricing-card-text Physical or on-line property tour
+                                    div.card-text-container.d-flex.align-content-center.py-3
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
+                                        span.pricing-card-text Property legal check
+                                    div.card-text-container.d-flex.align-content-center.py-3    
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
+                                        span.pricing-card-text Property legal paperwork collection
+                                    div.card-text-container.d-flex.align-content-center.py-3  
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sing icon')
+                                        span.pricing-card-text Writing initial contract with a lawyer
+                                    div.card-text-container.d-flex.align-content-center.py-3    
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
+                                        span.pricing-card-text Writing and signing final contract with notary
+                                    div.card-text-container.d-flex.align-content-center.py-3    
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
+                                        span.pricing-card-text Opening a bank account with the customer
+                                    div.card-text-container.d-flex.align-content-center.py-3    
+                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')    
+                                        span.pricing-card-text Renting and managing the property
+            .col-12.text-center.py-5    
+                button.btn-cta.pricing-cta-btn.to-calendly-btn(aria-label='Go to contact us page') Contact Us
+
+    .container-fluid.mainpage-blog-container
+        .row.mainpage-blog-headline-row.d-felx.justify-content-center
+            .col-12.mainpage-blog-headline-col
+                .row.text-center
+                    h2.mainpage-blog-tag Important To Know
+                    h3.mainpage-blog-headline Selected Articles From Our Blog 
+        .row.mainpage-blog-cards-row.d-felx.justify-content-center.flex-md-row-reverse.mx-4 
+            .col-12.col-md-6.col-lg-3
+                .card.mainpage-blog-card.en-mainpage-blog-card.py-3
+                    .card-body
+                        .container-fluid
+                            .row.mainpage-blog-card-body-row.text-center
+                                .col-12.mainpage-blog-card-title-col.en-mainpage-blog-card-title-col.justify-content-center.align-content-center
+                                    img.mainpage-blog-icon(src='/img/icons/israel-shekel-currency-symbol-svgrepo-com-white.svg' alt='Icon of the flag of Israel')
+                                    .card-title.mainpage-blog-card-title The reasons for Bulgaria's popularity among Israeli property buyers
+                                .col-12.mainpage-blog-card-text-col.en-mainpage-blog-card-text-col.my-2
+                                    div.d-flex.align-content-center.justify-content-end.py-3 
+                                        span.mainpage-blog-card-text Considering the most popular countries for purchasing property abroad among Israelis, it is worth highlighting Bulgaria. Beautiful seascapes, a mild climate, a large number of attractions and architectural monuments attract Israeli citi...
+                                .col-12.my-2        
+                                    button.mainpage-blog-card-btn(data-slug="The-reasons-for-Bulgarias-popularity-among-Israeli-property-buyers") Continue Reading
+            .col-12.col-md-6.col-lg-3
+                .card.mainpage-blog-card.en-mainpage-blog-card.py-3
+                    .card-body
+                        .container-fluid
+                            .row.mainpage-blog-card-body-row.text-center
+                                .col-12.mainpage-blog-card-title-col.en-mainpage-blog-card-title-col.justify-content-center.align-content-center
+                                    img.mainpage-blog-icon(src='/img/icons/graph-property-svgrepo-com-white.svg' alt='Icon of a graph with houses at each column')
+                                    .card-title.mainpage-blog-card-title Comprehensive property price analysis in Bulgaria for 2024 
+                                .col-12.mainpage-blog-card-text-col.en-mainpage-blog-card-text-col.my-2
+                                    div.d-flex.align-content-center.justify-content-end.py-3 
+                                        span.mainpage-blog-card-text Compared to other European countries, Bulgaria is small but very interesting. Bulgaria is a popular destination among tourists because of its picturesque landscapes, fascinating architecture, gentle seas and snow-capped peaks. An inexh...
+                                .col-12.my-2.align-content-end      
+                                    button.mainpage-blog-card-btn(data-slug="Property-price-analysis-in-Bulgaria-in-2024") Continue Reading
+            .col-12.col-md-6.col-lg-3
+                .card.mainpage-blog-card.en-mainpage-blog-card.py-3
+                    .card-body
+                        .container-fluid
+                            .row.mainpage-blog-card-body-row.text-center
+                                .col-12.mainpage-blog-card-title-col.en-mainpage-blog-card-title-col.justify-content-center.align-content-center
+                                    img.mainpage-blog-icon(src='/img/icons/mountaint-landscape-svgrepo-com-white.svg' alt='Icon of a sunny sky above mountains')
+                                    .card-title.mainpage-blog-card-title A comprehensive look at the quality of life in Bulgaria       
+                                .col-12.mainpage-blog-card-text-col.en-mainpage-blog-card-text-col.my-2
+                                    div.d-flex.align-content-center.justify-content-end.py-3 
+                                        span.mainpage-blog-card-text Bulgaria is a good country to live in. It has a mild climate, clean ecology, mesmerizing landscapes and many resorts and very friendly and welcoming residents. People visiting Bulgaria often talk about the amazing beauty of nature. In every city...
+                                .col-12.my-2        
+                                    button.mainpage-blog-card-btn(data-slug="Embrace-Bulgaria-a-comprehensive-look-at-the-quality-of-life-in-the-country") Continue Reading
+            .col-12.col-md-6.col-lg-3
+                .card.mainpage-blog-card.en-mainpage-blog-card.py-3
+                    .card-body
+                        .container-fluid
+                            .row.mainpage-blog-card-body-row.text-center
+                                .col-12.mainpage-blog-card-title-col.en-mainpage-blog-card-title-col.justify-content-center.align-content-center
+                                    img.mainpage-blog-icon(src='/img/icons/house-thumbs-up-svgrepo-com-white.svg' alt='Icon of a house doing a like sign inside of it')
+                                    div.card-title.mainpage-blog-card-title In which type of property should you invest in Bulgaria?      
+                                .col-12.mainpage-blog-card-text-col.en-mainpage-blog-card-text-col.my-2
+                                    div.d-flex.align-content-center.justify-content-end.py-3 
+                                        span.mainpage-blog-card-text Bulgaria is a good country for investment. With a relatively low cost of housing, Bulgaria has great leisure potential, moreover, since 2007 it is a member of the European Union. Any foreigner can buy apartments in Bulgaria freely, but there...
+                                .col-12.my-2        
+                                    button.mainpage-blog-card-btn(data-slug="What-type-of-property-should-you-invest-in-Bulgaria") Continue Reading
+        .row.mainpage-blog-btn-row.d-felx.justify-content-center
+            .col-12.text-center.py-3    
+                button.btn-cta.to-blog-btn Blog Page  
+
+    .container-fluid.mainpage-contact-us-container
+        .row.mainpage-contact-us-headline-row.d-felx.justify-content-center
+            .col-12.col-md-10.col-xl-8.mainpage-contact-us-headline-col
+                .row.text-center
+                    h2.mainpage-contact-us-tag Contact Us
+                    h3.mainpage-contact-us-headline Enter Your Contact Information And One Of Our Representatives will Get Back To You As Soon As Possible
+        .row.mainpage-contact-us-row.d-felx.justify-content-center.mx-4
+            .col-12.col-md-10.col-xl-8.mainpage-contact-us-col.text-center 
+                div#crmWebToEntityForm.crmWebToEntityForm
+                    form.contact-us-form#webform6296617000000479035(action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads6296617000000479035 method='POST' accept-charset='UTF-8' novalidate)
+                        input(type='text' style='display:none;' name='xnQsjsdp' value='59a0780e6b2791aec2fc494a0d52812511ef98c0f6123210fdc332d6fa0b9e22')
+                        input#zc_gad(type='hidden' name='zc_gad' value='')
+                        input(type='text' style='display:none;' name='xmIwtLD' value='7334e6acba558f934b954c69f5851611538edbf846a3d2f15f807f241012015c2f9c9c0839f214a112e56e062e05be4f')
+                        input(type='text' style='display:none;' name='actionType' value='TGVhZHM=')
+                        input(type='text' style='display:none;' name='returnURL' value='https://www.dirabulgarit.com/contact-us-confirm')
+                        .row.contact-us-row.align-items-center
+                            .col-12.contact-us-col.d-flex.justify-content-end
+                                input.contact-us-input.contact-us-name-input.form-control.en-search-filter-input(type='text' name='Last Name' maxlength='200' placeholder='Name' aria-label='Name' aria-describedby='basic-addon1' required)                            
+                                .invalid-tooltip Please enter a name
+                            .col-12.contact-us-col.d-flex.justify-content-end
+                                input.contact-us-input.contact-us-phone-input.form-control.en-search-filter-input(type='text' name='Phone' maxlength='10' placeholder='Phone' aria-label='Phone' aria-describedby='basic-addon1' pattern='[0-9]{10}' required)
+                                .invalid-tooltip.contact-us-phone-invalid Please enter a valid phone number
+                            .col-12.contact-us-col.d-flex.justify-content-end 
+                                input.contact-us-input.contact-us-email-input.form-control.en-search-filter-input(type='email' ftype='email' autocomplete='false' name='Email' crmlabel='' maxlength='100' placeholder='Email  ' aria-label='Email' aria-describedby='basic-addon1' pattern='[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}' required)
+                                .invalid-tooltip.contact-us-email-invalid Please enter a valid Email address
+                            .col-12.contact-us-col.d-flex.justify-content-end     
+                                textarea.contact-us-textarea.contact-us-description-input.form-control.en-search-filter-input(id='Description' name='Description' aria-label="Request Description" rows="5" placeholder='Is there anything else you would like us to know?')
+                            .col-12.contact-us-col
+                                input.contact-us-button.mx-3(type='reset' class='zcwf_button' name='reset' value='Clear felids' title='Reset')        
+                                input.contact-us-button.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Send' title='Submit')                                                                   

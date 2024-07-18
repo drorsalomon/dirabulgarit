@@ -1,0 +1,262 @@
+extends base 
+
+block head
+    meta(property="og:title" content=`${asset.project}`)
+    meta(property="og:description" content=`${asset.name}` )
+    meta(property="og:image" content=`${asset.mainImage}`)
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../he/_headLinksScripts
+
+block content
+
+    .container-fluid.d-flex.justify-content-center.py-xxl-4
+        .asset-search-container.w-75   
+            include _searchForm
+
+        include _searchModal  
+
+    .container-fluid.asset-headline-container.py-xxl-2
+        .row.asset-headline-row.mx-4
+            .col.asset-headline-col.text-center 
+                div.asset-modal-open-btn-container
+                    button.search-modal-open-btn(data-bs-toggle="modal" data-bs-target="#searchModal") Property Search
+                h1.asset-headline=`${asset.name}`           
+
+    #assetModal.modal.fade.asset-gallery-modal.text-center(tabindex='-1' aria-labelledby='assetModalLabel' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered
+            .asset-gallery-modal-content.modal-content
+                .row.d-flex
+                    .col-6.align-content-center
+                        div.text-start.px-4
+                            div.asset-gallery-img-text=`${asset.project}` 
+                    .col-6
+                        div.text-end.p-3
+                            button.btn-close.asset-gallery-modal-close-btn.p-2.my-auto(type='button' data-bs-dismiss='modal' aria-label='Close')
+                #assetCarousel.carousel.slide(data-bs-touch='true' data-bs-interval='30000' data-bs-ride='carousel')
+                    .carousel-inner.asset-modal-carousel-inner
+                    button.carousel-control-prev(type='button' data-bs-target='#assetCarousel' data-bs-slide='prev')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-prev-icon.asset-gallery-carousel-prev-icon(aria-hidden='true')
+                    button.carousel-control-next(type='button' data-bs-target='#assetCarousel' data-bs-slide='next')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-next-icon.asset-gallery-carousel-next-icon(aria-hidden='true')                           
+            
+    .container-fluid.asset-details-container
+        .row.asset-details-row.mx-4.gx-md-5.justify-content-center
+            .col-12.col-md-7.col-lg-8.col-xl-7.asset-details-gallery-col
+                div.asset-gallery-mainImage-container
+                    if asset.sold
+                        .span.badge.asset-card-sold-badge.en-asset-card-sold-badge Sold 
+                    if asset.exclusive && !asset.sold
+                        .span.badge.asset-card-exclusive-badge.en-asset-card-exclusive-badge Exclusive Property
+                    img.asset-gallery-mainImage.en-asset-gallery-mainImage(src=`${asset.mainImage}` alt=`${asset.name}` loading="lazy" data-bs-toggle="modal" data-bs-target="#assetModal")
+                    img.asset-gallery-zoomIn-icon(src='/img/icons/zoom-in-svgrepo-com-white.svg' alt='Zoom in icon')   
+                .row.text-end
+                    each img in asset.images
+                        .col.col-md-4.col-lg-3.col-xxl-2
+                            div.asset-gallery-thumbnails-container           
+                                img.asset-gallery-thumbnail.en-asset-gallery-thumbnail(src=img alt=`${asset.name}` loading="lazy")
+            .col-12.col-md-5.col-lg-4.col-xl-3.asset-details-features-col.en-asset-details-features-col  
+                div.mobile-asset-favorite-btn-container.text-start
+                    button.asset-favorite-btn-white
+                        img.favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline.svg' alt='Heart icon') 
+                if asset.id   
+                    div.assets-details-features 
+                        img.assets-details-features-icon(src='/img/icons/hashtag-svgrepo-com-white.svg' alt='Number icon')       
+                        span.assets-details-features-text <strong>ID: </strong>
+                        span.asset-details-id= asset.id 
+                if asset.price     
+                    div.assets-details-features 
+                        img.assets-details-features-icon(src='/img/icons/price-tag-svgrepo-com-white.svg' alt='Price tag icon')       
+                        span.assets-details-features-text <strong>Price: </strong>
+                        span.asset-price(data-europrice=`${asset.priceBeginningAt === true ? 'Beginning at' : ''}€${new Intl.NumberFormat().format(asset.price)}` data-nisprice=`${asset.priceBeginningAt === true ? 'Beginning at' : ''}₪${new Intl.NumberFormat().format(asset.priceNis)}`)
+                if asset.project     
+                    div.assets-details-features 
+                        img.assets-details-features-icon(src='/img/icons/building-svgrepo-com-white.svg' alt='Building icon')       
+                        span.assets-details-features-text <strong>Project: </strong> 
+                        span= asset.project 
+                if asset.city 
+                    div.assets-details-features 
+                        img.assets-details-features-icon(src='/img/icons/map-svgrepo-com-white.svg' alt='Map icon')       
+                        span.assets-details-features-text <strong>City: </strong> 
+                        span= asset.city 
+                if asset.type
+                    div.assets-details-features 
+                        img.assets-details-features-icon(src='/img/icons/house-svgrepo-com-white.svg' alt='House icon')       
+                        span.assets-details-features-text <strong>Type: </strong> 
+                        span= asset.type 
+                if asset.sm
+                    div.assets-details-features 
+                        img.assets-details-features-icon(src='/img/icons/ruler-svgrepo-com-white.svg' alt='Ruler icon')       
+                        span.assets-details-features-text <strong>Area: </strong> 
+                        span= asset.sm 
+                if asset.oceanView
+                    div.assets-details-features 
+                        img.assets-details-features-icon(src='/img/icons/ocean-sunset-svgrepo-com-white.svg' alt='Ocean sunset icon')       
+                        span.assets-details-features-text <strong>To sea: </strong> 
+                        span= asset.oceanView 
+                if asset.rooms
+                    div.assets-details-features 
+                        img.assets-details-features-icon(src='/img/icons/living-room-sofa-svgrepo-com-white.svg' alt='Living room icon')       
+                        span.assets-details-features-text <strong>Rooms: </strong>
+                        span= asset.rooms  
+                if asset.bedrooms
+                    div.assets-details-features 
+                        img.assets-details-features-icon(src='/img/icons/bed-bedroom-comfortable-svgrepo-com-white.svg' alt='Bedroom icon')       
+                        span.assets-details-features-text <strong>Bedrooms: </strong>
+                        span= asset.bedrooms  
+                if asset.bathrooms
+                    div.assets-details-features 
+                        img.assets-details-features-icon(src='/img/icons/bath-bathroom-bathtub-svgrepo-com-white.svg' alt='Bathrooms icon')       
+                        span.assets-details-features-text <strong>Bathrooms: </strong> 
+                        span= asset.bathrooms 
+                if asset.terraces 
+                    div.assets-details-features 
+                        img.assets-details-features-icon(src='/img/icons/balcony-window-svgrepo-com-white.svg' alt='Balcony icon')       
+                        span.assets-details-features-text <strong>Balconies: </strong> 
+                        span= asset.terraces 
+                if asset.floor
+                    div.assets-details-features 
+                        img.assets-details-features-icon(src='/img/icons/floor-plan-svgrepo-com-white.svg' alt='Building floor icon')       
+                        span.assets-details-features-text <strong>Floor: </strong> 
+                        span= asset.floor 
+                if asset.parking
+                    div.assets-details-features 
+                        img.assets-details-features-icon(src='/img/icons/parking-svgrepo-com-white.svg' alt='Parking icon')       
+                        span.assets-details-features-text <strong>Parking: </strong> 
+                        span= asset.parking 
+                if asset.windDirections
+                    div.assets-details-features 
+                        img.assets-details-features-icon(src='/img/icons/wind-svgrepo-com-white.svg' alt='Air directions icon')       
+                        span.assets-details-features-text <strong>Air directions: </strong> 
+                        span= asset.windDirections 
+                if asset.readiness 
+                    div.assets-details-features 
+                        img.assets-details-features-icon(src='/img/icons/date-svgrepo-com-white.svg' alt='Calender icon')   
+                        span.assets-details-features-text <strong>Readiness: </strong> 
+                        span= asset.readiness
+                if asset.maintenanceFee
+                    div.assets-details-features 
+                        img.assets-details-features-icon(src='/img/icons/maintenance-svgrepo-com-white.svg' alt='Wrench icon')       
+                        span.assets-details-features-text <strong>Maintenance: </strong> 
+                        span= asset.maintenanceFee
+                if asset.furnished && asset.furnished === true
+                    div.assets-details-features 
+                        img.assets-details-features-icon(src='/img/icons/furniture-svgrepo-com-white.svg' alt='Furniture icon')  
+                        span.assets-details-features-text <strong>Furniture: </strong> 
+                        span Yes
+                if asset.yearBuilt
+                    div.assets-details-features 
+                        img.assets-details-features-icon(src='/img/icons/crane-tool-svgrepo-com-white.svg' alt='Construction crane icon')               
+                        span.assets-details-features-text <strong>Construction Year: </strong> 
+                        span= asset.yearBuilt
+                if asset.description.text
+                    div.asset-details-description-smallViewport-container
+                        each text in asset.description.text
+                            div.asset-details-description!= text
+                if asset.description.listOne
+                    div.asset-details-description-smallViewport-container
+                        div.asset-details-description.assets-details-description-title!= asset.description.listOne.listOneTitle
+                        each text in asset.description.listOne.listOneText 
+                            div.asset-details-description!= `● ` + text        
+                if asset.description.listTwo
+                    div.asset-details-description-smallViewport-container
+                        div.asset-details-description.assets-details-description-title!= asset.description.listTwo.listTwoTitle
+                        each text in asset.description.listTwo.listTwoText 
+                            div.asset-details-description!= `● ` + text        
+                div.asset-btn-smallViewport-container.text-center
+                    button.btn-cta-asset.to-calendly-btn Contact Us
+                    button.share-btn-white
+                        img.share-btn-icon(src='/img/icons/share-svgrepo-com-outline.svg' alt='Share page icon')   
+            .col-md-12.col-xl-10.asset-details-description-middleViewport-col.en-asset-details-description-middleViewport-col
+                if asset.description.text
+                    div.assets-details-description-container.assets
+                        each text in asset.description.text
+                            div.asset-details-description!= text
+                if asset.description.listOne
+                    div.assets-details-description-container
+                        div.asset-details-description.assets-details-description-title!= asset.description.listOne.listOneTitle
+                        each text in asset.description.listOne.listOneText 
+                            div.asset-details-description!= `● ` + text  
+                if asset.description.listTwo
+                    div.assets-details-description-container
+                        div.asset-details-description.assets-details-description-title!= asset.description.listTwo.listTwoTitle
+                        each text in asset.description.listTwo.listTwoText 
+                            div.asset-details-description!= `● ` + text 
+                div.asset-btn-middleViewport-container.text-center
+                    button.asset-favorite-btn-white
+                        img.favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline.svg' alt='Heart Icon') 
+                    button.btn-cta-asset.to-calendly-btn Contact Us
+                    button.share-btn-white
+                        img.share-btn-icon(src='/img/icons/share-svgrepo-com-outline.svg' alt='Share page icon')  
+
+    .container-fluid.asset-amenities-container.py-xxl-5
+        .row.asset-amenities-row.mx-4.justify-content-center 
+            .col-10.asset-amenities-headline-col
+                h2.asset-amenities-headline Amenities
+            .col-10.asset-amenities-col
+                .row.asset-amenities-details-row.en-asset-amenities-details-row
+                    if asset.amenities
+                        each amenity in asset.amenities    
+                            .col-12.col-md-6.col-lg-4.col-xl-3
+                                div.asset-amenities-details-container
+                                    img.assets-details-features-icon(src='/img/icons/check-svgrepo-com.svg' alt='V mark icon') 
+                                    span= amenity
+
+    if asset.videoURL    
+        .container-fluid.asset-video-container.py-xxl-3
+            .row.asset-video-row.mx-4.justify-content-center 
+                .col-12.col-md-10.asset-video-col.text-center(role="region" aria-labelledby="assetVideoDescription")
+                    iframe(src=`${asset.videoURL}` frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen).asset-video                    
+                span.visually-hidden(id="assetVideoDescription")=`Video of the property ${asset.name}`
+    
+    if asset.location.coordinates[0] && asset.location.coordinates[1]
+        .container-fluid.asset-map-container.py-xxl-3
+            .row.asset-map-row.mx-4.justify-content-center 
+                .col-10.asset-map-healine-col
+                    h2.asset-map-headline Location
+                .col-12.col-xl-10.asset-map-col
+                    div.asset-map(id='map' data-long=`${asset.location.coordinates[0]}` data-lat=`${asset.location.coordinates[1]}` data-title=`${asset.location.title}`)
+
+    .container.asset-back-to-results-container.text-center.py-xxl-5
+        button.asset-back-to-results-btn.w-75 Back to the previous page
+    
+    .container-fluid.asset-related-assets-container
+        .row.asset-related-assets-row.justify-content-center.mx-2
+            .col-10.asset-related-assets-headline-col
+                h2.asset-related-assets-headline.text-center Similar Properties
+            each asset in hotAssets
+                include _assetsCards
+        .row.mobile-asset-related-assets-row.justify-content-center.mx-2
+            .col-10.asset-related-assets-headline-col
+                h2.asset-related-assets-headline.text-center Similar Properties
+            each asset in hotAssets
+                include _mobileAssetsCards  
+
+    .container-fluid.asset-contact-us-container-fixed.position-fixed.text-center.bottom-0
+        .row
+            .col-12.contact-us-fixed-col.py-3
+                div#crmWebToEntityForm.crmWebToEntityForm
+                    form.contact-us-form#webform6296617000000479035(action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads6296617000000479035 method='POST' accept-charset='UTF-8' novalidate)
+                        input(type='text' style='display:none;' name='xnQsjsdp' value='59a0780e6b2791aec2fc494a0d52812511ef98c0f6123210fdc332d6fa0b9e22')
+                        input#zc_gad(type='hidden' name='zc_gad' value='')
+                        input(type='text' style='display:none;' name='xmIwtLD' value='7334e6acba558f934b954c69f5851611538edbf846a3d2f15f807f241012015c2f9c9c0839f214a112e56e062e05be4f')
+                        input(type='text' style='display:none;' name='actionType' value='TGVhZHM=')
+                        input(type='text' style='display:none;' name='returnURL' value='https://www.dirabulgarit.com/contact-us-confirm')
+                        .row.contact-us-fixed-row.align-items-center.d-flex.justify-content-center
+                            .col-12.contact-us-headline-col
+                                div.contact-us-fixed-headline Contact us and we will return to you asap
+                            .col-6.col-md-2.contact-us-input-fixed-col
+                                input.contact-us-input.contact-us-input.contact-us-name-input.form-control.en-search-filter-input(type='text' name='Last Name' maxlength='200' placeholder='Name' aria-label='Name' aria-describedby='basic-addon1' required)                            
+                                .invalid-tooltip Please enter your name
+                            .col-6.col-md-2.contact-us-input-fixed-col
+                                input.contact-us-input.contact-us-phone-input.form-control.en-search-filter-input(type='text' name='Phone' maxlength='10' placeholder='Phone number' aria-label='Phone number' aria-describedby='basic-addon1' pattern='[0-9]{10}' required)
+                                .invalid-tooltip.contact-us-phone-invalid Please enter a valid phone number
+                            .col-6.col-md-2.contact-us-input-fixed-col
+                                input.contact-us-input.contact-us-email-input.form-control.en-search-filter-input(type='email' ftype='email' autocomplete='false' name='Email' crmlabel='' maxlength='100' placeholder='Email  ' aria-label='Email' aria-describedby='basic-addon1' pattern='[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}' required)
+                                .invalid-tooltip.contact-us-email-invalid Please enter a valid Email address
+                            .col-6.col-md-3.contact-us-input-fixed-col    
+                                textarea.contact-us-textarea.en-contact-us-textarea.contact-us-description-input.form-control(id='Description' name='Description' aria-label="Contact request description" rows="2")=`I would like to hear more details about the property "${asset.name}", ID number "${asset.id}"`
+                            .col-12.col-md-3.col-lg-2.contact-us-fixed-bottom-col 
+                                input.contact-us-button-fixed.my-2.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Send' title='Submit')             

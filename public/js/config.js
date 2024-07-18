@@ -3,7 +3,7 @@ export const Elements = {
   whatsappWidget: document.querySelector('.whatsapp-widget'),
   enableWidget: document.getElementById('enable-toolbar-trigger'),
   // Buttons
-  toCalendlyBtn: document.querySelectorAll('.to-calendly-btn'),
+  toContactUsBtn: document.querySelectorAll('.to-calendly-btn'),
   ctaBtnWhite: document.querySelectorAll('.btn-cta-white'),
   pricingCtaBtn: document.querySelector('.pricing-cta-btn'),
   investGuideBtn: document.querySelector('.invest-guide-btn'),
@@ -27,6 +27,13 @@ export const Elements = {
   mobileCurrencyDdBtn: document.querySelector('.mobile-currency-dropdown-btn'),
   mobileActiveCurrencyIcon: document.querySelector('.mobile-navbar-active-currency-icon'),
   mobileNotActiveCurrencyIcon: document.querySelector('.mobile-navbar-not-active-currency-icon'),
+  langDdBtn: document.querySelector('.lang-dropdown-btn'),
+  langIcon: document.querySelector('.navbar-lang-icon'),
+  activeLangIcon: document.querySelector('.navbar-active-lang-icon'),
+  notActiveLangIcon: document.querySelector('.navbar-not-active-lang-icon'),
+  mobileLangDdBtn: document.querySelector('.mobile-lang-dropdown-btn'),
+  mobileActiveLangIcon: document.querySelector('.mobile-navbar-active-lang-icon'),
+  mobileNotActiveLangIcon: document.querySelector('.mobile-navbar-not-active-lang-icon'),
   favoriteBtn: document.querySelector('.asset-favorite-btn'),
   mobileFavoriteBtn: document.querySelector('.mobile-asset-favorite-btn'),
   // Overview
@@ -136,6 +143,9 @@ export const Elements = {
   al6ProjectGreenAreaNumber: document.querySelector('.project-numbers-green-area-number-atlantis-l6'),
 };
 
+export const baseDevUrl = 'http://127.0.0.1:8000/';
+export const baseProdUrl = 'https://www.dirabulgarit.com/';
+
 export const euroIconSrc = '/img/icons/euro.svg';
 export const mobileEuroIconSrc = '/img/icons/euro-white.svg';
 export const euroIconAlt = 'אייקון של מטבע היורו';
@@ -145,6 +155,14 @@ export const nisIconAlt = 'אייקון של מטבע השקל';
 export const CURRENCY_KEY = 'currency';
 export const DEFAULT_CURRENCY = 'euro';
 export const NIS_CURRENCY = 'nis';
+
+export const heIconSrc = '/img/icons/flag-for-flag-israel-svgrepo-com.svg';
+export const heIconAlt = 'אייקון של דגל ישראל';
+export const enIconSrc = '/img/icons/flag-for-flag-united-states-svgrepo-com.svg';
+export const enIconAlt = 'אייקון של דגל ארצות הברית';
+export const LANGUAGE_KEY = 'language';
+export const DEFAULT_LANGUAGE = 'he';
+export const EN_LANGUAGE = 'en';
 
 export const FAVORITE_KEY = 'favorite';
 export const assetFavoriteIconOutlineSrc = '/img/icons/heart-empty-svgrepo-com-outline.svg';

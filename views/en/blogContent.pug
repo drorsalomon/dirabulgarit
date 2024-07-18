@@ -1,0 +1,69 @@
+extends base 
+
+block head
+    meta(property="og:title" content=`${blog.blogTitle}`)
+    meta(property="og:description" content=`${blog.sectionOneTexts[0]}`)
+    meta(property="og:image" content=`${blog.imgSrc}`)
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../he/_headLinksScripts
+
+block content
+
+    .container-fluid
+        .row.blog-content-row.justify-content-center 
+            .col-10.blog-content-text-col
+                h1.blog-content-title= blog.blogTitle
+                div.blog-content-date= `${moment(blog.date).format('DD.MM.YYYY')}`
+                if blog.sectionOneTitle     
+                    h2.blog-content-textSectionTitle= blog.sectionOneTitle
+                if blog.sectionOneTexts
+                    each text in blog.sectionOneTexts
+                        div.blog-content-text= text
+                div.blog-section-separator        
+                if blog.sectionTwoTitle     
+                    h2.blog-content-textSectionTitle= blog.sectionTwoTitle
+                if blog.sectionTwoTexts
+                    each text in blog.sectionTwoTexts
+                        div.blog-content-text= text
+                div.blog-section-separator          
+                if blog.sectionThreeTitle     
+                    h2.blog-content-textSectionTitle= blog.sectionThreeTitle
+                if blog.sectionThreeTexts
+                    each text in blog.sectionThreeTexts
+                        div.blog-content-text= text
+                div.blog-section-separator          
+                if blog.sectionFourTitle     
+                    h2.blog-content-textSectionTitle= blog.sectionFourTitle
+                if blog.sectionFourTexts
+                    each text in blog.sectionFourTexts
+                        div.blog-content-text= text
+                div.blog-section-separator          
+                if blog.sectionFiveTitle     
+                    h2.blog-content-textSectionTitle= blog.sectionFiveTitle
+                if blog.sectionFiveTexts
+                    each text in blog.sectionFiveTexts
+                        div.blog-content-text= text
+                div.blog-section-separator          
+                if blog.listOne.listOneTitle
+                    h2.blog-content-listTitle= blog.listOne.listOneTitle
+                if blog.listOne.listOneTexts
+                    each text in blog.listOne.listOneTexts  
+                        div.blog-content-list-text= `● ` + text 
+                div.blog-section-separator          
+                if blog.listTwo.listTwoTitle
+                    h2.blog-content-listTitle= blog.listTwo.listTwoTitle
+                if blog.listTwo.listTwoTexts
+                    each text in blog.listTwo.listTwoTexts  
+                        div.blog-content-list-text= `● ` + text 
+                div.blog-section-separator          
+                if blog.listThree.listThreeTitle
+                    h2.blog-content-listTitle= blog.listThree.listThreeTitle
+                if blog.listThree.listThreeTexts
+                    each text in blog.listThree.listThreeTexts  
+                        div.blog-content-list-text= `● ` + text 
+                div.blog-content-listTitle Dira Bulgarit was established with the aim of helping the Israeli investor find the most worthwhile properties throughout Bulgaria. On our site you will find thousands of properties - from studio apartments in resorts to luxury apartments of three and four rooms in modern projects built to the highest standards. Our team of experts is waiting for you, schedule a video meeting today at a time that is most convenient for you and we will meet you and answer any question so that you can find the most profitable real estate investments for you in Bulgaria.        
+            .col-10.text-center.py-4    
+                    button.btn-cta.pricing-cta-btn.to-calendly-btn(aria-label='Go to contact us page') Contact Us
+                    button.share-btn
+                        img.share-btn-icon(src='/img/icons/share-svgrepo-com-white.svg' alt='Share page icon') 

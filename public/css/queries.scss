@@ -12,6 +12,10 @@
     margin-right: -0.5rem;
   }
 
+  .en-reviews-carousel-item {
+    height: 50rem;
+  }
+
   // ***** Search *****
   .search-filter-dropdown--btn {
     font-size: $h6 !important;
@@ -36,6 +40,10 @@
     height: 58rem !important;
   }
 
+  .en-about-partners-card {
+    height: 67rem !important;
+  }
+
   // ***** Pricing *****
   .pricing-card-text {
     font-size: $h7;
@@ -44,10 +52,6 @@
   .pricing-card-icon {
     width: 1.7rem;
     height: 1.7rem;
-  }
-
-  .pricing-premium-badge {
-    width: 16rem;
   }
 
   // ***** Contact Us *****
@@ -71,11 +75,6 @@
   .about-partners-card {
     height: 62rem !important;
   }
-
-  // ***** Pricing *****
-  .pricing-premium-badge {
-    width: 20rem;
-  }
 }
 
 // Small
@@ -87,6 +86,10 @@
 
   .hero-headline {
     font-size: $h1;
+  }
+
+  .en-hero-container {
+    height: 80rem;
   }
 
   // ***** Main Page About *****
@@ -124,6 +127,10 @@
   // ***** Main Page Reviews *****
   .reviews-carousel-item {
     height: 42rem;
+  }
+
+  .en-reviews-carousel-item {
+    height: 48rem;
   }
 
   .mainpage-reviews-review {
@@ -214,6 +221,10 @@
     height: 58rem !important;
   }
 
+  .en-about-partners-card {
+    height: 67rem !important;
+  }
+
   // ***** Contact Us *****
   .calendly-col {
     height: 150rem;
@@ -242,7 +253,7 @@
   }
 
   .pricing-premium-badge {
-    width: 15.7rem;
+    margin: 6rem 0 0 -3rem;
   }
 
   // ***** Project *****
@@ -330,6 +341,10 @@
     font-size: $h3;
   }
 
+  .en-hero-container {
+    height: 100rem;
+  }
+
   // ***** Search Selection *****
   .search-filter-options--btn {
     font-size: $h6 !important;
@@ -394,6 +409,10 @@
     font-size: $h4;
   }
 
+  .mainpage-howitworks-steps--col {
+    height: 20rem;
+  }
+
   // ***** Why Bulgaria *****
   .mainpage-why-bulgaria-bg-video-container {
     height: 45rem;
@@ -451,6 +470,10 @@
     height: 34rem;
   }
 
+  .en-reviews-carousel-item {
+    height: 46rem;
+  }
+
   .mainpage-reviews-img {
     height: 13rem;
     width: 13rem;
@@ -489,6 +512,30 @@
   // ***** Main Page Blog *****
   .mainpage-blog-tag {
     font-size: $h4;
+  }
+
+  .mainpage-blog-card {
+    height: 40rem !important;
+  }
+
+  .mainpage-blog-card-title-col {
+    height: 16rem !important;
+  }
+
+  .mainpage-blog-card-text-col {
+    height: 13rem !important;
+  }
+
+  .en-mainpage-blog-card {
+    height: 47rem !important;
+  }
+
+  .en-mainpage-blog-card-title-col {
+    height: 20rem !important;
+  }
+
+  .en-mainpage-blog-card-text-col {
+    height: 16rem !important;
   }
 
   // ***** Main Page Contact Us *****
@@ -557,6 +604,10 @@
     height: 57rem !important;
   }
 
+  .en-about-partners-card {
+    height: 69rem !important;
+  }
+
   // ***** Pricing *****
   .pricing-card-icon {
     width: 2.3rem;
@@ -565,10 +616,6 @@
 
   .pricing-tag {
     font-size: $h4;
-  }
-
-  .pricing-premium-badge {
-    width: 19.5rem;
   }
 
   // ***** Project *****
@@ -797,6 +844,35 @@
     height: 30rem;
   }
 
+  .en-reviews-carousel-item {
+    height: 37rem;
+  }
+
+  // ***** Main Page Blog *****
+  .mainpage-blog-card {
+    height: 53rem !important;
+  }
+
+  .mainpage-blog-card-title-col {
+    height: 20rem !important;
+  }
+
+  .mainpage-blog-card-text-col {
+    height: 21rem !important;
+  }
+
+  .en-mainpage-blog-card {
+    height: 65rem !important;
+  }
+
+  .en-mainpage-blog-card-title-col {
+    height: 27rem !important;
+  }
+
+  .en-mainpage-blog-card-text-col {
+    height: 28rem !important;
+  }
+
   // ***** Search *****
   .search-container {
     display: block;
@@ -900,6 +976,10 @@
     height: 5.6rem !important;
   }
 
+  .en-about-partners-card {
+    height: 65rem !important;
+  }
+
   // ***** Blog *****
   .blog-card {
     -webkit-transition: all 0.3s;
@@ -944,10 +1024,6 @@
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
-  }
-
-  .pricing-premium-badge {
-    width: 15.8rem;
   }
 
   // ***** Project *****
@@ -1023,7 +1099,9 @@
   .navbar-mobile-container,
   .mobile-asset-favorite-btn,
   .mobile-currency-dropdown-btn,
-  .mobile-currency-collapse {
+  .mobile-currency-collapse,
+  .mobile-lang-dropdown-btn,
+  .mobile-lang-collapse {
     display: none !important;
   }
 
@@ -1091,6 +1169,12 @@
     transform: rotate(90deg);
   }
 
+  .en-projects-dropdown-btn::after {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+
   .assets-catalog-dropdown-item:hover,
   .projects-dropdown-item:hover {
     background-color: $bg-color-faded !important;
@@ -1111,6 +1195,11 @@
     display: none;
   }
 
+  .en-projects-dropdown-menu {
+    left: 95.5%;
+    width: 17rem;
+  }
+
   .assets-catalog-dropdown:hover > .dropdown-menu,
   .dropdown-submenu:hover > .dropdown-menu {
     display: block;
@@ -1120,7 +1209,8 @@
     display: none;
   }
 
-  .currency-nav-item {
+  .currency-nav-item,
+  .lang-nav-item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1180,6 +1270,11 @@
     height: 27rem;
   }
 
+  .en-reviews-carousel-item {
+    height: 33rem;
+    padding: 5rem;
+  }
+
   .mainpage-reviews-img {
     height: 16rem;
     width: 16rem;
@@ -1191,6 +1286,31 @@
 
   .carousel-control-next {
     margin-right: 0rem;
+  }
+
+  // ***** Main Page Blog *****
+  .mainpage-blog-card {
+    height: 47rem !important;
+  }
+
+  .mainpage-blog-card-title-col {
+    height: 18rem !important;
+  }
+
+  .mainpage-blog-card-text-col {
+    height: 18rem !important;
+  }
+
+  .en-mainpage-blog-card {
+    height: 59rem !important;
+  }
+
+  .en-mainpage-blog-card-title-col {
+    height: 23rem !important;
+  }
+
+  .en-mainpage-blog-card-text-col {
+    height: 24rem !important;
   }
 
   // ***** Asset *****
@@ -1232,6 +1352,10 @@
     height: 62rem !important;
   }
 
+  .en-about-partners-card {
+    height: 68rem !important;
+  }
+
   // ***** Contact Us *****
   .calendly-text-headline {
     font-size: $h2;
@@ -1254,11 +1378,6 @@
     -webkit-transform: none !important;
     -ms-transform: none !important;
     transform: none !important;
-  }
-
-  // ***** Pricing *****
-  .pricing-premium-badge {
-    width: 21rem;
   }
 
   // ***** Footer *****
@@ -1382,6 +1501,10 @@
     height: 65rem;
   }
 
+  .en-hero-container {
+    height: 75rem;
+  }
+
   // ***** Main Page About *****
   .mainpage-about-container {
     height: 100rem;
@@ -1409,6 +1532,31 @@
     margin-right: -3rem;
   }
 
+  // ***** Main Page Blog *****
+  .mainpage-blog-card {
+    height: 41rem !important;
+  }
+
+  .mainpage-blog-card-title-col {
+    height: 15rem !important;
+  }
+
+  .mainpage-blog-card-text-col {
+    height: 15rem !important;
+  }
+
+  .en-mainpage-blog-card {
+    height: 52rem !important;
+  }
+
+  .en-mainpage-blog-card-title-col {
+    height: 22rem !important;
+  }
+
+  .en-mainpage-blog-card-text-col {
+    height: 19rem !important;
+  }
+
   // ***** Asset *****
   .asset-gallery-thumbnail {
     height: 7rem;
@@ -1429,9 +1577,8 @@
     height: 58rem !important;
   }
 
-  // ***** Pricing *****
-  .pricing-premium-badge {
-    width: 18rem;
+  .en-about-partners-card {
+    height: 75rem !important;
   }
 
   // ***** Contact Us *****

@@ -142,17 +142,30 @@ nav {
   width: 3rem;
 }
 
-.currency-nav-item {
+.currency-nav-item,
+.lang-nav-item {
   display: none;
 }
 
-.mobile-currency-dropdown-btn,
-.mobile-navbar-not-active-currency-icon {
-  margin-right: 4.5rem;
+.mobile-currency-dropdown-btn {
+  margin-right: 2.7rem;
 }
 
 .mobile-navbar-not-active-currency-icon {
+  margin-right: 4rem;
+}
+
+.mobile-navbar-not-active-currency-icon,
+.mobile-navbar-not-active-lang-icon {
   margin-bottom: 1rem;
+}
+
+.mobile-lang-dropdown-btn {
+  margin-right: 1rem;
+}
+
+.mobile-navbar-not-active-lang-icon {
+  margin-right: 1.2rem;
 }
 
 .currency-dropdown-btn,
@@ -167,7 +180,8 @@ nav {
   display: none !important;
 }
 
-.currency-dropdown-menu {
+.currency-dropdown-menu,
+.lang-dropdown-menu {
   border: none !important;
   background-color: rgba(255, 255, 255, 0) !important;
   padding: 0 !important;

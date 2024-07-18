@@ -1,0 +1,20 @@
+extends base 
+
+block head
+    meta(property="og:image" content='/img/error-page-image.webp')
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../he/_headLinksScripts
+
+block content
+
+    .container-fluid.error-main-container
+        .row.error-row.align-items-center.justify-content-center.mx-4.py-xxl-5
+            .col-12.col-md-6.error-text-col 
+                div.error-headline 404
+                div.error-border
+                div.error-text Oops! We can't find the page you were looking for
+                button.error-btn(aria-label='Back to the home page') Home Page
+                div.error-msg= msg
+            .col-12.col-md-6.col-xl-4.d-md-flex.justify-content-md-center.error-img-col      
+                img.error-img.img-fluid(src='/img/error-page-image.webp' alt='Image of a peer with a sunset background')

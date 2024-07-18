@@ -4,7 +4,7 @@ const sendErrorDev = (err, req, res) => {
   console.error('ERROR 💥', err);
   console.log(err.message);
   console.log(err.name);
-  return res.status(err.statusCode).render('error', {
+  return res.status(err.statusCode).render(`${res.locals.lang}/error`, {
     title: 'Something went wrong!',
     msg: err.message,
   });
@@ -22,7 +22,7 @@ const sendErrorProd = (err, req, res) => {
   // If the error is a bug in the app we want to log the error for review and send the user a generic message
   // Send generic message
   console.error('ERROR 💥', err);
-  return res.status(err.statusCode).render('error', {
+  return res.status(err.statusCode).render(`${res.locals.lang}/error`, {
     title: 'Something went wrong!',
   });
 };

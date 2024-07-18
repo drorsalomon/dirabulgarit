@@ -56,6 +56,11 @@
   margin-right: 1.5rem;
 }
 
+.en-search-results-filters-sort--btn::after {
+  margin-right: 0;
+  margin-left: 1.5rem;
+}
+
 .search-results-filters-list {
   border: none !important;
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15) !important;

@@ -1,0 +1,82 @@
+nav.navbar.navbar-expand-xl.fixed-top  
+  .container.navbar-container
+    .container.navbar-mobile-container
+      .row
+        .col-9.col-sm-11.text-start
+          a.navbar-brand.mobile-navbar-brand(href='/en')
+            img.navbar-logo(src='/img/logo.png' alt='Dira Bulgarit Logo')  
+        .col-1.d-flex.align-content-center
+          button.navbar-toggler.collapsed(type='button' data-bs-toggle='offcanvas' data-bs-target='#navbarContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Open links menu')
+            span.navbar-toggler-icon
+    div.offcanvas.offcanvas-start.w-auto(tabindex='-1' id='navbarContent' aria-labelledby='offcanvasNavbarLabel')
+      div.offcanvas-body
+        div.btn-cta--container.text-center
+          button.btn-cta.btn-cta--offcanvas.to-calendly-btn(aria-label='Open contact us page') Contact Us
+        div.text-center  
+          button.mobile-asset-favorite-btn
+            img.header-favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline-white.svg' alt='Heart icon') 
+          button.btn.btn-secondary.dropdown-toggle.lang-dropdown-btn.mobile-lang-dropdown-btn(type='button' data-bs-toggle='collapse' data-bs-target="#langBtnCollapse" aria-expanded="false" aria-controls="langBtnCollapse" aria-label='Choose language')
+            img.navbar-lang-icon.mobile-navbar-active-lang-icon(src='' alt='')   
+            //-div
+              img.navbar-lang-icon.mobile-navbar-not-active-lang-icon(src='/img/icons/flag-for-flag-russia-svgrepo-com.svg' alt='')       
+          button.btn.btn-secondary.dropdown-toggle.currency-dropdown-btn.mobile-currency-dropdown-btn(type='button' data-bs-toggle='collapse' data-bs-target="#currencyBtnCollapse" aria-expanded="false" aria-controls="currencyBtnCollapse" aria-label='Choose currency')
+            img.navbar-currency-icon.mobile-navbar-active-currency-icon(src='' alt='')   
+          .row
+            .col-7.p-0
+              div.collapse.multi-collapse.mobile-lang-collapse(id="langBtnCollapse")
+                img.navbar-lang-icon.mobile-navbar-not-active-lang-icon.en-mobile-navbar-not-active-lang-icon(src='' alt='')       
+            .col-2.p-0
+              div.collapse.multi-collapse.mobile-currency-collapse(id="currencyBtnCollapse")
+                img.navbar-currency-icon.mobile-navbar-not-active-currency-icon.en-mobile-navbar-not-active-currency-icon(src='' alt='')       
+        ul.navbar-nav.en-navbar-nav.align-items-xl-center.justify-content-xl-evenly
+          li.nav-item.en-nav-item
+            a.nav-link.nav-el.homepage-link(href='/en') Home
+          li.nav-item.en-nav-item.dropdown.assets-catalog-dropdown
+            a.nav-link.dropdown-toggle.assets-catalog-dropdown-btn(role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label='Open properties catalog') Catalog
+            ul.dropdown-menu.assets-catalog-dropdown-menu
+              li
+                a.nav-link.dropdown-item.assets-catalog-dropdown-item.text-start(href='/en/search') Property Search
+              li.dropdown-submenu.projects-dropdown
+                a.nav-link.dropdown-item.dropdown-toggle.projects-dropdown-btn.en-projects-dropdown-btn(role="button" aria-expanded="false") Projects
+                ul.dropdown-menu.projects-dropdown-menu.en-projects-dropdown-menu
+                  li
+                    a.nav-link.dropdown-item.projects-dropdown-item(href='/en/project/atlantis-aria-2') Atlantis Aria 2
+                  li
+                    a.nav-link.dropdown-item.projects-dropdown-item(href='/en/project/atlantis-aria-3') Atlantis Aria 3
+                  li
+                    a.nav-link.dropdown-item.projects-dropdown-item(href='/en/project/atlantis-euphoria') Atlantis Euphoria
+                  li
+                    a.nav-link.dropdown-item.projects-dropdown-item(href='/en/project/atlantis-barcode') Atlantis Barcode
+                  li
+                    a.nav-link.dropdown-item.projects-dropdown-item(href='/en/project/atlantis-l6') Atlantis L6
+          li.nav-item.en-nav-item
+            a.nav-link.nav-el(href='/en/q&a') Q&A
+          li.nav-item.en-nav-item
+            a.nav-link.nav-el(href='/en/invest') Bulgaria Investment Guide
+          li.nav-item.en-nav-item
+            a.nav-link.nav-el(href='/en/about') About Us
+          li.nav-item.en-nav-item
+            a.nav-link.nav-el(href='/en/blog') Blog
+          li.nav-item.en-nav-item
+            a.nav-link.nav-el(href='/en/pricing') Pricing
+          li.nav-item.en-nav-item
+            button.asset-favorite-btn
+              img.header-favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline.svg' alt='Heart icon') 
+          li.nav-item.en-nav-item.lang-nav-item
+            .dropdown
+              button.btn.btn-secondary.dropdown-toggle.lang-dropdown-btn.lang-dropdown-btn(type='button' data-bs-toggle='dropdown' aria-expanded="false" aria-label='Choose language')
+                img.navbar-lang-icon.navbar-active-lang-icon(src='/img/icons/placeholder-thin-svgrepo-com-white.svg' alt='')    
+              ul.dropdown-menu.lang-dropdown-menu
+                li.lang-dropdown-menu-item 
+                  img.navbar-lang-icon.navbar-not-active-lang-icon(src='' alt='')      
+                //-div
+                  img.navbar-lang-icon.navbar-not-active-lang-icon(src='/img/icons/flag-for-flag-russia-svgrepo-com.svg' alt='')       
+          li.nav-item.en-nav-item.currency-nav-item  
+            .dropend
+              button.btn.btn-secondary.dropdown-toggle.currency-dropdown-btn(type='button' data-bs-toggle='dropdown' aria-expanded='false' aria-label='Choose currency')
+                img.navbar-currency-icon.navbar-active-currency-icon(src='/img/icons/placeholder-thin-svgrepo-com-white.svg' alt='')   
+              ul.dropdown-menu.currency-dropdown-menu
+                li.currency-dropdown-menu-item 
+                  img.navbar-currency-icon.navbar-not-active-currency-icon(src='' alt='')  
+    a.navbar-brand.laptop-navbar-brand(href='/en')
+      img.navbar-logo(src='/img/logo.png' alt='Dira Bulgarit Logo')    

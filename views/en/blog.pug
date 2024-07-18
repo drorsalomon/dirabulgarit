@@ -1,0 +1,29 @@
+extends base 
+
+block head
+    meta(property="og:image" content='/img/hero-burgas.webp')
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../he/_headLinksScripts
+
+block content
+
+    .container.blog-cards-container
+        .row.blog-headline-row.justify-content-start.mx-auto 
+                .col-10.blog-headline-col
+                    h1.blog-headline Important To Know
+                    div.blog-headline-text At Dira Bulgarit we believe that knowledge is power, that's why we have put together articles for you on a selection of topics such as investing in Bulgaria, life in Bulgaria, taxation in Bulgaria, naturalization in Bulgaria and more.
+        .row.blog-cards-row.mx-auto 
+            .col-12.blog-cards-col.en-blog-cards-col 
+                each blog in blogs       
+                    .card.blog-card(data-slug=`${blog.slug}`)
+                        .row.g-0.d-flex.align-items-lg-center
+                            .col-md-4.d-flex
+                                img.blog-card-img.img-fluid(src=`${blog.imgSrc}` alt=`${blog.imgAlt}` loading="lazy")
+                            .col-md-8
+                                .card-body
+                                    h2.card-title.blog-card-title= blog.blogTitle
+                                    div.blog-card-date= `${moment(blog.date).format('DD.MM.YYYY')}`
+                                    div.card-text.blog-card-text= blog.sectionOneTexts[0]
+                                    div.text-center.py-3
+                                        button.blog-card-btn(aria-label='Go to blog page') Continue Reading

@@ -14,21 +14,32 @@ nav.navbar.navbar-expand-xl.fixed-top
           button.btn-cta.btn-cta--offcanvas.to-calendly-btn(aria-label='מעבר לעמוד יצירת קשר') צרו קשר
         button.mobile-asset-favorite-btn
           img.header-favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline-white.svg' alt='Heart icon') 
-        button.btn.btn-secondary.dropdown-toggle.currency-dropdown-btn.mobile-currency-dropdown-btn(type='button' data-bs-toggle='collapse' data-bs-target="#currencyBtnCollapse" aria-expanded="false" aria-controls="currencyBtnCollapse" aria-label='בחירת מטבע לתצוגה באתר')
-          img.navbar-currency-icon.mobile-navbar-active-currency-icon(src='/img/icons/placeholder-thin-svgrepo-com-white.svg' alt='')   
-        div.collapse.mobile-currency-collapse(id="currencyBtnCollapse")
-          img.navbar-currency-icon.mobile-navbar-not-active-currency-icon(src='' alt='')       
-        //-button.btn.btn-secondary.dropdown-toggle.lang-dropdown-btn.mobile-lang-dropdown-btn(type='button' data-bs-toggle='collapse' data-bs-target="#langBtnCollapse" aria-expanded="false" aria-controls="langBtnCollapse")
-          img.navbar-lang-icon.mobile-navbar-active-lang-icon(src='/img/icons/flag-for-flag-israel-svgrepo-com.svg' alt='')   
-        //-div.collapse(id="langBtnCollapse")
-          div
+        button.btn.btn-secondary.dropdown-toggle.lang-dropdown-btn.mobile-lang-dropdown-btn(type='button' data-bs-toggle='collapse' data-bs-target="#langBtnCollapse" aria-expanded="false" aria-controls="langBtnCollapse")
+          img.navbar-lang-icon.mobile-navbar-active-lang-icon(src='' alt='')   
+          //-div
             img.navbar-lang-icon.mobile-navbar-not-active-lang-icon(src='/img/icons/flag-for-flag-russia-svgrepo-com.svg' alt='')       
-          div
-            img.navbar-lang-icon.mobile-navbar-not-active-lang-icon(src='/img/icons/flag-for-flag-united-states-svgrepo-com.svg' alt='')       
+        button.btn.btn-secondary.dropdown-toggle.currency-dropdown-btn.mobile-currency-dropdown-btn(type='button' data-bs-toggle='collapse' data-bs-target="#currencyBtnCollapse" aria-expanded="false" aria-controls="currencyBtnCollapse" aria-label='בחירת מטבע לתצוגה באתר')
+          img.navbar-currency-icon.mobile-navbar-active-currency-icon(src='' alt='')   
+        .row
+          .col.p-0
+            div.collapse.multi-collapse.mobile-lang-collapse(id="langBtnCollapse")
+              img.navbar-lang-icon.mobile-navbar-not-active-lang-icon(src='' alt='')       
+          .col-4.p-0
+            div.collapse.multi-collapse.mobile-currency-collapse(id="currencyBtnCollapse")
+              img.navbar-currency-icon.mobile-navbar-not-active-currency-icon(src='' alt='')       
         ul.navbar-nav.align-items-xl-center.justify-content-xl-evenly
           li.nav-item
             button.asset-favorite-btn
               img.header-favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline.svg' alt='אייקון של לב') 
+          li.nav-item.lang-nav-item
+            .dropdown
+              button.btn.btn-secondary.dropdown-toggle.lang-dropdown-btn.lang-dropdown-btn(type='button' data-bs-toggle='dropdown' aria-expanded="false" aria-label='בחירת שפה לתצוגה באתר')
+                img.navbar-lang-icon.navbar-active-lang-icon(src='/img/icons/placeholder-thin-svgrepo-com-white.svg' alt='')    
+              ul.dropdown-menu.lang-dropdown-menu
+                li.lang-dropdown-menu-item 
+                  img.navbar-lang-icon.navbar-not-active-lang-icon(src='' alt='')      
+                //-div
+                  img.navbar-lang-icon.navbar-not-active-lang-icon(src='/img/icons/flag-for-flag-russia-svgrepo-com.svg' alt='')       
           li.nav-item.currency-nav-item  
             .dropend
               button.btn.btn-secondary.dropdown-toggle.currency-dropdown-btn(type='button' data-bs-toggle='dropdown' aria-expanded='false' aria-label='בחירת מטבע לתצוגה באתר')

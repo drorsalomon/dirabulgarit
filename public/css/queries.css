@@ -5,6 +5,9 @@
   .carousel-control-next {
     margin-right: -0.5rem;
   }
+  .en-reviews-carousel-item {
+    height: 50rem;
+  }
   .search-filter-dropdown--btn {
     font-size: 1.6rem !important;
   }
@@ -20,15 +23,15 @@
   .about-partners-card {
     height: 58rem !important;
   }
+  .en-about-partners-card {
+    height: 67rem !important;
+  }
   .pricing-card-text {
     font-size: 1.2rem;
   }
   .pricing-card-icon {
     width: 1.7rem;
     height: 1.7rem;
-  }
-  .pricing-premium-badge {
-    width: 16rem;
   }
   .calendly-widget-container {
     top: 182%;
@@ -44,9 +47,6 @@
   .about-partners-card {
     height: 62rem !important;
   }
-  .pricing-premium-badge {
-    width: 20rem;
-  }
 }
 @media only screen and (min-width: 576px) {
   .hero-container {
@@ -54,6 +54,9 @@
   }
   .hero-headline {
     font-size: 4.8rem;
+  }
+  .en-hero-container {
+    height: 80rem;
   }
   .mainpage-about-container {
     height: 85rem;
@@ -79,6 +82,9 @@
   }
   .reviews-carousel-item {
     height: 42rem;
+  }
+  .en-reviews-carousel-item {
+    height: 48rem;
   }
   .mainpage-reviews-review {
     font-size: 1.6rem;
@@ -144,6 +150,9 @@
   .about-partners-card {
     height: 58rem !important;
   }
+  .en-about-partners-card {
+    height: 67rem !important;
+  }
   .calendly-col {
     height: 150rem;
   }
@@ -164,7 +173,7 @@
     height: 2rem;
   }
   .pricing-premium-badge {
-    width: 15.7rem;
+    margin: 6rem 0 0 -3rem;
   }
   .project-main-image-headline.project-main-image-headline-atlantis-aria-3 {
     position: absolute;
@@ -272,6 +281,9 @@
   .hero-text {
     font-size: 3.4rem;
   }
+  .en-hero-container {
+    height: 100rem;
+  }
   .search-filter-options--btn {
     font-size: 1.6rem !important;
   }
@@ -318,6 +330,9 @@
   .mainpage-howitworks-label {
     font-size: 2.4rem;
   }
+  .mainpage-howitworks-steps--col {
+    height: 20rem;
+  }
   .mainpage-why-bulgaria-bg-video-container {
     height: 45rem;
   }
@@ -361,6 +376,9 @@
   .reviews-carousel-item {
     height: 34rem;
   }
+  .en-reviews-carousel-item {
+    height: 46rem;
+  }
   .mainpage-reviews-img {
     height: 13rem;
     width: 13rem;
@@ -392,6 +410,24 @@
   }
   .mainpage-blog-tag {
     font-size: 2.4rem;
+  }
+  .mainpage-blog-card {
+    height: 40rem !important;
+  }
+  .mainpage-blog-card-title-col {
+    height: 16rem !important;
+  }
+  .mainpage-blog-card-text-col {
+    height: 13rem !important;
+  }
+  .en-mainpage-blog-card {
+    height: 47rem !important;
+  }
+  .en-mainpage-blog-card-title-col {
+    height: 20rem !important;
+  }
+  .en-mainpage-blog-card-text-col {
+    height: 16rem !important;
   }
   .mainpage-contact-us-tag {
     font-size: 2.4rem;
@@ -440,15 +476,15 @@
   .about-partners-card {
     height: 57rem !important;
   }
+  .en-about-partners-card {
+    height: 69rem !important;
+  }
   .pricing-card-icon {
     width: 2.3rem;
     height: 2.3rem;
   }
   .pricing-tag {
     font-size: 2.4rem;
-  }
-  .pricing-premium-badge {
-    width: 19.5rem;
   }
   .project-main-image-headline.project-main-image-headline-atlantis-aria-3 {
     position: absolute;
@@ -673,6 +709,27 @@
   .reviews-carousel-item {
     height: 30rem;
   }
+  .en-reviews-carousel-item {
+    height: 37rem;
+  }
+  .mainpage-blog-card {
+    height: 53rem !important;
+  }
+  .mainpage-blog-card-title-col {
+    height: 20rem !important;
+  }
+  .mainpage-blog-card-text-col {
+    height: 21rem !important;
+  }
+  .en-mainpage-blog-card {
+    height: 65rem !important;
+  }
+  .en-mainpage-blog-card-title-col {
+    height: 27rem !important;
+  }
+  .en-mainpage-blog-card-text-col {
+    height: 28rem !important;
+  }
   .search-container {
     display: block;
   }
@@ -749,6 +806,9 @@
     width: 17rem !important;
     height: 5.6rem !important;
   }
+  .en-about-partners-card {
+    height: 65rem !important;
+  }
   .blog-card {
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
@@ -784,9 +844,6 @@
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
-  }
-  .pricing-premium-badge {
-    width: 15.8rem;
   }
   .project-main-image-headline.project-main-image-headline-atlantis-aria-3 {
     position: absolute;
@@ -889,7 +946,9 @@
   .navbar-mobile-container,
   .mobile-asset-favorite-btn,
   .mobile-currency-dropdown-btn,
-  .mobile-currency-collapse {
+  .mobile-currency-collapse,
+  .mobile-lang-dropdown-btn,
+  .mobile-lang-collapse {
     display: none !important;
   }
   .nav-item {
@@ -944,6 +1003,11 @@
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
   }
+  .en-projects-dropdown-btn::after {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
   .assets-catalog-dropdown-item:hover,
   .projects-dropdown-item:hover {
     background-color: rgba(199, 223, 251, 0.4784313725) !important;
@@ -960,6 +1024,10 @@
     right: 95.5%;
     display: none;
   }
+  .en-projects-dropdown-menu {
+    left: 95.5%;
+    width: 17rem;
+  }
   .assets-catalog-dropdown:hover > .dropdown-menu,
   .dropdown-submenu:hover > .dropdown-menu {
     display: block;
@@ -967,7 +1035,8 @@
   .currency-mobile-dropdown-btn {
     display: none;
   }
-  .currency-nav-item {
+  .currency-nav-item,
+  .lang-nav-item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1010,6 +1079,10 @@
   .reviews-carousel-item {
     height: 27rem;
   }
+  .en-reviews-carousel-item {
+    height: 33rem;
+    padding: 5rem;
+  }
   .mainpage-reviews-img {
     height: 16rem;
     width: 16rem;
@@ -1019,6 +1092,24 @@
   }
   .carousel-control-next {
     margin-right: 0rem;
+  }
+  .mainpage-blog-card {
+    height: 47rem !important;
+  }
+  .mainpage-blog-card-title-col {
+    height: 18rem !important;
+  }
+  .mainpage-blog-card-text-col {
+    height: 18rem !important;
+  }
+  .en-mainpage-blog-card {
+    height: 59rem !important;
+  }
+  .en-mainpage-blog-card-title-col {
+    height: 23rem !important;
+  }
+  .en-mainpage-blog-card-text-col {
+    height: 24rem !important;
   }
   .asset-gallery-mainImage {
     height: 43rem;
@@ -1048,6 +1139,9 @@
   .about-partners-card {
     height: 62rem !important;
   }
+  .en-about-partners-card {
+    height: 68rem !important;
+  }
   .calendly-text-headline {
     font-size: 4.2rem;
   }
@@ -1064,9 +1158,6 @@
     -webkit-transform: none !important;
     -ms-transform: none !important;
     transform: none !important;
-  }
-  .pricing-premium-badge {
-    width: 21rem;
   }
   .footer-row,
   .qanda-questions-accordion-row {
@@ -1217,6 +1308,9 @@
   .hero-container {
     height: 65rem;
   }
+  .en-hero-container {
+    height: 75rem;
+  }
   .mainpage-about-container {
     height: 100rem;
   }
@@ -1236,6 +1330,24 @@
   .mainpage-reviews-carousel-next-icon {
     margin-right: -3rem;
   }
+  .mainpage-blog-card {
+    height: 41rem !important;
+  }
+  .mainpage-blog-card-title-col {
+    height: 15rem !important;
+  }
+  .mainpage-blog-card-text-col {
+    height: 15rem !important;
+  }
+  .en-mainpage-blog-card {
+    height: 52rem !important;
+  }
+  .en-mainpage-blog-card-title-col {
+    height: 22rem !important;
+  }
+  .en-mainpage-blog-card-text-col {
+    height: 19rem !important;
+  }
   .asset-gallery-thumbnail {
     height: 7rem;
     width: 12rem;
@@ -1250,8 +1362,8 @@
   .about-partners-card {
     height: 58rem !important;
   }
-  .pricing-premium-badge {
-    width: 18rem;
+  .en-about-partners-card {
+    height: 75rem !important;
   }
   .contact-us-button-fixed {
     width: 20rem !important;

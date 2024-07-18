@@ -6,6 +6,7 @@ const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const hpp = require('hpp');
 const compression = require('compression');
+const session = require('express-session');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -14,15 +15,19 @@ const assetRouter = require('./routes/assetRoutes');
 const projectRouter = require('./routes/projectRoutes');
 const blogRouter = require('./routes/blogRoutes');
 const apiRouter = require('./routes/apiRoutes');
+const enViewRouter = require('./routes/enViewRoutes');
+const enAssetRouter = require('./routes/enAssetRoutes');
+const enProjectRouter = require('./routes/enProjectRoutes');
+const enBlogRouter = require('./routes/enBlogRoutes');
 const { dailyAssetPriceNisUpdate, getZohoRefreshToken } = require('./services/cronJobs');
 
 // Start express app
 const app = express();
 
-app.set('view engine', 'pug');
-app.set('views', path.join(__dirname, 'views'));
-
 // Global Middlewares
+
+// Use bodyParser.json() middleware to parse JSON bodies
+app.use(bodyParser.json({ limit: '100kb' }));
 
 // Set security HTTP requests
 app.use(
@@ -88,9 +93,6 @@ app.use(
 
 app.use(compression());
 
-// Use bodyParser.json() middleware to parse JSON bodies
-app.use(bodyParser.json({ limit: '100kb' }));
-
 // Data sanitization against NoSQL query injection
 app.use(mongoSanitize());
 
@@ -103,12 +105,40 @@ app.use(
 
 // Serving static files
 app.use(express.static(path.join(__dirname, '/public')));
+app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));
 
+app.use(
+  session({
+    secret: 'language',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }, // Set secure to true if using https
+  }),
+);
+
+app.use((req, res, next) => {
+  res.locals.lang = req.session.language || 'he'; // Default language is 'en'
+  next();
+});
+
+app.post('/select-language', (req, res) => {
+  req.session.language = req.body.language;
+  res.locals.lang = req.session.language;
+  res.status(200).json({ status: 'success' });
+});
+
+// Hebrew
 app.use('/', viewRouter);
 app.use('/asset', assetRouter);
 app.use('/project', projectRouter);
 app.use('/blog', blogRouter);
 app.use('/api', apiRouter);
+// English
+app.use('/en', enViewRouter);
+app.use('/en/asset', enAssetRouter);
+app.use('/en/project', enProjectRouter);
+app.use('/en/blog', enBlogRouter);
 
 dailyAssetPriceNisUpdate.start();
 getZohoRefreshToken.start();

@@ -1,6 +1,7 @@
 import { filterAssets } from './asset';
 import { getFavoriteAssets } from './favoriteAssets';
 import { displayMap } from './mapbox';
+import { loadLang } from './language';
 import * as config from './config';
 import * as utils from './utils';
 import * as animation from './animation';
@@ -84,6 +85,21 @@ window.onload = function () {
     utils.switchSearchPriceCurrencyHtmlOnLoad(config.Elements.priceInput, false);
   }
 
+  // If Language isn't set or language is Hebrew
+  if (!JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) || JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE) {
+    // Set default language
+    if (!JSON.parse(localStorage.getItem(config.LANGUAGE_KEY))) {
+      localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.DEFAULT_LANGUAGE));
+    }
+    utils.switchLanguageIconsSrc();
+    loadLang(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
+  }
+  // If language is English
+  else if (JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.EN_LANGUAGE) {
+    utils.switchLanguageIconsSrc(false);
+    loadLang(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
+  }
+
   // Header dropdown menu click (project catalog)
   let dropdownSubmenus = document.querySelectorAll('.projects-dropdown .dropdown-toggle');
   dropdownSubmenus.forEach(function (dropdownToggle) {
@@ -107,7 +123,7 @@ window.onload = function () {
 
   // Set 'active-link' class on navbar links every time the page is loaded
   let href = window.location.href;
-  href = href.substring(href.lastIndexOf('/') + 1);
+  href = href.includes('en') ? href.substring(href.lastIndexOf('en') + 2) : href.substring(href.lastIndexOf('/') + 1);
   // For homepage link
   if (!href && !config.Elements.homePageLink.classList.contains('active-link')) {
     config.Elements.homePageLink.classList.toggle('active-link');
@@ -179,7 +195,7 @@ if (config.Elements.navbarToggler)
     e.preventDefault();
     let href = window.location.href;
     let subHref = href.substring(href.lastIndexOf('/') - 7);
-    href = href.substring(href.lastIndexOf('/') + 1);
+    href = href.includes('en') ? href.substring(href.lastIndexOf('en') + 2) : href.substring(href.lastIndexOf('/') + 1);
     config.Elements.assetCatalogDdBtn.classList.remove('offcanvas-active-link');
     config.Elements.projectsDdBtn.classList.remove('offcanvas-active-link');
     // For homepage link
@@ -205,7 +221,7 @@ if (config.Elements.navbarToggler)
     });
   });
 
-// Currency switch on large screen
+// Currency switch
 if (config.Elements.notActiveCurrencyIcon)
   config.Elements.notActiveCurrencyIcon.addEventListener('click', async (e) => {
     utils.switchCurrency(config.Elements.notActiveCurrencyIcon.src);
@@ -215,6 +231,20 @@ if (config.Elements.mobileNotActiveCurrencyIcon)
   config.Elements.mobileNotActiveCurrencyIcon.addEventListener('click', async (e) => {
     utils.switchCurrency(config.Elements.mobileNotActiveCurrencyIcon.src);
     config.Elements.mobileCurrencyDdBtn.click();
+  });
+
+// Language switch
+if (config.Elements.notActiveLangIcon)
+  config.Elements.notActiveLangIcon.addEventListener('click', async (e) => {
+    const href = window.location.href;
+    utils.switchLanguage(config.Elements.notActiveLangIcon.src, href);
+  });
+
+if (config.Elements.mobileNotActiveLangIcon)
+  config.Elements.mobileNotActiveLangIcon.addEventListener('click', async (e) => {
+    const href = window.location.href;
+    utils.switchLanguage(config.Elements.mobileNotActiveLangIcon.src, href);
+    config.Elements.mobileLangDdBtn.click();
   });
 
 if (config.Elements.favoriteBtn)
@@ -294,29 +324,29 @@ if (config.Elements.shareBtnWhite)
   });
 
 // CTA Button to Calendly
-if (config.Elements.toCalendlyBtn)
-  config.Elements.toCalendlyBtn.forEach((el) => {
+if (config.Elements.toContactUsBtn)
+  config.Elements.toContactUsBtn.forEach((el) => {
     el.addEventListener('click', function (e) {
-      window.location.pathname = '/contact-us';
+      window.location.pathname = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? '/contact-us' : '/en/contact-us';
     });
   });
 
 // To About btn
 if (config.Elements.toAboutBtn)
   config.Elements.toAboutBtn.addEventListener('click', function (e) {
-    window.location.pathname = '/about';
+    window.location.pathname = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? '/about' : '/en/about';
   });
 
 // To blog btn
 if (config.Elements.toBlogBtn)
   config.Elements.toBlogBtn.addEventListener('click', function (e) {
-    window.location.pathname = '/blog';
+    window.location.pathname = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? '/blog' : '/en/blog';
   });
 
 // Invest guide btn
 if (config.Elements.investGuideBtn)
   config.Elements.investGuideBtn.addEventListener('click', function (e) {
-    window.location.pathname = '/invest';
+    window.location.pathname = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? '/invest' : '/en/invest';
   });
 
 // Back to search results from asset page
@@ -616,21 +646,46 @@ if (config.Elements.aeProjectBuildingsNumber) animation.animateCounter(config.El
 if (config.Elements.aeProjectFloorsNumber) animation.animateCounter(config.Elements.aeProjectFloorsNumber, 9);
 if (config.Elements.aeProjectApartmentsNumber) animation.animateCounter(config.Elements.aeProjectApartmentsNumber, 292);
 if (config.Elements.aeProjectParkingSpotsNumber) animation.animateCounter(config.Elements.aeProjectParkingSpotsNumber, 320);
-if (config.Elements.aeProjectAreaNumber) animation.animateCounter(config.Elements.aeProjectAreaNumber, 27955, 'מ"ר');
-if (config.Elements.aeProjectGreenAreaNumber) animation.animateCounter(config.Elements.aeProjectGreenAreaNumber, 5200, 'מ"ר');
+if (config.Elements.aeProjectAreaNumber)
+  animation.animateCounter(
+    config.Elements.aeProjectAreaNumber,
+    27955,
+    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
+  );
+if (config.Elements.aeProjectGreenAreaNumber)
+  animation.animateCounter(
+    config.Elements.aeProjectGreenAreaNumber,
+    5200,
+    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
+  );
 // Atlantis Barcode
 if (config.Elements.abProjectBuildingsNumber) animation.animateCounter(config.Elements.abProjectBuildingsNumber, 2);
 if (config.Elements.abProjectFloorsNumber) animation.animateCounter(config.Elements.abProjectFloorsNumber, 8);
 if (config.Elements.abProjectApartmentsNumber) animation.animateCounter(config.Elements.abProjectApartmentsNumber, 93);
 if (config.Elements.abProjectParkingSpotsNumber) animation.animateCounter(config.Elements.abProjectParkingSpotsNumber, 106);
-if (config.Elements.abProjectAreaNumber) animation.animateCounter(config.Elements.abProjectAreaNumber, 9634, 'מ"ר');
+if (config.Elements.abProjectAreaNumber)
+  animation.animateCounter(
+    config.Elements.abProjectAreaNumber,
+    9634,
+    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
+  );
 // Atlantis L6
 if (config.Elements.al6ProjectBuildingsNumber) animation.animateCounter(config.Elements.al6ProjectBuildingsNumber, 3);
 if (config.Elements.al6ProjectFloorsNumber) animation.animateCounter(config.Elements.al6ProjectFloorsNumber, 9);
 if (config.Elements.al6ProjectApartmentsNumber) animation.animateCounter(config.Elements.al6ProjectApartmentsNumber, 183);
 if (config.Elements.al6ProjectParkingSpotsNumber) animation.animateCounter(config.Elements.al6ProjectParkingSpotsNumber, 181);
-if (config.Elements.al6ProjectAreaNumber) animation.animateCounter(config.Elements.al6ProjectAreaNumber, 19063, 'מ"ר');
-if (config.Elements.al6ProjectGreenAreaNumber) animation.animateCounter(config.Elements.al6ProjectGreenAreaNumber, 16187, 'מ"ר');
+if (config.Elements.al6ProjectAreaNumber)
+  animation.animateCounter(
+    config.Elements.al6ProjectAreaNumber,
+    19063,
+    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
+  );
+if (config.Elements.al6ProjectGreenAreaNumber)
+  animation.animateCounter(
+    config.Elements.al6ProjectGreenAreaNumber,
+    16187,
+    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
+  );
 // Fade in animation
 if (config.Elements.hotAssetsContainer || config.Elements.projectAssetsContainer) {
   animation.animateFadeIn(config.Elements.assetCards);

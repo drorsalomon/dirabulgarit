@@ -1,4 +1,5 @@
 const Asset = require('../models/assetModel');
+const enAsset = require('../models/enAssetModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 const Utils = require('../utils/utils');
@@ -15,13 +16,20 @@ exports.getSearchResults = catchAsync(async (req, res, next) => {
       sortOptions = { date: parseInt(req.params.type) === 1 ? 1 : -1 };
     }
 
-    const totalAssetsArray = await Asset.find(mongooseQuery);
+    const totalAssetsArray = res.locals.lang === 'he' ? await Asset.find(mongooseQuery) : await enAsset.find(mongooseQuery);
     const totalAssets = totalAssetsArray.length;
 
-    const assets = await Asset.find(mongooseQuery)
-      .sort(sortOptions)
-      .skip((req.params.pageNumber - 1) * req.params.resPerPage)
-      .limit(parseInt(req.params.resPerPage));
+    const assets =
+      res.locals.lang === 'he'
+        ? await Asset.find(mongooseQuery)
+            .sort(sortOptions)
+            .skip((req.params.pageNumber - 1) * req.params.resPerPage)
+            .limit(parseInt(req.params.resPerPage))
+        : await enAsset
+            .find(mongooseQuery)
+            .sort(sortOptions)
+            .skip((req.params.pageNumber - 1) * req.params.resPerPage)
+            .limit(parseInt(req.params.resPerPage));
 
     assetsArray = assets;
 
@@ -50,7 +58,7 @@ exports.renderSearchResults = catchAsync(async (req, res, next) => {
   const totalPages = JSON.parse(req.query.totalPages);
   const pageNumber = req.query.pageNumber;
 
-  res.render('searchResults', {
+  res.render(`${res.locals.lang}/searchResults`, {
     title: 'Search Results',
     assets,
     totalAssets,
@@ -60,14 +68,15 @@ exports.renderSearchResults = catchAsync(async (req, res, next) => {
 });
 
 exports.getAsset = catchAsync(async (req, res, next) => {
-  const asset = await Asset.findOne({ slug: req.params.slug });
+  const asset = res.locals.lang === 'he' ? await Asset.findOne({ slug: req.params.slug }) : await enAsset.findOne({ slug: req.params.slug });
   if (!asset) return next(new AppError('Could not find the requested asset!', 404));
 
   let sortOptions = { project: 1 };
-  const hotAssets = await Asset.find({ hotAsset: true }).sort(sortOptions);
+  const hotAssets =
+    res.locals.lang === 'he' ? await Asset.find({ hotAsset: true }).sort(sortOptions) : await enAsset.find({ hotAsset: true }).sort(sortOptions);
   if (!hotAssets) return next(new AppError('Could not find the requested hot assets!', 404));
 
-  res.status(200).render('asset', {
+  res.status(200).render(`${res.locals.lang}/asset`, {
     title: 'Asset Page',
     asset,
     hotAssets,
@@ -76,14 +85,17 @@ exports.getAsset = catchAsync(async (req, res, next) => {
 
 exports.getFavoriteAssets = catchAsync(async (req, res, next) => {
   let sortOptions = { price: 1 };
-  const assets = await Asset.find({ id: { $in: req.body.favoriteAssets } }).sort(sortOptions);
+  const assets =
+    res.locals.lang === 'he'
+      ? await Asset.find({ id: { $in: req.body.favoriteAssets } }).sort(sortOptions)
+      : await enAsset.find({ id: { $in: req.body.favoriteAssets } }).sort(sortOptions);
   assetsArray = assets;
   if (!assets) return next(new AppError('Could not find the requested asset!', 404));
   res.status(200).json({ status: 'success' });
 });
 
 exports.renderFavoriteAssets = catchAsync(async (req, res, next) => {
-  res.render('favoriteAssets', {
+  res.render(`${res.locals.lang}/favoriteAssets`, {
     title: 'Favorite assets Page',
     assetsArray,
   });

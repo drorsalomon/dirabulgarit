@@ -1,0 +1,19 @@
+extends base 
+
+block head
+    meta(property="og:image" content='/img/about-us-sozopol.webp')
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../he/_headLinksScripts
+
+block content
+
+    .container-fluid.contact-us-confirm-main-container
+        .row.contact-us-confirm-row.align-items-center.justify-content-center.mx-4.py-xxl-5
+            .col-12.col-md-6.contact-us-confirm-text-col
+                div.contact-us-confirm-headline(dir='rtl') Your request has been received!
+                div.contact-us-confirm-border
+                div.contact-us-confirm-text(dir='rtl') Thank you for contacting Dira Bulgarit, one of our consultants will contact you as soon as possible.
+                button.error-btn(aria-label='Back to home page') Home Page
+            .col-12.col-md-6.col-xl-4.d-md-flex.justify-content-md-center.contact-us-confirm-img-col      
+                img.contact-us-confirm-img.img-fluid(src='/img/about-us-sozopol.webp' alt='Landscape image of Obzor Bulgaria')
