@@ -4,7 +4,7 @@ const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 
 exports.getAtlantisAria2 = catchAsync(async (req, res) => {
-  let sortOptions = { price: 1 };
+  let sortOptions = { sold: 1, price: 1 };
   const projectAssets =
     res.locals.lang === 'he'
       ? await Asset.find({ project: 'Atlantis Aria 2' }).sort(sortOptions)
@@ -18,7 +18,7 @@ exports.getAtlantisAria2 = catchAsync(async (req, res) => {
 });
 
 exports.getAtlantisAria3 = catchAsync(async (req, res) => {
-  let sortOptions = { price: 1 };
+  let sortOptions = { sold: 1, price: 1 };
   const projectAssets =
     res.locals.lang === 'he'
       ? await Asset.find({ project: 'Atlantis Aria 3' }).sort(sortOptions)
@@ -32,7 +32,7 @@ exports.getAtlantisAria3 = catchAsync(async (req, res) => {
 });
 
 exports.getAtlantisEuphoria = catchAsync(async (req, res) => {
-  let sortOptions = { price: 1 };
+  let sortOptions = { sold: 1, price: 1 };
   const projectAssets =
     res.locals.lang === 'he'
       ? await Asset.find({ project: 'Atlantis Euphoria' }).sort(sortOptions)
@@ -46,7 +46,7 @@ exports.getAtlantisEuphoria = catchAsync(async (req, res) => {
 });
 
 exports.getAtlantisBarcode = catchAsync(async (req, res) => {
-  let sortOptions = { price: 1 };
+  let sortOptions = { sold: 1, price: 1 };
   const projectAssets =
     res.locals.lang === 'he'
       ? await Asset.find({ project: 'Atlantis Barcode' }).sort(sortOptions)
@@ -60,7 +60,7 @@ exports.getAtlantisBarcode = catchAsync(async (req, res) => {
 });
 
 exports.getAtlantisL6 = catchAsync(async (req, res) => {
-  let sortOptions = { price: 1 };
+  let sortOptions = { sold: 1, price: 1 };
   const projectAssets =
     res.locals.lang === 'he'
       ? await Asset.find({ project: 'Atlantis L6' }).sort(sortOptions)

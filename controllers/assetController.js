@@ -71,7 +71,7 @@ exports.getAsset = catchAsync(async (req, res, next) => {
   const asset = res.locals.lang === 'he' ? await Asset.findOne({ slug: req.params.slug }) : await enAsset.findOne({ slug: req.params.slug });
   if (!asset) return next(new AppError('Could not find the requested asset!', 404));
 
-  let sortOptions = { project: 1 };
+  let sortOptions = { project: 1, price: 1 };
   const hotAssets =
     res.locals.lang === 'he' ? await Asset.find({ hotAsset: true }).sort(sortOptions) : await enAsset.find({ hotAsset: true }).sort(sortOptions);
   if (!hotAssets) return next(new AppError('Could not find the requested hot assets!', 404));
@@ -84,7 +84,7 @@ exports.getAsset = catchAsync(async (req, res, next) => {
 });
 
 exports.getFavoriteAssets = catchAsync(async (req, res, next) => {
-  let sortOptions = { price: 1 };
+  let sortOptions = { project: 1, price: 1 };
   const assets =
     res.locals.lang === 'he'
       ? await Asset.find({ id: { $in: req.body.favoriteAssets } }).sort(sortOptions)
