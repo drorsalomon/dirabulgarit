@@ -9,7 +9,7 @@ block head
     include _headLinksScripts
 
 block content 
-    .container-fluid.hero-video-container
+    //-.container-fluid.hero-video-container
         .row.hero-video-row.align-items-center.justify-content-center 
             .col.hero-video-col
                 div.hero-video-bg-video-container(role="img" aria-labelledby="heroVideoDescription")
@@ -37,7 +37,23 @@ block content
             h2.mainpage-search-headline.text-center חיפוש נכס
             include _searchForm
 
-        include _searchModal       
+        include _searchModal 
+
+    .container-fluid.mainpage-hot-assets-container
+        .row.mainpage-hot-assets-row.justify-content-center
+            .col-12.mainpage-hot-assets-headline-col
+                .row.text-center
+                    h2.mainpage-hot-assets-tag מומלץ  
+                    h3.mainpage-hot-assets-headline נכסים חמים להשקעה
+            each asset in hotAssets
+                include _assetsCards
+        .row.mobile-mainpage-hot-assets-row.justify-content-center.mx-1         
+            .col-12.mainpage-hot-assets-headline-col
+                .row.text-center
+                    div.mainpage-hot-assets-tag מומלץ  
+                    div.mainpage-hot-assets-headline נכסים חמים להשקעה
+            each asset in hotAssets
+                include _mobileAssetsCards              
 
     .container-fluid.mainpage-about-container.overflow-hidden(role="img" aria-labelledby="aboutUsImageDescription")
         span.visually-hidden(id="aboutUsImageDescription") תמונה של בתים שיושבים על מפרצון בשפת הים השחור בבורגס בולגריה
@@ -117,22 +133,6 @@ block content
                     div.mainpage-why-bulgaria-text(dir='rtl') הכלכלה הבולגרית נמצאת בצמיחה מתמדת שנובעת מריבוי ההשקעות במדינה ובחברותה באיחוד האירופי. מחירי הנדל"ן במדינה הינם נגישים וישנה תשואה גבוהה על ההשכרה, ביחוד באזורים התיירותיים כמו בורגס ובנסקו. הכנו עבורכם מדריך השקעה מפורט בכדי לעזור לכם בצעדים הראשונים לעבר העסקה הנחשקת.
                 div.invest-guide-btn-container
                     button.invest-guide-btn למדריך ההשקעה
-
-    .container-fluid.mainpage-hot-assets-container
-        .row.mainpage-hot-assets-row.justify-content-center
-            .col-12.mainpage-hot-assets-headline-col
-                .row.text-center
-                    h2.mainpage-hot-assets-tag מומלץ  
-                    h3.mainpage-hot-assets-headline נכסים חמים להשקעה
-            each asset in hotAssets
-                include _assetsCards
-        .row.mobile-mainpage-hot-assets-row.justify-content-center.mx-1         
-            .col-12.mainpage-hot-assets-headline-col
-                .row.text-center
-                    div.mainpage-hot-assets-tag מומלץ  
-                    div.mainpage-hot-assets-headline נכסים חמים להשקעה
-            each asset in hotAssets
-                include _mobileAssetsCards    
             
     .container-fluid.mainpage-rec-container            
         .row.mx-4.justify-content-center

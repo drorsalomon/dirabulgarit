@@ -10,7 +10,7 @@ block head
 
 block content 
    
-    .container-fluid.hero-video-container
+    //-.container-fluid.hero-video-container
         .row.hero-video-row.align-items-center.justify-content-center 
             .col.hero-video-col
                 div.hero-video-bg-video-container(role="img" aria-labelledby="heroVideoDescription")
@@ -39,6 +39,22 @@ block content
             include _searchForm
 
         include _searchModal  
+
+    .container-fluid.mainpage-hot-assets-container
+        .row.mainpage-hot-assets-row.justify-content-center
+            .col-12.mainpage-hot-assets-headline-col
+                .row.text-center
+                    h2.mainpage-hot-assets-tag Recommended   
+                    h3.mainpage-hot-assets-headline Hot Investment Opportunities
+            each asset in hotAssets
+                include _assetsCards
+        .row.mobile-mainpage-hot-assets-row.justify-content-center.mx-1         
+            .col-12.mainpage-hot-assets-headline-col
+                .row.text-center
+                    div.mainpage-hot-assets-tag Recommended  
+                    div.mainpage-hot-assets-headline Hot Investment Opportunities
+            each asset in hotAssets
+                include _mobileAssetsCards       
 
     .container-fluid.mainpage-about-container.overflow-hidden(role="img" aria-labelledby="aboutUsImageDescription")
         span.visually-hidden(id="aboutUsImageDescription") Image of houses located on an alcove of the black sea in Burgas
@@ -118,22 +134,6 @@ block content
                     div.mainpage-why-bulgaria-text The Bulgarian economy is in constant growth due to the many investments in the country and its membership in the European Union. Real estate prices in the country are accessible and there is a high return on renting, especially in the tourist areas such as Burgas and Bansko. We have prepared a detailed investment guide for you to help you take the first steps towards the desired deal.
                 div.invest-guide-btn-container.en-invest-guide-btn-container.my-xxs-4.my-xs-2.my-md-4.my-lg-1
                     button.invest-guide-btn Investment Guide
-
-    .container-fluid.mainpage-hot-assets-container
-        .row.mainpage-hot-assets-row.justify-content-center
-            .col-12.mainpage-hot-assets-headline-col
-                .row.text-center
-                    h2.mainpage-hot-assets-tag Recommended   
-                    h3.mainpage-hot-assets-headline Hot Investment Opportunities
-            each asset in hotAssets
-                include _assetsCards
-        .row.mobile-mainpage-hot-assets-row.justify-content-center.mx-1         
-            .col-12.mainpage-hot-assets-headline-col
-                .row.text-center
-                    div.mainpage-hot-assets-tag Recommended  
-                    div.mainpage-hot-assets-headline Hot Investment Opportunities
-            each asset in hotAssets
-                include _mobileAssetsCards   
 
     .container-fluid.mainpage-rec-container            
         .row.mx-4.justify-content-center

@@ -395,7 +395,7 @@ body {
 }
 
 .mainpage-search-modal-open-btn-container {
-  margin: 0 2rem 5rem 2rem;
+  margin: 0 2rem 1rem 2rem;
 }
 
 .mainpage-search-headline {
@@ -621,6 +621,151 @@ input[type='text']::placeholder {
   outline: 1px solid red;
 }
 
+// ***** Main Page Hot Assets *****
+.mainpage-hot-assets-row {
+  display: none !important;
+}
+
+.mainpage-hot-assets-container {
+  padding: 5rem 0 !important;
+}
+
+.mainpage-hot-assets-row {
+  margin: 0 2rem 2rem 2rem !important;
+}
+
+.mainpage-hot-assets-headline-col {
+  margin-bottom: 5rem;
+}
+
+.mainpage-hot-assets-tag {
+  color: $text-color-secondary;
+  font-size: $h5;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.mainpage-hot-assets-headline {
+  font-size: $h3;
+  font-weight: 600;
+  color: $text-color-tertiary;
+}
+
+.asset-card {
+  cursor: pointer;
+  border-color: $bg-color-primary !important;
+  -webkit-box-shadow: rgba(66, 116, 173, 0.07) 0px 7px 40px 0px;
+  box-shadow: rgba(66, 116, 173, 0.07) 0px 7px 40px 0px;
+  margin-bottom: 3rem;
+  opacity: 0;
+}
+
+.asset-card.visible {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.asset-card-img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.asset-card-sold-badge,
+.asset-card-exclusive-badge {
+  font-size: $h6 !important;
+  color: $bg-color-primary;
+  position: absolute;
+  top: 10%;
+  left: unset;
+  right: 0;
+  padding: 0.5rem 1rem !important;
+  z-index: 100;
+}
+
+.en-asset-card-sold-badge,
+.en-asset-card-exclusive-badge {
+  font-size: $h6 !important;
+  color: $bg-color-primary;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: unset;
+  padding: 0.5rem 1rem !important;
+  z-index: 100;
+}
+
+.asset-card-sold-badge {
+  background-color: $asset-sold;
+}
+
+.asset-card-exclusive-badge {
+  background-color: $text-color-secondary;
+}
+
+.asset-card-img {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  width: 17rem;
+  height: 17rem;
+}
+
+.asset-card-title {
+  font-size: $h5;
+  font-weight: 600;
+  color: $text-color-tertiary;
+}
+
+.card-text-container {
+  border-bottom: 1px solid $bg-color-secondary;
+  padding: 1.5rem;
+}
+
+.asset-card-body-row {
+  text-align: center;
+  font-size: $h7;
+  margin-top: 1rem;
+}
+
+.card-icon {
+  margin-left: 0.5rem;
+  width: 2.3rem;
+  height: 2.3rem;
+}
+
+.en-card-icon {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+// ***** Mobile Asset Cards *****
+.mobile-asset-card-title {
+  font-size: $h6;
+  font-weight: 600;
+  color: $text-color-tertiary;
+}
+
+.mobile-card-text-container {
+  font-size: $h8;
+  border-bottom: 1px solid $bg-color-secondary;
+  padding: 1rem 0.5rem;
+}
+
+.mobile-card-icon {
+  margin-left: 0.3rem;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.card-text-last-container {
+  border: none;
+}
+
 // ***** Main Page About Us *****
 
 .mainpage-about-container {
@@ -811,155 +956,10 @@ input[type='text']::placeholder {
   top: 92.5%;
 }
 
-// ***** Main Page Hot Assets *****
-.mainpage-hot-assets-row {
-  display: none !important;
-}
-
-.mainpage-hot-assets-container {
-  background-color: $bg-color-secondary;
-  padding: 5rem 0 !important;
-  margin-bottom: 5rem;
-}
-
-.mainpage-hot-assets-row {
-  margin: 0 2rem 5rem 2rem !important;
-}
-
-.mainpage-hot-assets-headline-col {
-  margin-bottom: 5rem;
-}
-
-.mainpage-hot-assets-tag {
-  color: $text-color-secondary;
-  font-size: $h5;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.mainpage-hot-assets-headline {
-  font-size: $h3;
-  font-weight: 600;
-  color: $text-color-tertiary;
-}
-
-.asset-card {
-  cursor: pointer;
-  border-color: $bg-color-primary !important;
-  -webkit-box-shadow: rgba(66, 116, 173, 0.07) 0px 7px 40px 0px;
-  box-shadow: rgba(66, 116, 173, 0.07) 0px 7px 40px 0px;
-  margin-bottom: 3rem;
-  opacity: 0;
-}
-
-.asset-card.visible {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.asset-card-img-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.asset-card-sold-badge,
-.asset-card-exclusive-badge {
-  font-size: $h6 !important;
-  color: $bg-color-primary;
-  position: absolute;
-  top: 10%;
-  left: unset;
-  right: 0;
-  padding: 0.5rem 1rem !important;
-  z-index: 100;
-}
-
-.en-asset-card-sold-badge,
-.en-asset-card-exclusive-badge {
-  font-size: $h6 !important;
-  color: $bg-color-primary;
-  position: absolute;
-  top: 10%;
-  left: 0;
-  right: unset;
-  padding: 0.5rem 1rem !important;
-  z-index: 100;
-}
-
-.asset-card-sold-badge {
-  background-color: $asset-sold;
-}
-
-.asset-card-exclusive-badge {
-  background-color: $text-color-secondary;
-}
-
-.asset-card-img {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-  width: 17rem;
-  height: 17rem;
-}
-
-.asset-card-title {
-  font-size: $h5;
-  font-weight: 600;
-  color: $text-color-tertiary;
-}
-
-.card-text-container {
-  border-bottom: 1px solid $bg-color-secondary;
-  padding: 1.5rem;
-}
-
-.asset-card-body-row {
-  text-align: center;
-  font-size: $h7;
-  margin-top: 1rem;
-}
-
-.card-icon {
-  margin-left: 0.5rem;
-  width: 2.3rem;
-  height: 2.3rem;
-}
-
-.en-card-icon {
-  margin-left: 0;
-  margin-right: 0.5rem;
-}
-
-// ***** Mobile Asset Cards *****
-.mobile-asset-card-title {
-  font-size: $h6;
-  font-weight: 600;
-  color: $text-color-tertiary;
-}
-
-.mobile-card-text-container {
-  font-size: $h8;
-  border-bottom: 1px solid $bg-color-secondary;
-  padding: 1rem 0.5rem;
-}
-
-.mobile-card-icon {
-  margin-left: 0.3rem;
-  width: 1.4rem;
-  height: 1.4rem;
-}
-
-.card-text-last-container {
-  border: none;
-}
 // ***** Reviews *****
 
 .mainpage-rec-container {
+  padding-top: 5rem;
   text-align: center;
 }
 

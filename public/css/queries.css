@@ -681,15 +681,20 @@
   .mainpage-search-headline {
     font-size: 3.4rem;
   }
-  .mainpage-howitworks-container,
   .mainpage-rec-container {
     padding-bottom: 8rem;
+  }
+  .mainpage-howitworks-container {
+    padding-bottom: 2rem;
   }
   .mainpage-why-bulgaria-bg-video-container {
     height: 50rem;
   }
   .invest-guide-btn-container {
     top: 85%;
+  }
+  .mainpage-hot-assets-container {
+    padding: 1rem 0 !important;
   }
   .asset-card {
     -webkit-transition: all 0.3s;

@@ -806,9 +806,12 @@
   // ***** How it works *****
   // ***** Main Page rec *****
   // ***** Pricing *****
-  .mainpage-howitworks-container,
   .mainpage-rec-container {
     padding-bottom: 8rem;
+  }
+
+  .mainpage-howitworks-container {
+    padding-bottom: 2rem;
   }
 
   // ***** Why Bulgaria *****
@@ -821,6 +824,10 @@
   }
 
   // ***** Asset Card *****
+  .mainpage-hot-assets-container {
+    padding: 1rem 0 !important;
+  }
+
   .asset-card {
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
