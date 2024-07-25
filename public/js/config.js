@@ -20,6 +20,7 @@ export const Elements = {
   homePageLink: document.querySelector('.homepage-link'),
   assetCatalogDdBtn: document.querySelector('.assets-catalog-dropdown-btn'),
   projectsDdBtn: document.querySelector('.projects-dropdown-btn'),
+  blogLink: document.querySelector('.blog-nav-link'),
   currencyDdBtn: document.querySelector('.currency-dropdown-btn'),
   currencyIcon: document.querySelectorAll('.navbar-currency-icon'),
   activeCurrencyIcon: document.querySelector('.navbar-active-currency-icon'),
@@ -178,4 +179,5 @@ export const DEFAULT_SORT = 'price';
 export const DEFAULT_TYPE = 1;
 export const DEFAULT_PAGE_NUM = 1;
 export const DEFAULT_RES_PER_PAGE = 16;
+export const DEFAULT_BLOG_RES_PER_PAGE = 10;
 export const DEFAULT_FILTER = {};

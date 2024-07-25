@@ -332,6 +332,11 @@
     bottom: 17rem;
   }
 
+  // ***** Hero Video *****
+  .hero-video-bg-video-text {
+    font-size: $h8;
+  }
+
   // ***** Main Page Hero *****
   .hero-container {
     height: 85rem;
@@ -1095,6 +1100,11 @@
 
 // x-Large
 @media only screen and (min-width: 1200px) {
+  // ***** Hero Video *****
+  .hero-video-bg-video-text {
+    font-size: $h7;
+  }
+
   // ***** Navbar *****
   .navbar-nav {
     width: 100%;

@@ -16,52 +16,76 @@ block content
                 h1.blog-content-title(dir='rtl')= blog.blogTitle
                 div.blog-content-date(dir='rtl')= `${moment(blog.date).format('DD.MM.YYYY')}`
                 if blog.sectionOneTitle     
-                    h2.blog-content-textSectionTitle(dir='rtl')= blog.sectionOneTitle
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionOneTitle
                 if blog.sectionOneTexts
                     each text in blog.sectionOneTexts
-                        div.blog-content-text(dir='rtl')= text
+                        div.blog-content-text(dir='rtl')!= text
                 div.blog-section-separator        
                 if blog.sectionTwoTitle     
-                    h2.blog-content-textSectionTitle(dir='rtl')= blog.sectionTwoTitle
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionTwoTitle
                 if blog.sectionTwoTexts
                     each text in blog.sectionTwoTexts
-                        div.blog-content-text(dir='rtl')= text
+                        div.blog-content-text(dir='rtl')!= text
                 div.blog-section-separator          
                 if blog.sectionThreeTitle     
-                    h2.blog-content-textSectionTitle(dir='rtl')= blog.sectionThreeTitle
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionThreeTitle
                 if blog.sectionThreeTexts
                     each text in blog.sectionThreeTexts
-                        div.blog-content-text(dir='rtl')= text
+                        div.blog-content-text(dir='rtl')!= text
                 div.blog-section-separator          
                 if blog.sectionFourTitle     
-                    h2.blog-content-textSectionTitle(dir='rtl')= blog.sectionFourTitle
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionFourTitle
                 if blog.sectionFourTexts
                     each text in blog.sectionFourTexts
-                        div.blog-content-text(dir='rtl')= text
+                        div.blog-content-text(dir='rtl')!= text
                 div.blog-section-separator          
                 if blog.sectionFiveTitle     
-                    h2.blog-content-textSectionTitle(dir='rtl')= blog.sectionFiveTitle
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionFiveTitle
                 if blog.sectionFiveTexts
                     each text in blog.sectionFiveTexts
-                        div.blog-content-text(dir='rtl')= text
+                        div.blog-content-text(dir='rtl')!= text
+                div.blog-section-separator          
+                if blog.sectionSixTitle     
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionSixTitle
+                if blog.sectionSixTexts
+                    each text in blog.sectionSixTexts
+                        div.blog-content-text(dir='rtl')!= text
+                div.blog-section-separator          
+                if blog.sectionSevenTitle     
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionSevenTitle
+                if blog.sectionSevenTexts
+                    each text in blog.sectionSevenTexts
+                        div.blog-content-text(dir='rtl')!= text
+                div.blog-section-separator          
+                if blog.sectionEightTitle     
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionEightTitle
+                if blog.sectionEightTexts
+                    each text in blog.sectionEightTexts
+                        div.blog-content-text(dir='rtl')!= text
+                div.blog-section-separator          
+                if blog.sectionNineTitle     
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionNineTitle
+                if blog.sectionNineTexts
+                    each text in blog.sectionNineTexts
+                        div.blog-content-text(dir='rtl')!= text
                 div.blog-section-separator          
                 if blog.listOne.listOneTitle
-                    h2.blog-content-listTitle(dir='rtl')= blog.listOne.listOneTitle
+                    h2.blog-content-listTitle(dir='rtl')!= blog.listOne.listOneTitle
                 if blog.listOne.listOneTexts
                     each text in blog.listOne.listOneTexts  
-                        div.blog-content-list-text(dir='rtl')= `● ` + text 
+                        div.blog-content-list-text(dir='rtl')!= `● ` + text 
                 div.blog-section-separator          
                 if blog.listTwo.listTwoTitle
-                    h2.blog-content-listTitle(dir='rtl')= blog.listTwo.listTwoTitle
+                    h2.blog-content-listTitle(dir='rtl')!= blog.listTwo.listTwoTitle
                 if blog.listTwo.listTwoTexts
                     each text in blog.listTwo.listTwoTexts  
-                        div.blog-content-list-text(dir='rtl')= `● ` + text 
+                        div.blog-content-list-text(dir='rtl')!= `● ` + text 
                 div.blog-section-separator          
                 if blog.listThree.listThreeTitle
-                    h2.blog-content-listTitle(dir='rtl')= blog.listThree.listThreeTitle
+                    h2.blog-content-listTitle(dir='rtl')!= blog.listThree.listThreeTitle
                 if blog.listThree.listThreeTexts
                     each text in blog.listThree.listThreeTexts  
-                        div.blog-content-list-text(dir='rtl')= `● ` + text 
+                        div.blog-content-list-text(dir='rtl')!= `● ` + text 
                 div.blog-content-listTitle(dir='rtl') דירה בולגרית הוקמה במטרה לעזור למשקיע הישראלי למצוא את הנכסים הכדאיים ביותר ברחבי בולגריה. באתרנו תמצאו אלפי נכסים - החל בדירות סטודיו באתרי נופש ועד דירות יוקרה של שלושה וארבעה חדרים בפרוייקטים מודרניים הבנויים בסטנדרטים הגבוהים ביותר. צוות המומחים שלנו מחכה לכם, קבעו עוד היום פגישת וידאו בזמן שהכי נוח לכם ואנו נפגש אתכם ונענה לכל שאלה כדי שתוכלו למצוא את השקעות הנדל"ן המשתלמות ביותר עבורכם בבולגריה.        
             .col-10.text-center.py-4    
                     button.btn-cta.pricing-cta-btn.to-calendly-btn(aria-label='מעבר לעמוד יצירת קשר') צרו קשר

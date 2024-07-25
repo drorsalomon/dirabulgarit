@@ -275,6 +275,9 @@
   .whatsapp-widget {
     bottom: 17rem;
   }
+  .hero-video-bg-video-text {
+    font-size: 1rem;
+  }
   .hero-container {
     height: 85rem;
   }
@@ -941,6 +944,9 @@
   }
 }
 @media only screen and (min-width: 1200px) {
+  .hero-video-bg-video-text {
+    font-size: 1.2rem;
+  }
   .navbar-nav {
     width: 100%;
     -webkit-transform: none !important;

@@ -24,10 +24,7 @@ const blogSchema = mongoose.Schema({
     type: String,
     required: [true, 'A blog must have an image alt!'],
   },
-  sectionOneTitle: {
-    type: String,
-    required: [true, 'A blog must have at list one section title!'],
-  },
+  sectionOneTitle: String,
   sectionOneTexts: {
     type: [String],
     required: [true, 'A blog must have at least one section text!'],
@@ -40,6 +37,14 @@ const blogSchema = mongoose.Schema({
   sectionFourTexts: [String],
   sectionFiveTitle: String,
   sectionFiveTexts: [String],
+  sectionSixTitle: String,
+  sectionSixTexts: [String],
+  sectionSevenTitle: String,
+  sectionSevenTexts: [String],
+  sectionEightTitle: String,
+  sectionEightTexts: [String],
+  sectionNineTitle: String,
+  sectionNineTexts: [String],
   listOne: {
     listOneTitle: String,
     listOneTexts: [String],

@@ -44,6 +44,10 @@
   box-shadow: rgba(34, 137, 255, 0.15) 0px 15px 40px 0px;
 }
 
+.search-modal {
+  z-index: 2247483648 !important;
+}
+
 .search-modal-title {
   font-size: 1.6rem;
   color: #5c5e64;

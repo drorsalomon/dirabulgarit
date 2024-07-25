@@ -15,7 +15,6 @@ exports.getSearchResults = catchAsync(async (req, res, next) => {
     } else {
       sortOptions = { date: parseInt(req.params.type) === 1 ? 1 : -1 };
     }
-
     const totalAssetsArray = res.locals.lang === 'he' ? await Asset.find(mongooseQuery) : await enAsset.find(mongooseQuery);
     const totalAssets = totalAssetsArray.length;
 

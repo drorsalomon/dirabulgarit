@@ -1,4 +1,5 @@
 import { filterAssets } from './asset';
+import { getBlogs } from './blog';
 import { getFavoriteAssets } from './favoriteAssets';
 import { displayMap } from './mapbox';
 import { loadLang } from './language';
@@ -126,8 +127,12 @@ window.onload = function () {
   if (!href && !config.Elements.homePageLink.classList.contains('active-link')) {
     config.Elements.homePageLink.classList.toggle('active-link');
   }
+  if (href === 'blog' || (href === '/blog' && !config.Elements.blogLink.classList.contains('active-link'))) {
+    config.Elements.blogLink.classList.toggle('active-link');
+  }
   config.Elements.activeNavLinks.forEach((link) => {
     let linkString = link.toString();
+
     if (linkString.includes(href) && href) {
       link.classList.toggle('active-link');
       if ((href && href.includes('search-results')) || linkString.includes('search') || linkString.includes('project')) {
@@ -187,6 +192,20 @@ window.onload = function () {
   });
 };
 
+// Set language icon on browser back button
+window.addEventListener('pageshow', function () {
+  const href = window.location.href;
+  if (href.includes(`${config.baseProdUrl}${config.EN_LANGUAGE}`)) {
+    utils.switchLanguageIconsSrc(false);
+    localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.EN_LANGUAGE));
+    loadLang(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
+  } else {
+    utils.switchLanguageIconsSrc();
+    localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.DEFAULT_LANGUAGE));
+    loadLang(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
+  }
+});
+
 // Set 'offcanvas-active-link' class on offcanvas links every time the offcanvas toggler is clicked
 if (config.Elements.navbarToggler)
   config.Elements.navbarToggler.addEventListener('click', async (e) => {
@@ -200,6 +219,10 @@ if (config.Elements.navbarToggler)
     if (!href && !config.Elements.homePageLink.classList.contains('offcanvas-active-link')) {
       config.Elements.homePageLink.classList.remove('active-link');
       config.Elements.homePageLink.classList.toggle('offcanvas-active-link');
+    }
+    if (href === 'blog' || (href === '/blog' && !config.Elements.blogLink.classList.contains('offcanvas-active-link'))) {
+      config.Elements.blogLink.classList.remove('active-link');
+      config.Elements.blogLink.classList.toggle('offcanvas-active-link');
     }
     config.Elements.activeNavLinks.forEach((link) => {
       let linkString = link.toString();
@@ -345,6 +368,13 @@ if (config.Elements.toBlogBtn)
 if (config.Elements.investGuideBtn)
   config.Elements.investGuideBtn.addEventListener('click', function (e) {
     window.location.pathname = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? '/invest' : '/en/invest';
+  });
+
+if (config.Elements.blogLink)
+  config.Elements.blogLink.addEventListener('click', function (e) {
+    localStorage.setItem(config.PAGE_NUMBER_KEY, JSON.stringify(config.DEFAULT_PAGE_NUM));
+    localStorage.setItem(config.RES_PER_PAGE_KEY, JSON.stringify(config.DEFAULT_BLOG_RES_PER_PAGE));
+    getBlogs(config.DEFAULT_PAGE_NUM, config.DEFAULT_BLOG_RES_PER_PAGE);
   });
 
 // Back to search results from asset page
@@ -508,38 +538,46 @@ if (config.Elements.searchResultsFiltersDdBtn)
 
 if (config.Elements.paginationPageBtn)
   config.Elements.paginationPageBtn.forEach((el) => {
+    const href = window.location.href;
     if (parseInt(el.dataset.page) === JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY))) {
       el.classList.add('pagination-btn-active');
     }
     el.addEventListener('click', function (e) {
       e.preventDefault();
       localStorage.setItem(config.PAGE_NUMBER_KEY, JSON.stringify(parseInt(el.dataset.page)));
-
-      filterAssets(
-        JSON.parse(localStorage.getItem(config.FILTER_KEY)),
-        JSON.parse(localStorage.getItem(config.SORT_KEY)),
-        JSON.parse(localStorage.getItem(config.TYPE_KEY)),
-        JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)),
-        JSON.parse(localStorage.getItem(config.RES_PER_PAGE_KEY)),
-      );
+      if (href.includes(`${config.baseProdUrl}asset/search-results`) || href.includes(`${config.baseProdUrl}${config.EN_LANGUAGE}/asset/search-results`)) {
+        filterAssets(
+          JSON.parse(localStorage.getItem(config.FILTER_KEY)),
+          JSON.parse(localStorage.getItem(config.SORT_KEY)),
+          JSON.parse(localStorage.getItem(config.TYPE_KEY)),
+          JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)),
+          JSON.parse(localStorage.getItem(config.RES_PER_PAGE_KEY)),
+        );
+      } else if (href === `${config.baseProdUrl}blog` || href === `${config.baseProdUrl}${config.EN_LANGUAGE}/blog`) {
+        getBlogs(JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)), config.DEFAULT_BLOG_RES_PER_PAGE);
+      }
     });
   });
 
 if (config.Elements.paginationPrevPageBtn && config.Elements.paginationNextPageBtn) {
+  const href = window.location.href;
   if (JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)) === config.DEFAULT_PAGE_NUM) {
     config.Elements.paginationPrevPageBtn.disabled = true;
 
     config.Elements.paginationNextPageBtn.addEventListener('click', async (e) => {
       e.preventDefault();
       localStorage.setItem(config.PAGE_NUMBER_KEY, JSON.stringify(JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)) + 1));
-
-      filterAssets(
-        JSON.parse(localStorage.getItem(config.FILTER_KEY)),
-        JSON.parse(localStorage.getItem(config.SORT_KEY)),
-        JSON.parse(localStorage.getItem(config.TYPE_KEY)),
-        JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)),
-        JSON.parse(localStorage.getItem(config.RES_PER_PAGE_KEY)),
-      );
+      if (href.includes(`${config.baseProdUrl}asset/search-results`) || href.includes(`${config.baseProdUrl}${config.EN_LANGUAGE}/asset/search-results`)) {
+        filterAssets(
+          JSON.parse(localStorage.getItem(config.FILTER_KEY)),
+          JSON.parse(localStorage.getItem(config.SORT_KEY)),
+          JSON.parse(localStorage.getItem(config.TYPE_KEY)),
+          JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)),
+          JSON.parse(localStorage.getItem(config.RES_PER_PAGE_KEY)),
+        );
+      } else if (href === `${config.baseProdUrl}blog` || href === `${config.baseProdUrl}${config.EN_LANGUAGE}/blog`) {
+        getBlogs(JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)), config.DEFAULT_BLOG_RES_PER_PAGE);
+      }
     });
   } else if (JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)) === parseInt(config.Elements.paginationNextPageBtn.dataset.lastpage)) {
     config.Elements.paginationNextPageBtn.disabled = true;
@@ -547,13 +585,17 @@ if (config.Elements.paginationPrevPageBtn && config.Elements.paginationNextPageB
     config.Elements.paginationPrevPageBtn.addEventListener('click', async (e) => {
       e.preventDefault();
       localStorage.setItem(config.PAGE_NUMBER_KEY, JSON.stringify(JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)) - 1));
-      filterAssets(
-        JSON.parse(localStorage.getItem(config.FILTER_KEY)),
-        JSON.parse(localStorage.getItem(config.SORT_KEY)),
-        JSON.parse(localStorage.getItem(config.TYPE_KEY)),
-        JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)),
-        JSON.parse(localStorage.getItem(config.RES_PER_PAGE_KEY)),
-      );
+      if (href.includes(`${config.baseProdUrl}asset/search-results`) || href.includes(`${config.baseProdUrl}${config.EN_LANGUAGE}/asset/search-results`)) {
+        filterAssets(
+          JSON.parse(localStorage.getItem(config.FILTER_KEY)),
+          JSON.parse(localStorage.getItem(config.SORT_KEY)),
+          JSON.parse(localStorage.getItem(config.TYPE_KEY)),
+          JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)),
+          JSON.parse(localStorage.getItem(config.RES_PER_PAGE_KEY)),
+        );
+      } else if (href === `${config.baseProdUrl}blog` || href === `${config.baseProdUrl}${config.EN_LANGUAGE}/blog`) {
+        getBlogs(JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)), config.DEFAULT_BLOG_RES_PER_PAGE);
+      }
     });
   } else {
     config.Elements.paginationIconBtn.forEach((el) => {
@@ -564,13 +606,17 @@ if (config.Elements.paginationPrevPageBtn && config.Elements.paginationNextPageB
         } else {
           localStorage.setItem(config.PAGE_NUMBER_KEY, JSON.stringify(JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)) - 1));
         }
-        filterAssets(
-          JSON.parse(localStorage.getItem(config.FILTER_KEY)),
-          JSON.parse(localStorage.getItem(config.SORT_KEY)),
-          JSON.parse(localStorage.getItem(config.TYPE_KEY)),
-          JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)),
-          JSON.parse(localStorage.getItem(config.RES_PER_PAGE_KEY)),
-        );
+        if (href.includes(`${config.baseProdUrl}asset/search-results`) || href.includes(`${config.baseProdUrl}${config.EN_LANGUAGE}/asset/search-results`)) {
+          filterAssets(
+            JSON.parse(localStorage.getItem(config.FILTER_KEY)),
+            JSON.parse(localStorage.getItem(config.SORT_KEY)),
+            JSON.parse(localStorage.getItem(config.TYPE_KEY)),
+            JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)),
+            JSON.parse(localStorage.getItem(config.RES_PER_PAGE_KEY)),
+          );
+        } else if (href === `${config.baseProdUrl}blog` || href === `${config.baseProdUrl}${config.EN_LANGUAGE}/blog`) {
+          getBlogs(JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)), config.DEFAULT_BLOG_RES_PER_PAGE);
+        }
       });
     });
   }

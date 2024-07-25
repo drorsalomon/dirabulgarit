@@ -9,7 +9,7 @@ block head
     include _headLinksScripts
 
 block content 
-    //-.container-fluid.hero-video-container
+    .container-fluid.hero-video-container
         .row.hero-video-row.align-items-center.justify-content-center 
             .col.hero-video-col
                 div.hero-video-bg-video-container(role="img" aria-labelledby="heroVideoDescription")
@@ -17,6 +17,7 @@ block content
                         video(autoplay muted loop).hero-video
                             source(src='/videos/hero-video-1080p.webm' type='video/webm')
                     span.visually-hidden(id="heroVideoDescription") וידאו שמראה את איזור חוף הים בסאני ביץ', בורגס בולגריה, את הטיילת בעיר ואת פארק המים המקומי           
+                    a(href='https://www.youtube.com/watch?v=8TkCc_ybpGU&t=360s' target="_blank").hero-video-bg-video-text Video by Viktoriia Lozovska
     
     .container-fluid.hero-container(role="img" aria-labelledby="heroImageDescription")
         span.visually-hidden(id="heroImageDescription") תמונה של קומפלקסים למגורים שיושבים על חוף הים בבורגס בולגריה

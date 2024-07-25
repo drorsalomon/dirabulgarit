@@ -16,7 +16,7 @@ block content
                     div.blog-headline-text(dir='rtl') בדירה בולגרית אנו מאמינים שידע זה כח, לכן ריכזנו עבורכם מאמרים במבחר נושאים כמו השקעה בבולגריה, החיים בבולגריה, מיסוי בבולגריה, התאזרחות בבולגריה ועוד. 
         .row.blog-cards-row.mx-auto 
             .col-12.blog-cards-col 
-                each blog in blogs       
+                each blog in blogsArray       
                     .card.blog-card(data-slug=`${blog.slug}`)
                         .row.g-0.d-flex.align-items-lg-center
                             .col-md-4.d-flex
@@ -28,3 +28,99 @@ block content
                                     div.card-text.blog-card-text(dir='rtl')= blog.sectionOneTexts[0]
                                     div.text-center.py-3
                                         button.blog-card-btn(aria-label='להמשך קריאת הבלוג') להמשך קריאה
+
+                if totalPages.length > 1                        
+                    .pagination-Container
+                        .row.pagination-row.d-flex.justify-content-around.justify-content-md-center
+                            if totalPages.length >= 5 && pageNumber <= 3
+                                .col-1.pagination-col.d-flex.justify-content-center.align-content-center
+                                    button.pagination-prev-page-btn.pagination-icon-btn
+                                        svg.bi.pagination-icon
+                                            use(xlink:href='/img/icons/chevron-left.svg#chevron-left')                        
+                                .col-8.col-md-6.col-xl-4.pagination-col          
+                                    .pagination-pages-container.text-center
+                                        .row.pagination-pages-col-row.d-flex
+                                            .col.pagination-page-btn-col.p-0
+                                                button.pagination-page-btn(data-page=`${totalPages[0]}`)= totalPages[0] 
+                                            .col.pagination-page-btn-col.p-0    
+                                                button.pagination-page-btn(data-page=`${totalPages[1]}`)= totalPages[1] 
+                                            .col.pagination-page-btn-col.p-0    
+                                                button.pagination-page-btn(data-page=`${totalPages[2]}`)= totalPages[2] 
+                                            .col.pagination-page-btn-col.p-0    
+                                                button.pagination-page-btn(data-page=`${totalPages[3]}`)= totalPages[3] 
+                                            .col.pagination-page-btn-col.p-0
+                                                button.pagination-separator(disabled) ...
+                                            .col.pagination-page-btn-col.p-0    
+                                                button.pagination-page-btn(data-page=`${totalPages[totalPages.length - 1]}`)= totalPages[totalPages.length - 1] 
+                                .col-1.pagination-col.d-flex.justify-content-center.align-content-center
+                                    button.pagination-next-page-btn.pagination-icon-btn(data-lastpage=`${totalPages[totalPages.length - 1]}`) 
+                                        svg.bi.pagination-icon
+                                            use(xlink:href='/img/icons/chevron-right.svg#chevron-right')
+                            else if totalPages.length >= 5 && pageNumber >= 4 && pageNumber < totalPages[totalPages.length - 4]
+                                .col-1.pagination-col.d-flex.justify-content-center.align-content-center
+                                    button.pagination-prev-page-btn.pagination-icon-btn
+                                        svg.bi.pagination-icon
+                                            use(xlink:href='/img/icons/chevron-left.svg#chevron-left')   
+                                .col-8.col-md-6.col-xl-4.pagination-col           
+                                    .pagination-pages-container.text-center
+                                        .row.pagination-pages-col-row.d-flex
+                                            .col.pagination-page-btn-col.p-0 
+                                                button.pagination-page-btn(data-page=`${totalPages[0]}`)= totalPages[0] 
+                                            .col.pagination-page-btn-col.p-0     
+                                                button.pagination-separator(disabled) ...
+                                            .col.pagination-page-btn-col.p-0 
+                                                button.pagination-page-btn(data-page=`${totalPages[pageNumber - 2]}`)= totalPages[pageNumber - 2] 
+                                            .col.pagination-page-btn-col.p-0     
+                                                button.pagination-page-btn(data-page=`${totalPages[pageNumber - 1]}`)= totalPages[pageNumber - 1] 
+                                            .col.pagination-page-btn-col.p-0     
+                                                button.pagination-page-btn(data-page=`${totalPages[pageNumber]}`)= totalPages[pageNumber] 
+                                            .col.pagination-page-btn-col.p-0     
+                                                button.pagination-separator(disabled) ...
+                                            .col.pagination-page-btn-col.p-0     
+                                                button.pagination-page-btn(data-page=`${totalPages[totalPages.length - 1]}`)= totalPages[totalPages.length - 1] 
+                                .col-1.pagination-col.d-flex.justify-content-center.align-content-center
+                                    button.pagination-next-page-btn.pagination-icon-btn(data-lastpage=`${totalPages[totalPages.length - 1]}`)
+                                        svg.bi.pagination-icon
+                                            use(xlink:href='/img/icons/chevron-right.svg#chevron-right')    
+                            else if totalPages.length >= 5 && pageNumber >= totalPages[totalPages.length - 4]  
+                                .col-1.pagination-col.d-flex.justify-content-center.align-content-center
+                                    button.pagination-prev-page-btn.pagination-icon-btn
+                                        svg.bi.pagination-icon
+                                            use(xlink:href='/img/icons/chevron-left.svg#chevron-left')   
+                                .col-8.col-md-6.col-xl-4.pagination-col           
+                                    .pagination-pages-container.text-center
+                                        .row.pagination-pages-col-row.d-flex.align-content-center 
+                                            .col.pagination-page-btn-col.p-0 
+                                                button.pagination-page-btn(data-page=`${totalPages[0]}`)= totalPages[0] 
+                                            .col.pagination-page-btn-col.p-0     
+                                                button.pagination-separator(disabled) ...
+                                            .col.pagination-page-btn-col.p-0 
+                                                button.pagination-page-btn(data-page=`${totalPages[totalPages.length - 5]}`)= totalPages[totalPages.length - 5] 
+                                            .col.pagination-page-btn-col.p-0    
+                                                button.pagination-page-btn(data-page=`${totalPages[totalPages.length - 4]}`)= totalPages[totalPages.length - 4] 
+                                            .col.pagination-page-btn-col.p-0    
+                                                button.pagination-page-btn(data-page=`${totalPages[totalPages.length - 3]}`)= totalPages[totalPages.length - 3] 
+                                            .col.pagination-page-btn-col.p-0    
+                                                button.pagination-page-btn(data-page=`${totalPages[totalPages.length - 2]}`)= totalPages[totalPages.length - 2] 
+                                            .col.pagination-page-btn-col.p-0    
+                                                button.pagination-page-btn(data-page=`${totalPages[totalPages.length - 1]}`)= totalPages[totalPages.length - 1] 
+                                .col-1.pagination-col.d-flex.justify-content-center.align-content-center
+                                    button.pagination-next-page-btn.pagination-icon-btn(data-lastpage=`${totalPages[totalPages.length - 1]}`) 
+                                        svg.bi.pagination-icon
+                                            use(xlink:href='/img/icons/chevron-right.svg#chevron-right')         
+                            else   
+                                .col-1.pagination-col.d-flex.justify-content-center.align-content-center
+                                    button.pagination-prev-page-btn.pagination-icon-btn
+                                        svg.bi.pagination-icon
+                                            use(xlink:href='/img/icons/chevron-left.svg#chevron-left')   
+                                .col-8.col-md-6.col-xl-4.pagination-col.d-flex.justify-content-evenly            
+                                    .pagination-pages-container.text-center
+                                        .row.pagination-pages-col-row.d-flex             
+                                            each page in totalPages
+                                                .col.pagination-page-btn-col.p-0
+                                                    button.pagination-page-btn(data-page=`${page}`)= page 
+                                .col-1.pagination-col.d-flex.justify-content-center.align-content-center
+                                    button.pagination-next-page-btn.pagination-icon-btn(data-lastpage=`${totalPages[totalPages.length - 1]}`) 
+                                        svg.bi.pagination-icon
+                                            use(xlink:href='/img/icons/chevron-right.svg#chevron-right')                        
+                                        

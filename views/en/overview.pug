@@ -10,7 +10,7 @@ block head
 
 block content 
    
-    //-.container-fluid.hero-video-container
+    .container-fluid.hero-video-container
         .row.hero-video-row.align-items-center.justify-content-center 
             .col.hero-video-col
                 div.hero-video-bg-video-container(role="img" aria-labelledby="heroVideoDescription")
@@ -18,6 +18,7 @@ block content
                         video(autoplay muted loop).hero-video
                             source(src='/videos/hero-video-1080p.webm' type='video/webm')
                     span.visually-hidden(id="heroVideoDescription") Video showing the seaside area in Sunny Beach, Burgas Bulgaria, the city promenade and the local water park
+                    a(href='https://www.youtube.com/watch?v=8TkCc_ybpGU&t=360s' target="_blank").hero-video-bg-video-text Video by Viktoriia Lozovska
     
     .container-fluid.hero-container.en-hero-container(role="img" aria-labelledby="heroImageDescription")
         span.visually-hidden(id="heroImageDescription") Image of apartment complexes on the Burgas city coast in Bulgaria

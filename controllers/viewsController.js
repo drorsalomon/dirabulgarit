@@ -1,11 +1,7 @@
 const Asset = require('../models/assetModel');
 const enAsset = require('../models/enAssetModel');
-const Blog = require('../models/blogModel');
-const enBlog = require('../models/enBlogModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
-const Utils = require('../utils/utils');
-const moment = require('moment');
 
 exports.getOverview = catchAsync(async (req, res, next) => {
   let sortOptions = { project: 1, price: 1 };
@@ -39,22 +35,6 @@ exports.getInvest = (req, res) => {
 exports.getAbout = (req, res) => {
   res.status(200).render(`${res.locals.lang}/about`);
 };
-
-exports.getBlog = catchAsync(async (req, res, next) => {
-  const blogs = res.locals.lang === 'he' ? await Blog.find({}) : await enBlog.find({});
-
-  if (!blogs) return next(new AppError('Could not find the requested hot assets!', 404));
-
-  for (const blog of blogs) {
-    blog.sectionOneTexts[0] = Utils.limitString(blog.sectionOneTexts[0], 350);
-  }
-
-  res.status(200).render(`${res.locals.lang}/blog`, {
-    title: 'Blog Page',
-    blogs,
-    moment,
-  });
-});
 
 exports.getContactUs = (req, res) => {
   res.status(200).render(`${res.locals.lang}/contactUs`);
