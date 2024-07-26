@@ -209,7 +209,8 @@ block content
             .row.asset-video-row.mx-4.justify-content-center 
                 .col-12.col-md-10.asset-video-col.text-center(role="region" aria-labelledby="assetVideoDescription")
                     //-iframe(src=`${asset.videoURL}` frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture sandbox" allowfullscreen).asset-video                    
-                    video(src=`${asset.videoURL}` type="video/mp4").asset-video 
+                    video.asset-video 
+                        source(src=`${asset.videoURL}` type="video/mp4")
                 span.visually-hidden(id="assetVideoDescription")=`Video of the property ${asset.name}`
     
     if asset.location.coordinates[0] && asset.location.coordinates[1]
