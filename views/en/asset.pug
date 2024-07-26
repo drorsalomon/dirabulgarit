@@ -208,7 +208,7 @@ block content
         .container-fluid.asset-video-container.py-xxl-3
             .row.asset-video-row.mx-4.justify-content-center 
                 .col-12.col-md-10.asset-video-col.text-center(role="region" aria-labelledby="assetVideoDescription")
-                    iframe(src=`${asset.videoURL}` frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen).asset-video                    
+                    iframe(src=`${asset.videoURL}` frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture sandbox" allowfullscreen).asset-video                    
                 span.visually-hidden(id="assetVideoDescription")=`Video of the property ${asset.name}`
     
     if asset.location.coordinates[0] && asset.location.coordinates[1]
