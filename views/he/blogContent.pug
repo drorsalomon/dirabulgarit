@@ -69,6 +69,18 @@ block content
                     each text in blog.sectionNineTexts
                         div.blog-content-text(dir='rtl')!= text
                 div.blog-section-separator          
+                if blog.sectionTenTitle     
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionTenTitle
+                if blog.sectionTenTexts
+                    each text in blog.sectionTenTexts
+                        div.blog-content-text(dir='rtl')!= text
+                div.blog-section-separator          
+                if blog.sectionElevenTitle     
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionElevenTitle
+                if blog.sectionElevenTexts
+                    each text in blog.sectionElevenTexts
+                        div.blog-content-text(dir='rtl')!= text
+                div.blog-section-separator          
                 if blog.listOne.listOneTitle
                     h2.blog-content-listTitle(dir='rtl')!= blog.listOne.listOneTitle
                 if blog.listOne.listOneTexts

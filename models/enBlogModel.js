@@ -42,6 +42,10 @@ const enBlogSchema = mongoose.Schema({
   sectionEightTexts: [String],
   sectionNineTitle: String,
   sectionNineTexts: [String],
+  sectionTenTitle: String,
+  sectionTenTexts: [String],
+  sectionElevenTitle: String,
+  sectionElevenTexts: [String],
   listOne: {
     listOneTitle: String,
     listOneTexts: [String],

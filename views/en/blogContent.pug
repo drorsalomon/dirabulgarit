@@ -68,6 +68,18 @@ block content
                 if blog.sectionNineTexts
                     each text in blog.sectionNineTexts
                         div.blog-content-text!= text
+                div.blog-section-separator
+                if blog.sectionTenTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionTenTitle
+                if blog.sectionTenTexts
+                    each text in blog.sectionTenTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator
+                if blog.sectionElevenTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionElevenTitle
+                if blog.sectionElevenTexts
+                    each text in blog.sectionElevenTexts
+                        div.blog-content-text!= text
                 div.blog-section-separator          
                 if blog.listOne.listOneTitle
                     h2.blog-content-listTitle!= blog.listOne.listOneTitle
