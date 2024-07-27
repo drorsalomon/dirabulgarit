@@ -58,17 +58,3 @@ exports.getAtlantisBarcode = catchAsync(async (req, res) => {
     projectAssets,
   });
 });
-
-exports.getAtlantisL6 = catchAsync(async (req, res) => {
-  let sortOptions = { sold: 1, price: 1 };
-  const projectAssets =
-    res.locals.lang === 'he'
-      ? await Asset.find({ project: 'Atlantis L6' }).sort(sortOptions)
-      : await enAsset.find({ project: 'Atlantis L6' }).sort(sortOptions);
-  if (!projectAssets) return next(new AppError('Could not find the requested asset!', 404));
-
-  res.status(200).render(`${res.locals.lang}/projects/atlantisL6`, {
-    title: 'Atlantis L6',
-    projectAssets,
-  });
-});

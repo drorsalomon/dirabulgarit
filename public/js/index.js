@@ -713,23 +713,6 @@ if (config.Elements.abProjectAreaNumber)
     9634,
     JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
   );
-// Atlantis L6
-if (config.Elements.al6ProjectBuildingsNumber) animation.animateCounter(config.Elements.al6ProjectBuildingsNumber, 3);
-if (config.Elements.al6ProjectFloorsNumber) animation.animateCounter(config.Elements.al6ProjectFloorsNumber, 9);
-if (config.Elements.al6ProjectApartmentsNumber) animation.animateCounter(config.Elements.al6ProjectApartmentsNumber, 183);
-if (config.Elements.al6ProjectParkingSpotsNumber) animation.animateCounter(config.Elements.al6ProjectParkingSpotsNumber, 181);
-if (config.Elements.al6ProjectAreaNumber)
-  animation.animateCounter(
-    config.Elements.al6ProjectAreaNumber,
-    19063,
-    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
-  );
-if (config.Elements.al6ProjectGreenAreaNumber)
-  animation.animateCounter(
-    config.Elements.al6ProjectGreenAreaNumber,
-    16187,
-    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
-  );
 // Fade in animation
 if (config.Elements.hotAssetsContainer || config.Elements.projectAssetsContainer) {
   animation.animateFadeIn(config.Elements.assetCards);
