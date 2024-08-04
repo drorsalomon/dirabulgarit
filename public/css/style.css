@@ -2330,7 +2330,7 @@ body {
   background-size: cover;
   background-position: top;
   position: relative;
-  height: 57rem;
+  height: 60rem;
   padding: 0 !important;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
@@ -2342,7 +2342,7 @@ body {
 
 .hero-text-col {
   position: absolute;
-  top: 14%;
+  top: 12%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -2353,7 +2353,7 @@ body {
 
 .hero-icons-row {
   position: absolute;
-  top: 53%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
