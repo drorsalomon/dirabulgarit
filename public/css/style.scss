@@ -341,10 +341,11 @@ body {
   z-index: 100;
   background-color: $whatsapp-widget;
   width: 11rem !important;
-  height: 3rem;
+  height: fit-content;
   border-radius: 10rem;
   text-align: center !important;
   margin-right: 0.4rem !important;
+  cursor: pointer;
 }
 
 .whatsapp-widget {
@@ -356,6 +357,10 @@ body {
   color: $bg-color-primary;
   font-size: $h8;
   text-decoration: none;
+}
+
+.whatsapp-widget a:hover {
+  filter: brightness(100%) !important;
 }
 
 .whatsapp-widget-icon {

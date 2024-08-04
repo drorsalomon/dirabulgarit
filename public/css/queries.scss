@@ -91,7 +91,6 @@
   // ***** Whatsapp Widget *****
   .whatsapp-widget-container {
     width: 13rem !important;
-    height: 3.5rem;
   }
 
   .whatsapp-widget a {
@@ -377,11 +376,6 @@
 
 // Medium
 @media only screen and (min-width: 768px) {
-  // ***** Whatsapp Widget *****
-  .whatsapp-widget {
-    bottom: 17rem;
-  }
-
   // ***** Navbar *****
   .navbar-call-us-text-container {
     padding: 0.6rem 2rem;
