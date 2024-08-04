@@ -10,63 +10,35 @@ import * as animation from './animation';
 window.onload = function () {
   // Widgets
   if (config.Elements.whatsappWidget) {
-    const href = window.location.href;
     const enableWidget = document.getElementById('enable-toolbar-trigger');
     const enableWidgetIcon = document.getElementById('enable-toolbar-trigger-svg');
-    if (href.includes('asset') || href.includes('project')) {
-      if (window.innerWidth >= 300 && window.innerWidth < 576) {
-        config.Elements.whatsappWidget.style.display = 'block';
-        config.Elements.whatsappWidget.style.bottom = '250px';
+    if (window.innerWidth >= 300 && window.innerWidth < 576) {
+      config.Elements.whatsappWidget.style.display = 'block';
+      config.Elements.whatsappWidget.style.bottom = '120px';
 
-        enableWidget.style.display = 'block';
-        enableWidget.style.top = '-230px';
-        enableWidget.style.left = '-3px !important';
-        enableWidgetIcon.style.height = '40px';
-        enableWidgetIcon.style.width = '40px';
-      } else if (window.innerWidth >= 576 && window.innerWidth < 768) {
-        config.Elements.whatsappWidget.style.display = 'block';
-        config.Elements.whatsappWidget.style.bottom = '255px';
+      enableWidget.style.display = 'block';
+      enableWidget.style.top = '-120px';
+      enableWidget.style.left = '-3px !important';
+      enableWidgetIcon.style.height = '30px';
+      enableWidgetIcon.style.width = '30px';
+    } else if (window.innerWidth >= 576 && window.innerWidth < 768) {
+      config.Elements.whatsappWidget.style.display = 'block';
+      config.Elements.whatsappWidget.style.bottom = '140px';
 
-        enableWidget.style.display = 'block';
-        enableWidget.style.left = '-3px !important';
-        enableWidgetIcon.style.height = '50px';
-        enableWidgetIcon.style.width = '50px';
-      } else if (window.innerWidth >= 768) {
-        config.Elements.whatsappWidget.style.display = 'block';
-        config.Elements.whatsappWidget.style.bottom = '160px';
+      enableWidget.style.display = 'block';
+      enableWidget.style.top = '-140px';
+      enableWidget.style.left = '-3px !important';
+      enableWidgetIcon.style.height = '50px';
+      enableWidgetIcon.style.width = '50px';
+    } else if (window.innerWidth >= 768) {
+      config.Elements.whatsappWidget.style.display = 'block';
+      config.Elements.whatsappWidget.style.bottom = '140px';
 
-        enableWidget.style.display = 'block';
-        enableWidget.style.top = '-145px';
-        enableWidget.style.left = '-3px !important';
-        enableWidgetIcon.style.height = '50px';
-        enableWidgetIcon.style.width = '50px';
-      }
-    } else {
-      if (window.innerWidth >= 300 && window.innerWidth < 576) {
-        config.Elements.whatsappWidget.style.display = 'block';
-        config.Elements.whatsappWidget.style.bottom = '35px';
-
-        enableWidget.style.display = 'block';
-        enableWidget.style.top = '-15px';
-        enableWidgetIcon.style.height = '40px';
-        enableWidgetIcon.style.width = '40px';
-      } else if (window.innerWidth >= 576 && window.innerWidth < 768) {
-        config.Elements.whatsappWidget.style.display = 'block';
-        config.Elements.whatsappWidget.style.bottom = '35px';
-
-        enableWidget.style.display = 'block';
-        enableWidget.style.top = '-15px';
-        enableWidgetIcon.style.height = '50px';
-        enableWidgetIcon.style.width = '50px';
-      } else if (window.innerWidth >= 768) {
-        config.Elements.whatsappWidget.style.display = 'block';
-        config.Elements.whatsappWidget.style.bottom = '35px';
-
-        enableWidget.style.display = 'block';
-        enableWidget.style.top = '-15px';
-        enableWidgetIcon.style.height = '50px';
-        enableWidgetIcon.style.width = '50px';
-      }
+      enableWidget.style.display = 'block';
+      enableWidget.style.top = '-135px';
+      enableWidget.style.left = '-3px !important';
+      enableWidgetIcon.style.height = '50px';
+      enableWidgetIcon.style.width = '50px';
     }
   }
   // If currency isn't set or currency is Euro

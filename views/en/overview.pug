@@ -23,16 +23,31 @@ block content
     .container-fluid.hero-container.en-hero-container(role="img" aria-labelledby="heroImageDescription")
         span.visually-hidden(id="heroImageDescription") Image of apartment complexes on the Burgas city coast in Bulgaria
         .row.d-flex.align-items-center.justify-content-center                    
-            .col-10.col-lg-8.hero-text-col 
+            .col-10.col-lg-8.hero-text-col.en-hero-text-col
+                .hero-border
                 h1.hero-headline Real Estate Investments in Bulgaria
-                div.hero-text The largest Bulgarian real estate website for Israelis - hundreds of properties, hundreds of opportunities, new and exclusive projects, resale apartments, holiday apartments, and residential apartments - "Dira Bulgarit" aggregates the real estate market in Bulgaria for you and accompanies you all the way to the property
-                div.hero-cta-btn-container
-                    button.btn-cta-white.to-calendly-btn(aria-label='Open the Contact Us page') Contact Us  
+                .hero-border.hero-bottom-border
+                div.hero-text The largest Bulgarian real estate website for Israelis
+        .row.hero-icons-row.en-hero-icons-row
+            .col-6.col-xl-3.hero-icon-col
+                img.hero-icon(src='/img/icons/house-svgrepo-com-hero-white.svg' alt='House icon') 
+                .hero-icon-text(dir='rtl') Hundreds of properties of all kinds
+            .col-6.col-xl-3.hero-icon-col 
+                img.hero-icon(src='/img/icons/lighthouse-svgrepo-com-hero-white.svg' alt='Lighthouse icon') 
+                .hero-icon-text(dir='rtl') Full guidance throughout the investment process
+            .col-6.col-xl-3.hero-icon-col
+                img.hero-icon(src='/img/icons/stats-real-estate-svgrepo-com-hero-white.svg' alt='House and graph icon') 
+                .hero-icon-text(dir='rtl') Stable and attractive investment profits        
+            .col-6.col-xl-3.hero-icon-col
+                img.hero-icon(src='/img/icons/money-bag-euro-svgrepo-com-hero-white.svg' alt='Euro money bag icon') 
+                .hero-icon-text(dir='rtl') Investment in an EU member developing country  
+            .col-10.col-lg-8.hero-contact-us-col.en-hero-contact-us-col        
+                button.btn-cta-white.to-calendly-btn(aria-label='Open the Contact Us page') Contact Us         
 
     div.mainpage-search-modal-open-btn-container.text-center
         h2.mainpage-search-headline Property Search
         div.mainpage-search-text Press the search button and find a property to your liking
-        button.mainpage-search-modal-open-btn(data-bs-toggle="modal" data-bs-target="#searchModal" aria-label='Open property search modal') Search property  
+        button.mainpage-search-modal-open-btn(data-bs-toggle="modal" data-bs-target="#searchModal" aria-label='Open property search modal') Open Search   
 
     .container.d-flex.justify-content-center
         .mainpage-search-container.w-75   
@@ -419,4 +434,7 @@ block content
                                 textarea.contact-us-textarea.contact-us-description-input.form-control.en-search-filter-input(id='Description' name='Description' aria-label="Request Description" rows="5" placeholder='Is there anything else you would like us to know?')
                             .col-12.contact-us-col
                                 input.contact-us-button.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Send' title='Submit')                                                                   
-                                input.contact-us-button.mx-3(type='reset' class='zcwf_button' name='reset' value='Clear' title='Reset')        
+                                input.contact-us-button.mx-3(type='reset' class='zcwf_button' name='reset' value='Clear' title='Reset')    
+
+    include _contactUsFixed  
+    include _contactUsFixedMobile                                

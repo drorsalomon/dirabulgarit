@@ -1,13 +1,18 @@
 nav.navbar.navbar-expand-xl.fixed-top  
-  .container.navbar-container
-    .container.navbar-mobile-container
-      .row
-        .col-2.d-flex.align-content-center
-          button.navbar-toggler.collapsed(type='button' data-bs-toggle='offcanvas' data-bs-target='#navbarContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='פתיחת תפריט קישורים')
-            span.navbar-toggler-icon
-        .col-10.text-end
-          a.navbar-brand.mobile-navbar-brand(href='/')
-            img.navbar-logo(src='/img/logo.png' alt='לוגו של דירה בולגרית')  
+  .container-fluid.navbar-container
+    .row.mobile-navbar-row
+      .col-4.mobile-navbar-col.align-content-center.text-center.text-sm-start
+        button.navbar-toggler.collapsed(type='button' data-bs-toggle='offcanvas' data-bs-target='#navbarContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='פתיחת תפריט קישורים')
+          span.navbar-toggler-icon
+      .col-4.mobile-navbar-col.align-content-center.text-center
+        div.navbar-call-us-text-container
+          span.navbar-call-us-text(dir='rtl') התקשרו: 
+          img.navbar-mobile-icon(src='/img/icons/navbar-mobile-phone-white.svg' alt='Phone Icon') 
+          br
+          span.navbar-call-us-text 052-311-1172
+      .col-4.mobile-navbar-col.align-content-center.text-end
+        a.navbar-brand.mobile-navbar-brand(href='/')
+          img.navbar-logo(src='/img/logo.png' alt='לוגו של דירה בולגרית')  
     div.offcanvas.offcanvas-end.w-auto.text-end(tabindex='-1' id='navbarContent' aria-labelledby='offcanvasNavbarLabel')
       div.offcanvas-body
         div.btn-cta--container

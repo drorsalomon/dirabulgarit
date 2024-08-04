@@ -244,6 +244,7 @@ body {
 }
 
 .btn-cta-white,
+.btn-cta-mobile-white,
 .btn-cta-asset,
 .mainpage-blog-card-btn,
 .share-btn-white,
@@ -265,6 +266,17 @@ body {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.btn-cta-mobile-white {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 10rem;
+  font-size: $h6;
+  font-weight: 600;
+  -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  border: none;
 }
 
 .share-btn,
@@ -324,20 +336,31 @@ body {
 }
 
 // ***** Whatsapp Widget *****
-.whatsapp-widget {
+.whatsapp-widget-container {
   display: none;
-  height: 4rem;
-  width: 4rem;
   z-index: 100;
-  margin: 0 0 4rem 0;
+  background-color: $whatsapp-widget;
+  width: 11rem !important;
+  height: 3rem;
+  border-radius: 10rem;
+  text-align: center !important;
+  margin-right: 0.4rem !important;
+}
+
+.whatsapp-widget {
+  border-radius: 10rem;
+  height: 3rem;
 }
 
 .whatsapp-widget a {
-  margin-left: 0.3rem;
+  color: $bg-color-primary;
+  font-size: $h8;
+  text-decoration: none;
 }
 
 .whatsapp-widget-icon {
-  height: 4rem;
+  height: 2rem;
+  margin-left: 0.5rem;
 }
 
 // ***** Hero Video *****
@@ -360,23 +383,56 @@ body {
 .hero-container {
   background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.6), rgba(26, 113, 212, 0.6)), url('/img/hero-burgas.webp');
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.6)), to(rgba(26, 113, 212, 0.6))), url('/img/hero-burgas.webp');
-  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.6), rgba(26, 113, 212, 0.6)), url('/img/hero-burgas.webp');
+  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.7), rgba(26, 113, 212, 0.7)), url('/img/hero-burgas.webp');
   background-size: cover;
   background-position: top;
   position: relative;
-  height: 80rem;
+  height: 57rem;
   padding: 0 !important;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
 .en-hero-container {
-  height: 100rem;
+  height: 70rem;
 }
 
 .hero-text-col {
   position: absolute;
-  top: 45%;
+  top: 14%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 0 !important;
+}
+
+.hero-icons-row {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 0 !important;
+  width: 85% !important;
+}
+
+.hero-icon-text {
+  color: $bg-color-primary;
+  margin-bottom: 2rem;
+}
+
+.hero-icon {
+  height: 7rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-contact-us-col {
+  position: absolute;
+  top: 110%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -386,17 +442,26 @@ body {
 }
 
 .hero-headline {
-  font-size: $h2;
-  font-weight: 600;
-  color: $bg-color-primary;
-  margin-bottom: 4rem;
-}
-
-.hero-text {
   font-size: $h4;
   font-weight: 600;
   color: $bg-color-primary;
-  margin-bottom: 4rem;
+}
+
+.hero-border {
+  background-color: $bg-color-primary;
+  height: 0.15rem;
+  border-radius: 20rem;
+}
+
+.hero-bottom-border {
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  font-size: $h6;
+  font-weight: 600;
+  color: $bg-color-primary;
+  margin-bottom: 2rem;
 }
 
 .hero-cta-btn-container {
@@ -1240,19 +1305,12 @@ input[type='text']::placeholder {
   padding-top: 5rem;
 }
 
-.asset-contact-us-container-fixed {
-  z-index: 100;
-  padding: 0 !important;
+.contact-us-container-fixed {
+  display: none;
 }
 
 .contact-us-fixed-col {
-  background-color: $text-color-tertiary;
-  padding: 1rem;
-}
-
-.contact-us-fixed-row {
-  margin-left: 2rem !important;
-  margin-right: 0 !important;
+  background-color: $text-color-secondary;
 }
 
 .contact-us-fixed-headline {
@@ -1262,18 +1320,38 @@ input[type='text']::placeholder {
   margin-bottom: 1rem;
 }
 
+.contact-us-fixed-logo {
+  height: 6rem;
+}
+
 .contact-us-input-fixed-col {
   margin-bottom: 1.5rem;
 }
 
 .contact-us-button-fixed {
   font-weight: 600;
-  width: 20rem !important;
+  width: 15rem !important;
   height: 4rem !important;
   background-color: $bg-color-primary;
-  color: $text-color-tertiary;
+  color: $text-color-secondary;
   border: none;
   border-radius: 1rem;
   -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+}
+
+// ***** Contact Us Fixed Bottom *****
+.contact-us-mobile-fixed-container {
+  width: 103% !important;
+  padding: 1rem 0;
+  background-color: $text-color-secondary;
+}
+
+.contact-us-mobile-fixed-text {
+  color: $bg-color-primary;
+  font-weight: 600;
+}
+
+.btn-cta-mobile-icon {
+  height: 2.6rem;
 }

@@ -23,10 +23,25 @@ block content
         span.visually-hidden(id="heroImageDescription") תמונה של קומפלקסים למגורים שיושבים על חוף הים בבורגס בולגריה
         .row.d-flex.align-items-center.justify-content-center                    
             .col-10.col-lg-8.hero-text-col 
+                .hero-border
                 h1.hero-headline(dir='rtl') השקעות נדל"ן בבולגריה
-                div.hero-text(dir='rtl') אתר הנדל"ן הבולגרי הגדול ביותר עבור ישראלים, מאות נכסים, מאות הזדמנויות, פרויקטים חדשים ובלעדיים, דירות יד שנייה, דירות נופש, ודירות למגורים - "דירה בולגרית" מאגדת עבורך את הנדל"ן בבולגריה ומלווה אותך כל הדרך אל הנכס
-                div.hero-cta-btn-container
-                    button.btn-cta-white.to-calendly-btn(aria-label='מעבר לעמוד יצירת קשר') צרו קשר          
+                .hero-border.hero-bottom-border
+                div.hero-text(dir='rtl') דירה בולגרית - אתר הנדל"ן הבולגרי הגדול ביותר בישראל 
+        .row.hero-icons-row
+            .col-6.col-xl-3.hero-icon-col
+                img.hero-icon(src='/img/icons/house-svgrepo-com-hero-white.svg' alt='House icon') 
+                .hero-icon-text(dir='rtl') מאות נכסים מכל הסוגים
+            .col-6.col-xl-3.hero-icon-col 
+                img.hero-icon(src='/img/icons/lighthouse-svgrepo-com-hero-white.svg' alt='Lighthouse icon') 
+                .hero-icon-text(dir='rtl') ליווי צמוד לאורך כל תהליך ההשקעה
+            .col-6.col-xl-3.hero-icon-col
+                img.hero-icon(src='/img/icons/stats-real-estate-svgrepo-com-hero-white.svg' alt='House and graph icon') 
+                .hero-icon-text(dir='rtl') תשואה יציבה ואטרקטיבית        
+            .col-6.col-xl-3.hero-icon-col
+                img.hero-icon(src='/img/icons/money-bag-euro-svgrepo-com-hero-white.svg' alt='Euro money bag icon') 
+                .hero-icon-text(dir='rtl') השקעה במדינה מתפתחת באיחוד האירופאי       
+            .col-10.col-lg-8.hero-contact-us-col    
+                button.btn-cta-white.to-calendly-btn(aria-label='מעבר לעמוד יצירת קשר') צרו קשר   
 
     div.mainpage-search-modal-open-btn-container.text-center
         h2.mainpage-search-headline חיפוש נכס
@@ -419,4 +434,7 @@ block content
                                 textarea.contact-us-textarea.contact-us-description-input.form-control(id='Description' name='Description' dir='rtl' aria-label="תיאור הבקשה" rows="5" placeholder='יש עוד משהו שהייתם רוצים שנדע?')
                             .col-12.contact-us-col
                                 input.contact-us-button.mx-3(type='reset' class='zcwf_button' name='reset' value='ניקוי' title='Reset')        
-                                input.contact-us-button.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='שליחה' title='Submit')
+                                input.contact-us-button.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='שליחה' title='Submit')   
+
+    include _contactUsFixed  
+    include _contactUsFixedMobile                               

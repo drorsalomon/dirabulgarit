@@ -11,10 +11,11 @@ html(lang="en")
                     // HEADER
                     include _header
                 .col-12.content-col
-                    #whatsapp-widget.whatsapp-widget.position-fixed.start-0
-                        a(href='https://wa.me/972523111172' target='_blank')
-                            img#whatsapp-icon.whatsapp-widget-icon(src='/img/icons/whatsapp-svgrepo-com.svg' alt='WhatsApp')
-                    script(src='https://cdn.enable.co.il/licenses/enable-L26847g2j5ukwxht-0724-60772/init.js')        
+                    .container.whatsapp-widget-container.position-fixed.end-0.align-content-center
+                        #whatsapp-widget.whatsapp-widget
+                            a(href='https://wa.me/972523111172' target='_blank') Talk To Agent
+                                img#whatsapp-icon.whatsapp-widget-icon(src='/img/icons/whatsapp-svgrepo-com-white.svg' alt='WhatsApp')
+                        script(src='https://cdn.enable.co.il/licenses/enable-L26847g2j5ukwxht-0724-60772/init.js')        
                     // Content
                     block content                   
                 .col-12.footer-col        

@@ -1,6 +1,6 @@
 export const Elements = {
   // Widgets
-  whatsappWidget: document.querySelector('.whatsapp-widget'),
+  whatsappWidget: document.querySelector('.whatsapp-widget-container'),
   enableWidget: document.getElementById('enable-toolbar-trigger'),
   // Buttons
   toContactUsBtn: document.querySelectorAll('.to-calendly-btn'),

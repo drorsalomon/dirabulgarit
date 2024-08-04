@@ -218,29 +218,5 @@ block content
             each asset in projectAssets
                 include ../_mobileAssetsCards 
 
-    .container-fluid.asset-contact-us-container-fixed.position-fixed.text-center.bottom-0
-        .row
-            .col-12.contact-us-fixed-col.py-3
-                div#crmWebToEntityForm.crmWebToEntityForm
-                    form.contact-us-form#webform6296617000000479035(action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads6296617000000479035 method='POST' accept-charset='UTF-8' novalidate)
-                        input(type='text' style='display:none;' name='xnQsjsdp' value='59a0780e6b2791aec2fc494a0d52812511ef98c0f6123210fdc332d6fa0b9e22')
-                        input#zc_gad(type='hidden' name='zc_gad' value='')
-                        input(type='text' style='display:none;' name='xmIwtLD' value='7334e6acba558f934b954c69f5851611538edbf846a3d2f15f807f241012015c2f9c9c0839f214a112e56e062e05be4f')
-                        input(type='text' style='display:none;' name='actionType' value='TGVhZHM=')
-                        input(type='text' style='display:none;' name='returnURL' value='https://www.dirabulgarit.com/contact-us-confirm')
-                        .row.contact-us-fixed-row.align-items-center.flex-row-reverse.d-flex.justify-content-center
-                            .col-12.contact-us-headline-col
-                                div.contact-us-fixed-headline השאירו פרטים ונחזור אליכם בהקדם האפשרי
-                            .col-6.col-md-2.contact-us-input-fixed-col
-                                input.contact-us-input.contact-us-input.contact-us-name-input.form-control(type='text' name='Last Name' maxlength='200' placeholder='שם' aria-label='שם' aria-describedby='basic-addon1' required)                            
-                                .invalid-tooltip אנא הכניסו שם
-                            .col-6.col-md-2.contact-us-input-fixed-col
-                                input.contact-us-input.contact-us-phone-input.form-control(type='text' name='Phone' maxlength='10' placeholder='טלפון' aria-label='טלפון' aria-describedby='basic-addon1' pattern='[0-9]{10}' required)
-                                .invalid-tooltip.contact-us-phone-invalid אנא הכניסו מספר טלפון תקין
-                            .col-6.col-md-2.contact-us-input-fixed-col
-                                input.contact-us-input.contact-us-email-input.form-control(type='email' ftype='email' autocomplete='false' name='Email' crmlabel='' maxlength='100' placeholder='אימייל  ' aria-label='אימייל' aria-describedby='basic-addon1' pattern='[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}' required)
-                                .invalid-tooltip.contact-us-email-invalid אנא הכניסו אימייל תקין
-                            .col-6.col-md-3.contact-us-input-fixed-col    
-                                textarea.contact-us-textarea.contact-us-description-input.form-control(id='Description' name='Description' dir='rtl' aria-label="תיאור הבקשה" rows="2") הייתי רוצה לשמוע עוד פרטים על פרויקט "Atlantis Euphoria"
-                            .col-12.col-md-3.col-lg-2.contact-us-fixed-bottom-col 
-                                input.contact-us-button-fixed.my-2.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='שליחה' title='Submit')             
+    include ../_contactUsFixed  
+    include ../_contactUsFixedMobile
