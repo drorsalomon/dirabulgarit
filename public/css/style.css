@@ -2137,6 +2137,30 @@ body {
     opacity: 1;
   }
 }
+@keyframes slideUp {
+  from {
+    bottom: -150px;
+  }
+  to {
+    bottom: 0;
+  }
+}
+@keyframes slideDown {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: -150px;
+  }
+}
+.slideUp {
+  animation: slideUp 1s;
+}
+
+.slideDown {
+  animation: slideDown 1s;
+}
+
 .moveInRight {
   -webkit-animation: moveInRight 1.5s;
   animation: moveInRight 1.5s;
@@ -2145,6 +2169,11 @@ body {
 .moveInLeft {
   -webkit-animation: moveInLeft 1.5s;
   animation: moveInLeft 1.5s;
+}
+
+.fadeIn {
+  -webkit-animation: fadeIn 2s;
+  animation: fadeIn 2s;
 }
 
 .pulse {
@@ -2279,7 +2308,7 @@ body {
 
 .whatsapp-widget-container {
   display: none;
-  z-index: 100;
+  z-index: 101;
   background-color: #1bd741;
   width: 11rem !important;
   height: fit-content;
@@ -2373,9 +2402,9 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.hero-contact-us-col {
+.hero-contact-us-row {
   position: absolute;
-  top: 110%;
+  top: 83%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -3236,6 +3265,7 @@ input[type=text]::placeholder {
 
 .contact-us-container-fixed {
   display: none;
+  z-index: 101;
 }
 
 .contact-us-fixed-col {
@@ -3270,9 +3300,11 @@ input[type=text]::placeholder {
 }
 
 .contact-us-mobile-fixed-container {
+  position: fixed;
   width: 103% !important;
   padding: 1rem 0;
   background-color: #2289ff;
+  z-index: 101;
 }
 
 .contact-us-mobile-fixed-text {

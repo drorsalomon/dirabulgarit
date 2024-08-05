@@ -40,7 +40,10 @@ export const Elements = {
   // Overview
   heroHeadline: document.querySelector('.hero-headline'),
   heroText: document.querySelector('.hero-text'),
+  heroIcons: document.querySelector('.hero-icons-row'),
   hotAssetsContainer: document.querySelector('.mainpage-hot-assets-container'),
+  // Footer
+  footerContainer: document.querySelector('.footer-container'),
   // Search Form
   searchForm: document.querySelector('.search-form'),
   searchDdBtn: document.querySelectorAll('.search-filter-dropdown--btn'),
@@ -99,6 +102,8 @@ export const Elements = {
   // Blog
   blogCards: document.querySelectorAll('.blog-card'),
   // Contact Us
+  contactUsContainerFixed: document.querySelector('.contact-us-container-fixed'),
+  contactUsMobileContainerFixed: document.querySelector('.contact-us-mobile-fixed-container'),
   contactUsForm: document.querySelector('.contact-us-form'),
   contactUsNameInput: document.querySelector('.contact-us-name-input'),
   contactUsPhoneInput: document.querySelector('.contact-us-phone-input'),

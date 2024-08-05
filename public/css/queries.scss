@@ -129,10 +129,6 @@
     top: 16%;
   }
 
-  .hero-contact-us-col {
-    top: 115%;
-  }
-
   .en-hero-container {
     height: 70rem;
   }
@@ -415,10 +411,6 @@
     font-size: $h5;
   }
 
-  .hero-contact-us-col {
-    top: 115%;
-  }
-
   .en-hero-container {
     height: 90rem;
   }
@@ -429,6 +421,10 @@
 
   .en-hero-icons-row {
     top: 62%;
+  }
+
+  .en-hero-contact-us-row {
+    top: 86%;
   }
 
   // ***** Search Selection *****
@@ -638,6 +634,7 @@
   .contact-us-container-fixed {
     display: block;
     width: 101.5% !important;
+    position: fixed;
   }
 
   .contact-us-fixed-row {
@@ -1353,8 +1350,8 @@
     top: 55%;
   }
 
-  .hero-contact-us-col {
-    top: 130%;
+  .hero-contact-us-row {
+    top: 80%;
   }
 
   .en-hero-container {
@@ -1644,6 +1641,10 @@
   // ***** Main Page Hero *****
   .en-hero-container {
     height: 60rem;
+  }
+
+  .en-hero-contact-us-row {
+    top: 83%;
   }
 
   // ***** Main Page About *****

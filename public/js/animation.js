@@ -45,6 +45,14 @@ export const animateMoveInLeft = (element) => {
   }
 };
 
+export const animateFadeIn = (element) => {
+  if (window.innerWidth >= 992) {
+    if (inView(element)) {
+      element.classList.add('fadeIn');
+    }
+  }
+};
+
 export const animatePulse = (elements) => {
   elements.forEach((element) => {
     if (inView(element)) {
@@ -56,11 +64,38 @@ export const animatePulse = (elements) => {
 // Animate pulse for buttons
 const animatedElementsArray = [config.Elements.ctaBtnWhite[0], config.Elements.pricingCtaBtn];
 
-animateMoveInRight(config.Elements.heroHeadline);
-animateMoveInLeft(config.Elements.heroText);
-
 export const handleScroll = () => {
+  animateMoveInRight(config.Elements.heroHeadline);
+  animateMoveInLeft(config.Elements.heroText);
+  animateFadeIn(config.Elements.heroIcons);
   animatePulse(animatedElementsArray);
+};
+
+export const toggleContactUs = (elementOne, elementTwo, elementThree) => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          elementOne.classList.remove('slideUp');
+          elementOne.classList.add('slideDown');
+          elementOne.style.bottom = '-150px';
+          elementTwo.classList.remove('slideUp');
+          elementTwo.classList.add('slideDown');
+          elementTwo.style.bottom = '-150px';
+        } else {
+          elementOne.classList.remove('slideDown');
+          elementOne.classList.add('slideUp');
+          elementOne.style.bottom = '0';
+          elementTwo.classList.remove('slideDown');
+          elementTwo.classList.add('slideUp');
+          elementTwo.style.bottom = '0';
+        }
+      });
+    },
+    { threshold: 0.1 }, // Adjust threshold as needed
+  );
+
+  observer.observe(elementThree);
 };
 
 export const animateCounter = (element, endNum, text) => {
@@ -98,7 +133,7 @@ export const animateCounter = (element, endNum, text) => {
   observer.observe(element);
 };
 
-export const animateFadeIn = (element) => {
+export const animateCardsFadeIn = (element) => {
   const observer = new IntersectionObserver(
     (element, observer) => {
       let delay = 1;

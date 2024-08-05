@@ -641,6 +641,11 @@ if (config.Elements.calendlyAgentsChoices)
     });
   });
 
+// ***** Animations *****
+
+// Contact Us fixed animation
+animation.toggleContactUs(config.Elements.contactUsContainerFixed, config.Elements.contactUsMobileContainerFixed, config.Elements.footerContainer);
+
 // Scroll event listener for animations
 if (window.innerWidth >= 992) {
   document.addEventListener('scroll', () => {
@@ -687,7 +692,7 @@ if (config.Elements.abProjectAreaNumber)
   );
 // Fade in animation
 if (config.Elements.hotAssetsContainer || config.Elements.projectAssetsContainer) {
-  animation.animateFadeIn(config.Elements.assetCards);
+  animation.animateCardsFadeIn(config.Elements.assetCards);
 } else if (config.Elements.searchResultsContainer || config.Elements.relatedAssetsContainer) {
   config.Elements.assetCards.forEach((card) => {
     card.style.opacity = 1;
