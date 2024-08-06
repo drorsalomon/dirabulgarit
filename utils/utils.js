@@ -91,9 +91,9 @@ exports.buildMongooseQuery = (filter) => {
   // If priceMin and priceMax filters have values, include them in the query
   if (filter.currency === 'euro') {
     if (!filter.priceMin && !filter.priceMax) {
-      mongooseQuery.price = { $gte: 0, $lte: 1000000 };
+      mongooseQuery.price = { $gte: 0, $lte: 10000000 };
     } else if (filter.priceMin && !filter.priceMax) {
-      mongooseQuery.price = { $gte: sanitizer.sanitize(filter.priceMin), $lte: 1000000 };
+      mongooseQuery.price = { $gte: sanitizer.sanitize(filter.priceMin), $lte: 10000000 };
     } else if (!filter.priceMin && filter.priceMax) {
       mongooseQuery.price = { $gte: 0, $lte: sanitizer.sanitize(filter.priceMax) };
     } else if (filter.priceMin && filter.priceMax) {
@@ -101,9 +101,9 @@ exports.buildMongooseQuery = (filter) => {
     }
   } else {
     if (!filter.priceMin && !filter.priceMax) {
-      mongooseQuery.priceNis = { $gte: 0, $lte: 1000000 };
+      mongooseQuery.priceNis = { $gte: 0, $lte: 10000000 };
     } else if (filter.priceMin && !filter.priceMax) {
-      mongooseQuery.priceNis = { $gte: sanitizer.sanitize(filter.priceMin), $lte: 1000000 };
+      mongooseQuery.priceNis = { $gte: sanitizer.sanitize(filter.priceMin), $lte: 10000000 };
     } else if (!filter.priceMin && filter.priceMax) {
       mongooseQuery.priceNis = { $gte: 0, $lte: sanitizer.sanitize(filter.priceMax) };
     } else if (filter.priceMin && filter.priceMax) {
