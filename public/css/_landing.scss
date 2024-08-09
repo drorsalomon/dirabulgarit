@@ -1,0 +1,85 @@
+@import 'variables';
+
+.landing-logo-container {
+  margin: 0.5rem 0rem;
+}
+
+.landing-logo {
+  height: 4rem;
+}
+
+.landing-text-col {
+  padding: 0.5rem 0.2rem !important;
+  background-color: $text-color-tertiary;
+}
+
+.landing-text {
+  font-size: $h7;
+  font-weight: 600;
+  color: $bg-color-primary;
+}
+
+.landing-main-image-col {
+  padding: 0 !important;
+}
+
+.landing-main-image {
+  background-size: cover;
+  background-position: top;
+  height: 17rem;
+  width: 100%;
+}
+
+.landing-top-text-col {
+  padding: 0.5rem 0 !important;
+  background-color: $text-color-tertiary;
+}
+
+.landing-icons-mobile-container {
+  margin-top: 1rem;
+}
+
+.landing-icons-col {
+  margin-bottom: 1rem;
+}
+
+.landing-icon {
+  height: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.landing-contact-us-headline {
+  font-size: $h7;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.landing-contact-us-col {
+  margin-bottom: 2rem;
+}
+
+.landing-contact-us-input {
+  font-size: $h7 !important;
+  text-align: right !important;
+  color: $text-color-primary !important;
+  border: 1px solid $text-color-secondary !important;
+  border-radius: 1rem !important;
+  height: 3rem !important;
+}
+
+.landing-contact-us-input :focus {
+  outline: none;
+  border-color: $input-border-glow !important;
+  -webkit-box-shadow: 0 0 10px $input-border-glow !important;
+  box-shadow: 0 0 10px $input-border-glow !important;
+}
+
+.landing-contact-us-input::placeholder {
+  font-size: $h7 !important;
+  padding: 0 !important;
+}
+
+.landing-text-large-container,
+.landing-main-image-large-container {
+  display: none;
+}

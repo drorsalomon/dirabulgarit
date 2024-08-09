@@ -302,6 +302,9 @@
   .project-installment-scheme-table td {
     font-size: 1.6rem;
   }
+  .landing-main-image {
+    height: 24.5rem;
+  }
 }
 @media only screen and (min-width: 768px) {
   .navbar-call-us-text-container {
@@ -630,6 +633,15 @@
   }
   .footer-border {
     width: 15rem;
+  }
+  .landing-text {
+    font-size: 1.6rem;
+  }
+  .landing-main-image {
+    height: 31rem;
+  }
+  .landing-contact-us-input {
+    width: 35rem !important;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -1002,6 +1014,36 @@
   }
   .footer-border {
     width: 18rem;
+  }
+  .landing-text-mobile-container,
+  .landing-main-image-mobile-container,
+  .landing-text-mobile-container,
+  .landing-icons-mobile-container,
+  .landing-contact-us-mobile-container {
+    display: none;
+  }
+  .landing-text-large-container,
+  .landing-main-image-large-container {
+    display: block;
+  }
+  .landing-logo {
+    height: 6rem;
+  }
+  .landing-main-image {
+    height: 54.3rem;
+  }
+  .landing-icons-mobile-container,
+  .landing-icons-container {
+    margin: 2rem 0;
+  }
+  .landing-icon {
+    height: 4rem;
+  }
+  .landing-icon-text {
+    font-size: 1.6rem;
+  }
+  .landing-contact-us-headline {
+    font-size: 1.6rem;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -1380,6 +1422,12 @@
   .project-installment-scheme-table {
     width: 110rem !important;
   }
+  .landing-text {
+    font-size: 2rem;
+  }
+  .landing-main-image {
+    height: 53rem;
+  }
 }
 @media only screen and (min-width: 1400px) {
   .mainpage-hot-assets-row,
@@ -1564,5 +1612,14 @@
   }
   .project-installment-scheme-table-col {
     overflow-x: auto !important;
+  }
+  .landing-logo {
+    height: 8rem;
+  }
+  .landing-text {
+    font-size: 2.4rem;
+  }
+  .landing-main-image {
+    height: 48.7rem;
   }
 }/*# sourceMappingURL=queries.css.map */

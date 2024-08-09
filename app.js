@@ -15,6 +15,7 @@ const globalErrorHandler = require('./controllers/errorController');
 const viewRouter = require('./routes/viewRoutes');
 const assetRouter = require('./routes/assetRoutes');
 const projectRouter = require('./routes/projectRoutes');
+const landingRouter = require('./routes/landingRoutes');
 const blogRouter = require('./routes/blogRoutes');
 const apiRouter = require('./routes/apiRoutes');
 const enViewRouter = require('./routes/enViewRoutes');
@@ -152,6 +153,7 @@ app.use('/', viewRouter);
 app.use('/asset', assetRouter);
 app.use('/project', projectRouter);
 app.use('/blog', blogRouter);
+app.use('/landing', landingRouter);
 app.use('/api', apiRouter);
 // English
 app.use('/en', enViewRouter);

@@ -368,6 +368,11 @@
   .project-installment-scheme-table td {
     font-size: $h6;
   }
+
+  // ***** Landing Page *****
+  .landing-main-image {
+    height: 24.5rem;
+  }
 }
 
 // Medium
@@ -756,6 +761,19 @@
   // ***** Footer *****
   .footer-border {
     width: 15rem;
+  }
+
+  // ***** Landing Page *****
+  .landing-text {
+    font-size: $h6;
+  }
+
+  .landing-main-image {
+    height: 31rem;
+  }
+
+  .landing-contact-us-input {
+    width: 35rem !important;
   }
 }
 
@@ -1179,6 +1197,45 @@
   // ***** Footer *****
   .footer-border {
     width: 18rem;
+  }
+
+  // ***** Landing Page *****
+  .landing-text-mobile-container,
+  .landing-main-image-mobile-container,
+  .landing-text-mobile-container,
+  .landing-icons-mobile-container,
+  .landing-contact-us-mobile-container {
+    display: none;
+  }
+
+  .landing-text-large-container,
+  .landing-main-image-large-container {
+    display: block;
+  }
+
+  .landing-logo {
+    height: 6rem;
+  }
+
+  .landing-main-image {
+    height: 54.3rem;
+  }
+
+  .landing-icons-mobile-container,
+  .landing-icons-container {
+    margin: 2rem 0;
+  }
+
+  .landing-icon {
+    height: 4rem;
+  }
+
+  .landing-icon-text {
+    font-size: $h6;
+  }
+
+  .landing-contact-us-headline {
+    font-size: $h6;
   }
 }
 
@@ -1605,6 +1662,15 @@
   .project-installment-scheme-table {
     width: 110rem !important;
   }
+
+  // ***** Landing Page *****
+  .landing-text {
+    font-size: $h5;
+  }
+
+  .landing-main-image {
+    height: 53rem;
+  }
 }
 
 // xx-Large
@@ -1787,5 +1853,18 @@
 
   .project-installment-scheme-table-col {
     overflow-x: auto !important;
+  }
+
+  // ***** Landing Page *****
+  .landing-logo {
+    height: 8rem;
+  }
+
+  .landing-text {
+    font-size: $h4;
+  }
+
+  .landing-main-image {
+    height: 48.7rem;
   }
 }

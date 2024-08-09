@@ -1,0 +1,134 @@
+block head
+    meta(property="og:title" content="Atlantis Aria 3")
+    meta(property="og:description" content="פרויקט אטלאנטיס אריה 3 בבורגס בולגריה")
+    meta(property="og:image" content="https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144895-atlantis-aria-3-3.webp")
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../_headLinksScripts
+
+block content 
+
+    .container-fluid.landing-logo-container
+        .row.landing-logo-row
+            .col.landing-logo-col.text-center
+                img.landing-logo(src='/img/logo.png' alt='לוגו של דירה בולגרית')  
+
+    .container-fluid.landing-text-mobile-container
+        .row.landing-text-row
+            .col.landing-text-col.text-center.px-1
+                .landing-text(dir='rtl') פרויקט ATLANTIS ARIA 3 הממוקם ברובע הוריזונט החדש! לוקיישן מושלם בקרבת מרכזי קניות, קניונים, תחבורה ציבורית, אוניברסיטאות ומתחמי בילוי.
+
+    .container-fluid.landing-main-image-mobile-container(role="img" aria-labelledby="aa3MainImageDescription")
+        .row.landing-main-image-row.flex-lg-row-reverse
+            .col.landing-main-image-col.text-center
+                img.landing-main-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144895-atlantis-aria-3-3.webp' alt='תמונה של הפרויקט אטלאנטיס אריה 3') 
+
+    .container-fluid.landing-text-mobile-container
+        .row.landing-text-row
+            .col.landing-text-col.text-center
+                .landing-text(dir='rtl') הזדמנות להשקעת נדל"ן בבורגס בולגריה לפני עליית מחירים!
+    
+    .container-fluid.landing-icons-mobile-container
+        .row.landing-icons-row.flex-sm-row-reverse
+            .col-6.col-sm-4.landing-icons-col.text-center
+                img.landing-icon(src='/img/icons/lighthouse-on-svgrepo-com.svg' alt='Lighthouse icon') 
+                .landing-icon-text(dir='rtl') ליווי לאורך כל תהליך הרכישה        
+            .col-6.col-sm-4.landing-icons-col.text-center
+                img.landing-icon(src='/img/icons/money-bag-euro-svgrepo-com.svg' alt='Money bag icon') 
+                .landing-icon-text(dir='rtl') תשואה גבוהה על כל השקעה        
+            .col-6.col-sm-4.landing-icons-col.text-center
+                img.landing-icon(src='/img/icons/real-estate-panel-svgrepo-com.svg' alt='Real estate sign icon') 
+                .landing-icon-text(dir='rtl') ניהול שוטף של הנכס  
+            .col-6.col-sm-4.landing-icons-col.text-center
+                img.landing-icon(src='/img/icons/apartment-svgrepo-com.svg' alt='Building icon') 
+                .landing-icon-text(dir='rtl') דירות 2 חדרים אחרונות 
+            .col-6.col-sm-4.landing-icons-col.text-center
+                img.landing-icon(src='/img/icons/skyscraper-svgrepo-com.svg' alt='Building icon') 
+                .landing-icon-text(dir='rtl') דירות 3 חדרים מרווחות        
+            .col-6.col-sm-4.landing-icons-col.text-center
+                img.landing-icon(src='/img/icons/office-block-town-svgrepo-com.svg' alt='Building icon') 
+                .landing-icon-text(dir='rtl') פנטהאוזים מפוארים ודירות גן 
+
+    .container-fluid.landing-contact-us-mobile-container
+        .row.landing-contact-us-headline-row.d-felx.justify-content-center
+            .col-12.col-md-10.col-xl-8.landing-contact-us-headline-col
+                .row.text-center
+                    .landing-contact-us-headline השאירו פרטים וניצור עמכם קשר בהקדם האפשרי
+        .row.landing-contact-us-row.d-felx.justify-content-center.mx-4
+            .col-12.col-md-10.col-xl-8.landing-contact-us-col.text-center 
+                div#crmWebToEntityForm.crmWebToEntityForm
+                    form.contact-us-form#webform6296617000000479035(action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads6296617000000479035 method='POST' accept-charset='UTF-8' novalidate)
+                        input(type='text' style='display:none;' name='xnQsjsdp' value='59a0780e6b2791aec2fc494a0d52812511ef98c0f6123210fdc332d6fa0b9e22')
+                        input#zc_gad(type='hidden' name='zc_gad' value='')
+                        input(type='text' style='display:none;' name='xmIwtLD' value='7334e6acba558f934b954c69f5851611538edbf846a3d2f15f807f241012015c2f9c9c0839f214a112e56e062e05be4f')
+                        input(type='text' style='display:none;' name='actionType' value='TGVhZHM=')
+                        input(type='text' style='display:none;' name='returnURL' value='https://www.dirabulgarit.com/contact-us-confirm')
+                        .row.contact-us-row.align-items-center
+                            .col-12.landing-contact-us-col.d-flex.justify-content-center
+                                input.landing-contact-us-input.contact-us-name-input.form-control(type='text' name='Last Name' maxlength='200' placeholder='שם' aria-label='שם' aria-describedby='basic-addon1' required)                            
+                                .invalid-tooltip אנא הכניסו שם
+                            .col-12.landing-contact-us-col.d-flex.justify-content-center
+                                input.landing-contact-us-input.contact-us-phone-input.form-control(type='text' name='Phone' maxlength='10' placeholder='טלפון' aria-label='טלפון' aria-describedby='basic-addon1' pattern='[0-9]{10}' required)
+                                .invalid-tooltip.contact-us-phone-invalid אנא הכניסו מספר טלפון תקין
+                            .col-12.landing-contact-us-col
+                                input.landing-contact-us-button.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='שליחה' title='Submit')                    
+                  
+    .container-fluid.landing-text-large-container
+        .row.landing-text-row
+            .col.landing-text-col.text-center
+                .landing-text(dir='rtl') פרויקט ATLANTIS ARIA 3 הממוקם ברובע הוריזונט החדש! לוקיישן מושלם בקרבת מרכזי קניות, קניונים, תחבורה ציבורית, אוניברסיטאות ומתחמי בילוי.
+    
+    .container-fluid.landing-main-image-large-container(role="img" aria-labelledby="aa3MainImageDescription")
+        .row.landing-main-image-row.flex-lg-row-reverse
+            .col.col-lg-6.landing-main-image-col.text-center
+                img.landing-main-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982795-atlantis-aria-3-9.webp' alt='תמונה של הפרויקט אטלאנטיס אריה 3') 
+            .col-lg-6.align-content-center
+                .container-fluid.landing-icons-container
+                    .row.landing-icons-row.flex-sm-row-reverse
+                        .col-6.col-sm-4.landing-icons-col.text-center
+                            img.landing-icon(src='/img/icons/lighthouse-on-svgrepo-com.svg' alt='Lighthouse icon') 
+                            .landing-icon-text(dir='rtl') ליווי לאורך כל תהליך הרכישה        
+                        .col-6.col-sm-4.landing-icons-col.text-center
+                            img.landing-icon(src='/img/icons/money-bag-euro-svgrepo-com.svg' alt='Money bag icon') 
+                            .landing-icon-text(dir='rtl') תשואה גבוהה על כל השקעה        
+                        .col-6.col-sm-4.landing-icons-col.text-center
+                            img.landing-icon(src='/img/icons/real-estate-panel-svgrepo-com.svg' alt='Real estate sign icon') 
+                            .landing-icon-text(dir='rtl') ניהול שוטף של הנכס  
+                        .col-6.col-sm-4.landing-icons-col.text-center
+                            img.landing-icon(src='/img/icons/apartment-svgrepo-com.svg' alt='Building icon') 
+                            .landing-icon-text(dir='rtl') דירות 2 חדרים אחרונות 
+                        .col-6.col-sm-4.landing-icons-col.text-center
+                            img.landing-icon(src='/img/icons/skyscraper-svgrepo-com.svg' alt='Building icon') 
+                            .landing-icon-text(dir='rtl') דירות 3 חדרים מרווחות        
+                        .col-6.col-sm-4.landing-icons-col.text-center
+                            img.landing-icon(src='/img/icons/office-block-town-svgrepo-com.svg' alt='Building icon') 
+                            .landing-icon-text(dir='rtl') פנטהאוזים מפוארים ודירות גן 
+
+                .container-fluid.landing-contact-us-container
+                    .row.landing-contact-us-headline-row.d-felx.justify-content-center
+                        .col-12.col-md-10.col-xl-8.landing-contact-us-headline-col
+                            .row.text-center
+                                .landing-contact-us-headline השאירו פרטים וניצור עמכם קשר בהקדם האפשרי
+                    .row.landing-contact-us-row.d-felx.justify-content-center.mx-4
+                        .col-12.col-md-10.col-xl-8.landing-contact-us-col.text-center 
+                            div#crmWebToEntityForm.crmWebToEntityForm
+                                form.contact-us-form#webform6296617000000479035(action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads6296617000000479035 method='POST' accept-charset='UTF-8' novalidate)
+                                    input(type='text' style='display:none;' name='xnQsjsdp' value='59a0780e6b2791aec2fc494a0d52812511ef98c0f6123210fdc332d6fa0b9e22')
+                                    input#zc_gad(type='hidden' name='zc_gad' value='')
+                                    input(type='text' style='display:none;' name='xmIwtLD' value='7334e6acba558f934b954c69f5851611538edbf846a3d2f15f807f241012015c2f9c9c0839f214a112e56e062e05be4f')
+                                    input(type='text' style='display:none;' name='actionType' value='TGVhZHM=')
+                                    input(type='text' style='display:none;' name='returnURL' value='https://www.dirabulgarit.com/contact-us-confirm')
+                                    .row.contact-us-row.align-items-center
+                                        .col-12.landing-contact-us-col.d-flex.justify-content-center
+                                            input.landing-contact-us-input.contact-us-name-input.form-control(type='text' name='Last Name' maxlength='200' placeholder='שם' aria-label='שם' aria-describedby='basic-addon1' required)                            
+                                            .invalid-tooltip אנא הכניסו שם
+                                        .col-12.landing-contact-us-col.d-flex.justify-content-center
+                                            input.landing-contact-us-input.contact-us-phone-input.form-control(type='text' name='Phone' maxlength='10' placeholder='טלפון' aria-label='טלפון' aria-describedby='basic-addon1' pattern='[0-9]{10}' required)
+                                            .invalid-tooltip.contact-us-phone-invalid אנא הכניסו מספר טלפון תקין
+                                        .col-12.landing-contact-us-col
+                                            input.landing-contact-us-button.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='שליחה' title='Submit')                                       
+
+    .container-fluid.landing-text-large-container
+        .row.landing-text-row
+            .col.landing-text-col.text-center
+                .landing-text(dir='rtl') הזדמנות להשקעת נדל"ן בבורגס בולגריה לפני עליית מחירים!            
