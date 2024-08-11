@@ -74,6 +74,26 @@
   box-shadow: 0 0 10px $input-border-glow !important;
 }
 
+.landing-contact-us-input::-webkit-input-placeholder {
+  font-size: $h7 !important;
+  padding: 0 !important;
+}
+
+.landing-contact-us-input::-moz-placeholder {
+  font-size: $h7 !important;
+  padding: 0 !important;
+}
+
+.landing-contact-us-input:-ms-input-placeholder {
+  font-size: $h7 !important;
+  padding: 0 !important;
+}
+
+.landing-contact-us-input::-ms-input-placeholder {
+  font-size: $h7 !important;
+  padding: 0 !important;
+}
+
 .landing-contact-us-input::placeholder {
   font-size: $h7 !important;
   padding: 0 !important;

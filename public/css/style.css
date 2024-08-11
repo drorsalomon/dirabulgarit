@@ -1390,6 +1390,26 @@ a:hover {
   box-shadow: 0 0 10px #9ecaed !important;
 }
 
+.landing-contact-us-input::-webkit-input-placeholder {
+  font-size: 1.2rem !important;
+  padding: 0 !important;
+}
+
+.landing-contact-us-input::-moz-placeholder {
+  font-size: 1.2rem !important;
+  padding: 0 !important;
+}
+
+.landing-contact-us-input:-ms-input-placeholder {
+  font-size: 1.2rem !important;
+  padding: 0 !important;
+}
+
+.landing-contact-us-input::-ms-input-placeholder {
+  font-size: 1.2rem !important;
+  padding: 0 !important;
+}
+
 .landing-contact-us-input::placeholder {
   font-size: 1.2rem !important;
   padding: 0 !important;
@@ -2221,12 +2241,28 @@ body {
     opacity: 1;
   }
 }
+@-webkit-keyframes slideUp {
+  from {
+    bottom: -150px;
+  }
+  to {
+    bottom: 0;
+  }
+}
 @keyframes slideUp {
   from {
     bottom: -150px;
   }
   to {
     bottom: 0;
+  }
+}
+@-webkit-keyframes slideDown {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: -150px;
   }
 }
 @keyframes slideDown {
@@ -2238,10 +2274,12 @@ body {
   }
 }
 .slideUp {
+  -webkit-animation: slideUp 1s;
   animation: slideUp 1s;
 }
 
 .slideDown {
+  -webkit-animation: slideDown 1s;
   animation: slideDown 1s;
 }
 
@@ -2406,6 +2444,8 @@ body {
   z-index: 101;
   background-color: #1bd741;
   width: 11rem !important;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   border-radius: 10rem;
   text-align: center !important;
@@ -2425,6 +2465,7 @@ body {
 }
 
 .whatsapp-widget a:hover {
+  -webkit-filter: brightness(100%) !important;
   filter: brightness(100%) !important;
 }
 
@@ -2449,7 +2490,8 @@ body {
 
 .hero-container {
   background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.6), rgba(26, 113, 212, 0.6)), url("/img/hero-burgas.webp");
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.6)), to(rgba(26, 113, 212, 0.6))), url("/img/hero-burgas.webp");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.7)), to(rgba(26, 113, 212, 0.7))), url("/img/hero-burgas.webp");
+  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.7), rgba(26, 113, 212, 0.7)), url("/img/hero-burgas.webp");
   background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.7), rgba(26, 113, 212, 0.7)), url("/img/hero-burgas.webp");
   background-size: cover;
   background-position: top;
@@ -3245,6 +3287,8 @@ input[type=text]::placeholder {
   top: 0;
   left: 0;
   width: 13rem;
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
   transform-origin: top left;
   margin: 6rem 0 0 -3rem;
 }
@@ -3260,6 +3304,8 @@ input[type=text]::placeholder {
   top: 0;
   right: 0;
   width: 13rem;
+  -webkit-transform-origin: top right;
+  -ms-transform-origin: top right;
   transform-origin: top right;
   margin: 6rem -3rem 0 0;
 }

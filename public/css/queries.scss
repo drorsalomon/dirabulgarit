@@ -840,7 +840,8 @@
 
   .share-btn-white,
   .asset-favorite-btn-white,
-  .btn-cta-mobile-white {
+  .btn-cta-mobile-white,
+  .landing-contact-us-button {
     -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
     -o-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
     transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -848,7 +849,8 @@
 
   .share-btn-white:hover,
   .asset-favorite-btn-white:hover,
-  .btn-cta-mobile-white:hover {
+  .btn-cta-mobile-white:hover,
+  .landing-contact-us-button:hover {
     -webkit-filter: brightness(90%);
     filter: brightness(90%);
   }
@@ -1258,6 +1260,8 @@
   }
 
   .navbar-container {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
   }
 

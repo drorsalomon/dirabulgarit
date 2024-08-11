@@ -1,11 +1,103 @@
-.landing-main-image-container {
-  position: relative;
+.landing-logo-container {
+  margin: 0.5rem 0rem;
+}
+
+.landing-logo {
+  height: 4rem;
+}
+
+.landing-text-col {
+  padding: 0.5rem 0.2rem !important;
+  background-color: #324762;
+}
+
+.landing-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.landing-main-image-col {
   padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("/img/hero-burgas.webp");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+}
+
+.landing-main-image {
   background-size: cover;
-  height: 60rem;
+  background-position: top;
+  height: 17rem;
   width: 100%;
+}
+
+.landing-top-text-col {
+  padding: 0.5rem 0 !important;
+  background-color: #324762;
+}
+
+.landing-icons-mobile-container {
+  margin-top: 1rem;
+}
+
+.landing-icons-col {
+  margin-bottom: 1rem;
+}
+
+.landing-icon {
+  height: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.landing-contact-us-headline {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.landing-contact-us-col {
+  margin-bottom: 2rem;
+}
+
+.landing-contact-us-input {
+  font-size: 1.2rem !important;
+  text-align: right !important;
+  color: #5c5e64 !important;
+  border: 1px solid #2289ff !important;
+  border-radius: 1rem !important;
+  height: 3rem !important;
+}
+
+.landing-contact-us-input :focus {
+  outline: none;
+  border-color: #9ecaed !important;
+  -webkit-box-shadow: 0 0 10px #9ecaed !important;
+  box-shadow: 0 0 10px #9ecaed !important;
+}
+
+.landing-contact-us-input::-webkit-input-placeholder {
+  font-size: 1.2rem !important;
+  padding: 0 !important;
+}
+
+.landing-contact-us-input::-moz-placeholder {
+  font-size: 1.2rem !important;
+  padding: 0 !important;
+}
+
+.landing-contact-us-input:-ms-input-placeholder {
+  font-size: 1.2rem !important;
+  padding: 0 !important;
+}
+
+.landing-contact-us-input::-ms-input-placeholder {
+  font-size: 1.2rem !important;
+  padding: 0 !important;
+}
+
+.landing-contact-us-input::placeholder {
+  font-size: 1.2rem !important;
+  padding: 0 !important;
+}
+
+.landing-text-large-container,
+.landing-main-image-large-container {
+  display: none;
 }/*# sourceMappingURL=landing.css.map */
