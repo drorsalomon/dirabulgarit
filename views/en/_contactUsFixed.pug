@@ -22,8 +22,12 @@
                         .col-md-2.contact-us-input-fixed-col
                             input.contact-us-input.contact-us-email-input.form-control.en-search-filter-input(type='email' ftype='email' autocomplete='false' name='Email' crmlabel='' maxlength='100' placeholder='Email  ' aria-label='Email' aria-describedby='basic-addon1' pattern='[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}' required)
                             .invalid-tooltip.contact-us-email-invalid Please enter a valid Email address
-                        .col-md-3.contact-us-input-fixed-col    
-                            textarea.contact-us-textarea.contact-us-description-input.form-control.en-search-filter-input(id='Description' name='Description' aria-label="Contact request description" rows="2" placeholder='Is there anything else you would like us to know?')
                         .col-md-1.contact-us-fixed-bottom-col 
                             button.btn-cta-mobile-white.text-center(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='שליחה' title='Submit')                
                                 img.btn-cta-mobile-icon(src='/img/icons/send-svgrepo-com.svg' alt='Send arrow Icon')
+                        .col-md-2.contact-us-input-fixed-col 
+                            div.contact-us-fixed-call-us-text-container
+                                img.contact-us-fixed-mobile-icon.en-navbar-mobile-icon(src='/img/icons/phone-call-phone-svgrepo-com.svg' alt='Phone Icon') 
+                                span.contact-us-fixed-call-us-text Call: 
+                                br
+                                a.contact-us-fixed-call-us-text(href="tel:0523111172") 052-311-1172        
