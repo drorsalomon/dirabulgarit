@@ -916,6 +916,12 @@
     width: 5rem;
     height: 5rem;
   }
+  .contact-us-fixed-call-us-text {
+    font-size: 1.6rem;
+  }
+  .contact-us-fixed-mobile-icon {
+    height: 2.5rem;
+  }
   .pricing-card-basic,
   .pricing-card-plus,
   .pricing-card-premium {
@@ -1302,6 +1308,9 @@
   }
   .contact-us-fixed-logo {
     height: 8rem;
+  }
+  .contact-us-fixed-mobile-icon {
+    height: 2.8rem;
   }
   .error-btn:hover {
     -webkit-transform: none !important;

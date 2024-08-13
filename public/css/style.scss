@@ -1417,6 +1417,25 @@ input[type='text']::placeholder {
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
 }
 
+.contact-us-fixed-call-us-text-container {
+  background-color: $bg-color-primary;
+  padding: 1.1rem;
+  border-radius: 1rem;
+  width: fit-content !important;
+  margin: auto !important;
+}
+
+.contact-us-fixed-call-us-text {
+  color: $text-color-secondary;
+  font-size: $h7;
+  font-weight: 600;
+}
+
+.contact-us-fixed-mobile-icon {
+  height: 2.3rem;
+  margin-left: 0.3rem;
+}
+
 // ***** Contact Us Fixed Bottom *****
 .contact-us-mobile-fixed-container {
   position: fixed;
