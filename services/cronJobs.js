@@ -1,6 +1,7 @@
 const currencyExchange = require('./currencyExchange');
 const zohoService = require('./zohoService');
 const Asset = require('../models/assetModel');
+const enAsset = require('../models/enAssetModel');
 const cron = require('node-cron');
 
 const dailyAssetPriceNisUpdate = cron.schedule(
@@ -16,6 +17,7 @@ const dailyAssetPriceNisUpdate = cron.schedule(
         if (asset.price !== undefined) {
           const newPriceNis = asset.price * euroToNisRate;
           await Asset.updateOne({ _id: asset._id }, { $set: { priceNis: Math.floor(newPriceNis) } });
+          await enAsset.updateOne({ _id: asset._id }, { $set: { priceNis: Math.floor(newPriceNis) } });
         }
       }
       console.log(`***** Daily nis asset price update ENDED successfully at: ${currentTimeDate.toLocaleString()} *****`);
