@@ -191,18 +191,19 @@ block content
                     button.share-btn-white
                         img.share-btn-icon(src='/img/icons/share-svgrepo-com-outline.svg' alt='Share page icon')  
 
-    .container-fluid.asset-amenities-container.py-xxl-5
-        .row.asset-amenities-row.mx-4.justify-content-center 
-            .col-10.asset-amenities-headline-col
-                h2.asset-amenities-headline Amenities
-            .col-10.asset-amenities-col
-                .row.asset-amenities-details-row.en-asset-amenities-details-row
-                    if asset.amenities
-                        each amenity in asset.amenities    
-                            .col-12.col-md-6.col-lg-4.col-xl-3
-                                div.asset-amenities-details-container
-                                    img.assets-details-features-icon(src='/img/icons/check-svgrepo-com.svg' alt='V mark icon') 
-                                    span= amenity
+    if asset.amenities.length > 0    
+        .container-fluid.asset-amenities-container.py-xxl-5
+            .row.asset-amenities-row.mx-4.justify-content-center 
+                .col-10.asset-amenities-headline-col
+                    h2.asset-amenities-headline Amenities
+                .col-10.asset-amenities-col
+                    .row.asset-amenities-details-row.en-asset-amenities-details-row
+                        if asset.amenities
+                            each amenity in asset.amenities    
+                                .col-12.col-md-6.col-lg-4.col-xl-3
+                                    div.asset-amenities-details-container
+                                        img.assets-details-features-icon(src='/img/icons/check-svgrepo-com.svg' alt='V mark icon') 
+                                        span= amenity
 
     if asset.videoURL    
         .container-fluid.asset-video-container.py-xxl-3
