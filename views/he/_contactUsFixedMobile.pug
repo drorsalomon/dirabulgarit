@@ -9,14 +9,23 @@
                     input(type='text' style='display:none;' name='actionType' value='TGVhZHM=')
                     input(type='text' style='display:none;' name='returnURL' value='https://www.dirabulgarit.com/contact-us-confirm')
                     .row.contact-us-fixed-row.align-items-center.flex-row-reverse.justify-content-center
-                        .col-12.contact-us-headline-col.text-center
+                        .col-1.contact-us-headline-col
+                            img.close-contact-us-fixed-btn(src='/img/icons/x-sign-times-svgrepo-com-white.svg' alt='אייקון של איקס')
+                        .col-10.contact-us-headline-col.text-center
                             div.contact-us-fixed-headline השאירו פרטים ונחזור אליכם בהקדם האפשרי
-                        .col-4.contact-us-input-fixed-col
+                        .col-1.contact-us-headline-col    
+                        .col-4.contact-us-input-fixed-col.d-flex.justify-content-end
                             input.contact-us-input.contact-us-input.contact-us-name-input.form-control(type='text' name='Last Name' maxlength='200' placeholder='שם' aria-label='שם' aria-describedby='basic-addon1' required)                            
-                            .invalid-tooltip אנא הכניסו שם
-                        .col-4.contact-us-input-fixed-col
+                            .invalid-tooltip.invalid-tooltip-fixed אנא הכניסו שם
+                        .col-4.contact-us-input-fixed-col.d-flex.justify-content-end
                             input.contact-us-input.contact-us-phone-input.form-control(type='text' name='Phone' maxlength='10' placeholder='טלפון' aria-label='טלפון' aria-describedby='basic-addon1' pattern='[0-9]{10}' required)
-                            .invalid-tooltip.contact-us-phone-invalid אנא הכניסו מספר טלפון תקין
+                            .invalid-tooltip.invalid-tooltip-fixed.contact-us-phone-invalid אנא הכניסו מספר טלפון תקין
                         .col-2.contact-us-input-fixed-col
                             button.btn-cta-mobile-white.text-center(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='שליחה' title='Submit')                
-                                img.btn-cta-mobile-icon(src='/img/icons/send-svgrepo-com.svg' alt='Send arrow Icon')     
+                                img.btn-cta-mobile-icon(src='/img/icons/send-svgrepo-com.svg' alt='Send arrow Icon')   
+
+.container-fluid.contact-us-fixed-expand-container
+    .row.contact-us-fixed-expand-btn-row
+        .col-12.d-flex.justify-content-center
+            div.contact-us-fixed-expand-btn-container
+                img.contact-us-fixed-expand-btn(src='/img/icons/arrow-up-337-svgrepo-com-white.svg' alt='אייקון של חץ כלפי מעלה')                                

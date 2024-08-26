@@ -9,14 +9,23 @@
                     input(type='text' style='display:none;' name='actionType' value='TGVhZHM=')
                     input(type='text' style='display:none;' name='returnURL' value='https://www.dirabulgarit.com/contact-us-confirm')
                     .row.contact-us-fixed-row.align-items-center.justify-content-center
-                        .col-12.contact-us-headline-col.text-center
+                        .col-1.contact-us-headline-col
+                        .col-10.contact-us-headline-col.text-center
                             div.contact-us-fixed-headline Contact us and we will return to you asap
+                        .col-1.contact-us-headline-col
+                            img.close-contact-us-fixed-btn(src='/img/icons/x-sign-times-svgrepo-com-white.svg' alt='x sign icon')
                         .col-4.contact-us-input-fixed-col
                             input.contact-us-input.contact-us-input.contact-us-name-input.form-control.en-search-filter-input(type='text' name='Last Name' maxlength='200' placeholder='Name' aria-label='Name' aria-describedby='basic-addon1' required)                            
-                            .invalid-tooltip Please enter your name
+                            .invalid-tooltip.invalid-tooltip-fixed Name required 
                         .col-4.contact-us-input-fixed-col
                             input.contact-us-input.contact-us-phone-input.form-control.en-search-filter-input(type='text' name='Phone' maxlength='10' placeholder='Phone number' aria-label='Phone number' aria-describedby='basic-addon1' pattern='[0-9]{10}' required)
-                            .invalid-tooltip.contact-us-phone-invalid Please enter a valid phone number
+                            .invalid-tooltip.invalid-tooltip-fixed.contact-us-phone-invalid Phone number required
                         .col-2.contact-us-input-fixed-col
                             button.btn-cta-mobile-white.text-center(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Send' title='Submit')                
-                                img.btn-cta-mobile-icon(src='/img/icons/send-svgrepo-com.svg' alt='Send arrow Icon')     
+                                img.btn-cta-mobile-icon(src='/img/icons/send-svgrepo-com.svg' alt='Send arrow Icon')  
+
+.container-fluid.contact-us-fixed-expand-container
+    .row.contact-us-fixed-expand-btn-row
+        .col-12.d-flex.justify-content-center
+            div.contact-us-fixed-expand-btn-container
+                img.contact-us-fixed-expand-btn(src='/img/icons/arrow-up-337-svgrepo-com-white.svg' alt='Upward arrow icon')                                   

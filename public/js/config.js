@@ -44,6 +44,7 @@ export const Elements = {
   hotAssetsContainer: document.querySelector('.mainpage-hot-assets-container'),
   // Footer
   footerContainer: document.querySelector('.footer-container'),
+  footerCopyContainer: document.querySelector('.footer-copyright-text'),
   // Search Form
   searchForm: document.querySelector('.search-form'),
   searchDdBtn: document.querySelectorAll('.search-filter-dropdown--btn'),
@@ -104,7 +105,10 @@ export const Elements = {
   // Contact Us
   contactUsContainerFixed: document.querySelector('.contact-us-container-fixed'),
   contactUsMobileContainerFixed: document.querySelector('.contact-us-mobile-fixed-container'),
-  contactUsForm: document.querySelector('.contact-us-form'),
+  contactUsExpandBtnContainer: document.querySelector('.contact-us-fixed-expand-container'),
+  contactUsExpandBtn: document.querySelectorAll('.contact-us-fixed-expand-btn-container'),
+  contactUsCloseBtnFixed: document.querySelectorAll('.close-contact-us-fixed-btn'),
+  contactUsForm: document.querySelectorAll('.contact-us-form'),
   contactUsNameInput: document.querySelector('.contact-us-name-input'),
   contactUsPhoneInput: document.querySelector('.contact-us-phone-input'),
   contactUsEmailInput: document.querySelector('.contact-us-email-input'),

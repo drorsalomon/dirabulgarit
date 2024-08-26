@@ -68,10 +68,6 @@
     top: 182%;
   }
 
-  .contact-us-fixed-headline {
-    font-size: $h6;
-  }
-
   // ***** Footer *****
   .footer-icon {
     display: inline;
@@ -291,8 +287,28 @@
     width: 40rem;
   }
 
+  .close-contact-us-fixed-btn {
+    width: 2rem;
+    height: 2rem;
+  }
+
   .contact-us-fixed-headline {
     font-size: $h5;
+  }
+
+  .contact-us-fixed-expand-btn-container {
+    padding: 0.5rem 2rem;
+    width: 6.3rem;
+    height: 3.8rem;
+  }
+
+  .contact-us-fixed-expand-btn {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+
+  .invalid-tooltip-fixed {
+    top: 78% !important;
   }
 
   // ***** Pricing *****
@@ -615,6 +631,26 @@
     height: 30rem;
   }
 
+  input[type='text']::-webkit-input-placeholder {
+    font-size: $h6;
+  }
+
+  input[type='text']::-moz-placeholder {
+    font-size: $h6;
+  }
+
+  input[type='text']:-ms-input-placeholder {
+    font-size: $h6;
+  }
+
+  input[type='text']::-ms-input-placeholder {
+    font-size: $h6;
+  }
+
+  input[type='text']::placeholder {
+    font-size: $h6;
+  }
+
   // ***** Contact Us *****
   .calendly-text-headline {
     font-size: $h3;
@@ -648,6 +684,16 @@
 
   .contact-us-input-fixed-col {
     margin-bottom: 1rem;
+  }
+
+  .close-contact-us-fixed-btn {
+    width: 2.3rem;
+    height: 2.3rem;
+    margin-bottom: 0 !important;
+  }
+
+  .invalid-tooltip-fixed {
+    top: 76% !important;
   }
 
   .contact-us-fixed-headline {
@@ -841,7 +887,11 @@
   .share-btn-white,
   .asset-favorite-btn-white,
   .btn-cta-mobile-white,
-  .landing-contact-us-button {
+  .landing-contact-us-button,
+  .btn-search,
+  .contact-us-button,
+  .asset-back-to-results-btn,
+  .contact-us-fixed-expand-btn-container {
     -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
     -o-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
     transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -850,7 +900,10 @@
   .share-btn-white:hover,
   .asset-favorite-btn-white:hover,
   .btn-cta-mobile-white:hover,
-  .landing-contact-us-button:hover {
+  .landing-contact-us-button:hover,
+  .btn-search:hover,
+  .contact-us-button:hover,
+  .contact-us-fixed-expand-btn-container:hover {
     -webkit-filter: brightness(90%);
     filter: brightness(90%);
   }
@@ -862,25 +915,6 @@
     outline-offset: 25px;
     -webkit-filter: brightness(90%);
     filter: brightness(90%);
-  }
-
-  .btn-search,
-  .contact-us-button {
-    -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-    -o-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-  }
-
-  .btn-search:hover,
-  .contact-us-button:hover {
-    -webkit-filter: brightness(90%);
-    filter: brightness(90%);
-  }
-
-  .asset-back-to-results-btn {
-    -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-    -o-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
   }
 
   .asset-back-to-results-btn:hover {
@@ -1134,6 +1168,10 @@
 
   .contact-us-fixed-mobile-icon {
     height: 2.5rem;
+  }
+
+  .invalid-tooltip-fixed {
+    font-size: $h7 !important;
   }
 
   // ***** Pricing *****
@@ -1586,6 +1624,10 @@
 
   .contact-us-fixed-mobile-icon {
     height: 2.8rem;
+  }
+
+  .invalid-tooltip-fixed {
+    top: 74% !important;
   }
 
   // ***** Error *****

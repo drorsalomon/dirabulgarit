@@ -9,19 +9,22 @@
                     input(type='text' style='display:none;' name='actionType' value='TGVhZHM=')
                     input(type='text' style='display:none;' name='returnURL' value='https://www.dirabulgarit.com/contact-us-confirm')
                     .row.contact-us-fixed-row.align-items-center.flex-row-reverse.d-flex.justify-content-center
-                        .col-12.contact-us-headline-col
+                        .col-1.contact-us-headline-col
+                            img.close-contact-us-fixed-btn(src='/img/icons/x-sign-times-svgrepo-com-white.svg' alt='אייקון של איקס')
+                        .col-10.contact-us-headline-col    
                             div.contact-us-fixed-headline השאירו פרטים ונחזור אליכם בהקדם האפשרי
+                        .col-1.contact-us-headline-col
                         .col-md-2.contact-us-input-fixed-col
                             img.contact-us-fixed-logo(src='/img/footer-logo.webp' alt='לוגו דירה בולגרית')
-                        .col-md-2.contact-us-input-fixed-col
+                        .col-md-2.contact-us-input-fixed-col.d-flex.justify-content-end
                             input.contact-us-input.contact-us-input.contact-us-name-input.form-control(type='text' name='Last Name' maxlength='200' placeholder='שם' aria-label='שם' aria-describedby='basic-addon1' required)                            
-                            .invalid-tooltip אנא הכניסו שם
-                        .col-md-2.contact-us-input-fixed-col
+                            .invalid-tooltip.invalid-tooltip-fixed אנא הכניסו שם
+                        .col-md-2.contact-us-input-fixed-col.d-flex.justify-content-end
                             input.contact-us-input.contact-us-phone-input.form-control(type='text' name='Phone' maxlength='10' placeholder='טלפון' aria-label='טלפון' aria-describedby='basic-addon1' pattern='[0-9]{10}' required)
-                            .invalid-tooltip.contact-us-phone-invalid אנא הכניסו מספר טלפון תקין
-                        .col-md-2.contact-us-input-fixed-col
+                            .invalid-tooltip.invalid-tooltip-fixed.contact-us-phone-invalid אנא הכניסו מספר טלפון תקין
+                        .col-md-2.contact-us-input-fixed-col.d-flex.justify-content-end
                             input.contact-us-input.contact-us-email-input.form-control(type='email' ftype='email' autocomplete='false' name='Email' crmlabel='' maxlength='100' placeholder='אימייל  ' aria-label='אימייל' aria-describedby='basic-addon1' pattern='[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}' required)
-                            .invalid-tooltip.contact-us-email-invalid אנא הכניסו אימייל תקין
+                            .invalid-tooltip.invalid-tooltip-fixed.contact-us-email-invalid אנא הכניסו אימייל תקין
                         .col-md-1.contact-us-fixed-bottom-col 
                             button.btn-cta-mobile-white.text-center(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='שליחה' title='שליחה')                
                                 img.btn-cta-mobile-icon(src='/img/icons/send-svgrepo-com.svg' alt='Send arrow Icon')
@@ -30,4 +33,10 @@
                                 span.contact-us-fixed-call-us-text(dir='rtl') התקשרו: 
                                 img.contact-us-fixed-mobile-icon(src='/img/icons/phone-call-phone-svgrepo-com.svg' alt='Phone Icon') 
                                 br
-                                a.contact-us-fixed-call-us-text(href="tel:0523111172") 052-311-1172        
+                                a.contact-us-fixed-call-us-text(href="tel:0523111172") 052-311-1172      
+
+.container-fluid.contact-us-fixed-expand-container
+    .row.contact-us-fixed-expand-btn-row
+        .col-12.d-flex.justify-content-center
+            div.contact-us-fixed-expand-btn-container(title='צרו קשר')
+                img.contact-us-fixed-expand-btn(src='/img/icons/arrow-up-337-svgrepo-com-white.svg' alt='אייקון של חץ כלפי מעלה')                                     

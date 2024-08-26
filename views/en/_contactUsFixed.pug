@@ -9,19 +9,22 @@
                     input(type='text' style='display:none;' name='actionType' value='TGVhZHM=')
                     input(type='text' style='display:none;' name='returnURL' value='https://www.dirabulgarit.com/contact-us-confirm')
                     .row.contact-us-fixed-row.align-items-center.d-flex.justify-content-center
-                        .col-12.contact-us-headline-col
+                        .col-1.contact-us-headline-col
+                        .col-10.contact-us-headline-col
                             div.contact-us-fixed-headline Contact us and we will return to you asap
+                        .col-1.contact-us-headline-col
+                            img.close-contact-us-fixed-btn(src='/img/icons/x-sign-times-svgrepo-com-white.svg' alt='X sign icon')
                         .col-md-2.contact-us-input-fixed-col
                             img.contact-us-fixed-logo(src='/img/footer-logo.webp' alt='Dira Bulgarit Logo')
                         .col-md-2.contact-us-input-fixed-col
                             input.contact-us-input.contact-us-input.contact-us-name-input.form-control.en-search-filter-input(type='text' name='Last Name' maxlength='200' placeholder='Name' aria-label='Name' aria-describedby='basic-addon1' required)                            
-                            .invalid-tooltip Please enter your name
+                            .invalid-tooltip.invalid-tooltip-fixed Name required 
                         .col-md-2.contact-us-input-fixed-col
                             input.contact-us-input.contact-us-phone-input.form-control.en-search-filter-input(type='text' name='Phone' maxlength='10' placeholder='Phone number' aria-label='Phone number' aria-describedby='basic-addon1' pattern='[0-9]{10}' required)
-                            .invalid-tooltip.contact-us-phone-invalid Please enter a valid phone number
+                            .invalid-tooltip.invalid-tooltip-fixed.contact-us-phone-invalid Phone number required
                         .col-md-2.contact-us-input-fixed-col
                             input.contact-us-input.contact-us-email-input.form-control.en-search-filter-input(type='email' ftype='email' autocomplete='false' name='Email' crmlabel='' maxlength='100' placeholder='Email  ' aria-label='Email' aria-describedby='basic-addon1' pattern='[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}' required)
-                            .invalid-tooltip.contact-us-email-invalid Please enter a valid Email address
+                            .invalid-tooltip.invalid-tooltip-fixed.contact-us-email-invalid Email address required
                         .col-md-1.contact-us-fixed-bottom-col 
                             button.btn-cta-mobile-white.text-center(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='שליחה' title='Submit')                
                                 img.btn-cta-mobile-icon(src='/img/icons/send-svgrepo-com.svg' alt='Send arrow Icon')
@@ -30,4 +33,10 @@
                                 img.contact-us-fixed-mobile-icon.en-navbar-mobile-icon(src='/img/icons/phone-call-phone-svgrepo-com.svg' alt='Phone Icon') 
                                 span.contact-us-fixed-call-us-text Call: 
                                 br
-                                a.contact-us-fixed-call-us-text(href="tel:0523111172") 052-311-1172        
+                                a.contact-us-fixed-call-us-text(href="tel:0523111172") 052-311-1172
+
+.container-fluid.contact-us-fixed-expand-container
+    .row.contact-us-fixed-expand-btn-row
+        .col-12.d-flex.justify-content-center
+            div.contact-us-fixed-expand-btn-container(title='Contact Us')
+                img.contact-us-fixed-expand-btn(src='/img/icons/arrow-up-337-svgrepo-com-white.svg' alt='Upward arrow icon')                                        

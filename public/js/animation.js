@@ -71,7 +71,7 @@ export const handleScroll = () => {
   animatePulse(animatedElementsArray);
 };
 
-export const toggleContactUs = (elementOne, elementTwo, elementThree) => {
+export const toggleContactUsScroll = (elementOne, elementTwo, elementThree, elementFour) => {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -82,6 +82,10 @@ export const toggleContactUs = (elementOne, elementTwo, elementThree) => {
           elementTwo.classList.remove('slideUp');
           elementTwo.classList.add('slideDown');
           elementTwo.style.bottom = '-150px';
+          elementFour.style.display = 'block';
+          elementFour.classList.remove('slideDown');
+          elementFour.classList.add('slideUp');
+          elementFour.style.bottom = '0';
         } else {
           elementOne.classList.remove('slideDown');
           elementOne.classList.add('slideUp');
@@ -89,6 +93,9 @@ export const toggleContactUs = (elementOne, elementTwo, elementThree) => {
           elementTwo.classList.remove('slideDown');
           elementTwo.classList.add('slideUp');
           elementTwo.style.bottom = '0';
+          elementFour.classList.remove('slideUp');
+          elementFour.classList.add('slideDown');
+          elementFour.style.bottom = '-150px';
         }
       });
     },
@@ -96,6 +103,37 @@ export const toggleContactUs = (elementOne, elementTwo, elementThree) => {
   );
 
   observer.observe(elementThree);
+};
+
+export const toggleContactUsExpand = (elementOne, elementTwo) => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          elementOne.classList.remove('slideUp');
+          elementOne.classList.add('slideDown');
+          elementOne.style.bottom = '-150px';
+        } else {
+          elementOne.classList.remove('slideDown');
+          elementOne.classList.add('slideUp');
+          elementOne.style.bottom = '0';
+        }
+      });
+    },
+    { threshold: 0.1 }, // Adjust threshold as needed
+  );
+
+  observer.observe(elementTwo);
+};
+
+export const toggleContactUsClick = (elementOne, elementTwo) => {
+  elementOne.classList.remove('slideUp');
+  elementOne.classList.add('slideDown');
+  elementOne.style.bottom = '-150px';
+  elementTwo.style.display = 'block';
+  elementTwo.classList.remove('slideDown');
+  elementTwo.classList.add('slideUp');
+  elementTwo.style.bottom = '0';
 };
 
 export const animateCounter = (element, endNum, text) => {

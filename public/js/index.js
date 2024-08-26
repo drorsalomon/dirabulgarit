@@ -595,17 +595,19 @@ if (config.Elements.paginationPrevPageBtn && config.Elements.paginationNextPageB
 }
 
 if (config.Elements.contactUsForm)
-  config.Elements.contactUsForm.addEventListener(
-    'submit',
-    function (event) {
-      if (!config.Elements.contactUsForm.checkValidity()) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-      config.Elements.contactUsForm.classList.add('was-validated');
-    },
-    false,
-  );
+  config.Elements.contactUsForm.forEach((el) => {
+    el.addEventListener(
+      'submit',
+      function (event) {
+        if (!el.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        el.classList.add('was-validated');
+      },
+      false,
+    );
+  });
 
 if (config.Elements.contactUsPhoneInput)
   config.Elements.contactUsPhoneInput.addEventListener('input', function () {
@@ -641,10 +643,39 @@ if (config.Elements.calendlyAgentsChoices)
     });
   });
 
+if (config.Elements.contactUsCloseBtnFixed)
+  config.Elements.contactUsCloseBtnFixed.forEach((el) => {
+    el.addEventListener('click', function (e) {
+      if (window.innerWidth >= 768) {
+        animation.toggleContactUsClick(config.Elements.contactUsContainerFixed, config.Elements.contactUsExpandBtnContainer);
+      } else if (window.innerWidth < 768) {
+        animation.toggleContactUsClick(config.Elements.contactUsMobileContainerFixed, config.Elements.contactUsExpandBtnContainer);
+      }
+    });
+  });
+
+if (config.Elements.contactUsExpandBtn)
+  config.Elements.contactUsExpandBtn.forEach((el) => {
+    el.addEventListener('click', function (e) {
+      if (window.innerWidth >= 768) {
+        animation.toggleContactUsClick(config.Elements.contactUsExpandBtnContainer, config.Elements.contactUsContainerFixed);
+      } else if (window.innerWidth < 768) {
+        animation.toggleContactUsClick(config.Elements.contactUsExpandBtnContainer, config.Elements.contactUsMobileContainerFixed);
+      }
+    });
+  });
+
 // ***** Animations *****
 
 // Contact Us fixed animation
-animation.toggleContactUs(config.Elements.contactUsContainerFixed, config.Elements.contactUsMobileContainerFixed, config.Elements.footerContainer);
+animation.toggleContactUsScroll(
+  config.Elements.contactUsContainerFixed,
+  config.Elements.contactUsMobileContainerFixed,
+  config.Elements.footerContainer,
+  config.Elements.contactUsExpandBtnContainer,
+);
+
+animation.toggleContactUsExpand(config.Elements.contactUsExpandBtnContainer, config.Elements.footerCopyContainer);
 
 // Scroll event listener for animations
 if (window.innerWidth >= 992) {
