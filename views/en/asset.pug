@@ -70,7 +70,7 @@ block content
                     div.assets-details-features 
                         img.assets-details-features-icon(src='/img/icons/price-tag-svgrepo-com-white.svg' alt='Price tag icon')       
                         span.assets-details-features-text <strong>Price: </strong>
-                        span.asset-price(data-europrice=`${asset.priceBeginningAt === true ? 'Beginning at' : ''}€${new Intl.NumberFormat().format(asset.price)}` data-nisprice=`${asset.priceBeginningAt === true ? 'Beginning at' : ''}₪${new Intl.NumberFormat().format(asset.priceNis)}`)
+                        span.asset-price(data-europrice=`${asset.priceBeginningAt === true ? 'Beginning at ' : ''}€${new Intl.NumberFormat().format(asset.price)}` data-nisprice=`${asset.priceBeginningAt === true ? 'Beginning at ' : ''}₪${new Intl.NumberFormat().format(asset.priceNis)}`)
                 if asset.project     
                     div.assets-details-features 
                         img.assets-details-features-icon(src='/img/icons/building-svgrepo-com-white.svg' alt='Building icon')       
