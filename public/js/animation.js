@@ -65,9 +65,9 @@ export const animatePulse = (elements) => {
 const animatedElementsArray = [config.Elements.ctaBtnWhite[0], config.Elements.pricingCtaBtn];
 
 export const animateOnLoad = () => {
-  animateMoveInRight(config.Elements.heroHeadline);
-  animateMoveInLeft(config.Elements.heroText);
-  animateFadeIn(config.Elements.heroIcons);
+  //animateMoveInRight(config.Elements.heroHeadline);
+  //animateMoveInLeft(config.Elements.heroText);
+  //animateFadeIn(config.Elements.heroIcons);
   setTimeout(() => {
     animatePulse(animatedElementsArray);
   }, 1000);
