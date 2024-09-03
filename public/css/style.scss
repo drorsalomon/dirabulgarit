@@ -452,17 +452,22 @@ body {
 // ***** Hero *****
 
 .hero-container {
-  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.6), rgba(26, 113, 212, 0.6)), url('/img/hero-burgas.webp');
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.7)), to(rgba(26, 113, 212, 0.7))), url('/img/hero-burgas.webp');
-  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.7), rgba(26, 113, 212, 0.7)), url('/img/hero-burgas.webp');
-  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.7), rgba(26, 113, 212, 0.7)), url('/img/hero-burgas.webp');
-  background-size: cover;
-  background-position: top;
+  // background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.6), rgba(26, 113, 212, 0.6)), url('/img/hero-burgas.webp');
+  // background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.7)), to(rgba(26, 113, 212, 0.7))), url('/img/hero-burgas.webp');
+  // background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.7), rgba(26, 113, 212, 0.7)), url('/img/hero-burgas.webp');
+  // background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.7), rgba(26, 113, 212, 0.7)), url('/img/hero-burgas.webp');
+  // background-size: cover;
+  // background-position: top;
   position: relative;
   height: 60rem;
   padding: 0 !important;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.hero-video {
+  transform: translateX(-80rem);
+  filter: brightness(65%);
 }
 
 .en-hero-container {
@@ -921,10 +926,9 @@ input[type='text']::placeholder {
 // ***** Main Page About Us *****
 
 .mainpage-about-container {
-  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.6), rgba(26, 113, 212, 0.6)), url('/img/about-us-sozopol.webp');
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.6)), to(rgba(26, 113, 212, 0.6))),
-    url('/img/about-us-sozopol.webp');
-  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.6), rgba(26, 113, 212, 0.6)), url('/img/about-us-sozopol.webp');
+  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.6), rgba(26, 113, 212, 0.6)), url('/img/hero-burgas.webp');
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.6)), to(rgba(26, 113, 212, 0.6))), url('/img/hero-burgas.webp');
+  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.6), rgba(26, 113, 212, 0.6)), url('/img/hero-burgas.webp');
   background-size: cover;
   background-position: top;
   position: relative;

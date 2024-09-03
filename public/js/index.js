@@ -8,6 +8,9 @@ import * as utils from './utils';
 import * as animation from './animation';
 
 window.onload = function () {
+  if (window.innerWidth >= 992) {
+    animation.animateOnLoad();
+  }
   // Widgets
   if (config.Elements.whatsappWidget) {
     const enableWidget = document.getElementById('enable-toolbar-trigger');
@@ -676,13 +679,6 @@ animation.toggleContactUsScroll(
 );
 
 animation.toggleContactUsExpand(config.Elements.contactUsExpandBtnContainer, config.Elements.footerCopyContainer);
-
-// Scroll event listener for animations
-if (window.innerWidth >= 992) {
-  document.addEventListener('scroll', () => {
-    animation.debounce(animation.handleScroll());
-  });
-}
 
 // Counter animation
 // Atlantis Aria 2

@@ -10,18 +10,21 @@ block head
 
 block content 
    
-    .container-fluid.hero-video-container
-        .row.hero-video-row.align-items-center.justify-content-center 
-            .col.hero-video-col
-                div.hero-video-bg-video-container(role="img" aria-labelledby="heroVideoDescription")
-                    div.ratio.ratio-16x9
-                        video(autoplay muted loop).hero-video
-                            source(src='/videos/hero-video-720p.mp4' type='video/webm')
-                    span.visually-hidden(id="heroVideoDescription") Video showing the seaside area in Sunny Beach, Burgas Bulgaria, the city promenade and the local water park
-                    a(href='https://www.youtube.com/watch?v=8TkCc_ybpGU&t=360s' target="_blank").hero-video-bg-video-text Video by Viktoriia Lozovska
+    //- .container-fluid.hero-video-container
+    //-     .row.hero-video-row.align-items-center.justify-content-center 
+    //-         .col.hero-video-col
+    //-             div.hero-video-bg-video-container(role="img" aria-labelledby="heroVideoDescription")
+    //-                 div.ratio.ratio-16x9
+    //-                     video(autoplay muted loop).hero-video
+    //-                         source(src='/videos/hero-video-720p.mp4' type='video/webm')
+    //-                 span.visually-hidden(id="heroVideoDescription") Video showing the seaside area in Sunny Beach, Burgas Bulgaria, the city promenade and the local water park
+    //-                 a(href='https://www.youtube.com/watch?v=8TkCc_ybpGU&t=360s' target="_blank").hero-video-bg-video-text Video by Viktoriia Lozovska
     
-    .container-fluid.hero-container.en-hero-container(role="img" aria-labelledby="heroImageDescription")
-        span.visually-hidden(id="heroImageDescription") Image of apartment complexes on the Burgas city coast in Bulgaria
+    .container-fluid.hero-container.en-hero-container(role="img" aria-labelledby="heroDescription")
+        div.hero-video-container
+            video(autoplay muted loop).hero-video
+                source(src='/videos/hero-video.webm' type='video/webm')
+            span.visually-hidden(id="heroDescription") Video showing Sunny Beach in Bulgaria
         .row.d-flex.align-items-center.justify-content-center                    
             .col-10.col-lg-8.hero-text-col.en-hero-text-col
                 .hero-border

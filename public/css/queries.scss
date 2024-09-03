@@ -8,6 +8,10 @@
     height: 65rem;
   }
 
+  .hero-video {
+    transform: translateX(-75rem);
+  }
+
   // ***** Reviews *****
   .carousel-control-prev {
     margin-left: -0.5rem;
@@ -115,6 +119,10 @@
   // ***** Hero *****
   .hero-container {
     height: 55rem;
+  }
+
+  .hero-video {
+    transform: translateX(-65rem);
   }
 
   .hero-headline {
@@ -406,6 +414,10 @@
   // ***** Main Page Hero *****
   .hero-container {
     height: 70rem;
+  }
+
+  .hero-video {
+    transform: translateX(-50rem);
   }
 
   .hero-headline {
@@ -931,6 +943,10 @@
     width: 70% !important;
   }
 
+  .hero-video {
+    transform: translateX(-30rem);
+  }
+
   // ***** Main Page Search *****
   .mainpage-search-container {
     display: block;
@@ -1452,6 +1468,10 @@
     height: 55rem;
   }
 
+  .hero-video {
+    transform: translateX(-30rem);
+  }
+
   .hero-icons-row {
     width: 82% !important;
     top: 55%;
@@ -1765,6 +1785,10 @@
   // ***** Main Page Hero *****
   .en-hero-container {
     height: 60rem;
+  }
+
+  .hero-video {
+    transform: translateX(0rem);
   }
 
   .en-hero-contact-us-row {

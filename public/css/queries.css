@@ -2,6 +2,9 @@
   .en-hero-container {
     height: 65rem;
   }
+  .hero-video {
+    transform: translateX(-75rem);
+  }
   .carousel-control-prev {
     margin-left: -0.5rem;
   }
@@ -74,6 +77,9 @@
   }
   .hero-container {
     height: 55rem;
+  }
+  .hero-video {
+    transform: translateX(-65rem);
   }
   .hero-headline {
     font-size: 4.8rem;
@@ -328,6 +334,9 @@
   }
   .hero-container {
     height: 70rem;
+  }
+  .hero-video {
+    transform: translateX(-50rem);
   }
   .hero-headline {
     font-size: 6rem;
@@ -776,6 +785,9 @@
   .hero-icons-row {
     width: 70% !important;
   }
+  .hero-video {
+    transform: translateX(-30rem);
+  }
   .mainpage-search-container {
     display: block;
   }
@@ -1216,6 +1228,9 @@
   .hero-container {
     height: 55rem;
   }
+  .hero-video {
+    transform: translateX(-30rem);
+  }
   .hero-icons-row {
     width: 82% !important;
     top: 55%;
@@ -1504,6 +1519,9 @@
   }
   .en-hero-container {
     height: 60rem;
+  }
+  .hero-video {
+    transform: translateX(0rem);
   }
   .en-hero-contact-us-row {
     top: 83%;

@@ -64,11 +64,13 @@ export const animatePulse = (elements) => {
 // Animate pulse for buttons
 const animatedElementsArray = [config.Elements.ctaBtnWhite[0], config.Elements.pricingCtaBtn];
 
-export const handleScroll = () => {
+export const animateOnLoad = () => {
   animateMoveInRight(config.Elements.heroHeadline);
   animateMoveInLeft(config.Elements.heroText);
   animateFadeIn(config.Elements.heroIcons);
-  animatePulse(animatedElementsArray);
+  setTimeout(() => {
+    animatePulse(animatedElementsArray);
+  }, 1000);
 };
 
 export const toggleContactUsScroll = (elementOne, elementTwo, elementThree, elementFour) => {
