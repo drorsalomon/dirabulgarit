@@ -20,6 +20,7 @@ export const Elements = {
   homePageLink: document.querySelector('.homepage-link'),
   assetCatalogDdBtn: document.querySelector('.assets-catalog-dropdown-btn'),
   projectsDdBtn: document.querySelector('.projects-dropdown-btn'),
+  commercialDdBtn: document.querySelector('.commercial-dropdown-btn'),
   blogLink: document.querySelector('.blog-nav-link'),
   currencyDdBtn: document.querySelector('.currency-dropdown-btn'),
   currencyIcon: document.querySelectorAll('.navbar-currency-icon'),
@@ -144,6 +145,13 @@ export const Elements = {
   abProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlantis-barcode'),
   abProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlantis-barcode'),
   abProjectAreaNumber: document.querySelector('.project-numbers-area-number-atlantis-barcode'),
+  // Camelot
+  camelotProjectPriceNumber: document.querySelector('.project-numbers-price-number-camelot'),
+  camelotProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-camelot'),
+  camelotProjectAssetsNumber: document.querySelector('.project-numbers-assets-number-camelot'),
+  camelotProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-camelot'),
+  camelotProjectAreaNumber: document.querySelector('.project-numbers-area-number-camelot'),
+  camelotProjectBuiltAreaNumber: document.querySelector('.project-numbers-built-area-number-camelot'),
 };
 
 export const baseDevUrl = 'http://127.0.0.1:8000/';

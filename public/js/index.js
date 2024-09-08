@@ -75,8 +75,21 @@ window.onload = function () {
   }
 
   // Header dropdown menu click (project catalog)
-  let dropdownSubmenus = document.querySelectorAll('.projects-dropdown .dropdown-toggle');
-  dropdownSubmenus.forEach(function (dropdownToggle) {
+  let projectsDdSubmenu = document.querySelectorAll('.projects-dropdown .dropdown-toggle');
+  projectsDdSubmenu.forEach(function (dropdownToggle) {
+    dropdownToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      let submenu = this.nextElementSibling;
+      if (submenu) {
+        submenu.classList.toggle('show');
+      }
+    });
+  });
+
+  // Header dropdown menu click (commercial catalog)
+  let commercialDdSubmenu = document.querySelectorAll('.commercial-dropdown .dropdown-toggle');
+  commercialDdSubmenu.forEach(function (dropdownToggle) {
     dropdownToggle.addEventListener('click', function (e) {
       e.preventDefault();
       e.stopPropagation();
@@ -110,10 +123,11 @@ window.onload = function () {
 
     if (linkString.includes(href) && href) {
       link.classList.toggle('active-link');
-      if ((href && href.includes('search-results')) || linkString.includes('search') || linkString.includes('project')) {
+      if ((href && href.includes('search-results')) || linkString.includes('search') || linkString.includes('project') || linkString.includes('commercial')) {
         config.Elements.assetCatalogDdBtn.classList.toggle('active-link');
       }
       if (href && linkString.includes('project')) config.Elements.projectsDdBtn.classList.toggle('active-link');
+      if (href && linkString.includes('commercial')) config.Elements.commercialDdBtn.classList.toggle('active-link');
     }
   });
 
@@ -186,7 +200,7 @@ if (config.Elements.navbarToggler)
   config.Elements.navbarToggler.addEventListener('click', async (e) => {
     e.preventDefault();
     let href = window.location.href;
-    let subHref = href.substring(href.lastIndexOf('/') - 7);
+    let subHref = href.substring(href.lastIndexOf('/') - 10);
     href = href.includes('en') ? href.substring(href.lastIndexOf('en') + 2) : href.substring(href.lastIndexOf('/') + 1);
     config.Elements.assetCatalogDdBtn.classList.remove('offcanvas-active-link');
     config.Elements.projectsDdBtn.classList.remove('offcanvas-active-link');
@@ -206,13 +220,17 @@ if (config.Elements.navbarToggler)
         link.classList.toggle('offcanvas-active-link');
         link.classList.toggle('active-link');
       }
-      if ((href && href.includes('search-results')) || href.includes('search') || subHref.includes('project')) {
+      if ((href && href.includes('search-results')) || href.includes('search') || subHref.includes('project') || subHref.includes('commercial')) {
         config.Elements.assetCatalogDdBtn.classList.remove('active-link');
         config.Elements.assetCatalogDdBtn.classList.add('offcanvas-active-link');
       }
       if (href && subHref.includes('project')) {
         config.Elements.projectsDdBtn.classList.remove('active-link');
         config.Elements.projectsDdBtn.classList.add('offcanvas-active-link');
+      }
+      if (href && subHref.includes('commercial')) {
+        config.Elements.commercialDdBtn.classList.remove('active-link');
+        config.Elements.commercialDdBtn.classList.add('offcanvas-active-link');
       }
     });
   });
@@ -715,6 +733,24 @@ if (config.Elements.abProjectAreaNumber)
   animation.animateCounter(
     config.Elements.abProjectAreaNumber,
     9634,
+    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
+  );
+// Camelot
+if (config.Elements.camelotProjectPriceNumber)
+  animation.animateCounter(config.Elements.camelotProjectPriceNumber, new Intl.NumberFormat().format(2800000), '€');
+if (config.Elements.camelotProjectFloorsNumber) animation.animateCounter(config.Elements.camelotProjectFloorsNumber, 4);
+if (config.Elements.camelotProjectAssetsNumber) animation.animateCounter(config.Elements.camelotProjectAssetsNumber, 10);
+if (config.Elements.camelotProjectParkingSpotsNumber) animation.animateCounter(config.Elements.camelotProjectParkingSpotsNumber, 80);
+if (config.Elements.camelotProjectAreaNumber)
+  animation.animateCounter(
+    config.Elements.camelotProjectAreaNumber,
+    3390,
+    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
+  );
+if (config.Elements.camelotProjectBuiltAreaNumber)
+  animation.animateCounter(
+    config.Elements.camelotProjectBuiltAreaNumber,
+    6660,
     JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
   );
 // Fade in animation

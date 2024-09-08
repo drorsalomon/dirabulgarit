@@ -1,0 +1,245 @@
+extends ../base
+
+block head
+    meta(property="og:title" content="Camelot Entertainment Center")
+    meta(property="og:description" content="Camelot Entertainment Center in Sunny Beach, Bulgaria")
+    meta(property="og:image" content="https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155260-camelot-20.webp")
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../../he/_headLinksScripts
+
+block content 
+    .container-fluid.project-main-image-container(role="img" aria-labelledby="camelotMainImageDescription")
+        span.visually-hidden(id="camelotMainImageDescription") An image of the Camelot Entertainment Center compound
+        .row.project-main-image-row
+            .col.project-main-image-col.project-main-image-col-camelot
+                h1.project-main-image-headline.project-main-image-headline-camelot Camelot Entertainment Center       
+
+    .container-fluid.project-gallery-container
+        .row.project-gallery-headline-row.text-center.mx-2
+            .col-12.project-gallery-headline-col.p-0    
+                h2.project-gallery-headline Gallery
+        .row.project-gallery-row.text-center.mx-2
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155231-camelot-14.webp' alt='Image of the Camelot Entertainment Center' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155161-camelot-1.webp' alt='Image of the Camelot Entertainment Center' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155369-camelot-53.webp' alt='Image of the Camelot Entertainment Center' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")  
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155295-camelot-29.webp' alt='Image of the Camelot Entertainment Center' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155336-camelot-43.webp' alt='Image of the Camelot Entertainment Center' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155389-camelot-58.webp' alt='Image of the Camelot Entertainment Center' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+
+    #projectModal.modal.fade.asset-gallery-modal.text-center(tabindex='-1' aria-labelledby='projectModalLabel' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered
+            .asset-gallery-modal-content.modal-content
+                .row.d-flex
+                    .col-6.align-content-center
+                        div.text-start.px-4
+                            div.asset-gallery-img-text Camelot Entertainment Center
+                    .col-6
+                        div.text-end.p-3
+                            button.btn-close.asset-gallery-modal-close-btn.p-2.my-auto(type='button' data-bs-dismiss='modal' aria-label='Close')
+                #projectCarousel.carousel.slide(data-bs-touch='true' data-bs-interval='30000' data-bs-ride='carousel')
+                    .carousel-inner.asset-modal-carousel-inner
+                        .carousel-item.asset-gallery-carousel-item.align-content-center.active
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155161-camelot-1.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155164-camelot-2.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155185-camelot-3.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155190-camelot-4.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155195-camelot-5.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155198-camelot-6.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155201-camelot-7.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155204-camelot-8.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155208-camelot-9.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155212-camelot-10.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155216-camelot-11.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155221-camelot-12.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155226-camelot-13.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155231-camelot-14.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155237-camelot-15.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155241-camelot-16.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155245-camelot-17.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155250-camelot-18.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155257-camelot-19.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155260-camelot-20.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155265-camelot-21.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155268-camelot-22.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155272-camelot-23.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155275-camelot-24.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155278-camelot-25.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155284-camelot-26.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155289-camelot-27.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155292-camelot-28.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155295-camelot-29.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155297-camelot-30.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155300-camelot-31.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155302-camelot-32.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155304-camelot-33.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155306-camelot-34.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155312-camelot-35.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155315-camelot-36.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155319-camelot-37.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155322-camelot-38.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155324-camelot-39.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155327-camelot-40.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155329-camelot-41.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155333-camelot-42.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155336-camelot-43.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155338-camelot-44.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155340-camelot-45.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155342-camelot-46.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155345-camelot-47.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155348-camelot-48.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155352-camelot-49.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155355-camelot-50.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155360-camelot-51.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155364-camelot-52.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155369-camelot-53.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155372-camelot-54.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155374-camelot-55.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155376-camelot-56.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155387-camelot-57.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155389-camelot-58.webp' alt='Image of the Camelot Entertainment Center') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155392-camelot-59.webp' alt='Image of the Camelot Entertainment Center')
+                    button.carousel-control-prev(type='button' data-bs-target='#projectCarousel' data-bs-slide='prev')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-prev-icon.asset-gallery-carousel-prev-icon(aria-hidden='true')
+                    button.carousel-control-next(type='button' data-bs-target='#projectCarousel' data-bs-slide='next')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-next-icon.asset-gallery-carousel-next-icon(aria-hidden='true')        
+    
+    .container-fluid.project-numbers-container
+        .row.project-numbers-row.text-end.justify-content-center.mx-5
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-buildings-number.project-numbers-price-number-camelot         
+                div.project-numbers-text Price        
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-floors-number.project-numbers-floors-number-camelot         
+                div.project-numbers-text Floors        
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-apartments-number.project-numbers-assets-number-camelot        
+                div.project-numbers-text Properties 
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-parking-spots-number.project-numbers-parking-spots-number-camelot        
+                div.project-numbers-text Parking Spots
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-area-number.project-numbers-area-number-camelot 
+                div.project-numbers-text Total Area
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-green-area-number.project-numbers-built-area-number-camelot   
+                div.project-numbers-text Built Area
+
+    .container-fluid.project-details-container
+        .row.project-details-row.text-end.mx-5.justify-content-center
+            .col-12.project-details-headline-col.p-0.text-center
+                h2.project-details-headline Camelot Entertainment Center
+            .col-10.project-details-headline-col.p-0.text-start
+                div.project-details-text Dira Bulgarit is proud to present the <strong>Camelot Entertainment Center</strong>.
+                div.project-details-text The Camelot Entertainment Center sits on an area of ​​3390 square meters in the center of Sunny Beach and has a constructed area of ​​6660 square meters spread over four floors and 10 different properties.  
+                h3.project-details-sub-headline Location
+                div.project-details-text The unique complex is located on the main avenue of Sunny Beach and is only a few minutes' drive by car from the towns of St. Vlas, Nessebar, Ravda, Kosharitsa and the other smaller villages in the vicinity. The location of Sunny Beach is preferred not only by locals and tourists in the summer season, but also by many foreigners and Bulgarians living abroad who come to the area all year round.
+                div.project-details-text Sunny Beach is located in the municipal area of ​​Nessebar, which covers an area of ​​420 square kilometers. In the last ten years, the area has established itself as the largest socio-economic area of ​​the southern Black Sea.
+                h3.project-details-sub-headline Property Advantages  
+                div.project-details-text ● Comfortable weather all year round
+                div.project-details-text ● Close to the sea, close to the airport (Sarafovo - 27 km) and large cities in the area: Burgas - 36 km, Varna - 90 km, Sofia - 360 km, Ruse - 190 km, Istanbul - 370 km, and only 290 km from the newest airport located in the European part of Istanbul, planned to be the largest in the world - 90 million passengers per year.
+                div.project-details-text ● The availability of highways and new road infrastructures built over the last 5 years make access by car convenient and fast.
+                div.project-details-text ● A variety of living conditions throughout the year in the area of ​​the complex: places with detached houses in a quiet environment and small apartment buildings in a beautiful natural area, closed luxury complexes with controlled access, many places for recreation and leisure, a modern marina.
+                div.project-details-text ● A wide range of property prices: many gated luxury complexes that cover a large area and include pools, spas and landscaping, as well as cheaper regular housing.
+                h3.project-details-sub-headline Architecture
+                div.project-details-text ● The total area of ​​the complex, located in the heart of Nessebar municipality, is 6660 square meters, of which the shared parts are 27%. One of the main advantages of the building is that it has 1800 square meters of spacious and luxurious lounges, wide services on each floor, and a large open parking lot that provides the The ability to receive a large number of visitors comfortably. These 6660 square meters do not include the useful common areas such as the garden on the ground floor, and the open roof terraces on the 4th and 5th floors.
+                div.project-details-text ● The main access to the building is from the boulevard in the west direction - there is a central entrance and two additional small ones from the northwest and southwest of the complex. The underground parking access is from the northwest end of the property, and loading and commercial service entrances are from the east side.
+                div.project-details-text ● There is a central set of stairs from the ground floor to the 4th floor that passes through the lobby on each floor and that efficiently regulates the movement of visitors to the complex. There are also two sets of secondary stairs, each with an adjacent elevator in the northern and southern parts of the central building in the complex.  
+                div.project-details-text ● On the basement floor there is an underground parking lot with an area of ​​990 square meters that can accommodate 50 vehicles. There are also 20-30 parking lots in front of the complex intended for cars and buses.  
+                h3.project-details-sub-headline Floor Details
+                div.project-details-text <strong>Basement floor</strong>: an area of ​​1655 square meters where 990 square meters is for parking and 665 square meters houses warehouses, entrance and exit ramps, corridors, machine rooms and internal staircases.
+                div.project-details-text <strong>1st floor</strong>: built area of ​​1500 square meters and in addition a well-kept garden of 500 square meters. On the floor you can find the central lobby where there is a reception desk, a security office and luxurious services for guests, a restaurant with a capacity of 125 guests inside the restaurant and 120 guests in the outdoor garden and a bowling alley with eight lanes.
+                div.project-details-text <strong>2nd Floor</strong>: On this floor you can find the Kabare restaurant that can accommodate 225 guests, a billiard room with 8 tables, video games, a bar and storage areas.    
+                div.project-details-text <strong>3rd Floor</strong>: On this floor there are two discotheques, one with an area of ​​386 square meters and the other with an area of ​​362 square meters, men's, women's and disabled toilets, warehouses and maintenance areas.
+                div.project-details-text <strong>4th Floor</strong>: On this floor there are two outdoor and open bars which cover an area of ​​1400 square meters of open roof.
+                div.project-details-text <strong>5th Floor</strong>: On this floor there is a Sky Bar accessed via external staircases from the open bars of the 4th floor.
+                div.project-detail-img-container.d-flex.justify-content-center   
+                    img.project-details-img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155394-camelot-building-table.webp' alt='A chart that details which properties are located in each floor')
+                div.project-details-text.text-center <i>Floor details chart</i>
+                h3.project-details-sub-headline Additional Features
+                div.project-details-text ● The spaces inside the building are between 3.5 and 4.2 meters high and instill a feeling of spaciousness and luxury.
+                div.project-details-text ● Each of the ten existing properties in the complex can be rented separately, which can maximize the property's profitability for investors.
+                div.project-details-text ● The complex is equipped with all the necessary fire, heating, ventilation, security and air conditioning systems.
+                div.project-details-text ● The complex is equipped with public address and audio systems in all common areas.
+                div.project-details-text ● The construction of the building is using reinforced concrete and without any wooden columns. All the roofs in the building are flat and can be used fully and safely.
+                div.project-details-text ● You can get all the required construction documents and approvals.
+    
+    .container-fluid.project-mid-image-container.project-mid-image-container-camelot(role="img" aria-labelledby="camelot2MidImageDescription")
+        span.visually-hidden(id="camelot2MidImageDescription") Image of the Camelot Entertainment Center complex
+    
+    .container-fluid.project-map-container
+        .row.project-map-row.text-center.mx-3.justify-content-center 
+            .col-12.project-map-healine-col
+                h2.project-map-headline Location
+            .col-12.col-md-10.project-map-col
+                div.project-map(id='map' data-long=27.699062 data-lat=42.690721 data-title='Camelot Entertainment Center') 
+
+    include ../_contactUsFixed  
+    include ../_contactUsFixedMobile   
+

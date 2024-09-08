@@ -54,10 +54,10 @@
   height: 60rem;
   width: 100%;
 }
-.project-main-image-col.project-main-image-col-atlantis-l6 {
+.project-main-image-col.project-main-image-col-camelot {
   position: relative;
   padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161868-atlantis-L6-project-6.webp");
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155260-camelot-20.webp");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -99,10 +99,10 @@
   color: #ffffff;
   font-size: 4.2rem;
 }
-.project-main-image-headline.project-main-image-headline-atlantis-l6 {
+.project-main-image-headline.project-main-image-headline-camelot {
   position: absolute;
   top: 50%;
-  left: 40%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -233,14 +233,14 @@
   height: 60rem;
   width: 100%;
 }
-.project-mid-image-container.project-mid-image-container-atlantis-l6 {
+.project-mid-image-container.project-mid-image-container-camelot {
   position: relative;
   padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720175986393-atlantis-L6-project-building.webp");
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155348-camelot-48.webp");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% 53rem;
+  background-size: 100% 28rem;
   height: 60rem;
   width: 100%;
 }

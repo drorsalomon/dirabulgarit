@@ -344,8 +344,8 @@
       @include projectHeadline(38%);
       font-size: $h1;
     }
-    &.project-main-image-headline-atlantis-l6 {
-      @include projectHeadline(30%);
+    &.project-main-image-headline-camelot {
+      @include projectHeadline(38%);
       font-size: $h1;
     }
   }
@@ -375,12 +375,8 @@
         60rem
       );
     }
-    &.project-mid-image-container-atlantis-l6 {
-      @include projectMiddleImage(
-        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720175986393-atlantis-L6-project-building.webp',
-        100% 90rem,
-        70rem
-      );
+    &.project-mid-image-container-camelot {
+      @include projectMiddleImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155348-camelot-48.webp', 100% 40rem, 70rem);
     }
   }
 
@@ -777,9 +773,6 @@
     &.project-main-image-headline-atlantis-barcode {
       @include projectHeadline(30%);
     }
-    &.project-main-image-headline-atlantis-l6 {
-      @include projectHeadline(20%);
-    }
   }
 
   .project-gallery-image {
@@ -804,13 +797,6 @@
       @include projectMiddleImage(
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/euphoria-images/1719320290027-atlantis-euphoria-middle-image.webp',
         contain,
-        60rem
-      );
-    }
-    &.project-mid-image-container-atlantis-l6 {
-      @include projectMiddleImage(
-        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161873-atlantis-L6-project-7.webp',
-        100% 53rem,
         60rem
       );
     }
@@ -1219,8 +1205,8 @@
     &.project-main-image-headline-atlantis-barcode {
       @include projectHeadline(23%);
     }
-    &.project-main-image-headline-atlantis-l6 {
-      @include projectHeadline(18%);
+    &.project-main-image-headline-camelot {
+      @include projectHeadline(36%);
     }
   }
 
@@ -1249,8 +1235,8 @@
         34rem
       );
     }
-    &.project-mid-image-container-atlantis-l6 {
-      @include projectMiddleImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161873-atlantis-L6-project-7.webp', contain, 60rem);
+    &.project-mid-image-container-camelot {
+      @include projectMiddleImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155348-camelot-48.webp', 100% 50rem, 50rem);
     }
   }
 
@@ -1382,33 +1368,39 @@
   }
 
   .assets-catalog-dropdown-menu,
-  .projects-dropdown-menu {
+  .projects-dropdown-menu,
+  .commercial-dropdown-menu {
     background-color: $bg-color-primary !important;
   }
 
   .assets-catalog-dropdown-item,
   .projects-dropdown-btn,
-  .projects-dropdown-item {
+  .projects-dropdown-item,
+  .commercial-dropdown-btn,
+  .commercial-dropdown-item {
     color: $text-color-primary !important;
     margin: 0 !important;
     padding: 1rem 2rem 1rem 2rem !important;
   }
 
-  .projects-dropdown-btn::after {
+  .projects-dropdown-btn::after,
+  .commercial-dropdown-btn::after {
     vertical-align: 0.2rem !important;
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
   }
 
-  .en-projects-dropdown-btn::after {
+  .en-projects-dropdown-btn::after,
+  .en-commercial-dropdown-btn::after {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
   }
 
   .assets-catalog-dropdown-item:hover,
-  .projects-dropdown-item:hover {
+  .projects-dropdown-item:hover,
+  .commercial-dropdown-item:hover {
     background-color: $bg-color-faded !important;
   }
 
@@ -1422,12 +1414,13 @@
   }
 
   .dropdown-submenu > .dropdown-menu {
-    top: -2%;
+    top: -11%;
     right: 95.5%;
     display: none;
   }
 
-  .en-projects-dropdown-menu {
+  .en-projects-dropdown-menu,
+  .en-commercial-dropdown-menu {
     left: 95.5%;
     width: 17rem;
   }
@@ -1679,8 +1672,8 @@
       @include projectHeadline(37%);
       font-size: $h0;
     }
-    &.project-main-image-headline-atlantis-l6 {
-      @include projectHeadline(26%);
+    &.project-main-image-headline-camelot {
+      @include projectHeadline(36%);
       font-size: $h0;
     }
   }
@@ -1724,12 +1717,8 @@
         60rem
       );
     }
-    &.project-mid-image-container-atlantis-l6 {
-      @include projectMiddleImage(
-        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161873-atlantis-L6-project-7.webp',
-        120rem 70rem,
-        60rem
-      );
+    &.project-mid-image-container-camelot {
+      @include projectMiddleImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155348-camelot-48.webp', 100% 60rem, 50rem);
     }
   }
 
@@ -1892,9 +1881,6 @@
     &.project-main-image-headline-atlantis-barcode {
       @include projectHeadline(33%);
     }
-    &.project-main-image-headline-atlantis-l6 {
-      @include projectHeadline(23%);
-    }
   }
 
   .project-gallery-image {
@@ -1924,12 +1910,8 @@
         60rem
       );
     }
-    &.project-mid-image-container-atlantis-l6 {
-      @include projectMiddleImage(
-        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/L6-images/1720172161873-atlantis-L6-project-7.webp',
-        155rem 80rem,
-        60rem
-      );
+    &.project-mid-image-container-camelot {
+      @include projectMiddleImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155348-camelot-48.webp', 100% 70rem, 60rem);
     }
   }
 

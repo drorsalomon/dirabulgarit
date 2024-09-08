@@ -150,8 +150,10 @@ export const animateCounter = (element, endNum, text) => {
       element.innerText = Math.floor(currentCount);
       requestAnimationFrame(updateCounter);
     } else {
-      if (text) {
+      if (text && text !== '€') {
         element.innerText = `${targetCount}${text}`;
+      } else if (text && text === '€') {
+        element.innerText = `${text}${targetCount}`;
       } else {
         element.innerText = targetCount;
       }

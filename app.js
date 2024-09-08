@@ -15,12 +15,14 @@ const globalErrorHandler = require('./controllers/errorController');
 const viewRouter = require('./routes/viewRoutes');
 const assetRouter = require('./routes/assetRoutes');
 const projectRouter = require('./routes/projectRoutes');
+const commercialRouter = require('./routes/commercialRoutes');
 const landingRouter = require('./routes/landingRoutes');
 const blogRouter = require('./routes/blogRoutes');
 const apiRouter = require('./routes/apiRoutes');
 const enViewRouter = require('./routes/enViewRoutes');
 const enAssetRouter = require('./routes/enAssetRoutes');
 const enProjectRouter = require('./routes/enProjectRoutes');
+const enCommercialRouter = require('./routes/enCommercialRoutes');
 const enBlogRouter = require('./routes/enBlogRoutes');
 const { dailyAssetPriceNisUpdate, getZohoRefreshToken } = require('./services/cronJobs');
 
@@ -152,6 +154,7 @@ app.post('/select-language', (req, res) => {
 app.use('/', viewRouter);
 app.use('/asset', assetRouter);
 app.use('/project', projectRouter);
+app.use('/commercial', commercialRouter);
 app.use('/blog', blogRouter);
 app.use('/landing', landingRouter);
 app.use('/api', apiRouter);
@@ -159,6 +162,7 @@ app.use('/api', apiRouter);
 app.use('/en', enViewRouter);
 app.use('/en/asset', enAssetRouter);
 app.use('/en/project', enProjectRouter);
+app.use('/en/commercial', enCommercialRouter);
 app.use('/en/blog', enBlogRouter);
 
 dailyAssetPriceNisUpdate.start();
