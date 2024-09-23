@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', viewsController.getOverview);
 router.get('/search', viewsController.getSearch);
-router.get('/q&a', viewsController.getQAndA);
+router.get('/qanda', viewsController.getQAndA);
 router.get('/invest', viewsController.getInvest);
 router.get('/about', viewsController.getAbout);
 router.get('/contact-us', viewsController.getContactUs);
