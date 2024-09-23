@@ -460,6 +460,7 @@ a:hover {
 }
 
 .search-results-main-container {
+  position: relative;
   padding: 0 !important;
 }
 
@@ -468,7 +469,6 @@ a:hover {
 }
 
 .search-headline-col {
-  position: relative;
   text-align: center;
   padding: 0 !important;
 }
@@ -2192,7 +2192,7 @@ a:hover {
 .webinar-headline-img {
   -o-object-fit: cover;
   object-fit: cover;
-  height: 70rem;
+  height: 67rem;
   width: 100%;
   -webkit-filter: brightness(40%);
   filter: brightness(40%);
@@ -2205,7 +2205,7 @@ a:hover {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 600;
   color: #ffffff;
 }
@@ -2217,17 +2217,17 @@ a:hover {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: #fce38a;
 }
 
 .webinar-headline-text-top {
-  top: 30%;
+  top: 28%;
 }
 
 .webinar-headline-text-bottom {
-  top: 34%;
+  top: 32%;
 }
 
 .webinar-contact-us-headline {
@@ -2239,7 +2239,7 @@ a:hover {
 
 .webinar-contact-us-top-container {
   position: absolute;
-  top: 71%;
+  top: 69%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);

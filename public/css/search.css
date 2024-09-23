@@ -1,4 +1,5 @@
 .search-results-main-container {
+  position: relative;
   padding: 0 !important;
 }
 
@@ -7,7 +8,6 @@
 }
 
 .search-headline-col {
-  position: relative;
   text-align: center;
   padding: 0 !important;
 }
