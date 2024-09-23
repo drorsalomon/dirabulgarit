@@ -46,6 +46,6 @@ exports.webinarRegisterUser = catchAsync(async (req, res, next) => {
 
 exports.webinarRegistered = catchAsync(async (req, res) => {
   res.status(200).render(`${res.locals.lang}/webinarConfirm`, {
-    title: 'Camelot Entertainment Center',
+    title: 'Thank you for registering to the Webinar',
   });
 });
