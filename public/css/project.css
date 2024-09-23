@@ -65,6 +65,28 @@
   height: 60rem;
   width: 100%;
 }
+.project-main-image-col.project-main-image-col-sofia-b5 {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-b4-images/1726409077363-sofia-b5-building-4.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60rem;
+  width: 100%;
+}
+.project-main-image-col.project-main-image-col-samokov {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/samokov-images/1727012351222-samokov-development-1.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60rem;
+  width: 100%;
+}
 
 .project-main-image-headline.project-main-image-headline-atlantis-aria-3 {
   position: absolute;
@@ -103,6 +125,28 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 4.2rem;
+}
+.project-main-image-headline.project-main-image-headline-sofia-b5 {
+  position: absolute;
+  top: 50%;
+  left: 43%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 4.2rem;
+}
+.project-main-image-headline.project-main-image-headline-samokov {
+  position: absolute;
+  top: 50%;
+  left: 46%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -178,6 +222,11 @@
   border-radius: 0.5rem;
 }
 
+.project-details-img-sofia-b5 {
+  height: 30rem;
+  width: 20rem;
+}
+
 .project-amenities-icon {
   height: 10rem;
   margin-bottom: 1rem;
@@ -242,6 +291,28 @@
   background-repeat: no-repeat;
   background-size: 100% 28rem;
   height: 60rem;
+  width: 100%;
+}
+.project-mid-image-container.project-mid-image-container-sofia-b5 {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-b4-images/1726409077338-sofia-b5-building-2.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 15rem;
+  height: 25rem;
+  width: 100%;
+}
+.project-mid-image-container.project-mid-image-container-samokov {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/samokov-images/1727012351227-samokov-development-2.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 30rem;
+  height: 40rem;
   width: 100%;
 }
 

@@ -1,4 +1,7 @@
 @media only screen and (min-width: 360px) {
+  .webinar-mainpage-text {
+    font-size: 1.6rem;
+  }
   .en-hero-container {
     height: 65rem;
   }
@@ -48,6 +51,25 @@
   .footer-icon {
     display: inline;
   }
+  .project-main-image-headline.project-main-image-headline-samokov {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .webinar-headline-img {
+    height: 70rem;
+  }
+  .webinar-contact-us-top-container {
+    top: 107%;
+  }
+  .webinar-contact-us-asterisk-icon {
+    height: 2.5rem;
+  }
 }
 @media only screen and (min-width: 425px) {
   .about-partners-card {
@@ -55,6 +77,9 @@
   }
 }
 @media only screen and (min-width: 576px) {
+  .webinar-mainpage-container {
+    padding-top: 1rem;
+  }
   .whatsapp-widget-container {
     width: 13rem !important;
   }
@@ -273,6 +298,28 @@
     color: #ffffff;
     font-size: 4.8rem;
   }
+  .project-main-image-headline.project-main-image-headline-sofia-b5 {
+    position: absolute;
+    top: 50%;
+    left: 37%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 4.8rem;
+  }
+  .project-main-image-headline.project-main-image-headline-samokov {
+    position: absolute;
+    top: 50%;
+    left: 37%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 4.8rem;
+  }
   .project-gallery-image {
     height: 17rem;
     width: 26rem;
@@ -280,6 +327,10 @@
   .project-details-img {
     height: 30rem;
     width: 45rem;
+  }
+  .project-details-img-sofia-b5 {
+    height: 40rem;
+    width: 30rem;
   }
   .project-mid-image-container.project-mid-image-container-atlantis-aria-2 {
     position: relative;
@@ -314,6 +365,28 @@
     height: 70rem;
     width: 100%;
   }
+  .project-mid-image-container.project-mid-image-container-sofia-b5 {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-b4-images/1726409077338-sofia-b5-building-2.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 30rem;
+    height: 40rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-samokov {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/samokov-images/1727012351227-samokov-development-2.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 35rem;
+    height: 45rem;
+    width: 100%;
+  }
   .project-installment-scheme-table {
     width: 95rem !important;
   }
@@ -324,8 +397,35 @@
   .landing-main-image {
     height: 24.5rem;
   }
+  .webinar-headline-img {
+    height: 65rem;
+  }
+  .webinar-headline-text-top {
+    top: 27%;
+  }
+  .webinar-headline-text-bottom {
+    top: 32%;
+  }
+  .webinar-contact-us-top-container {
+    top: 76%;
+  }
+  .webinar-input-name,
+  .webinar-input-phone,
+  .webinar-input-email {
+    width: 37rem !important;
+  }
+  .webinar-form-check {
+    margin-left: 1rem;
+  }
+  .alert {
+    width: 70%;
+    font-size: 1.6rem;
+  }
 }
 @media only screen and (min-width: 768px) {
+  .webinar-mainpage-text {
+    font-size: 2rem;
+  }
   .navbar-call-us-text-container {
     padding: 0.6rem 2rem;
   }
@@ -633,6 +733,10 @@
     height: 40rem;
     width: 60rem;
   }
+  .project-details-img-sofia-b5 {
+    height: 45rem;
+    width: 35rem;
+  }
   .project-mid-image-container.project-mid-image-container-atlantis-aria-2 {
     position: relative;
     padding: 0 !important;
@@ -655,6 +759,28 @@
     height: 60rem;
     width: 100%;
   }
+  .project-mid-image-container.project-mid-image-container-sofia-b5 {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-b4-images/1726409077338-sofia-b5-building-2.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 40rem;
+    height: 50rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-samokov {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/samokov-images/1727012351227-samokov-development-2.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 50rem;
+    height: 60rem;
+    width: 100%;
+  }
   .footer-border {
     width: 15rem;
   }
@@ -666,6 +792,52 @@
   }
   .landing-contact-us-input {
     width: 35rem !important;
+  }
+  .webinar-headline-img {
+    height: 68rem;
+  }
+  .webinar-headline {
+    font-size: 3.4rem;
+  }
+  .webinar-headline-text-top,
+  .webinar-headline-text-bottom {
+    font-size: 2.4rem;
+  }
+  .webinar-headline-text-top {
+    top: 30%;
+  }
+  .webinar-headline-text-bottom {
+    top: 35%;
+  }
+  .webinar-contact-us-top-container {
+    top: 79%;
+  }
+  .webinar-contact-us-headline {
+    font-size: 2rem;
+  }
+  .webinar-main-text {
+    font-size: 2.4rem;
+  }
+  .webinar-subjects-icon-container {
+    width: 11rem;
+    height: 11rem;
+  }
+  .webinar-subjects-icon {
+    height: 7rem;
+  }
+  .webinar-subjects-icon-text,
+  .webinar-moderators-image-name {
+    font-size: 2rem;
+  }
+  .webinar-moderators-image-container {
+    width: 11.5rem;
+    height: 11.5rem;
+  }
+  .webinar-moderators-image {
+    height: 11rem;
+  }
+  .webinar-moderators-image-text {
+    font-size: 1.6rem;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -727,10 +899,12 @@
   .asset-favorite-btn-white,
   .btn-cta-mobile-white,
   .landing-contact-us-button,
+  .landing-webinar-button,
   .btn-search,
   .contact-us-button,
   .asset-back-to-results-btn,
-  .contact-us-fixed-expand-btn-container {
+  .contact-us-fixed-expand-btn-container,
+  .webinar-mainpage-text {
     -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
     -o-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
     transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -739,9 +913,11 @@
   .asset-favorite-btn-white:hover,
   .btn-cta-mobile-white:hover,
   .landing-contact-us-button:hover,
+  .landing-webinar-button:hover,
   .btn-search:hover,
   .contact-us-button:hover,
-  .contact-us-fixed-expand-btn-container:hover {
+  .contact-us-fixed-expand-btn-container:hover,
+  .webinar-mainpage-text:hover {
     -webkit-filter: brightness(90%);
     filter: brightness(90%);
   }
@@ -869,10 +1045,7 @@
     display: none;
   }
   .asset-search-container {
-    margin: 4rem 0;
-  }
-  .asset-headline-row {
-    margin-top: 0rem !important;
+    margin: 2rem 0;
   }
   .asset-headline {
     margin-bottom: 2rem;
@@ -957,6 +1130,10 @@
     -ms-transform: scale(1.05);
     transform: scale(1.05);
   }
+  .blog-content-mid-image {
+    height: 50%;
+    width: 50%;
+  }
   .project-main-image-headline.project-main-image-headline-atlantis-aria-3 {
     position: absolute;
     top: 50%;
@@ -997,6 +1174,26 @@
     font-weight: 600;
     color: #ffffff;
   }
+  .project-main-image-headline.project-main-image-headline-sofia-b5 {
+    position: absolute;
+    top: 50%;
+    left: 32%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .project-main-image-headline.project-main-image-headline-samokov {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
   .project-gallery-image {
     height: 20rem;
     width: 30rem;
@@ -1004,6 +1201,10 @@
   .project-details-img {
     height: 50rem;
     width: 75rem;
+  }
+  .project-details-img-sofia-b5 {
+    height: 50rem;
+    width: 40rem;
   }
   .project-mid-image-container.project-mid-image-container-atlantis-aria-2 {
     position: relative;
@@ -1036,6 +1237,28 @@
     background-repeat: no-repeat;
     background-size: 100% 50rem;
     height: 50rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-sofia-b5 {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-b4-images/1726409077338-sofia-b5-building-2.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 50rem;
+    height: 60rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-samokov {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/samokov-images/1727012351227-samokov-development-2.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 55rem;
+    height: 65rem;
     width: 100%;
   }
   .project-installment-scheme-table {
@@ -1074,8 +1297,14 @@
   .landing-contact-us-headline {
     font-size: 1.6rem;
   }
+  .alert {
+    width: 50%;
+  }
 }
 @media only screen and (min-width: 1200px) {
+  .webinar-mainpage-text {
+    font-size: 2.4rem;
+  }
   .hero-video-bg-video-text {
     font-size: 1.2rem;
   }
@@ -1184,7 +1413,7 @@
   .en-projects-dropdown-menu,
   .en-commercial-dropdown-menu {
     left: 95.5%;
-    width: 17rem;
+    width: fit-content;
   }
   .assets-catalog-dropdown:hover > .dropdown-menu,
   .dropdown-submenu:hover > .dropdown-menu {
@@ -1400,6 +1629,28 @@
     color: #ffffff;
     font-size: 10rem;
   }
+  .project-main-image-headline.project-main-image-headline-sofia-b5 {
+    position: absolute;
+    top: 50%;
+    left: 36%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 10rem;
+  }
+  .project-main-image-headline.project-main-image-headline-samokov {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 10rem;
+  }
   .project-gallery-image {
     height: 20rem;
     width: 37rem;
@@ -1407,6 +1658,10 @@
   .project-details-img {
     height: 55rem;
     width: 85rem;
+  }
+  .project-details-img-sofia-b5 {
+    height: 55rem;
+    width: 45rem;
   }
   .project-mid-image-container.project-mid-image-container-atlantis-aria-2 {
     position: relative;
@@ -1463,6 +1718,28 @@
     height: 50rem;
     width: 100%;
   }
+  .project-mid-image-container.project-mid-image-container-sofia-b5 {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-b4-images/1726409077338-sofia-b5-building-2.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 60rem;
+    height: 70rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-samokov {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/samokov-images/1727012351227-samokov-development-2.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 70rem;
+    height: 80rem;
+    width: 100%;
+  }
   .project-map {
     height: 45rem;
   }
@@ -1474,6 +1751,38 @@
   }
   .landing-main-image {
     height: 53rem;
+  }
+  .webinar-headline-img {
+    height: 73rem;
+  }
+  .webinar-headline {
+    font-size: 4.2rem;
+  }
+  .webinar-headline-text-top,
+  .webinar-headline-text-bottom {
+    font-size: 3.4rem;
+  }
+  .webinar-headline-text-top {
+    top: 32%;
+  }
+  .webinar-headline-text-bottom {
+    top: 38%;
+  }
+  .webinar-contact-us-top-container {
+    top: 88%;
+  }
+  .webinar-contact-us-headline {
+    font-size: 2.4rem;
+  }
+  .webinar-input-name,
+  .webinar-input-phone,
+  .webinar-input-email {
+    width: 45rem !important;
+  }
+  .webinar-who-headline,
+  .webinar-subjects-headline,
+  .webinar-moderators-headline {
+    font-size: 3.4rem;
   }
 }
 @media only screen and (min-width: 1400px) {
@@ -1650,6 +1959,17 @@
     height: 60rem;
     width: 100%;
   }
+  .project-mid-image-container.project-mid-image-container-samokov {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/samokov-images/1727012351227-samokov-development-2.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 80rem;
+    height: 90rem;
+    width: 100%;
+  }
   .project-installment-scheme-table-col {
     overflow-x: auto !important;
   }
@@ -1661,5 +1981,20 @@
   }
   .landing-main-image {
     height: 48.7rem;
+  }
+  .webinar-headline {
+    top: 12%;
+  }
+  .webinar-headline-text-top {
+    top: 27%;
+  }
+  .webinar-headline-text-bottom {
+    top: 33%;
+  }
+  .webinar-contact-us-top-container {
+    top: 84%;
+  }
+  .webinar-main-text {
+    font-size: 3.4rem;
   }
 }/*# sourceMappingURL=queries.css.map */

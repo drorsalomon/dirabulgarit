@@ -1,6 +1,13 @@
 extends base 
 
 block head
+    title=`${asset.project}`
+    meta(name="description" content=`${asset.name}`)
+    meta(name="robots" content="index, follow")
+    link(rel="canonical" href=`https://www.dirabulgarit.com/asset/${asset.slug}`)
+    link(rel="alternate" href=`https://www.dirabulgarit.com/en/asset/${asset.slug}` hreflang="en")
+    link(rel="alternate" href=`https://www.dirabulgarit.com/asset/${asset.slug}` hreflang="he")
+    
     meta(property="og:title" content=`${asset.project}`)
     meta(property="og:description" content=`${asset.name}` )
     meta(property="og:image" content=`${asset.mainImage}`)
@@ -9,12 +16,6 @@ block head
     include _headLinksScripts
 
 block content
-
-    .container-fluid.d-flex.justify-content-center.py-xxl-4
-        .asset-search-container.w-75   
-            include _searchForm
-
-        include _searchModal  
 
     .container-fluid.asset-headline-container.py-xxl-2
         .row.asset-headline-row.mx-4
@@ -195,7 +196,7 @@ block content
         .container-fluid.asset-amenities-container.py-xxl-5
             .row.asset-amenities-row.mx-4.justify-content-center 
                 .col-10.asset-amenities-headline-col
-                    h2.asset-amenities-headline שירותים נוספים
+                    h2.asset-amenities-headline מאפייני הנכס
                 .col-10.asset-amenities-col
                     .row.asset-amenities-details-row.flex-md-row-reverse
                         if asset.amenities
@@ -234,6 +235,12 @@ block content
                 h2.asset-related-assets-headline.text-center נכסים מעניינים נוספים
             each asset in hotAssets
                 include _mobileAssetsCards  
+
+    .container-fluid.d-flex.justify-content-center.py-xxl-4
+        .asset-search-container.w-75   
+            include _searchForm
+
+        include _searchModal              
 
     include _contactUsFixed  
     include _contactUsFixedMobile   

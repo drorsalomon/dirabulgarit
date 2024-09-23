@@ -27,33 +27,58 @@ exports.getSearch = catchAsync(async (req, res, next) => {
   });
 });
 exports.getQAndA = (req, res) => {
-  res.status(200).render(`${res.locals.lang}/qAndA`);
+  res.status(200).render(`${res.locals.lang}/qAndA`, {
+    title: 'שאלות ותשובות',
+  });
 };
 exports.getInvest = (req, res) => {
-  res.status(200).render(`${res.locals.lang}/invest`);
+  res.status(200).render(`${res.locals.lang}/invest`, {
+    title: 'מדריך השקעה בבולגריה',
+  });
 };
 exports.getAbout = (req, res) => {
-  res.status(200).render(`${res.locals.lang}/about`);
+  res.status(200).render(`${res.locals.lang}/about`, {
+    title: 'מי אנחנו',
+  });
 };
-
 exports.getContactUs = (req, res) => {
-  res.status(200).render(`${res.locals.lang}/contactUs`);
+  res.status(200).render(`${res.locals.lang}/contactUs`, {
+    title: 'צרו קשר',
+  });
 };
 exports.getContactUsConfirm = (req, res) => {
-  res.status(200).render(`${res.locals.lang}/contactUsConfirm`);
+  res.status(200).render(`${res.locals.lang}/contactUsConfirm`, {
+    title: 'אישור שליחת פרטים ליצירת קשר',
+  });
 };
 exports.getPricing = (req, res) => {
-  res.status(200).render(`${res.locals.lang}/pricing`);
+  res.status(200).render(`${res.locals.lang}/pricing`, {
+    title: 'מחירון חבילות ליווי',
+  });
 };
 exports.getPrivacy = (req, res) => {
-  res.status(200).render(`${res.locals.lang}/privacy`);
+  res.status(200).render(`${res.locals.lang}/privacy`, {
+    title: 'תנאי פרטיות',
+  });
 };
 exports.getAccessibility = (req, res) => {
-  res.status(200).render(`${res.locals.lang}/accessibility`);
+  res.status(200).render(`${res.locals.lang}/accessibility`, {
+    title: 'תנאי נגישות',
+  });
 };
 exports.getTermsOfService = (req, res) => {
-  res.status(200).render(`${res.locals.lang}/termsOfService`);
+  res.status(200).render(`${res.locals.lang}/termsOfService`, {
+    title: 'תנאי שימוש',
+  });
 };
 exports.getSiteMap = (req, res) => {
-  res.status(200).render(`${res.locals.lang}/siteMap`);
+  res.status(200).render(`${res.locals.lang}/siteMap`, {
+    title: 'מפת האתר',
+  });
 };
+
+exports.getWebinar = catchAsync(async (req, res) => {
+  res.status(200).render(`${res.locals.lang}/webinar`, {
+    title: 'וובינר השקעות נדל"ן בבולגריה',
+  });
+});

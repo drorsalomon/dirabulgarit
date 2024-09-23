@@ -1,8 +1,15 @@
 extends base 
 
 block head
+    title=`${blog.blogTitle}`
+    meta(name="description" content=`${blog.metaDescription}`)
+    meta(name="robots" content="index, follow")
+    link(rel="canonical" href=`https://www.dirabulgarit.com/blog/${blog.slug}`)
+    link(rel="alternate" href=`https://www.dirabulgarit.com/en/blog/${blog.slug}` hreflang="en")
+    link(rel="alternate" href=`https://www.dirabulgarit.com/blog/${blog.slug}` hreflang="he")
+
     meta(property="og:title" content=`${blog.blogTitle}`)
-    meta(property="og:description" content=`${blog.sectionOneTexts[0]}`)
+    meta(property="og:description" content=`${blog.metaDescription}`)
     meta(property="og:image" content=`${blog.imgSrc}`)
     meta(property="og:image:width" content="1200")
     meta(property="og:image:height" content="630")
@@ -32,6 +39,10 @@ block content
                 if blog.sectionThreeTexts
                     each text in blog.sectionThreeTexts
                         div.blog-content-text(dir='rtl')!= text
+                if blog.midImgSrc
+                    div.blog-content-mid-image-container.text-center
+                        img.blog-content-mid-image(src=`${blog.midImgSrc}` alt=`${blog.midImgAlt}`)
+                        div.blog-content-mid-image-text!= blog.midImgText       
                 div.blog-section-separator          
                 if blog.sectionFourTitle     
                     h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionFourTitle
@@ -81,6 +92,78 @@ block content
                     each text in blog.sectionElevenTexts
                         div.blog-content-text(dir='rtl')!= text
                 div.blog-section-separator          
+                if blog.sectionTwelveTitle     
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionTwelveTitle
+                if blog.sectionTwelveTexts
+                    each text in blog.sectionTwelveTexts
+                        div.blog-content-text(dir='rtl')!= text
+                div.blog-section-separator          
+                if blog.sectionThirteenTitle     
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionThirteenTitle
+                if blog.sectionThirteenTexts
+                    each text in blog.sectionThirteenTexts
+                        div.blog-content-text(dir='rtl')!= text
+                div.blog-section-separator          
+                if blog.sectionFourteenTitle     
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionFourteenTitle
+                if blog.sectionFourteenTexts
+                    each text in blog.sectionFourteenTexts
+                        div.blog-content-text(dir='rtl')!= text
+                div.blog-section-separator          
+                if blog.sectionFifteenTitle     
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionFifteenTitle
+                if blog.sectionFifteenTexts
+                    each text in blog.sectionFifteenTexts
+                        div.blog-content-text(dir='rtl')!= text
+                div.blog-section-separator          
+                if blog.sectionSixteenTitle     
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionSixteenTitle
+                if blog.sectionSixteenTexts
+                    each text in blog.sectionSixteenTexts
+                        div.blog-content-text(dir='rtl')!= text
+                div.blog-section-separator          
+                if blog.sectionSeventeenTitle     
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionSeventeenTitle
+                if blog.sectionSeventeenTexts
+                    each text in blog.sectionSeventeenTexts
+                        div.blog-content-text(dir='rtl')!= text
+                div.blog-section-separator          
+                if blog.sectionEighteenTitle     
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionEighteenTitle
+                if blog.sectionEighteenTexts
+                    each text in blog.sectionEighteenTexts
+                        div.blog-content-text(dir='rtl')!= text
+                div.blog-section-separator          
+                if blog.sectionNineteenTitle     
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionNineteenTitle
+                if blog.sectionNineteenTexts
+                    each text in blog.sectionNineteenTexts
+                        div.blog-content-text(dir='rtl')!= text
+                div.blog-section-separator          
+                if blog.sectionTwentyTitle     
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionTwentyTitle
+                if blog.sectionTwentyTexts
+                    each text in blog.sectionTwentyTexts
+                        div.blog-content-text(dir='rtl')!= text
+                div.blog-section-separator          
+                if blog.sectionTwentyOneTitle     
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionTwentyOneTitle
+                if blog.sectionTwentyOneTexts
+                    each text in blog.sectionTwentyOneTexts
+                        div.blog-content-text(dir='rtl')!= text
+                div.blog-section-separator          
+                if blog.sectionTwentyTwoTitle     
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionTwentyTwoTitle
+                if blog.sectionTwentyTwoTexts
+                    each text in blog.sectionTwentyTwoTexts
+                        div.blog-content-text(dir='rtl')!= text
+                div.blog-section-separator          
+                if blog.sectionTwentyThreeTitle     
+                    h2.blog-content-textSectionTitle(dir='rtl')!= blog.sectionTwentyThreeTitle
+                if blog.sectionTwentyThreeTexts
+                    each text in blog.sectionTwentyThreeTexts
+                        div.blog-content-text(dir='rtl')!= text
+                div.blog-section-separator          
                 if blog.listOne.listOneTitle
                     h2.blog-content-listTitle(dir='rtl')!= blog.listOne.listOneTitle
                 if blog.listOne.listOneTexts
@@ -98,7 +181,7 @@ block content
                 if blog.listThree.listThreeTexts
                     each text in blog.listThree.listThreeTexts  
                         div.blog-content-list-text(dir='rtl')!= `● ` + text 
-                div.blog-content-listTitle(dir='rtl') דירה בולגרית הוקמה במטרה לעזור למשקיע הישראלי למצוא את הנכסים הכדאיים ביותר ברחבי בולגריה. באתרנו תמצאו אלפי נכסים - החל בדירות סטודיו באתרי נופש ועד דירות יוקרה של שלושה וארבעה חדרים בפרוייקטים מודרניים הבנויים בסטנדרטים הגבוהים ביותר. צוות המומחים שלנו מחכה לכם, קבעו עוד היום פגישת וידאו בזמן שהכי נוח לכם ואנו נפגש אתכם ונענה לכל שאלה כדי שתוכלו למצוא את השקעות הנדל"ן המשתלמות ביותר עבורכם בבולגריה.        
+                div.blog-content-listTitle(dir='rtl') דירה בולגרית הוקמה במטרה לעזור למשקיע הישראלי למצוא את הנכסים הכדאיים ביותר ברחבי בולגריה. באתרנו תמצאו מאות נכסים - החל בדירות סטודיו באתרי נופש ועד דירות יוקרה של שלושה וארבעה חדרים בפרוייקטים מודרניים הבנויים בסטנדרטים הגבוהים ביותר. צוות המומחים שלנו מחכה לכם, צרו עמנו קשר עוד היום ונענה לכל שאלה כדי שתוכלו למצוא את השקעות הנדל"ן המשתלמות ביותר עבורכם בבולגריה.        
             .col-10.text-center.py-4    
                     button.btn-cta.pricing-cta-btn.to-calendly-btn(aria-label='מעבר לעמוד יצירת קשר') צרו קשר
                     button.share-btn

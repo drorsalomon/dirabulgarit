@@ -20,6 +20,7 @@
 @import 'accessibility';
 @import 'termsOfService';
 @import 'siteMap';
+@import 'webinar';
 
 * {
   margin: 0;
@@ -286,7 +287,8 @@ body {
 .section-headline-cta-btn,
 .error-btn,
 .mobile-asset-favorite-btn,
-.landing-contact-us-button {
+.landing-contact-us-button,
+.landing-webinar-button {
   border: 1px solid $text-color-secondary;
   color: $bg-color-primary;
   background-color: $text-color-secondary;
@@ -367,7 +369,8 @@ body {
   width: 2.5rem;
 }
 
-.landing-contact-us-button {
+.landing-contact-us-button,
+.landing-webinar-button {
   width: 21rem;
   height: 3rem;
   border-radius: 1rem;
@@ -432,6 +435,23 @@ body {
 .whatsapp-widget-icon {
   height: 2rem;
   margin-left: 0.5rem;
+}
+
+// ***** Webinar *****
+.webinar-mainpage-container {
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.webinar-mainpage-text {
+  font-size: $h7;
+  color: $text-color-tertiary;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.webinar-mainpage-text span {
+  color: $text-color-counter;
 }
 
 // ***** Hero Video *****
@@ -1489,4 +1509,30 @@ input[type='text']::placeholder {
 
 .btn-cta-mobile-icon {
   height: 2.6rem;
+}
+
+// ***** ALERTS *****
+.alert {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 99999999 !important;
+  color: $bg-color-primary;
+  font-size: $h7;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 1rem;
+  padding: 0.3rem;
+  -webkit-box-shadow: rgba(66, 116, 173, 0.07) 0px 7px 40px 0px;
+  box-shadow: rgba(66, 116, 173, 0.07) 0px 7px 40px 0px;
+}
+.alert--success {
+  background-color: $form-valid;
+}
+.alert--error {
+  background-color: $asset-sold !important;
+  color: $bg-color-primary !important;
 }

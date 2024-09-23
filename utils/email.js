@@ -1,14 +1,15 @@
 const nodemailer = require('nodemailer');
 const pug = require('pug');
 const htmlToText = require('html-to-text');
+const dotenv = require('dotenv');
+
+dotenv.config({ path: './config.env' });
 
 module.exports = class Email {
-  constructor(user, url, validFor) {
+  constructor(user) {
     this.to = user.email;
     this.firstName = user.name.split(' ')[0];
-    this.url = url;
-    this.validFor = validFor;
-    this.from = `Dror Salomon <${process.env.EMAIL_FROM}>`;
+    this.from = `דירה בולגרית <${process.env.EMAIL_FROM}>`;
   }
 
   newTransport() {
@@ -27,7 +28,7 @@ module.exports = class Email {
     }
     // If in development use nodemailer.
     /* Function for creating and sending emails to the users. We create the options variable and specify
-   the email address, email content etc. The transporter is just a service for sending the email like
+    the email address, email content etc. The transporter is just a service for sending the email like
     gmail for example (for using Gmail we need to activate an option called 'less secure app' in our
     Gmail settings). For creating the transporter we use the nodemailer 'createTransport()' method, and 
     pass the required fields to it from the process.env file (For development testing we use the mailtrap
@@ -43,12 +44,12 @@ module.exports = class Email {
   }
 
   /* We use this function to actually send the email to the users. */
-  async send(template, mailText) {
+  async send(template, subject) {
     // 1) Render HTML based on a pug template.
-    const html = pug.renderFile(`${__dirname}/../views/email/${template}.pug`, {
+    const html = pug.renderFile(`${__dirname}/../views/he/email/${template}.pug`, {
       firstName: this.firstName,
       url: this.url,
-      mailText,
+      subject,
     });
     // 2) Define the email options.
 
@@ -58,7 +59,7 @@ module.exports = class Email {
     const mailOptions = {
       from: this.from,
       to: this.to,
-      mailText,
+      subject,
       html,
       /* Although we already have an HTML version of the email, some people prefer to have a text version and it's
                also better from email rates and spam folders. So we use the 'html-to-text' package to convert the html
@@ -72,14 +73,11 @@ module.exports = class Email {
 
   /* Here we use the 'send()' function. The template comes from the pug template we created and then we just add the
        subject. */
-  async sendWelcome() {
-    await this.send('welcome', 'Welcome to the GamesMatch!');
-  }
-
-  async sendPasswordReset() {
-    await this.send(
-      'passwordReset',
-      `Forgot your password? Click on the 'Reset My Password' button below to be routed to the password reset page (valid for only ${this.validFor} minutes).`
-    );
+  async sendWebinarWelcome() {
+    try {
+      await this.send('webinarWelcome', 'וובינר השקעות הנדל"ן בבולגריה של דירה בולגרית');
+    } catch (error) {
+      console.error('Email error:', error);
+    }
   }
 };

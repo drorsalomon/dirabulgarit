@@ -2,6 +2,13 @@ extends base
 
 block head
     title השקעות נדל"ן בבולגריה: מאות נכסים ודירות להשקעה | דירה בולגרית
+    meta(name="description" content='השקעות נדל"ן בבולגריה עושים רק עם דירה בולגרית! חברה המציעה מאות נכסים ודירות להשקעה בבולגריה, וליווי מקצועי משלב החיפוש ועד שלב קבלת המפתח. לפרטים לחצו >>')
+    meta(name="robots" content="index, follow")
+    link(rel="canonical" href="https://www.dirabulgarit.com")
+    link(rel="alternate" href="https://www.dirabulgarit.com/en" hreflang="en")
+    link(rel="alternate" href="https://www.dirabulgarit.com" hreflang="he")
+    
+    meta(property="og:title" content="השקעות נדל\"ן בבולגריה: מאות נכסים ודירות להשקעה | דירה בולגרית")
     meta(name='description' content='השקעות נדל"ן בבולגריה עושים רק עם דירה בולגרית! חברה המציעה מאות נכסים ודירות להשקעה בבולגריה, וליווי מקצועי משלב החיפוש ועד שלב קבלת המפתח. לפרטים לחצו >>')
     meta(property="og:image" content='/img/hero-burgas.webp')
     meta(property="og:image:width" content="1200")
@@ -18,6 +25,14 @@ block content
     //-                         source(src='/videos/hero-video-720p.mp4' type='video/webm')
     //-                 span.visually-hidden(id="heroVideoDescription") וידאו שמראה את איזור חוף הים בסאני ביץ', בורגס בולגריה, את הטיילת בעיר ואת פארק המים המקומי           
     //-                 a(href='https://www.youtube.com/watch?v=8TkCc_ybpGU&t=360s' target="_blank").hero-video-bg-video-text Video by Viktoriia Lozovska
+    
+    .container-fluid.webinar-mainpage-container
+        .row.webinar-mainpage-row.justify-content-center
+            .col-10.webinar-mainpage-col.text-center
+                a.webinar-mainpage-text(href='/webinar' dir='rtl') 
+                    | וובינר השקעות הנדל"ן הגדול של דירה בולגרית יוצא לדרך 
+                    span יום חמישי | 7.11.24 | 20:30 | zoom 
+                    | לחצו להרשמה ופרטים נוספים
     
     .container-fluid.hero-container(role="img" aria-labelledby="heroDescription")
         div.hero-video-container

@@ -5,3 +5,15 @@ exports.getCamelot = catchAsync(async (req, res) => {
     title: 'Camelot Entertainment Center',
   });
 });
+
+exports.getVarsanoChic = catchAsync(async (req, res) => {
+  res.status(200).render(`${res.locals.lang}/commercial/varsanoChic`, {
+    title: 'Varsano Chic Apartments',
+  });
+});
+
+exports.getSamokov = catchAsync(async (req, res) => {
+  res.status(200).render(`${res.locals.lang}/commercial/samokov`, {
+    title: 'Varsano Chic Apartments',
+  });
+});

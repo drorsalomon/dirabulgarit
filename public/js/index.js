@@ -3,6 +3,7 @@ import { getBlogs } from './blog';
 import { getFavoriteAssets } from './favoriteAssets';
 import { displayMap } from './mapbox';
 import { loadLang } from './language';
+import { webinarRegistration } from './webinar';
 import * as config from './config';
 import * as utils from './utils';
 import * as animation from './animation';
@@ -50,7 +51,7 @@ window.onload = function () {
     if (!JSON.parse(localStorage.getItem(config.CURRENCY_KEY))) {
       localStorage.setItem(config.CURRENCY_KEY, JSON.stringify(config.DEFAULT_CURRENCY));
     }
-    utils.switchCurrencyIconsSrc();
+    if (config.Elements.currencyDdBtn) utils.switchCurrencyIconsSrc();
     utils.switchAssetPriceCurrency();
     utils.switchSearchPriceCurrencyHtmlOnLoad(config.Elements.priceInput);
   }
@@ -67,7 +68,7 @@ window.onload = function () {
     if (!JSON.parse(localStorage.getItem(config.LANGUAGE_KEY))) {
       localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.DEFAULT_LANGUAGE));
     }
-    utils.switchLanguageIconsSrc();
+    if (config.Elements.langDdBtn) utils.switchLanguageIconsSrc();
   }
   // If language is English
   else if (JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.EN_LANGUAGE) {
@@ -189,7 +190,7 @@ window.addEventListener('pageshow', function () {
     localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.EN_LANGUAGE));
     loadLang(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
   } else {
-    utils.switchLanguageIconsSrc();
+    if (config.Elements.langDdBtn) utils.switchLanguageIconsSrc();
     localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.DEFAULT_LANGUAGE));
     loadLang(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
   }
@@ -686,17 +687,30 @@ if (config.Elements.contactUsExpandBtn)
     });
   });
 
+// Webinar
+if (config.Elements.webinarForm)
+  config.Elements.webinarForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const userName = config.Elements.webinarFormInputName.value;
+    const userPhone = config.Elements.webinarFormInputPhone.value;
+    const userEmail = config.Elements.webinarFormInputEmail.value;
+    const userIsSubscribed = config.Elements.webinarFormCheck.checked;
+    webinarRegistration(userName, userPhone, userEmail, userIsSubscribed);
+  });
+
 // ***** Animations *****
 
 // Contact Us fixed animation
-animation.toggleContactUsScroll(
-  config.Elements.contactUsContainerFixed,
-  config.Elements.contactUsMobileContainerFixed,
-  config.Elements.footerContainer,
-  config.Elements.contactUsExpandBtnContainer,
-);
+if (config.Elements.contactUsContainerFixed)
+  animation.toggleContactUsScroll(
+    config.Elements.contactUsContainerFixed,
+    config.Elements.contactUsMobileContainerFixed,
+    config.Elements.footerContainer,
+    config.Elements.contactUsExpandBtnContainer,
+  );
 
-animation.toggleContactUsExpand(config.Elements.contactUsExpandBtnContainer, config.Elements.footerCopyContainer);
+if (config.Elements.contactUsExpandBtnContainer)
+  animation.toggleContactUsExpand(config.Elements.contactUsExpandBtnContainer, config.Elements.footerCopyContainer);
 
 // Counter animation
 // Atlantis Aria 2
@@ -753,6 +767,26 @@ if (config.Elements.camelotProjectBuiltAreaNumber)
     6660,
     JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
   );
+// Sofia B5
+if (config.Elements.sofiab5ProjectPriceNumber)
+  animation.animateCounter(config.Elements.sofiab5ProjectPriceNumber, new Intl.NumberFormat().format(1250000), '€');
+if (config.Elements.sofiab5ProjectFloorsNumber) animation.animateCounter(config.Elements.sofiab5ProjectFloorsNumber, 3);
+if (config.Elements.sofiab5ProjectAssetsNumber) animation.animateCounter(config.Elements.sofiab5ProjectAssetsNumber, 3);
+if (config.Elements.sofiab5ProjectStoresNumber) animation.animateCounter(config.Elements.sofiab5ProjectStoresNumber, 2);
+if (config.Elements.sofiab5ProjectBuiltAreaNumber)
+  animation.animateCounter(
+    config.Elements.sofiab5ProjectBuiltAreaNumber,
+    253,
+    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
+  );
+// Samokov
+if (config.Elements.samokovProjectAreaNumber)
+  animation.animateCounter(
+    config.Elements.samokovProjectAreaNumber,
+    93000,
+    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
+  );
+
 // Fade in animation
 if (config.Elements.hotAssetsContainer || config.Elements.projectAssetsContainer) {
   animation.animateCardsFadeIn(config.Elements.assetCards);

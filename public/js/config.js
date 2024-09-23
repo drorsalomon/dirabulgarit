@@ -122,6 +122,13 @@ export const Elements = {
   calendlyWidgetShimon: document.querySelector('.calendly-widget-shimon'),
   calendlyAgentYeheli: document.querySelector('.calendly-agent-yeheli'),
   calendlyAgentShimon: document.querySelector('.calendly-agent-shimon'),
+  // Webinar
+  webinarForm: document.querySelector('.webinar-form'),
+  webinarFormInputName: document.querySelector('.webinar-input-name'),
+  webinarFormInputPhone: document.querySelector('.webinar-input-phone'),
+  webinarFormInputEmail: document.querySelector('.webinar-input-email'),
+  webinarFormCheck: document.querySelector('.webinar-form-check'),
+  webinarFormBtn: document.querySelector('.landing-webinar-button'),
   // PROJECTS
   projectAssetsContainer: document.querySelector('.project-assets-container'),
   // Atlantis Aria 2
@@ -152,6 +159,14 @@ export const Elements = {
   camelotProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-camelot'),
   camelotProjectAreaNumber: document.querySelector('.project-numbers-area-number-camelot'),
   camelotProjectBuiltAreaNumber: document.querySelector('.project-numbers-built-area-number-camelot'),
+  // Sofia B5
+  sofiab5ProjectPriceNumber: document.querySelector('.project-numbers-price-number-sofia-b5'),
+  sofiab5ProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-sofia-b5'),
+  sofiab5ProjectAssetsNumber: document.querySelector('.project-numbers-assets-number-sofia-b5'),
+  sofiab5ProjectStoresNumber: document.querySelector('.project-numbers-stores-number-sofia-b5'),
+  sofiab5ProjectBuiltAreaNumber: document.querySelector('.project-numbers-built-area-number-sofia-b5'),
+  // Samokov
+  samokovProjectAreaNumber: document.querySelector('.project-numbers-area-number-samokov'),
 };
 
 export const baseDevUrl = 'http://127.0.0.1:8000/';

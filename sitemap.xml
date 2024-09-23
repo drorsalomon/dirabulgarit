@@ -1,97 +1,379 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9 https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
 <url>
-  <loc>https://www.dirabulgarit.com/</loc>
-  <lastmod>2024-07-10T08:47:14+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://www.dirabulgarit.com/</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.dirabulgarit.com/pricing</loc>
-  <lastmod>2024-07-10T08:47:14+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.dirabulgarit.com/pricing</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.dirabulgarit.com/blog</loc>
-  <lastmod>2024-07-10T08:47:14+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.dirabulgarit.com/about</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.dirabulgarit.com/about</loc>
-  <lastmod>2024-07-10T08:47:14+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.dirabulgarit.com/invest</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.dirabulgarit.com/invest</loc>
-  <lastmod>2024-07-10T08:47:14+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.dirabulgarit.com/q&a</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.dirabulgarit.com/q&amp;a</loc>
-  <lastmod>2024-07-10T08:47:14+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.dirabulgarit.com/search</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.dirabulgarit.com/search</loc>
-  <lastmod>2024-07-10T08:47:14+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.dirabulgarit.com/asset/attractive-commercial-premises-in-the-heart-of-burgas</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.dirabulgarit.com/project/atlantis-aria-2</loc>
-  <lastmod>2024-07-10T08:47:14+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.dirabulgarit.com/asset/A-modern-two-room-apartment-in-the-Atlantis-Aria-3-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.dirabulgarit.com/project/atlantis-aria-3</loc>
-  <lastmod>2024-07-10T08:47:14+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.dirabulgarit.com/asset/A-modern-two-room-apartment-with-a-private-garden-in-the-Atlantis-Aria-3-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.dirabulgarit.com/project/atlantis-euphoria</loc>
-  <lastmod>2024-07-10T08:47:14+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.dirabulgarit.com/asset/A-modern-three-room-apartment-in-the-Atlantis-Aria-3-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.dirabulgarit.com/project/atlantis-barcode</loc>
-  <lastmod>2024-07-10T08:47:14+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.dirabulgarit.com/asset/A-modern-three-room-apartment-with-a-private-garden-in-the-Atlantis-Aria-3-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.dirabulgarit.com/project/atlantis-l6</loc>
-  <lastmod>2024-07-10T08:47:14+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.dirabulgarit.com/asset/A-modern-four-room-apartment-in-the-Atlantis-Aria-3-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.dirabulgarit.com/contact-us</loc>
-  <lastmod>2024-07-10T08:47:14+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.dirabulgarit.com/asset/A-modern-four-room-apartment-with-a-private-garden-in-the-Atlantis-Aria-3-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.dirabulgarit.com/terms-of-service</loc>
-  <lastmod>2024-07-10T08:47:14+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.dirabulgarit.com/asset/New-two-room-apartment-in-the-Euphoria-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.dirabulgarit.com/privacy</loc>
-  <lastmod>2024-07-10T08:47:14+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.dirabulgarit.com/asset/New-three-room-apartment-in-the-Euphoria-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.dirabulgarit.com/accessibility</loc>
-  <lastmod>2024-07-10T08:47:14+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.dirabulgarit.com/asset/A-new-three-room-apartment-with-a-private-garden-in-the-Euphoria-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.dirabulgarit.com/site-map</loc>
-  <lastmod>2024-07-10T08:47:14+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.dirabulgarit.com/asset/A-new-four-room-apartment-in-the-Euphoria-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
 </url>
-
-
+<url>
+<loc>https://www.dirabulgarit.com/asset/A-luxurious-three-room-apartment-A12-in-the-Atlantis-Barcode-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/asset/Spacious-three-room-penthouse-B-901-in-the-Atlantis-Aria-2-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/asset/Spacious-three-room-penthouse-B-901-in-the-Atlantis-Aria-2-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/asset/Spacious-four-room-penthouse-A-901-in-the-Atlantis-Aria-2-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/asset/Spacious-two-room-penthouse-C-903-in-the-Atlantis-Aria-2-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/asset/luxury-three-room-apartment-in-the-macon-residence-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/asset/luxury-three-rooms-apartment-in-millennium-2</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/asset/spacious-two-rooms-apartment-in-millennium-2</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/asset/A-spacious-apartment-with-a-beautiful-view-in-royal-sun-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/asset/A-classic-three-room-apartment-in-the-JAdore-Secret-Garden-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/asset/A-classic-two-room-apartment-in-the-JAdore-Secret-Garden-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/asset/A-classic-studio-apartment-in-the-JAdore-Secret-Garden-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/asset/A-completely-renovated-2-room-apartment-with-a-modern-and-pleasant-design-in-Saint-Vlas</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/asset/Apartment-furnished-in-a-modern-style-in-the-Venera-Palace-complex</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/asset/Apartment-with-a-large-balcony-in-the-prestigious-Sweet-Homes-complex</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/asset/first-row-Closed-complex-with-spa-and-gym</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/asset/A-spacious-two-room-apartment-in-the-Atlantis-Resort-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/asset/A-spacious-studio-apartment-in-the-Atlantis-Resort-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/asset/comfy-two-room-apartment-in-Vinyards-Resort-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/asset/comfy-three-rooms-apartment-in-Vila-Aria-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/asset/comfy-studio-apartment-in-Vila-Aria-project</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/project/atlantis-aria-2</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/project/atlantis-aria-3</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/project/atlantis-euphoria</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/project/atlantis-barcode</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/commercial/camelot-entertainment-center</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/commercial/varsano-chic-apartments</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/commercial/samokov</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/apartments-for-sale-in-banesko-bulgaria</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/apartments-for-sale-in-varna-bulgaria</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/apartments-for-sale-in-sofia-bulgaria</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/real-estate-investments-in-europe</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/villas-for-sale-in-bulgaria</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/real-estate-investments-in-bulgaria</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/The-reasons-for-Bulgarias-popularity-among-Israeli-property-buyers</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/Residence-permit-for-investment-in-Bulgaria-2024</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/Estimating-the-cost-of-living-in-Bulgaria-a-detailed-guide</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/apartments-for-sale-in-burgas-bulgaria</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/real-estate-investments-abroad</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/Embrace-Bulgaria-a-comprehensive-look-at-the-quality-of-life-in-the-country</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/Property-price-analysis-in-Bulgaria-in-2024</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/The-best-places-to-live-in-Bulgaria</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/apartments-for-sale-in-sunny-beach-bulgaria</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/Obtaining-a-residence-permit-status-in-Bulgaria-for-citizens-of-the-European-Union</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/How-to-pay-bills-in-Bulgaria</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/What-type-of-property-should-you-invest-in-Bulgaria</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/Maintenance-fees-for-complexes-in-Bulgaria</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/How-much-does-it-cost-to-maintain-a-property-in-Bulgaria</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/Obtaining-Bulgarian-citizenship-what-are-the-advantages</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/How-to-calculate-the-area-of-an-apartment-in-Bulgaria</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/blog/real-estate-opportunities-abroad</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/contact-us</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/terms-of-service</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.70</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/privacy</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.70</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/accessibility</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.70</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/site-map</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.70</priority>
+</url>
+<url>
+<loc>https://www.dirabulgarit.com/webinar</loc>
+<lastmod>2024-09-18T11:43:10+00:00</lastmod>
+<priority>0.70</priority>
+</url>
 </urlset>

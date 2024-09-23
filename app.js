@@ -14,6 +14,7 @@ const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const viewRouter = require('./routes/viewRoutes');
 const assetRouter = require('./routes/assetRoutes');
+const userRouter = require('./routes/userRoutes');
 const projectRouter = require('./routes/projectRoutes');
 const commercialRouter = require('./routes/commercialRoutes');
 const landingRouter = require('./routes/landingRoutes');
@@ -153,6 +154,7 @@ app.post('/select-language', (req, res) => {
 // Hebrew
 app.use('/', viewRouter);
 app.use('/asset', assetRouter);
+app.use('/user', userRouter);
 app.use('/project', projectRouter);
 app.use('/commercial', commercialRouter);
 app.use('/blog', blogRouter);

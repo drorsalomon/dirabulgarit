@@ -35,6 +35,12 @@
   &.project-main-image-col-camelot {
     @include projectBackgroundImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155260-camelot-20.webp');
   }
+  &.project-main-image-col-sofia-b5 {
+    @include projectBackgroundImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-b4-images/1726409077363-sofia-b5-building-4.webp');
+  }
+  &.project-main-image-col-samokov {
+    @include projectBackgroundImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/samokov-images/1727012351222-samokov-development-1.webp');
+  }
 }
 
 .project-main-image-headline {
@@ -53,6 +59,14 @@
   }
   &.project-main-image-headline-camelot {
     @include projectHeadline(50%);
+    font-size: $h2;
+  }
+  &.project-main-image-headline-sofia-b5 {
+    @include projectHeadline(43%);
+    font-size: $h2;
+  }
+  &.project-main-image-headline-samokov {
+    @include projectHeadline(46%);
     font-size: $h2;
   }
 }
@@ -124,6 +138,11 @@
   border-radius: 0.5rem;
 }
 
+.project-details-img-sofia-b5 {
+  height: 30rem;
+  width: 20rem;
+}
+
 .project-amenities-icon {
   height: 10rem;
   margin-bottom: 1rem;
@@ -166,6 +185,20 @@
   }
   &.project-mid-image-container-camelot {
     @include projectMiddleImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155348-camelot-48.webp', 100% 28rem, 60rem);
+  }
+  &.project-mid-image-container-sofia-b5 {
+    @include projectMiddleImage(
+      'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-b4-images/1726409077338-sofia-b5-building-2.webp',
+      100% 15rem,
+      25rem
+    );
+  }
+  &.project-mid-image-container-samokov {
+    @include projectMiddleImage(
+      'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/samokov-images/1727012351227-samokov-development-2.webp',
+      100% 30rem,
+      40rem
+    );
   }
 }
 

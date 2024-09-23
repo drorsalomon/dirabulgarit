@@ -1,8 +1,15 @@
 extends base 
 
 block head
+    title=`${blog.blogTitle}`
+    meta(name="description" content=`${blog.metaDescription}`)
+    meta(name="robots" content="index, follow")
+    link(rel="canonical" href=`https://www.dirabulgarit.com/en/blog/${blog.slug}`)
+    link(rel="alternate" href=`https://www.dirabulgarit.com/en/blog/${blog.slug}` hreflang="en")
+    link(rel="alternate" href=`https://www.dirabulgarit.com/blog/${blog.slug}` hreflang="he")
+
     meta(property="og:title" content=`${blog.blogTitle}`)
-    meta(property="og:description" content=`${blog.sectionOneTexts[0]}`)
+    meta(property="og:description" content=`${blog.metaDescription}`)
     meta(property="og:image" content=`${blog.imgSrc}`)
     meta(property="og:image:width" content="1200")
     meta(property="og:image:height" content="630")
@@ -32,6 +39,10 @@ block content
                 if blog.sectionThreeTexts
                     each text in blog.sectionThreeTexts
                         div.blog-content-text!= text
+                if blog.midImgSrc
+                    div.blog-content-mid-image-container.text-center
+                        img.blog-content-mid-image(src=`${blog.midImgSrc}` alt=`${blog.midImgAlt}`)
+                    div.blog-content-mid-image-text!= blog.midImgText    
                 div.blog-section-separator          
                 if blog.sectionFourTitle     
                     h2.blog-content-textSectionTitle!= blog.sectionFourTitle
@@ -81,6 +92,78 @@ block content
                     each text in blog.sectionElevenTexts
                         div.blog-content-text!= text
                 div.blog-section-separator          
+                if blog.sectionTwelveTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionTwelveTitle
+                if blog.sectionTwelveTexts
+                    each text in blog.sectionTwelveTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionThirteenTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionThirteenTitle
+                if blog.sectionThirteenTexts
+                    each text in blog.sectionThirteenTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionFourteenTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionFourteenTitle
+                if blog.sectionFourteenTexts
+                    each text in blog.sectionFourteenTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionFifteenTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionFifteenTitle
+                if blog.sectionFifteenTexts
+                    each text in blog.sectionFifteenTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionSixteenTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionSixteenTitle
+                if blog.sectionSixteenTexts
+                    each text in blog.sectionSixteenTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionSeventeenTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionSeventeenTitle
+                if blog.sectionSeventeenTexts
+                    each text in blog.sectionSeventeenTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionEighteenTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionEighteenTitle
+                if blog.sectionEighteenTexts
+                    each text in blog.sectionEighteenTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionNineteenTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionNineteenTitle
+                if blog.sectionNineteenTexts
+                    each text in blog.sectionNineteenTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionTwentyTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionTwentyTitle
+                if blog.sectionTwentyTexts
+                    each text in blog.sectionTwentyTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionTwentyOneTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionTwentyOneTitle
+                if blog.sectionTwentyOneTexts
+                    each text in blog.sectionTwentyOneTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionTwentyTwoTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionTwentyTwoTitle
+                if blog.sectionTwentyTwoTexts
+                    each text in blog.sectionTwentyTwoTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionTwentyThreeTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionTwentyThreeTitle
+                if blog.sectionTwentyThreeTexts
+                    each text in blog.sectionTwentyThreeTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
                 if blog.listOne.listOneTitle
                     h2.blog-content-listTitle!= blog.listOne.listOneTitle
                 if blog.listOne.listOneTexts
@@ -98,7 +181,7 @@ block content
                 if blog.listThree.listThreeTexts
                     each text in blog.listThree.listThreeTexts  
                         div.blog-content-list-text!= `● ` + text 
-                div.blog-content-listTitle Dira Bulgarit was established with the aim of helping the Israeli investor find the most worthwhile properties throughout Bulgaria. On our site you will find thousands of properties - from studio apartments in resorts to luxury apartments of three and four rooms in modern projects built to the highest standards. Our team of experts is waiting for you, schedule a video meeting today at a time that is most convenient for you and we will meet you and answer any question so that you can find the most profitable real estate investments for you in Bulgaria.        
+                div.blog-content-listTitle Dira Bulgarit was established with the aim of helping the Israeli investor find the most worthwhile properties throughout Bulgaria. On our site you will find hundreds of properties - from studio apartments in resorts to luxury apartments of three and four rooms in modern projects built to the highest standards. Our team of experts is waiting for you, contact us today and we will answer any question you might have so that you can find the most profitable real estate investments for you in Bulgaria.        
             .col-10.text-center.py-4    
                     button.btn-cta.pricing-cta-btn.to-calendly-btn(aria-label='Go to contact us page') Contact Us
                     button.share-btn
