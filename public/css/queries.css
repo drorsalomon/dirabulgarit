@@ -72,9 +72,6 @@
   .about-partners-card {
     height: 62rem !important;
   }
-  .webinar-contact-us-top-container {
-    top: 64%;
-  }
 }
 @media only screen and (min-width: 576px) {
   .webinar-mainpage-container {
@@ -407,7 +404,7 @@
     top: 32%;
   }
   .webinar-contact-us-top-container {
-    top: 76%;
+    top: 69%;
   }
   .webinar-input-name,
   .webinar-input-phone,
@@ -420,9 +417,6 @@
   .alert {
     width: 70%;
     font-size: 1.6rem;
-  }
-  .webinar-contact-us-top-container {
-    top: 58%;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -813,7 +807,7 @@
     top: 35%;
   }
   .webinar-contact-us-top-container {
-    top: 62%;
+    top: 71%;
   }
   .webinar-contact-us-headline {
     font-size: 2rem;
@@ -1772,7 +1766,7 @@
     top: 38%;
   }
   .webinar-contact-us-top-container {
-    top: 67%;
+    top: 73%;
   }
   .webinar-contact-us-headline {
     font-size: 2.4rem;
@@ -1995,7 +1989,7 @@
     top: 33%;
   }
   .webinar-contact-us-top-container {
-    top: 65%;
+    top: 70%;
   }
   .webinar-main-text {
     font-size: 3.4rem;

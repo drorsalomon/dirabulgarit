@@ -2183,7 +2183,7 @@ a:hover {
   color: #2289ff;
 }
 
-.webinar-headline-col {
+.webinar-main-container {
   position: relative;
   text-align: center;
   padding: 0 !important;
@@ -2239,7 +2239,7 @@ a:hover {
 
 .webinar-contact-us-top-container {
   position: absolute;
-  top: 63%;
+  top: 71%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
