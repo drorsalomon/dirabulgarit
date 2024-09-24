@@ -34,7 +34,8 @@
 // X-Small
 @media only screen and (min-width: 360px) {
   // ***** Main page Webinar *****
-  .webinar-mainpage-text {
+  .webinar-mainpage-text,
+  .webinar-mainpage-text span {
     font-size: $h6;
   }
 
@@ -539,8 +540,9 @@
 // Medium
 @media only screen and (min-width: 768px) {
   // ***** Main page Webinar *****
-  .webinar-mainpage-text {
-    font-size: $h5;
+  .webinar-mainpage-text,
+  .webinar-mainpage-text span {
+    font-size: $h4;
   }
 
   // ***** Navbar *****
@@ -1556,11 +1558,6 @@
 
 // x-Large
 @media only screen and (min-width: 1200px) {
-  // ***** Main page Webinar *****
-  .webinar-mainpage-text {
-    font-size: $h4;
-  }
-
   // ***** Hero Video *****
   .hero-video-bg-video-text {
     font-size: $h7;

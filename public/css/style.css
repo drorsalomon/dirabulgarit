@@ -2761,7 +2761,7 @@ body {
 }
 
 .webinar-mainpage-text {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #324762;
   text-decoration: none;
   font-weight: 600;
@@ -2769,6 +2769,7 @@ body {
 
 .webinar-mainpage-text span {
   color: #cfa336;
+  font-size: 1.2rem;
 }
 
 .hero-video-bg-video-container {

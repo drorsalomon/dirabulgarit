@@ -22,7 +22,8 @@
   }
 }
 @media only screen and (min-width: 360px) {
-  .webinar-mainpage-text {
+  .webinar-mainpage-text,
+  .webinar-mainpage-text span {
     font-size: 1.6rem;
   }
   .en-hero-container {
@@ -462,8 +463,9 @@
   }
 }
 @media only screen and (min-width: 768px) {
-  .webinar-mainpage-text {
-    font-size: 2rem;
+  .webinar-mainpage-text,
+  .webinar-mainpage-text span {
+    font-size: 2.4rem;
   }
   .navbar-call-us-text-container {
     padding: 0.6rem 2rem;
@@ -1343,9 +1345,6 @@
   }
 }
 @media only screen and (min-width: 1200px) {
-  .webinar-mainpage-text {
-    font-size: 2.4rem;
-  }
   .hero-video-bg-video-text {
     font-size: 1.2rem;
   }
