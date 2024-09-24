@@ -2080,6 +2080,11 @@
 // xx-Large
 @media only screen and (min-width: 1400px) {
   // ***** Containers *****
+  .hero-container {
+    max-width: 200rem;
+    margin: auto !important;
+  }
+
   .mainpage-hot-assets-row,
   .mainpage-howitworks-container,
   .mainpage-rec-container,
