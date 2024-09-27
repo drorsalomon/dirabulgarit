@@ -1,15 +1,15 @@
 extends base 
 
 block head
-    title=`${asset.project}`
-    meta(name="description" content=`${asset.name}`)
+    title=`${asset.name}`
+    meta(name="description" content=`${asset.description.text[0]}`)
     meta(name="robots" content="index, follow")
     link(rel="canonical" href=`https://www.dirabulgarit.com/en/asset/${asset.slug}`)
     link(rel="alternate" href=`https://www.dirabulgarit.com/en/asset/${asset.slug}` hreflang="en")
     link(rel="alternate" href=`https://www.dirabulgarit.com/asset/${asset.slug}` hreflang="he")
 
-    meta(property="og:title" content=`${asset.project}`)
-    meta(property="og:description" content=`${asset.name}` )
+    meta(property="og:title" content=`${asset.name}`)
+    meta(property="og:description" content=`${asset.description.text[0]}` )
     meta(property="og:image" content=`${asset.mainImage}`)
     meta(property="og:image:width" content="1200")
     meta(property="og:image:height" content="630")
