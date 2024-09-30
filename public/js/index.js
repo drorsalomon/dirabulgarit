@@ -781,7 +781,7 @@ if (config.Elements.camelotProjectBuiltAreaNumber)
   );
 // Sofia B5
 if (config.Elements.sofiab5ProjectPriceNumber)
-  animation.animateCounter(config.Elements.sofiab5ProjectPriceNumber, new Intl.NumberFormat().format(2500), '€/\u{33A1}');
+  animation.animateCounter(config.Elements.sofiab5ProjectPriceNumber, new Intl.NumberFormat().format(2800), '€/\u{33A1}');
 if (config.Elements.sofiab5ProjectFloorsNumber) animation.animateCounter(config.Elements.sofiab5ProjectFloorsNumber, 3);
 if (config.Elements.sofiab5ProjectAssetsNumber) animation.animateCounter(config.Elements.sofiab5ProjectAssetsNumber, 3);
 if (config.Elements.sofiab5ProjectStoresNumber) animation.animateCounter(config.Elements.sofiab5ProjectStoresNumber, 2);
