@@ -1101,6 +1101,17 @@ a:hover {
   height: 60rem;
   width: 100%;
 }
+.project-main-image-col.project-main-image-col-atlas-azimuth {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412992-azimuth-project-10.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60rem;
+  width: 100%;
+}
 .project-main-image-col.project-main-image-col-camelot {
   position: relative;
   padding: 0 !important;
@@ -1158,6 +1169,17 @@ a:hover {
   font-size: 4.2rem;
 }
 .project-main-image-headline.project-main-image-headline-atlantis-barcode {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 4.2rem;
+}
+.project-main-image-headline.project-main-image-headline-atlas-azimuth {
   position: absolute;
   top: 50%;
   left: 40%;
@@ -1322,6 +1344,17 @@ a:hover {
   position: relative;
   padding: 0 !important;
   background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-images/1720087071323-atlantis-barcode-project-mid-image.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 60rem;
+  width: 100%;
+}
+.project-mid-image-container.project-mid-image-container-atlas-azimuth {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413055-azimuth-project-21.webp");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

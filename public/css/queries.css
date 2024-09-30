@@ -327,6 +327,17 @@
     color: #ffffff;
     font-size: 4.8rem;
   }
+  .project-main-image-headline.project-main-image-headline-atlas-azimuth {
+    position: absolute;
+    top: 50%;
+    left: 32%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 4.8rem;
+  }
   .project-main-image-headline.project-main-image-headline-camelot {
     position: absolute;
     top: 50%;
@@ -760,6 +771,16 @@
     position: absolute;
     top: 50%;
     left: 30%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .project-main-image-headline.project-main-image-headline-atlas-azimuth {
+    position: absolute;
+    top: 50%;
+    left: 25%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -1207,6 +1228,16 @@
     font-weight: 600;
     color: #ffffff;
   }
+  .project-main-image-headline.project-main-image-headline-atlas-azimuth {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
   .project-main-image-headline.project-main-image-headline-camelot {
     position: absolute;
     top: 50%;
@@ -1269,6 +1300,17 @@
     background-repeat: no-repeat;
     background-size: contain;
     height: 34rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-atlas-azimuth {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413055-azimuth-project-21.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 60rem;
+    height: 70rem;
     width: 100%;
   }
   .project-mid-image-container.project-mid-image-container-camelot {
@@ -1658,6 +1700,17 @@
     color: #ffffff;
     font-size: 10rem;
   }
+  .project-main-image-headline.project-main-image-headline-atlas-azimuth {
+    position: absolute;
+    top: 50%;
+    left: 31%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 10rem;
+  }
   .project-main-image-headline.project-main-image-headline-camelot {
     position: absolute;
     top: 50%;
@@ -1745,6 +1798,17 @@
     background-repeat: no-repeat;
     background-size: 120rem 70rem;
     height: 60rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-atlas-azimuth {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413055-azimuth-project-21.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 80rem;
+    height: 90rem;
     width: 100%;
   }
   .project-mid-image-container.project-mid-image-container-camelot {
@@ -1956,6 +2020,16 @@
     font-weight: 600;
     color: #ffffff;
   }
+  .project-main-image-headline.project-main-image-headline-atlas-azimuth {
+    position: absolute;
+    top: 50%;
+    left: 26%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
   .project-gallery-image {
     height: 25rem;
     width: 43rem;
@@ -1991,6 +2065,17 @@
     background-repeat: no-repeat;
     background-size: 155rem 80rem;
     height: 60rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-atlas-azimuth {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413055-azimuth-project-21.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 90rem;
+    height: 100rem;
     width: 100%;
   }
   .project-mid-image-container.project-mid-image-container-camelot {

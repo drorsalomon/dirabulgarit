@@ -749,6 +749,18 @@ if (config.Elements.abProjectAreaNumber)
     9634,
     JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
   );
+// Atlantis Barcode
+if (config.Elements.azimuthProjectBuildingsNumber) animation.animateCounter(config.Elements.azimuthProjectBuildingsNumber, 8);
+if (config.Elements.azimuthProjectCommercialNumber) animation.animateCounter(config.Elements.azimuthProjectCommercialNumber, 6);
+if (config.Elements.azimuthProjectFloorsNumber) animation.animateCounter(config.Elements.azimuthProjectFloorsNumber, 10);
+if (config.Elements.azimuthProjectApartmentsNumber) animation.animateCounter(config.Elements.azimuthProjectApartmentsNumber, 159);
+if (config.Elements.azimuthProjectParkingSpotsNumber) animation.animateCounter(config.Elements.azimuthProjectParkingSpotsNumber, 144);
+if (config.Elements.azimuthProjectAreaNumber)
+  animation.animateCounter(
+    config.Elements.azimuthProjectAreaNumber,
+    68000,
+    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
+  );
 // Camelot
 if (config.Elements.camelotProjectPriceNumber)
   animation.animateCounter(config.Elements.camelotProjectPriceNumber, new Intl.NumberFormat().format(2800000), '€');
@@ -769,14 +781,14 @@ if (config.Elements.camelotProjectBuiltAreaNumber)
   );
 // Sofia B5
 if (config.Elements.sofiab5ProjectPriceNumber)
-  animation.animateCounter(config.Elements.sofiab5ProjectPriceNumber, new Intl.NumberFormat().format(1250000), '€');
+  animation.animateCounter(config.Elements.sofiab5ProjectPriceNumber, new Intl.NumberFormat().format(2500), '€/\u{33A1}');
 if (config.Elements.sofiab5ProjectFloorsNumber) animation.animateCounter(config.Elements.sofiab5ProjectFloorsNumber, 3);
 if (config.Elements.sofiab5ProjectAssetsNumber) animation.animateCounter(config.Elements.sofiab5ProjectAssetsNumber, 3);
 if (config.Elements.sofiab5ProjectStoresNumber) animation.animateCounter(config.Elements.sofiab5ProjectStoresNumber, 2);
 if (config.Elements.sofiab5ProjectBuiltAreaNumber)
   animation.animateCounter(
     config.Elements.sofiab5ProjectBuiltAreaNumber,
-    253,
+    267,
     JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
   );
 // Samokov

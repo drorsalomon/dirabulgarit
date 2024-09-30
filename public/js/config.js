@@ -152,6 +152,13 @@ export const Elements = {
   abProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlantis-barcode'),
   abProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlantis-barcode'),
   abProjectAreaNumber: document.querySelector('.project-numbers-area-number-atlantis-barcode'),
+  // Atlas Azimuth
+  azimuthProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-atlas-azimuth'),
+  azimuthProjectCommercialNumber: document.querySelector('.project-numbers-commercial-number-atlas-azimuth'),
+  azimuthProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-atlas-azimuth'),
+  azimuthProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlas-azimuth'),
+  azimuthProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlas-azimuth'),
+  azimuthProjectAreaNumber: document.querySelector('.project-numbers-area-number-atlas-azimuth'),
   // Camelot
   camelotProjectPriceNumber: document.querySelector('.project-numbers-price-number-camelot'),
   camelotProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-camelot'),

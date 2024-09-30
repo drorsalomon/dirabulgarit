@@ -1,0 +1,221 @@
+extends ../base
+
+block head
+    title Atlas Azimuth
+    meta(name="description" content="גלו את פרויקט אטלס אזימוט במרכז בורגס, בולגריה. דירות מודרניות עם מתקנים יוקרתיים, כולל גן ילדים פרטי, חדר כושר, מגרשי טניס ואמפיתיאטרון. אידיאלי למשפחות ואנשי מקצוע המחפשים איכות חיים במיקום מרכזי.")
+    meta(name="robots" content="index, follow")
+    link(rel="canonical" href="https://www.dirabulgarit.com/project/atlas-azimuth")
+    link(rel="alternate" href="https://www.dirabulgarit.com/en/project/atlas-azimuth" hreflang="en")
+    link(rel="alternate" href="https://www.dirabulgarit.com/project/atlas-azimuth" hreflang="he")
+
+    meta(property="og:title" content="Atlas Azimuth")
+    meta(property="og:description" content="גלו את פרויקט אטלס אזימוט במרכז בורגס, בולגריה. דירות מודרניות עם מתקנים יוקרתיים, כולל גן ילדים פרטי, חדר כושר, מגרשי טניס ואמפיתיאטרון. אידיאלי למשפחות ואנשי מקצוע המחפשים איכות חיים במיקום מרכזי.")
+    meta(property="og:image" content="https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144895-atlantis-aria-3-3.webp")
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../_headLinksScripts
+
+block content 
+
+    .container-fluid.project-main-image-container(role="img" aria-labelledby="azimuthMainImageDescription")
+        span.visually-hidden(id="azimuthMainImageDescription") תמונה של בנייני המגורים בפרויקט אטלס אזימוט
+        .row.project-main-image-row
+            .col.project-main-image-col.project-main-image-col-atlas-azimuth
+                h1.project-main-image-headline.project-main-image-headline-atlas-azimuth Atlas Azimuth     
+
+    .container-fluid.project-gallery-container
+        .row.project-gallery-headline-row.text-center.mx-2
+            .col-12.project-gallery-headline-col.p-0    
+                h2.project-gallery-headline גלריה
+        .row.project-gallery-row.text-center.mx-2
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412930-azimuth-project-1.webp' alt='תמונה של הפרויקט אטלס אזימוט' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412962-azimuth-project-4.webp' alt='תמונה של הפרויקט אטלס אזימוט' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413004-azimuth-project-12.webp' alt='תמונה של הפרויקט אטלס אזימוט' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")  
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413017-azimuth-project-14.webp' alt='תמונה של הפרויקט אטלס אזימוט' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413041-azimuth-project-18.webp' alt='תמונה של הפרויקט אטלס אזימוט' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413046-azimuth-project-19.webp' alt='תמונה של הפרויקט אטלס אזימוט' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+
+    #projectModal.modal.fade.asset-gallery-modal.text-center(tabindex='-1' aria-labelledby='projectModalLabel' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered
+            .asset-gallery-modal-content.modal-content
+                .row.d-flex
+                    .col-6.align-content-center
+                        div.text-start.px-4
+                            div.asset-gallery-img-text Atlas Azimuth
+                    .col-6
+                        div.text-end.p-3
+                            button.btn-close.asset-gallery-modal-close-btn.p-2.my-auto(type='button' data-bs-dismiss='modal' aria-label='Close')
+                #projectCarousel.carousel.slide(data-bs-touch='true' data-bs-interval='30000' data-bs-ride='carousel')
+                    .carousel-inner.asset-modal-carousel-inner
+                        .carousel-item.asset-gallery-carousel-item.align-content-center.active
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412930-azimuth-project-1.webp' alt='תמונה של הפרויקט אטלס אזימוט') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412936-azimuth-project-2.webp' alt='תמונה של הפרויקט אטלס אזימוט') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412955-azimuth-project-3.webp' alt='תמונה של הפרויקט אטלס אזימוט') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412962-azimuth-project-4.webp' alt='תמונה של הפרויקט אטלס אזימוט') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412967-azimuth-project-5.webp' alt='תמונה של הפרויקט אטלס אזימוט') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412973-azimuth-project-6.webp' alt='תמונה של הפרויקט אטלס אזימוט') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412979-azimuth-project-7.webp' alt='תמונה של הפרויקט אטלס אזימוט') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412983-azimuth-project-8.webp' alt='תמונה של הפרויקט אטלס אזימוט') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412988-azimuth-project-9.webp' alt='תמונה של הפרויקט אטלס אזימוט') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412998-azimuth-project-11.webp' alt='תמונה של הפרויקט אטלס אזימוט') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413004-azimuth-project-12.webp' alt='תמונה של הפרויקט אטלס אזימוט') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413011-azimuth-project-13.webp' alt='תמונה של הפרויקט אטלס אזימוט') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413017-azimuth-project-14.webp' alt='תמונה של הפרויקט אטלס אזימוט') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413023-azimuth-project-15.webp' alt='תמונה של הפרויקט אטלס אזימוט') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413031-azimuth-project-16.webp' alt='תמונה של הפרויקט אטלס אזימוט') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413037-azimuth-project-17.webp' alt='תמונה של הפרויקט אטלס אזימוט') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413041-azimuth-project-18.webp' alt='תמונה של הפרויקט אטלס אזימוט') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413046-azimuth-project-19.webp' alt='תמונה של הפרויקט אטלס אזימוט') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413051-azimuth-project-20.webp' alt='תמונה של הפרויקט אטלס אזימוט') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413055-azimuth-project-21.webp' alt='תמונה של הפרויקט אטלס אזימוט') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413062-azimuth-project-22.webp' alt='תמונה של הפרויקט אטלס אזימוט') 
+                    button.carousel-control-prev(type='button' data-bs-target='#projectCarousel' data-bs-slide='prev')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-prev-icon.asset-gallery-carousel-prev-icon(aria-hidden='true')
+                    button.carousel-control-next(type='button' data-bs-target='#projectCarousel' data-bs-slide='next')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-next-icon.asset-gallery-carousel-next-icon(aria-hidden='true')        
+    
+    .container-fluid.project-numbers-container
+        .row.project-numbers-row.text-end.justify-content-center.mx-5.flex-md-row-reverse
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-buildings-number.project-numbers-buildings-number-atlas-azimuth          
+                div.project-numbers-text בניינים        
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-buildings-number.project-numbers-commercial-number-atlas-azimuth          
+                div.project-numbers-text שטחים מסחריים        
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-floors-number.project-numbers-floors-number-atlas-azimuth          
+                div.project-numbers-text קומות        
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-apartments-number.project-numbers-apartments-number-atlas-azimuth         
+                div.project-numbers-text דירות
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-parking-spots-number.project-numbers-parking-spots-number-atlas-azimuth         
+                div.project-numbers-text חניות
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-parking-spots-number.project-numbers-area-number-atlas-azimuth(dir='rtl')    
+                div.project-numbers-text שטח
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-start-number 2025         
+                div.project-numbers-text תחילת בנייה
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-start-number 2028         
+                div.project-numbers-text סיום בנייה
+    
+    .container-fluid.project-details-container
+        .row.project-details-row.text-end.mx-5.justify-content-center
+            .col-12.project-details-headline-col.p-0.text-center
+                h2.project-details-headline(dir='rtl') פרויקט Atlas Azimuth בבורגס – דירות למכירה במתחם מגורים יוקרתי
+            .col-10.project-details-headline-col.p-0.text-end
+                div.project-details-text(dir='rtl') פרויקט Atlas Azimuth הוא מתחם מגורים אולטרה-מודרני במרכז העיר בורגס, המיועד לאנשים שמחפשים איכות חיים גבוהה במיקום מרכזי. הפרויקט מציע שילוב מושלם של נוחות, שירותים מתקדמים ועיצוב עכשווי, תוך שמירה על גישה נוחה לכל הנקודות החשובות בעיר. מתחם  Atlas Azimuth  ממוקם במרחק הליכה קצרה מהאוניברסיטה לרפואה, קניונים, מרכזי בריאות, פארקים רחבי ידיים ודרכי תחבורה ראשיות – מה שהופך אותו לבחירה אידיאלית עבור משפחות, אנשי מקצוע וסטודנטים.
+                h3.project-details-sub-headline(dir='rtl') תכנון מודרני ושירותים מתקדמים
+                div.project-details-text(dir='rtl') מתחם Atlas Azimuth לא רק מספק דירות מרווחות ומעוצבות, אלא גם כולל מגוון שירותים מתקדמים שנועדו להעניק לדיירים חוויית מגורים ברמה הגבוהה ביותר. הפרויקט יכלול גן ילדים פרטי לתושבים, בית קפה מעוצב, סופרמרקט עם כל המוצרים הנחוצים לבית, בית מלון לאורחים, חדר כושר מאובזר, מגרשי ספורט, פארקים רחבים ומתקנים ציבוריים. כל אלה ישולבו בתכנון אדריכלי מתקדם, תוך מתן דגש על סביבה ירוקה ומטופחת.
+                div.project-details-text(dir='rtl') המתחם כולו תוכנן כמתחם סגור, שיספק לדיירים ולשוכרים ביטחון מלא ותחושת פרטיות. הכניסות לבניינים יהיו מבוקרות, והדיירים יוכלו ליהנות משטחים משותפים מעוצבים ואזורי פנאי שיאפשרו מנוחה ושגרת חיים נוחה ומפנקת.
+                h3.project-details-sub-headline(dir='rtl') מתקני ספורט ופנאי – חווית מגורים שלא תרצו לעזוב
+                div.project-details-text(dir='rtl') אחד היתרונות הבולטים של פרויקט Atlas Azimuth הוא מגוון מתקני הספורט והפנאי שבו, המעניקים לדיירים אפשרויות לפעילות גופנית ובילוי בכל ימות השנה. במתחם ייבנו חדר כושר חיצוני מאובזר, מגרש כדורגל מקצועי, ומגרשי טניס עם ריצוף ותאורה איכותיים, מה שיאפשר אימונים ומשחקים גם בשעות הערב המאוחרות. בנוסף, המתחם מציע אזורי ספורט לשימוש אישי וקבוצתי, מה שמאפשר לתושבים להישאר פעילים ולשמור על אורח חיים בריא בסביבה נוחה ונגישה.
+                div.project-detail-img-container.d-flex.justify-content-center   
+                    img.project-details-img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413069-azimuth-project-map.webp' alt='תרשים של בנייני הפרויקט אטלס אזימוט')
+                div.project-details-text.text-center(dir='rtl') <i>בנייני הפרויקט אטלאנטיס אזימוט</i>
+                h3.project-details-sub-headline(dir='rtl') פארקים ירוקים ושבילי הליכה
+                div.project-details-text(dir='rtl') הפרויקט שם דגש מיוחד על תכנון שטחים ירוקים ופינות נוי. דיירי מתחם Atlas Azimuth ייהנו מגישה ישירה לפארקים רחבי ידיים, שבילי הליכה מוארים, מדשאות ירוקות ומתקנים לילדים המעודדים פעילות גופנית ובילוי בטבע. בין הפארקים שבמתחם יוקם גם שביל הליכה מפותל, בו תוכלו לטייל בשעות הערב או לרוץ בבקרים המוקדמים.     
+                div.project-details-text(dir='rtl') במרכז המתחם תוקם מראת מים מרהיבה, שתעניק תחושת שלווה ורוגע למבקרים ותהווה מוקד משיכה נוסף לפעילויות משפחתיות או מפגשים חברתיים. בנוסף, במתחם ייבנה אמפיתיאטרון חדיש שישמש לאירועים ציבוריים, קונצרטים, והצגות תרבות, ויהפוך את האזור למרכז חיים פעיל ושוקק.      
+                h3.project-details-sub-headline(dir='rtl') מיקום אסטרטגי ונגישות גבוהה
+                div.project-details-text(dir='rtl') אחד היתרונות הבולטים של רובע "אזימוט" בבורגס הוא המיקום האסטרטגי שלו במרכז העיר, שמאפשר גישה נוחה לכל השירותים העירוניים הבסיסיים. המתחם ממוקם בסמוך לדרכי תחבורה ראשיות, מה שמקל על הגישה ממנו אל שאר חלקי העיר ובחזרה. דיירי המתחם ייהנו מקרבה לקניונים, מרכזי בריאות, מוסדות חינוך מובילים, ושירותים ציבוריים נוספים – כולם במרחק הליכה או נסיעה קצרה.  
+                h3.project-details-sub-headline(dir='rtl') עיצוב פנים יוקרתי ודירות מרווחות
+                div.project-details-text(dir='rtl') הדירות בפרויקט Atlas Azimuth מעוצבות תוך מתן תשומת לב לפרטים הקטנים ביותר, והן משלבות אלמנטים מודרניים לצד נוחות מרבית. בכל דירה תמצאו חללים פתוחים ומוארים, תקרות גבוהות, מרפסות מרווחות וחלונות רחבי ידיים המאפשרים כניסה מרבית של אור טבעי. תכנון הפנים כולל חומרי גלם איכותיים, עיצובים עדכניים ופריסות פונקציונליות המעניקים לכל דירה תחושת ביתיות ונעימות. הדירות זמינות בגדלים ובפריסות מגוונות, כך שכל משפחה או משקיע יוכל למצוא את הדירה המתאימה לצרכיו ולסגנון חייו. 
+                h3.project-details-sub-headline(dir='rtl') פתרונות תחבורה וחניה
+                div.project-details-text(dir='rtl') כחלק מהתשתיות המתקדמות שמציע פרויקט Atlas Azimuth, המתחם כולל גם חניונים מקורים לדיירים ולאורחים, כך שתוכלו ליהנות מגישה נוחה ובטוחה לביתכם בכל שעות היום. בנוסף, בקרבת המתחם קיימות תחנות אוטובוס, נתיבים לאופניים וגישה מהירה לכבישים ראשיים. 
+                h3.project-details-sub-headline(dir='rtl') תחילת הבנייה והזדמנות להשקעה
+                div.project-details-text(dir='rtl') תחילת הבנייה צפויה בתחילת 2025 והיא תימשך כ-36 חודשים. זוהי הזדמנות מצוינת למשקיעים ומשפחות המעוניינים להבטיח לעצמם מקום במתחם המגורים החדש והמתקדם ביותר בבורגס. אל תפספסו את האפשרות להיות חלק ממתחם המשלב מגורים יוקרתיים, שירותים קהילתיים ואיכות חיים גבוהה – בואו להיות חלק מקהילה צומחת ומשגשגת בלב העיר בורגס. 
+                div.project-details-text(dir='rtl') פרויקט Atlas Azimuth – המקום בו הנוחות, הפאר ואיכות החיים נפגשים. הזמינו את הדירה החדשה שלכם עכשיו! 
+          
+    .container-fluid.project-amenities-container
+        .row.project-amenities-headline-row.text-center.mx-5
+            .col-12.project-amenities-headline-col.p-0
+                h2.project-amenities-headline שירותים בפרויקט
+        .row.project-amenities-row.text-end.mx-5
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/shopping-project-icon.svg' alt='אייקון של שקיות קניות')
+                div.project-amenities-text מרכזי קניות    
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/bakery-project-icon.svg' alt='אייקון של קאפקייק')
+                div.project-amenities-text מאפייה
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/dog-park-project-icon.svg' alt='אייקון של כלב')
+                div.project-amenities-text גינות כלבים  
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/dumbbell-project-icon.svg' alt='אייקון של משקולת')
+                div.project-amenities-text(dir='rtl') מתחם כושר 
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/football-project-icon.svg' alt='אייקון של כדור כדורגל')
+                div.project-amenities-text מגרש כדורגל
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/medical-center-project-icon.svg' alt='אייקון של תיק עזרה ראשונה')
+                div.project-amenities-text מרכז רפואי
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/parking-project-icon.svg' alt='אייקון של חנייה')
+                div.project-amenities-text חניות מקורות         
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/playground-project-icon.svg' alt='אייקון של מגרש משחקים לילדים')
+                div.project-amenities-text מגרשי משחקים לילדים           
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/restrurant-project-icon.svg' alt='אייקון של מסעדה')
+                div.project-amenities-text מסעדות             
+
+    .container-fluid.project-mid-image-container.project-mid-image-container-atlas-azimuth(role="img" aria-labelledby="azimuthMidImageDescription")
+        span.visually-hidden(id="azimuthMidImageDescription") תמונה של הפרויקט אטלס אזימוט
+    
+    .container-fluid.project-map-container
+        .row.project-map-row.text-center.mx-2.justify-content-center 
+            .col-12.project-map-healine-col
+                h2.project-map-headline מיקום
+            .col-12.col-md-10.project-map-col
+                div.project-map(id='map' data-long=27.4472107812304 data-lat=42.53043823399184 data-title='Atlas Azimuth') 
+
+    .container-fluid.project-video-container
+        .row.asset-video-row.mx-3.justify-content-center 
+            .col-12.col-md-10.asset-video-col.text-center(role="region" aria-labelledby="assetVideoDescription")
+                iframe(src='https://www.youtube.com/embed/Giy-uwPVotU?si=I6IjuH8bj9B0Gdet' frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen).asset-video                    
+            span.visually-hidden(id="assetVideoDescription") וידאו המציג את פרויקט אטלס אזימוט              
+    
+    .container-fluid.project-assets-container
+        .row.asset-related-assets-row.justify-content-center.mx-5.text-center
+            .col-12.project-assets-headline-col
+                h2.project-assets-headline נכסים זמינים בפרויקט
+            each asset in projectAssets
+                include ../_assetsCards
+        .row.mobile-asset-related-assets-row.justify-content-center.mx-1.text-center
+            .col-12.project-assets-headline-col
+                h2.project-assets-headline נכסים זמינים בפרויקט
+            each asset in projectAssets
+                include ../_mobileAssetsCards    
+
+    include ../_contactUsFixed  
+    include ../_contactUsFixedMobile

@@ -426,6 +426,10 @@
       @include projectHeadline(38%);
       font-size: $h1;
     }
+    &.project-main-image-headline-atlas-azimuth {
+      @include projectHeadline(32%);
+      font-size: $h1;
+    }
     &.project-main-image-headline-camelot {
       @include projectHeadline(38%);
       font-size: $h1;
@@ -920,6 +924,9 @@
     }
     &.project-main-image-headline-atlantis-barcode {
       @include projectHeadline(30%);
+    }
+    &.project-main-image-headline-atlas-azimuth {
+      @include projectHeadline(25%);
     }
   }
 
@@ -1442,6 +1449,9 @@
     &.project-main-image-headline-atlantis-barcode {
       @include projectHeadline(23%);
     }
+    &.project-main-image-headline-atlas-azimuth {
+      @include projectHeadline(20%);
+    }
     &.project-main-image-headline-camelot {
       @include projectHeadline(36%);
     }
@@ -1481,6 +1491,13 @@
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982831-atlantis-aria-3-project.jpg',
         contain,
         34rem
+      );
+    }
+    &.project-mid-image-container-atlas-azimuth {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413055-azimuth-project-21.webp',
+        100% 60rem,
+        70rem
       );
     }
     &.project-mid-image-container-camelot {
@@ -1939,6 +1956,10 @@
       @include projectHeadline(37%);
       font-size: $h0;
     }
+    &.project-main-image-headline-atlas-azimuth {
+      @include projectHeadline(31%);
+      font-size: $h0;
+    }
     &.project-main-image-headline-camelot {
       @include projectHeadline(36%);
       font-size: $h0;
@@ -1995,6 +2016,13 @@
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-images/1720087071323-atlantis-barcode-project-mid-image.webp',
         120rem 70rem,
         60rem
+      );
+    }
+    &.project-mid-image-container-atlas-azimuth {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413055-azimuth-project-21.webp',
+        100% 80rem,
+        90rem
       );
     }
     &.project-mid-image-container-camelot {
@@ -2223,6 +2251,9 @@
     &.project-main-image-headline-atlantis-barcode {
       @include projectHeadline(33%);
     }
+    &.project-main-image-headline-atlas-azimuth {
+      @include projectHeadline(26%);
+    }
   }
 
   .project-gallery-image {
@@ -2250,6 +2281,13 @@
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-images/1720087071323-atlantis-barcode-project-mid-image.webp',
         155rem 80rem,
         60rem
+      );
+    }
+    &.project-mid-image-container-atlas-azimuth {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413055-azimuth-project-21.webp',
+        100% 90rem,
+        100rem
       );
     }
     &.project-mid-image-container-camelot {
