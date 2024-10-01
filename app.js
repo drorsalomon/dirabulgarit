@@ -81,6 +81,7 @@ app.use(
           'https://www.googletagmanager.com',
           'https://www.google-analytics.com',
           'https://ssl.google-analytics.com',
+          'https://analytics.google.com',
         ],
         upgradeInsecureRequests: [],
       },
