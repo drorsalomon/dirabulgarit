@@ -71,14 +71,17 @@ exports.getAsset = catchAsync(async (req, res, next) => {
   if (!asset) return next(new AppError('Could not find the requested asset!', 404));
 
   let sortOptions = { project: 1, price: 1 };
-  const hotAssets =
-    res.locals.lang === 'he' ? await Asset.find({ hotAsset: true }).sort(sortOptions) : await enAsset.find({ hotAsset: true }).sort(sortOptions);
-  if (!hotAssets) return next(new AppError('Could not find the requested hot assets!', 404));
+  const priceRange = { $gte: asset.price - 40000, $lte: asset.price + 40000 };
+  const filterCriteria = { price: priceRange, city: asset.city, sold: false };
+
+  const relatedAssets =
+    res.locals.lang === 'he' ? await Asset.find(filterCriteria).sort(sortOptions).limit(12) : await enAsset.find(filterCriteria).sort(sortOptions).limit(12);
+  if (!relatedAssets) return next(new AppError('Could not find the requested hot assets!', 404));
 
   res.status(200).render(`${res.locals.lang}/asset`, {
     title: 'Asset Page',
     asset,
-    hotAssets,
+    relatedAssets,
   });
 });
 

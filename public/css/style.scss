@@ -473,12 +473,12 @@ body {
 // ***** Hero *****
 
 .hero-container {
-  // background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.6), rgba(26, 113, 212, 0.6)), url('/img/hero-burgas.webp');
-  // background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.7)), to(rgba(26, 113, 212, 0.7))), url('/img/hero-burgas.webp');
-  // background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.7), rgba(26, 113, 212, 0.7)), url('/img/hero-burgas.webp');
-  // background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.7), rgba(26, 113, 212, 0.7)), url('/img/hero-burgas.webp');
-  // background-size: cover;
-  // background-position: top;
+  background-image: -o-linear-gradient(left top, rgba(36, 57, 81, 0.6), rgba(36, 57, 81, 0.6)), url('/img/hero-burgas.webp');
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(36, 57, 81, 0.6)), to(rgba(36, 57, 81, 0.6))), url('/img/hero-burgas.webp');
+  background-image: -o-linear-gradient(left top, rgba(36, 57, 81, 0.6), rgba(36, 57, 81, 0.6)), url('/img/hero-burgas.webp');
+  background-image: linear-gradient(to right bottom, rgba(36, 57, 81, 0.6), rgba(36, 57, 81, 0.6)), url('/img/hero-burgas.webp');
+  background-size: cover;
+  background-position: center;
   position: relative;
   height: 60rem;
   padding: 0 !important;
@@ -947,20 +947,19 @@ input[type='text']::placeholder {
 // ***** Main Page About Us *****
 
 .mainpage-about-container {
-  background-image: -o-linear-gradient(left top, rgba(34, 137, 255, 0.6), rgba(26, 113, 212, 0.6)), url('/img/hero-burgas.webp');
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(34, 137, 255, 0.6)), to(rgba(26, 113, 212, 0.6))), url('/img/hero-burgas.webp');
-  background-image: linear-gradient(to right bottom, rgba(34, 137, 255, 0.6), rgba(26, 113, 212, 0.6)), url('/img/hero-burgas.webp');
-  background-size: cover;
-  background-position: top;
   position: relative;
-  height: 160rem;
+  height: 70rem;
   -webkit-clip-path: polygon(0 7%, 100% 0, 100% 90%, 0 97%);
   clip-path: polygon(0 7%, 100% 0, 100% 90%, 0 97%);
 }
 
+.en-mainpage-about-container {
+  height: 81rem;
+}
+
 .mainpage-about-text-col {
   position: absolute;
-  top: 30%;
+  top: 46%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -969,15 +968,19 @@ input[type='text']::placeholder {
   padding: 0 !important;
 }
 
-.mainpage-about-images-col {
+.mainpage-about-button-col {
   position: absolute;
-  top: 67%;
+  top: 81%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
   padding: 0 !important;
+}
+
+.en-mainpage-about-button-col {
+  top: 83%;
 }
 
 .mainpage-about-tag {

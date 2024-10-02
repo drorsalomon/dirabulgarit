@@ -229,15 +229,15 @@
 
   // ***** Main Page About *****
   .mainpage-about-container {
-    height: 85rem;
+    height: 55rem;
+  }
+
+  .en-mainpage-about-container {
+    height: 61rem;
   }
 
   .mainpage-about-text-col {
-    top: 39%;
-  }
-
-  .mainpage-about-images-col {
-    top: 73%;
+    top: 45%;
   }
 
   .mainpage-about-headline {
@@ -619,15 +619,15 @@
 
   // ***** Main Page About *****
   .mainpage-about-container {
-    height: 100rem;
+    height: 65rem;
   }
 
-  .mainpage-about-text-col {
-    top: 39%;
+  .en-mainpage-about-container {
+    height: 80rem;
   }
 
-  .mainpage-about-images-col {
-    top: 75%;
+  .en-mainpage-about-button-col {
+    top: 78%;
   }
 
   .mainpage-about-tag {
@@ -1188,6 +1188,15 @@
     font-size: $h3;
   }
 
+  // ***** Main Page About *****
+  .en-mainpage-about-container {
+    height: 70rem;
+  }
+
+  .en-mainpage-about-button-col {
+    top: 80%;
+  }
+
   // ***** How it works *****
   // ***** Main Page rec *****
   // ***** Pricing *****
@@ -1743,6 +1752,7 @@
   // ***** Main Page Hero *****
   .hero-container {
     height: 55rem;
+    background-position: center;
   }
 
   .hero-video {
@@ -1772,24 +1782,6 @@
 
   .en-hero-contact-us-col {
     top: 125%;
-  }
-
-  // ***** Main Page About *****
-  .mainpage-about-container {
-    height: 105rem;
-  }
-
-  .mainpage-about-text-col {
-    top: 36%;
-  }
-
-  .mainpage-about-images-col {
-    top: 73%;
-  }
-
-  .mainpage-about-img {
-    width: 23rem;
-    height: 18rem;
   }
 
   // ***** Asset Card *****
@@ -2156,20 +2148,11 @@
 
   // ***** Main Page About *****
   .mainpage-about-container {
-    height: 100rem;
+    height: 60rem;
   }
 
   .mainpage-about-text-col {
-    top: 34%;
-  }
-
-  .mainpage-about-images-col {
-    top: 68%;
-  }
-
-  .mainpage-about-img {
-    width: 27rem;
-    height: 22rem;
+    top: 46%;
   }
 
   // ***** Reviews *****

@@ -16,22 +16,8 @@ block head
     include ../he/_headLinksScripts
 
 block content 
-   
-    //- .container-fluid.hero-video-container
-    //-     .row.hero-video-row.align-items-center.justify-content-center 
-    //-         .col.hero-video-col
-    //-             div.hero-video-bg-video-container(role="img" aria-labelledby="heroVideoDescription")
-    //-                 div.ratio.ratio-16x9
-    //-                     video(autoplay muted loop).hero-video
-    //-                         source(src='/videos/hero-video-720p.mp4' type='video/webm')
-    //-                 span.visually-hidden(id="heroVideoDescription") Video showing the seaside area in Sunny Beach, Burgas Bulgaria, the city promenade and the local water park
-    //-                 a(href='https://www.youtube.com/watch?v=8TkCc_ybpGU&t=360s' target="_blank").hero-video-bg-video-text Video by Viktoriia Lozovska
     
     .container-fluid.hero-container.en-hero-container(role="img" aria-labelledby="heroDescription")
-        div.hero-video-container
-            video(autoplay muted loop).hero-video
-                source(src='/videos/hero-video.webm' type='video/webm')
-            span.visually-hidden(id="heroDescription") Video showing Sunny Beach in Bulgaria
         .row.d-flex.align-items-center.justify-content-center                    
             .col-10.col-lg-8.hero-text-col.en-hero-text-col
                 .hero-border
@@ -83,21 +69,18 @@ block content
             each asset in hotAssets
                 include _mobileAssetsCards       
 
-    .container-fluid.mainpage-about-container.overflow-hidden(role="img" aria-labelledby="aboutUsImageDescription")
-        span.visually-hidden(id="aboutUsImageDescription") Image of houses located on an alcove of the black sea in Burgas
+    .container-fluid.mainpage-about-container.en-mainpage-about-container 
+        div.hero-video-container
+            video(autoplay muted loop).hero-video
+                source(src='/videos/hero-video.mp4' type='video/mp4')
+            span.visually-hidden(id="heroDescription") Video showing Sunny Beach in Bulgaria
         .row.mainpage-about-row.align-items-center
             .col-10.col-lg-8.mainpage-about-text-col
                 h2.mainpage-about-tag About Us
                 h3.mainpage-about-headline Dira Bulgarit - Israeli Real Estate in Bulgaria
                 div.mainpage-about-text A highly experienced professional team with one goal - to guide Israeli investors on the way to successful investments in the Bulgarian real estate market.
-            .col-10.col-lg-8.mainpage-about-images-col.my-md-5.my-lg-1
+            .col-10.col-lg-8.mainpage-about-button-col.en-mainpage-about-button-col.my-md-5.my-lg-1
                 .row.justify-content-center 
-                    .col-12.col-sm-4
-                        img.mainpage-about-img(src="/img/Seven-Rila-Lakes-Bulgaria.webp" alt="Seven rila lake in Bulgaria" loading="lazy")
-                    .col-12.col-sm-4
-                        img.mainpage-about-img(src="/img/sofia-flowers.webp" alt="A flower garden in Sofia Bulgaria" loading="lazy")
-                    .col-12.col-sm-4
-                        img.mainpage-about-img(src="/img/about-us-burgas.webp" alt="Burgas beach" loading="lazy")
                     .col-12.col-sm-4.my-4
                         button.btn-cta-white.to-about-btn Meet The Team   
 

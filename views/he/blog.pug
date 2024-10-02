@@ -26,10 +26,10 @@ block content
             .col-12.blog-cards-col 
                 each blog in blogsArray       
                     .card.blog-card(data-slug=`${blog.slug}`)
-                        .row.g-0.d-flex.align-items-lg-center
+                        .row.g-0
                             .col-md-4.d-flex
-                                img.blog-card-img.img-fluid(src=`${blog.imgSrc}` alt=`${blog.imgAlt}` loading="lazy")
-                            .col-md-8
+                                img.blog-card-img(src=`${blog.imgSrc}` alt=`${blog.imgAlt}` loading="lazy")
+                            .col-md-8.d-flex.align-items-lg-center
                                 .card-body
                                     h2.card-title.blog-card-title(dir='rtl')= blog.blogTitle
                                     div.blog-card-date= `${moment(blog.date).format('DD.MM.YYYY')}`

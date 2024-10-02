@@ -187,5 +187,17 @@ block content
                     button.share-btn
                         img.share-btn-icon(src='/img/icons/share-svgrepo-com-white.svg' alt='אייקון שיתוף דף') 
 
+    .container-fluid.asset-related-assets-container
+        .row.asset-related-assets-row.justify-content-center.mx-2
+            .col-10.asset-related-assets-headline-col
+                h2.asset-related-assets-headline.text-center נכסים חמים להשקעה
+            each asset in hotAssets
+                include _assetsCards
+        .row.mobile-asset-related-assets-row.justify-content-center.mx-2
+            .col-10.asset-related-assets-headline-col
+                h2.asset-related-assets-headline.text-center נכסים חמים להשקעה
+            each asset in hotAssets
+                include _mobileAssetsCards                      
+
     include _contactUsFixed  
     include _contactUsFixedMobile                    

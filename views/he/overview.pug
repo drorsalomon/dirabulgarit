@@ -16,15 +16,6 @@ block head
     include _headLinksScripts
 
 block content 
-    //- .container-fluid.hero-video-container
-    //-     .row.hero-video-row.align-items-center.justify-content-center 
-    //-         .col.hero-video-col
-    //-             div.hero-video-bg-video-container(role="img" aria-labelledby="heroVideoDescription")
-    //-                 div.ratio.ratio-16x9
-    //-                     video(autoplay muted loop).hero-video
-    //-                         source(src='/videos/hero-video-720p.mp4' type='video/webm')
-    //-                 span.visually-hidden(id="heroVideoDescription") וידאו שמראה את איזור חוף הים בסאני ביץ', בורגס בולגריה, את הטיילת בעיר ואת פארק המים המקומי           
-    //-                 a(href='https://www.youtube.com/watch?v=8TkCc_ybpGU&t=360s' target="_blank").hero-video-bg-video-text Video by Viktoriia Lozovska
     
     .container-fluid.webinar-mainpage-container
         .row.webinar-mainpage-row.justify-content-center
@@ -35,10 +26,6 @@ block content
                     | לחצו להרשמה ופרטים נוספים
     
     .container-fluid.hero-container(role="img" aria-labelledby="heroDescription")
-        div.hero-video-container
-            video(autoplay muted loop).hero-video
-                source(src='/videos/hero-video.webm' type='video/webm')
-            span.visually-hidden(id="heroDescription") וידאו שמראה את חוף הים של סאני ביץ' בבולגריה
         .row.d-flex.align-items-center.justify-content-center                    
             .col-10.col-lg-8.hero-text-col 
                 .hero-border
@@ -90,21 +77,18 @@ block content
             each asset in hotAssets
                 include _mobileAssetsCards              
 
-    .container-fluid.mainpage-about-container.overflow-hidden(role="img" aria-labelledby="aboutUsImageDescription")
-        span.visually-hidden(id="aboutUsImageDescription") תמונה של בתים שיושבים על מפרצון בשפת הים השחור בבורגס בולגריה
+    .container-fluid.mainpage-about-container
+        div.hero-video-container
+            video(autoplay muted loop preload="auto" playsinline controlsList="nodownload").hero-video
+                source(src='/videos/hero-video.mp4' type='video/mp4')
+            span.visually-hidden(id="heroDescription") וידאו שמראה את חוף הים של סאני ביץ' בבולגריה
         .row.mainpage-about-row.align-items-center
             .col-10.col-lg-8.mainpage-about-text-col
                 h2.mainpage-about-tag מי אנחנו
                 h3.mainpage-about-headline(dir='rtl') דירה בולגרית - נדל"ן ישראלי בבולגריה
-                div.mainpage-about-text(dir='rtl') צוות מקצועי עתיר ניסיון ששם לו מטרה אחת - ללוות משקיעים ישראלים בדרך להשקעות מוצלחות בשוק הנדל"ן הבולגרי. נהיה לצדכם משלב ההתעניינות ועד שלב קבלת המפתח.
-            .col-10.col-lg-8.mainpage-about-images-col 
+                div.mainpage-about-text(dir='rtl') צוות מקצועי ועתיר ניסיון ששם לו מטרה אחת - ללוות משקיעים ישראלים בדרך להשקעות מוצלחות בשוק הנדל"ן הבולגרי. נהיה לצדכם משלב ההתעניינות ועד שלב קבלת המפתח.
+            .col-10.col-lg-8.mainpage-about-button-col 
                 .row.justify-content-center 
-                    .col-12.col-sm-4
-                        img.mainpage-about-img(src="/img/Seven-Rila-Lakes-Bulgaria.webp" alt="אגם סוון רילה בבולגריה" loading="lazy")
-                    .col-12.col-sm-4
-                        img.mainpage-about-img(src="/img/sofia-flowers.webp" alt="גן פרחים בסופיה בולגריה" loading="lazy")
-                    .col-12.col-sm-4
-                        img.mainpage-about-img(src="/img/about-us-burgas.webp" alt="הים השחור בחוף בורגס" loading="lazy")
                     .col-12.col-sm-4.my-4
                         button.btn-cta-white.to-about-btn הכירו את הצוות                   
 
