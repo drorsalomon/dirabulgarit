@@ -69,11 +69,8 @@ block content
             each asset in hotAssets
                 include _mobileAssetsCards       
 
-    .container-fluid.mainpage-about-container.en-mainpage-about-container 
-        div.hero-video-container
-            video(autoplay muted loop).hero-video
-                source(src='/videos/hero-video.mp4' type='video/mp4')
-            span.visually-hidden(id="heroDescription") Video showing Sunny Beach in Bulgaria
+    .container-fluid.mainpage-about-container.overflow-hidden(role="img" aria-labelledby="aboutUsImageDescription")
+        span.visually-hidden(id="aboutUsImageDescription") Image of houses located on an alcove of the black sea in Burgas
         .row.mainpage-about-row.align-items-center
             .col-10.col-lg-8.mainpage-about-text-col
                 h2.mainpage-about-tag About Us

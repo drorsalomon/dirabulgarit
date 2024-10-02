@@ -471,9 +471,7 @@ body {
 }
 
 // ***** Hero *****
-
 .hero-container {
-  background-image: -o-linear-gradient(left top, rgba(36, 57, 81, 0.6), rgba(36, 57, 81, 0.6)), url('/img/hero-burgas.webp');
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(36, 57, 81, 0.6)), to(rgba(36, 57, 81, 0.6))), url('/img/hero-burgas.webp');
   background-image: -o-linear-gradient(left top, rgba(36, 57, 81, 0.6), rgba(36, 57, 81, 0.6)), url('/img/hero-burgas.webp');
   background-image: linear-gradient(to right bottom, rgba(36, 57, 81, 0.6), rgba(36, 57, 81, 0.6)), url('/img/hero-burgas.webp');
@@ -484,11 +482,6 @@ body {
   padding: 0 !important;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-}
-
-.hero-video {
-  transform: translateX(-70rem);
-  filter: brightness(65%);
 }
 
 .en-hero-container {
@@ -945,10 +938,14 @@ input[type='text']::placeholder {
 }
 
 // ***** Main Page About Us *****
-
 .mainpage-about-container {
+  background-image: -o-linear-gradient(left top, rgba(36, 57, 81, 0.6), rgba(36, 57, 81, 0.6)), url('/img/about-us-sozopol.webp');
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(36, 57, 81, 0.6)), to(rgba(36, 57, 81, 0.6))), url('/img/about-us-sozopol.webp');
+  background-image: linear-gradient(to right bottom, rgba(36, 57, 81, 0.6), rgba(36, 57, 81, 0.6)), url('/img/about-us-sozopol.webp');
+  background-size: cover;
+  background-position: center;
   position: relative;
-  height: 70rem;
+  height: 80rem;
   -webkit-clip-path: polygon(0 7%, 100% 0, 100% 90%, 0 97%);
   clip-path: polygon(0 7%, 100% 0, 100% 90%, 0 97%);
 }
