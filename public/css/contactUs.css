@@ -4,7 +4,7 @@
 
 .calendly-col {
   position: relative;
-  background-color: #2289ff !important;
+  background-color: #2078a9 !important;
   height: 165rem;
   border-radius: 1rem;
 }
@@ -40,7 +40,7 @@
   font-size: 1.2rem !important;
   text-align: right !important;
   color: #5c5e64 !important;
-  border: 1px solid #2289ff !important;
+  border: 1px solid #2078a9 !important;
   border-radius: 1rem !important;
   height: 4rem !important;
 }
@@ -49,7 +49,7 @@
   font-size: 1.6rem !important;
   text-align: right !important;
   color: #5c5e64 !important;
-  border: 1px solid #2289ff !important;
+  border: 1px solid #2078a9 !important;
 }
 
 .en-contact-us-textarea {
@@ -83,14 +83,14 @@
   width: 9rem !important;
   height: 3rem !important;
   background-color: #ffffff;
-  color: #2289ff;
+  color: #2078a9;
   border: none;
   -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
 }
 
 .calendly-agents-button {
-  color: #2289ff !important;
+  color: #2078a9 !important;
   background-color: #ffffff !important;
   width: 13rem;
   height: 4rem !important;

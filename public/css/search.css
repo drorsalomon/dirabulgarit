@@ -38,8 +38,8 @@
   font-size: 1.6rem;
   font-weight: 600;
   color: #ffffff;
-  background-color: #2289ff;
-  border-color: #2289ff;
+  background-color: #2078a9;
+  border-color: #2078a9;
   -webkit-box-shadow: rgba(34, 137, 255, 0.15) 0px 15px 40px 0px;
   box-shadow: rgba(34, 137, 255, 0.15) 0px 15px 40px 0px;
 }
@@ -90,9 +90,9 @@
   border-radius: 3rem !important;
   border: 1px solid currentColor !important;
   font-size: 1.6rem !important;
-  color: #2289ff !important;
+  color: #2078a9 !important;
   background-color: #ffffff !important;
-  border-color: #2289ff !important;
+  border-color: #2078a9 !important;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;

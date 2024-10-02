@@ -47,7 +47,7 @@
 .about-text-role {
   font-size: 2rem;
   font-weight: 400;
-  color: #2289ff;
+  color: #2078a9;
   margin-bottom: 1rem;
 }
 
@@ -73,7 +73,7 @@
 .about-partners-headline {
   font-size: 3.4rem;
   font-weight: 600;
-  color: #2289ff;
+  color: #2078a9;
 }
 
 .about-partners-card {
@@ -101,7 +101,7 @@
 }
 
 .about-partners-card-prof {
-  color: #2289ff !important;
+  color: #2078a9 !important;
   border-bottom: solid 1px #f7f7f7;
   padding-bottom: 1rem !important;
 }
@@ -120,5 +120,5 @@
 }
 
 .about-reviews-headline {
-  color: #2289ff !important;
+  color: #2078a9 !important;
 }/*# sourceMappingURL=about.css.map */

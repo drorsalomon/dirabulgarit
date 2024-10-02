@@ -11,7 +11,7 @@ nav,
 }
 
 .offcanvas {
-  background-color: #2289ff !important;
+  background-color: #2078a9 !important;
 }
 
 .offcanvas-body {
@@ -37,7 +37,7 @@ nav,
 }
 
 .navbar-call-us-text-container {
-  background-color: #2289ff;
+  background-color: #2078a9;
   padding: 0.5rem;
   border-radius: 1rem;
   width: fit-content !important;
@@ -94,7 +94,7 @@ nav,
 .projects-dropdown-menu,
 .commercial-dropdown-menu {
   font-size: 1.6rem !important;
-  background-color: #2289ff !important;
+  background-color: #2078a9 !important;
   border: none !important;
 }
 
@@ -253,7 +253,7 @@ nav,
 }
 
 footer {
-  background-color: #2289ff;
+  background-color: #2078a9;
   color: #ffffff;
 }
 
@@ -408,7 +408,7 @@ a:hover {
 .qanda-questions-headline {
   font-size: 3.4rem;
   font-weight: 600;
-  color: #2289ff;
+  color: #2078a9;
 }
 
 .accordion {
@@ -428,7 +428,7 @@ a:hover {
 }
 
 .accordion-button:hover {
-  color: #2289ff !important;
+  color: #2078a9 !important;
 }
 
 .accordion-button:focus {
@@ -451,12 +451,12 @@ a:hover {
   line-height: 2.7rem;
   padding: 1rem 2rem !important;
   margin: 1rem 0;
-  border-right: 4px solid #2289ff;
+  border-right: 4px solid #2078a9;
 }
 
 .en-accordion-body {
   border-right: 0;
-  border-left: 4px solid #2289ff;
+  border-left: 4px solid #2078a9;
 }
 
 .search-results-main-container {
@@ -499,8 +499,8 @@ a:hover {
   font-size: 1.6rem;
   font-weight: 600;
   color: #ffffff;
-  background-color: #2289ff;
-  border-color: #2289ff;
+  background-color: #2078a9;
+  border-color: #2078a9;
   -webkit-box-shadow: rgba(34, 137, 255, 0.15) 0px 15px 40px 0px;
   box-shadow: rgba(34, 137, 255, 0.15) 0px 15px 40px 0px;
 }
@@ -551,9 +551,9 @@ a:hover {
   border-radius: 3rem !important;
   border: 1px solid currentColor !important;
   font-size: 1.6rem !important;
-  color: #2289ff !important;
+  color: #2078a9 !important;
   background-color: #ffffff !important;
-  border-color: #2289ff !important;
+  border-color: #2078a9 !important;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -639,9 +639,9 @@ a:hover {
   border-radius: 3rem !important;
   border: 1px solid currentColor !important;
   font-size: 1.6rem !important;
-  color: #2289ff !important;
+  color: #2078a9 !important;
   background-color: #ffffff !important;
-  border-color: #2289ff !important;
+  border-color: #2078a9 !important;
 }
 
 .search-results-filters-sort--btn::after {
@@ -714,7 +714,7 @@ a:hover {
 }
 
 .pagination-page-btn:hover {
-  color: #2289ff;
+  color: #2078a9;
 }
 
 .pagination-page-btn:focus {
@@ -916,7 +916,7 @@ a:hover {
 .asset-details-description-middleViewport-col {
   text-align: right;
   color: #ffffff;
-  background-color: #2289ff;
+  background-color: #2078a9;
   border-top-left-radius: 7rem;
   border-bottom-right-radius: 7rem;
 }
@@ -1005,7 +1005,7 @@ a:hover {
 }
 
 .asset-video-col {
-  background-color: #2289ff;
+  background-color: #2078a9;
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
@@ -1025,9 +1025,9 @@ a:hover {
 }
 
 .asset-back-to-results-btn {
-  color: #2289ff;
+  color: #2078a9;
   background-color: #ffffff;
-  border: 1px solid #2289ff;
+  border: 1px solid #2078a9;
   border-radius: 1rem;
   padding: 1rem;
   -webkit-transform: translateY(-1px);
@@ -1036,7 +1036,7 @@ a:hover {
 }
 
 .asset-contact-us-container-col {
-  background-color: #2289ff;
+  background-color: #2078a9;
   border-radius: 2rem;
   padding-top: 5rem;
 }
@@ -1406,7 +1406,7 @@ a:hover {
 }
 
 .project-installment-table-head {
-  background-color: #2289ff;
+  background-color: #2078a9;
   color: #ffffff;
 }
 
@@ -1493,7 +1493,7 @@ a:hover {
   font-size: 1.2rem !important;
   text-align: right !important;
   color: #5c5e64 !important;
-  border: 1px solid #2289ff !important;
+  border: 1px solid #2078a9 !important;
   border-radius: 1rem !important;
   height: 3rem !important;
 }
@@ -1573,7 +1573,7 @@ a:hover {
 .invest-content-title,
 .invest-content-big-title {
   font-weight: 600;
-  color: #2289ff;
+  color: #2078a9;
   margin-bottom: 1rem;
 }
 
@@ -1653,7 +1653,7 @@ a:hover {
 .about-text-role {
   font-size: 2rem;
   font-weight: 400;
-  color: #2289ff;
+  color: #2078a9;
   margin-bottom: 1rem;
 }
 
@@ -1679,7 +1679,7 @@ a:hover {
 .about-partners-headline {
   font-size: 3.4rem;
   font-weight: 600;
-  color: #2289ff;
+  color: #2078a9;
 }
 
 .about-partners-card {
@@ -1707,7 +1707,7 @@ a:hover {
 }
 
 .about-partners-card-prof {
-  color: #2289ff !important;
+  color: #2078a9 !important;
   border-bottom: solid 1px #f7f7f7;
   padding-bottom: 1rem !important;
 }
@@ -1726,7 +1726,7 @@ a:hover {
 }
 
 .about-reviews-headline {
-  color: #2289ff !important;
+  color: #2078a9 !important;
 }
 
 .blog-cards-container {
@@ -1740,7 +1740,7 @@ a:hover {
 .blog-headline {
   font-size: 3.4rem;
   font-weight: 600;
-  color: #2289ff;
+  color: #2078a9;
   margin-bottom: 1rem;
 }
 
@@ -1781,7 +1781,7 @@ a:hover {
 }
 
 .blog-card-date {
-  color: #2289ff !important;
+  color: #2078a9 !important;
   margin-bottom: 1.5rem !important;
 }
 
@@ -1804,7 +1804,7 @@ a:hover {
 
 .blog-content-date {
   font-size: 1.2rem;
-  color: #2289ff;
+  color: #2078a9;
   margin-bottom: 1.5rem;
 }
 
@@ -1853,7 +1853,7 @@ a:hover {
 
 .calendly-col {
   position: relative;
-  background-color: #2289ff !important;
+  background-color: #2078a9 !important;
   height: 165rem;
   border-radius: 1rem;
 }
@@ -1889,7 +1889,7 @@ a:hover {
   font-size: 1.2rem !important;
   text-align: right !important;
   color: #5c5e64 !important;
-  border: 1px solid #2289ff !important;
+  border: 1px solid #2078a9 !important;
   border-radius: 1rem !important;
   height: 4rem !important;
 }
@@ -1898,7 +1898,7 @@ a:hover {
   font-size: 1.6rem !important;
   text-align: right !important;
   color: #5c5e64 !important;
-  border: 1px solid #2289ff !important;
+  border: 1px solid #2078a9 !important;
 }
 
 .en-contact-us-textarea {
@@ -1932,14 +1932,14 @@ a:hover {
   width: 9rem !important;
   height: 3rem !important;
   background-color: #ffffff;
-  color: #2289ff;
+  color: #2078a9;
   border: none;
   -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
 }
 
 .calendly-agents-button {
-  color: #2289ff !important;
+  color: #2078a9 !important;
   background-color: #ffffff !important;
   width: 13rem;
   height: 4rem !important;
@@ -2018,12 +2018,12 @@ a:hover {
 .contact-us-confirm-headline {
   font-size: 4.8rem;
   font-weight: 600;
-  color: #2289ff;
+  color: #2078a9;
   margin-bottom: 1rem;
 }
 
 .contact-us-confirm-border {
-  background-color: #2289ff;
+  background-color: #2078a9;
   height: 0.5rem;
   border-radius: 20rem;
   margin-bottom: 2rem;
@@ -2055,7 +2055,7 @@ a:hover {
 .pricing-headline {
   font-size: 3.4rem;
   font-weight: 600;
-  color: #2289ff;
+  color: #2078a9;
   margin-bottom: 5rem;
 }
 
@@ -2070,7 +2070,7 @@ a:hover {
 .favorite-assets-headline {
   font-size: 3.4rem;
   font-weight: 600;
-  color: #2289ff;
+  color: #2078a9;
 }
 
 .error-main-container {
@@ -2084,11 +2084,11 @@ a:hover {
 .error-headline {
   font-size: 10rem;
   font-weight: 600;
-  color: #2289ff;
+  color: #2078a9;
 }
 
 .error-border {
-  background-color: #2289ff;
+  background-color: #2078a9;
   height: 0.5rem;
   border-radius: 20rem;
   margin-bottom: 5rem;
@@ -2158,7 +2158,7 @@ a:hover {
 
 .accessibility-text a {
   text-decoration: none;
-  color: #2289ff;
+  color: #2078a9;
 }
 
 .termsOfService-container {
@@ -2214,7 +2214,7 @@ a:hover {
 }
 
 .siteMap-links:hover {
-  color: #2289ff;
+  color: #2078a9;
 }
 
 .webinar-main-container {
@@ -2308,7 +2308,7 @@ a:hover {
 }
 
 .webinar-star-symbol {
-  color: #2289ff;
+  color: #2078a9;
 }
 
 .webinar-who-container {
@@ -2333,7 +2333,7 @@ a:hover {
 
 .webinar-divider {
   height: 0.5rem;
-  background-color: #2289ff;
+  background-color: #2078a9;
   margin-bottom: 4rem;
   text-align: center;
 }
@@ -2363,7 +2363,7 @@ a:hover {
 }
 
 .webinar-moderators-image-container {
-  background-color: #2289ff;
+  background-color: #2078a9;
 }
 
 .webinar-subjects-icon {
@@ -2644,9 +2644,9 @@ body {
 .mobile-asset-favorite-btn,
 .landing-contact-us-button,
 .landing-webinar-button {
-  border: 1px solid #2289ff;
+  border: 1px solid #2078a9;
   color: #ffffff;
-  background-color: #2289ff;
+  background-color: #2078a9;
 }
 
 .btn-cta:focus {
@@ -2660,7 +2660,7 @@ body {
 .share-btn-white,
 .asset-favorite-btn-white {
   background-color: #ffffff;
-  color: #2289ff;
+  color: #2078a9;
   -webkit-transform: translateY(-1px);
   -ms-transform: translateY(-1px);
   transform: translateY(-1px);
@@ -2714,7 +2714,7 @@ body {
 }
 
 .share-btn {
-  background-color: #2289ff;
+  background-color: #2078a9;
 }
 
 .share-btn-icon,
@@ -2919,7 +2919,7 @@ body {
 .mainpage-search-headline {
   font-size: 2rem;
   font-weight: 600;
-  color: #2289ff;
+  color: #2078a9;
   margin-bottom: 2rem;
 }
 
@@ -2935,8 +2935,8 @@ body {
   font-size: 1.6rem;
   font-weight: 600;
   color: #ffffff;
-  background-color: #2289ff;
-  border-color: #2289ff;
+  background-color: #2078a9;
+  border-color: #2078a9;
   -webkit-box-shadow: rgba(34, 137, 255, 0.15) 0px 15px 40px 0px;
   box-shadow: rgba(34, 137, 255, 0.15) 0px 15px 40px 0px;
 }
@@ -2984,7 +2984,7 @@ body {
   font-weight: 600 !important;
   color: #5c5e64 !important;
   background-color: #ffffff !important;
-  border: 1px solid #2289ff !important;
+  border: 1px solid #2078a9 !important;
   border-radius: 1rem !important;
 }
 
@@ -3026,8 +3026,8 @@ body {
 }
 
 .search-filter-options--btn.active {
-  color: #2289ff !important;
-  border: 1px solid #2289ff !important;
+  color: #2078a9 !important;
+  border: 1px solid #2078a9 !important;
   background-color: rgba(199, 223, 251, 0.4784313725) !important;
 }
 
@@ -3036,7 +3036,7 @@ body {
   text-align: right;
   color: #5c5e64;
   padding-right: 1rem;
-  border: 1px solid #2289ff;
+  border: 1px solid #2078a9;
   border-radius: 5rem;
   width: 20rem;
   height: 4rem;
@@ -3053,12 +3053,12 @@ body {
   width: 17rem;
   height: 7rem;
   border-radius: 5rem;
-  border: 1px solid #2289ff;
+  border: 1px solid #2078a9;
   font-size: 1.6rem;
   font-weight: 600;
   color: #ffffff;
-  background-color: #2289ff;
-  border-color: #2289ff;
+  background-color: #2078a9;
+  border-color: #2078a9;
   -webkit-box-shadow: rgba(34, 137, 255, 0.15) 0px 15px 40px 0px;
   box-shadow: rgba(34, 137, 255, 0.15) 0px 15px 40px 0px;
 }
@@ -3076,7 +3076,7 @@ body {
 .search-price-icon {
   width: 3.3rem;
   height: 3.3rem;
-  color: #2289ff;
+  color: #2078a9;
 }
 
 .price-divider {
@@ -3091,7 +3091,7 @@ body {
   color: #5c5e64;
   height: 3rem;
   padding-right: 1rem;
-  border: 1px solid #2289ff;
+  border: 1px solid #2078a9;
   border-radius: 3rem;
 }
 
@@ -3156,7 +3156,7 @@ input[type=text]::placeholder {
 }
 
 .mainpage-hot-assets-tag {
-  color: #2289ff;
+  color: #2078a9;
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -3222,7 +3222,7 @@ input[type=text]::placeholder {
 }
 
 .asset-card-exclusive-badge {
-  background-color: #2289ff;
+  background-color: #2078a9;
 }
 
 .asset-card-img {
@@ -3380,7 +3380,7 @@ input[type=text]::placeholder {
 .mainpage-howitworks-label {
   font-size: 2rem;
   font-weight: 600;
-  color: #2289ff;
+  color: #2078a9;
   margin-bottom: 1rem;
 }
 
@@ -3398,7 +3398,7 @@ input[type=text]::placeholder {
 .mainpage-howitworks-icon {
   width: 6rem;
   height: 6rem;
-  color: #2289ff;
+  color: #2078a9;
   margin-bottom: 1.5rem;
 }
 
@@ -3449,7 +3449,7 @@ input[type=text]::placeholder {
 }
 
 .mainpage-why-bulgaria-tag {
-  color: #2289ff;
+  color: #2078a9;
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -3485,7 +3485,7 @@ input[type=text]::placeholder {
 }
 
 .mainpage-rec-tag {
-  color: #2289ff;
+  color: #2078a9;
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -3535,7 +3535,7 @@ input[type=text]::placeholder {
 
 .mainpage-reviews-name {
   font-size: 1.6rem;
-  color: #2289ff;
+  color: #2078a9;
   margin-bottom: 0.5rem;
 }
 
@@ -3552,12 +3552,12 @@ input[type=text]::placeholder {
 
 .mainpage-reviews-carousel-prev-icon {
   margin-left: 0.5rem;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232289ff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232078a9' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
 }
 
 .mainpage-reviews-carousel-next-icon {
   margin-right: 0.5rem;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232289ff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232078a9' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
 
 .reviews-btn-container {
@@ -3573,7 +3573,7 @@ input[type=text]::placeholder {
 }
 
 .pricing-tag {
-  color: #2289ff;
+  color: #2078a9;
   font-size: 2rem;
   font-weight: 600;
 }
@@ -3607,7 +3607,7 @@ input[type=text]::placeholder {
 }
 
 .pricing-card-premium {
-  border: 2px solid #2289ff !important;
+  border: 2px solid #2078a9 !important;
   overflow: hidden;
 }
 
@@ -3618,7 +3618,7 @@ input[type=text]::placeholder {
 .pricing-premium-badge {
   font-size: 1.2rem !important;
   color: #ffffff;
-  background-color: #2289ff;
+  background-color: #2078a9;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -3635,7 +3635,7 @@ input[type=text]::placeholder {
 .en-pricing-premium-badge {
   font-size: 1.2rem !important;
   color: #ffffff;
-  background-color: #2289ff;
+  background-color: #2078a9;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -3686,7 +3686,7 @@ input[type=text]::placeholder {
 .mainpage-blog-tag {
   font-size: 2rem;
   font-weight: 600;
-  color: #2289ff;
+  color: #2078a9;
   margin-bottom: 1rem;
 }
 
@@ -3698,7 +3698,7 @@ input[type=text]::placeholder {
 }
 
 .mainpage-blog-card {
-  background-color: #2289ff !important;
+  background-color: #2078a9 !important;
   color: #ffffff !important;
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
@@ -3726,7 +3726,7 @@ input[type=text]::placeholder {
 .mainpage-contact-us-tag {
   font-size: 2rem;
   font-weight: 600;
-  color: #2289ff;
+  color: #2078a9;
   margin-bottom: 1rem;
 }
 
@@ -3738,7 +3738,7 @@ input[type=text]::placeholder {
 }
 
 .mainpage-contact-us-col {
-  background-color: #2289ff;
+  background-color: #2078a9;
   border-radius: 2rem;
   padding-top: 5rem;
 }
@@ -3749,7 +3749,7 @@ input[type=text]::placeholder {
 }
 
 .contact-us-fixed-col {
-  background-color: #2289ff;
+  background-color: #2078a9;
 }
 
 .close-contact-us-fixed-btn {
@@ -3804,7 +3804,7 @@ input[type=text]::placeholder {
   width: 15rem !important;
   height: 4rem !important;
   background-color: #ffffff;
-  color: #2289ff;
+  color: #2078a9;
   border: none;
   border-radius: 1rem;
   -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
@@ -3820,7 +3820,7 @@ input[type=text]::placeholder {
 }
 
 .contact-us-fixed-call-us-text {
-  color: #2289ff;
+  color: #2078a9;
   font-size: 1.2rem;
   font-weight: 600;
   text-decoration: none;
@@ -3835,7 +3835,7 @@ input[type=text]::placeholder {
   position: fixed;
   width: 103% !important;
   padding: 1rem 0;
-  background-color: #2289ff;
+  background-color: #2078a9;
   z-index: 101;
 }
 

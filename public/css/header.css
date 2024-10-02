@@ -11,7 +11,7 @@ nav,
 }
 
 .offcanvas {
-  background-color: #2289ff !important;
+  background-color: #2078a9 !important;
 }
 
 .offcanvas-body {
@@ -37,7 +37,7 @@ nav,
 }
 
 .navbar-call-us-text-container {
-  background-color: #2289ff;
+  background-color: #2078a9;
   padding: 0.5rem;
   border-radius: 1rem;
   width: fit-content !important;
@@ -94,7 +94,7 @@ nav,
 .projects-dropdown-menu,
 .commercial-dropdown-menu {
   font-size: 1.6rem !important;
-  background-color: #2289ff !important;
+  background-color: #2078a9 !important;
   border: none !important;
 }
 

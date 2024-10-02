@@ -167,7 +167,7 @@
 .asset-details-description-middleViewport-col {
   text-align: right;
   color: #ffffff;
-  background-color: #2289ff;
+  background-color: #2078a9;
   border-top-left-radius: 7rem;
   border-bottom-right-radius: 7rem;
 }
@@ -256,7 +256,7 @@
 }
 
 .asset-video-col {
-  background-color: #2289ff;
+  background-color: #2078a9;
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
@@ -276,9 +276,9 @@
 }
 
 .asset-back-to-results-btn {
-  color: #2289ff;
+  color: #2078a9;
   background-color: #ffffff;
-  border: 1px solid #2289ff;
+  border: 1px solid #2078a9;
   border-radius: 1rem;
   padding: 1rem;
   -webkit-transform: translateY(-1px);
@@ -287,7 +287,7 @@
 }
 
 .asset-contact-us-container-col {
-  background-color: #2289ff;
+  background-color: #2078a9;
   border-radius: 2rem;
   padding-top: 5rem;
 }
