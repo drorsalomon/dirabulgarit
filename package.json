@@ -8,7 +8,7 @@
     "dev": "nodemon -e js,pug server.js",
     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js --public-url .",
     "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js --public-url .",
-    "heroku-postbuild": "npm run build:js && [ ! -d ./.cache ] && mkdir ./.cache && mv /app/.cache/puppeteer ./.cache || true"
+    "heroku-postbuild": "npm run build:js"
   },
   "author": "Dror Salomon",
   "license": "ISC",
