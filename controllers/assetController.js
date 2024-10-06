@@ -184,7 +184,7 @@ exports.generateAssetPDF = catchAsync(async (req, res) => {
 
     // Launch Puppeteer
     const browser = await puppeteer.launch({
-      executablePath: process.env.CHROME_BIN || '/app/.apt/usr/bin/google-chrome',
+      executablePath: process.env.GOOGLE_CHROME_BIN || '/app/.apt/usr/bin/google-chrome',
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',
