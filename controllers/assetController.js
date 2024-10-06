@@ -209,12 +209,20 @@ exports.generateAssetPDF = catchAsync(async (req, res) => {
 
     await browser.close();
 
-    // Define a unique file name and path for the generated PDF
-    const fileName = `${asset.name}.pdf`;
+    // Sanitize the asset name for the file name
+    const sanitizedAssetName = asset.name.replace(/[^a-zA-Z0-9-_\.]/g, '_'); // Replace invalid characters
+    const fileName = `${sanitizedAssetName}.pdf`;
     const filePath = path.join(__dirname, '../public/pdf', fileName);
 
-    // Save the PDF locally
-    fs.writeFileSync(filePath, pdfBuffer);
+    // Log the file path for debugging
+    console.log('Saving PDF to:', filePath);
+
+    // Ensure the directory exists
+    const pdfDirectory = path.dirname(filePath); // Get the directory path
+    if (!fs.existsSync(pdfDirectory)) {
+      console.log('PDF directory does not exist. Creating:', pdfDirectory);
+      fs.mkdirSync(pdfDirectory, { recursive: true }); // Create the directory recursively
+    }
 
     // Delete all files in the images directory
     const files = fs.readdirSync(imageDirectory); // Read all files in the directory
