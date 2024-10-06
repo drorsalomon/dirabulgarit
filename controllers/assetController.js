@@ -9,6 +9,9 @@ const fetch = require('node-fetch');
 const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
+const dotenv = require('dotenv');
+
+dotenv.config({ path: './config.env' });
 
 let assetsArray = [];
 

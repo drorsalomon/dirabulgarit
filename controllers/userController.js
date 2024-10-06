@@ -1,7 +1,5 @@
 const User = require('../models/userModel');
 const catchAsync = require('../utils/catchAsync');
-const AppError = require('../utils/appError');
-const Utils = require('../utils/utils');
 const Email = require('../utils/email');
 
 exports.webinarRegisterUser = catchAsync(async (req, res, next) => {
