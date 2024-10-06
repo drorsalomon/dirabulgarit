@@ -7,8 +7,7 @@
     "start": "node server.js",
     "dev": "nodemon -e js,pug server.js",
     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js --public-url .",
-    "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js --public-url .",
-    "heroku-postbuild": "npm run build:js"
+    "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js --public-url ."
   },
   "author": "Dror Salomon",
   "license": "ISC",
