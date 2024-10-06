@@ -183,7 +183,18 @@ exports.generateAssetPDF = catchAsync(async (req, res) => {
     const html = pug.renderFile(path.join(__dirname, '../views/he/pdf/assetPDF.pug'), { asset, mapUrl, title: 'Asset PDF' });
 
     // Launch Puppeteer
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+      executablePath: process.env.CHROME_BIN || '/app/.apt/usr/bin/google-chrome',
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+        '--disable-gpu',
+        '--no-zygote',
+        '--single-process', // Helps avoid resource issues
+      ],
+      headless: true,
+    });
     const page = await browser.newPage();
 
     // Set the HTML content in the Puppeteer page
