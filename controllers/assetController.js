@@ -3,7 +3,7 @@ const enAsset = require('../models/enAssetModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 const Utils = require('../utils/utils');
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-core');
 const pug = require('pug');
 const fetch = require('node-fetch');
 const sharp = require('sharp');
@@ -187,9 +187,8 @@ exports.generateAssetPDF = catchAsync(async (req, res) => {
 
     // Launch Puppeteer
     const browser = await puppeteer.launch({
-      executablePath: '/app/.apt/usr/bin/chromium-browser',
+      executablePath: '/usr/bin/chromium-browser', // Specify the path to the Chromium executable
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
-      headless: true, // Ensure headless mode is enabled
     });
     const page = await browser.newPage();
 
