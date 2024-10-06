@@ -20,7 +20,6 @@
 @import 'accessibility';
 @import 'termsOfService';
 @import 'siteMap';
-@import 'assetPDF';
 @import 'webinar';
 
 * {
@@ -438,6 +437,47 @@ body {
 .whatsapp-widget-icon {
   height: 2rem;
   margin-left: 0.5rem;
+}
+
+// ***** Spinner *****
+.spinner-container {
+  position: fixed;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(230, 230, 230, 0.8);
+  z-index: 99999999;
+}
+
+.spinner {
+  border: 0.8rem solid $bg-color-primary;
+  border-top: 0.8rem solid $text-color-secondary;
+  border-radius: 50%;
+  width: 9rem;
+  height: 9rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-text {
+  font-size: $h5;
+  font-weight: 600;
+  color: $text-color-primary;
+  margin-top: 1rem;
+  text-align: center;
 }
 
 // ***** Webinar *****

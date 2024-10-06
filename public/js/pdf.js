@@ -1,6 +1,8 @@
 import axios from 'axios';
+import * as config from './config';
 
 export const generatePDF = async (pdfData) => {
+  config.Elements.spinnerContainer.style.display = 'flex';
   try {
     const res = await axios({
       method: 'POST',
@@ -19,5 +21,8 @@ export const generatePDF = async (pdfData) => {
     }
   } catch (err) {
     console.error('Error generating PDF:', err);
+  } finally {
+    // Hide the spinner after the request completes
+    config.Elements.spinnerContainer.style.display = 'none';
   }
 };

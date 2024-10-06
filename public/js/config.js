@@ -14,6 +14,8 @@ export const Elements = {
   shareBtnWhite: document.querySelectorAll('.share-btn-white'),
   backToSearchResultsBtn: document.querySelector('.asset-back-to-results-btn'),
   errorBtn: document.querySelector('.error-btn'),
+  // Spinner
+  spinnerContainer: document.querySelector('.spinner-container'),
   // Navbar
   activeNavLinks: document.querySelectorAll('.nav-link'),
   navbarToggler: document.querySelector('.navbar-toggler'),

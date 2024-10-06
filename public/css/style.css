@@ -2221,11 +2221,6 @@ a:hover {
   color: #2078a9;
 }
 
-.asset-pdf-headline {
-  font-size: 4.2rem;
-  color: #324762;
-}
-
 .webinar-main-container {
   position: relative;
   text-align: center;
@@ -2798,6 +2793,45 @@ body {
 .whatsapp-widget-icon {
   height: 2rem;
   margin-left: 0.5rem;
+}
+
+.spinner-container {
+  position: fixed;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(230, 230, 230, 0.8);
+  z-index: 99999999;
+}
+
+.spinner {
+  border: 0.8rem solid #ffffff;
+  border-top: 0.8rem solid #2078a9;
+  border-radius: 50%;
+  width: 9rem;
+  height: 9rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.spinner-text {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #5c5e64;
+  margin-top: 1rem;
+  text-align: center;
 }
 
 .webinar-mainpage-container {

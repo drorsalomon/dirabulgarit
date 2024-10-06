@@ -191,7 +191,6 @@ const deleteImagesFromS3 = async (folder) => {
     // If there are images to delete, send the delete request
     if (deleteParams.Delete.Objects.length > 0) {
       await s3.send(new DeleteObjectsCommand(deleteParams));
-      console.log(`Deleted images from S3 folder: ${folder}`);
     } else {
       console.log(`No images found in S3 folder: ${folder}`);
     }
