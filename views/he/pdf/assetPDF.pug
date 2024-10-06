@@ -1,0 +1,215 @@
+doctype html
+html(lang="he")
+  head
+    meta(charset="UTF-8")
+    title #{title}
+    link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH' crossorigin='anonymous')
+    style.
+        html {
+            font-size: 62.5%;
+        }
+        body {
+            font-family: 'Rubik', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 400;
+            letter-spacing: 0.2px;
+            color: #5c5e64;
+            padding: 0 !important;
+        }
+        h1, h2, h3, h4 {
+            text-align: right;
+        }
+        .asset-pdf-header-container {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .header-border {
+            background-color: #2078a9;
+            height: 0.2rem;
+            border-radius: 20rem;
+            margin-bottom: 2rem;
+        }
+        .asset-pdf-header-text-headline,
+        .asset-pdf-header-text {
+            font-size:1.2rem;
+            color: #324762;
+        }
+        .asset-pdf-header-text-headline {
+            font-weight: 600;
+        }
+        .asset-pdf-headline {
+            font-size: 4.2rem;
+            color: #324762;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .asset-pdf-main-image,
+        .asset-pdf-location-image {
+            border-radius: 1rem;
+        }
+        .asset-pdf-section-headline {
+            font-size: 2.8rem;
+            color: #324762;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+        }
+        th, td {
+            border: 1px solid #324762; /* Border color */
+            padding: 10px 15px;
+        }
+        th {
+            font-weight: 600;
+            background-color: #2078a9; /* Primary color */
+            color: #ffffff; /* White text */
+        }
+        td {
+            text-align: right; /* Right align text in table cells */
+            background-color: #f0f4f7; /* Light grey background for td */
+        }
+        tr:nth-child(odd) td {
+            background-color: #2078a9; /* Primary blue for odd rows */
+            color: #ffffff; /* White text for odd rows */
+        }
+        tr:nth-child(even) td {
+            background-color: #1a5978; /* Darker shade of blue for even rows */
+            color: #ffffff; /* White text for even rows */
+        }
+        .asset-pdf-description-text {
+            margin-bottom: 1rem;
+        }
+        .asset-pdf-images {
+            border-radius: 1rem;
+            margin: 1rem;
+        }
+  body
+    .container.asset-pdf-header-container
+        .row.asset-pdf-header-row.d-flx.justify-content-center.align-content-center
+            .col-6.asset-pdf-header-col
+                div.asset-pdf-header-text-headline נדל"ן ישראלי בבולגריה - דירה בולגרית
+                div.asset-pdf-header-text קומוסומולסקה 5, בורגס, בולגריה 
+                div.asset-pdf-header-text שמעון שלמה 052-311-1172
+                div.asset-pdf-header-text יהלי סמואלס (ווטסאפ) 054-971-8372 
+                div.asset-pdf-header-text service@dirabulgarit.com
+            .col-6.asset-pdf-header-col
+                img.asset-pdf-header-logo(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/dira-bulgarit-general-images/1726060320840-logo.jpg', alt="לוגו של דירה בולגרית", width="120", height="80")
+    div.header-border
+    h1.asset-pdf-headline(dir='rtl')= asset.name
+    if asset.mainImage
+        .container.asset-pdf-main-image-container.text-center
+            img.asset-pdf-main-image(src=asset.mainImage, alt="Main Image", width="550", height="300")
+
+    // Asset Details Section
+    .section.my-5
+      h2.asset-pdf-section-headline.text-center.mb-4 פרטי הנכס
+      table
+        thead
+          tr
+            th.text-center ערך
+            th.text-center מאפיין
+        tbody
+          if asset.id  
+            tr
+                td #{asset.id}
+                td מספר נכס
+          if asset.project  
+            tr
+                td #{asset.project}
+                td פרויקט
+          if asset.price
+            tr
+                td #{asset.price}
+                td מחיר
+          if asset.city
+            tr
+                td #{asset.city}
+                td עיר
+          if asset.type
+            tr
+                td #{asset.type}
+                td סוג נכס
+          if asset.sm
+            tr
+                td(dir='rtl') #{asset.sm}
+                td שטח
+          if asset.oceanView
+            tr
+              td #{asset.oceanView}
+              td נוף לים
+          if asset.rooms
+            tr
+                td #{asset.rooms}
+                td חדרים
+          if asset.bedrooms
+            tr
+                td #{asset.bedrooms}
+                td חדרי שינה
+          if asset.bathrooms
+            tr
+                td #{asset.bathrooms}
+                td שירותים
+          if asset.terraces
+            tr
+                td #{asset.terraces}
+                td מרפסות
+          if asset.floor
+            tr
+                td(dir='rtl') #{asset.floor}
+                td קומה
+          if asset.parking
+            tr
+                td #{asset.parking}
+                td חניה
+          if asset.windDirection
+            tr
+                td #{asset.windDirection}
+                td כיווני אוויר
+          if asset.readiness
+            tr
+                td #{asset.readiness}
+                td תאריך כניסה
+          if asset.maintenanceFee
+            tr
+                td #{asset.maintenanceFee}
+                td דמי תחזוקה
+          if asset.furnished
+            tr
+                td #{asset.furnished ? 'כן' : 'לא'}
+                td ריהוט
+          if asset.yearBuilt
+            tr
+                td #{asset.yearBuilt}
+                td שנת בנייה    
+
+    // Text Description Section
+    if asset.description
+      .section.my-5
+        h2.asset-pdf-section-headline.text-center תיאור הנכס
+        each text in asset.description
+            div.asset-pdf-description-text.text-end(dir='rtl')= text
+
+    // Amenities Section
+    if asset.amenities && asset.amenities.length > 0
+      .section.my-5
+        h2.asset-pdf-section-headline.text-center מאפיינים נוספים
+        ul
+        each amenity in asset.amenities
+            li.text-end(dir='rtl')= amenity   
+
+    // Location Section
+    if asset.location
+      .section.my-5
+      .map-section.text-center
+        img.asset-pdf-location-image(src=mapUrl, alt="מפת הנכס" width="600", height="300")             
+
+    // Additional Images Section
+    if asset.images && asset.images.length > 0
+      .section.text-center
+        each image in asset.images
+          img.asset-pdf-images(src=image, alt="תמונות של הנכס", width="350", height="220")
+

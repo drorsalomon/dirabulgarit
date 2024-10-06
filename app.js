@@ -25,7 +25,7 @@ const enAssetRouter = require('./routes/enAssetRoutes');
 const enProjectRouter = require('./routes/enProjectRoutes');
 const enCommercialRouter = require('./routes/enCommercialRoutes');
 const enBlogRouter = require('./routes/enBlogRoutes');
-const { dailyAssetPriceNisUpdate, getZohoRefreshToken } = require('./services/cronJobs');
+const { dailyAssetPriceNisUpdate, getZohoRefreshToken, deleteOldPDFs } = require('./services/cronJobs');
 
 // Start express app
 const app = express();
@@ -61,7 +61,8 @@ app.use(
           'https://ssl.google-analytics.com',
           'https://crm.zoho.com/crm/WebToLeadForm',
         ],
-        frameSrc: ["'self'", 'https://calendly.com', 'https://www.youtube.com/'],
+        // Add 'blob:' to allow blob URLs in the iframe
+        frameSrc: ["'self'", 'blob:', 'https://calendly.com', 'https://www.youtube.com/', 'http://127.0.0.1:8000'],
         objectSrc: ["'none'"],
         styleSrc: ["'self'", 'https:', "'unsafe-inline'"],
         workerSrc: ["'self'", 'data:', 'blob:', 'https://*.tiles.mapbox.com', 'https://api.mapbox.com', 'https://events.mapbox.com', 'https://calendly.com'],
@@ -170,6 +171,7 @@ app.use('/en/blog', enBlogRouter);
 
 dailyAssetPriceNisUpdate.start();
 getZohoRefreshToken.start();
+deleteOldPDFs.start();
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));

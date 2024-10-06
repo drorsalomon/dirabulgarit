@@ -3,6 +3,7 @@ import { getBlogs } from './blog';
 import { getFavoriteAssets } from './favoriteAssets';
 import { displayMap } from './mapbox';
 import { loadLang } from './language';
+import { generatePDF } from './pdf';
 import { webinarRegistration } from './webinar';
 import * as config from './config';
 import * as utils from './utils';
@@ -335,6 +336,57 @@ if (config.Elements.shareBtnWhite)
   config.Elements.shareBtnWhite.forEach((el) => {
     el.addEventListener('click', function (e) {
       utils.addNavigator();
+    });
+  });
+
+// Asset PDF button listener
+if (config.Elements.assetPdfBtn)
+  config.Elements.assetPdfBtn.forEach((el) => {
+    el.addEventListener('click', function (e) {
+      const priceArray = Array.from(config.Elements.assetPrice)
+        .map((price) => price.innerText.trim())
+        .filter((value, index, self) => self.indexOf(value) === index);
+      const descriptionArray = Array.from(config.Elements.assetDescription)
+        .map((description) => description.innerText.trim())
+        .filter((value, index, self) => self.indexOf(value) === index);
+      const amenitiesArray = Array.from(config.Elements.assetAmenities).map((amenity) => amenity.innerText.trim());
+      const imagesArray = Array.from(config.Elements.assetThumbnailImgs).map((image) => image.src);
+
+      const pdfData = {
+        id: config.Elements.assetId ? config.Elements.assetId.innerHTML : '',
+        name: config.Elements.assetName ? config.Elements.assetName.innerHTML : '',
+        price: priceArray ? priceArray[0] : '',
+        project: config.Elements.assetProject ? config.Elements.assetProject.innerHTML : '',
+        city: config.Elements.assetCity ? config.Elements.assetCity.innerHTML : '',
+        type: config.Elements.assetType ? config.Elements.assetType.innerHTML : '',
+        sm: config.Elements.assetSm ? config.Elements.assetSm.innerHTML : '',
+        oceanView: config.Elements.assetOceanView ? config.Elements.assetOceanView.innerHTML : '',
+        rooms: config.Elements.assetRooms ? config.Elements.assetRooms.innerHTML : '',
+        bedrooms: config.Elements.assetBedrooms ? config.Elements.assetBedrooms.innerHTML : '',
+        bathrooms: config.Elements.assetBathrooms ? config.Elements.assetBathrooms.innerHTML : '',
+        terraces: config.Elements.assetTerraces ? config.Elements.assetTerraces.innerHTML : '',
+        floor: config.Elements.assetFloor ? config.Elements.assetFloor.innerHTML : '',
+        parking: config.Elements.assetParking ? config.Elements.assetParking.innerHTML : '',
+        windDirection: config.Elements.assetWindDirections ? config.Elements.assetWindDirections.innerHTML : '',
+        readiness: config.Elements.assetReadiness ? config.Elements.assetReadiness.innerHTML : '',
+        maintenanceFee: config.Elements.assetMaintenanceFee ? config.Elements.assetMaintenanceFee.innerHTML : '',
+        furnished: config.Elements.assetFurnished ? config.Elements.assetFurnished.innerHTML : '',
+        yearBuilt: config.Elements.assetYearBuilt ? config.Elements.assetYearBuilt.innerHTML : '',
+        description: descriptionArray ? descriptionArray : '',
+        amenities: amenitiesArray ? amenitiesArray : '',
+        mainImage: config.Elements.assetMainImg.src ? config.Elements.assetMainImg.src : '',
+        images: imagesArray ? imagesArray : '',
+      };
+
+      if (config.Elements.mapBox && config.Elements.mapBox.dataset.long && config.Elements.mapBox.dataset.lat) {
+        const location = {
+          long: config.Elements.mapBox.dataset.long,
+          lat: config.Elements.mapBox.dataset.lat,
+          title: config.Elements.mapBox.dataset.title,
+        };
+        pdfData.location = location;
+      }
+      generatePDF(pdfData);
     });
   });
 

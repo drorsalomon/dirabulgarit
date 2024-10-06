@@ -59,7 +59,9 @@ block content
                             div.asset-gallery-thumbnails-container           
                                 img.asset-gallery-thumbnail(src=img alt=`${asset.name}` loading="lazy")
             .col-12.col-md-5.col-lg-4.col-xl-3.asset-details-features-col 
-                div.mobile-asset-favorite-btn-container.text-end
+                div.mobile-asset-favorite-btn-container.text-center
+                    button.asset-pdf-btn(dir='rtl') יצוא נכס ל
+                        img.favorite-btn-icon(src='/img/icons/pdf-svgrepo-com.svg' alt='אייקון של קובץ PDF') 
                     button.asset-favorite-btn-white
                         img.favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline.svg' alt='אייקון של לב') 
                 if asset.id   
@@ -74,82 +76,82 @@ block content
                         img.assets-details-features-icon(src='/img/icons/price-tag-svgrepo-com-white.svg' alt='אייקון של תג מחיר')       
                 if asset.project     
                     div.assets-details-features 
-                        span= asset.project 
+                        span.asset-details-project= asset.project 
                         span.assets-details-features-text(dir='rtl') <strong>פרויקט: </strong> 
                         img.assets-details-features-icon(src='/img/icons/building-svgrepo-com-white.svg' alt='אייקון של בניין')       
                 if asset.city 
                     div.assets-details-features 
-                        span(dir='rtl')= asset.city 
+                        span.asset-details-city(dir='rtl')= asset.city 
                         span.assets-details-features-text(dir='rtl') <strong>עיר: </strong> 
                         img.assets-details-features-icon(src='/img/icons/map-svgrepo-com-white.svg' alt='אייקון של מפה')       
                 if asset.type
                     div.assets-details-features 
                         span.assets-details-features-text <strong>סוג נכס: </strong> 
-                        span= asset.type 
+                        span.asset-details-type= asset.type 
                         img.assets-details-features-icon(src='/img/icons/house-svgrepo-com-white.svg' alt='אייקון של בית')       
                 if asset.sm
                     div.assets-details-features 
                         span.assets-details-features-text <strong>שטח: </strong> 
-                        span= asset.sm 
+                        span.asset-details-sm= asset.sm 
                         img.assets-details-features-icon(src='/img/icons/ruler-svgrepo-com-white.svg' alt='אייקון של סרגל')       
                 if asset.oceanView
                     div.assets-details-features 
                         span.assets-details-features-text <strong>קרבה לים: </strong> 
-                        span= asset.oceanView 
+                        span.asset-details-oceanView= asset.oceanView 
                         img.assets-details-features-icon(src='/img/icons/ocean-sunset-svgrepo-com-white.svg' alt='אייקון של שמש שוקעת בים')       
                 if asset.rooms
                     div.assets-details-features 
                         span.assets-details-features-text <strong>חדרים: </strong>
-                        span= asset.rooms  
+                        span.asset-details-rooms= asset.rooms  
                         img.assets-details-features-icon(src='/img/icons/living-room-sofa-svgrepo-com-white.svg' alt='אייקון של סלון')       
                 if asset.bedrooms
                     div.assets-details-features 
                         span.assets-details-features-text <strong>חדרי שינה: </strong>
-                        span= asset.bedrooms  
+                        span.asset-details-bedrooms= asset.bedrooms  
                         img.assets-details-features-icon(src='/img/icons/bed-bedroom-comfortable-svgrepo-com-white.svg' alt='אייקון של חדר שינה')       
                 if asset.bathrooms
                     div.assets-details-features 
                         span.assets-details-features-text <strong>שירותים: </strong> 
-                        span= asset.bathrooms 
+                        span.asset-details-bathrooms= asset.bathrooms 
                         img.assets-details-features-icon(src='/img/icons/bath-bathroom-bathtub-svgrepo-com-white.svg' alt='אייקון של מקלחת')       
                 if asset.terraces 
                     div.assets-details-features 
                         span.assets-details-features-text <strong>מרפסות: </strong> 
-                        span= asset.terraces 
+                        span.asset-details-terraces= asset.terraces 
                         img.assets-details-features-icon(src='/img/icons/balcony-window-svgrepo-com-white.svg' alt='אייקון של מרפסת')       
                 if asset.floor
                     div.assets-details-features 
                         span.assets-details-features-text <strong>קומה: </strong> 
-                        span= asset.floor 
+                        span.asset-details-floor= asset.floor 
                         img.assets-details-features-icon(src='/img/icons/floor-plan-svgrepo-com-white.svg' alt='אייקון של תוכנית קומה בבניין')       
                 if asset.parking
                     div.assets-details-features 
                         span.assets-details-features-text <strong>חניה: </strong> 
-                        span= asset.parking 
+                        span.asset-details-parking= asset.parking 
                         img.assets-details-features-icon(src='/img/icons/parking-svgrepo-com-white.svg' alt='אייקון של חניה')       
                 if asset.windDirections
                     div.assets-details-features 
                         span.assets-details-features-text <strong>כיווני אוויר: </strong> 
-                        span= asset.windDirections 
+                        span.asset-details-windDirections= asset.windDirections 
                         img.assets-details-features-icon(src='/img/icons/wind-svgrepo-com-white.svg' alt='אייקון של רוח נושבת')       
                 if asset.readiness 
                     div.assets-details-features 
-                        span= asset.readiness
+                        span.asset-details-readiness= asset.readiness
                         span.assets-details-features-text(dir='rtl') <strong>תאריך כניסה: </strong> 
                         img.assets-details-features-icon(src='/img/icons/date-svgrepo-com-white.svg' alt='אייקון של לוח שנה')   
                 if asset.maintenanceFee
                     div.assets-details-features 
-                        span(dir='rtl')= asset.maintenanceFee
+                        span.asset-details-maintenanceFee(dir='rtl')= asset.maintenanceFee
                         span.assets-details-features-text(dir='rtl') <strong>תחזוקה: </strong> 
                         img.assets-details-features-icon(src='/img/icons/maintenance-svgrepo-com-white.svg' alt='אייקון של מפתח שבדי')       
                 if asset.furnished && asset.furnished === true
                     div.assets-details-features 
-                        span(dir='rtl') כן
+                        span.asset-details-furnished(dir='rtl') כן
                         span.assets-details-features-text(dir='rtl') <strong>ריהוט: </strong> 
                         img.assets-details-features-icon(src='/img/icons/furniture-svgrepo-com-white.svg' alt='אייקון של ריהוט')  
                 if asset.yearBuilt
                     div.assets-details-features 
-                        span(dir='rtl')= asset.yearBuilt
+                        span.asset-details-yearBuilt(dir='rtl')= asset.yearBuilt
                         span.assets-details-features-text(dir='rtl') <strong>שנת בנייה: </strong> 
                         img.assets-details-features-icon(src='/img/icons/crane-tool-svgrepo-com-white.svg' alt='אייקון של מנוף בניין')               
                 if asset.description.text
@@ -188,6 +190,8 @@ block content
                 div.asset-btn-middleViewport-container.text-center
                     button.asset-favorite-btn-white
                         img.favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline.svg' alt='אייקון של לב') 
+                    button.asset-pdf-btn.asset-pdf-btn-middleViewport(dir='rtl') יצוא נכס ל
+                        img.favorite-btn-icon(src='/img/icons/pdf-svgrepo-com.svg' alt='אייקון של קובץ PDF') 
                     button.btn-cta-asset.to-calendly-btn צרו קשר
                     button.share-btn-white
                         img.share-btn-icon(src='/img/icons/share-svgrepo-com-outline.svg' alt='אייקון של שיתוף דף')  
@@ -203,7 +207,7 @@ block content
                             each amenity in asset.amenities    
                                 .col-12.col-md-6.col-lg-4.col-xl-3
                                     div.asset-amenities-details-container
-                                        span(dir='rtl')= amenity
+                                        span.asset-amenity(dir='rtl')= amenity
                                         img.assets-details-features-icon(src='/img/icons/check-svgrepo-com.svg' alt='אייקון של סימן וי') 
 
     if asset.videoURL    

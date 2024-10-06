@@ -13,7 +13,7 @@ export const displayMap = (long, lat, title) => {
           },
           properties: {
             title: title,
-            'marker-color': '#2289ff',
+            'marker-color': '#2078a9',
             'marker-size': 'large',
             'marker-symbol': 'building',
           },

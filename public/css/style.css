@@ -978,6 +978,10 @@ a:hover {
   display: none;
 }
 
+.asset-pdf-btn-middleViewport {
+  margin-right: 1.5rem;
+}
+
 .asset-amenities-headline,
 .asset-map-headline,
 .asset-contact-us-container-headline,
@@ -2217,6 +2221,11 @@ a:hover {
   color: #2078a9;
 }
 
+.asset-pdf-headline {
+  font-size: 4.2rem;
+  color: #324762;
+}
+
 .webinar-main-container {
   position: relative;
   text-align: center;
@@ -2625,7 +2634,8 @@ body {
 .mainpage-blog-card-btn,
 .section-headline-cta-btn,
 .error-btn,
-.contact-us-button {
+.contact-us-button,
+.asset-pdf-btn {
   width: 15rem;
   height: 5rem;
   border-radius: 3rem;
@@ -2658,7 +2668,8 @@ body {
 .btn-cta-asset,
 .mainpage-blog-card-btn,
 .share-btn-white,
-.asset-favorite-btn-white {
+.asset-favorite-btn-white,
+.asset-pdf-btn {
   background-color: #ffffff;
   color: #2078a9;
   -webkit-transform: translateY(-1px);
