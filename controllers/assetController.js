@@ -187,7 +187,7 @@ exports.generateAssetPDF = catchAsync(async (req, res) => {
 
     // Launch Puppeteer
     const browser = await puppeteer.launch({
-      executablePath: process.env.GOOGLE_CHROME_BIN || '/app/.apt/usr/bin/google-chrome',
+      executablePath: '/app/.apt/usr/bin/google-chrome', // Update this if necessary
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',
@@ -196,7 +196,7 @@ exports.generateAssetPDF = catchAsync(async (req, res) => {
         '--no-zygote',
         '--single-process', // Helps avoid resource issues
       ],
-      headless: true,
+      headless: true, // Ensure it's running headlessly
     });
     const page = await browser.newPage();
 
