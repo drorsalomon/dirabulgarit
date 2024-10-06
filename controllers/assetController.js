@@ -183,20 +183,7 @@ exports.generateAssetPDF = catchAsync(async (req, res) => {
     const html = pug.renderFile(path.join(__dirname, '../views/he/pdf/assetPDF.pug'), { asset, mapUrl, title: 'Asset PDF' });
 
     // Launch Puppeteer
-    // Use the custom launch options for Heroku
-    const browser = await puppeteer.launch({
-      executablePath: process.env.CHROME_BIN || null,
-      args: [
-        '--no-sandbox',
-        '--disable-setuid-sandbox',
-        '--disable-dev-shm-usage',
-        '--disable-gpu',
-        '--no-zygote',
-        '--single-process', // Helps avoid resource issues
-      ],
-      headless: true, // Ensure it's running headlessly
-    });
-
+    const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
     // Set the HTML content in the Puppeteer page
