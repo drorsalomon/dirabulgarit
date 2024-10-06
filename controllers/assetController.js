@@ -187,7 +187,7 @@ exports.generateAssetPDF = catchAsync(async (req, res) => {
 
     // Launch Puppeteer
     const browser = await puppeteer.launch({
-      executablePath: '/usr/bin/chromium-browser', // Specify the path to the Chromium executable
+      executablePath: '/app/.chrome-for-testing/chrome-linux64/chrome', // Specify the path to the Chromium executable
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
     });
     const page = await browser.newPage();
