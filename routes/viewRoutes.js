@@ -4,6 +4,12 @@ const path = require('path');
 
 const router = express.Router();
 
+// Middleware to set `res.locals.lang` for this router
+router.use((req, res, next) => {
+  res.locals.lang = 'he';
+  next();
+});
+
 router.get('/', viewsController.getOverview);
 router.get('/search', viewsController.getSearch);
 router.get('/qanda', viewsController.getQAndA);

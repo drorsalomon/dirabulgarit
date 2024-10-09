@@ -3,6 +3,12 @@ const viewsController = require('../controllers/viewsController');
 
 const router = express.Router();
 
+// Middleware to set `res.locals.lang` for this router
+router.use((req, res, next) => {
+  res.locals.lang = 'en';
+  next();
+});
+
 router.get('/', viewsController.getOverview);
 router.get('/search', viewsController.getSearch);
 router.get('/qanda', viewsController.getQAndA);
