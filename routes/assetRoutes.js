@@ -4,6 +4,12 @@ const assetController = require('../controllers/assetController');
 
 const router = express.Router();
 
+// Middleware to set `res.locals.lang` for this router
+router.use((req, res, next) => {
+  res.locals.lang = 'he';
+  next();
+});
+
 // Define a static route to serve PDFs from the 'public/pdf' directory
 router.use('/pdf', express.static(path.join(__dirname, '..', 'public', 'pdf')));
 
