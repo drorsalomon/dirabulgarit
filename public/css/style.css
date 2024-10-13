@@ -1865,7 +1865,7 @@ a:hover {
 .calendly-text-container {
   text-align: right;
   position: absolute;
-  top: 27%;
+  top: 30%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -1887,6 +1887,11 @@ a:hover {
 .contact-us-col {
   position: relative;
   margin-bottom: 3rem;
+}
+
+.contact-us-last-col {
+  position: relative;
+  margin-bottom: 1rem;
 }
 
 .contact-us-input {
@@ -1925,6 +1930,14 @@ a:hover {
   border-color: #9ecaed !important;
   -webkit-box-shadow: 0 0 10px #9ecaed !important;
   box-shadow: 0 0 10px #9ecaed !important;
+}
+
+.contact-us-checkbox {
+  margin: 0.4rem 0 0 0.5rem;
+}
+
+.contact-us-checkbox-en {
+  margin: 0.4rem 0.5rem 0 0;
 }
 
 .invalid-tooltip {
@@ -1996,12 +2009,16 @@ a:hover {
 .calendly-widget-container {
   position: absolute;
   height: fit-content;
-  top: 180%;
+  top: 170%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   display: none;
+}
+
+.en-calendly-widget-container {
+  top: 172%;
 }
 
 .calendly-inline-widget {
@@ -3858,7 +3875,7 @@ input[type=text]::placeholder {
 
 .contact-us-fixed-call-us-text-container {
   background-color: #ffffff;
-  padding: 1.1rem;
+  padding: 0.5rem;
   border-radius: 1rem;
   width: fit-content !important;
   margin: auto !important;
@@ -3872,7 +3889,7 @@ input[type=text]::placeholder {
 }
 
 .contact-us-fixed-mobile-icon {
-  height: 2.3rem;
+  height: 2rem;
   margin-left: 0.3rem;
 }
 

@@ -415,12 +415,12 @@ block content
             .col-12.col-md-10.col-xl-8.mainpage-contact-us-col.text-center 
                 div#crmWebToEntityForm.crmWebToEntityForm
                     form.contact-us-form#webform6296617000000479035(action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads6296617000000479035 method='POST' accept-charset='UTF-8' novalidate)
-                        input(type='text' style='display:none;' name='xnQsjsdp' value='59a0780e6b2791aec2fc494a0d52812511ef98c0f6123210fdc332d6fa0b9e22')
+                        input(type='text' style='display:none;' name='xnQsjsdp' value='c9ef63b049adde9dd26f5acb21dc87ed1cff806c5954f97aa4908339c68a8469')
                         input#zc_gad(type='hidden' name='zc_gad' value='')
-                        input(type='text' style='display:none;' name='xmIwtLD' value='7334e6acba558f934b954c69f5851611538edbf846a3d2f15f807f241012015c2f9c9c0839f214a112e56e062e05be4f')
+                        input(type='text' style='display:none;' name='xmIwtLD' value='901545bd25a6f11e8753daa2bb5bdc4a62c942986fe3a3b3123340dde1be1461ada4f129bad2cf0112fb24bc402fd5af')
                         input(type='text' style='display:none;' name='actionType' value='TGVhZHM=')
                         input(type='text' style='display:none;' name='returnURL' value='https://www.dirabulgarit.com/contact-us-confirm')
-                        .row.contact-us-row.align-items-center
+                        .row.contact-us-row
                             .col-12.contact-us-col.d-flex.justify-content-end
                                 input.contact-us-input.contact-us-name-input.form-control(type='text' name='Last Name' maxlength='200' placeholder='שם' aria-label='שם' aria-describedby='basic-addon1' required)                            
                                 .invalid-tooltip אנא הכניסו שם
@@ -430,11 +430,14 @@ block content
                             .col-12.contact-us-col.d-flex.justify-content-end 
                                 input.contact-us-input.contact-us-email-input.form-control(type='email' ftype='email' autocomplete='false' name='Email' crmlabel='' maxlength='100' placeholder='אימייל  ' aria-label='אימייל' aria-describedby='basic-addon1' pattern='[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}' required)
                                 .invalid-tooltip.contact-us-email-invalid אנא הכניסו אימייל תקין
-                            .col-12.contact-us-col.d-flex.justify-content-end     
+                            .col-12.contact-us-col.contact-us-last-col.d-flex.justify-content-end     
                                 textarea.contact-us-textarea.contact-us-description-input.form-control(id='Description' name='Description' dir='rtl' aria-label="תיאור הבקשה" rows="5" placeholder='יש עוד משהו שהייתם רוצים שנדע?')
+                            .col-12.contact-us-col.d-flex.justify-content-end.align-items-start.align-items-sm-center.text-end 
+                                span.webinar-form-check-top-label.form-check-label(for='flexCheckDefault') אני מאשר\ת קבלת מידע ענייני בנושא נדל"ן בבולגריה שלעתים עשוי להיות שיווקי 
+                                input.contact-us-checkbox(type='checkbox' aria-checked='false' class='zcwf_ckbox' id='Email_Opt_Out' aria-required='false' aria-label='Email Opt Out' name='Email Opt Out' aria-valuemax='50' maxlength='50')
                             .col-12.contact-us-col
                                 input.contact-us-button.mx-3(type='reset' class='zcwf_button' name='reset' value='ניקוי' title='Reset')        
                                 input.contact-us-button.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='שליחה' title='Submit')   
 
     include _contactUsFixed  
-    include _contactUsFixedMobile                               
+    include _contactUsFixedMobile    

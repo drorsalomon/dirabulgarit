@@ -14,7 +14,7 @@
 .calendly-text-container {
   text-align: right;
   position: absolute;
-  top: 27%;
+  top: 30%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -36,6 +36,11 @@
 .contact-us-col {
   position: relative;
   margin-bottom: 3rem;
+}
+
+.contact-us-last-col {
+  position: relative;
+  margin-bottom: 1rem;
 }
 
 .contact-us-input {
@@ -74,6 +79,14 @@
   border-color: $input-border-glow !important;
   -webkit-box-shadow: 0 0 10px $input-border-glow !important;
   box-shadow: 0 0 10px $input-border-glow !important;
+}
+
+.contact-us-checkbox {
+  margin: 0.4rem 0 0 0.5rem;
+}
+
+.contact-us-checkbox-en {
+  margin: 0.4rem 0.5rem 0 0;
 }
 
 .invalid-tooltip {
@@ -145,12 +158,16 @@
 .calendly-widget-container {
   position: absolute;
   height: fit-content;
-  top: 180%;
+  top: 170%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   display: none;
+}
+
+.en-calendly-widget-container {
+  top: 172%;
 }
 
 .calendly-inline-widget {

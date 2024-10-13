@@ -70,7 +70,10 @@
     height: 1.7rem;
   }
   .calendly-widget-container {
-    top: 182%;
+    top: 174%;
+  }
+  .en-calendly-widget-container {
+    top: 171%;
   }
   .footer-icon {
     display: inline;
@@ -257,10 +260,13 @@
     height: 150rem;
   }
   .calendly-text-container {
-    top: 25%;
+    top: 27%;
   }
   .calendly-widget-container {
-    top: 198%;
+    top: 191%;
+  }
+  .en-calendly-widget-container {
+    top: 183%;
   }
   .calendly-inline-widget {
     width: 40rem;
@@ -268,6 +274,12 @@
   .close-contact-us-fixed-btn {
     width: 2rem;
     height: 2rem;
+  }
+  .contact-us-checkbox {
+    margin: 0.2rem 0 0 0.5rem;
+  }
+  .contact-us-checkbox-en {
+    margin: 0 0.5rem 0 0;
   }
   .contact-us-fixed-headline {
     font-size: 2rem;
@@ -668,9 +680,6 @@
   .calendly-inline-widget {
     width: 55rem;
   }
-  .contact-us-fixed-bottom-col {
-    margin-bottom: 1.5rem;
-  }
   .contact-us-button-fixed {
     width: 10rem !important;
   }
@@ -683,10 +692,10 @@
     position: fixed;
   }
   .contact-us-fixed-row {
-    padding: 0.4rem 0 !important;
+    padding: 0.2rem 0 !important;
   }
   .contact-us-input-fixed-col {
-    margin-bottom: 1rem;
+    margin-bottom: 0.1rem;
   }
   .close-contact-us-fixed-btn {
     width: 2.3rem;
@@ -701,6 +710,9 @@
   }
   .contact-us-input {
     font-size: 1.6rem !important;
+  }
+  .en-calendly-widget-container {
+    top: 190%;
   }
   .asset-gallery-mainImage {
     height: 23.3rem;
@@ -1154,24 +1166,21 @@
     -ms-transform: translateY(-8px);
     transform: translateY(-8px);
   }
+  .calendly-col {
+    height: 140rem;
+  }
   .calendly-widget-container {
-    top: 210%;
+    top: 198%;
+  }
+  .en-calendly-widget-container {
+    top: 191%;
   }
   .contact-us-container-fixed {
     width: 101% !important;
   }
-  .contact-us-fixed-logo {
-    height: 7rem;
-  }
   .btn-cta-mobile-white {
     width: 5rem;
     height: 5rem;
-  }
-  .contact-us-fixed-call-us-text {
-    font-size: 1.6rem;
-  }
-  .contact-us-fixed-mobile-icon {
-    height: 2.5rem;
   }
   .invalid-tooltip-fixed {
     font-size: 1.2rem !important;
@@ -1611,6 +1620,9 @@
   .en-about-partners-card {
     height: 68rem !important;
   }
+  .calendly-col {
+    height: 145rem;
+  }
   .calendly-text-headline {
     font-size: 4.2rem;
   }
@@ -1618,19 +1630,16 @@
     font-size: 2rem;
   }
   .calendly-widget-container {
-    top: 205%;
+    top: 195%;
+  }
+  .en-calendly-widget-container {
+    top: 188%;
   }
   .contact-us-button-fixed {
     width: 17rem !important;
   }
   .contact-us-fixed-headline {
     margin-bottom: 0.1rem;
-  }
-  .contact-us-fixed-logo {
-    height: 8rem;
-  }
-  .contact-us-fixed-mobile-icon {
-    height: 2.8rem;
   }
   .invalid-tooltip-fixed {
     top: 74% !important;
