@@ -850,7 +850,15 @@ if (config.Elements.samokovProjectAreaNumber)
     93000,
     JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
   );
-
+// Camelot
+if (config.Elements.pomorieProjectPriceNumber) animation.animateCounter(config.Elements.pomorieProjectPriceNumber, new Intl.NumberFormat().format(265350), '€');
+if (config.Elements.pomorieProjectFloorsNumber) animation.animateCounter(config.Elements.pomorieProjectFloorsNumber, 3);
+if (config.Elements.pomorieProjectBuiltAreaNumber)
+  animation.animateCounter(
+    config.Elements.pomorieProjectBuiltAreaNumber,
+    850,
+    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
+  );
 // Fade in animation
 if (config.Elements.hotAssetsContainer || config.Elements.projectAssetsContainer) {
   animation.animateCardsFadeIn(config.Elements.assetCards);

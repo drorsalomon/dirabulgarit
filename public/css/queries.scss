@@ -455,6 +455,10 @@
       @include projectHeadline(37%);
       font-size: $h1;
     }
+    &.project-main-image-headline-pomorie {
+      @include projectHeadline(37%);
+      font-size: $h1;
+    }
   }
 
   .project-gallery-image {
@@ -1949,6 +1953,10 @@
       font-size: $h0;
     }
     &.project-main-image-headline-samokov {
+      @include projectHeadline(35%);
+      font-size: $h0;
+    }
+    &.project-main-image-headline-pomorie {
       @include projectHeadline(35%);
       font-size: $h0;
     }

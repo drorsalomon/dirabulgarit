@@ -196,6 +196,10 @@ export const Elements = {
   sofiab5ProjectBuiltAreaNumber: document.querySelector('.project-numbers-built-area-number-sofia-b5'),
   // Samokov
   samokovProjectAreaNumber: document.querySelector('.project-numbers-area-number-samokov'),
+  // Pomorie
+  pomorieProjectPriceNumber: document.querySelector('.project-numbers-price-number-pomorie'),
+  pomorieProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-pomorie'),
+  pomorieProjectBuiltAreaNumber: document.querySelector('.project-numbers-built-area-number-pomorie'),
 };
 
 export const baseDevUrl = 'http://127.0.0.1:8000/';

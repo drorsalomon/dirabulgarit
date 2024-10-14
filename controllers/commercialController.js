@@ -14,6 +14,11 @@ exports.getVarsanoChic = catchAsync(async (req, res) => {
 
 exports.getSamokov = catchAsync(async (req, res) => {
   res.status(200).render(`${res.locals.lang}/commercial/samokov`, {
-    title: 'Varsano Chic Apartments',
+    title: 'Samokov',
+  });
+});
+exports.getPomorie = catchAsync(async (req, res) => {
+  res.status(200).render(`${res.locals.lang}/commercial/pomorieCommercial`, {
+    title: 'Pomorie Commercial Building',
   });
 });

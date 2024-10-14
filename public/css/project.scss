@@ -44,6 +44,11 @@
   &.project-main-image-col-samokov {
     @include projectBackgroundImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/samokov-images/1727012351222-samokov-development-1.webp');
   }
+  &.project-main-image-col-pomorie {
+    @include projectBackgroundImage(
+      'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938822-pomorie-commercial-building-1.webp'
+    );
+  }
 }
 
 .project-main-image-headline {
@@ -73,6 +78,10 @@
     font-size: $h2;
   }
   &.project-main-image-headline-samokov {
+    @include projectHeadline(46%);
+    font-size: $h2;
+  }
+  &.project-main-image-headline-pomorie {
     @include projectHeadline(46%);
     font-size: $h2;
   }
