@@ -77,8 +77,8 @@ exports.getSiteMap = (req, res) => {
   });
 };
 
-exports.getWebinar = catchAsync(async (req, res) => {
-  res.status(200).render(`${res.locals.lang}/webinar`, {
-    title: 'וובינר השקעות נדל"ן בבולגריה',
-  });
-});
+// exports.getWebinar = catchAsync(async (req, res) => {
+//   res.status(200).render(`${res.locals.lang}/webinar`, {
+//     title: 'וובינר השקעות נדל"ן בבולגריה',
+//   });
+// });

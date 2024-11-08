@@ -80,4 +80,11 @@ module.exports = class Email {
       console.error('Email error:', error);
     }
   }
+  async sendWebinarReminder() {
+    try {
+      await this.send('webinarDayReminder', 'תזכורת לוובינר השקעות הנדל"ן בבולגריה של דירה בולגרית');
+    } catch (error) {
+      console.error('Email error:', error);
+    }
+  }
 };
