@@ -32,6 +32,11 @@
       'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-images/1720087071095-atlantis-barcode-project-1.webp'
     );
   }
+  &.project-main-image-col-atlantis-barcode-2 {
+    @include projectBackgroundImage(
+      'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-2-images/1732263638724-atlantis-barcode-2-project-7.webp'
+    );
+  }
   &.project-main-image-col-atlas-azimuth {
     @include projectBackgroundImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412992-azimuth-project-10.webp');
   }
@@ -62,6 +67,10 @@
     font-size: $h2;
   }
   &.project-main-image-headline-atlantis-barcode {
+    @include projectHeadline(40%);
+    font-size: $h2;
+  }
+  &.project-main-image-headline-atlantis-barcode-2 {
     @include projectHeadline(40%);
     font-size: $h2;
   }
@@ -199,11 +208,18 @@
       60rem
     );
   }
+  &.project-mid-image-container-atlantis-barcode-2 {
+    @include projectMiddleImage(
+      'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-2-images/1732263638743-atlantis-barcode-2-project-13.webp',
+      100% 25rem,
+      25rem
+    );
+  }
   &.project-mid-image-container-atlas-azimuth {
     @include projectMiddleImage(
       'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413055-azimuth-project-21.webp',
       contain,
-      60rem
+      50rem
     );
   }
   &.project-mid-image-container-camelot {

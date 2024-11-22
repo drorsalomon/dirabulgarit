@@ -54,6 +54,17 @@
   height: 60rem;
   width: 100%;
 }
+.project-main-image-col.project-main-image-col-atlantis-barcode-2 {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-2-images/1732263638724-atlantis-barcode-2-project-7.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60rem;
+  width: 100%;
+}
 .project-main-image-col.project-main-image-col-atlas-azimuth {
   position: relative;
   padding: 0 !important;
@@ -133,6 +144,17 @@
   font-size: 4.2rem;
 }
 .project-main-image-headline.project-main-image-headline-atlantis-barcode {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 4.2rem;
+}
+.project-main-image-headline.project-main-image-headline-atlantis-barcode-2 {
   position: absolute;
   top: 50%;
   left: 40%;
@@ -326,6 +348,17 @@
   height: 60rem;
   width: 100%;
 }
+.project-mid-image-container.project-mid-image-container-atlantis-barcode-2 {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-2-images/1732263638743-atlantis-barcode-2-project-13.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 25rem;
+  height: 25rem;
+  width: 100%;
+}
 .project-mid-image-container.project-mid-image-container-atlas-azimuth {
   position: relative;
   padding: 0 !important;
@@ -334,7 +367,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  height: 60rem;
+  height: 50rem;
   width: 100%;
 }
 .project-mid-image-container.project-mid-image-container-camelot {

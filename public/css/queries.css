@@ -336,6 +336,17 @@
     color: #ffffff;
     font-size: 4.8rem;
   }
+  .project-main-image-headline.project-main-image-headline-atlantis-barcode-2 {
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 4.8rem;
+  }
   .project-main-image-headline.project-main-image-headline-atlas-azimuth {
     position: absolute;
     top: 50%;
@@ -422,6 +433,17 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    height: 60rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-atlantis-barcode-2 {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-2-images/1732263638743-atlantis-barcode-2-project-13.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 40rem;
     height: 60rem;
     width: 100%;
   }
@@ -792,6 +814,16 @@
     font-weight: 600;
     color: #ffffff;
   }
+  .project-main-image-headline.project-main-image-headline-atlantis-barcode-2 {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
   .project-main-image-headline.project-main-image-headline-atlas-azimuth {
     position: absolute;
     top: 50%;
@@ -833,6 +865,17 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    height: 60rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-atlantis-barcode-2 {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-2-images/1732263638743-atlantis-barcode-2-project-13.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 60rem;
     height: 60rem;
     width: 100%;
   }
@@ -1235,6 +1278,16 @@
     color: #ffffff;
   }
   .project-main-image-headline.project-main-image-headline-atlantis-barcode {
+    position: absolute;
+    top: 50%;
+    left: 23%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .project-main-image-headline.project-main-image-headline-atlantis-barcode-2 {
     position: absolute;
     top: 50%;
     left: 23%;
@@ -1698,6 +1751,17 @@
     color: #ffffff;
     font-size: 10rem;
   }
+  .project-main-image-headline.project-main-image-headline-atlantis-barcode-2 {
+    position: absolute;
+    top: 50%;
+    left: 37%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 10rem;
+  }
   .project-main-image-headline.project-main-image-headline-atlas-azimuth {
     position: absolute;
     top: 50%;
@@ -1802,6 +1866,17 @@
     position: relative;
     padding: 0 !important;
     background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-images/1720087071323-atlantis-barcode-project-mid-image.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 120rem 70rem;
+    height: 60rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-atlantis-barcode-2 {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-2-images/1732263638743-atlantis-barcode-2-project-13.webp");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -2019,6 +2094,16 @@
     font-weight: 600;
     color: #ffffff;
   }
+  .project-main-image-headline.project-main-image-headline-atlantis-barcode-2 {
+    position: absolute;
+    top: 50%;
+    left: 33%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
   .project-main-image-headline.project-main-image-headline-atlas-azimuth {
     position: absolute;
     top: 50%;
@@ -2059,6 +2144,17 @@
     position: relative;
     padding: 0 !important;
     background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-images/1720087071323-atlantis-barcode-project-mid-image.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 155rem 80rem;
+    height: 60rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-atlantis-barcode-2 {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-2-images/1732263638743-atlantis-barcode-2-project-13.webp");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

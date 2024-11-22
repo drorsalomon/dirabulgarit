@@ -439,6 +439,10 @@
       @include projectHeadline(38%);
       font-size: $h1;
     }
+    &.project-main-image-headline-atlantis-barcode-2 {
+      @include projectHeadline(38%);
+      font-size: $h1;
+    }
     &.project-main-image-headline-atlas-azimuth {
       @include projectHeadline(32%);
       font-size: $h1;
@@ -488,6 +492,13 @@
       @include projectMiddleImage(
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982818-atlantis-aria-3-building.webp',
         contain,
+        60rem
+      );
+    }
+    &.project-mid-image-container-atlantis-barcode-2 {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-2-images/1732263638743-atlantis-barcode-2-project-13.webp',
+        100% 40rem,
         60rem
       );
     }
@@ -934,6 +945,9 @@
     &.project-main-image-headline-atlantis-barcode {
       @include projectHeadline(30%);
     }
+    &.project-main-image-headline-atlantis-barcode-2 {
+      @include projectHeadline(30%);
+    }
     &.project-main-image-headline-atlas-azimuth {
       @include projectHeadline(25%);
     }
@@ -966,6 +980,13 @@
       @include projectMiddleImage(
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/euphoria-images/1719320290027-atlantis-euphoria-middle-image.webp',
         contain,
+        60rem
+      );
+    }
+    &.project-mid-image-container-atlantis-barcode-2 {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-2-images/1732263638743-atlantis-barcode-2-project-13.webp',
+        100% 60rem,
         60rem
       );
     }
@@ -1459,6 +1480,9 @@
     &.project-main-image-headline-atlantis-barcode {
       @include projectHeadline(23%);
     }
+    &.project-main-image-headline-atlantis-barcode-2 {
+      @include projectHeadline(23%);
+    }
     &.project-main-image-headline-atlas-azimuth {
       @include projectHeadline(20%);
     }
@@ -1940,6 +1964,10 @@
       @include projectHeadline(37%);
       font-size: $h0;
     }
+    &.project-main-image-headline-atlantis-barcode-2 {
+      @include projectHeadline(37%);
+      font-size: $h0;
+    }
     &.project-main-image-headline-atlas-azimuth {
       @include projectHeadline(31%);
       font-size: $h0;
@@ -2002,6 +2030,13 @@
     &.project-mid-image-container-atlantis-barcode {
       @include projectMiddleImage(
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-images/1720087071323-atlantis-barcode-project-mid-image.webp',
+        120rem 70rem,
+        60rem
+      );
+    }
+    &.project-mid-image-container-atlantis-barcode-2 {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-2-images/1732263638743-atlantis-barcode-2-project-13.webp',
         120rem 70rem,
         60rem
       );
@@ -2226,6 +2261,9 @@
     &.project-main-image-headline-atlantis-barcode {
       @include projectHeadline(33%);
     }
+    &.project-main-image-headline-atlantis-barcode-2 {
+      @include projectHeadline(33%);
+    }
     &.project-main-image-headline-atlas-azimuth {
       @include projectHeadline(26%);
     }
@@ -2254,6 +2292,13 @@
     &.project-mid-image-container-atlantis-barcode {
       @include projectMiddleImage(
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-images/1720087071323-atlantis-barcode-project-mid-image.webp',
+        155rem 80rem,
+        60rem
+      );
+    }
+    &.project-mid-image-container-atlantis-barcode-2 {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-2-images/1732263638743-atlantis-barcode-2-project-13.webp',
         155rem 80rem,
         60rem
       );

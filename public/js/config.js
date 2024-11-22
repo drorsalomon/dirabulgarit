@@ -174,6 +174,11 @@ export const Elements = {
   abProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlantis-barcode'),
   abProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlantis-barcode'),
   abProjectAreaNumber: document.querySelector('.project-numbers-area-number-atlantis-barcode'),
+  // Atlantis Barcode 2
+  ab2ProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-atlantis-barcode-2'),
+  ab2ProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlantis-barcode-2'),
+  ab2ProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlantis-barcode-2'),
+  ab2ProjectAreaNumber: document.querySelector('.project-numbers-area-number-atlantis-barcode-2'),
   // Atlas Azimuth
   azimuthProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-atlas-azimuth'),
   azimuthProjectCommercialNumber: document.querySelector('.project-numbers-commercial-number-atlas-azimuth'),

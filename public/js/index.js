@@ -801,7 +801,17 @@ if (config.Elements.abProjectAreaNumber)
     9634,
     JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
   );
-// Atlantis Barcode
+// Atlantis Barcode 2
+if (config.Elements.ab2ProjectBuildingsNumber) animation.animateCounter(config.Elements.ab2ProjectBuildingsNumber, 2);
+if (config.Elements.ab2ProjectApartmentsNumber) animation.animateCounter(config.Elements.ab2ProjectApartmentsNumber, 225);
+if (config.Elements.ab2ProjectParkingSpotsNumber) animation.animateCounter(config.Elements.ab2ProjectParkingSpotsNumber, 243);
+if (config.Elements.ab2ProjectAreaNumber)
+  animation.animateCounter(
+    config.Elements.ab2ProjectAreaNumber,
+    7000,
+    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
+  );
+// Atlas Azimuth
 if (config.Elements.azimuthProjectBuildingsNumber) animation.animateCounter(config.Elements.azimuthProjectBuildingsNumber, 8);
 if (config.Elements.azimuthProjectCommercialNumber) animation.animateCounter(config.Elements.azimuthProjectCommercialNumber, 6);
 if (config.Elements.azimuthProjectFloorsNumber) animation.animateCounter(config.Elements.azimuthProjectFloorsNumber, 10);

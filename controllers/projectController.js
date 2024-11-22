@@ -59,6 +59,20 @@ exports.getAtlantisBarcode = catchAsync(async (req, res) => {
   });
 });
 
+exports.getAtlantisBarcode2 = catchAsync(async (req, res) => {
+  let sortOptions = { sold: 1, price: 1 };
+  const projectAssets =
+    res.locals.lang === 'he'
+      ? await Asset.find({ project: 'Atlantis Barcode 2' }).sort(sortOptions)
+      : await enAsset.find({ project: 'Atlantis Barcode 2' }).sort(sortOptions);
+  if (!projectAssets) return next(new AppError('Could not find the requested asset!', 404));
+
+  res.status(200).render(`${res.locals.lang}/projects/atlantisBarcode2`, {
+    title: 'Atlantis Barcode 2',
+    projectAssets,
+  });
+});
+
 exports.getAtlasAzimuth = catchAsync(async (req, res) => {
   let sortOptions = { sold: 1, price: 1 };
   const projectAssets =
