@@ -256,6 +256,11 @@
   .en-about-partners-card {
     height: 67rem !important;
   }
+  .about-partners-img {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+  }
   .calendly-col {
     height: 150rem;
   }
@@ -777,6 +782,9 @@
   .en-about-partners-card {
     height: 69rem !important;
   }
+  .about-partners-img {
+    height: 22rem;
+  }
   .pricing-card-icon {
     width: 2.3rem;
     height: 2.3rem;
@@ -1209,6 +1217,9 @@
   }
   .en-about-partners-card {
     height: 65rem !important;
+  }
+  .about-partners-img {
+    height: 30rem;
   }
   .blog-card {
     -webkit-transition: all 0.3s;
@@ -1684,6 +1695,9 @@
   .en-about-partners-card {
     height: 68rem !important;
   }
+  .about-partners-img {
+    height: 37rem;
+  }
   .calendly-col {
     height: 145rem;
   }
@@ -2057,6 +2071,9 @@
   }
   .en-about-partners-card {
     height: 75rem !important;
+  }
+  .about-partners-img {
+    height: 20rem;
   }
   .contact-us-button-fixed {
     width: 20rem !important;
