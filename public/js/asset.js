@@ -7,7 +7,10 @@ export const filterAssets = async (filter, sort, type, pageNumber, resPerPage) =
 
     const res = await axios({
       method: 'POST',
-      url: `/asset/search/${urlParams}`,
+      url:
+        JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE
+          ? `/asset/search/${urlParams}`
+          : `/${JSON.parse(localStorage.getItem(config.LANGUAGE_KEY))}/asset/search/${urlParams}`,
       data: { filter },
     });
     if (res.data.status === 'success') {

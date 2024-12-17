@@ -7,7 +7,10 @@ export const getBlogs = async (pageNumber, resPerPage) => {
 
     const res = await axios({
       method: 'POST',
-      url: `/blog/get-blogs/${urlParams}`,
+      url:
+        JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE
+          ? `/blog/get-blogs/${urlParams}`
+          : `/${JSON.parse(localStorage.getItem(config.LANGUAGE_KEY))}/blog/get-blogs/${urlParams}`,
     });
     if (res.data.status === 'success') {
       const data = {
