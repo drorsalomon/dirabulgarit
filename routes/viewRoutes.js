@@ -22,7 +22,8 @@ router.get('/privacy', viewsController.getPrivacy);
 router.get('/accessibility', viewsController.getAccessibility);
 router.get('/terms-of-service', viewsController.getTermsOfService);
 router.get('/site-map', viewsController.getSiteMap);
-//router.get('/webinar', viewsController.getWebinar);
+// router.get('/webinar-signup', viewsController.getWebinar);
+// router.get('/webinar-archive', viewsController.getWebinarArchive);
 
 // Route to serve sitemap.xml
 router.get('/sitemap.xml', (req, res) => {

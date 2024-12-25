@@ -823,6 +823,14 @@ if (config.Elements.azimuthProjectAreaNumber)
     68000,
     JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
   );
+// Villa Margarita
+if (config.Elements.villaMargaritaProjectBuildingsNumber) animation.animateCounter(config.Elements.villaMargaritaProjectBuildingsNumber, 1);
+if (config.Elements.villaMargaritaProjectFloorsNumber) animation.animateCounter(config.Elements.villaMargaritaProjectFloorsNumber, 4);
+if (config.Elements.villaMargaritaProjectApartmentsNumber) animation.animateCounter(config.Elements.villaMargaritaProjectApartmentsNumber, 72);
+// Mellia Florance
+if (config.Elements.melliaFloranceProjectBuildingsNumber) animation.animateCounter(config.Elements.melliaFloranceProjectBuildingsNumber, 1);
+if (config.Elements.melliaFloranceProjectFloorsNumber) animation.animateCounter(config.Elements.melliaFloranceProjectFloorsNumber, 5);
+if (config.Elements.melliaFloranceProjectApartmentsNumber) animation.animateCounter(config.Elements.melliaFloranceProjectApartmentsNumber, 29);
 // Camelot
 if (config.Elements.camelotProjectPriceNumber)
   animation.animateCounter(config.Elements.camelotProjectPriceNumber, new Intl.NumberFormat().format(2800000), '€');

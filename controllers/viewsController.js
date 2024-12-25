@@ -82,3 +82,9 @@ exports.getSiteMap = (req, res) => {
 //     title: 'וובינר השקעות נדל"ן בבולגריה',
 //   });
 // });
+
+// exports.getWebinarArchive = catchAsync(async (req, res) => {
+//   res.status(200).render(`${res.locals.lang}/webinarArchive`, {
+//     title: 'ארכיון וובינר השקעות נדל"ן בבולגריה',
+//   });
+// });

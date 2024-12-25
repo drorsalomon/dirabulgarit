@@ -1,0 +1,135 @@
+extends ../base
+
+block head
+    title Mellia Florance
+    meta(name="description" content="Mellia Florance in Nessebar offers luxurious two- and three-bedroom apartments near the Black Sea. Perfect for year-round living or investment, with modern design, elegant shared spaces, and a year-round fitness center.")
+    meta(name="robots" content="index, follow")
+    link(rel="canonical" href="https://www.dirabulgarit.com/en/project/mellia-florance")
+    link(rel="alternate" href="https://www.dirabulgarit.com/en/project/mellia-florance" hreflang="en")
+    link(rel="alternate" href="https://www.dirabulgarit.com/project/mellia-florance" hreflang="he")
+
+    meta(property="og:title" content="Villa Margarita")
+    meta(property="og:description" content="Mellia Florance in Nessebar offers luxurious two- and three-bedroom apartments near the Black Sea. Perfect for year-round living or investment, with modern design, elegant shared spaces, and a year-round fitness center.")
+    meta(property="og:image" content="https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645777-mellia-florance-1.webp")
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../../he/_headLinksScripts
+
+block content 
+
+    .container-fluid.project-main-image-container(role="img" aria-labelledby="melliaFloranceMainImageDescription")
+        span.visually-hidden(id="melliaFloranceMainImageDescription") An image of the Mellia Florance project building
+        .row.project-main-image-row
+            .col.project-main-image-col.project-main-image-col-mellia-florance
+                h1.project-main-image-headline.project-main-image-headline-mellia-florance Mellia Florance
+
+    .container-fluid.project-gallery-container
+        .row.project-gallery-headline-row.text-center.mx-2
+            .col-12.project-gallery-headline-col.p-0    
+                h2.project-gallery-headline Gallery
+        .row.project-gallery-row.text-center.mx-2
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645805-mellia-florance-2.webp' alt='image of Mellia Florance project' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645813-mellia-florance-3.webp' alt='image of Mellia Florance project' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645819-mellia-florance-4.webp' alt='image of Mellia Florance project' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")  
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645827-mellia-florance-5.webp' alt='image of Mellia Florance project' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645777-mellia-florance-1.webp' alt='image of Mellia Florance project' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645783-mellia-florance-1st-floor-plan.webp' alt='image of Mellia Florance project' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+
+    #projectModal.modal.fade.asset-gallery-modal.text-center(tabindex='-1' aria-labelledby='projectModalLabel' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered
+            .asset-gallery-modal-content.modal-content
+                .row.d-flex
+                    .col-6.align-content-center
+                        div.text-start.px-4
+                            div.asset-gallery-img-text Mellia Florance
+                    .col-6
+                        div.text-end.p-3
+                            button.btn-close.asset-gallery-modal-close-btn.p-2.my-auto(type='button' data-bs-dismiss='modal' aria-label='Close')
+                #projectCarousel.carousel.slide(data-bs-touch='true' data-bs-interval='30000' data-bs-ride='carousel')
+                    .carousel-inner.asset-modal-carousel-inner
+                        .carousel-item.asset-gallery-carousel-item.align-content-center.active
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645805-mellia-florance-2.webp' alt='image of Mellia Florance project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645813-mellia-florance-3.webp' alt='image of Mellia Florance project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645819-mellia-florance-4.webp' alt='image of Mellia Florance project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645827-mellia-florance-5.webp' alt='image of Mellia Florance project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645777-mellia-florance-1.webp' alt='image of Mellia Florance project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645783-mellia-florance-1st-floor-plan.webp' alt='image of Mellia Florance project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645809-mellia-florance-2nd-floor-plan.webp' alt='image of Mellia Florance project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645816-mellia-florance-3rd-floor-plan.webp' alt='image of Mellia Florance project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645824-mellia-florance-4th-floor-plan.webp' alt='image of Mellia Florance project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645830-mellia-florance-5th-floor-plan-1.webp' alt='image of Mellia Florance project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645834-mellia-florance-5th-floor-plan-2.webp' alt='image of Mellia Florance project')
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645838-mellia-florance-5th-floor-plan-3.webp' alt='image of Mellia Florance project')
+                    button.carousel-control-prev(type='button' data-bs-target='#projectCarousel' data-bs-slide='prev')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-prev-icon.asset-gallery-carousel-prev-icon(aria-hidden='true')
+                    button.carousel-control-next(type='button' data-bs-target='#projectCarousel' data-bs-slide='next')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-next-icon.asset-gallery-carousel-next-icon(aria-hidden='true')        
+    
+    .container-fluid.project-numbers-container
+        .row.project-numbers-row.text-end.justify-content-center.mx-5
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-buildings-number.project-numbers-buildings-number-mellia-florance      
+                div.project-numbers-text Buildings
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-floors-number.project-numbers-floors-number-mellia-florance      
+                div.project-numbers-text Floors        
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-apartments-number.project-numbers-apartments-number-mellia-florance     
+                div.project-numbers-text Apartments
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.px-xxl-2.text-center
+                div.project-numbers-start-number 2025         
+                div.project-numbers-text Construction End
+    
+    .container-fluid.project-details-container
+        .row.project-details-row.text-end.mx-5.justify-content-center
+            .col-12.project-details-headline-col.p-0.text-center
+                h2.project-details-headline Mellia Florance
+            .col-10.project-details-headline-col.p-0.text-start
+                div.project-details-text Mellia Florance is the latest seaside project of construction and investment company SofBuildStroy. The elegant boutique building is located in the Black Sea district of the town of Nessebar - a year-round attractive destination for people from all over the world. The apartments are ideal for both year-round residence and your vacation - for any moment when you want to escape and steal some time by the sea or for those who are looking for a property with an investment purpose for rental.
+                div.project-details-text The building offers two-bedroom and three-bedroom apartments, among which you can find the most suitable for your wishes and lifestyle. All are impeccably planned, so that you can furnish comfortably and live comfortably and well. The top floor has a ceiling height of 3 meters, for an exceptional feeling of spaciousness in the spirit of the best buildings in the world. No less impressive are the common areas, which will be covered with beautiful natural marble and travertine - so that there is class and luxury from the first step in Mellia Florance.
+                div.project-details-text The floors are five in total - four residential and one ground floor with various shops and offices. The building will have a year-round fitness center and a cafe offering healthy food and drinks. The facade is suspended - clinker, inspired by a number of iconic buildings for Nessebar, where red brick predominates. Here it is present as a beautiful detail that serves as a unifying element with the architecture of the ancient city-museum and its old and new quarters. Parking spaces are arranged in the yard.
+                div.project-details-text To ensure consistently high quality, SofBuildStroy is both the Investor and the Builder of the site, with the company's own construction supervision taking care of the proper implementation of each stage. 
+
+    .container-fluid.project-mid-image-container.project-mid-image-container-mellia-florance(role="img" aria-labelledby="melliaFloranceMidImageDescription")
+        span.visually-hidden(id="melliaFloranceMidImageDescription") Image of the Mellia Florance project
+    
+    .container-fluid.project-map-container
+        .row.project-map-row.text-center.mx-2.justify-content-center 
+            .col-12.project-map-healine-col
+                h2.project-map-headline Location
+            .col-12.col-md-10.project-map-col
+                div.project-map(id='map' data-long=27.703839754215718 data-lat=42.66471901289295 data-title='Mellia Florance')             
+    
+    .container-fluid.project-assets-container
+        .row.asset-related-assets-row.justify-content-center.mx-5.text-center
+            .col-12.project-assets-headline-col
+                h2.project-assets-headline Available Properties In The Project
+            each asset in projectAssets
+                include ../_assetsCards
+        .row.mobile-asset-related-assets-row.justify-content-center.mx-1.text-center
+            .col-12.project-assets-headline-col
+                h2.project-assets-headline Available Properties In The Project
+            each asset in projectAssets
+                include ../_mobileAssetsCards    
+
+    include ../_contactUsFixed  
+    include ../_contactUsFixedMobile 

@@ -1127,6 +1127,28 @@ a:hover {
   height: 60rem;
   width: 100%;
 }
+.project-main-image-col.project-main-image-col-villa-margarita {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/villa-margarita-images/1735041996715-villa-margerita-1.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60rem;
+  width: 100%;
+}
+.project-main-image-col.project-main-image-col-mellia-florance {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645777-mellia-florance-1.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60rem;
+  width: 100%;
+}
 .project-main-image-col.project-main-image-col-camelot {
   position: relative;
   padding: 0 !important;
@@ -1217,6 +1239,28 @@ a:hover {
   font-size: 4.2rem;
 }
 .project-main-image-headline.project-main-image-headline-atlas-azimuth {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 4.2rem;
+}
+.project-main-image-headline.project-main-image-headline-villa-margarita {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 4.2rem;
+}
+.project-main-image-headline.project-main-image-headline-mellia-florance {
   position: absolute;
   top: 50%;
   left: 40%;
@@ -1419,6 +1463,28 @@ a:hover {
   background-repeat: no-repeat;
   background-size: contain;
   height: 50rem;
+  width: 100%;
+}
+.project-mid-image-container.project-mid-image-container-villa-margarita {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/villa-margarita-images/1735041996753-villa-margerita-5.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50rem;
+  width: 100%;
+}
+.project-mid-image-container.project-mid-image-container-mellia-florance {
+  position: relative;
+  padding: 0 !important;
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645819-mellia-florance-4.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40rem;
   width: 100%;
 }
 .project-mid-image-container.project-mid-image-container-camelot {
@@ -2475,6 +2541,33 @@ a:hover {
 .webinar-contact-us-container {
   background-color: #324762;
   padding-top: 3rem;
+}
+
+.webinar-archive-headline-row {
+  padding-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.webinar-archive-headline {
+  font-size: 3.4rem;
+  font-weight: 600;
+  color: #2078a9;
+}
+
+.webinar-archive-video-row {
+  margin-bottom: 5rem;
+}
+
+.webinar-archive-video-headline {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.webinar-video-col {
+  background-color: #2078a9;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 * {

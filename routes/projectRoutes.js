@@ -15,5 +15,7 @@ router.get('/atlantis-euphoria', projectController.getAtlantisEuphoria);
 router.get('/atlantis-barcode', projectController.getAtlantisBarcode);
 router.get('/atlantis-barcode-2', projectController.getAtlantisBarcode2);
 router.get('/atlas-azimuth', projectController.getAtlasAzimuth);
+router.get('/villa-margarita', projectController.getVillaMargarita);
+router.get('/mellia-florance', projectController.getMelliaFlorance);
 
 module.exports = router;

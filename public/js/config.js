@@ -186,6 +186,14 @@ export const Elements = {
   azimuthProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlas-azimuth'),
   azimuthProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlas-azimuth'),
   azimuthProjectAreaNumber: document.querySelector('.project-numbers-area-number-atlas-azimuth'),
+  // Villa Margarita
+  villaMargaritaProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-villa-margarita'),
+  villaMargaritaProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-villa-margarita'),
+  villaMargaritaProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-villa-margarita'),
+  // Mellia Florance
+  melliaFloranceProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-mellia-florance'),
+  melliaFloranceProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-mellia-florance'),
+  melliaFloranceProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-mellia-florance'),
   // Camelot
   camelotProjectPriceNumber: document.querySelector('.project-numbers-price-number-camelot'),
   camelotProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-camelot'),

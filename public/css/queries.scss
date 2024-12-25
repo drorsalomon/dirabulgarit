@@ -453,6 +453,14 @@
       @include projectHeadline(32%);
       font-size: $h1;
     }
+    &.project-main-image-headline-villa-margarita {
+      @include projectHeadline(32%);
+      font-size: $h1;
+    }
+    &.project-main-image-headline-mellia-florance {
+      @include projectHeadline(32%);
+      font-size: $h1;
+    }
     &.project-main-image-headline-camelot {
       @include projectHeadline(38%);
       font-size: $h1;
@@ -959,6 +967,12 @@
       @include projectHeadline(30%);
     }
     &.project-main-image-headline-atlas-azimuth {
+      @include projectHeadline(25%);
+    }
+    &.project-main-image-headline-villa-margarita {
+      @include projectHeadline(25%);
+    }
+    &.project-main-image-headline-mellia-florance {
       @include projectHeadline(25%);
     }
   }
@@ -1500,6 +1514,12 @@
     &.project-main-image-headline-atlas-azimuth {
       @include projectHeadline(20%);
     }
+    &.project-main-image-headline-villa-margarita {
+      @include projectHeadline(20%);
+    }
+    &.project-main-image-headline-mellia-florance {
+      @include projectHeadline(20%);
+    }
     &.project-main-image-headline-camelot {
       @include projectHeadline(36%);
     }
@@ -1544,6 +1564,13 @@
     &.project-mid-image-container-atlas-azimuth {
       @include projectMiddleImage(
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413055-azimuth-project-21.webp',
+        100% 60rem,
+        70rem
+      );
+    }
+    &.project-mid-image-container-villa-margarita {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/villa-margarita-images/1735041996753-villa-margerita-5.jpg',
         100% 60rem,
         70rem
       );
@@ -1990,6 +2017,14 @@
       @include projectHeadline(31%);
       font-size: $h0;
     }
+    &.project-main-image-headline-villa-margarita {
+      @include projectHeadline(31%);
+      font-size: $h0;
+    }
+    &.project-main-image-headline-mellia-florance {
+      @include projectHeadline(33%);
+      font-size: $h0;
+    }
     &.project-main-image-headline-camelot {
       @include projectHeadline(36%);
       font-size: $h0;
@@ -2062,6 +2097,20 @@
     &.project-mid-image-container-atlas-azimuth {
       @include projectMiddleImage(
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413055-azimuth-project-21.webp',
+        100% 80rem,
+        90rem
+      );
+    }
+    &.project-mid-image-container-villa-margarita {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/villa-margarita-images/1735041996753-villa-margerita-5.jpg',
+        100% 80rem,
+        90rem
+      );
+    }
+    &.project-mid-image-container-mellia-florance {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645819-mellia-florance-4.webp',
         100% 80rem,
         90rem
       );
@@ -2288,6 +2337,12 @@
     }
     &.project-main-image-headline-atlas-azimuth {
       @include projectHeadline(26%);
+    }
+    &.project-main-image-headline-villa-margarita {
+      @include projectHeadline(26%);
+    }
+    &.project-main-image-headline-mellia-florance {
+      @include projectHeadline(28%);
     }
   }
 

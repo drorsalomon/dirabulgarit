@@ -28,6 +28,7 @@ exports.getBlogs = catchAsync(async (req, res, next) => {
           .sort(sortOptions)
           .skip((req.params.pageNumber - 1) * req.params.resPerPage)
           .limit(parseInt(req.params.resPerPage));
+
   totalBlogs = blogs.length;
 
   blogsArray = blogs;
