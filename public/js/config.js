@@ -22,6 +22,9 @@ export const Elements = {
   homePageLink: document.querySelector('.homepage-link'),
   assetCatalogDdBtn: document.querySelector('.assets-catalog-dropdown-btn'),
   projectsDdBtn: document.querySelector('.projects-dropdown-btn'),
+  projectBurgasDdBtn: document.querySelector('.project-burgas-dropdown-btn'),
+  projectSofiaDdBtn: document.querySelector('.project-sofia-dropdown-btn'),
+  projectSvetiDdBtn: document.querySelector('.project-sveti-dropdown-btn'),
   commercialDdBtn: document.querySelector('.commercial-dropdown-btn'),
   blogLink: document.querySelector('.blog-nav-link'),
   currencyDdBtn: document.querySelector('.currency-dropdown-btn'),
@@ -194,6 +197,16 @@ export const Elements = {
   melliaFloranceProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-mellia-florance'),
   melliaFloranceProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-mellia-florance'),
   melliaFloranceProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-mellia-florance'),
+  // Mountain View Residence
+  mountainResidenceProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-mountain-residence'),
+  mountainResidenceProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-mountain-residence'),
+  mountainResidenceProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-mountain-residence'),
+  mountainResidenceProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-mountain-residence'),
+  // Vitosah Mountain View
+  mountainViewProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-mountain-view'),
+  mountainViewProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-mountain-view'),
+  mountainViewProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-mountain-view'),
+  mountainViewProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-mountain-view'),
   // Camelot
   camelotProjectPriceNumber: document.querySelector('.project-numbers-price-number-camelot'),
   camelotProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-camelot'),

@@ -461,6 +461,14 @@
       @include projectHeadline(32%);
       font-size: $h1;
     }
+    &.project-main-image-headline-mountain-residence {
+      @include projectHeadline(36%);
+      font-size: $h1;
+    }
+    &.project-main-image-headline-mountain-view {
+      @include projectHeadline(36%);
+      font-size: $h1;
+    }
     &.project-main-image-headline-camelot {
       @include projectHeadline(38%);
       font-size: $h1;
@@ -1014,6 +1022,20 @@
         60rem
       );
     }
+    &.project-mid-image-container-mountain-residence {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-mountain-view-residence-images/1735210321595-sofia-mountain-view-residence-8.webp',
+        100% 40rem,
+        40rem
+      );
+    }
+    &.project-mid-image-container-mountain-view {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387898022-vitosha-mountain-view-4.webp',
+        100% 50rem,
+        50rem
+      );
+    }
     &.project-mid-image-container-sofia-b5 {
       @include projectMiddleImage(
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-b4-images/1726409077338-sofia-b5-building-2.webp',
@@ -1520,6 +1542,12 @@
     &.project-main-image-headline-mellia-florance {
       @include projectHeadline(20%);
     }
+    &.project-main-image-headline-mountain-residence {
+      @include projectHeadline(32%);
+    }
+    &.project-main-image-headline-mountain-view {
+      @include projectHeadline(29%);
+    }
     &.project-main-image-headline-camelot {
       @include projectHeadline(36%);
     }
@@ -1572,6 +1600,20 @@
       @include projectMiddleImage(
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/villa-margarita-images/1735041996753-villa-margerita-5.jpg',
         100% 60rem,
+        70rem
+      );
+    }
+    &.project-mid-image-container-mountain-residence {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-mountain-view-residence-images/1735210321595-sofia-mountain-view-residence-8.webp',
+        100% 50rem,
+        50rem
+      );
+    }
+    &.project-mid-image-container-mountain-view {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387898022-vitosha-mountain-view-4.webp',
+        100% 70rem,
         70rem
       );
     }
@@ -2025,6 +2067,14 @@
       @include projectHeadline(33%);
       font-size: $h0;
     }
+    &.project-main-image-headline-mountain-residence {
+      @include projectHeadline(35%);
+      font-size: $h0;
+    }
+    &.project-main-image-headline-mountain-view {
+      @include projectHeadline(35%);
+      font-size: $h0;
+    }
     &.project-main-image-headline-camelot {
       @include projectHeadline(36%);
       font-size: $h0;
@@ -2113,6 +2163,20 @@
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645819-mellia-florance-4.webp',
         100% 80rem,
         90rem
+      );
+    }
+    &.project-mid-image-container-mountain-residence {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-mountain-view-residence-images/1735210321595-sofia-mountain-view-residence-8.webp',
+        100% 60rem,
+        60rem
+      );
+    }
+    &.project-mid-image-container-mountain-view {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387898022-vitosha-mountain-view-4.webp',
+        100% 80rem,
+        80rem
       );
     }
     &.project-mid-image-container-camelot {
@@ -2385,6 +2449,20 @@
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413055-azimuth-project-21.webp',
         100% 90rem,
         100rem
+      );
+    }
+    &.project-mid-image-container-mountain-residence {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-mountain-view-residence-images/1735210321595-sofia-mountain-view-residence-8.webp',
+        100% 70rem,
+        70rem
+      );
+    }
+    &.project-mid-image-container-mountain-view {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387898022-vitosha-mountain-view-4.webp',
+        100% 90rem,
+        90rem
       );
     }
     &.project-mid-image-container-camelot {

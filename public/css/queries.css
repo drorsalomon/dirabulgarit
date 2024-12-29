@@ -385,6 +385,28 @@
     color: #ffffff;
     font-size: 4.8rem;
   }
+  .project-main-image-headline.project-main-image-headline-mountain-residence {
+    position: absolute;
+    top: 50%;
+    left: 36%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 4.8rem;
+  }
+  .project-main-image-headline.project-main-image-headline-mountain-view {
+    position: absolute;
+    top: 50%;
+    left: 36%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 4.8rem;
+  }
   .project-main-image-headline.project-main-image-headline-camelot {
     position: absolute;
     top: 50%;
@@ -929,6 +951,28 @@
     height: 60rem;
     width: 100%;
   }
+  .project-mid-image-container.project-mid-image-container-mountain-residence {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-mountain-view-residence-images/1735210321595-sofia-mountain-view-residence-8.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 40rem;
+    height: 40rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-mountain-view {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387898022-vitosha-mountain-view-4.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 50rem;
+    height: 50rem;
+    width: 100%;
+  }
   .project-mid-image-container.project-mid-image-container-sofia-b5 {
     position: relative;
     padding: 0 !important;
@@ -1380,6 +1424,26 @@
     font-weight: 600;
     color: #ffffff;
   }
+  .project-main-image-headline.project-main-image-headline-mountain-residence {
+    position: absolute;
+    top: 50%;
+    left: 32%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .project-main-image-headline.project-main-image-headline-mountain-view {
+    position: absolute;
+    top: 50%;
+    left: 29%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
   .project-main-image-headline.project-main-image-headline-camelot {
     position: absolute;
     top: 50%;
@@ -1463,6 +1527,28 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 60rem;
+    height: 70rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-mountain-residence {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-mountain-view-residence-images/1735210321595-sofia-mountain-view-residence-8.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 50rem;
+    height: 50rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-mountain-view {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387898022-vitosha-mountain-view-4.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 70rem;
     height: 70rem;
     width: 100%;
   }
@@ -1882,6 +1968,28 @@
     color: #ffffff;
     font-size: 10rem;
   }
+  .project-main-image-headline.project-main-image-headline-mountain-residence {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 10rem;
+  }
+  .project-main-image-headline.project-main-image-headline-mountain-view {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 10rem;
+  }
   .project-main-image-headline.project-main-image-headline-camelot {
     position: absolute;
     top: 50%;
@@ -2024,6 +2132,28 @@
     background-repeat: no-repeat;
     background-size: 100% 80rem;
     height: 90rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-mountain-residence {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-mountain-view-residence-images/1735210321595-sofia-mountain-view-residence-8.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 60rem;
+    height: 60rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-mountain-view {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387898022-vitosha-mountain-view-4.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 80rem;
+    height: 80rem;
     width: 100%;
   }
   .project-mid-image-container.project-mid-image-container-camelot {
@@ -2325,6 +2455,28 @@
     background-repeat: no-repeat;
     background-size: 100% 90rem;
     height: 100rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-mountain-residence {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-mountain-view-residence-images/1735210321595-sofia-mountain-view-residence-8.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 70rem;
+    height: 70rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-mountain-view {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387898022-vitosha-mountain-view-4.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 90rem;
+    height: 90rem;
     width: 100%;
   }
   .project-mid-image-container.project-mid-image-container-camelot {

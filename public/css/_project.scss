@@ -46,6 +46,16 @@
   &.project-main-image-col-mellia-florance {
     @include projectBackgroundImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645777-mellia-florance-1.webp');
   }
+  &.project-main-image-col-mountain-residence {
+    @include projectBackgroundImage(
+      'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-mountain-view-residence-images/1735210321587-sofia-mountain-view-residence-6.webp'
+    );
+  }
+  &.project-main-image-col-mountain-view {
+    @include projectBackgroundImage(
+      'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387897986-vitosha-mountain-view-1.webp'
+    );
+  }
   &.project-main-image-col-camelot {
     @include projectBackgroundImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155260-camelot-20.webp');
   }
@@ -89,6 +99,14 @@
     font-size: $h2;
   }
   &.project-main-image-headline-mellia-florance {
+    @include projectHeadline(40%);
+    font-size: $h2;
+  }
+  &.project-main-image-headline-mountain-residence {
+    @include projectHeadline(40%);
+    font-size: $h2;
+  }
+  &.project-main-image-headline-mountain-view {
     @include projectHeadline(40%);
     font-size: $h2;
   }
@@ -248,6 +266,20 @@
       'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645819-mellia-florance-4.webp',
       contain,
       40rem
+    );
+  }
+  &.project-mid-image-container-mountain-residence {
+    @include projectMiddleImage(
+      'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-mountain-view-residence-images/1735210321595-sofia-mountain-view-residence-8.webp',
+      contain,
+      30rem
+    );
+  }
+  &.project-mid-image-container-mountain-view {
+    @include projectMiddleImage(
+      'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387898022-vitosha-mountain-view-4.webp',
+      contain,
+      30rem
     );
   }
   &.project-mid-image-container-camelot {

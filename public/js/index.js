@@ -112,8 +112,10 @@ window.onload = function () {
 
   // Set 'active-link' class on navbar links every time the page is loaded
   let href = window.location.href;
-  href = href.includes('en') ? href.substring(href.lastIndexOf('en') + 2) : href.substring(href.lastIndexOf('/') + 1);
+  //href = href.includes('/en') ? href.substring(href.lastIndexOf('/en') + 2) : href.substring(href.lastIndexOf('/') + 1);
+  href = href.substring(href.lastIndexOf('/') + 1);
   // For homepage link
+  console.log(href);
   if (!href && !config.Elements.homePageLink.classList.contains('active-link')) {
     config.Elements.homePageLink.classList.toggle('active-link');
   }
@@ -122,13 +124,34 @@ window.onload = function () {
   }
   config.Elements.activeNavLinks.forEach((link) => {
     let linkString = link.toString();
-
-    if (linkString.includes(href) && href) {
+    let linkStringEnding = linkString.substring(linkString.lastIndexOf('/') + 1);
+    if (href && linkStringEnding === href) {
       link.classList.toggle('active-link');
       if ((href && href.includes('search-results')) || linkString.includes('search') || linkString.includes('project') || linkString.includes('commercial')) {
         config.Elements.assetCatalogDdBtn.classList.toggle('active-link');
       }
-      if (href && linkString.includes('project')) config.Elements.projectsDdBtn.classList.toggle('active-link');
+      if (href && linkString.includes('project')) {
+        config.Elements.projectsDdBtn.classList.toggle('active-link');
+        if (
+          linkStringEnding.includes('atlantis-aria-2') ||
+          linkStringEnding.includes('atlantis-aria-3') ||
+          linkStringEnding.includes('atlantis-euphoria') ||
+          linkStringEnding.includes('atlas-azimuth')
+        ) {
+          config.Elements.projectBurgasDdBtn.classList.toggle('active-link');
+        }
+        if (
+          linkStringEnding.includes('atlantis-barcode') ||
+          linkStringEnding.includes('atlantis-barcode-2') ||
+          linkStringEnding.includes('mountain-view-residence') ||
+          linkStringEnding.includes('vitosha-mountain-view')
+        ) {
+          config.Elements.projectSofiaDdBtn.classList.toggle('active-link');
+        }
+        if (linkStringEnding.includes('villa-margarita') || linkStringEnding.includes('mellia-florance')) {
+          config.Elements.projectSvetiDdBtn.classList.toggle('active-link');
+        }
+      }
       if (href && linkString.includes('commercial')) config.Elements.commercialDdBtn.classList.toggle('active-link');
     }
   });
@@ -203,7 +226,8 @@ if (config.Elements.navbarToggler)
     e.preventDefault();
     let href = window.location.href;
     let subHref = href.substring(href.lastIndexOf('/') - 10);
-    href = href.includes('en') ? href.substring(href.lastIndexOf('en') + 2) : href.substring(href.lastIndexOf('/') + 1);
+    //href = href.includes('/en') ? href.substring(href.lastIndexOf('/en') + 2) : href.substring(href.lastIndexOf('/') + 1);
+    href = href.substring(href.lastIndexOf('/') + 1);
     config.Elements.assetCatalogDdBtn.classList.remove('offcanvas-active-link');
     config.Elements.projectsDdBtn.classList.remove('offcanvas-active-link');
     // For homepage link
@@ -218,21 +242,45 @@ if (config.Elements.navbarToggler)
     config.Elements.activeNavLinks.forEach((link) => {
       let linkString = link.toString();
       link.style.color = 'white';
-      if (href && linkString.includes(href) && !link.classList.contains('offcanvas-active-link')) {
+      let linkStringEnding = linkString.substring(linkString.lastIndexOf('/') + 1);
+      if (href && linkStringEnding === href && !link.classList.contains('offcanvas-active-link')) {
         link.classList.toggle('offcanvas-active-link');
         link.classList.toggle('active-link');
-      }
-      if ((href && href.includes('search-results')) || href.includes('search') || subHref.includes('project') || subHref.includes('commercial')) {
-        config.Elements.assetCatalogDdBtn.classList.remove('active-link');
-        config.Elements.assetCatalogDdBtn.classList.add('offcanvas-active-link');
-      }
-      if (href && subHref.includes('project')) {
-        config.Elements.projectsDdBtn.classList.remove('active-link');
-        config.Elements.projectsDdBtn.classList.add('offcanvas-active-link');
-      }
-      if (href && subHref.includes('commercial')) {
-        config.Elements.commercialDdBtn.classList.remove('active-link');
-        config.Elements.commercialDdBtn.classList.add('offcanvas-active-link');
+
+        if ((href && href.includes('search-results')) || href.includes('search') || subHref.includes('project') || subHref.includes('commercial')) {
+          config.Elements.assetCatalogDdBtn.classList.remove('active-link');
+          config.Elements.assetCatalogDdBtn.classList.add('offcanvas-active-link');
+        }
+        if (href && subHref.includes('project')) {
+          config.Elements.projectsDdBtn.classList.remove('active-link');
+          config.Elements.projectsDdBtn.classList.add('offcanvas-active-link');
+          if (
+            linkStringEnding.includes('atlantis-aria-2') ||
+            linkStringEnding.includes('atlantis-aria-3') ||
+            linkStringEnding.includes('atlantis-euphoria') ||
+            linkStringEnding.includes('atlas-azimuth')
+          ) {
+            config.Elements.projectBurgasDdBtn.classList.remove('active-link');
+            config.Elements.projectBurgasDdBtn.classList.add('offcanvas-active-link');
+          }
+          if (
+            linkStringEnding.includes('atlantis-barcode') ||
+            linkStringEnding.includes('atlantis-barcode-2') ||
+            linkStringEnding.includes('mountain-view-residence') ||
+            linkStringEnding.includes('vitosha-mountain-view')
+          ) {
+            config.Elements.projectSofiaDdBtn.classList.remove('active-link');
+            config.Elements.projectSofiaDdBtn.classList.add('offcanvas-active-link');
+          }
+          if (linkStringEnding.includes('villa-margarita') || linkStringEnding.includes('mellia-florance')) {
+            config.Elements.projectSvetiDdBtn.classList.remove('active-link');
+            config.Elements.projectSvetiDdBtn.classList.add('offcanvas-active-link');
+          }
+        }
+        if (href && subHref.includes('commercial')) {
+          config.Elements.commercialDdBtn.classList.remove('active-link');
+          config.Elements.commercialDdBtn.classList.add('offcanvas-active-link');
+        }
       }
     });
   });
@@ -831,6 +879,16 @@ if (config.Elements.villaMargaritaProjectApartmentsNumber) animation.animateCoun
 if (config.Elements.melliaFloranceProjectBuildingsNumber) animation.animateCounter(config.Elements.melliaFloranceProjectBuildingsNumber, 1);
 if (config.Elements.melliaFloranceProjectFloorsNumber) animation.animateCounter(config.Elements.melliaFloranceProjectFloorsNumber, 5);
 if (config.Elements.melliaFloranceProjectApartmentsNumber) animation.animateCounter(config.Elements.melliaFloranceProjectApartmentsNumber, 29);
+// Mountain View Residence
+if (config.Elements.mountainResidenceProjectBuildingsNumber) animation.animateCounter(config.Elements.mountainResidenceProjectBuildingsNumber, 1);
+if (config.Elements.mountainResidenceProjectFloorsNumber) animation.animateCounter(config.Elements.mountainResidenceProjectFloorsNumber, 6);
+if (config.Elements.mountainResidenceProjectApartmentsNumber) animation.animateCounter(config.Elements.mountainResidenceProjectApartmentsNumber, 133);
+if (config.Elements.mountainResidenceProjectParkingSpotsNumber) animation.animateCounter(config.Elements.mountainResidenceProjectParkingSpotsNumber, 129);
+// Vitosha Mountain
+if (config.Elements.mountainViewProjectBuildingsNumber) animation.animateCounter(config.Elements.mountainViewProjectBuildingsNumber, 1);
+if (config.Elements.mountainViewProjectFloorsNumber) animation.animateCounter(config.Elements.mountainViewProjectFloorsNumber, 4);
+if (config.Elements.mountainViewProjectApartmentsNumber) animation.animateCounter(config.Elements.mountainViewProjectApartmentsNumber, 67);
+if (config.Elements.mountainViewProjectParkingSpotsNumber) animation.animateCounter(config.Elements.mountainViewProjectParkingSpotsNumber, 68);
 // Camelot
 if (config.Elements.camelotProjectPriceNumber)
   animation.animateCounter(config.Elements.camelotProjectPriceNumber, new Intl.NumberFormat().format(2800000), '€');
