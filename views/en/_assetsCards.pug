@@ -21,7 +21,7 @@
                             div.card-text-container
                                 img.card-icon.en-card-icon(src='/img/icons/building-svgrepo-com.svg' alt='Building icon')        
                                 span= `-`
-                        if asset.price   
+                        if asset.price && !asset.sold   
                             div.card-text-container       
                                 img.card-icon.en-card-icon(src='/img/icons/price-tag-svgrepo-com.svg' alt='Price tag icon')
                                 span.asset-price(data-europrice=`${asset.priceBeginningAt === true ? 'Beginning at ' : ''} €${ new Intl.NumberFormat().format(asset.price)}` data-nisprice=`${asset.priceBeginningAt === true ? 'Beginning at ' : ''} ₪${new Intl.NumberFormat().format(asset.priceNis)}`)

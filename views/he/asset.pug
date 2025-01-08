@@ -69,7 +69,7 @@ block content
                         span.asset-details-id(dir='rtl')= asset.id 
                         span.assets-details-features-text(dir='rtl') <strong>מספר נכס: </strong>
                         img.assets-details-features-icon(src='/img/icons/hashtag-svgrepo-com-white.svg' alt='אייקון של מספר')       
-                if asset.price     
+                if asset.price && !asset.sold    
                     div.assets-details-features 
                         span.assets-details-features-text <strong>מחיר: </strong>
                         span.asset-price(data-europrice=`${asset.priceBeginningAt === true ? 'החל מ' : ''}€${new Intl.NumberFormat().format(asset.price)}` data-nisprice=`${asset.priceBeginningAt === true ? 'החל מ' : ''}₪${new Intl.NumberFormat().format(asset.priceNis)}`)

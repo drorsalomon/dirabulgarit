@@ -21,7 +21,7 @@
                             div.card-text-container
                                 span= `-`
                                 img.card-icon(src='/img/icons/building-svgrepo-com.svg' alt='אייקון של בניין')        
-                        if asset.price   
+                        if asset.price && !asset.sold
                             div.card-text-container       
                                 span.asset-price(data-europrice=`${asset.priceBeginningAt === true ? 'החל מ' : ''}€${ new Intl.NumberFormat().format(asset.price)}` data-nisprice=`${asset.priceBeginningAt === true ? 'החל מ' : ''}₪${new Intl.NumberFormat().format(asset.priceNis)}`)
                                 img.card-icon(src='/img/icons/price-tag-svgrepo-com.svg' alt='אייקון של תג מחיר')

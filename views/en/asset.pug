@@ -67,7 +67,7 @@ block content
                         img.assets-details-features-icon(src='/img/icons/hashtag-svgrepo-com-white.svg' alt='Number icon')       
                         span.assets-details-features-text <strong>ID: </strong>
                         span.asset-details-id= asset.id 
-                if asset.price     
+                if asset.price && !asset.sold     
                     div.assets-details-features 
                         img.assets-details-features-icon(src='/img/icons/price-tag-svgrepo-com-white.svg' alt='Price tag icon')       
                         span.assets-details-features-text <strong>Price: </strong>
