@@ -17,6 +17,19 @@ block head
 
 block content
 
+    if blog.blogAssets
+        .container-fluid.asset-related-assets-container
+            .row.asset-related-assets-row.justify-content-center.mx-2
+                .col-10.asset-related-assets-headline-col
+                    h2.asset-related-assets-headline.text-center(dir='rtl')= blog.blogTitle
+                each asset in blogAssets
+                    include _assetsCards
+            .row.mobile-asset-related-assets-row.justify-content-center.mx-2
+                .col-10.asset-related-assets-headline-col
+                    h2.asset-related-assets-headline.text-center(dir='rtl')= blog.blogTitle
+                each asset in blogAssets
+                    include _mobileAssetsCards                      
+
     .container-fluid
         .row.blog-content-row.justify-content-center 
             .col-10.blog-content-text-col

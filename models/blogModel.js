@@ -95,6 +95,7 @@ const blogSchema = mongoose.Schema({
     listThreeTitle: String,
     listThreeTexts: [String],
   },
+  blogAssets: String,
   updated_at: {
     type: Date,
     default: Date.now(),

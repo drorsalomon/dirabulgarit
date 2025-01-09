@@ -65,6 +65,7 @@ exports.renderBlogs = catchAsync(async (req, res, next) => {
 });
 
 exports.getBlog = catchAsync(async (req, res, next) => {
+  let blogAssets;
   const blog = res.locals.lang === 'he' ? await Blog.findOne({ slug: req.params.slug }) : await enBlog.findOne({ slug: req.params.slug });
   if (!blog) {
     return next(new AppError('Could not find the requested blog!', 404));
@@ -75,9 +76,18 @@ exports.getBlog = catchAsync(async (req, res, next) => {
     res.locals.lang === 'he' ? await Asset.find({ hotAsset: true }).sort(sortOptions) : await enAsset.find({ hotAsset: true }).sort(sortOptions);
   if (!hotAssets) return next(new AppError('Could not find the requested hot assets!', 404));
 
+  if (blog.blogAssets) {
+    blogAssets =
+      res.locals.lang === 'he'
+        ? await Asset.find({ city: blog.blogAssets, sold: false }).sort(sortOptions)
+        : await enAsset.find({ city: blog.blogAssets, sold: false }).sort(sortOptions);
+    if (!hotAssets) return next(new AppError('Could not find the requested hot assets!', 404));
+  }
+
   res.status(200).render(`${res.locals.lang}/blogContent`, {
     blog,
     moment,
     hotAssets,
+    blogAssets,
   });
 });
