@@ -889,6 +889,11 @@ if (config.Elements.mountainViewProjectBuildingsNumber) animation.animateCounter
 if (config.Elements.mountainViewProjectFloorsNumber) animation.animateCounter(config.Elements.mountainViewProjectFloorsNumber, 4);
 if (config.Elements.mountainViewProjectApartmentsNumber) animation.animateCounter(config.Elements.mountainViewProjectApartmentsNumber, 67);
 if (config.Elements.mountainViewProjectParkingSpotsNumber) animation.animateCounter(config.Elements.mountainViewProjectParkingSpotsNumber, 68);
+// Mountain View Boutique
+if (config.Elements.mountainBoutiqueProjectBuildingsNumber) animation.animateCounter(config.Elements.mountainBoutiqueProjectBuildingsNumber, 1);
+if (config.Elements.mountainBoutiqueProjectFloorsNumber) animation.animateCounter(config.Elements.mountainBoutiqueProjectFloorsNumber, 6);
+if (config.Elements.mountainBoutiqueProjectApartmentsNumber) animation.animateCounter(config.Elements.mountainBoutiqueProjectApartmentsNumber, 46);
+if (config.Elements.mountainBoutiqueProjectParkingSpotsNumber) animation.animateCounter(config.Elements.mountainBoutiqueProjectParkingSpotsNumber, 51);
 // Camelot
 if (config.Elements.camelotProjectPriceNumber)
   animation.animateCounter(config.Elements.camelotProjectPriceNumber, new Intl.NumberFormat().format(2800000), '€');

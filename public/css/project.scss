@@ -56,6 +56,11 @@
       'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387897986-vitosha-mountain-view-1.webp'
     );
   }
+  &.project-main-image-col-mountain-boutique {
+    @include projectBackgroundImage(
+      'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mountain-view-boutique-images1736851154917-mountain-view-boutique-1.webp'
+    );
+  }
   &.project-main-image-col-camelot {
     @include projectBackgroundImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155260-camelot-20.webp');
   }
@@ -107,6 +112,10 @@
     font-size: $h2;
   }
   &.project-main-image-headline-mountain-view {
+    @include projectHeadline(40%);
+    font-size: $h2;
+  }
+  &.project-main-image-headline-mountain-boutique {
     @include projectHeadline(40%);
     font-size: $h2;
   }

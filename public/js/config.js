@@ -207,6 +207,11 @@ export const Elements = {
   mountainViewProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-mountain-view'),
   mountainViewProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-mountain-view'),
   mountainViewProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-mountain-view'),
+  // Vitosah Mountain Boutique
+  mountainBoutiqueProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-mountain-boutique'),
+  mountainBoutiqueProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-mountain-boutique'),
+  mountainBoutiqueProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-mountain-boutique'),
+  mountainBoutiqueProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-mountain-boutique'),
   // Camelot
   camelotProjectPriceNumber: document.querySelector('.project-numbers-price-number-camelot'),
   camelotProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-camelot'),

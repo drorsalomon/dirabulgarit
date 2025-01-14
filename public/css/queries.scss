@@ -469,6 +469,10 @@
       @include projectHeadline(36%);
       font-size: $h1;
     }
+    &.project-main-image-headline-mountain-boutique {
+      @include projectHeadline(36%);
+      font-size: $h1;
+    }
     &.project-main-image-headline-camelot {
       @include projectHeadline(38%);
       font-size: $h1;
@@ -1548,6 +1552,9 @@
     &.project-main-image-headline-mountain-view {
       @include projectHeadline(29%);
     }
+    &.project-main-image-headline-mountain-boutique {
+      @include projectHeadline(31%);
+    }
     &.project-main-image-headline-camelot {
       @include projectHeadline(36%);
     }
@@ -2073,6 +2080,10 @@
     }
     &.project-main-image-headline-mountain-view {
       @include projectHeadline(35%);
+      font-size: $h0;
+    }
+    &.project-main-image-headline-mountain-boutique {
+      @include projectHeadline(36%);
       font-size: $h0;
     }
     &.project-main-image-headline-camelot {

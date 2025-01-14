@@ -19,5 +19,6 @@ router.get('/villa-margarita', projectController.getVillaMargarita);
 router.get('/mellia-florance', projectController.getMelliaFlorance);
 router.get('/mountain-view-residence', projectController.getMountainResidence);
 router.get('/vitosha-mountain-view', projectController.getMountainView);
+router.get('/mountain-view-boutique', projectController.getMountainBoutique);
 
 module.exports = router;
