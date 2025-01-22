@@ -135,6 +135,7 @@ export const Elements = {
   contactUsExpandBtn: document.querySelectorAll('.contact-us-fixed-expand-btn-container'),
   contactUsCloseBtnFixed: document.querySelectorAll('.close-contact-us-fixed-btn'),
   contactUsForm: document.querySelectorAll('.contact-us-form'),
+  contactUsHoneypotInput: document.querySelector('.contact-us-honeypot-input'),
   contactUsNameInput: document.querySelector('.contact-us-name-input'),
   contactUsPhoneInput: document.querySelector('.contact-us-phone-input'),
   contactUsEmailInput: document.querySelector('.contact-us-email-input'),

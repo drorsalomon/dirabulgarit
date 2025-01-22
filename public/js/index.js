@@ -723,6 +723,14 @@ if (config.Elements.contactUsForm)
     el.addEventListener(
       'submit',
       function (event) {
+        // Honeypot field check
+        if (config.Elements.contactUsHoneypotInput && config.Elements.contactUsHoneypotInput.value !== '') {
+          event.preventDefault();
+          event.stopPropagation();
+          console.warn('Bot detected! Submission blocked.');
+          return;
+        }
+
         if (!el.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
