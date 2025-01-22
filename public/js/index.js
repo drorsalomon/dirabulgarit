@@ -144,7 +144,8 @@ window.onload = function () {
           linkStringEnding.includes('atlantis-barcode') ||
           linkStringEnding.includes('atlantis-barcode-2') ||
           linkStringEnding.includes('mountain-view-residence') ||
-          linkStringEnding.includes('vitosha-mountain-view')
+          linkStringEnding.includes('vitosha-mountain-view') ||
+          linkStringEnding.includes('vitosha-mountain-boutique')
         ) {
           config.Elements.projectSofiaDdBtn.classList.toggle('active-link');
         }
@@ -267,7 +268,8 @@ if (config.Elements.navbarToggler)
             linkStringEnding.includes('atlantis-barcode') ||
             linkStringEnding.includes('atlantis-barcode-2') ||
             linkStringEnding.includes('mountain-view-residence') ||
-            linkStringEnding.includes('vitosha-mountain-view')
+            linkStringEnding.includes('vitosha-mountain-view') ||
+            linkStringEnding.includes('vitosha-mountain-boutique')
           ) {
             config.Elements.projectSofiaDdBtn.classList.remove('active-link');
             config.Elements.projectSofiaDdBtn.classList.add('offcanvas-active-link');
