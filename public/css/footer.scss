@@ -67,10 +67,13 @@ footer {
 
 .footer-social {
   text-align: right;
-  svg {
-    width: 5rem;
-    height: 5rem;
-  }
+}
+
+.footer-social-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-left: 0.7rem;
+  filter: brightness(0.8);
 }
 
 .en-footer-social {

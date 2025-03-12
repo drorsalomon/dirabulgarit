@@ -16,13 +16,12 @@ block head
     include _headLinksScripts
 
 block content
-
     .container.py-5
         .row.calendly-row.mx-4
             .col.calendly-col
                 div.calendly-text-container.text-center 
                     h1.calendly-text-headline(dir='rtl') אתם מוזמנים ליצור איתנו קשר!
-                    div.calendly-text(dir='rtl') <strong>1.</strong> אתם יכולים <strong>להשאיר לנו פרטים</strong> ונחזור אליכם בהקדם
+                    div.calendly-text(dir='rtl') אתם יכולים <strong>להשאיר לנו פרטים</strong> ונחזור אליכם בהקדם
                     div#crmWebToEntityForm.crmWebToEntityForm
                         form.contact-us-form#webform6296617000000479035(action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads6296617000000479035 method='POST' accept-charset='UTF-8' novalidate)
                             input(type='text' style='display:none;' name='xnQsjsdp' value='c9ef63b049adde9dd26f5acb21dc87ed1cff806c5954f97aa4908339c68a8469')
@@ -49,19 +48,19 @@ block content
                                 .col-12.contact-us-col
                                     input.contact-us-button.mx-3(type='reset' class='zcwf_button' name='reset' value='ניקוי' title='Reset')
                                     input.contact-us-button.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='שליחה' title='Submit')
-                    div.calendly-text(dir='rtl') <strong>2.</strong> אתם יכולים לבחור יועץ בלחיצה על הכפתור ולקבוע <strong>פגישת וידאו</strong> בזמן שמתאים לכם  
-                    .dropdown.calendly-agents-dropdown
-                        button.btn.btn-secondary.dropdown-toggle.calendly-agents-button(type='button' data-bs-toggle='dropdown' aria-expanded='false' dir='rtl') בחרו יועץ
-                        ul.dropdown-menu.calendly-agents-list
-                            li
-                                span.dropdown-item.calendly-agents-choice.calendly-agent-yeheli(data-agent='yeheli' dir='rtl') יהלי סמואלס 
-                                    img.calendly-agent-img(src='/img/yeheli-circle.jpeg' alt='Yeheli Samuels picture')
-                            li
-                                span.dropdown-item.calendly-agents-choice.calendly-agent-shimon(data-agent='shimon' dir='rtl') שמעון שלמה 
-                                    img.calendly-agent-img(src='/img/shimon-circle.jpg' alt='Shimon Shlomo picture')
-                    div.calendly-widget-container.calendly-widget-yeheli
-                        <div class="calendly-inline-widget" data-url="https://calendly.com/yeheli/video-meet-with-dira-bulgarit"></div>
-                        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                    div.calendly-widget-container.calendly-widget-shimon
-                        <div class="calendly-inline-widget" data-url="https://calendly.com/simon-ekke/video-meet-with-dira-bulgarit"></div>
-                        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                    //- div.calendly-text(dir='rtl') <strong>2.</strong> אתם יכולים לבחור יועץ בלחיצה על הכפתור ולקבוע <strong>פגישת וידאו</strong> בזמן שמתאים לכם  
+                    //- .dropdown.calendly-agents-dropdown
+                    //-     button.btn.btn-secondary.dropdown-toggle.calendly-agents-button(type='button' data-bs-toggle='dropdown' aria-expanded='false' dir='rtl') בחרו יועץ
+                    //-     ul.dropdown-menu.calendly-agents-list
+                    //-         li
+                    //-             span.dropdown-item.calendly-agents-choice.calendly-agent-yeheli(data-agent='yeheli' dir='rtl') יהלי סמואלס 
+                    //-                 img.calendly-agent-img(src='/img/yeheli-circle.jpeg' alt='Yeheli Samuels picture')
+                    //-         li
+                    //-             span.dropdown-item.calendly-agents-choice.calendly-agent-shimon(data-agent='shimon' dir='rtl') שמעון שלמה 
+                    //-                 img.calendly-agent-img(src='/img/shimon-circle.jpg' alt='Shimon Shlomo picture')
+                    //- div.calendly-widget-container.calendly-widget-yeheli
+                    //-     <div class="calendly-inline-widget" data-url="https://calendly.com/yeheli/video-meet-with-dira-bulgarit"></div>
+                    //-     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                    //- div.calendly-widget-container.calendly-widget-shimon
+                    //-     <div class="calendly-inline-widget" data-url="https://calendly.com/simon-ekke/video-meet-with-dira-bulgarit"></div>
+                    //-     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
