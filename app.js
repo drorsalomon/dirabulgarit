@@ -169,8 +169,8 @@ app.use('/en/project', enProjectRouter);
 app.use('/en/commercial', enCommercialRouter);
 app.use('/en/blog', enBlogRouter);
 
-dailyAssetPriceNisUpdate.start();
-getZohoRefreshToken.start();
+// dailyAssetPriceNisUpdate.start();
+// getZohoRefreshToken.start();
 deleteOldPDFs.start();
 
 app.all('*', (req, res, next) => {
