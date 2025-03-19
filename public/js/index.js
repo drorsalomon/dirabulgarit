@@ -115,7 +115,6 @@ window.onload = function () {
   //href = href.includes('/en') ? href.substring(href.lastIndexOf('/en') + 2) : href.substring(href.lastIndexOf('/') + 1);
   href = href.substring(href.lastIndexOf('/') + 1);
   // For homepage link
-  console.log(href);
   if (!href && !config.Elements.homePageLink.classList.contains('active-link')) {
     config.Elements.homePageLink.classList.toggle('active-link');
   }
