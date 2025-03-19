@@ -8,7 +8,7 @@
     "dev": "nodemon -e js,pug server.js",
     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js --public-url .",
     "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js --public-url .",
-    "heroku-postbuild": "npm run build:js && mkdir -p ./.cache && npx puppeteer browsers install"
+    "postinstall": "npm run build:js && npx puppeteer browsers install chrome"
   },
   "author": "Dror Salomon",
   "license": "ISC",

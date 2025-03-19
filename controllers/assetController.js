@@ -240,6 +240,7 @@ exports.generateAssetPDF = catchAsync(async (req, res) => {
 
     // Launch Puppeteer
     const browser = await puppeteer.launch({
+      executablePath: process.env.PUPPETEER_EXECUTABLE_PATH, // Use env var if set, else default Chromium
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
     });
     //const browser = await puppeteer.launch();
