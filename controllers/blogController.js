@@ -79,9 +79,9 @@ exports.getBlog = catchAsync(async (req, res, next) => {
   if (blog.blogAssets) {
     blogAssets =
       res.locals.lang === 'he'
-        ? await Asset.find({ city: blog.blogAssets, sold: false }).sort(sortOptions)
-        : await enAsset.find({ city: blog.blogAssets, sold: false }).sort(sortOptions);
-    if (!hotAssets) return next(new AppError('Could not find the requested hot assets!', 404));
+        ? await Asset.find({ city: blog.blogAssets, sold: false, origin: { $ne: 'yeheli' } }).sort(sortOptions)
+        : await enAsset.find({ city: blog.blogAssets, sold: false, origin: { $ne: 'yeheli' } }).sort(sortOptions);
+    if (!blogAssets) return next(new AppError('Could not find the requested blog assets!', 404));
   }
 
   res.status(200).render(`${res.locals.lang}/blogContent`, {
