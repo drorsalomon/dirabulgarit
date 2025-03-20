@@ -3,7 +3,6 @@ const enAsset = require('../models/enAssetModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 const Utils = require('../utils/utils');
-//const puppeteer = require('puppeteer-core');
 const puppeteer = require('puppeteer');
 const pug = require('pug');
 const fetch = require('node-fetch');
@@ -18,7 +17,10 @@ let assetsArray = [];
 
 exports.getSearchResults = catchAsync(async (req, res, next) => {
   try {
-    mongooseQuery = Utils.buildMongooseQuery(req.body.filter);
+    mongooseQuery = {
+      ...Utils.buildMongooseQuery(req.body.filter),
+      origin: { $ne: 'yeheli' },
+    };
     let sortOptions;
     if (req.params.sort === 'price') {
       sortOptions = { price: parseInt(req.params.type) === 1 ? 1 : -1 };

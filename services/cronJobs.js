@@ -24,50 +24,50 @@ const s3 = new S3Client({
   },
 });
 
-const dailyAssetPriceNisUpdate = cron.schedule(
-  '0 0 * * *',
-  async function () {
-    try {
-      let currentTimeDate = new Date();
-      console.log(`***** Daily nis asset price update STARTED at: ${currentTimeDate.toLocaleString()} *****`);
-      const euroToNisRate = await currencyExchange.euroToNisExchange();
-      console.log('1 Euro = ' + euroToNisRate + ' Nis');
-      const assets = await Asset.find({});
-      for (let asset of assets) {
-        if (asset.price !== undefined) {
-          const newPriceNis = asset.price * euroToNisRate;
-          await Asset.updateOne({ id: asset.id }, { $set: { priceNis: Math.floor(newPriceNis) } });
-          await enAsset.updateOne({ id: asset.id }, { $set: { priceNis: Math.floor(newPriceNis) } });
-        }
-      }
-      console.log(`***** Daily nis asset price update ENDED successfully at: ${currentTimeDate.toLocaleString()} *****`);
-    } catch (err) {
-      console.error(err);
-    }
-  },
-  {
-    scheduled: true,
-    timezone: 'Israel',
-  },
-);
+// const dailyAssetPriceNisUpdate = cron.schedule(
+//   '0 0 * * *',
+//   async function () {
+//     try {
+//       let currentTimeDate = new Date();
+//       console.log(`***** Daily nis asset price update STARTED at: ${currentTimeDate.toLocaleString()} *****`);
+//       const euroToNisRate = await currencyExchange.euroToNisExchange();
+//       console.log('1 Euro = ' + euroToNisRate + ' Nis');
+//       const assets = await Asset.find({});
+//       for (let asset of assets) {
+//         if (asset.price !== undefined) {
+//           const newPriceNis = asset.price * euroToNisRate;
+//           await Asset.updateOne({ id: asset.id }, { $set: { priceNis: Math.floor(newPriceNis) } });
+//           await enAsset.updateOne({ id: asset.id }, { $set: { priceNis: Math.floor(newPriceNis) } });
+//         }
+//       }
+//       console.log(`***** Daily nis asset price update ENDED successfully at: ${currentTimeDate.toLocaleString()} *****`);
+//     } catch (err) {
+//       console.error(err);
+//     }
+//   },
+//   {
+//     scheduled: true,
+//     timezone: 'Israel',
+//   },
+// );
 
-const getZohoRefreshToken = cron.schedule(
-  '20,50 * * * *',
-  async function () {
-    try {
-      let currentTimeDate = new Date();
-      const zohoToken = await zohoService.getZohoToken();
-      await zohoService.updateHerokuConfigVar(zohoToken);
-      console.log(`***** Zoho Access Token Updated at ${currentTimeDate.toLocaleString()} *****`);
-    } catch (err) {
-      console.error(err);
-    }
-  },
-  {
-    scheduled: true,
-    timezone: 'Israel',
-  },
-);
+// const getZohoRefreshToken = cron.schedule(
+//   '20,50 * * * *',
+//   async function () {
+//     try {
+//       let currentTimeDate = new Date();
+//       const zohoToken = await zohoService.getZohoToken();
+//       await zohoService.updateHerokuConfigVar(zohoToken);
+//       console.log(`***** Zoho Access Token Updated at ${currentTimeDate.toLocaleString()} *****`);
+//     } catch (err) {
+//       console.error(err);
+//     }
+//   },
+//   {
+//     scheduled: true,
+//     timezone: 'Israel',
+//   },
+// );
 
 // Daily PDF deletion task
 const deleteOldPDFs = cron.schedule(
@@ -117,7 +117,7 @@ const deleteOldPDFs = cron.schedule(
 );
 
 module.exports = {
-  dailyAssetPriceNisUpdate,
-  getZohoRefreshToken,
+  // dailyAssetPriceNisUpdate,
+  // getZohoRefreshToken,
   deleteOldPDFs,
 };
