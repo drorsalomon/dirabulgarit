@@ -62,56 +62,58 @@ nav.navbar.navbar-expand-xl.fixed-top
             a.nav-link.nav-el(href='/invest') איך להשקיע בבולגריה
           li.nav-item
             a.nav-link.nav-el(href='/qanda') שאלות ותשובות
-          //- li.nav-item.dropdown.assets-catalog-dropdown
-          //-   a.nav-link.dropdown-toggle.assets-catalog-dropdown-btn(role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label='פתיחת תפריט פרויקטים' dir='rtl') קטלוג נכסים
-          //-   ul.dropdown-menu.assets-catalog-dropdown-menu
-          //-     li.dropdown-submenu.projects-dropdown
-          //-       a.nav-link.dropdown-item.dropdown-toggle.projects-dropdown-btn.text-end(role="button" aria-expanded="false" dir='rtl') פרויקטים
-          //-       ul.dropdown-menu.projects-dropdown-menu.text-start
-          //-         li.dropdown-submenu.projects-dropdown
-          //-           a.nav-link.dropdown-item.dropdown-toggle.projects-dropdown-btn.project-burgas-dropdown-btn.text-end(role="button" aria-expanded="false" dir='rtl') בורגס
-          //-           ul.dropdown-menu.projects-dropdown-menu.text-start
-          //-             li
-          //-               a.nav-link.dropdown-item.projects-dropdown-item(href='/project/atlantis-aria-2') Atlantis Aria 2
-          //-             li
-          //-               a.nav-link.dropdown-item.projects-dropdown-item(href='/project/atlantis-aria-3') Atlantis Aria 3
-          //-             li
-          //-               a.nav-link.dropdown-item.projects-dropdown-item(href='/project/atlantis-euphoria') Atlantis Euphoria
-          //-             li
-          //-               a.nav-link.dropdown-item.projects-dropdown-item(href='/project/atlas-azimuth') Atlas Azimuth
-          //-         li.dropdown-submenu.projects-dropdown
-          //-           a.nav-link.dropdown-item.dropdown-toggle.projects-dropdown-btn.project-sofia-dropdown-btn.text-end(role="button" aria-expanded="false" dir='rtl') סופיה
-          //-           ul.dropdown-menu.projects-dropdown-menu.text-start  
-          //-             li
-          //-               a.nav-link.dropdown-item.projects-dropdown-item(href='/project/atlantis-barcode') Atlantis Barcode
-          //-             li
-          //-               a.nav-link.dropdown-item.projects-dropdown-item(href='/project/atlantis-barcode-2') Atlantis Barcode 2
-          //-             li
-          //-               a.nav-link.dropdown-item.projects-dropdown-item(href='/project/mountain-view-residence') Mountain View Residence
-          //-             li
-          //-               a.nav-link.dropdown-item.projects-dropdown-item(href='/project/vitosha-mountain-view') Vitosha Mountain View
-          //-             li
-          //-               a.nav-link.dropdown-item.projects-dropdown-item(href='/project/mountain-view-boutique') Mountain View Boutique
-          //-         li.dropdown-submenu.projects-dropdown
-          //-           a.nav-link.dropdown-item.dropdown-toggle.projects-dropdown-btn.project-sveti-dropdown-btn.text-end(role="button" aria-expanded="false" dir='rtl') סווטי ולאס
-          //-           ul.dropdown-menu.projects-dropdown-menu.text-start        
-          //-             li
-          //-               a.nav-link.dropdown-item.projects-dropdown-item(href='/project/villa-margarita') Villa Margarita
-          //-             li
-          //-               a.nav-link.dropdown-item.projects-dropdown-item(href='/project/mellia-florance') Mellia Florance
-          //-     li.dropdown-submenu.commercial-dropdown
-          //-       a.nav-link.dropdown-item.dropdown-toggle.commercial-dropdown-btn.text-end(role="button" aria-expanded="false" dir='rtl') עסקי
-          //-       ul.dropdown-menu.commercial-dropdown-menu.text-start
-          //-         li
-          //-           a.nav-link.dropdown-item.projects-dropdown-item(href='/asset/attractive-commercial-premises-in-the-heart-of-burgas') Atlantis Office Space
-          //-         li
-          //-           a.nav-link.dropdown-item.commercial-dropdown-item(href='/commercial/camelot-entertainment-center') Camelot Entertainment Center
-          //-         li
-          //-           a.nav-link.dropdown-item.commercial-dropdown-item(href='/commercial/varsano-chic-apartments') Varsano Chic Apartments
-          //-         li
-          //-           a.nav-link.dropdown-item.commercial-dropdown-item(href='/commercial/samokov') Samokov Development
-          //-         li
-          //-           a.nav-link.dropdown-item.commercial-dropdown-item(href='/commercial/pomorie-commercial-building') Pomorie Commercial Building
+          li.nav-item.dropdown.assets-catalog-dropdown
+            a.nav-link.dropdown-toggle.assets-catalog-dropdown-btn(role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label='פתיחת תפריט פרויקטים' dir='rtl') קטלוג נכסים
+            ul.dropdown-menu.assets-catalog-dropdown-menu
+              li
+                a.nav-link.dropdown-item.assets-catalog-dropdown-item.text-end(href='/search') חיפוש נכס
+              li.dropdown-submenu.projects-dropdown
+                a.nav-link.dropdown-item.dropdown-toggle.projects-dropdown-btn.text-end(role="button" aria-expanded="false" dir='rtl') פרויקטים
+                ul.dropdown-menu.projects-dropdown-menu.text-start
+                  li.dropdown-submenu.projects-dropdown
+                    a.nav-link.dropdown-item.dropdown-toggle.projects-dropdown-btn.project-burgas-dropdown-btn.text-end(role="button" aria-expanded="false" dir='rtl') בורגס
+                    ul.dropdown-menu.projects-dropdown-menu.text-start
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/project/atlantis-aria-2') Atlantis Aria 2
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/project/atlantis-aria-3') Atlantis Aria 3
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/project/atlantis-euphoria') Atlantis Euphoria
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/project/atlas-azimuth') Atlas Azimuth
+                  li.dropdown-submenu.projects-dropdown
+                    a.nav-link.dropdown-item.dropdown-toggle.projects-dropdown-btn.project-sofia-dropdown-btn.text-end(role="button" aria-expanded="false" dir='rtl') סופיה
+                    ul.dropdown-menu.projects-dropdown-menu.text-start  
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/project/atlantis-barcode') Atlantis Barcode
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/project/atlantis-barcode-2') Atlantis Barcode 2
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/project/mountain-view-residence') Mountain View Residence
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/project/vitosha-mountain-view') Vitosha Mountain View
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/project/mountain-view-boutique') Mountain View Boutique
+                  li.dropdown-submenu.projects-dropdown
+                    a.nav-link.dropdown-item.dropdown-toggle.projects-dropdown-btn.project-sveti-dropdown-btn.text-end(role="button" aria-expanded="false" dir='rtl') סווטי ולאס
+                    ul.dropdown-menu.projects-dropdown-menu.text-start        
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/project/villa-margarita') Villa Margarita
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/project/mellia-florance') Mellia Florance
+              li.dropdown-submenu.commercial-dropdown
+                a.nav-link.dropdown-item.dropdown-toggle.commercial-dropdown-btn.text-end(role="button" aria-expanded="false" dir='rtl') עסקי
+                ul.dropdown-menu.commercial-dropdown-menu.text-start
+                  li
+                    a.nav-link.dropdown-item.projects-dropdown-item(href='/asset/attractive-commercial-premises-in-the-heart-of-burgas') Atlantis Office Space
+                  li
+                    a.nav-link.dropdown-item.commercial-dropdown-item(href='/commercial/camelot-entertainment-center') Camelot Entertainment Center
+                  li
+                    a.nav-link.dropdown-item.commercial-dropdown-item(href='/commercial/varsano-chic-apartments') Varsano Chic Apartments
+                  li
+                    a.nav-link.dropdown-item.commercial-dropdown-item(href='/commercial/samokov') Samokov Development
+                  li
+                    a.nav-link.dropdown-item.commercial-dropdown-item(href='/commercial/pomorie-commercial-building') Pomorie Commercial Building
           //- li.nav-item.dropdown.assets-catalog-dropdown
           //-   a.nav-link.dropdown-toggle.assets-catalog-dropdown-btn(role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label='פתיחת תפריט פרויקטים' dir='rtl') וובינר 
           //-   ul.dropdown-menu.assets-catalog-dropdown-menu
@@ -119,8 +121,8 @@ nav.navbar.navbar-expand-xl.fixed-top
           //-       a.nav-link.dropdown-item.assets-catalog-dropdown-item.text-end(href='/webinar-signup') וובינר 2025            
           //-     li
           //-       a.nav-link.dropdown-item.assets-catalog-dropdown-item.text-end(href='/webinar-archive') ארכיון וובינרים            
-          li.nav-item
-            a.nav-link.nav-el(href='/search') חיפוש נכס
+          //- li.nav-item
+          //-   a.nav-link.nav-el(href='/search') חיפוש נכס
           li.nav-item
             a.nav-link.nav-el.homepage-link(href='/') עמוד ראשי
     a.navbar-brand.laptop-navbar-brand(href='/')

@@ -49,8 +49,8 @@ block content
                 div.asset-gallery-mainImage-container
                     if asset.sold
                         .span.badge.asset-card-sold-badge.en-asset-card-sold-badge Sold 
-                    if asset.exclusive && !asset.sold
-                        .span.badge.asset-card-exclusive-badge.en-asset-card-exclusive-badge Exclusive Property
+                    //- if asset.exclusive && !asset.sold
+                    //-     .span.badge.asset-card-exclusive-badge.en-asset-card-exclusive-badge Exclusive Property
                     img.asset-gallery-mainImage.en-asset-gallery-mainImage(src=`${asset.mainImage}` alt=`${asset.name}` loading="lazy" data-bs-toggle="modal" data-bs-target="#assetModal")
                     img.asset-gallery-zoomIn-icon(src='/img/icons/zoom-in-svgrepo-com-white.svg' alt='Zoom in icon')   
                 .row.text-end
