@@ -1,0 +1,75 @@
+extends base 
+
+block head
+    title Связаться с нами | Dira Bulgarit
+    meta(name="description" content="Dira Bulgarit предлагает сотни прибыльных инвестиционных объектов по всей Болгарии. Свяжитесь с нами сегодня для получения более подробной информации.")
+    meta(name="robots" content="index, follow")
+    link(rel="canonical" href="https://www.dirabulgarit.com/ru/contact-us")
+    link(rel="alternate" href="https://www.dirabulgarit.com/ru/contact-us" hreflang="ru")
+    link(rel="alternate" href="https://www.dirabulgarit.com/en/contact-us" hreflang="en")
+    link(rel="alternate" href="https://www.dirabulgarit.com/contact-us" hreflang="he")
+    
+    meta(property="og:title" content="Связаться с нами | Dira Bulgarit")
+    meta(property="og:description" content="Dira Bulgarit предлагает сотни прибыльных инвестиционных объектов по всей Болгарии. Свяжитесь с нами сегодня для получения более подробной информации.")
+    meta(property="og:image" content='/img/hero-burgas.webp')
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../he/_headLinksScripts
+
+block content 
+    .container.py-5
+        .row.calendly-row.mx-4
+            .col.calendly-col
+                div.calendly-text-container.text-center 
+                    h1.calendly-text-headline Связаться с нами
+                    div.calendly-text Вы можете <strong>оставить свои данные</strong>, и мы свяжемся с вами как можно скорее.
+                    div#crmWebToEntityForm.crmWebToEntityForm
+                        form.contact-us-form#webform6296617000000479035(action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads6296617000000479035 method='POST' accept-charset='UTF-8' novalidate)
+                            input(type='text' style='display:none;' name='xnQsjsdp' value='c9ef63b049adde9dd26f5acb21dc87ed1cff806c5954f97aa4908339c68a8469')
+                            input#zc_gad(type='hidden' name='zc_gad' value='')
+                            input(type='text' style='display:none;' name='xmIwtLD' value='901545bd25a6f11e8753daa2bb5bdc4a62c942986fe3a3b3123340dde1be1461ada4f129bad2cf0112fb24bc402fd5af')
+                            input(type='text' style='display:none;' name='actionType' value='TGVhZHM=')
+                            input(type='text' style='display:none;' name='returnURL' value='https://www.dirabulgarit.com/en/contact-us-confirm')
+                            input.contact-us-honeypot-input(type='text' name='bot_check' style='display:none;' value='')
+                            .row.contact-us-row.align-items-center
+                                .col-12.contact-us-col.d-flex.justify-content-end
+                                    input.contact-us-input.contact-us-name-input.form-control.en-search-filter-input(type='text' name='Last Name' maxlength='200' placeholder='Имя' aria-label='Имя' aria-describedby='basic-addon1' required)                            
+                                    .invalid-tooltip Пожалуйста, введите имя
+                                .col-12.contact-us-col.d-flex.justify-content-end
+                                    input.contact-us-input.contact-us-phone-input.form-control.en-search-filter-input(type='text' name='Phone' maxlength='10' placeholder='Номер телефона' aria-label='Номер телефона' aria-describedby='basic-addon1' pattern='[0-9]{10}' required)
+                                    .invalid-tooltip.contact-us-phone-invalid Пожалуйста, введите действительный номер телефона.
+                                .col-12.contact-us-col.d-flex.justify-content-end 
+                                    input.contact-us-input.contact-us-email-input.form-control.en-search-filter-input(type='email' ftype='email' autocomplete='false' name='Email' crmlabel='' maxlength='100' placeholder='Электронная почта  ' aria-label='Электронная почта' aria-describedby='basic-addon1' pattern='[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}' required)
+                                    .invalid-tooltip.contact-us-email-invalid Пожалуйста, введите действительный адрес электронной почты
+                                .col-12.contact-us-col.contact-us-last-col.d-flex.justify-content-end     
+                                    textarea.contact-us-textarea.contact-us-description-input.form-control.en-search-filter-input(id='Description' name='Description' aria-label="Описание" rows="5" placeholder='ОписаниеХотите ли вы сообщить нам что-то еще?')
+                                .col-12.contact-us-col.d-flex.align-items-start.text-start
+                                    input.contact-us-checkbox-en(type='checkbox' aria-checked='false' class='zcwf_ckbox' id='Email_Opt_Out' aria-required='false' aria-label='Email Opt Out' name='Email Opt Out' aria-valuemax='50' maxlength='50')
+                                    span.webinar-form-check-top-label.form-check-label(for='flexCheckDefault') Я даю согласие на получение соответствующей информации о недвижимости в Болгарии, которая может иногда носить рекламный характер.
+                                .col-12.contact-us-col
+                                    input.contact-us-button.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Send' title='Submit')
+                                    input.contact-us-button.mx-3(type='reset' class='zcwf_button' name='reset' value='Clear' title='Reset')
+                    //- div.calendly-text <strong>2.</strong> Вы можете выбрать консультанта, нажав кнопку, и запланировать <strong>видеосессию</strong> на удобное для вас время
+                    //- .dropdown.calendly-agents-dropdown
+                    //-     button.btn.btn-secondary.dropdown-toggle.calendly-agents-button.en-calendly-agents-button(type='button' data-bs-toggle='dropdown' aria-expanded='false') Choose Consultant
+                    //-     ul.dropdown-menu.calendly-agents-list
+                    //-         li
+                    //-             span.dropdown-item.calendly-agents-choice.calendly-agent-yeheli(data-agent='yeheli') Yeheli Samuels
+                    //-                 img.calendly-agent-img.en-calendly-agent-img(src='/img/yeheli-circle.jpeg' alt='Yeheli Samuels picture')
+                    //-         li
+                    //-             span.dropdown-item.calendly-agents-choice.calendly-agent-shimon(data-agent='shimon') Simon Shlomo     
+                    //-                 img.calendly-agent-img.en-calendly-agent-img(src='/img/shimon-circle.jpg' alt='Shimon Shlomo picture')
+                    //- div.calendly-widget-container.en-calendly-widget-container.calendly-widget-yeheli
+                    //-     <div class="calendly-inline-widget" data-url="https://calendly.com/yeheli/video-meeting-with-yeheli"></div>
+                    //-     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                    //- div.calendly-widget-container.en-calendly-widget-container.calendly-widget-shimon
+                    //-     <div class="calendly-inline-widget" data-url="https://calendly.com/simon-ekke/video-meeting-with-shimon"></div>
+                    //-     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> 
+
+
+
+
+
+
+
+

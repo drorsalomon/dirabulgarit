@@ -1,0 +1,95 @@
+.col-10.col-md-5.col-xl-3
+    .card.asset-card(data-slug=`${asset.slug}`)
+        div.asset-card-img-container
+            if asset.sold
+                .span.badge.asset-card-sold-badge.en-asset-card-sold-badge Продал 
+            //- if asset.exclusive && !asset.sold
+            //-     .span.badge.asset-card-exclusive-badge.en-asset-card-exclusive-badge Эксклюзивная недвижимость 
+            img.card-img-top.asset-card-img(src=`${asset.mainImage}` alt=`${asset.name}` loading="lazy")
+        .card-body
+            .container-fluid
+                .row.asset-card-body-row
+                    .col-12.p-1.asset-card-title-col.d-flex.align-items-center.justify-content-center
+                        div.card-headline-container
+                            .card-title.asset-card-title= asset.name
+                    .col-12
+                        if asset.project
+                            div.card-text-container
+                                img.card-icon.en-card-icon(src='/img/icons/building-svgrepo-com.svg' alt='Значок здания') 
+                                span= asset.project 
+                        else
+                            div.card-text-container
+                                img.card-icon.en-card-icon(src='/img/icons/building-svgrepo-com.svg' alt='Значок здания')        
+                                span= `-`
+                        if asset.price && !asset.sold   
+                            div.card-text-container       
+                                img.card-icon.en-card-icon(src='/img/icons/price-tag-svgrepo-com.svg' alt='Значок ценника')
+                                span.asset-price(data-europrice=`${asset.priceBeginningAt === true ? 'Начиная с ' : ''} €${ new Intl.NumberFormat().format(asset.price)}` data-nisprice=`${asset.priceBeginningAt === true ? 'Начиная с ' : ''} ₪${new Intl.NumberFormat().format(asset.priceNis)}`)
+                        else
+                            div.card-text-container       
+                                img.card-icon.en-card-icon(src='/img/icons/price-tag-svgrepo-com.svg' alt='Значок ценника')    
+                                span -
+                        if asset.city  
+                            div.card-text-container
+                                img.card-icon.en-card-icon(src='/img/icons/map-svgrepo-com.svg' alt='Значок карты')
+                                span= asset.city
+                        else
+                            div.card-text-container
+                                img.card-icon.en-card-icon(src='/img/icons/map-svgrepo-com.svg' alt='Значок карты')
+                                span= `-`
+                        if asset.type
+                            div.card-text-container    
+                                img.card-icon.en-card-icon(src='/img/icons/house-svgrepo-com.svg' alt='Значок дома')
+                                span= asset.type
+                        else 
+                            div.card-text-container    
+                                img.card-icon.en-card-icon(src='/img/icons/house-svgrepo-com.svg' alt='Значок дома')
+                                span= `-`
+                        if asset.oceanView   
+                            div.card-text-container  
+                                img.card-icon.en-card-icon(src='/img/icons/ocean-sunset-svgrepo-com.svg' alt='Значок заката океана')
+                                span= asset.oceanView 
+                        else
+                            div.card-text-container  
+                                img.card-icon.en-card-icon(src='/img/icons/ocean-sunset-svgrepo-com.svg' alt='Значок заката океана')   
+                                span= `-` 
+                        if asset.sm
+                            div.card-text-container    
+                                img.card-icon.en-card-icon(src='/img/icons/ruler-svgrepo-com.svg' alt='Значок линейки')
+                                span= asset.sm
+                        else
+                            div.card-text-container    
+                                img.card-icon.en-card-icon(src='/img/icons/ruler-svgrepo-com.svg' alt='Значок линейки')
+                                span= `-`
+                        if asset.floor 
+                            div.card-text-container    
+                                img.card-icon.en-card-icon(src='/img/icons/floor-plan-svgrepo-com.svg' alt='Значок этажа здания')
+                                span= asset.floor 
+                        else  
+                            div.card-text-container    
+                                img.card-icon.en-card-icon(src='/img/icons/floor-plan-svgrepo-com.svg' alt='Значок этажа здания')  
+                                span= `-`
+                        if asset.rooms       
+                            div.card-text-container    
+                                img.card-icon.en-card-icon(src='/img/icons/living-room-sofa-svgrepo-com.svg' alt='Значок гостиной')
+                                span= asset.rooms
+                        else  
+                            div.card-text-container    
+                                img.card-icon.en-card-icon(src='/img/icons/living-room-sofa-svgrepo-com.svg' alt='Значок гостиной')  
+                                span= `-`
+                        if asset.bathrooms     
+                            div.card-text-container    
+                                img.card-icon.en-card-icon(src='/img/icons/bath-bathroom-bathtub-svgrepo-com.svg' alt='Значок ванных комнат')
+                                span= asset.bathrooms
+                        else 
+                            div.card-text-container    
+                                img.card-icon.en-card-icon(src='/img/icons/bath-bathroom-bathtub-svgrepo-com.svg' alt='Значок ванных комнат')    
+                                span= `-`
+                        if asset.terraces     
+                            div.card-text-container.card-text-last-container    
+                                img.card-icon.en-card-icon(src='/img/icons/balcony-window-svgrepo-com.svg' alt='Значок балкона')
+                                span= asset.terraces
+                        else  
+                            div.card-text-container.card-text-last-container    
+                                img.card-icon.en-card-icon(src='/img/icons/balcony-window-svgrepo-com.svg' alt='Значок балкона')   
+                                span= `-`

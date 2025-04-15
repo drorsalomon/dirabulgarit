@@ -1,0 +1,147 @@
+nav.navbar.navbar-expand-xl.fixed-top
+  .container-fluid.navbar-container
+    .row.mobile-navbar-row
+      .col-4.mobile-navbar-col.align-content-center.text-center.text-sm-start
+        a.navbar-brand.mobile-navbar-brand(href='/ru')
+          img.navbar-logo(src='/img/logo-eng.png' alt='Логотип Дира Булгарит')  
+      .col-4.mobile-navbar-col.align-content-center.text-center
+        div.navbar-call-us-text-container
+          img.navbar-mobile-icon.en-navbar-mobile-icon(src='/img/icons/navbar-mobile-phone-white.svg' alt='Значок телефона') 
+          span.navbar-call-us-text Вызов: 
+          br
+          span.navbar-call-us-text(href="tel:0545796456") 054-579-6456
+      .col-4.mobile-navbar-col.align-content-center.text-center.text-sm-end
+        button.navbar-toggler.collapsed(type='button' data-bs-toggle='offcanvas' data-bs-target='#navbarContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Open links menu')
+          span.navbar-toggler-icon
+    div.offcanvas.offcanvas-start.w-auto(tabindex='-1' id='navbarContent' aria-labelledby='offcanvasNavbarLabel')
+      div.offcanvas-body
+        div.btn-cta--container.text-center
+          button.btn-cta.btn-cta--offcanvas.to-calendly-btn(aria-label='Open contact us page') Связаться с нами
+        div.text-center  
+          button.mobile-asset-favorite-btn
+            img.header-favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline-white.svg' alt='Значок сердца') 
+          button.btn.btn-secondary.dropdown-toggle.lang-dropdown-btn.mobile-lang-dropdown-btn(type='button' data-bs-toggle='collapse' data-bs-target="#langBtnCollapse" aria-expanded="false" aria-controls="langBtnCollapse" aria-label='Выберите язык')
+            img.navbar-lang-icon.mobile-navbar-active-lang-icon(src='' alt='')      
+          button.btn.btn-secondary.dropdown-toggle.currency-dropdown-btn.mobile-currency-dropdown-btn(type='button' data-bs-toggle='collapse' data-bs-target="#currencyBtnCollapse" aria-expanded="false" aria-controls="currencyBtnCollapse" aria-label='Выберите валюту')
+            img.navbar-currency-icon.mobile-navbar-active-currency-icon(src='' alt='')   
+          .row
+            .col-7.mobile-lang-collapse-col-ru 
+              div.collapse.multi-collapse.mobile-lang-collapse(id="langBtnCollapse")
+                img.navbar-lang-icon.mobile-navbar-first-not-active-lang-icon.en-mobile-navbar-not-active-lang-icon(src='' alt='')       
+              div.collapse.multi-collapse.mobile-lang-collapse(id="langBtnCollapse")
+                img.navbar-lang-icon.mobile-navbar-second-not-active-lang-icon.en-mobile-navbar-not-active-lang-icon(src='' alt='')       
+            .col-2.p-0
+              div.collapse.multi-collapse.mobile-currency-collapse(id="currencyBtnCollapse")
+                img.navbar-currency-icon.mobile-navbar-not-active-currency-icon.en-mobile-navbar-not-active-currency-icon(src='' alt='')       
+        ul.navbar-nav.en-navbar-nav.align-items-xl-center.justify-content-xl-evenly
+          li.nav-item.en-nav-item
+            a.nav-link.nav-el.homepage-link(href='/ru') Дом
+          //- li.nav-item.en-nav-item
+          //-   a.nav-link.nav-el(href='/en/search') Property Search
+          li.nav-item.en-nav-item.dropdown.assets-catalog-dropdown
+            a.nav-link.dropdown-toggle.assets-catalog-dropdown-btn(role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label='Открыть каталог недвижимости') Каталог
+            ul.dropdown-menu.assets-catalog-dropdown-menu
+              li
+                a.nav-link.dropdown-item.assets-catalog-dropdown-item.text-start(href='/ru/search') Поиск недвижимости
+              li.dropdown-submenu.projects-dropdown
+                a.nav-link.dropdown-item.dropdown-toggle.projects-dropdown-btn.en-projects-dropdown-btn(role="button" aria-expanded="false") Проекты
+                ul.dropdown-menu.projects-dropdown-menu.en-projects-dropdown-menu
+                  li.dropdown-submenu.projects-dropdown
+                    a.nav-link.dropdown-item.dropdown-toggle.projects-dropdown-btn.en-projects-dropdown-btn.project-burgas-dropdown-btn(role="button" aria-expanded="false") Бургас
+                    ul.dropdown-menu.projects-dropdown-menu.en-projects-dropdown-menu
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/ru/project/atlantis-aria-2') Atlantis Aria 2
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/ru/project/atlantis-aria-3') Atlantis Aria 3
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/ru/project/atlantis-euphoria') Atlantis Euphoria
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/ru/project/atlas-azimuth') Atlas Azimuth
+                  li.dropdown-submenu.projects-dropdown
+                    a.nav-link.dropdown-item.dropdown-toggle.projects-dropdown-btn.en-projects-dropdown-btn.project-sofia-dropdown-btn(role="button" aria-expanded="false") София
+                    ul.dropdown-menu.projects-dropdown-menu.en-projects-dropdown-menu  
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/ru/project/atlantis-barcode') Atlantis Barcode
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/ru/project/atlantis-barcode-2') Atlantis Barcode 2
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/ru/project/mountain-view-residence') Mountain View Residence
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/ru/project/vitosha-mountain-view') Vitosha Mountain View
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/ru/project/mountain-view-boutique') Mountain View Boutique
+                  li.dropdown-submenu.projects-dropdown
+                    a.nav-link.dropdown-item.dropdown-toggle.projects-dropdown-btn.en-projects-dropdown-btn.project-sveti-dropdown-btn(role="button" aria-expanded="false") Святой Влас
+                    ul.dropdown-menu.projects-dropdown-menu.en-projects-dropdown-menu  
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/ru/project/villa-margarita') Villa Margarita
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/ru/project/mellia-florance') Mellia Florance
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/ru/project/fort-noks-premier-suites') Fort Noks Premier Suites  
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/ru/project/premier-fort-beach') Premier Fort Beach
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/ru/project/prestige-fort-beach') Prestige Fort Beach
+                  li.dropdown-submenu.projects-dropdown
+                    a.nav-link.dropdown-item.dropdown-toggle.projects-dropdown-btn.en-projects-dropdown-btn.project-nessebar-dropdown-btn(role="button" aria-expanded="false") Несебр
+                    ul.dropdown-menu.projects-dropdown-menu.en-projects-dropdown-menu  
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/ru/project/nessebar-fort-residence') Nessebar Fort Residence          
+                  li.dropdown-submenu.projects-dropdown
+                    a.nav-link.dropdown-item.dropdown-toggle.projects-dropdown-btn.en-projects-dropdown-btn.project-varna-dropdown-btn(role="button" aria-expanded="false") Варна
+                    ul.dropdown-menu.projects-dropdown-menu.en-projects-dropdown-menu  
+                      li          
+                  li.dropdown-submenu.projects-dropdown
+                    a.nav-link.dropdown-item.dropdown-toggle.projects-dropdown-btn.en-projects-dropdown-btn.project-sunny-dropdown-btn(role="button" aria-expanded="false") Солнечный Берег
+                    ul.dropdown-menu.projects-dropdown-menu.en-projects-dropdown-menu  
+                      li         
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/ru/project/green-fort-suites') Green Fort Suites 
+                  li.dropdown-submenu.projects-dropdown
+                    a.nav-link.dropdown-item.dropdown-toggle.projects-dropdown-btn.en-projects-dropdown-btn.project-bansko-dropdown-btn(role="button" aria-expanded="false") Банско
+                    ul.dropdown-menu.projects-dropdown-menu.en-projects-dropdown-menu  
+                      li          
+              li.dropdown-submenu.commercial-dropdown
+                a.nav-link.dropdown-item.dropdown-toggle.commercial-dropdown-btn.en-commercial-dropdown-btn(role="button" aria-expanded="false") Бизнес
+                ul.dropdown-menu.commercial-dropdown-menu.en-commercial-dropdown-menu
+                  li
+                    a.nav-link.dropdown-item.projects-dropdown-item(href='/ru/asset/attractive-commercial-premises-in-the-heart-of-burgas') Atlantis Office Space
+                  li
+                    a.nav-link.dropdown-item.projects-dropdown-item(href='/ru/commercial/camelot-entertainment-center') Camelot Entertainment Center
+                  li
+                    a.nav-link.dropdown-item.projects-dropdown-item(href='/ru/commercial/varsano-chic-apartments') Varsano Chic Apartments
+                  li
+                    a.nav-link.dropdown-item.commercial-dropdown-item(href='/ru/commercial/samokov') Samokov Development  
+                  li
+                    a.nav-link.dropdown-item.commercial-dropdown-item(href='/ru/commercial/pomorie-commercial-building') Pomorie Commercial Building
+          li.nav-item.en-nav-item
+            a.nav-link.nav-el(href='/ru/qanda') Вопросы и ответы
+          li.nav-item.en-nav-item
+            a.nav-link.nav-el(href='/ru/invest') Инвестиционный Путеводитель по Болгарии
+          li.nav-item.en-nav-item
+            a.nav-link.nav-el(href='/ru/about') О нас
+          li.nav-item.en-nav-item
+            a.nav-link.nav-el.blog-nav-link Блог
+          li.nav-item.en-nav-item
+            a.nav-link.nav-el(href='/ru/pricing') Цены
+          li.nav-item.en-nav-item
+            button.asset-favorite-btn
+              img.header-favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline.svg' alt='Значок сердца') 
+          li.nav-item.en-nav-item.lang-nav-item
+            .dropdown
+              button.btn.btn-secondary.dropdown-toggle.lang-dropdown-btn.lang-dropdown-btn(type='button' data-bs-toggle='dropdown' aria-expanded="false" aria-label='Выберите язык')
+                img.navbar-lang-icon.navbar-active-lang-icon(src='/img/icons/placeholder-thin-svgrepo-com-white.svg' alt='')    
+              ul.dropdown-menu.lang-dropdown-menu
+                li.lang-dropdown-menu-item 
+                  img.navbar-lang-icon.navbar-first-not-active-lang-icon(src='' alt='')      
+                li.lang-dropdown-menu-item 
+                  img.navbar-lang-icon.navbar-second-not-active-lang-icon(src='' alt='')           
+          li.nav-item.en-nav-item.currency-nav-item  
+            .dropend
+              button.btn.btn-secondary.dropdown-toggle.currency-dropdown-btn(type='button' data-bs-toggle='dropdown' aria-expanded='false' aria-label='Выберите валюту')
+                img.navbar-currency-icon.navbar-active-currency-icon(src='/img/icons/placeholder-thin-svgrepo-com-white.svg' alt='')   
+              ul.dropdown-menu.currency-dropdown-menu
+                li.currency-dropdown-menu-item 
+                  img.navbar-currency-icon.navbar-not-active-currency-icon(src='' alt='')  
+    a.navbar-brand.laptop-navbar-brand(href='/en')
+      img.navbar-logo(src='/img/logo-eng.png' alt='Логотип Дира Булгарит')    

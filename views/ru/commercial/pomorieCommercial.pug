@@ -1,0 +1,132 @@
+extends ../base
+
+block head
+    title Pomorie Commercial Building
+    meta(name="description" content=" Dira Bulgaria presents Pomorie Commercial Building, a commercial property with 850 sq.m. over 3 floors, suitable for offices, clinics, cafes, and restaurants. Located in a prime area in Pomorie, Burgas.")
+    meta(name="robots" content="index, follow")
+    link(rel="canonical" href="https://www.dirabulgarit.com/en/commercial/pomorie-commercial-building")
+    link(rel="alternate" href="https://www.dirabulgarit.com/en/commercial/pomorie-commercial-building" hreflang="en")
+    link(rel="alternate" href="https://www.dirabulgarit.com/commercial/pomorie-commercial-building" hreflang="he")
+    
+    meta(property="og:title" content="Pomorie Commercial Building")
+    meta(property="og:description" content=" Dira Bulgaria presents Pomorie Commercial Building, a commercial property with 850 sq.m. over 3 floors, suitable for offices, clinics, cafes, and restaurants. Located in a prime area in Pomorie, Burgas.")
+    meta(property="og:image" content="https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938822-pomorie-commercial-building-1.webp")
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../../he/_headLinksScripts
+
+block content 
+    .container-fluid.project-main-image-container(role="img" aria-labelledby="pomorieMainImageDescription")
+        span.visually-hidden(id="pomorieMainImageDescription") An image of the Pomorie Commercial Building compound
+        .row.project-main-image-row
+            .col.project-main-image-col.project-main-image-col-pomorie
+                h1.project-main-image-headline.project-main-image-headline-pomorie Pomorie Commercial Building       
+
+    .container-fluid.project-gallery-container
+        .row.project-gallery-headline-row.text-center.mx-2
+            .col-12.project-gallery-headline-col.p-0    
+                h2.project-gallery-headline 
+        .row.project-gallery-row.text-center.mx-2
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938849-pomorie-commercial-building-3.webp' alt='GalleryImage of the Pomorie Commercial Building' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938859-pomorie-commercial-building-5.webp' alt='GalleryImage of the Pomorie Commercial Building' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938862-pomorie-commercial-building-6.webp' alt='GalleryImage of the Pomorie Commercial Building' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")  
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938866-pomorie-commercial-building-7.webp' alt='GalleryImage of the Pomorie Commercial Building' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938870-pomorie-commercial-building-8.webp' alt='GalleryImage of the Pomorie Commercial Building' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938856-pomorie-commercial-building-4.webp' alt='GalleryImage of the Pomorie Commercial Building' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+
+    #projectModal.modal.fade.asset-gallery-modal.text-center(tabindex='-1' aria-labelledby='projectModalLabel' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered
+            .asset-gallery-modal-content.modal-content
+                .row.d-flex
+                    .col-6.align-content-center
+                        div.text-start.px-4
+                            div.asset-gallery-img-text Pomorie Commercial Building
+                    .col-6
+                        div.text-end.p-3
+                            button.btn-close.asset-gallery-modal-close-btn.p-2.my-auto(type='button' data-bs-dismiss='modal' aria-label='Close')
+                #projectCarousel.carousel.slide(data-bs-touch='true' data-bs-interval='30000' data-bs-ride='carousel')
+                    .carousel-inner.asset-modal-carousel-inner
+                        .carousel-item.asset-gallery-carousel-item.align-content-center.active
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938856-pomorie-commercial-building-4.webp' alt='GalleryImage of the Pomorie Commercial Building') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938827-pomorie-commercial-building-2.webp' alt='GalleryImage of the Pomorie Commercial Building') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938859-pomorie-commercial-building-5.webp' alt='GalleryImage of the Pomorie Commercial Building') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938862-pomorie-commercial-building-6.webp' alt='GalleryImage of the Pomorie Commercial Building') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938866-pomorie-commercial-building-7.webp' alt='GalleryImage of the Pomorie Commercial Building') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938870-pomorie-commercial-building-8.webp' alt='GalleryImage of the Pomorie Commercial Building') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938875-pomorie-commercial-building-9.webp' alt='GalleryImage of the Pomorie Commercial Building') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938877-pomorie-commercial-building-10.webp' alt='GalleryImage of the Pomorie Commercial Building') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938881-pomorie-commercial-building-11.webp' alt='GalleryImage of the Pomorie Commercial Building') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938884-pomorie-commercial-building-12.webp' alt='GalleryImage of the Pomorie Commercial Building') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938888-pomorie-commercial-building-13.webp' alt='GalleryImage of the Pomorie Commercial Building') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938892-pomorie-commercial-building-14.webp' alt='GalleryImage of the Pomorie Commercial Building') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938894-pomorie-commercial-building-15.webp' alt='GalleryImage of the Pomorie Commercial Building') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938897-pomorie-commercial-building-floor-plan-1.webp' alt='GalleryImage of the Pomorie Commercial Building') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938899-pomorie-commercial-building-floor-plan-2.webp' alt='GalleryImage of the Pomorie Commercial Building') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938899-pomorie-commercial-building-floor-plan-3.webp' alt='GalleryImage of the Pomorie Commercial Building') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938903-pomorie-commercial-building-floor-plan-4.webp' alt='GalleryImage of the Pomorie Commercial Building')
+                    button.carousel-control-prev(type='button' data-bs-target='#projectCarousel' data-bs-slide='prev')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-prev-icon.asset-gallery-carousel-prev-icon(aria-hidden='true')
+                    button.carousel-control-next(type='button' data-bs-target='#projectCarousel' data-bs-slide='next')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-next-icon.asset-gallery-carousel-next-icon(aria-hidden='true')        
+    
+    .container-fluid.project-numbers-container
+        .row.project-numbers-row.text-end.justify-content-center.mx-5
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-buildings-number.project-numbers-price-number-pomorie         
+                div.project-numbers-text Price        
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-floors-number.project-numbers-floors-number-pomorie         
+                div.project-numbers-text Floors        
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-green-area-number.project-numbers-built-area-number-pomorie   
+                div.project-numbers-text Built Area
+
+    .container-fluid.project-details-container
+        .row.project-details-row.text-end.mx-5.justify-content-center
+            .col-12.project-details-headline-col.p-0.text-center
+                h2.project-details-headline Pomorie Commercial Building
+            .col-10.project-details-headline-col.p-0.text-start
+                div.project-details-text Dira Bulgarit is proud to present the <strong>Pomorie Commercial Building</strong>, a commercial building ready for occupancy and with great potential in the city of Pomorie in the Burgas district. 
+                div.project-details-text The building has a constructed area of ​​850 square meters spread over three floors. The building area can be divided into offices, a clinic, cafes and a restaurant. Each floor has spacious balconies.
+                div.project-details-text A desirable location in the city in a high demand area. The building has water and electricity connections and has an occupancy permit.
+    
+    .container-fluid.project-video-container
+            .row.asset-video-row.mx-3.justify-content-center 
+                .col-12.col-md-10.asset-video-col.text-center(role="region" aria-labelledby="assetVideoDescription")
+                    iframe(src='https://www.youtube.com/embed/euijCS5bh-c?si=Uh9NgiIKjZIb_UWL' frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen).asset-video                    
+                span.visually-hidden(id="assetVideoDescription") A video showing the interior of the Pomorie Commercial Building
+    
+    .container-fluid.project-map-container
+        .row.project-map-row.text-center.mx-3.justify-content-center 
+            .col-12.project-map-healine-col
+                h2.project-map-headline Location
+            .col-12.col-md-10.project-map-col
+                div.project-map(id='map' data-long=27.6156 data-lat=42.5680 data-title='Pomorie Commercial Building') 
+
+    include ../_contactUsFixed  
+    include ../_contactUsFixedMobile   
+

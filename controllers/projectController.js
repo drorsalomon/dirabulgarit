@@ -1,5 +1,6 @@
 const Asset = require('../models/assetModel');
 const enAsset = require('../models/enAssetModel');
+const ruAsset = require('../models/ruAssetModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 
@@ -153,6 +154,116 @@ exports.getMountainBoutique = catchAsync(async (req, res) => {
 
   res.status(200).render(`${res.locals.lang}/projects/mountainBoutique`, {
     title: 'Mountain View Boutique',
+    projectAssets,
+  });
+});
+
+exports.getFortNoksSuites = catchAsync(async (req, res) => {
+  let sortOptions = { sold: 1, price: 1 };
+  let projectAssets;
+
+  if (res.locals.lang === 'he') {
+    projectAssets = await Asset.find({ project: 'Fort Noks Premier Suites' }).sort(sortOptions);
+  } else if (res.locals.lang === 'en') {
+    projectAssets = await enAsset.find({ project: 'Fort Noks Premier Suites' }).sort(sortOptions);
+  } else if (res.locals.lang === 'ru') {
+    projectAssets = await ruAsset.find({ project: 'Fort Noks Premier Suites' }).sort(sortOptions);
+  } else {
+    // Fallback if none match (optional)
+    projectAssets = [];
+  }
+  if (!projectAssets) return next(new AppError('Could not find the requested asset!', 404));
+
+  res.status(200).render(`${res.locals.lang}/projects/fortNoksSuites`, {
+    title: 'Fort Noks Premier Suites',
+    projectAssets,
+  });
+});
+
+exports.getGreenFortSuites = catchAsync(async (req, res) => {
+  let sortOptions = { sold: 1, price: 1 };
+  let projectAssets;
+
+  if (res.locals.lang === 'he') {
+    projectAssets = await Asset.find({ project: 'Green Fort Suites' }).sort(sortOptions);
+  } else if (res.locals.lang === 'en') {
+    projectAssets = await enAsset.find({ project: 'Green Fort Suites' }).sort(sortOptions);
+  } else if (res.locals.lang === 'ru') {
+    projectAssets = await ruAsset.find({ project: 'Green Fort Suites' }).sort(sortOptions);
+  } else {
+    // Fallback if none match (optional)
+    projectAssets = [];
+  }
+  if (!projectAssets) return next(new AppError('Could not find the requested asset!', 404));
+
+  res.status(200).render(`${res.locals.lang}/projects/greenFortSuites`, {
+    title: 'Green Fort Suites',
+    projectAssets,
+  });
+});
+
+exports.getPremierFortBeach = catchAsync(async (req, res) => {
+  let sortOptions = { sold: 1, price: 1 };
+  let projectAssets;
+
+  if (res.locals.lang === 'he') {
+    projectAssets = await Asset.find({ project: 'Premier Fort Beach' }).sort(sortOptions);
+  } else if (res.locals.lang === 'en') {
+    projectAssets = await enAsset.find({ project: 'Premier Fort Beach' }).sort(sortOptions);
+  } else if (res.locals.lang === 'ru') {
+    projectAssets = await ruAsset.find({ project: 'Premier Fort Beach' }).sort(sortOptions);
+  } else {
+    // Fallback if none match (optional)
+    projectAssets = [];
+  }
+  if (!projectAssets) return next(new AppError('Could not find the requested asset!', 404));
+
+  res.status(200).render(`${res.locals.lang}/projects/premierFortBeach`, {
+    title: 'Premier Fort Beach',
+    projectAssets,
+  });
+});
+
+exports.getPrestigeFortBeach = catchAsync(async (req, res) => {
+  let sortOptions = { sold: 1, price: 1 };
+  let projectAssets;
+
+  if (res.locals.lang === 'he') {
+    projectAssets = await Asset.find({ project: 'Prestige Fort Beach' }).sort(sortOptions);
+  } else if (res.locals.lang === 'en') {
+    projectAssets = await enAsset.find({ project: 'Prestige Fort Beach' }).sort(sortOptions);
+  } else if (res.locals.lang === 'ru') {
+    projectAssets = await ruAsset.find({ project: 'Prestige Fort Beach' }).sort(sortOptions);
+  } else {
+    // Fallback if none match (optional)
+    projectAssets = [];
+  }
+  if (!projectAssets) return next(new AppError('Could not find the requested asset!', 404));
+
+  res.status(200).render(`${res.locals.lang}/projects/prestigeFortBeach`, {
+    title: 'Prestige Fort Beach',
+    projectAssets,
+  });
+});
+
+exports.getNessebarFortResidence = catchAsync(async (req, res) => {
+  let sortOptions = { sold: 1, price: 1 };
+  let projectAssets;
+
+  if (res.locals.lang === 'he') {
+    projectAssets = await Asset.find({ project: 'Nessebar Fort Residence' }).sort(sortOptions);
+  } else if (res.locals.lang === 'en') {
+    projectAssets = await enAsset.find({ project: 'Nessebar Fort Residence' }).sort(sortOptions);
+  } else if (res.locals.lang === 'ru') {
+    projectAssets = await ruAsset.find({ project: 'Nessebar Fort Residence' }).sort(sortOptions);
+  } else {
+    // Fallback if none match (optional)
+    projectAssets = [];
+  }
+  if (!projectAssets) return next(new AppError('Could not find the requested asset!', 404));
+
+  res.status(200).render(`${res.locals.lang}/projects/nessebarFortResidence`, {
+    title: 'Nessebar Fort Residence',
     projectAssets,
   });
 });

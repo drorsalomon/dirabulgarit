@@ -1,0 +1,186 @@
+extends ../base
+
+block head
+    title Vitosha Mountain View
+    meta(name="description" content="Discover Vitosha Mountain View – an exclusive boutique project at the foot of Vitosha Mountain. Luxury apartments with private yards, elegant design, and a prime location in the prestigious Vitosha district. Perfect for living or investment!")
+    meta(name="robots" content="index, follow")
+    link(rel="canonical" href="https://www.dirabulgarit.com/en/project/vitosah-mountain-view")
+    link(rel="alternate" href="https://www.dirabulgarit.com/en/project/vitosah-mountain-view" hreflang="en")
+    link(rel="alternate" href="https://www.dirabulgarit.com/project/vitosah-mountain-view" hreflang="he")
+
+    meta(property="og:title" content="Vitosha Mountain View")
+    meta(property="og:description" content="Discover Vitosha Mountain View – an exclusive boutique project at the foot of Vitosha Mountain. Luxury apartments with private yards, elegant design, and a prime location in the prestigious Vitosha district. Perfect for living or investment!")
+    meta(property="og:image" content="https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387897986-vitosha-mountain-view-1.webp")
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../../he/_headLinksScripts
+
+block content 
+
+    .container-fluid.project-main-image-container(role="img" aria-labelledby="mountainViewMainImageDescription")
+        span.visually-hidden(id="mountainViewMainImageDescription") An image of the Vitosha Mountain View project buildings
+        .row.project-main-image-row
+            .col.project-main-image-col.project-main-image-col-mountain-view 
+                h1.project-main-image-headline.project-main-image-headline-mountain-view Vitosha Mountain View           
+    
+    .container-fluid.project-gallery-container
+        .row.project-gallery-headline-row.text-center.mx-2
+            .col-12.project-gallery-headline-col.p-0    
+                h2.project-gallery-headline Gallery
+        .row.project-gallery-row.text-center.mx-2
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387897995-vitosha-mountain-view-2.webp' alt='Image of the Vitosha Mountain View Project' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387898017-vitosha-mountain-view-3.webp' alt='Image of the Vitosha Mountain View Project' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387898022-vitosha-mountain-view-4.webp' alt='Image of the Vitosha Mountain View Project' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+
+    #projectModal.modal.fade.asset-gallery-modal.text-center(tabindex='-1' aria-labelledby='projectModalLabel' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered
+            .asset-gallery-modal-content.modal-content
+                .row.d-flex
+                    .col-6.align-content-center
+                        div.text-start.px-4
+                            div.asset-gallery-img-text Vitosha Mountain View
+                    .col-6
+                        div.text-end.p-3
+                            button.btn-close.asset-gallery-modal-close-btn.p-2.my-auto(type='button' data-bs-dismiss='modal' aria-label='Close')
+                #projectCarousel.carousel.slide(data-bs-touch='true' data-bs-interval='30000' data-bs-ride='carousel')
+                    .carousel-inner.asset-modal-carousel-inner
+                        .carousel-item.asset-gallery-carousel-item.align-content-center.active
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387897995-vitosha-mountain-view-2.webp' alt='Image of the Vitosha Mountain View Project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387898017-vitosha-mountain-view-3.webp' alt='Image of the Vitosha Mountain View Project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387898022-vitosha-mountain-view-4.webp' alt='Image of the Vitosha Mountain View Project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387897986-vitosha-mountain-view-1.webp' alt='Image of the Vitosha Mountain View Project') 
+                    button.carousel-control-prev(type='button' data-bs-target='#projectCarousel' data-bs-slide='prev')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-prev-icon.asset-gallery-carousel-prev-icon(aria-hidden='true')
+                    button.carousel-control-next(type='button' data-bs-target='#projectCarousel' data-bs-slide='next')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-next-icon.asset-gallery-carousel-next-icon(aria-hidden='true')        
+    
+    .container-fluid.project-numbers-container
+        .row.project-numbers-row.text-end.justify-content-center.mx-5
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-buildings-number.project-numbers-buildings-number-mountain-view          
+                div.project-numbers-text Buildings        
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-floors-number.project-numbers-floors-number-mountain-view          
+                div.project-numbers-text Floors        
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-apartments-number.project-numbers-apartments-number-mountain-view         
+                div.project-numbers-text Apartments
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-parking-spots-number.project-numbers-parking-spots-number-mountain-view         
+                div.project-numbers-text Parking Spots
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center   
+                div.project-numbers-end-number December 2025
+                div.project-numbers-text Construction End
+    
+    .container-fluid.project-details-container
+        .row.project-details-row.text-end.mx-5.justify-content-center
+            .col-12.project-details-headline-col.p-0.text-center
+                h2.project-details-headline Vitosha Mountain View
+            .col-10.project-details-headline-col.p-0.text-start
+                div.project-details-text Vitosha Mountain View is an exclusive boutique project located at the foot of Vitosha Mountain, offering a limited number of luxury properties, including exquisite three-room apartments with private yards. Discover your new home and uncompromising investment with us!
+                div.project-details-text Vitosha Mountain View has been designed with your ultimate comfort and wise investment in mind. This gated building is situated in the prestigious Vitosha district, offering everything needed for a comfortable and high-quality life. For your peace of mind and respect for your privacy, the building includes only four floors, underground parking, and three entrances.
+                div.project-details-text The elegant and impressive exterior design combines elements like wrought iron, French-style window frames, and the use of high-quality natural stone, giving the project a timeless appearance. The lush greenery, a hallmark of all our developments, adds a unique touch here as well, inviting you to spend more time outdoors, with the building enveloped in beautiful, living foliage.
+                div.project-details-text For those seeking additional outdoor space, the ground-floor apartments with private yards are ideal. Among them, two unique corner apartments feature three bedrooms, a study, and ceilings 5 meters high. Each comes with a 60 sqm yard, allowing you to enjoy the best of both worlds – the comfort of a private house and the luxury of an apartment.
+                div.project-details-text 67 apartments at the mountain's foot are waiting for their new owners. Whether for comfortable living or as an investment, choosing Vitosha Mountain View is an excellent decision. The precise planning, variety of property options, and prime location ensure your peace of mind from every perspective. Here, you will find the perfect home whose value will only increase over time.
+                h3.project-details-sub-headline Location
+                div.project-details-text Vitosha Mountain View is located on Boris Arsov Street, in the prestigious Vitosha district. The location is close to major thoroughfares yet secluded and serene. Nearby, you'll find everything you need for convenient living, with the area continuing to develop as a highly sought-after location.
+                div.project-details-text Due to the area's rapid growth, new infrastructure is being added regularly, including schools, shops, restaurants, pharmacies, and other services. Investing in a property in such a developing neighborhood is undoubtedly profitable.
+                div.project-details-text If you're looking for a home in a well-connected area, close to the city's central parts yet near picturesque nature, you'll find it here. The low-rise building, with its elegant and timeless architecture, offers you the chance to live both at the mountain's edge and in the heart of the city.
+                h3.project-details-sub-headline Elegant and Impressive Building
+                div.project-details-text The stunning exterior transforms the building into an architectural masterpiece and sets the tone for the area. Timeless facades in light colors, warm natural stone, wrought iron, and French windows offer breathtaking, open views.
+                h3.project-details-sub-headline Meticulously Designed Interior
+                div.project-details-text Behind the impressive facade lies an equally remarkable interior. Every apartment boasts excellent functional design, allowing for convenient furnishing and comfortable living. The shared spaces are elegant, designed with your privacy in mind, featuring only three entrances and four floors.
+                h3.project-details-sub-headline The Ideal Home for Everyone
+                div.project-details-text The range of apartments invites you to choose the one that suits you best – with 1, 2, or 3 bedrooms; ground-floor apartments with yards; or three-room apartments with 60 sqm private yards and a study.
+                h3.project-details-sub-headline Peace and Security
+                div.project-details-text The gated building offers controlled access for the residents’ convenience and peace of mind.
+                h3.project-details-sub-headline Close to the Mountain
+                div.project-details-text Vitosha Mountain is just a stone’s throw away. Enjoy breathtaking views of the scenic slopes, peace, and proximity to nature for the whole family.
+                h3.project-details-sub-headline Investor Responsibility
+                div.project-details-text To ensure that every building maintains its excellent appearance and quality, we take responsibility for its maintenance ourselves rather than relying on external companies.
+                h3.project-details-sub-headline Building Features:
+                div.project-details-text ● <strong>Facade:</strong> Partially made of high-quality HPL and Etalbond.
+                div.project-details-text ● <strong>Glass Facade:</strong> Partial glass construction.
+                div.project-details-text ● <strong>Roof:</strong> Flat roof with 5 mm thick Italian double insulation.
+                div.project-details-text ● <strong>Walls:</strong> Multi-cell ceramic blocks.
+                div.project-details-text ● <strong>Thermal Insulation:</strong> EPS, minimum thickness 10 cm.
+                div.project-details-text ● <strong>Electrical Installation:</strong> Three-phase electricity with an installed panel and circuit breaker protection.
+                div.project-details-text ● <strong>Water and Sewerage System:</strong> PPR and PVC pipes, including water meters.
+                div.project-details-text ● <strong>External Connections:</strong> Gas, electricity, water, and sewerage supply.
+                div.project-details-text ● <strong>Elevators:</strong> Custom Spanish-made ORONA elevators.
+                div.project-details-text ● <strong>Windows:</strong> German TROCAL windows with triple glazing in graphite color.
+                div.project-details-text ● <strong>Common Areas:</strong> Luxuriously designed based on a unique project.
+                div.project-details-text ● <strong>Landscaped Yard</strong> 
+                div.project-details-text ● <strong>Garage Doors:</strong> Hormann, with remote control options.
+                h3.project-details-sub-headline Apartment Finish Levels:
+                div.project-details-text ● <strong>Walls and Ceilings:</strong> Gypsum plaster.
+                div.project-details-text ● <strong>Flooring:</strong> Smooth concrete.
+                div.project-details-text ● <strong>Balconies:</strong> Frost-resistant porcelain granite tiles.
+                div.project-details-text ● <strong>Front Door:</strong> Reinforced door with four-way locking.
+                div.project-details-text ● <strong>Communication Infrastructure:</strong> Internet and TV cables installed.
+                div.project-details-text ● <strong>Gas:</strong> Connection to the front door.
+                h3.project-details-sub-headline Key Dates:
+                div.project-details-text ● <strong>Act 14:</strong> September 2024
+                div.project-details-text ● <strong>Act 15:</strong> July 2025
+                div.project-details-text ● <strong>Act 16:</strong> December 2025
+                h3.project-details-sub-headline About SofBuildStroy Group
+                div.project-details-text The principles on which the construction company SofBuildStroy was founded are comfort, security and high aesthetics. We plan each project precisely with the help of teams of architects and designers. We build with quality and natural materials, carefully controlling each stage of the process. We continue our mission of taking care of you by taking on the maintenance of the buildings ourselves. We create homes in which you can live well. 
+                div.project-details-text Our buildings are in great demand, as the construction company SofBuildStroy offers excellently planned, beautiful and spacious apartments in buildings with exceptional timeless architecture. The locations where they are built are richly landscaped and take great care of children. This has brought the company awards for luxury construction, architecture and design in Bulgaria and abroad.
+                div.project-details-text Our commitment to providing perfect homes and workspaces always drives us to constantly evolve and improve in line with global trends. Because you deserve the best! 
+
+    .container-fluid.project-amenities-container
+        .row.project-amenities-headline-row.text-center.mx-5
+            .col-12.project-amenities-headline-col.p-0
+                h2.project-amenities-headline Amenities
+        .row.project-amenities-row.text-end.mx-5.justify-content-start 
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/mountain-view-residence-icon-train.svg' alt='Train icon')
+                div.project-amenities-text Just 200m from the tram station
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/mountain-view-residence-icon-bike.svg' alt='Bicycle icon')
+                div.project-amenities-text Bicycle parking
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/mountain-view-residence-icon-building.svg' alt='Building icon')
+                div.project-amenities-text Stores and Pharmacy
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/mountain-view-residence-icon-dumbell.svg' alt='Dumbbell icon')
+                div.project-amenities-text(dir='rtl') Exercise area
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/mountain-view-residence-icon-elevator.svg' alt='Elevator icon')
+                div.project-amenities-text Advanced elevators
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/mountain-view-residence-icon-materials.svg' alt='Fabric icon')
+                div.project-amenities-text High quality materials               
+
+    .container-fluid.project-mid-image-container.project-mid-image-container-mountain-view(role="img" aria-labelledby="mountainViewMidImageDescription")
+        span.visually-hidden(id="mountainViewMidImageDescription") Image of the Vitosha Mountain View project from above
+    
+    .container-fluid.project-map-container
+        .row.project-map-row.text-center.mx-2.justify-content-center 
+            .col-12.project-map-headline-col
+                h2.project-map-headline Location
+            .col-12.col-md-10.project-map-col
+                div.project-map(id='map' data-long=23.345051020432404 data-lat=42.64117557271176 data-title='Vitosha Mountain View') 
+
+    .container-fluid.project-assets-container
+        .row.asset-related-assets-row.justify-content-center.mx-5.text-center
+            .col-12.project-assets-headline-col
+                h2.project-assets-headline Available Properties In The Project
+            each asset in projectAssets
+                include ../_assetsCards
+        .row.mobile-asset-related-assets-row.justify-content-center.mx-1.text-center
+            .col-12.project-assets-headline-col
+                h2.project-assets-headline Available Properties In The Project
+            each asset in projectAssets
+                include ../_mobileAssetsCards 
+
+    include ../_contactUsFixed  
+    include ../_contactUsFixedMobile 

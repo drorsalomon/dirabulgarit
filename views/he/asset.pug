@@ -7,6 +7,7 @@ block head
     link(rel="canonical" href=`https://www.dirabulgarit.com/asset/${asset.slug}`)
     link(rel="alternate" href=`https://www.dirabulgarit.com/en/asset/${asset.slug}` hreflang="en")
     link(rel="alternate" href=`https://www.dirabulgarit.com/asset/${asset.slug}` hreflang="he")
+    link(rel="alternate" href=`https://www.dirabulgarit.com/ru/asset/${asset.slug}` hreflang="ru")
     
     meta(property="og:title" content=`${asset.name}`)
     meta(property="og:description" content=`${asset.description.text[0]}` )
@@ -61,7 +62,7 @@ block content
             .col-12.col-md-5.col-lg-4.col-xl-3.asset-details-features-col 
                 div.mobile-asset-favorite-btn-container.text-center
                     button.asset-pdf-btn(dir='rtl') יצוא נכס ל
-                        img.favorite-btn-icon(src='/img/icons/pdf-svgrepo-com.svg' alt='אייקון של קובץ PDF') 
+                        img.pdf-btn-icon(src='/img/icons/pdf-svgrepo-com.svg' alt='אייקון של קובץ PDF') 
                     button.asset-favorite-btn-white
                         img.favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline.svg' alt='אייקון של לב') 
                 if asset.id   
@@ -191,7 +192,7 @@ block content
                     button.asset-favorite-btn-white
                         img.favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline.svg' alt='אייקון של לב') 
                     button.asset-pdf-btn.asset-pdf-btn-middleViewport(dir='rtl') יצוא נכס ל
-                        img.favorite-btn-icon(src='/img/icons/pdf-svgrepo-com.svg' alt='אייקון של קובץ PDF') 
+                        img.pdf-btn-icon(src='/img/icons/pdf-svgrepo-com.svg' alt='אייקון של קובץ PDF') 
                     button.btn-cta-asset.to-calendly-btn צרו קשר
                     button.share-btn-white
                         img.share-btn-icon(src='/img/icons/share-svgrepo-com-outline.svg' alt='אייקון של שיתוף דף')  

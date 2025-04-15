@@ -39,6 +39,11 @@
     font-size: $h6;
   }
 
+  // ***** Navbar *****
+  .mobile-lang-collapse-col-ru {
+    margin-left: 7.3rem !important;
+  }
+
   // ***** Hero *****
   .en-hero-container {
     height: 65rem;
@@ -201,6 +206,10 @@
 
   .navbar-logo {
     height: 6rem;
+  }
+
+  .mobile-lang-collapse-col-ru {
+    margin-left: 7.7rem !important;
   }
 
   // ***** Hero *****
@@ -470,6 +479,26 @@
       font-size: $h1;
     }
     &.project-main-image-headline-mountain-boutique {
+      @include projectHeadline(36%);
+      font-size: $h1;
+    }
+    &.project-main-image-headline-fort-noks-suites {
+      @include projectHeadline(36%);
+      font-size: $h1;
+    }
+    &.project-main-image-headline-green-fort-suites {
+      @include projectHeadline(36%);
+      font-size: $h1;
+    }
+    &.project-main-image-headline-premier-fort-beach {
+      @include projectHeadline(36%);
+      font-size: $h1;
+    }
+    &.project-main-image-headline-prestige-fort-beach {
+      @include projectHeadline(36%);
+      font-size: $h1;
+    }
+    &.project-main-image-headline-nessebar-fort-residence {
       @include projectHeadline(36%);
       font-size: $h1;
     }
@@ -987,6 +1016,15 @@
     &.project-main-image-headline-mellia-florance {
       @include projectHeadline(25%);
     }
+    &.project-main-image-headline-green-fort-suites {
+      @include projectHeadline(30%);
+    }
+    &.project-main-image-headline-premier-fort-beach {
+      @include projectHeadline(32%);
+    }
+    &.project-main-image-headline-prestige-fort-beach {
+      @include projectHeadline(32%);
+    }
   }
 
   .project-gallery-image {
@@ -1038,6 +1076,27 @@
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387898022-vitosha-mountain-view-4.webp',
         100% 50rem,
         50rem
+      );
+    }
+    &.project-mid-image-container-premier-fort-beach {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/premier-fort-beach/1744465313262-premier-fort-beach-46.jpg',
+        100% 60rem,
+        35rem
+      );
+    }
+    &.project-mid-image-container-prestige-fort-beach {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/prestige-fort-beach/1744563745815-prestige-fort-beach-8.webp',
+        100% 60rem,
+        35rem
+      );
+    }
+    &.project-mid-image-container-nessebar-fort-residence {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/nessebar-fort-residence/1744635596962-nessebar-fort-residence-30.webp',
+        100% 50rem,
+        35rem
       );
     }
     &.project-mid-image-container-sofia-b5 {
@@ -1556,6 +1615,21 @@
     &.project-main-image-headline-mountain-boutique {
       @include projectHeadline(31%);
     }
+    &.project-main-image-headline-fort-noks-suites {
+      @include projectHeadline(31%);
+    }
+    &.project-main-image-headline-green-fort-suites {
+      @include projectHeadline(23%);
+    }
+    &.project-main-image-headline-premier-fort-beach {
+      @include projectHeadline(25%);
+    }
+    &.project-main-image-headline-prestige-fort-beach {
+      @include projectHeadline(25%);
+    }
+    &.project-main-image-headline-nessebar-fort-residence {
+      @include projectHeadline(32%);
+    }
     &.project-main-image-headline-camelot {
       @include projectHeadline(36%);
     }
@@ -1623,6 +1697,20 @@
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387898022-vitosha-mountain-view-4.webp',
         100% 70rem,
         70rem
+      );
+    }
+    &.project-mid-image-container-premier-fort-beach {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/premier-fort-beach/1744465313262-premier-fort-beach-46.jpg',
+        100% 70rem,
+        40rem
+      );
+    }
+    &.project-mid-image-container-prestige-fort-beach {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/prestige-fort-beach/1744563745815-prestige-fort-beach-8.webp',
+        100% 70rem,
+        40rem
       );
     }
     &.project-mid-image-container-camelot {
@@ -2084,6 +2172,26 @@
       @include projectHeadline(36%);
       font-size: $h0;
     }
+    &.project-main-image-headline-fort-noks-suites {
+      @include projectHeadline(36%);
+      font-size: $h0;
+    }
+    &.project-main-image-headline-green-fort-suites {
+      @include projectHeadline(35%);
+      font-size: $h0;
+    }
+    &.project-main-image-headline-premier-fort-beach {
+      @include projectHeadline(35%);
+      font-size: $h0;
+    }
+    &.project-main-image-headline-prestige-fort-beach {
+      @include projectHeadline(35%);
+      font-size: $h0;
+    }
+    &.project-main-image-headline-nessebar-fort-residence {
+      @include projectHeadline(35%);
+      font-size: $h0;
+    }
     &.project-main-image-headline-camelot {
       @include projectHeadline(36%);
       font-size: $h0;
@@ -2186,6 +2294,27 @@
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387898022-vitosha-mountain-view-4.webp',
         100% 80rem,
         80rem
+      );
+    }
+    &.project-mid-image-container-premier-fort-beach {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/premier-fort-beach/1744465313262-premier-fort-beach-46.jpg',
+        100% 80rem,
+        40rem
+      );
+    }
+    &.project-mid-image-container-prestige-fort-beach {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/prestige-fort-beach/1744563745815-prestige-fort-beach-8.webp',
+        100% 80rem,
+        40rem
+      );
+    }
+    &.project-mid-image-container-nessebar-fort-residence {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/nessebar-fort-residence/1744635596962-nessebar-fort-residence-30.webp',
+        100% 70rem,
+        40rem
       );
     }
     &.project-mid-image-container-camelot {
@@ -2417,6 +2546,15 @@
     &.project-main-image-headline-mellia-florance {
       @include projectHeadline(28%);
     }
+    &.project-main-image-headline-green-fort-suites {
+      @include projectHeadline(29%);
+    }
+    &.project-main-image-headline-premier-fort-beach {
+      @include projectHeadline(32%);
+    }
+    &.project-main-image-headline-prestige-fort-beach {
+      @include projectHeadline(32%);
+    }
   }
 
   .project-gallery-image {
@@ -2472,6 +2610,20 @@
         'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387898022-vitosha-mountain-view-4.webp',
         100% 90rem,
         90rem
+      );
+    }
+    &.project-mid-image-container-premier-fort-beach {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/premier-fort-beach/1744465313262-premier-fort-beach-46.jpg',
+        100% 80rem,
+        40rem
+      );
+    }
+    &.project-mid-image-container-prestige-fort-beach {
+      @include projectMiddleImage(
+        'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/prestige-fort-beach/1744563745815-prestige-fort-beach-8.webp',
+        100% 90rem,
+        40rem
       );
     }
     &.project-mid-image-container-camelot {

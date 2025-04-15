@@ -1,0 +1,26 @@
+extends base 
+
+block head
+    title Любимые объекты недвижимости | Dira Bulgarit
+    meta(name="robots" content="noindex, nofollow")
+    meta(property="og:image" content='/img/hero-burgas.webp')
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../he/_headLinksScripts
+
+block content
+
+    .container-fluid.favorite-assets-headline-container
+        .row.favorite-assets-headline-row.justify-content-center 
+            .col-10.favorite-assets-headline-col 
+                h1.favorite-assets-headline Любимые объекты недвижимости
+
+    .container-fluid.favorite-assets-container
+        .row.favorite-assets-row.d-flex.justify-content-center.mx-2
+            if assetsArray !== null && assetsArray.length > 0
+                each asset in assetsArray    
+                    include _assetsCards
+            else
+                div.no-search-results-found.text-center Не выбрано ни одного любимого объекта
+                div.no-search-results-found-img-container.text-center  
+                    img(src="/img/logo-grey-eng.png" alt="Логотип Дира Булгарит").no-search-results-found-img           

@@ -20,5 +20,10 @@ router.get('/mellia-florance', projectController.getMelliaFlorance);
 router.get('/mountain-view-residence', projectController.getMountainResidence);
 router.get('/vitosha-mountain-view', projectController.getMountainView);
 router.get('/mountain-view-boutique', projectController.getMountainBoutique);
+router.get('/fort-noks-premier-suites', projectController.getFortNoksSuites);
+router.get('/green-fort-suites', projectController.getGreenFortSuites);
+router.get('/premier-fort-beach', projectController.getPremierFortBeach);
+router.get('/prestige-fort-beach', projectController.getPrestigeFortBeach);
+router.get('/nessebar-fort-residence', projectController.getNessebarFortResidence);
 
 module.exports = router;

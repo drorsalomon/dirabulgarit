@@ -26,6 +26,9 @@
   .webinar-mainpage-text span {
     font-size: 1.6rem;
   }
+  .mobile-lang-collapse-col-ru {
+    margin-left: 7.3rem !important;
+  }
   .en-hero-container {
     height: 65rem;
   }
@@ -142,6 +145,9 @@
   }
   .navbar-logo {
     height: 6rem;
+  }
+  .mobile-lang-collapse-col-ru {
+    margin-left: 7.7rem !important;
   }
   .hero-container {
     height: 55rem;
@@ -408,6 +414,61 @@
     font-size: 4.8rem;
   }
   .project-main-image-headline.project-main-image-headline-mountain-boutique {
+    position: absolute;
+    top: 50%;
+    left: 36%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 4.8rem;
+  }
+  .project-main-image-headline.project-main-image-headline-fort-noks-suites {
+    position: absolute;
+    top: 50%;
+    left: 36%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 4.8rem;
+  }
+  .project-main-image-headline.project-main-image-headline-green-fort-suites {
+    position: absolute;
+    top: 50%;
+    left: 36%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 4.8rem;
+  }
+  .project-main-image-headline.project-main-image-headline-premier-fort-beach {
+    position: absolute;
+    top: 50%;
+    left: 36%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 4.8rem;
+  }
+  .project-main-image-headline.project-main-image-headline-prestige-fort-beach {
+    position: absolute;
+    top: 50%;
+    left: 36%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 4.8rem;
+  }
+  .project-main-image-headline.project-main-image-headline-nessebar-fort-residence {
     position: absolute;
     top: 50%;
     left: 36%;
@@ -917,6 +978,36 @@
     font-weight: 600;
     color: #ffffff;
   }
+  .project-main-image-headline.project-main-image-headline-green-fort-suites {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .project-main-image-headline.project-main-image-headline-premier-fort-beach {
+    position: absolute;
+    top: 50%;
+    left: 32%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .project-main-image-headline.project-main-image-headline-prestige-fort-beach {
+    position: absolute;
+    top: 50%;
+    left: 32%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
   .project-gallery-image {
     height: 17rem;
     width: 23rem;
@@ -982,6 +1073,39 @@
     background-repeat: no-repeat;
     background-size: 100% 50rem;
     height: 50rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-premier-fort-beach {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/premier-fort-beach/1744465313262-premier-fort-beach-46.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 60rem;
+    height: 35rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-prestige-fort-beach {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/prestige-fort-beach/1744563745815-prestige-fort-beach-8.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 60rem;
+    height: 35rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-nessebar-fort-residence {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/nessebar-fort-residence/1744635596962-nessebar-fort-residence-30.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 50rem;
+    height: 35rem;
     width: 100%;
   }
   .project-mid-image-container.project-mid-image-container-sofia-b5 {
@@ -1466,6 +1590,56 @@
     font-weight: 600;
     color: #ffffff;
   }
+  .project-main-image-headline.project-main-image-headline-fort-noks-suites {
+    position: absolute;
+    top: 50%;
+    left: 31%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .project-main-image-headline.project-main-image-headline-green-fort-suites {
+    position: absolute;
+    top: 50%;
+    left: 23%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .project-main-image-headline.project-main-image-headline-premier-fort-beach {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .project-main-image-headline.project-main-image-headline-prestige-fort-beach {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .project-main-image-headline.project-main-image-headline-nessebar-fort-residence {
+    position: absolute;
+    top: 50%;
+    left: 32%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
   .project-main-image-headline.project-main-image-headline-camelot {
     position: absolute;
     top: 50%;
@@ -1572,6 +1746,28 @@
     background-repeat: no-repeat;
     background-size: 100% 70rem;
     height: 70rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-premier-fort-beach {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/premier-fort-beach/1744465313262-premier-fort-beach-46.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 70rem;
+    height: 40rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-prestige-fort-beach {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/prestige-fort-beach/1744563745815-prestige-fort-beach-8.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 70rem;
+    height: 40rem;
     width: 100%;
   }
   .project-mid-image-container.project-mid-image-container-camelot {
@@ -2020,6 +2216,61 @@
     color: #ffffff;
     font-size: 10rem;
   }
+  .project-main-image-headline.project-main-image-headline-fort-noks-suites {
+    position: absolute;
+    top: 50%;
+    left: 36%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 10rem;
+  }
+  .project-main-image-headline.project-main-image-headline-green-fort-suites {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 10rem;
+  }
+  .project-main-image-headline.project-main-image-headline-premier-fort-beach {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 10rem;
+  }
+  .project-main-image-headline.project-main-image-headline-prestige-fort-beach {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 10rem;
+  }
+  .project-main-image-headline.project-main-image-headline-nessebar-fort-residence {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 10rem;
+  }
   .project-main-image-headline.project-main-image-headline-camelot {
     position: absolute;
     top: 50%;
@@ -2184,6 +2435,39 @@
     background-repeat: no-repeat;
     background-size: 100% 80rem;
     height: 80rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-premier-fort-beach {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/premier-fort-beach/1744465313262-premier-fort-beach-46.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 80rem;
+    height: 40rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-prestige-fort-beach {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/prestige-fort-beach/1744563745815-prestige-fort-beach-8.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 80rem;
+    height: 40rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-nessebar-fort-residence {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/nessebar-fort-residence/1744635596962-nessebar-fort-residence-30.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 70rem;
+    height: 40rem;
     width: 100%;
   }
   .project-mid-image-container.project-mid-image-container-camelot {
@@ -2428,6 +2712,36 @@
     font-weight: 600;
     color: #ffffff;
   }
+  .project-main-image-headline.project-main-image-headline-green-fort-suites {
+    position: absolute;
+    top: 50%;
+    left: 29%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .project-main-image-headline.project-main-image-headline-premier-fort-beach {
+    position: absolute;
+    top: 50%;
+    left: 32%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .project-main-image-headline.project-main-image-headline-prestige-fort-beach {
+    position: absolute;
+    top: 50%;
+    left: 32%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    color: #ffffff;
+  }
   .project-gallery-image {
     height: 25rem;
     width: 43rem;
@@ -2507,6 +2821,28 @@
     background-repeat: no-repeat;
     background-size: 100% 90rem;
     height: 90rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-premier-fort-beach {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/premier-fort-beach/1744465313262-premier-fort-beach-46.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 80rem;
+    height: 40rem;
+    width: 100%;
+  }
+  .project-mid-image-container.project-mid-image-container-prestige-fort-beach {
+    position: relative;
+    padding: 0 !important;
+    background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/prestige-fort-beach/1744563745815-prestige-fort-beach-8.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 90rem;
+    height: 40rem;
     width: 100%;
   }
   .project-mid-image-container.project-mid-image-container-camelot {

@@ -1,0 +1,20 @@
+extends base 
+
+block head
+    meta(name="robots" content="noindex, nofollow")
+    meta(property="og:image" content='/img/about-us-sozopol.webp')
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../he/_headLinksScripts
+
+block content
+
+    .container-fluid.contact-us-confirm-main-container
+        .row.contact-us-confirm-row.align-items-center.justify-content-center.mx-4.py-xxl-5
+            .col-12.col-md-6
+                div.contact-us-confirm-headline Ваш запрос получен!
+                div.contact-us-confirm-border
+                div.contact-us-confirm-text Спасибо, что обратились к Дире Булгарит, один из наших консультантов свяжется с вами как можно скорее.
+                button.error-btn(aria-label='Вернуться на главную страницу') Домашняя страница
+            .col-12.col-md-6.col-xl-4.d-md-flex.justify-content-md-center.contact-us-confirm-img-col      
+                img.contact-us-confirm-img.img-fluid(src='/img/about-us-sozopol.webp' alt='Пейзажное изображение Обзора, Болгария')

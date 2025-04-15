@@ -1,6 +1,7 @@
 import * as config from './config';
 import { switchLang } from './language';
 
+// ***** Currency *****
 export const switchSearchPriceCurrencyHtmlOnLoad = (priceInput, isEuro = true) => {
   if (isEuro) {
     if (priceInput)
@@ -16,24 +17,30 @@ export const switchSearchPriceCurrencyHtmlOnLoad = (priceInput, isEuro = true) =
 };
 
 export const switchCurrencyIconsSrc = (isEuro = true) => {
-  if (isEuro) {
-    config.Elements.activeCurrencyIcon.src = config.euroIconSrc;
-    config.Elements.activeCurrencyIcon.alt = config.euroIconAlt;
-    config.Elements.mobileActiveCurrencyIcon.src = config.mobileEuroIconSrc;
-    config.Elements.mobileActiveCurrencyIcon.alt = config.euroIconAlt;
-    config.Elements.notActiveCurrencyIcon.src = config.nisIconSrc;
-    config.Elements.notActiveCurrencyIcon.alt = config.nisIconAlt;
-    config.Elements.mobileNotActiveCurrencyIcon.src = config.mobileNisIconSrc;
-    config.Elements.mobileNotActiveCurrencyIcon.alt = config.nisIconAlt;
-  } else {
-    config.Elements.activeCurrencyIcon.src = config.nisIconSrc;
-    config.Elements.activeCurrencyIcon.alt = config.nisIconAlt;
-    config.Elements.mobileActiveCurrencyIcon.src = config.mobileNisIconSrc;
-    config.Elements.mobileActiveCurrencyIcon.alt = config.nisIconAlt;
-    config.Elements.notActiveCurrencyIcon.src = config.euroIconSrc;
-    config.Elements.notActiveCurrencyIcon.alt = config.euroIconAlt;
-    config.Elements.mobileNotActiveCurrencyIcon.src = config.mobileEuroIconSrc;
-    config.Elements.mobileNotActiveCurrencyIcon.alt = config.euroIconAlt;
+  const currencyConfig = {
+    euro: {
+      activeCurrencyIcon: { src: config.euroIconSrc, alt: config.euroIconAlt },
+      mobileActiveCurrencyIcon: { src: config.mobileEuroIconSrc, alt: config.euroIconAlt },
+      notActiveCurrencyIcon: { src: config.nisIconSrc, alt: config.nisIconAlt },
+      mobileNotActiveCurrencyIcon: { src: config.mobileNisIconSrc, alt: config.nisIconAlt },
+    },
+    nis: {
+      activeCurrencyIcon: { src: config.nisIconSrc, alt: config.nisIconAlt },
+      mobileActiveCurrencyIcon: { src: config.mobileNisIconSrc, alt: config.nisIconAlt },
+      notActiveCurrencyIcon: { src: config.euroIconSrc, alt: config.euroIconAlt },
+      mobileNotActiveCurrencyIcon: { src: config.mobileEuroIconSrc, alt: config.euroIconAlt },
+    },
+  };
+
+  const selectedCurrency = isEuro ? 'euro' : 'nis';
+  const icons = currencyConfig[selectedCurrency];
+
+  for (const elementKey in icons) {
+    const { src, alt } = icons[elementKey];
+    if (config.Elements[elementKey]) {
+      config.Elements[elementKey].src = src;
+      config.Elements[elementKey].alt = alt;
+    }
   }
 };
 
@@ -79,25 +86,45 @@ export const switchCurrency = (currencyIconSrc) => {
   }
 };
 
-export const switchLanguageIconsSrc = (isHebrew = true) => {
-  if (isHebrew) {
-    config.Elements.activeLangIcon.src = config.heIconSrc;
-    config.Elements.activeLangIcon.alt = config.heIconAlt;
-    config.Elements.mobileActiveLangIcon.src = config.heIconSrc;
-    config.Elements.mobileActiveLangIcon.alt = config.heIconAlt;
-    config.Elements.notActiveLangIcon.src = config.enIconSrc;
-    config.Elements.notActiveLangIcon.alt = config.enIconAlt;
-    config.Elements.mobileNotActiveLangIcon.src = config.enIconSrc;
-    config.Elements.mobileNotActiveLangIcon.alt = config.enIconAlt;
-  } else {
-    config.Elements.activeLangIcon.src = config.enIconSrc;
-    config.Elements.activeLangIcon.alt = config.enIconAlt;
-    config.Elements.mobileActiveLangIcon.src = config.enIconSrc;
-    config.Elements.mobileActiveLangIcon.alt = config.enIconAlt;
-    config.Elements.notActiveLangIcon.src = config.heIconSrc;
-    config.Elements.notActiveLangIcon.alt = config.heIconAlt;
-    config.Elements.mobileNotActiveLangIcon.src = config.heIconSrc;
-    config.Elements.mobileNotActiveLangIcon.alt = config.heIconAlt;
+// ***** Language *****
+export const switchLanguageIconsSrc = (lang) => {
+  const languageConfig = {
+    [config.DEFAULT_LANGUAGE]: {
+      activeLangIcon: { src: config.heIconSrc, alt: config.heIconAlt },
+      mobileActiveLangIcon: { src: config.heIconSrc, alt: config.heIconAlt },
+      firstNotActiveLangIcon: { src: config.enIconSrc, alt: config.enIconAlt },
+      firstMobileNotActiveLangIcon: { src: config.enIconSrc, alt: config.enIconAlt },
+      secondNotActiveLangIcon: { src: config.ruIconSrc, alt: config.ruIconAlt },
+      secondMobileNotActiveLangIcon: { src: config.ruIconSrc, alt: config.ruIconAlt },
+    },
+    [config.EN_LANGUAGE]: {
+      activeLangIcon: { src: config.enIconSrc, alt: config.enIconAlt },
+      mobileActiveLangIcon: { src: config.enIconSrc, alt: config.enIconAlt },
+      firstNotActiveLangIcon: { src: config.heIconSrc, alt: config.heIconAlt },
+      firstMobileNotActiveLangIcon: { src: config.heIconSrc, alt: config.heIconAlt },
+      secondNotActiveLangIcon: { src: config.ruIconSrc, alt: config.ruIconAlt },
+      secondMobileNotActiveLangIcon: { src: config.ruIconSrc, alt: config.ruIconAlt },
+    },
+    [config.RU_LANGUAGE]: {
+      activeLangIcon: { src: config.ruIconSrc, alt: config.ruIconAlt },
+      mobileActiveLangIcon: { src: config.ruIconSrc, alt: config.ruIconAlt },
+      firstNotActiveLangIcon: { src: config.heIconSrc, alt: config.heIconAlt },
+      firstMobileNotActiveLangIcon: { src: config.heIconSrc, alt: config.heIconAlt },
+      secondNotActiveLangIcon: { src: config.enIconSrc, alt: config.enIconAlt },
+      secondMobileNotActiveLangIcon: { src: config.enIconSrc, alt: config.enIconAlt },
+    },
+  };
+
+  const icons = languageConfig[lang];
+
+  if (icons) {
+    for (const elementKey in icons) {
+      const { src, alt } = icons[elementKey];
+      if (config.Elements[elementKey]) {
+        config.Elements[elementKey].src = src;
+        config.Elements[elementKey].alt = alt;
+      }
+    }
   }
 };
 
@@ -107,9 +134,7 @@ export const modifyUrl = (inputStr, part) => {
     let partIndex = str.indexOf(part);
     if (partIndex === -1) return str;
 
-    // Check if inputStr and part are the same
     let toAdd = str === part ? 'en' : 'en/';
-
     return str.slice(0, partIndex + part.length) + toAdd + str.slice(partIndex + part.length);
   }
 
@@ -124,29 +149,63 @@ export const modifyUrl = (inputStr, part) => {
     return str;
   }
 
-  // Apply conditions
-  if (JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE) {
-    inputStr = removeEn(inputStr, part);
+  // Function to add '/ru' after the part
+  function addRu(str, part) {
+    let partIndex = str.indexOf(part);
+    if (partIndex === -1) return str;
+
+    let toAdd = str === part ? 'ru' : 'ru/';
+    return str.slice(0, partIndex + part.length) + toAdd + str.slice(partIndex + part.length);
   }
-  if (JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.EN_LANGUAGE) {
+
+  // Function to remove '/ru' after the part
+  function removeRu(str, part) {
+    let partIndex = str.indexOf(part);
+    if (partIndex === -1) return str;
+    let ruIndex = str.indexOf('ru', partIndex + part.length);
+    if (ruIndex === partIndex + part.length) {
+      return str.slice(0, ruIndex) + str.slice(ruIndex + 3);
+    }
+    return str;
+  }
+
+  const lang = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY));
+
+  // Remove both 'en' and 'ru' if default (Hebrew)
+  if (lang === config.DEFAULT_LANGUAGE) {
+    inputStr = removeEn(inputStr, part);
+    inputStr = removeRu(inputStr, part);
+  }
+
+  if (lang === config.EN_LANGUAGE) {
+    inputStr = removeRu(inputStr, part);
     inputStr = addEn(inputStr, part);
+  }
+
+  if (lang === config.RU_LANGUAGE) {
+    inputStr = removeEn(inputStr, part);
+    inputStr = addRu(inputStr, part);
   }
 
   return inputStr;
 };
 
 export const switchLanguage = (langIconSrc, href) => {
-  if (langIconSrc.includes(config.heIconSrc)) {
-    localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.DEFAULT_LANGUAGE));
-    switchLanguageIconsSrc();
-    href = modifyUrl(href, config.baseProdUrl);
-    switchLang(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)), href);
-  } else {
-    localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.EN_LANGUAGE));
-    switchLanguageIconsSrc(false);
-    href = modifyUrl(href, config.baseProdUrl);
-    switchLang(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)), href);
-  }
+  console.log(langIconSrc);
+
+  const languages = [
+    { icon: config.heIconSrc, lang: config.DEFAULT_LANGUAGE },
+    { icon: config.enIconSrc, lang: config.EN_LANGUAGE },
+    { icon: config.ruIconSrc, lang: config.RU_LANGUAGE },
+  ];
+
+  const selected = languages.find((lang) => langIconSrc.includes(lang.icon)) || languages[0]; // default to Hebrew
+
+  localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(selected.lang));
+  switchLanguageIconsSrc(selected.lang);
+
+  const updatedHref = modifyUrl(href, config.baseProdUrl);
+  switchLang(selected.lang, updatedHref);
 };
 
 export const reverseString = (s) => {
@@ -282,116 +341,84 @@ export const btnAddActive = (searchFilterObj, filterBtn, type, notModal = true, 
   });
 };
 
+const LANGUAGE_MAP = {
+  [config.DEFAULT_LANGUAGE]: 'he',
+  [config.EN_LANGUAGE]: 'en',
+  [config.RU_LANGUAGE]: 'ru',
+};
+
+const getLanguageText = (ddBtn, language) => {
+  return ddBtn.dataset[LANGUAGE_MAP[language] || 'en'];
+};
+
+const getCurrencySymbol = () => {
+  return JSON.parse(localStorage.getItem(config.CURRENCY_KEY)) === 'euro' ? '€' : '₪';
+};
+
 export const ddBtnTextSetter = (ddBtn, filterBtn, onLoad = false) => {
-  if (!onLoad) {
-    filterBtn.forEach((el) => {
-      el.addEventListener('click', function (e) {
-        ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
-        let counter = 0;
-        let chosenFilters = '';
-        // If filter btn has 'active class, add to counter and show number in DD btn
-        for (let i = 0; i < filterBtn.length; i++) {
-          if (filterBtn[i].classList.contains('active')) {
-            chosenFilters = document.createTextNode(' (' + ++counter + ')');
-            ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
-            ddBtn.appendChild(chosenFilters);
-          }
-        }
-      });
-    });
-  } else {
-    ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
-    let counter = 0;
-    let chosenFilters = '';
-    // If filter btn has 'active class, add to counter and show number in DD btn
-    for (let i = 0; i < filterBtn.length; i++) {
-      if (filterBtn[i].classList.contains('active')) {
-        chosenFilters = document.createTextNode(' (' + ++counter + ')');
-        ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
-        ddBtn.appendChild(chosenFilters);
-      }
+  const updateButtonText = () => {
+    const language = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY));
+    const activeCount = Array.from(filterBtn).filter((btn) => btn.classList.contains('active')).length;
+
+    ddBtn.innerText = getLanguageText(ddBtn, language);
+    if (activeCount > 0) {
+      ddBtn.appendChild(document.createTextNode(` (${activeCount})`));
     }
+  };
+
+  if (onLoad) {
+    updateButtonText();
+  } else {
+    filterBtn.forEach((btn) => {
+      btn.addEventListener('click', updateButtonText);
+    });
   }
 };
 
-// If user inputs max value in min input or min value at max input -> reverse values and show on DD btn
 export const priceInputSetter = (inputMin, inputMax, onLoad = false, notModal = true, ddBtn) => {
-  const currencySymbol = JSON.parse(localStorage.getItem(config.CURRENCY_KEY)) === 'euro' ? '€' : '₪';
-  if (!onLoad) {
-    document.querySelector('.content-col').addEventListener('click', function (e) {
-      const currencySymbol = JSON.parse(localStorage.getItem(config.CURRENCY_KEY)) === 'euro' ? '€' : '₪';
-      inputMin.value = inputMin.value.replace(/,|€|₪/gi, '');
-      inputMax.value = inputMax.value.replace(/,|€|₪/gi, '');
-      // If user inputs max value in min input or min value at max input -> reverse values and show on DD btn
-      if (inputMin.value && inputMax.value && parseInt(inputMin.value, 10) > parseInt(inputMax.value, 10)) {
-        const minValue = inputMax.value;
-        inputMax.value = inputMin.value;
-        inputMin.value = minValue;
-      }
-      inputMin.value = inputMin.value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-      inputMax.value = inputMax.value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-      if (inputMin.value && inputMax.value) {
-        inputMin.value = currencySymbol + inputMin.value;
-        inputMax.value = currencySymbol + inputMax.value;
-        if (notModal) {
-          const priceText = document.createTextNode(' (' + inputMin.value + ' - ' + inputMax.value + ')');
-          ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
-          ddBtn.appendChild(priceText);
-        }
-      } else if (!inputMin.value && inputMax.value) {
-        inputMax.value = currencySymbol + inputMax.value;
-        if (notModal) {
-          const priceText = document.createTextNode(' (' + (inputMin.value = inputMin.placeholder) + ' - ' + inputMax.value + ')');
-          ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
-          ddBtn.appendChild(priceText);
-        }
-      } else if (inputMin.value && !inputMax.value) {
-        inputMin.value = currencySymbol + inputMin.value;
-        if (notModal) {
-          const priceText = document.createTextNode(' (' + inputMin.value + ' - ' + (inputMax.value = inputMax.placeholder) + ')');
-          ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
-          ddBtn.appendChild(priceText);
-        }
-      } else if (!inputMin.value && !inputMax.value) {
-        if (notModal) {
-          const priceText = document.createTextNode(' (' + currencySymbol + '0' + ' - ' + currencySymbol + '10,000,000' + ')');
-          ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
-          ddBtn.appendChild(priceText);
-        }
-      }
-    });
-  } else {
-    inputMin.value = inputMin.value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-    inputMax.value = inputMax.value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-    if (inputMin.value && inputMax.value) {
-      inputMin.value = currencySymbol + inputMin.value;
-      inputMax.value = currencySymbol + inputMax.value;
-      if (notModal) {
-        const priceText = document.createTextNode(' (' + inputMin.value + ' - ' + inputMax.value + ')');
-        ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
-        ddBtn.appendChild(priceText);
-      }
-    } else if (!inputMin.value && inputMax.value) {
-      inputMax.value = currencySymbol + inputMax.value;
-      if (notModal) {
-        const priceText = document.createTextNode(' (' + (inputMin.value = inputMin.placeholder) + ' - ' + inputMax.value + ')');
-        ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
-        ddBtn.appendChild(priceText);
-      }
-    } else if (inputMin.value && !inputMax.value) {
-      inputMin.value = currencySymbol + inputMin.value;
-      if (notModal) {
-        const priceText = document.createTextNode(' (' + inputMin.value + ' - ' + (inputMax.value = inputMax.placeholder) + ')');
-        ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
-        ddBtn.appendChild(priceText);
-      }
-    } else if (!inputMin.value && !inputMax.value) {
-      if (notModal) {
-        const priceText = document.createTextNode(' (' + currencySymbol + '0' + ' - ' + currencySymbol + '10,000,000' + ')');
-        ddBtn.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? ddBtn.dataset.he : ddBtn.dataset.en;
-        ddBtn.appendChild(priceText);
-      }
+  const formatNumber = (value) => {
+    return value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  };
+
+  const cleanValue = (value) => {
+    return value.replace(/,|€|₪/g, '');
+  };
+
+  const updatePriceDisplay = () => {
+    const currency = getCurrencySymbol();
+    const language = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY));
+
+    let minVal = cleanValue(inputMin.value);
+    let maxVal = cleanValue(inputMax.value);
+
+    // Swap values if min > max
+    if (minVal && maxVal && parseInt(minVal, 10) > parseInt(maxVal, 10)) {
+      [inputMin.value, inputMax.value] = [maxVal, minVal];
+      [minVal, maxVal] = [inputMin.value, inputMax.value];
     }
+
+    // Format values
+    minVal = minVal ? formatNumber(minVal) : inputMin.placeholder;
+    maxVal = maxVal ? formatNumber(maxVal) : inputMax.placeholder;
+
+    // Add currency symbol
+    inputMin.value = minVal ? `${currency}${minVal}` : '';
+    inputMax.value = maxVal ? `${currency}${maxVal}` : '';
+
+    if (notModal) {
+      const displayMin = minVal || `${currency}0`;
+      const displayMax = maxVal || `${currency}10,000,000`;
+      const priceText = ` (${displayMin} - ${displayMax})`;
+
+      ddBtn.innerText = getLanguageText(ddBtn, language);
+      ddBtn.appendChild(document.createTextNode(priceText));
+    }
+  };
+
+  if (onLoad) {
+    updatePriceDisplay();
+  } else {
+    document.querySelector('.content-col').addEventListener('click', updatePriceDisplay);
   }
 };
 
@@ -409,8 +436,15 @@ export const clearSearchChoices = (searchFilterObj, ddBtn, filterBtn, input) => 
   searchFilterObj = emptySearchFilterObj;
   localStorage.setItem(config.FILTER_KEY, JSON.stringify(searchFilterObj));
   ddBtn.forEach((el) => {
-    if (!el.innerText.includes('מחיר') || !el.innerText.includes('price')) {
-      el.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? el.dataset.he : el.dataset.en;
+    if (!el.innerText.includes('מחיר') || !el.innerText.includes('price') || !el.innerText.includes('Цена')) {
+      // el.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? el.dataset.he : el.dataset.en;
+      if (JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE) {
+        el.innerText = el.dataset.he;
+      } else if (JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.EN_LANGUAGE) {
+        el.innerText = el.dataset.en;
+      } else if (JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.RU_LANGUAGE) {
+        el.innerText = el.dataset.ru;
+      }
     } else {
       el.innerText =
         el.dataset.he +

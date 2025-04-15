@@ -1,0 +1,137 @@
+extends base 
+
+block head
+    title Важно знать | Dira Bulgarit
+    meta(name="description" content="В Dira Bulgarit мы верим, что знание — сила, поэтому мы собрали для вас статьи по таким темам, как инвестиции в Болгарию, жизнь в Болгарии, налогообложение в Болгарии, натурализация в Болгарии и многое другое.")
+    meta(name="robots" content="index, follow")
+    link(rel="canonical" href="https://www.dirabulgarit.com/ru/blog")
+    link(rel="alternate" href="https://www.dirabulgarit.com/ru/blog" hreflang="ru")
+    link(rel="alternate" href="https://www.dirabulgarit.com/en/blog" hreflang="en")
+    link(rel="alternate" href="https://www.dirabulgarit.com/blog" hreflang="he")
+
+    meta(property="og:title" content="Важно знать | Dira Bulgarit")
+    meta(property="og:description" content="В Dira Bulgarit мы верим, что знание — сила, поэтому мы собрали для вас статьи по таким темам, как инвестиции в Болгарию, жизнь в Болгарии, налогообложение в Болгарии, натурализация в Болгарии и многое другое.")
+    meta(property="og:image" content='/img/hero-burgas.webp')
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../he/_headLinksScripts
+
+block content
+
+    .container.blog-cards-container
+        .row.blog-headline-row.justify-content-start.mx-auto 
+                .col-10.blog-headline-col
+                    h1.blog-headline Важно знать
+                    div.blog-headline-text В Dira Bulgarit мы верим, что знание — сила, поэтому мы собрали для вас статьи по таким темам, как инвестиции в Болгарию, жизнь в Болгарии, налогообложение в Болгарии, натурализация в Болгарии и многое другое.
+        .row.blog-cards-row.mx-auto 
+            .col-12.blog-cards-col.en-blog-cards-col 
+                each blog in blogsArray       
+                    .card.blog-card(data-slug=`${blog.slug}`)
+                        .row.g-0
+                            .col-md-4.d-flex
+                                img.blog-card-img.img-fluid(src=`${blog.imgSrc}` alt=`${blog.imgAlt}` loading="lazy")
+                            .col-md-8.d-flex.align-items-lg-center
+                                .card-body
+                                    h2.card-title.blog-card-title= blog.blogTitle
+                                    div.blog-card-date= `${moment(blog.date).format('DD.MM.YYYY')}`
+                                    div.card-text.blog-card-text= blog.sectionOneTexts[0]
+                                    div.text-center.py-3
+                                        button.blog-card-btn(aria-label='Перейти на страницу блога') Продолжить чтение
+
+                if totalPages.length > 1                        
+                    .pagination-Container
+                        .row.pagination-row.d-flex.justify-content-around.justify-content-md-center
+                            if totalPages.length >= 5 && pageNumber <= 3
+                                .col-1.pagination-col.d-flex.justify-content-center.align-content-center
+                                    button.pagination-prev-page-btn.pagination-icon-btn
+                                        svg.bi.pagination-icon
+                                            use(xlink:href='/img/icons/chevron-left.svg#chevron-left')                        
+                                .col-8.col-md-6.col-xl-4.pagination-col          
+                                    .pagination-pages-container.text-center
+                                        .row.pagination-pages-col-row.d-flex
+                                            .col.pagination-page-btn-col.p-0
+                                                button.pagination-page-btn(data-page=`${totalPages[0]}`)= totalPages[0] 
+                                            .col.pagination-page-btn-col.p-0    
+                                                button.pagination-page-btn(data-page=`${totalPages[1]}`)= totalPages[1] 
+                                            .col.pagination-page-btn-col.p-0    
+                                                button.pagination-page-btn(data-page=`${totalPages[2]}`)= totalPages[2] 
+                                            .col.pagination-page-btn-col.p-0    
+                                                button.pagination-page-btn(data-page=`${totalPages[3]}`)= totalPages[3] 
+                                            .col.pagination-page-btn-col.p-0
+                                                button.pagination-separator(disabled) ...
+                                            .col.pagination-page-btn-col.p-0    
+                                                button.pagination-page-btn(data-page=`${totalPages[totalPages.length - 1]}`)= totalPages[totalPages.length - 1] 
+                                .col-1.pagination-col.d-flex.justify-content-center.align-content-center
+                                    button.pagination-next-page-btn.pagination-icon-btn(data-lastpage=`${totalPages[totalPages.length - 1]}`) 
+                                        svg.bi.pagination-icon
+                                            use(xlink:href='/img/icons/chevron-right.svg#chevron-right')
+                            else if totalPages.length >= 5 && pageNumber >= 4 && pageNumber < totalPages[totalPages.length - 4]
+                                .col-1.pagination-col.d-flex.justify-content-center.align-content-center
+                                    button.pagination-prev-page-btn.pagination-icon-btn
+                                        svg.bi.pagination-icon
+                                            use(xlink:href='/img/icons/chevron-left.svg#chevron-left')   
+                                .col-8.col-md-6.col-xl-4.pagination-col           
+                                    .pagination-pages-container.text-center
+                                        .row.pagination-pages-col-row.d-flex
+                                            .col.pagination-page-btn-col.p-0 
+                                                button.pagination-page-btn(data-page=`${totalPages[0]}`)= totalPages[0] 
+                                            .col.pagination-page-btn-col.p-0     
+                                                button.pagination-separator(disabled) ...
+                                            .col.pagination-page-btn-col.p-0 
+                                                button.pagination-page-btn(data-page=`${totalPages[pageNumber - 2]}`)= totalPages[pageNumber - 2] 
+                                            .col.pagination-page-btn-col.p-0     
+                                                button.pagination-page-btn(data-page=`${totalPages[pageNumber - 1]}`)= totalPages[pageNumber - 1] 
+                                            .col.pagination-page-btn-col.p-0     
+                                                button.pagination-page-btn(data-page=`${totalPages[pageNumber]}`)= totalPages[pageNumber] 
+                                            .col.pagination-page-btn-col.p-0     
+                                                button.pagination-separator(disabled) ...
+                                            .col.pagination-page-btn-col.p-0     
+                                                button.pagination-page-btn(data-page=`${totalPages[totalPages.length - 1]}`)= totalPages[totalPages.length - 1] 
+                                .col-1.pagination-col.d-flex.justify-content-center.align-content-center
+                                    button.pagination-next-page-btn.pagination-icon-btn(data-lastpage=`${totalPages[totalPages.length - 1]}`)
+                                        svg.bi.pagination-icon
+                                            use(xlink:href='/img/icons/chevron-right.svg#chevron-right')    
+                            else if totalPages.length >= 5 && pageNumber >= totalPages[totalPages.length - 4]  
+                                .col-1.pagination-col.d-flex.justify-content-center.align-content-center
+                                    button.pagination-prev-page-btn.pagination-icon-btn
+                                        svg.bi.pagination-icon
+                                            use(xlink:href='/img/icons/chevron-left.svg#chevron-left')   
+                                .col-8.col-md-6.col-xl-4.pagination-col           
+                                    .pagination-pages-container.text-center
+                                        .row.pagination-pages-col-row.d-flex.align-content-center 
+                                            .col.pagination-page-btn-col.p-0 
+                                                button.pagination-page-btn(data-page=`${totalPages[0]}`)= totalPages[0] 
+                                            .col.pagination-page-btn-col.p-0     
+                                                button.pagination-separator(disabled) ...
+                                            .col.pagination-page-btn-col.p-0 
+                                                button.pagination-page-btn(data-page=`${totalPages[totalPages.length - 5]}`)= totalPages[totalPages.length - 5] 
+                                            .col.pagination-page-btn-col.p-0    
+                                                button.pagination-page-btn(data-page=`${totalPages[totalPages.length - 4]}`)= totalPages[totalPages.length - 4] 
+                                            .col.pagination-page-btn-col.p-0    
+                                                button.pagination-page-btn(data-page=`${totalPages[totalPages.length - 3]}`)= totalPages[totalPages.length - 3] 
+                                            .col.pagination-page-btn-col.p-0    
+                                                button.pagination-page-btn(data-page=`${totalPages[totalPages.length - 2]}`)= totalPages[totalPages.length - 2] 
+                                            .col.pagination-page-btn-col.p-0    
+                                                button.pagination-page-btn(data-page=`${totalPages[totalPages.length - 1]}`)= totalPages[totalPages.length - 1] 
+                                .col-1.pagination-col.d-flex.justify-content-center.align-content-center
+                                    button.pagination-next-page-btn.pagination-icon-btn(data-lastpage=`${totalPages[totalPages.length - 1]}`) 
+                                        svg.bi.pagination-icon
+                                            use(xlink:href='/img/icons/chevron-right.svg#chevron-right')         
+                            else   
+                                .col-1.pagination-col.d-flex.justify-content-center.align-content-center
+                                    button.pagination-prev-page-btn.pagination-icon-btn
+                                        svg.bi.pagination-icon
+                                            use(xlink:href='/img/icons/chevron-left.svg#chevron-left')   
+                                .col-8.col-md-6.col-xl-4.pagination-col.d-flex.justify-content-evenly            
+                                    .pagination-pages-container.text-center
+                                        .row.pagination-pages-col-row.d-flex             
+                                            each page in totalPages
+                                                .col.pagination-page-btn-col.p-0
+                                                    button.pagination-page-btn(data-page=`${page}`)= page 
+                                .col-1.pagination-col.d-flex.justify-content-center.align-content-center
+                                    button.pagination-next-page-btn.pagination-icon-btn(data-lastpage=`${totalPages[totalPages.length - 1]}`) 
+                                        svg.bi.pagination-icon
+                                            use(xlink:href='/img/icons/chevron-right.svg#chevron-right')    
+
+    include _contactUsFixed  
+    include _contactUsFixedMobile                                                                     

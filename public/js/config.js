@@ -25,6 +25,8 @@ export const Elements = {
   projectBurgasDdBtn: document.querySelector('.project-burgas-dropdown-btn'),
   projectSofiaDdBtn: document.querySelector('.project-sofia-dropdown-btn'),
   projectSvetiDdBtn: document.querySelector('.project-sveti-dropdown-btn'),
+  projectNessebarDdBtn: document.querySelector('.project-nessebar-dropdown-btn'),
+  projectSunnyDdBtn: document.querySelector('.project-sunny-dropdown-btn'),
   commercialDdBtn: document.querySelector('.commercial-dropdown-btn'),
   blogLink: document.querySelector('.blog-nav-link'),
   currencyDdBtn: document.querySelector('.currency-dropdown-btn'),
@@ -37,10 +39,12 @@ export const Elements = {
   langDdBtn: document.querySelector('.lang-dropdown-btn'),
   langIcon: document.querySelector('.navbar-lang-icon'),
   activeLangIcon: document.querySelector('.navbar-active-lang-icon'),
-  notActiveLangIcon: document.querySelector('.navbar-not-active-lang-icon'),
+  firstNotActiveLangIcon: document.querySelector('.navbar-first-not-active-lang-icon'),
+  secondNotActiveLangIcon: document.querySelector('.navbar-second-not-active-lang-icon'),
   mobileLangDdBtn: document.querySelector('.mobile-lang-dropdown-btn'),
   mobileActiveLangIcon: document.querySelector('.mobile-navbar-active-lang-icon'),
-  mobileNotActiveLangIcon: document.querySelector('.mobile-navbar-not-active-lang-icon'),
+  firstMobileNotActiveLangIcon: document.querySelector('.mobile-navbar-first-not-active-lang-icon'),
+  secondMobileNotActiveLangIcon: document.querySelector('.mobile-navbar-second-not-active-lang-icon'),
   favoriteBtn: document.querySelector('.asset-favorite-btn'),
   mobileFavoriteBtn: document.querySelector('.mobile-asset-favorite-btn'),
   // Overview
@@ -213,6 +217,28 @@ export const Elements = {
   mountainBoutiqueProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-mountain-boutique'),
   mountainBoutiqueProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-mountain-boutique'),
   mountainBoutiqueProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-mountain-boutique'),
+  // Fort Noks Suites
+  fortNoksSuitesProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-fort-noks-suites'),
+  fortNoksSuitesProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-fort-noks-suites'),
+  fortNoksSuitesProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-fort-noks-suites'),
+  fortNoksSuitesProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-fort-noks-suites'),
+  // Green Fort Suites
+  greenFortSuitesProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-green-fort-suites'),
+  greenFortSuitesProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-green-fort-suites'),
+  greenFortSuitesProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-green-fort-suites'),
+  greenFortSuitesProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-green-fort-suites'),
+  // Premier Fort Beach
+  premierFortBeachProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-premier-fort-beach'),
+  premierFortBeachProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-premier-fort-beach'),
+  premierFortBeachProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-premier-fort-beach'),
+  // Prestige Fort Beach
+  prestigeFortBeachProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-prestige-fort-beach'),
+  prestigeFortBeachProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-prestige-fort-beach'),
+  prestigeFortBeachProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-prestige-fort-beach'),
+  // Nessebar Fort Residence
+  nessebarFortResidenceProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-nessebar-fort-residence'),
+  nessebarFortResidenceProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-nessebar-fort-residence'),
+  nessebarFortResidenceProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-nessebar-fort-residence'),
   // Camelot
   camelotProjectPriceNumber: document.querySelector('.project-numbers-price-number-camelot'),
   camelotProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-camelot'),
@@ -251,9 +277,12 @@ export const heIconSrc = '/img/icons/flag-for-flag-israel-svgrepo-com.svg';
 export const heIconAlt = 'אייקון של דגל ישראל';
 export const enIconSrc = '/img/icons/flag-for-flag-united-states-svgrepo-com.svg';
 export const enIconAlt = 'אייקון של דגל ארצות הברית';
+export const ruIconSrc = '/img/icons/flag-for-flag-russia-svgrepo-com.svg';
+export const ruIconAlt = 'אייקון של דגל רוסיה';
 export const LANGUAGE_KEY = 'language';
 export const DEFAULT_LANGUAGE = 'he';
 export const EN_LANGUAGE = 'en';
+export const RU_LANGUAGE = 'ru';
 
 export const FAVORITE_KEY = 'favorite';
 export const assetFavoriteIconOutlineSrc = '/img/icons/heart-empty-svgrepo-com-outline.svg';

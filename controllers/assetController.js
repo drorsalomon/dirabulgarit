@@ -1,5 +1,6 @@
 const Asset = require('../models/assetModel');
 const enAsset = require('../models/enAssetModel');
+const ruAsset = require('../models/ruAssetModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 const Utils = require('../utils/utils');
@@ -30,17 +31,41 @@ exports.getSearchResults = catchAsync(async (req, res, next) => {
     const totalAssetsArray = res.locals.lang === 'he' ? await Asset.find(mongooseQuery) : await enAsset.find(mongooseQuery);
     const totalAssets = totalAssetsArray.length;
 
-    const assets =
-      res.locals.lang === 'he'
-        ? await Asset.find(mongooseQuery)
-            .sort(sortOptions)
-            .skip((req.params.pageNumber - 1) * req.params.resPerPage)
-            .limit(parseInt(req.params.resPerPage))
-        : await enAsset
-            .find(mongooseQuery)
-            .sort(sortOptions)
-            .skip((req.params.pageNumber - 1) * req.params.resPerPage)
-            .limit(parseInt(req.params.resPerPage));
+    // const assets =
+    //   res.locals.lang === 'he'
+    //     ? await Asset.find(mongooseQuery)
+    //         .sort(sortOptions)
+    //         .skip((req.params.pageNumber - 1) * req.params.resPerPage)
+    //         .limit(parseInt(req.params.resPerPage))
+    //     : await enAsset
+    //         .find(mongooseQuery)
+    //         .sort(sortOptions)
+    //         .skip((req.params.pageNumber - 1) * req.params.resPerPage)
+    //         .limit(parseInt(req.params.resPerPage));
+
+    let assets;
+
+    if (res.locals.lang === 'he') {
+      assets = await Asset.find(mongooseQuery)
+        .sort(sortOptions)
+        .skip((req.params.pageNumber - 1) * req.params.resPerPage)
+        .limit(parseInt(req.params.resPerPage));
+    } else if (res.locals.lang === 'en') {
+      assets = await enAsset
+        .find(mongooseQuery)
+        .sort(sortOptions)
+        .skip((req.params.pageNumber - 1) * req.params.resPerPage)
+        .limit(parseInt(req.params.resPerPage));
+    } else if (res.locals.lang === 'ru') {
+      assets = await ruAsset
+        .find(mongooseQuery)
+        .sort(sortOptions)
+        .skip((req.params.pageNumber - 1) * req.params.resPerPage)
+        .limit(parseInt(req.params.resPerPage));
+    } else {
+      // Fallback in case the language is not recognized
+      assets = [];
+    }
 
     assetsArray = assets;
 
@@ -79,15 +104,39 @@ exports.renderSearchResults = catchAsync(async (req, res, next) => {
 });
 
 exports.getAsset = catchAsync(async (req, res, next) => {
-  const asset = res.locals.lang === 'he' ? await Asset.findOne({ slug: req.params.slug }) : await enAsset.findOne({ slug: req.params.slug });
+  //  const asset = res.locals.lang === 'he' ? await Asset.findOne({ slug: req.params.slug }) : await enAsset.findOne({ slug: req.params.slug });
+  // if (!asset) return next(new AppError('Could not find the requested asset!', 404));
+
+  let asset;
+
+  if (res.locals.lang === 'he') {
+    asset = await Asset.findOne({ slug: req.params.slug });
+  } else if (res.locals.lang === 'en') {
+    asset = await enAsset.findOne({ slug: req.params.slug });
+  } else if (res.locals.lang === 'ru') {
+    asset = await ruAsset.findOne({ slug: req.params.slug });
+  }
+
   if (!asset) return next(new AppError('Could not find the requested asset!', 404));
 
   let sortOptions = { project: 1, price: 1 };
   const priceRange = { $gte: asset.price - 40000, $lte: asset.price + 40000 };
   const filterCriteria = { price: priceRange, city: asset.city, sold: false, _id: { $ne: asset._id } };
 
-  const relatedAssets =
-    res.locals.lang === 'he' ? await Asset.find(filterCriteria).sort(sortOptions).limit(12) : await enAsset.find(filterCriteria).sort(sortOptions).limit(12);
+  // const relatedAssets =
+  //   res.locals.lang === 'he' ? await Asset.find(filterCriteria).sort(sortOptions).limit(12) : await enAsset.find(filterCriteria).sort(sortOptions).limit(12);
+  // if (!relatedAssets) return next(new AppError('Could not find the requested hot assets!', 404));
+
+  let relatedAssets;
+
+  if (res.locals.lang === 'he') {
+    relatedAssets = await Asset.find(filterCriteria).sort(sortOptions).limit(12);
+  } else if (res.locals.lang === 'en') {
+    relatedAssets = await enAsset.find(filterCriteria).sort(sortOptions).limit(12);
+  } else if (res.locals.lang === 'ru') {
+    relatedAssets = await ruAsset.find(filterCriteria).sort(sortOptions).limit(12);
+  }
+
   if (!relatedAssets) return next(new AppError('Could not find the requested hot assets!', 404));
 
   res.status(200).render(`${res.locals.lang}/asset`, {

@@ -1,0 +1,217 @@
+extends base 
+
+block head
+    title=`${blog.blogTitle}`
+    meta(name="description" content=`${blog.metaDescription}`)
+    meta(name="robots" content="index, follow")
+    link(rel="canonical" href=`https://www.dirabulgarit.com/ru/blog/${blog.slug}`)
+    link(rel="alternate" href=`https://www.dirabulgarit.com/ru/blog/${blog.slug}` hreflang="ru")
+    link(rel="alternate" href=`https://www.dirabulgarit.com/en/blog/${blog.slug}` hreflang="en")
+    link(rel="alternate" href=`https://www.dirabulgarit.com/blog/${blog.slug}` hreflang="he")
+
+    meta(property="og:title" content=`${blog.blogTitle}`)
+    meta(property="og:description" content=`${blog.metaDescription}`)
+    meta(property="og:image" content=`${blog.imgSrc}`)
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../he/_headLinksScripts
+
+block content
+
+    if blog.blogAssets
+        .container-fluid.asset-related-assets-container
+            .row.asset-related-assets-row.justify-content-center.mx-2
+                .col-10.asset-related-assets-headline-col
+                    h2.asset-related-assets-headline.text-center(dir='rtl')= blog.blogTitle
+                each asset in blogAssets
+                    include _assetsCards
+            .row.mobile-asset-related-assets-row.justify-content-center.mx-2
+                .col-10.asset-related-assets-headline-col
+                    h2.asset-related-assets-headline.text-center(dir='rtl')= blog.blogTitle
+                each asset in blogAssets
+                    include _mobileAssetsCards          
+
+    .container-fluid
+        .row.blog-content-row.justify-content-center 
+            .col-10.blog-content-text-col
+                h1.blog-content-title= blog.blogTitle
+                div.blog-content-date= `${moment(blog.date).format('DD.MM.YYYY')}`
+                if blog.sectionOneTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionOneTitle
+                if blog.sectionOneTexts
+                    each text in blog.sectionOneTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator        
+                if blog.sectionTwoTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionTwoTitle
+                if blog.sectionTwoTexts
+                    each text in blog.sectionTwoTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionThreeTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionThreeTitle
+                if blog.sectionThreeTexts
+                    each text in blog.sectionThreeTexts
+                        div.blog-content-text!= text
+                if blog.midImgSrc
+                    div.blog-content-mid-image-container.text-center
+                        img.blog-content-mid-image(src=`${blog.midImgSrc}` alt=`${blog.midImgAlt}`)
+                    div.blog-content-mid-image-text!= blog.midImgText    
+                div.blog-section-separator          
+                if blog.sectionFourTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionFourTitle
+                if blog.sectionFourTexts
+                    each text in blog.sectionFourTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionFiveTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionFiveTitle
+                if blog.sectionFiveTexts
+                    each text in blog.sectionFiveTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator
+                if blog.sectionSixTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionSixTitle
+                if blog.sectionSixTexts
+                    each text in blog.sectionSixTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator
+                if blog.sectionSevenTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionSevenTitle
+                if blog.sectionSevenTexts
+                    each text in blog.sectionSevenTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator
+                if blog.sectionEightTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionEightTitle
+                if blog.sectionEightTexts
+                    each text in blog.sectionEightTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator
+                if blog.sectionNineTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionNineTitle
+                if blog.sectionNineTexts
+                    each text in blog.sectionNineTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator
+                if blog.sectionTenTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionTenTitle
+                if blog.sectionTenTexts
+                    each text in blog.sectionTenTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator
+                if blog.sectionElevenTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionElevenTitle
+                if blog.sectionElevenTexts
+                    each text in blog.sectionElevenTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionTwelveTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionTwelveTitle
+                if blog.sectionTwelveTexts
+                    each text in blog.sectionTwelveTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionThirteenTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionThirteenTitle
+                if blog.sectionThirteenTexts
+                    each text in blog.sectionThirteenTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionFourteenTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionFourteenTitle
+                if blog.sectionFourteenTexts
+                    each text in blog.sectionFourteenTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionFifteenTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionFifteenTitle
+                if blog.sectionFifteenTexts
+                    each text in blog.sectionFifteenTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionSixteenTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionSixteenTitle
+                if blog.sectionSixteenTexts
+                    each text in blog.sectionSixteenTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionSeventeenTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionSeventeenTitle
+                if blog.sectionSeventeenTexts
+                    each text in blog.sectionSeventeenTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionEighteenTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionEighteenTitle
+                if blog.sectionEighteenTexts
+                    each text in blog.sectionEighteenTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionNineteenTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionNineteenTitle
+                if blog.sectionNineteenTexts
+                    each text in blog.sectionNineteenTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionTwentyTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionTwentyTitle
+                if blog.sectionTwentyTexts
+                    each text in blog.sectionTwentyTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionTwentyOneTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionTwentyOneTitle
+                if blog.sectionTwentyOneTexts
+                    each text in blog.sectionTwentyOneTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionTwentyTwoTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionTwentyTwoTitle
+                if blog.sectionTwentyTwoTexts
+                    each text in blog.sectionTwentyTwoTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.sectionTwentyThreeTitle     
+                    h2.blog-content-textSectionTitle!= blog.sectionTwentyThreeTitle
+                if blog.sectionTwentyThreeTexts
+                    each text in blog.sectionTwentyThreeTexts
+                        div.blog-content-text!= text
+                div.blog-section-separator          
+                if blog.listOne.listOneTitle
+                    h2.blog-content-listTitle!= blog.listOne.listOneTitle
+                if blog.listOne.listOneTexts
+                    each text in blog.listOne.listOneTexts  
+                        div.blog-content-list-text!= `● ` + text 
+                div.blog-section-separator          
+                if blog.listTwo.listTwoTitle
+                    h2.blog-content-listTitle!= blog.listTwo.listTwoTitle
+                if blog.listTwo.listTwoTexts
+                    each text in blog.listTwo.listTwoTexts  
+                        div.blog-content-list-text!= `● ` + text 
+                div.blog-section-separator          
+                if blog.listThree.listThreeTitle
+                    h2.blog-content-listTitle!= blog.listThree.listThreeTitle
+                if blog.listThree.listThreeTexts
+                    each text in blog.listThree.listThreeTexts  
+                        div.blog-content-list-text!= `● ` + text 
+                div.blog-content-listTitle Компания Dira Bulgarit была создана с целью помочь израильским инвесторам найти наиболее выгодные объекты недвижимости по всей Болгарии. На нашем сайте вы найдете десятки объектов недвижимости - от студий на курортах до роскошных трех- и четырехкомнатных апартаментов в современных проектах, построенных по самым высоким стандартам. Наша команда экспертов ждет вас, свяжитесь с нами сегодня, и мы ответим на любые ваши вопросы, чтобы вы могли найти самые выгодные инвестиции в недвижимость в Болгарии.        
+            .col-10.text-center.py-4    
+                    button.btn-cta.pricing-cta-btn.to-calendly-btn(aria-label='Перейти на страницу контактов') Связаться с нами
+                    button.share-btn
+                        img.share-btn-icon(src='/img/icons/share-svgrepo-com-white.svg' alt='Значок страницы "Поделиться"') 
+
+    .container-fluid.asset-related-assets-container
+        .row.asset-related-assets-row.justify-content-center.mx-2
+            .col-10.asset-related-assets-headline-col
+                h2.asset-related-assets-headline.text-center Горячие свойства
+            each asset in hotAssets
+                include _assetsCards
+        .row.mobile-asset-related-assets-row.justify-content-center.mx-2
+            .col-10.asset-related-assets-headline-col
+                h2.asset-related-assets-headline.text-center Горячие свойства
+            each asset in hotAssets
+                include _mobileAssetsCards                      
+
+    include _contactUsFixed  
+    include _contactUsFixedMobile                     

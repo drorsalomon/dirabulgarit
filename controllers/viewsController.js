@@ -1,12 +1,20 @@
 const Asset = require('../models/assetModel');
 const enAsset = require('../models/enAssetModel');
+const ruAsset = require('../models/ruAssetModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 
 exports.getOverview = catchAsync(async (req, res, next) => {
   let sortOptions = { project: 1, price: 1 };
-  const hotAssets =
-    res.locals.lang === 'he' ? await Asset.find({ hotAsset: true }).sort(sortOptions) : await enAsset.find({ hotAsset: true }).sort(sortOptions);
+  let hotAssets;
+
+  if (res.locals.lang === 'he') {
+    hotAssets = await Asset.find({ hotAsset: true }).sort(sortOptions);
+  } else if (res.locals.lang === 'en') {
+    hotAssets = await enAsset.find({ hotAsset: true }).sort(sortOptions);
+  } else if (res.locals.lang === 'ru') {
+    hotAssets = await ruAsset.find({ hotAsset: true }).sort(sortOptions);
+  }
   if (!hotAssets) return next(new AppError('Could not find the requested hot assets!', 404));
 
   res.status(200).render(`${res.locals.lang}/overview`, {
@@ -17,8 +25,15 @@ exports.getOverview = catchAsync(async (req, res, next) => {
 
 exports.getSearch = catchAsync(async (req, res, next) => {
   let sortOptions = { project: 1, price: 1 };
-  const hotAssets =
-    res.locals.lang === 'he' ? await Asset.find({ hotAsset: true }).sort(sortOptions) : await enAsset.find({ hotAsset: true }).sort(sortOptions);
+  let hotAssets;
+
+  if (res.locals.lang === 'he') {
+    hotAssets = await Asset.find({ hotAsset: true }).sort(sortOptions);
+  } else if (res.locals.lang === 'en') {
+    hotAssets = await enAsset.find({ hotAsset: true }).sort(sortOptions);
+  } else if (res.locals.lang === 'ru') {
+    hotAssets = await ruAsset.find({ hotAsset: true }).sort(sortOptions);
+  }
   if (!hotAssets) return next(new AppError('Could not find the requested hot assets!', 404));
 
   res.status(200).render(`${res.locals.lang}/search`, {

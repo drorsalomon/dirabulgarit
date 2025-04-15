@@ -61,6 +61,25 @@
       'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mountain-view-boutique-images1736851154917-mountain-view-boutique-1.webp'
     );
   }
+  &.project-main-image-col-fort-noks-suites {
+    @include projectBackgroundImage(
+      'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/fort-noks-premier-suits/fort-noks-premier-suits1744278279030-fort-noks-premier-suits-3.webp'
+    );
+  }
+  &.project-main-image-col-green-fort-suites {
+    @include projectBackgroundImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/green-fort-suites/1744367105494-green-fort-suites-6.webp');
+  }
+  &.project-main-image-col-premier-fort-beach {
+    @include projectBackgroundImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/premier-fort-beach/1744465313268-premier-fort-beach-47.jpg');
+  }
+  &.project-main-image-col-prestige-fort-beach {
+    @include projectBackgroundImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/prestige-fort-beach/1744563745788-prestige-fort-beach-3.webp');
+  }
+  &.project-main-image-col-nessebar-fort-residence {
+    @include projectBackgroundImage(
+      'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/nessebar-fort-residence/1744635596814-nessebar-fort-residence-2.webp'
+    );
+  }
   &.project-main-image-col-camelot {
     @include projectBackgroundImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155260-camelot-20.webp');
   }
@@ -116,6 +135,26 @@
     font-size: $h2;
   }
   &.project-main-image-headline-mountain-boutique {
+    @include projectHeadline(40%);
+    font-size: $h2;
+  }
+  &.project-main-image-headline-fort-noks-suites {
+    @include projectHeadline(40%);
+    font-size: $h2;
+  }
+  &.project-main-image-headline-green-fort-suites {
+    @include projectHeadline(40%);
+    font-size: $h2;
+  }
+  &.project-main-image-headline-premier-fort-beach {
+    @include projectHeadline(40%);
+    font-size: $h2;
+  }
+  &.project-main-image-headline-prestige-fort-beach {
+    @include projectHeadline(40%);
+    font-size: $h2;
+  }
+  &.project-main-image-headline-nessebar-fort-residence {
     @include projectHeadline(40%);
     font-size: $h2;
   }
@@ -289,6 +328,27 @@
       'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387898022-vitosha-mountain-view-4.webp',
       contain,
       30rem
+    );
+  }
+  &.project-mid-image-container-premier-fort-beach {
+    @include projectMiddleImage(
+      'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/premier-fort-beach/1744465313262-premier-fort-beach-46.jpg',
+      contain,
+      30rem
+    );
+  }
+  &.project-mid-image-container-prestige-fort-beach {
+    @include projectMiddleImage(
+      'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/prestige-fort-beach/1744563745815-prestige-fort-beach-8.webp',
+      contain,
+      20rem
+    );
+  }
+  &.project-mid-image-container-nessebar-fort-residence {
+    @include projectMiddleImage(
+      'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/nessebar-fort-residence/1744635596962-nessebar-fort-residence-30.webp',
+      contain,
+      20rem
     );
   }
   &.project-mid-image-container-camelot {

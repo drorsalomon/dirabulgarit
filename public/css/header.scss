@@ -201,6 +201,18 @@ nav,
   margin-right: 2.7rem;
 }
 
+.mobile-lang-collapse-col {
+  margin-right: 0.5rem !important;
+}
+
+.mobile-lang-collapse-col-ru {
+  margin-left: 6.5rem !important;
+}
+
+.mobile-lang-collapse-col-en {
+  margin-left: 4.7rem !important;
+}
+
 .mobile-navbar-not-active-currency-icon {
   margin-right: 4rem;
 }
@@ -221,11 +233,6 @@ nav,
 
 .mobile-navbar-not-active-lang-icon {
   margin-right: 1.2rem;
-}
-
-.en-mobile-navbar-not-active-lang-icon {
-  margin-right: 0;
-  margin-left: 9.5rem;
 }
 
 .currency-dropdown-btn,

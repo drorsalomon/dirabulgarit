@@ -1,0 +1,157 @@
+#searchModal.modal.fade.search-modal.text-center(tabindex='-1' aria-labelledby='searchModalLabel' aria-hidden='true')
+    form.modal-search-form
+        .modal-dialog.modal-dialog-centered.modal-fullscreen
+            .search-modal-content.modal-content
+                .search-modal-header.modal-header
+                    .search-modal-title.modal-title.w-100.text-center Поиск недвижимости
+                    button.search-modal-close-btn.btn-close(data-bs-dismiss="modal" aria-label="Закрывать" type='button')
+                .search-modal-body.modal-body
+                    .row.search-modal-filters-row
+                        .col-12.my-3
+                            .container-fluid
+                                .row.search-filter-title--headline
+                                    .col-12.d-flex.align-content-center.justify-content-center
+                                        img.search-modal-icon.en-search-modal-icon(src='/img/icons/map-svgrepo-com.svg' alt='Значок карты') 
+                                        span.search-filter-title Город  
+                                .row.search-filter-options--headline
+                                    span.search-filter-option--text Доступен множественный выбор
+                                .row.text-start.d.flex.justify-content-end 
+                                    .col-6.col-md-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Добавьте Солнечный Берег в поиск') Солнечный Берег
+                                    .col-6.col-md-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Добавить Бургас в поиск') Бургас
+                                    .col-6.col-md-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Добавить Софию в поиск') София
+                                    .col-6.col-md-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Добавьте Свети Влас в поиск') Святой Влас
+                                    .col-6.col-md-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true' aria-label='Добавьте Несебр в поиск') Несебр
+                                    //-.col-6.col-md-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true') סרפובו
+                                    //-.col-6.col-md-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true') פומריי
+                                    //-.col-6.col-md-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true') אהלוי
+                                    //-.col-6.col-md-4.search-filter-options--col.d-flex 
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true') רבדה 
+                                    //-.col-6.col-md-4.search-filter-options--col.d-flex 
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true') אלכסנדרובו 
+                                    //-.col-6.col-md-4.search-filter-options--col.d-flex 
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true') אובזור 
+                                    //-.col-6.col-md-4.search-filter-options--col.d-flex 
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true') אלניט 
+                                    //-.col-6.col-md-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true') לאקה
+                                    //-.col-6.col-md-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true') קושריצה
+                                    //-.col-6.col-md-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__city.flex-fill(type='button' data-bs-toggle='button' aria-pressed='true') טנקובו
+                        .col-12.my-3
+                            .container-fluid
+                                .row.search-filter-title--headline
+                                    .col-12.d-flex.align-content-center.justify-content-center
+                                        img.search-modal-icon.en-search-modal-icon(src='/img/icons/living-room-sofa-svgrepo-com.svg' alt='Значок гостиной')
+                                        span.search-filter-title Номера
+                                .row.search-filter-options--headline
+                                    span.search-filter-option--text Доступен множественный выбор
+                                .row
+                                    .col-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__rooms.flex-fill(type='button' data-bs-toggle='button' aria-label='Добавить студию в поиск' aria-pressed='true') Студия
+                                    .col-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__rooms.flex-fill(type='button' data-bs-toggle='button' aria-label='Добавить Две комнаты для поиска' aria-pressed='true') Две комнаты
+                                    .col-4.search-filter-options--col.d-flex    
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__rooms.flex-fill(type='button' data-bs-toggle='button' aria-label='Добавить Three Rooms в поиск' aria-pressed='true') Три комнаты
+                                    .col-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__rooms.flex-fill(type='button' data-bs-toggle='button' aria-label='Добавить Four Rooms в поиск' aria-pressed='true') Четыре комнаты
+                        .col-12.my-3
+                            .container-fluid
+                                .row.search-filter-title--headline
+                                    .col-12.d-flex.align-content-center.justify-content-center
+                                        img.search-modal-icon.en-search-modal-icon(src='/img/icons/ocean-sunset-svgrepo-com.svg' alt='Значок заката океана') 
+                                        span.search-filter-title В море
+                                .row.search-filter-options--headline
+                                    span.search-filter-option--text Доступен множественный выбор
+                                .row
+                                    .col-6.search-filter-options--col.d-flex 
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__oceanView.flex-fill(type='button' data-bs-toggle='button' aria-label='Добавить к 300м для поиска' aria-pressed='true') До 300м
+                                    .col-6.search-filter-options--col.d-flex 
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__oceanView.flex-fill(type='button' data-bs-toggle='button' aria-label='Добавить первую строку для поиска' aria-pressed='true') Первая линия 
+                                    .col-4.search-filter-options--col.d-flex 
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__oceanView.flex-fill(type='button' data-bs-toggle='button' aria-label='Добавьте 2 км и более к поиску' aria-pressed='true') 2км и выше
+                                    .col-4.search-filter-options--col.d-flex 
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__oceanView.flex-fill(type='button' data-bs-toggle='button' aria-label='Добавить к 1км для поиска' aria-pressed='true') До 1км
+                                    .col-4.search-filter-options--col.d-flex 
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__oceanView.flex-fill(type='button' data-bs-toggle='button' aria-label='Добавить к 600м для поиска' aria-pressed='true') До 600м
+                        .col-12.my-3
+                            .container-fluid
+                                .row.search-filter-options--headline
+                                    span.search-filter-option--text Доступен множественный выбор
+                                .row.search-filter-title--headline
+                                    .col-12.d-flex.align-content-center.justify-content-center
+                                        img.search-modal-icon.en-search-modal-icon(src='/img/icons/building-svgrepo-com.svg' alt='Значок здания')
+                                        span.search-filter-title Проект
+                                .row
+                                    .col-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__project.flex-fill(type='button' data-bs-toggle='button' aria-label='Add Atlantis Aria to search' aria-pressed='true') Atlantis Aria
+                                    .col-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__project.flex-fill(type='button' data-bs-toggle='button' aria-label='Add Atlantis Aria 2 to search' aria-pressed='true') Atlantis Aria 2
+                                    .col-4.search-filter-options--col.d-flex    
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__project.flex-fill(type='button' data-bs-toggle='button' aria-label='Add Atlantis Aria 3 to search' aria-pressed='true') Atlantis Aria 3
+                                    .col-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__project.flex-fill(type='button' data-bs-toggle='button' aria-label='Add Atlantis Euphoria to search' aria-pressed='true') Atlantis Euphoria
+                                    .col-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__project.flex-fill(type='button' data-bs-toggle='button' aria-label='Add Atlantis Resort to search' aria-pressed='true') Atlantis Resort
+                                    .col-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__project.flex-fill(type='button' data-bs-toggle='button' aria-label='Add Atlantis Barcode to search' aria-pressed='true') Atlantis Barcode
+                                    .col-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__project.flex-fill(type='button' data-bs-toggle='button' aria-label='Add J\'Adore Secret Garden to search' aria-pressed='true') J'Adore Secret Garden
+                                    .col-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__project.flex-fill(type='button' data-bs-toggle='button' aria-label='Add Atlas Azimuth to search' aria-pressed='true') Atlas Azimuth
+                                    .col-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__project.flex-fill(type='button' data-bs-toggle='button' aria-label='Add Fort Noks Premier Suites to search' aria-pressed='true') Fort Noks Premier Suites
+                                    .col-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__project.flex-fill(type='button' data-bs-toggle='button' aria-label='Add Premier Fort Beach to search' aria-pressed='true') Premier Fort Beach
+                                    .col-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__project.flex-fill(type='button' data-bs-toggle='button' aria-label='Add Prestige Fort Beach to search' aria-pressed='true') Prestige Fort Beach
+                                    .col-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__project.flex-fill(type='button' data-bs-toggle='button' aria-label='Add Green Fort Suites to search' aria-pressed='true') Green Fort Suites
+                                    .col-4.search-filter-options--col.d-flex  
+                                        button.btn.search-filter-options--btn.modal-search-filter--btn__project.flex-fill(type='button' data-bs-toggle='button' aria-label='Add Nessebar Fort Residence to search' aria-pressed='true') Nessebar Fort Residence
+                        .col-12.my-3
+                            .container-fluid
+                                .row.search-filter-title--headline
+                                    .col-12.d-flex.align-content-center.justify-content-center
+                                        img.search-modal-icon.en-search-modal-icon(src='/img/icons/price-tag-svgrepo-com.svg' alt='Price tag icon') 
+                                        span.search-filter-title Цена 
+                                .row.d-flex.align-items-center.justify-content-center.flex-sm-row-reverse
+                                    .col-12.col-sm-5.d-sm-flex                                                                    
+                                        input.search-input.modal-search-price-input-min.en-search-filter-input.price-input.flex-sm-fill(type='text' data-eurosymbol='€' data-nissymbol='₪' placeholder='0' maxlength="10") 
+                                    .col-12.col-sm-2
+                                        div.price-divider-container  
+                                            span.price-divider -     
+                                    .col-12.col-sm-5.d-sm-flex                                                                                       
+                                        input.search-input.modal-search-price-input-max.en-search-filter-input.price-input.flex-sm-fill(type='text' data-eurosymbol='€' data-nissymbol='₪' placeholder='10,000,000' maxlength="10")                                                                                                      
+                        .col-12.my-3
+                            .container-fluid
+                                .row.search-filter-title--headline
+                                    .col-12.my-3.d-flex.align-content-center.justify-content-center
+                                        img.search-modal-icon.en-search-modal-icon(src='/img/icons/hashtag-svgrepo-com.svg' alt='Значок номера') 
+                                        span.search-filter-title Идентификатор объекта 
+                                    .col-12.d-flex
+                                        input.search-input.search-filter-input.en-search-filter-input.modal-search-input__id.flex-fill(type='text' placeholder='Поиск по идентификатору объекта' aria-label='Поиск по идентификатору объекта' aria-describedby='basic-addon1')  
+                        .col-12.my-3
+                            .container-fluid
+                                .row.search-filter-title--headline
+                                    .col-12.my-3.d-flex.align-content-center.justify-content-center
+                                        img.search-modal-icon.en-search-modal-icon(src='/img/icons/building-svgrepo-com.svg' alt='Значок здания')  
+                                        span.search-filter-title Имя свойства 
+                                    .col-12.d-flex
+                                        input.search-input.search-filter-input.en-search-filter-input.modal-search-input__name.flex-fill(type='text' placeholder='Поиск по названию свойства' aria-label='Поиск по названию свойства' aria-describedby='basic-addon1')
+                .search-modal-footer.modal-footer
+                    .row.d-flex.justify-content-center
+                        .col-6.search-col.d-flex
+                            button.btn-search.flex-fill(type='submit' aria-label='Выполнить поиск') Поиск  
+                        .col-6.search-col.d-flex
+                            div.clear-search.flex-fill.align-content-center 
+                                span.clear-search--text Очистить поиск
+

@@ -3,13 +3,13 @@ nav.navbar.navbar-expand-xl.fixed-top
     .row.mobile-navbar-row
       .col-4.mobile-navbar-col.align-content-center.text-center.text-sm-start
         a.navbar-brand.mobile-navbar-brand(href='/en')
-          img.navbar-logo(src='/img/logo.png' alt='Dira Bulgarit Logo')  
+          img.navbar-logo(src='/img/logo-eng.png' alt='Dira Bulgarit Logo')  
       .col-4.mobile-navbar-col.align-content-center.text-center
         div.navbar-call-us-text-container
           img.navbar-mobile-icon.en-navbar-mobile-icon(src='/img/icons/navbar-mobile-phone-white.svg' alt='Phone Icon') 
           span.navbar-call-us-text Call: 
           br
-          span.navbar-call-us-text(href="tel:0546398138") 054-639-8138
+          span.navbar-call-us-text(href="tel:0545796456") 054-579-6456
       .col-4.mobile-navbar-col.align-content-center.text-center.text-sm-end
         button.navbar-toggler.collapsed(type='button' data-bs-toggle='offcanvas' data-bs-target='#navbarContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Open links menu')
           span.navbar-toggler-icon
@@ -21,15 +21,15 @@ nav.navbar.navbar-expand-xl.fixed-top
           button.mobile-asset-favorite-btn
             img.header-favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline-white.svg' alt='Heart icon') 
           button.btn.btn-secondary.dropdown-toggle.lang-dropdown-btn.mobile-lang-dropdown-btn(type='button' data-bs-toggle='collapse' data-bs-target="#langBtnCollapse" aria-expanded="false" aria-controls="langBtnCollapse" aria-label='Choose language')
-            img.navbar-lang-icon.mobile-navbar-active-lang-icon(src='' alt='')   
-            //-div
-              img.navbar-lang-icon.mobile-navbar-not-active-lang-icon(src='/img/icons/flag-for-flag-russia-svgrepo-com.svg' alt='')       
+            img.navbar-lang-icon.mobile-navbar-active-lang-icon(src='' alt='')      
           button.btn.btn-secondary.dropdown-toggle.currency-dropdown-btn.mobile-currency-dropdown-btn(type='button' data-bs-toggle='collapse' data-bs-target="#currencyBtnCollapse" aria-expanded="false" aria-controls="currencyBtnCollapse" aria-label='Choose currency')
             img.navbar-currency-icon.mobile-navbar-active-currency-icon(src='' alt='')   
           .row
-            .col-7.p-0
+            .col-7.mobile-lang-collapse-col-en
               div.collapse.multi-collapse.mobile-lang-collapse(id="langBtnCollapse")
-                img.navbar-lang-icon.mobile-navbar-not-active-lang-icon.en-mobile-navbar-not-active-lang-icon(src='' alt='')       
+                img.navbar-lang-icon.mobile-navbar-first-not-active-lang-icon.en-mobile-navbar-not-active-lang-icon(src='' alt='')       
+              div.collapse.multi-collapse.mobile-lang-collapse(id="langBtnCollapse")
+                img.navbar-lang-icon.mobile-navbar-second-not-active-lang-icon.en-mobile-navbar-not-active-lang-icon(src='' alt='')       
             .col-2.p-0
               div.collapse.multi-collapse.mobile-currency-collapse(id="currencyBtnCollapse")
                 img.navbar-currency-icon.mobile-navbar-not-active-currency-icon.en-mobile-navbar-not-active-currency-icon(src='' alt='')       
@@ -77,6 +77,30 @@ nav.navbar.navbar-expand-xl.fixed-top
                         a.nav-link.dropdown-item.projects-dropdown-item(href='/en/project/villa-margarita') Villa Margarita
                       li
                         a.nav-link.dropdown-item.projects-dropdown-item(href='/en/project/mellia-florance') Mellia Florance
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/en/project/fort-noks-premier-suites') Fort Noks Premier Suites  
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/en/project/premier-fort-beach') Premier Fort Beach
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/en/project/prestige-fort-beach') Prestige Fort Beach
+                  li.dropdown-submenu.projects-dropdown
+                    a.nav-link.dropdown-item.dropdown-toggle.projects-dropdown-btn.en-projects-dropdown-btn.project-nessebar-dropdown-btn(role="button" aria-expanded="false") Nesebar
+                    ul.dropdown-menu.projects-dropdown-menu.en-projects-dropdown-menu  
+                      li
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/en/project/nessebar-fort-residence') Nessebar Fort Residence      
+                  li.dropdown-submenu.projects-dropdown
+                    a.nav-link.dropdown-item.dropdown-toggle.projects-dropdown-btn.en-projects-dropdown-btn.project-varna-dropdown-btn(role="button" aria-expanded="false") Varna
+                    ul.dropdown-menu.projects-dropdown-menu.en-projects-dropdown-menu  
+                      li      
+                  li.dropdown-submenu.projects-dropdown
+                    a.nav-link.dropdown-item.dropdown-toggle.projects-dropdown-btn.en-projects-dropdown-btn.project-sunny-dropdown-btn(role="button" aria-expanded="false") Sunny Beach
+                    ul.dropdown-menu.projects-dropdown-menu.en-projects-dropdown-menu  
+                      li      
+                        a.nav-link.dropdown-item.projects-dropdown-item(href='/en/project/green-fort-suites') Green Fort Suites
+                  li.dropdown-submenu.projects-dropdown
+                    a.nav-link.dropdown-item.dropdown-toggle.projects-dropdown-btn.en-projects-dropdown-btn.project-bansko-dropdown-btn(role="button" aria-expanded="false") Bansko
+                    ul.dropdown-menu.projects-dropdown-menu.en-projects-dropdown-menu  
+                      li      
               li.dropdown-submenu.commercial-dropdown
                 a.nav-link.dropdown-item.dropdown-toggle.commercial-dropdown-btn.en-commercial-dropdown-btn(role="button" aria-expanded="false") Business
                 ul.dropdown-menu.commercial-dropdown-menu.en-commercial-dropdown-menu
@@ -109,7 +133,9 @@ nav.navbar.navbar-expand-xl.fixed-top
                 img.navbar-lang-icon.navbar-active-lang-icon(src='/img/icons/placeholder-thin-svgrepo-com-white.svg' alt='')    
               ul.dropdown-menu.lang-dropdown-menu
                 li.lang-dropdown-menu-item 
-                  img.navbar-lang-icon.navbar-not-active-lang-icon(src='' alt='')      
+                  img.navbar-lang-icon.navbar-first-not-active-lang-icon(src='' alt='')      
+                li.lang-dropdown-menu-item 
+                  img.navbar-lang-icon.navbar-second-not-active-lang-icon(src='' alt='')      
                 //-div
                   img.navbar-lang-icon.navbar-not-active-lang-icon(src='/img/icons/flag-for-flag-russia-svgrepo-com.svg' alt='')       
           li.nav-item.en-nav-item.currency-nav-item  
@@ -120,4 +146,4 @@ nav.navbar.navbar-expand-xl.fixed-top
                 li.currency-dropdown-menu-item 
                   img.navbar-currency-icon.navbar-not-active-currency-icon(src='' alt='')  
     a.navbar-brand.laptop-navbar-brand(href='/en')
-      img.navbar-logo(src='/img/logo.png' alt='Dira Bulgarit Logo')    
+      img.navbar-logo(src='/img/logo-eng.png' alt='Dira Bulgarit Logo')    

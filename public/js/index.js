@@ -69,11 +69,15 @@ window.onload = function () {
     if (!JSON.parse(localStorage.getItem(config.LANGUAGE_KEY))) {
       localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.DEFAULT_LANGUAGE));
     }
-    if (config.Elements.langDdBtn) utils.switchLanguageIconsSrc();
+    if (config.Elements.langDdBtn) utils.switchLanguageIconsSrc(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
   }
   // If language is English
   else if (JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.EN_LANGUAGE) {
-    utils.switchLanguageIconsSrc(false);
+    utils.switchLanguageIconsSrc(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
+  }
+  // If language is Russian
+  else if (JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.RU_LANGUAGE) {
+    utils.switchLanguageIconsSrc(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
   }
 
   //  Header dropdown menu click (project catalog)
@@ -110,51 +114,96 @@ window.onload = function () {
     });
   });
 
-  // Set 'active-link' class on navbar links every time the page is loaded
-  let href = window.location.href;
-  href = href.includes('/en') ? href.substring(href.lastIndexOf('/en') + 2) : href.substring(href.lastIndexOf('/') + 1);
-  href = href.substring(href.lastIndexOf('/') + 1);
-  // For homepage link
-  if (!href && !config.Elements.homePageLink.classList.contains('active-link')) {
-    config.Elements.homePageLink.classList.toggle('active-link');
-  }
-  if (href === 'blog' || (href === '/blog' && !config.Elements.blogLink.classList.contains('active-link'))) {
-    config.Elements.blogLink.classList.toggle('active-link');
-  }
-  config.Elements.activeNavLinks.forEach((link) => {
-    let linkString = link.toString();
-    let linkStringEnding = linkString.substring(linkString.lastIndexOf('/') + 1);
-    if (href && linkStringEnding === href) {
-      link.classList.toggle('active-link');
-      if ((href && href.includes('search-results')) || linkString.includes('search') || linkString.includes('project') || linkString.includes('commercial')) {
-        config.Elements.assetCatalogDdBtn.classList.toggle('active-link');
-      }
-      if (href && linkString.includes('project')) {
-        config.Elements.projectsDdBtn.classList.toggle('active-link');
-        if (
-          linkStringEnding.includes('atlantis-aria-2') ||
-          linkStringEnding.includes('atlantis-aria-3') ||
-          linkStringEnding.includes('atlantis-euphoria') ||
-          linkStringEnding.includes('atlas-azimuth')
-        ) {
-          config.Elements.projectBurgasDdBtn.classList.toggle('active-link');
-        }
-        if (
-          linkStringEnding.includes('atlantis-barcode') ||
-          linkStringEnding.includes('atlantis-barcode-2') ||
-          linkStringEnding.includes('mountain-view-residence') ||
-          linkStringEnding.includes('vitosha-mountain-view') ||
-          linkStringEnding.includes('vitosha-mountain-boutique')
-        ) {
-          config.Elements.projectSofiaDdBtn.classList.toggle('active-link');
-        }
-        if (linkStringEnding.includes('villa-margarita') || linkStringEnding.includes('mellia-florance')) {
-          config.Elements.projectSvetiDdBtn.classList.toggle('active-link');
-        }
-      }
-      if (href && linkString.includes('commercial')) config.Elements.commercialDdBtn.classList.toggle('active-link');
+  // ***** Navbar Active Link *****
+  function getCurrentPath() {
+    let href = window.location.pathname;
+
+    // Remove language prefix (e.g., /en/)
+    if (href.startsWith('/en/')) {
+      href = href.substring(4); // removes "/en/"
     }
-  });
+
+    // Remove trailing slash if it's not the root
+    if (href.length > 1 && href.endsWith('/')) {
+      href = href.slice(0, -1);
+    }
+
+    return href.substring(href.lastIndexOf('/') + 1); // final part of the path
+  }
+
+  function setActiveLinkClass(link, type = 'navbar') {
+    const activeClass = type === 'offcanvas' ? 'offcanvas-active-link' : 'active-link';
+    const inactiveClass = type === 'offcanvas' ? 'active-link' : 'offcanvas-active-link';
+
+    link.classList.remove(inactiveClass);
+    if (!link.classList.contains(activeClass)) {
+      link.classList.add(activeClass);
+    }
+  }
+
+  function handleProjectDropdowns(linkStringEnding, type = 'navbar') {
+    const map = {
+      projectBurgasDdBtn: ['atlantis-aria-2', 'atlantis-aria-3', 'atlantis-euphoria', 'atlas-azimuth'],
+      projectSofiaDdBtn: ['atlantis-barcode', 'atlantis-barcode-2', 'mountain-view-residence', 'vitosha-mountain-view', 'vitosha-mountain-boutique'],
+      projectSvetiDdBtn: ['villa-margarita', 'mellia-florance', 'fort-noks-premier-suites', 'premier-fort-beach', 'prestige-fort-beach'],
+      projectNessebarDdBtn: ['nessebar-fort-residence'],
+      projectSunnyDdBtn: ['green-fort-suites'],
+    };
+
+    for (const [btn, projects] of Object.entries(map)) {
+      if (projects.some((slug) => linkStringEnding.includes(slug))) {
+        setActiveLinkClass(config.Elements[btn], type);
+      }
+    }
+  }
+
+  function highlightNavLinks(type = 'navbar') {
+    const links = config.Elements.activeNavLinks;
+    const href = getCurrentPath();
+
+    // Reset all
+    ['assetCatalogDdBtn', 'projectsDdBtn', 'commercialDdBtn'].forEach((btn) => {
+      config.Elements[btn].classList.remove('active-link', 'offcanvas-active-link');
+    });
+
+    if (!href) setActiveLinkClass(config.Elements.homePageLink, type);
+    if (href === 'blog' || href === '/blog') setActiveLinkClass(config.Elements.blogLink, type);
+
+    links.forEach((link) => {
+      const linkString = link.toString();
+      const linkStringEnding = linkString.substring(linkString.lastIndexOf('/') + 1);
+
+      if (type === 'offcanvas') link.style.color = 'white';
+
+      if (href && linkStringEnding === href) {
+        setActiveLinkClass(link, type);
+
+        if (href.includes('search-results') || linkString.includes('search') || linkString.includes('project') || linkString.includes('commercial')) {
+          setActiveLinkClass(config.Elements.assetCatalogDdBtn, type);
+        }
+
+        if (linkString.includes('project')) {
+          setActiveLinkClass(config.Elements.projectsDdBtn, type);
+          handleProjectDropdowns(linkStringEnding, type);
+        }
+
+        if (linkString.includes('commercial')) {
+          setActiveLinkClass(config.Elements.commercialDdBtn, type);
+        }
+      }
+    });
+  }
+
+  // Apply on page load (desktop)
+  highlightNavLinks('navbar');
+
+  // Apply on mobile when offcanvas toggler is clicked
+  if (config.Elements.navbarToggler) {
+    config.Elements.navbarToggler.addEventListener('click', (e) => {
+      e.preventDefault();
+      highlightNavLinks('offcanvas');
+    });
+  }
 
   // Search from and search modal user input
   if (config.Elements.searchForm || config.Elements.modalSearchForm) {
@@ -210,135 +259,90 @@ window.onload = function () {
 window.addEventListener('pageshow', function () {
   const href = window.location.href;
   if (href.includes(`${config.baseProdUrl}${config.EN_LANGUAGE}`)) {
-    utils.switchLanguageIconsSrc(false);
+    utils.switchLanguageIconsSrc(config.EN_LANGUAGE);
     localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.EN_LANGUAGE));
     loadLang(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
+  } else if (href.includes(`${config.baseProdUrl}${config.RU_LANGUAGE}`)) {
+    utils.switchLanguageIconsSrc(config.RU_LANGUAGE);
+    localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.RU_LANGUAGE));
+    loadLang(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
   } else {
-    if (config.Elements.langDdBtn) utils.switchLanguageIconsSrc();
+    if (config.Elements.langDdBtn) utils.switchLanguageIconsSrc(config.DEFAULT_LANGUAGE);
     localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.DEFAULT_LANGUAGE));
     loadLang(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
   }
 });
 
-// Set 'offcanvas-active-link' class on offcanvas links every time the offcanvas toggler is clicked
-if (config.Elements.navbarToggler)
-  config.Elements.navbarToggler.addEventListener('click', async (e) => {
-    e.preventDefault();
-    let href = window.location.href;
-    let subHref = href.substring(href.lastIndexOf('/') - 10);
-    href = href.includes('/en') ? href.substring(href.lastIndexOf('/en') + 2) : href.substring(href.lastIndexOf('/') + 1);
-    href = href.substring(href.lastIndexOf('/') + 1);
-    config.Elements.assetCatalogDdBtn.classList.remove('offcanvas-active-link');
-    config.Elements.projectsDdBtn.classList.remove('offcanvas-active-link');
-    // For homepage link
-    if (!href && !config.Elements.homePageLink.classList.contains('offcanvas-active-link')) {
-      config.Elements.homePageLink.classList.remove('active-link');
-      config.Elements.homePageLink.classList.toggle('offcanvas-active-link');
-    }
-    if (href === 'blog' || (href === '/blog' && !config.Elements.blogLink.classList.contains('offcanvas-active-link'))) {
-      config.Elements.blogLink.classList.remove('active-link');
-      config.Elements.blogLink.classList.toggle('offcanvas-active-link');
-    }
-    config.Elements.activeNavLinks.forEach((link) => {
-      let linkString = link.toString();
-      link.style.color = 'white';
-      let linkStringEnding = linkString.substring(linkString.lastIndexOf('/') + 1);
-      if (href && linkStringEnding === href && !link.classList.contains('offcanvas-active-link')) {
-        link.classList.toggle('offcanvas-active-link');
-        link.classList.toggle('active-link');
-
-        if ((href && href.includes('search-results')) || href.includes('search') || subHref.includes('project') || subHref.includes('commercial')) {
-          config.Elements.assetCatalogDdBtn.classList.remove('active-link');
-          config.Elements.assetCatalogDdBtn.classList.add('offcanvas-active-link');
-        }
-        if (href && subHref.includes('project')) {
-          config.Elements.projectsDdBtn.classList.remove('active-link');
-          config.Elements.projectsDdBtn.classList.add('offcanvas-active-link');
-          if (
-            linkStringEnding.includes('atlantis-aria-2') ||
-            linkStringEnding.includes('atlantis-aria-3') ||
-            linkStringEnding.includes('atlantis-euphoria') ||
-            linkStringEnding.includes('atlas-azimuth')
-          ) {
-            config.Elements.projectBurgasDdBtn.classList.remove('active-link');
-            config.Elements.projectBurgasDdBtn.classList.add('offcanvas-active-link');
-          }
-          if (
-            linkStringEnding.includes('atlantis-barcode') ||
-            linkStringEnding.includes('atlantis-barcode-2') ||
-            linkStringEnding.includes('mountain-view-residence') ||
-            linkStringEnding.includes('vitosha-mountain-view') ||
-            linkStringEnding.includes('vitosha-mountain-boutique')
-          ) {
-            config.Elements.projectSofiaDdBtn.classList.remove('active-link');
-            config.Elements.projectSofiaDdBtn.classList.add('offcanvas-active-link');
-          }
-          if (linkStringEnding.includes('villa-margarita') || linkStringEnding.includes('mellia-florance')) {
-            config.Elements.projectSvetiDdBtn.classList.remove('active-link');
-            config.Elements.projectSvetiDdBtn.classList.add('offcanvas-active-link');
-          }
-        }
-        if (href && subHref.includes('commercial')) {
-          config.Elements.commercialDdBtn.classList.remove('active-link');
-          config.Elements.commercialDdBtn.classList.add('offcanvas-active-link');
-        }
-      }
-    });
-  });
-
 // Currency switch
-if (config.Elements.notActiveCurrencyIcon)
-  config.Elements.notActiveCurrencyIcon.addEventListener('click', async (e) => {
-    utils.switchCurrency(config.Elements.notActiveCurrencyIcon.src);
-  });
+const addCurrencySwitchListener = (element, isMobile = false) => {
+  if (!element) return;
 
-if (config.Elements.mobileNotActiveCurrencyIcon)
-  config.Elements.mobileNotActiveCurrencyIcon.addEventListener('click', async (e) => {
-    utils.switchCurrency(config.Elements.mobileNotActiveCurrencyIcon.src);
-    config.Elements.mobileCurrencyDdBtn.click();
+  element.addEventListener('click', () => {
+    utils.switchCurrency(element.src);
+    if (isMobile && config.Elements.mobileCurrencyDdBtn) {
+      config.Elements.mobileCurrencyDdBtn.click();
+    }
   });
+};
+
+addCurrencySwitchListener(config.Elements.notActiveCurrencyIcon);
+addCurrencySwitchListener(config.Elements.mobileNotActiveCurrencyIcon, true);
 
 // Language switch
-if (config.Elements.notActiveLangIcon)
-  config.Elements.notActiveLangIcon.addEventListener('click', async (e) => {
+const addLangSwitchListener = (element, isMobile = false) => {
+  if (!element) return;
+
+  element.addEventListener('click', () => {
     const href = window.location.href;
-    utils.switchLanguage(config.Elements.notActiveLangIcon.src, href);
+    utils.switchLanguage(element.src, href);
+    if (isMobile && config.Elements.mobileLangDdBtn) {
+      config.Elements.mobileLangDdBtn.click();
+    }
   });
+};
 
-if (config.Elements.mobileNotActiveLangIcon)
-  config.Elements.mobileNotActiveLangIcon.addEventListener('click', async (e) => {
-    const href = window.location.href;
-    utils.switchLanguage(config.Elements.mobileNotActiveLangIcon.src, href);
-    config.Elements.mobileLangDdBtn.click();
+addLangSwitchListener(config.Elements.firstNotActiveLangIcon);
+addLangSwitchListener(config.Elements.secondNotActiveLangIcon);
+addLangSwitchListener(config.Elements.firstMobileNotActiveLangIcon, true);
+addLangSwitchListener(config.Elements.secondMobileNotActiveLangIcon, true);
+
+// Favorite button listeners
+const addFavoriteBtnListener = (button) => {
+  if (!button) return;
+
+  button.addEventListener('click', () => {
+    const favorites = JSON.parse(localStorage.getItem(config.FAVORITE_KEY));
+    getFavoriteAssets(favorites);
   });
+};
 
-if (config.Elements.favoriteBtn)
-  config.Elements.favoriteBtn.addEventListener('click', async (e) => {
-    getFavoriteAssets(JSON.parse(localStorage.getItem(config.FAVORITE_KEY)));
-  });
+addFavoriteBtnListener(config.Elements.favoriteBtn);
+addFavoriteBtnListener(config.Elements.mobileFavoriteBtn);
 
-if (config.Elements.mobileFavoriteBtn)
-  config.Elements.mobileFavoriteBtn.addEventListener('click', async (e) => {
-    getFavoriteAssets(JSON.parse(localStorage.getItem(config.FAVORITE_KEY)));
-  });
+// Asset favorite button logic
+const addAssetFavoriteListeners = (buttons) => {
+  if (!buttons || !config.Elements.assetId || !config.Elements.assetFavoriteIcon) return;
 
-if (config.Elements.assetFavoriteBtn)
-  config.Elements.assetFavoriteBtn.forEach((el) => {
-    el.addEventListener('click', function (e) {
-      if (config.Elements.assetId) {
-        const assetId = config.Elements.assetId.textContent;
-        config.Elements.assetFavoriteIcon.forEach((icon) => {
-          if (icon.src.includes(config.assetFavoriteIconOutlineSrc)) {
-            utils.addToFavorite(assetId);
-            icon.src = config.assetFavoriteIconFullSrc;
-          } else {
-            utils.removeFromFavorite(assetId);
-            icon.src = config.assetFavoriteIconOutlineSrc;
-          }
-        });
-      }
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const assetId = config.Elements.assetId.textContent;
+
+      config.Elements.assetFavoriteIcon.forEach((icon) => {
+        const isOutline = icon.src.includes(config.assetFavoriteIconOutlineSrc);
+        console.log(icon);
+        if (isOutline) {
+          utils.addToFavorite(assetId);
+          icon.src = config.assetFavoriteIconFullSrc;
+        } else {
+          utils.removeFromFavorite(assetId);
+          icon.src = config.assetFavoriteIconOutlineSrc;
+        }
+      });
     });
   });
+};
+
+addAssetFavoriteListeners(config.Elements.assetFavoriteBtn);
 
 // Map display
 if (config.Elements.mapBox && config.Elements.mapBox.dataset.long && config.Elements.mapBox.dataset.lat) {
@@ -388,82 +392,116 @@ if (config.Elements.shareBtnWhite)
     });
   });
 
-// Asset PDF button listener
-if (config.Elements.assetPdfBtn)
-  config.Elements.assetPdfBtn.forEach((el) => {
-    el.addEventListener('click', function (e) {
-      const priceArray = Array.from(config.Elements.assetPrice)
-        .map((price) => price.innerText.trim())
-        .filter((value, index, self) => self.indexOf(value) === index);
-      const descriptionArray = Array.from(config.Elements.assetDescription)
-        .map((description) => description.innerText.trim())
-        .filter((value, index, self) => self.indexOf(value) === index);
-      const amenitiesArray = Array.from(config.Elements.assetAmenities).map((amenity) => amenity.innerText.trim());
-      const imagesArray = Array.from(config.Elements.assetThumbnailImgs).map((image) => image.src);
+// ***** Asset PDF button *****
+const extractUniqueText = (elements) => {
+  return Array.from(elements)
+    .map((el) => el.innerText.trim())
+    .filter((value, index, self) => self.indexOf(value) === index);
+};
 
-      const pdfData = {
-        id: config.Elements.assetId ? config.Elements.assetId.innerHTML : '',
-        name: config.Elements.assetName ? config.Elements.assetName.innerHTML : '',
-        price: priceArray ? priceArray[0] : '',
-        project: config.Elements.assetProject ? config.Elements.assetProject.innerHTML : '',
-        city: config.Elements.assetCity ? config.Elements.assetCity.innerHTML : '',
-        type: config.Elements.assetType ? config.Elements.assetType.innerHTML : '',
-        sm: config.Elements.assetSm ? config.Elements.assetSm.innerHTML : '',
-        oceanView: config.Elements.assetOceanView ? config.Elements.assetOceanView.innerHTML : '',
-        rooms: config.Elements.assetRooms ? config.Elements.assetRooms.innerHTML : '',
-        bedrooms: config.Elements.assetBedrooms ? config.Elements.assetBedrooms.innerHTML : '',
-        bathrooms: config.Elements.assetBathrooms ? config.Elements.assetBathrooms.innerHTML : '',
-        terraces: config.Elements.assetTerraces ? config.Elements.assetTerraces.innerHTML : '',
-        floor: config.Elements.assetFloor ? config.Elements.assetFloor.innerHTML : '',
-        parking: config.Elements.assetParking ? config.Elements.assetParking.innerHTML : '',
-        windDirection: config.Elements.assetWindDirections ? config.Elements.assetWindDirections.innerHTML : '',
-        readiness: config.Elements.assetReadiness ? config.Elements.assetReadiness.innerHTML : '',
-        maintenanceFee: config.Elements.assetMaintenanceFee ? config.Elements.assetMaintenanceFee.innerHTML : '',
-        furnished: config.Elements.assetFurnished ? config.Elements.assetFurnished.innerHTML : '',
-        yearBuilt: config.Elements.assetYearBuilt ? config.Elements.assetYearBuilt.innerHTML : '',
-        description: descriptionArray ? descriptionArray : '',
-        amenities: amenitiesArray ? amenitiesArray : '',
-        mainImage: config.Elements.assetMainImg.src ? config.Elements.assetMainImg.src : '',
-        images: imagesArray ? imagesArray : '',
-      };
+const getElementText = (element) => (element ? element.innerHTML.trim() : '');
 
-      if (config.Elements.mapBox && config.Elements.mapBox.dataset.long && config.Elements.mapBox.dataset.lat) {
-        const location = {
-          long: config.Elements.mapBox.dataset.long,
-          lat: config.Elements.mapBox.dataset.lat,
-          title: config.Elements.mapBox.dataset.title,
-        };
-        pdfData.location = location;
-      }
+const collectPdfData = () => {
+  const pdfData = {
+    id: getElementText(config.Elements.assetId),
+    name: getElementText(config.Elements.assetName),
+    price: extractUniqueText(config.Elements.assetPrice)?.[0] || '',
+    project: getElementText(config.Elements.assetProject),
+    city: getElementText(config.Elements.assetCity),
+    type: getElementText(config.Elements.assetType),
+    sm: getElementText(config.Elements.assetSm),
+    oceanView: getElementText(config.Elements.assetOceanView),
+    rooms: getElementText(config.Elements.assetRooms),
+    bedrooms: getElementText(config.Elements.assetBedrooms),
+    bathrooms: getElementText(config.Elements.assetBathrooms),
+    terraces: getElementText(config.Elements.assetTerraces),
+    floor: getElementText(config.Elements.assetFloor),
+    parking: getElementText(config.Elements.assetParking),
+    windDirection: getElementText(config.Elements.assetWindDirections),
+    readiness: getElementText(config.Elements.assetReadiness),
+    maintenanceFee: getElementText(config.Elements.assetMaintenanceFee),
+    furnished: getElementText(config.Elements.assetFurnished),
+    yearBuilt: getElementText(config.Elements.assetYearBuilt),
+    description: extractUniqueText(config.Elements.assetDescription) || [],
+    amenities: Array.from(config.Elements.assetAmenities || []).map((el) => el.innerText.trim()) || [],
+    mainImage: config.Elements.assetMainImg?.src || '',
+    images: Array.from(config.Elements.assetThumbnailImgs || []).map((img) => img.src) || [],
+  };
+
+  if (config.Elements.mapBox && config.Elements.mapBox.dataset.long && config.Elements.mapBox.dataset.lat) {
+    pdfData.location = {
+      long: config.Elements.mapBox.dataset.long,
+      lat: config.Elements.mapBox.dataset.lat,
+      title: config.Elements.mapBox.dataset.title || '',
+    };
+  }
+
+  return pdfData;
+};
+
+const setupPdfButtonListeners = () => {
+  if (!config.Elements.assetPdfBtn) return;
+
+  config.Elements.assetPdfBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const pdfData = collectPdfData();
       generatePDF(pdfData);
     });
   });
+};
 
-// CTA Button to Calendly
-if (config.Elements.toContactUsBtn)
-  config.Elements.toContactUsBtn.forEach((el) => {
-    el.addEventListener('click', function (e) {
-      window.location.pathname = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? '/contact-us' : '/en/contact-us';
-    });
-  });
+// Initialize
+setupPdfButtonListeners();
 
-// To About btn
-if (config.Elements.toAboutBtn)
-  config.Elements.toAboutBtn.addEventListener('click', function (e) {
-    window.location.pathname = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? '/about' : '/en/about';
-  });
+// ***** Button Listeners *****
+const ROUTE_MAP = {
+  [config.DEFAULT_LANGUAGE]: '',
+  [config.EN_LANGUAGE]: '/en',
+  [config.RU_LANGUAGE]: '/ru',
+};
 
-// To blog btn
-if (config.Elements.toBlogBtn)
-  config.Elements.toBlogBtn.addEventListener('click', function (e) {
-    window.location.pathname = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? '/blog' : '/en/blog';
-  });
+const BUTTON_ROUTES = {
+  toContactUsBtn: '/contact-us',
+  toAboutBtn: '/about',
+  toBlogBtn: '/blog',
+  investGuideBtn: '/invest',
+  errorBtn: '', // Empty base path for errorBtn to allow language-specific roots
+};
 
-// Invest guide btn
-if (config.Elements.investGuideBtn)
-  config.Elements.investGuideBtn.addEventListener('click', function (e) {
-    window.location.pathname = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? '/invest' : '/en/invest';
+const getLanguagePrefix = () => {
+  const lang = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) || config.DEFAULT_LANGUAGE;
+  return ROUTE_MAP[lang] || '';
+};
+
+const navigateToPage = (basePath) => {
+  const prefix = getLanguagePrefix();
+
+  // For errorBtn, navigate to language-specific root
+  if (basePath === '') {
+    window.location.pathname = prefix || '/';
+    return;
+  }
+
+  window.location.pathname = `${prefix}${basePath}`;
+};
+
+const setupButtonListener = (button, basePath) => {
+  if (!button) return;
+
+  const elements = button.length !== undefined ? button : [button];
+  elements.forEach((el) => {
+    el.addEventListener('click', () => navigateToPage(basePath));
   });
+};
+
+const initializeNavigationButtons = () => {
+  Object.entries(BUTTON_ROUTES).forEach(([btnKey, basePath]) => {
+    setupButtonListener(config.Elements[btnKey], basePath);
+  });
+};
+
+// Initialize
+initializeNavigationButtons();
 
 if (config.Elements.blogLink)
   config.Elements.blogLink.addEventListener('click', function (e) {
@@ -478,20 +516,17 @@ if (config.Elements.backToSearchResultsBtn)
     window.history.go(-1);
   });
 
-// Error 404 Page Button
-if (config.Elements.errorBtn)
-  config.Elements.errorBtn.addEventListener('click', function (e) {
-    window.location.pathname = '/';
-  });
-
+// Get pages by slug
+const addSlugNavigation = (elements, pageType) => {
+  if (!elements) return;
+  utils.getPageBySlug(elements, pageType);
+};
 // Asset Card
-if (config.Elements.assetCards) utils.getPageBySlug(config.Elements.assetCards, 'asset');
-
+addSlugNavigation(config.Elements.assetCards, 'asset');
 // Main Page Blog Buttons
-if (config.Elements.mainPageBlogBtn) utils.getPageBySlug(config.Elements.mainPageBlogBtn, 'blog');
-
+addSlugNavigation(config.Elements.mainPageBlogBtn, 'blog');
 // Blog Cards
-if (config.Elements.blogCards) utils.getPageBySlug(config.Elements.blogCards, 'blog');
+addSlugNavigation(config.Elements.blogCards, 'blog');
 
 // Add text to search dd buttons and fix price min-max user input
 if (config.Elements.searchDdBtnCity) utils.ddBtnTextSetter(config.Elements.searchDdBtnCity, config.Elements.searchFilterBtnCity);
@@ -542,7 +577,7 @@ if (config.Elements.priceInput)
     });
   });
 
-// Search Form
+// ***** Search Forms and Search Results *****
 if (config.Elements.searchForm)
   config.Elements.searchForm.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -640,7 +675,11 @@ if (config.Elements.paginationPageBtn)
     el.addEventListener('click', function (e) {
       e.preventDefault();
       localStorage.setItem(config.PAGE_NUMBER_KEY, JSON.stringify(parseInt(el.dataset.page)));
-      if (href.includes(`${config.baseProdUrl}asset/search-results`) || href.includes(`${config.baseProdUrl}${config.EN_LANGUAGE}/asset/search-results`)) {
+      if (
+        href.includes(`${config.baseProdUrl}asset/search-results`) ||
+        href.includes(`${config.baseProdUrl}${config.EN_LANGUAGE}/asset/search-results`) ||
+        href.includes(`${config.baseProdUrl}${config.RU_LANGUAGE}/asset/search-results`)
+      ) {
         filterAssets(
           JSON.parse(localStorage.getItem(config.FILTER_KEY)),
           JSON.parse(localStorage.getItem(config.SORT_KEY)),
@@ -648,7 +687,11 @@ if (config.Elements.paginationPageBtn)
           JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)),
           JSON.parse(localStorage.getItem(config.RES_PER_PAGE_KEY)),
         );
-      } else if (href === `${config.baseProdUrl}blog` || href === `${config.baseProdUrl}${config.EN_LANGUAGE}/blog`) {
+      } else if (
+        href === `${config.baseProdUrl}blog` ||
+        href === `${config.baseProdUrl}${config.EN_LANGUAGE}/blog` ||
+        href === `${config.baseProdUrl}${config.RU_LANGUAGE}/blog`
+      ) {
         getBlogs(JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)), config.DEFAULT_BLOG_RES_PER_PAGE);
       }
     });
@@ -662,7 +705,11 @@ if (config.Elements.paginationPrevPageBtn && config.Elements.paginationNextPageB
     config.Elements.paginationNextPageBtn.addEventListener('click', async (e) => {
       e.preventDefault();
       localStorage.setItem(config.PAGE_NUMBER_KEY, JSON.stringify(JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)) + 1));
-      if (href.includes(`${config.baseProdUrl}asset/search-results`) || href.includes(`${config.baseProdUrl}${config.EN_LANGUAGE}/asset/search-results`)) {
+      if (
+        href.includes(`${config.baseProdUrl}asset/search-results`) ||
+        href.includes(`${config.baseProdUrl}${config.EN_LANGUAGE}/asset/search-results`) ||
+        href.includes(`${config.baseProdUrl}${config.RU_LANGUAGE}/asset/search-results`)
+      ) {
         filterAssets(
           JSON.parse(localStorage.getItem(config.FILTER_KEY)),
           JSON.parse(localStorage.getItem(config.SORT_KEY)),
@@ -670,7 +717,11 @@ if (config.Elements.paginationPrevPageBtn && config.Elements.paginationNextPageB
           JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)),
           JSON.parse(localStorage.getItem(config.RES_PER_PAGE_KEY)),
         );
-      } else if (href === `${config.baseProdUrl}blog` || href === `${config.baseProdUrl}${config.EN_LANGUAGE}/blog`) {
+      } else if (
+        href === `${config.baseProdUrl}blog` ||
+        href === `${config.baseProdUrl}${config.EN_LANGUAGE}/blog` ||
+        href === `${config.baseProdUrl}${config.RU_LANGUAGE}/blog`
+      ) {
         getBlogs(JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)), config.DEFAULT_BLOG_RES_PER_PAGE);
       }
     });
@@ -680,7 +731,11 @@ if (config.Elements.paginationPrevPageBtn && config.Elements.paginationNextPageB
     config.Elements.paginationPrevPageBtn.addEventListener('click', async (e) => {
       e.preventDefault();
       localStorage.setItem(config.PAGE_NUMBER_KEY, JSON.stringify(JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)) - 1));
-      if (href.includes(`${config.baseProdUrl}asset/search-results`) || href.includes(`${config.baseProdUrl}${config.EN_LANGUAGE}/asset/search-results`)) {
+      if (
+        href.includes(`${config.baseProdUrl}asset/search-results`) ||
+        href.includes(`${config.baseProdUrl}${config.EN_LANGUAGE}/asset/search-results`) ||
+        href.includes(`${config.baseProdUrl}${config.RU_LANGUAGE}/asset/search-results`)
+      ) {
         filterAssets(
           JSON.parse(localStorage.getItem(config.FILTER_KEY)),
           JSON.parse(localStorage.getItem(config.SORT_KEY)),
@@ -688,7 +743,11 @@ if (config.Elements.paginationPrevPageBtn && config.Elements.paginationNextPageB
           JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)),
           JSON.parse(localStorage.getItem(config.RES_PER_PAGE_KEY)),
         );
-      } else if (href === `${config.baseProdUrl}blog` || href === `${config.baseProdUrl}${config.EN_LANGUAGE}/blog`) {
+      } else if (
+        href === `${config.baseProdUrl}blog` ||
+        href === `${config.baseProdUrl}${config.EN_LANGUAGE}/blog` ||
+        href === `${config.baseProdUrl}${config.RU_LANGUAGE}/blog`
+      ) {
         getBlogs(JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)), config.DEFAULT_BLOG_RES_PER_PAGE);
       }
     });
@@ -701,7 +760,11 @@ if (config.Elements.paginationPrevPageBtn && config.Elements.paginationNextPageB
         } else {
           localStorage.setItem(config.PAGE_NUMBER_KEY, JSON.stringify(JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)) - 1));
         }
-        if (href.includes(`${config.baseProdUrl}asset/search-results`) || href.includes(`${config.baseProdUrl}${config.EN_LANGUAGE}/asset/search-results`)) {
+        if (
+          href.includes(`${config.baseProdUrl}asset/search-results`) ||
+          href.includes(`${config.baseProdUrl}${config.EN_LANGUAGE}/asset/search-results`) ||
+          href.includes(`${config.baseProdUrl}${config.RU_LANGUAGE}/asset/search-results`)
+        ) {
           filterAssets(
             JSON.parse(localStorage.getItem(config.FILTER_KEY)),
             JSON.parse(localStorage.getItem(config.SORT_KEY)),
@@ -709,7 +772,11 @@ if (config.Elements.paginationPrevPageBtn && config.Elements.paginationNextPageB
             JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)),
             JSON.parse(localStorage.getItem(config.RES_PER_PAGE_KEY)),
           );
-        } else if (href === `${config.baseProdUrl}blog` || href === `${config.baseProdUrl}${config.EN_LANGUAGE}/blog`) {
+        } else if (
+          href === `${config.baseProdUrl}blog` ||
+          href === `${config.baseProdUrl}${config.EN_LANGUAGE}/blog` ||
+          href === `${config.baseProdUrl}${config.RU_LANGUAGE}/blog`
+        ) {
           getBlogs(JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)), config.DEFAULT_BLOG_RES_PER_PAGE);
         }
       });
@@ -797,15 +864,15 @@ if (config.Elements.contactUsExpandBtn)
   });
 
 // Webinar
-if (config.Elements.webinarForm)
-  config.Elements.webinarForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const userName = config.Elements.webinarFormInputName.value;
-    const userPhone = config.Elements.webinarFormInputPhone.value;
-    const userEmail = config.Elements.webinarFormInputEmail.value;
-    const userIsSubscribed = config.Elements.webinarFormCheck.checked;
-    webinarRegistration(userName, userPhone, userEmail, userIsSubscribed);
-  });
+// if (config.Elements.webinarForm)
+//   config.Elements.webinarForm.addEventListener('submit', function (e) {
+//     e.preventDefault();
+//     const userName = config.Elements.webinarFormInputName.value;
+//     const userPhone = config.Elements.webinarFormInputPhone.value;
+//     const userEmail = config.Elements.webinarFormInputEmail.value;
+//     const userIsSubscribed = config.Elements.webinarFormCheck.checked;
+//     webinarRegistration(userName, userPhone, userEmail, userIsSubscribed);
+//   });
 
 // ***** Animations *****
 
@@ -821,134 +888,154 @@ if (config.Elements.contactUsContainerFixed)
 if (config.Elements.contactUsExpandBtnContainer)
   animation.toggleContactUsExpand(config.Elements.contactUsExpandBtnContainer, config.Elements.footerCopyContainer);
 
-// Counter animation
-// Atlantis Aria 2
-if (config.Elements.aa2ProjectApartmentsNumber) animation.animateCounter(config.Elements.aa2ProjectApartmentsNumber, 159);
-if (config.Elements.aa2ProjectParkingSpotsNumber) animation.animateCounter(config.Elements.aa2ProjectParkingSpotsNumber, 174);
-// Atlantis Aria 3
-if (config.Elements.aa3ProjectBuildingsNumber) animation.animateCounter(config.Elements.aa3ProjectBuildingsNumber, 3);
-if (config.Elements.aa3ProjectFloorsNumber) animation.animateCounter(config.Elements.aa3ProjectFloorsNumber, 9);
-if (config.Elements.aa3ProjectApartmentsNumber) animation.animateCounter(config.Elements.aa3ProjectApartmentsNumber, 210);
-if (config.Elements.aa3ProjectParkingSpotsNumber) animation.animateCounter(config.Elements.aa3ProjectParkingSpotsNumber, 250);
-// Atlantis Euphoria
-if (config.Elements.aeProjectBuildingsNumber) animation.animateCounter(config.Elements.aeProjectBuildingsNumber, 6);
-if (config.Elements.aeProjectFloorsNumber) animation.animateCounter(config.Elements.aeProjectFloorsNumber, 9);
-if (config.Elements.aeProjectApartmentsNumber) animation.animateCounter(config.Elements.aeProjectApartmentsNumber, 292);
-if (config.Elements.aeProjectParkingSpotsNumber) animation.animateCounter(config.Elements.aeProjectParkingSpotsNumber, 320);
-if (config.Elements.aeProjectAreaNumber)
-  animation.animateCounter(
-    config.Elements.aeProjectAreaNumber,
-    27955,
-    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
-  );
-if (config.Elements.aeProjectGreenAreaNumber)
-  animation.animateCounter(
-    config.Elements.aeProjectGreenAreaNumber,
-    5200,
-    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
-  );
-// Atlantis Barcode
-if (config.Elements.abProjectBuildingsNumber) animation.animateCounter(config.Elements.abProjectBuildingsNumber, 2);
-if (config.Elements.abProjectFloorsNumber) animation.animateCounter(config.Elements.abProjectFloorsNumber, 8);
-if (config.Elements.abProjectApartmentsNumber) animation.animateCounter(config.Elements.abProjectApartmentsNumber, 93);
-if (config.Elements.abProjectParkingSpotsNumber) animation.animateCounter(config.Elements.abProjectParkingSpotsNumber, 106);
-if (config.Elements.abProjectAreaNumber)
-  animation.animateCounter(
-    config.Elements.abProjectAreaNumber,
-    9634,
-    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
-  );
-// Atlantis Barcode 2
-if (config.Elements.ab2ProjectBuildingsNumber) animation.animateCounter(config.Elements.ab2ProjectBuildingsNumber, 2);
-if (config.Elements.ab2ProjectApartmentsNumber) animation.animateCounter(config.Elements.ab2ProjectApartmentsNumber, 225);
-if (config.Elements.ab2ProjectParkingSpotsNumber) animation.animateCounter(config.Elements.ab2ProjectParkingSpotsNumber, 243);
-if (config.Elements.ab2ProjectAreaNumber)
-  animation.animateCounter(
-    config.Elements.ab2ProjectAreaNumber,
-    7000,
-    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
-  );
-// Atlas Azimuth
-if (config.Elements.azimuthProjectBuildingsNumber) animation.animateCounter(config.Elements.azimuthProjectBuildingsNumber, 12);
-if (config.Elements.azimuthProjectCommercialNumber) animation.animateCounter(config.Elements.azimuthProjectCommercialNumber, 6);
-if (config.Elements.azimuthProjectFloorsNumber) animation.animateCounter(config.Elements.azimuthProjectFloorsNumber, 10);
-if (config.Elements.azimuthProjectApartmentsNumber) animation.animateCounter(config.Elements.azimuthProjectApartmentsNumber, 2000);
-if (config.Elements.azimuthProjectParkingSpotsNumber) animation.animateCounter(config.Elements.azimuthProjectParkingSpotsNumber, 144);
-if (config.Elements.azimuthProjectAreaNumber)
-  animation.animateCounter(
-    config.Elements.azimuthProjectAreaNumber,
-    68000,
-    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
-  );
-// Villa Margarita
-if (config.Elements.villaMargaritaProjectBuildingsNumber) animation.animateCounter(config.Elements.villaMargaritaProjectBuildingsNumber, 1);
-if (config.Elements.villaMargaritaProjectFloorsNumber) animation.animateCounter(config.Elements.villaMargaritaProjectFloorsNumber, 4);
-if (config.Elements.villaMargaritaProjectApartmentsNumber) animation.animateCounter(config.Elements.villaMargaritaProjectApartmentsNumber, 72);
-// Mellia Florance
-if (config.Elements.melliaFloranceProjectBuildingsNumber) animation.animateCounter(config.Elements.melliaFloranceProjectBuildingsNumber, 1);
-if (config.Elements.melliaFloranceProjectFloorsNumber) animation.animateCounter(config.Elements.melliaFloranceProjectFloorsNumber, 5);
-if (config.Elements.melliaFloranceProjectApartmentsNumber) animation.animateCounter(config.Elements.melliaFloranceProjectApartmentsNumber, 29);
-// Mountain View Residence
-if (config.Elements.mountainResidenceProjectBuildingsNumber) animation.animateCounter(config.Elements.mountainResidenceProjectBuildingsNumber, 1);
-if (config.Elements.mountainResidenceProjectFloorsNumber) animation.animateCounter(config.Elements.mountainResidenceProjectFloorsNumber, 6);
-if (config.Elements.mountainResidenceProjectApartmentsNumber) animation.animateCounter(config.Elements.mountainResidenceProjectApartmentsNumber, 133);
-if (config.Elements.mountainResidenceProjectParkingSpotsNumber) animation.animateCounter(config.Elements.mountainResidenceProjectParkingSpotsNumber, 129);
-// Vitosha Mountain
-if (config.Elements.mountainViewProjectBuildingsNumber) animation.animateCounter(config.Elements.mountainViewProjectBuildingsNumber, 1);
-if (config.Elements.mountainViewProjectFloorsNumber) animation.animateCounter(config.Elements.mountainViewProjectFloorsNumber, 4);
-if (config.Elements.mountainViewProjectApartmentsNumber) animation.animateCounter(config.Elements.mountainViewProjectApartmentsNumber, 67);
-if (config.Elements.mountainViewProjectParkingSpotsNumber) animation.animateCounter(config.Elements.mountainViewProjectParkingSpotsNumber, 68);
-// Mountain View Boutique
-if (config.Elements.mountainBoutiqueProjectBuildingsNumber) animation.animateCounter(config.Elements.mountainBoutiqueProjectBuildingsNumber, 1);
-if (config.Elements.mountainBoutiqueProjectFloorsNumber) animation.animateCounter(config.Elements.mountainBoutiqueProjectFloorsNumber, 6);
-if (config.Elements.mountainBoutiqueProjectApartmentsNumber) animation.animateCounter(config.Elements.mountainBoutiqueProjectApartmentsNumber, 46);
-if (config.Elements.mountainBoutiqueProjectParkingSpotsNumber) animation.animateCounter(config.Elements.mountainBoutiqueProjectParkingSpotsNumber, 51);
-// Camelot
-if (config.Elements.camelotProjectPriceNumber)
-  animation.animateCounter(config.Elements.camelotProjectPriceNumber, new Intl.NumberFormat().format(2800000), '€');
-if (config.Elements.camelotProjectFloorsNumber) animation.animateCounter(config.Elements.camelotProjectFloorsNumber, 4);
-if (config.Elements.camelotProjectAssetsNumber) animation.animateCounter(config.Elements.camelotProjectAssetsNumber, 10);
-if (config.Elements.camelotProjectParkingSpotsNumber) animation.animateCounter(config.Elements.camelotProjectParkingSpotsNumber, 80);
-if (config.Elements.camelotProjectAreaNumber)
-  animation.animateCounter(
-    config.Elements.camelotProjectAreaNumber,
-    3390,
-    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
-  );
-if (config.Elements.camelotProjectBuiltAreaNumber)
-  animation.animateCounter(
-    config.Elements.camelotProjectBuiltAreaNumber,
-    6660,
-    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
-  );
-// Sofia B5
-if (config.Elements.sofiab5ProjectPriceNumber)
-  animation.animateCounter(config.Elements.sofiab5ProjectPriceNumber, new Intl.NumberFormat().format(2800), '€/\u{33A1}');
-if (config.Elements.sofiab5ProjectFloorsNumber) animation.animateCounter(config.Elements.sofiab5ProjectFloorsNumber, 3);
-if (config.Elements.sofiab5ProjectAssetsNumber) animation.animateCounter(config.Elements.sofiab5ProjectAssetsNumber, 3);
-if (config.Elements.sofiab5ProjectStoresNumber) animation.animateCounter(config.Elements.sofiab5ProjectStoresNumber, 2);
-if (config.Elements.sofiab5ProjectBuiltAreaNumber)
-  animation.animateCounter(
-    config.Elements.sofiab5ProjectBuiltAreaNumber,
-    267,
-    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
-  );
-// Samokov
-if (config.Elements.samokovProjectAreaNumber)
-  animation.animateCounter(
-    config.Elements.samokovProjectAreaNumber,
-    93000,
-    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
-  );
-// Pomorie
-if (config.Elements.pomorieProjectPriceNumber) animation.animateCounter(config.Elements.pomorieProjectPriceNumber, new Intl.NumberFormat().format(653350), '€');
-if (config.Elements.pomorieProjectFloorsNumber) animation.animateCounter(config.Elements.pomorieProjectFloorsNumber, 3);
-if (config.Elements.pomorieProjectBuiltAreaNumber)
-  animation.animateCounter(
-    config.Elements.pomorieProjectBuiltAreaNumber,
-    850,
-    JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}',
-  );
+// Counter Animations
+const PROJECT_COUNTERS = {
+  aa2: [
+    { element: config.Elements.aa2ProjectApartmentsNumber, value: 159, suffix: '' },
+    { element: config.Elements.aa2ProjectParkingSpotsNumber, value: 174, suffix: '' },
+  ],
+  aa3: [
+    { element: config.Elements.aa3ProjectBuildingsNumber, value: 3, suffix: '' },
+    { element: config.Elements.aa3ProjectFloorsNumber, value: 9, suffix: '' },
+    { element: config.Elements.aa3ProjectApartmentsNumber, value: 210, suffix: '' },
+    { element: config.Elements.aa3ProjectParkingSpotsNumber, value: 250, suffix: '' },
+  ],
+  ae: [
+    { element: config.Elements.aeProjectBuildingsNumber, value: 6, suffix: '' },
+    { element: config.Elements.aeProjectFloorsNumber, value: 9, suffix: '' },
+    { element: config.Elements.aeProjectApartmentsNumber, value: 292, suffix: '' },
+    { element: config.Elements.aeProjectParkingSpotsNumber, value: 320, suffix: '' },
+    { element: config.Elements.aeProjectAreaNumber, value: 27955, suffix: 'area' },
+    { element: config.Elements.aeProjectGreenAreaNumber, value: 5200, suffix: 'area' },
+  ],
+  ab: [
+    { element: config.Elements.abProjectBuildingsNumber, value: 2, suffix: '' },
+    { element: config.Elements.abProjectFloorsNumber, value: 8, suffix: '' },
+    { element: config.Elements.abProjectApartmentsNumber, value: 93, suffix: '' },
+    { element: config.Elements.abProjectParkingSpotsNumber, value: 106, suffix: '' },
+    { element: config.Elements.abProjectAreaNumber, value: 9634, suffix: 'area' },
+  ],
+  ab2: [
+    { element: config.Elements.ab2ProjectBuildingsNumber, value: 2, suffix: '' },
+    { element: config.Elements.ab2ProjectApartmentsNumber, value: 225, suffix: '' },
+    { element: config.Elements.ab2ProjectParkingSpotsNumber, value: 243, suffix: '' },
+    { element: config.Elements.ab2ProjectAreaNumber, value: 7000, suffix: 'area' },
+  ],
+  azimuth: [
+    { element: config.Elements.azimuthProjectBuildingsNumber, value: 12, suffix: '' },
+    { element: config.Elements.azimuthProjectCommercialNumber, value: 6, suffix: '' },
+    { element: config.Elements.azimuthProjectFloorsNumber, value: 10, suffix: '' },
+    { element: config.Elements.azimuthProjectApartmentsNumber, value: 2000, suffix: '' },
+    { element: config.Elements.azimuthProjectParkingSpotsNumber, value: 144, suffix: '' },
+    { element: config.Elements.azimuthProjectAreaNumber, value: 68000, suffix: 'area' },
+  ],
+  villaMargarita: [
+    { element: config.Elements.villaMargaritaProjectBuildingsNumber, value: 1, suffix: '' },
+    { element: config.Elements.villaMargaritaProjectFloorsNumber, value: 4, suffix: '' },
+    { element: config.Elements.villaMargaritaProjectApartmentsNumber, value: 72, suffix: '' },
+  ],
+  melliaFlorance: [
+    { element: config.Elements.melliaFloranceProjectBuildingsNumber, value: 1, suffix: '' },
+    { element: config.Elements.melliaFloranceProjectFloorsNumber, value: 5, suffix: '' },
+    { element: config.Elements.melliaFloranceProjectApartmentsNumber, value: 29, suffix: '' },
+  ],
+  mountainResidence: [
+    { element: config.Elements.mountainResidenceProjectBuildingsNumber, value: 1, suffix: '' },
+    { element: config.Elements.mountainResidenceProjectFloorsNumber, value: 6, suffix: '' },
+    { element: config.Elements.mountainResidenceProjectApartmentsNumber, value: 133, suffix: '' },
+    { element: config.Elements.mountainResidenceProjectParkingSpotsNumber, value: 129, suffix: '' },
+  ],
+  mountainView: [
+    { element: config.Elements.mountainViewProjectBuildingsNumber, value: 1, suffix: '' },
+    { element: config.Elements.mountainViewProjectFloorsNumber, value: 4, suffix: '' },
+    { element: config.Elements.mountainViewProjectApartmentsNumber, value: 67, suffix: '' },
+    { element: config.Elements.mountainViewProjectParkingSpotsNumber, value: 68, suffix: '' },
+  ],
+  mountainBoutique: [
+    { element: config.Elements.mountainBoutiqueProjectBuildingsNumber, value: 1, suffix: '' },
+    { element: config.Elements.mountainBoutiqueProjectFloorsNumber, value: 6, suffix: '' },
+    { element: config.Elements.mountainBoutiqueProjectApartmentsNumber, value: 46, suffix: '' },
+    { element: config.Elements.mountainBoutiqueProjectParkingSpotsNumber, value: 51, suffix: '' },
+  ],
+  fortNoksSuites: [
+    { element: config.Elements.fortNoksSuitesProjectBuildingsNumber, value: 2, suffix: '' },
+    { element: config.Elements.fortNoksSuitesProjectFloorsNumber, value: 5, suffix: '' },
+    { element: config.Elements.fortNoksSuitesProjectApartmentsNumber, value: 54, suffix: '' },
+    { element: config.Elements.fortNoksSuitesProjectParkingSpotsNumber, value: 10, suffix: '' },
+  ],
+  greenFortSuites: [
+    { element: config.Elements.greenFortSuitesProjectBuildingsNumber, value: 7, suffix: '' },
+    { element: config.Elements.greenFortSuitesProjectFloorsNumber, value: 6, suffix: '' },
+    { element: config.Elements.greenFortSuitesProjectApartmentsNumber, value: 47, suffix: '' },
+    { element: config.Elements.greenFortSuitesProjectParkingSpotsNumber, value: 14, suffix: '' },
+  ],
+  premierFortBeach: [
+    { element: config.Elements.premierFortBeachProjectBuildingsNumber, value: 6, suffix: '' },
+    { element: config.Elements.premierFortBeachProjectFloorsNumber, value: 6, suffix: '' },
+    { element: config.Elements.premierFortBeachProjectApartmentsNumber, value: 282, suffix: '' },
+  ],
+  prestigeFortBeach: [
+    { element: config.Elements.prestigeFortBeachProjectBuildingsNumber, value: 3, suffix: '' },
+    { element: config.Elements.prestigeFortBeachProjectFloorsNumber, value: 5, suffix: '' },
+    { element: config.Elements.prestigeFortBeachProjectApartmentsNumber, value: 13, suffix: '' },
+  ],
+  nessebarFortResidence: [
+    { element: config.Elements.nessebarFortResidenceProjectBuildingsNumber, value: 1, suffix: '' },
+    { element: config.Elements.nessebarFortResidenceProjectFloorsNumber, value: 4, suffix: '' },
+    { element: config.Elements.nessebarFortResidenceProjectApartmentsNumber, value: 84, suffix: '' },
+  ],
+  camelot: [
+    { element: config.Elements.camelotProjectPriceNumber, value: 2800000, suffix: '€', format: true },
+    { element: config.Elements.camelotProjectFloorsNumber, value: 4, suffix: '' },
+    { element: config.Elements.camelotProjectAssetsNumber, value: 10, suffix: '' },
+    { element: config.Elements.camelotProjectParkingSpotsNumber, value: 80, suffix: '' },
+    { element: config.Elements.camelotProjectAreaNumber, value: 3390, suffix: 'area' },
+    { element: config.Elements.camelotProjectBuiltAreaNumber, value: 6660, suffix: 'area' },
+  ],
+  sofiab5: [
+    { element: config.Elements.sofiab5ProjectPriceNumber, value: 2800, suffix: '€/\u{33A1}', format: true },
+    { element: config.Elements.sofiab5ProjectFloorsNumber, value: 3, suffix: '' },
+    { element: config.Elements.sofiab5ProjectAssetsNumber, value: 3, suffix: '' },
+    { element: config.Elements.sofiab5ProjectStoresNumber, value: 2, suffix: '' },
+    { element: config.Elements.sofiab5ProjectBuiltAreaNumber, value: 267, suffix: 'area' },
+  ],
+  samokov: [{ element: config.Elements.samokovProjectAreaNumber, value: 93000, suffix: 'area' }],
+  pomorie: [
+    { element: config.Elements.pomorieProjectPriceNumber, value: 653350, suffix: '€', format: true },
+    { element: config.Elements.pomorieProjectFloorsNumber, value: 3, suffix: '' },
+    { element: config.Elements.pomorieProjectBuiltAreaNumber, value: 850, suffix: 'area' },
+  ],
+};
+
+const getAreaSuffix = () => {
+  const lang = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) || config.DEFAULT_LANGUAGE;
+  return lang === config.DEFAULT_LANGUAGE ? 'מ"ר' : '\u{33A1}';
+};
+
+const animateCounter = ({ element, value, suffix, format }) => {
+  if (!element) return;
+
+  let displayValue = value;
+  let displaySuffix = suffix;
+
+  if (format) {
+    displayValue = new Intl.NumberFormat().format(value);
+  } else if (suffix === 'area') {
+    displaySuffix = getAreaSuffix();
+  }
+
+  animation.animateCounter(element, displayValue, displaySuffix);
+};
+
+const setupCounterAnimations = () => {
+  Object.values(PROJECT_COUNTERS).forEach((project) => {
+    project.forEach(animateCounter);
+  });
+};
+
+// Initialize
+setupCounterAnimations();
+
 // Fade in animation
 if (config.Elements.hotAssetsContainer || config.Elements.projectAssetsContainer) {
   animation.animateCardsFadeIn(config.Elements.assetCards);

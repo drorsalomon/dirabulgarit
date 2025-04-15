@@ -1,0 +1,172 @@
+extends ../base
+
+block head
+    title Fort Noks Premier Suites
+    meta(name="description" content='דירות יוקרה על קו החוף של סווטי ולאס! פרויקט Fort Noks Premier Suites מציע דירות מעוצבות עם נוף לים, חוף במרחק הליכה, בריכות, מגלשות מים, ריהוט מלא ותנאי תשלום נוחים. אידיאלי למשפחות, מגורים והשקעה.')
+    meta(name="robots" content="index, follow")
+    link(rel="canonical" href="https://www.dirabulgarit.com/project/fort-noks-premier-suites")
+    link(rel="alternate" href="https://www.dirabulgarit.com/en/project/fort-noks-premier-suites" hreflang="en")
+    link(rel="alternate" href="https://www.dirabulgarit.com/ru/project/fort-noks-premier-suites" hreflang="ru")
+    link(rel="alternate" href="https://www.dirabulgarit.com/project/fort-noks-premier-suites" hreflang="he")
+
+    meta(property="og:title" content="Fort Noks Premier Suites")
+    meta(property="og:description" content='דירות יוקרה על קו החוף של סווטי ולאס! פרויקט Fort Noks Premier Suites מציע דירות מעוצבות עם נוף לים, חוף במרחק הליכה, בריכות, מגלשות מים, ריהוט מלא ותנאי תשלום נוחים. אידיאלי למשפחות, מגורים והשקעה.')
+    meta(property="og:image" content="https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/fort-noks-premier-suits/fort-noks-premier-suits1744278279030-fort-noks-premier-suits-3.webp")
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../_headLinksScripts
+
+block content 
+
+    .container-fluid.project-main-image-container(role="img" aria-labelledby="fortNoksSuitesMainImageDescription")
+        span.visually-hidden(id="fortNoksSuitesMainImageDescription") תמונה של בנייני המגורים בפרויקט Fort Noks Premier Suites
+        .row.project-main-image-row
+            .col.project-main-image-col.project-main-image-col-fort-noks-suites  
+                h1.project-main-image-headline.project-main-image-headline-fort-noks-suites Fort Noks Premier Suites           
+    
+    .container-fluid.project-gallery-container
+        .row.project-gallery-headline-row.text-center.mx-2
+            .col-12.project-gallery-headline-col.p-0    
+                h2.project-gallery-headline גלריה
+        .row.project-gallery-row.text-center.mx-2
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/fort-noks-premier-suits/fort-noks-premier-suits1744278278973-fort-noks-premier-suits-1.webp' alt='תמונה של הפרויקט Fort Noks Premier Suites' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/fort-noks-premier-suits/fort-noks-premier-suits1744278279042-fort-noks-premier-suits-4.webp' alt='תמונה של הפרויקט Fort Noks Premier Suites' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/fort-noks-premier-suits/fort-noks-premier-suits1744278279052-fort-noks-premier-suits-5.webp' alt='תמונה של הפרויקט Fort Noks Premier Suites' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/fort-noks-premier-suits/fort-noks-premier-suits1744278279060-fort-noks-premier-suits-6.webp' alt='תמונה של הפרויקט Fort Noks Premier Suites' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/fort-noks-premier-suits/fort-noks-premier-suits1744278279064-fort-noks-premier-suits-7.webp' alt='תמונה של הפרויקט Fort Noks Premier Suites' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/fort-noks-premier-suits/fort-noks-premier-suits1744278279066-fort-noks-premier-suits-8.webp' alt='תמונה של הפרויקט Fort Noks Premier Suites' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+
+    #projectModal.modal.fade.asset-gallery-modal.text-center(tabindex='-1' aria-labelledby='projectModalLabel' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered
+            .asset-gallery-modal-content.modal-content
+                .row.d-flex
+                    .col-6.align-content-center
+                        div.text-start.px-4
+                            div.asset-gallery-img-text Fort Noks Premier Suites
+                    .col-6
+                        div.text-end.p-3
+                            button.btn-close.asset-gallery-modal-close-btn.p-2.my-auto(type='button' data-bs-dismiss='modal' aria-label='Close')
+                #projectCarousel.carousel.slide(data-bs-touch='true' data-bs-interval='30000' data-bs-ride='carousel')
+                    .carousel-inner.asset-modal-carousel-inner
+                        .carousel-item.asset-gallery-carousel-item.align-content-center.active
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/fort-noks-premier-suits/fort-noks-premier-suits1744278278973-fort-noks-premier-suits-1.webp' alt='תמונה של הפרויקט Fort Noks Premier Suites') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/fort-noks-premier-suits/fort-noks-premier-suits1744278279042-fort-noks-premier-suits-4.webp' alt='תמונה של הפרויקט Fort Noks Premier Suites') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/fort-noks-premier-suits/fort-noks-premier-suits1744278279052-fort-noks-premier-suits-5.webp' alt='תמונה של הפרויקט Fort Noks Premier Suites') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/fort-noks-premier-suits/fort-noks-premier-suits1744278279060-fort-noks-premier-suits-6.webp' alt='תמונה של הפרויקט Fort Noks Premier Suites') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/fort-noks-premier-suits/fort-noks-premier-suits1744278279064-fort-noks-premier-suits-7.webp' alt='תמונה של הפרויקט Fort Noks Premier Suites') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/fort-noks-premier-suits/fort-noks-premier-suits1744278279066-fort-noks-premier-suits-8.webp' alt='תמונה של הפרויקט Fort Noks Premier Suites') 
+                    button.carousel-control-prev(type='button' data-bs-target='#projectCarousel' data-bs-slide='prev')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-prev-icon.asset-gallery-carousel-prev-icon(aria-hidden='true')
+                    button.carousel-control-next(type='button' data-bs-target='#projectCarousel' data-bs-slide='next')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-next-icon.asset-gallery-carousel-next-icon(aria-hidden='true')        
+    
+    .container-fluid.project-numbers-container
+        .row.project-numbers-row.text-end.justify-content-center.mx-5.flex-md-row-reverse
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-buildings-number.project-numbers-buildings-number-fort-noks-suites          
+                div.project-numbers-text בניינים        
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-floors-number.project-numbers-floors-number-fort-noks-suites          
+                div.project-numbers-text קומות        
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-apartments-number.project-numbers-apartments-number-fort-noks-suites         
+                div.project-numbers-text דירות
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-parking-spots-number.project-numbers-parking-spots-number-fort-noks-suites         
+                div.project-numbers-text חניות
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center   
+                div.project-numbers-end-number דצמבר 2026
+                div.project-numbers-text סיום בנייה
+    
+    .container-fluid.project-details-container
+        .row.project-details-row.text-end.mx-5.justify-content-center
+            .col-12.project-details-headline-col.p-0.text-center
+                h2.project-details-headline Fort Noks Premier Suites
+            .col-10.project-details-headline-col.p-0.text-end
+                div.project-details-text(dir='rtl') מי לא ייהנה מחיי קיץ בלתי נשכחים ליד הים?
+                div.project-details-text(dir='rtl') פרויקט Fort Noks Premier Suites מציג מגורים יוקרתיים על שפת הים, דירות סטודיו מרווחות, דירות 1, 2 חדרי שינה ופנטהאוזים.
+                div.project-details-text(dir='rtl') בנוסף לחללי הפנים המודרניים שלה פרויקט, Fort Noks Premier Suites מציע גישה לטריטוריה המסודרת להפליא של מלון הדירות פרמייר פורט ביץ'.
+                h3.project-details-sub-headline(dir='rtl') מיקום
+                div.project-details-text(dir='rtl') מיקומו המצוין של Fort Noks Premier Suites, המשקיף על הים השחור ועל המפרץ הציורי של סאני ביץ' בכל שעה ביום, מציע את השמחה של עדות לשקיעות מדהימות!
+                div.project-details-text(dir='rtl') בין אם אתה שחיין, גולש גוף או סתם משפחה שאוהבת את החול העדין והרך, המיקום של Fort Noks Premier Suites הוא כזה שהחוף נמצא ממש בפתח ביתך. זה רק 100 מטרים משם!
+                div.project-details-text(dir='rtl') פרויקט Fort Noks Premier Suites ממוקם בחלק המערבי של סווטי ולאס, על חוף מסוגנן. הוא נמצא במרחק הליכה מכל החופים היפים האחרים של סווטי ולאס ומרינת דינבי, כמו גם חמש דקות נסיעה מטיילת חוף הים של סאני ביץ'. בתי קפה על החוף, מסעדות נעימות, מועדוני לילה, ברים וחיי הלילה על החוף נמצאים במרחק של דקות נסיעה בלבד ברכב.
+                div.project-detail-img-container.d-flex.justify-content-center   
+                    img.project-details-img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/fort-noks-premier-suits/fort-noks-premier-suits1744278279071-fort-noks-premier-suits-building-plan.webp' alt='תרשים הבניינים של Fort Noks Premier Suites')
+                div.project-details-text.text-center <i>תרשים הבניינים של Fort Noks Premier Suites</i>
+                h3.project-details-sub-headline(dir='rtl') מלון Premier Fort Aparthotel
+                div.project-details-text(dir='rtl') Fort Noks Premier Suites הוא חלק ממלון הדירות פרמייר פורט ביץ', מלון הדירות הטוב ביותר למשפחות עם ילדים בבולגריה! אתר הנופש שלנו הוא גן עדן למשפחות, המציע שתי בריכות מים מתוקים, בריכת ילדים ומגלשות מים מרגשות. תוכנית הבידור היומית של מלון פרמייר פורט ביץ' עומדת לרשותכם.
+                h3.project-details-sub-headline(dir='rtl') רק להיכנס
+                div.project-details-text(dir='rtl') כל הדירות מרוהטות במלואן, מוכנות לחלוטין למגורים ולהשכרה בהתאם לסטנדרטים ולדרישות הגבוהות ביותר.
+                div.project-details-text(dir='rtl') עבודות הגמר בכל הדירות בוצעו תוך שימוש בחומרים איכותיים בלבד.
+                div.project-details-text(dir='rtl') דירות Fort Noks Premier Suites מיועדות למגורים לאורך כל השנה.
+                h3.project-details-sub-headline(dir='rtl') הזדמנות נדירה
+                div.project-details-text(dir='rtl') Fort Noks Premier Suites היא הזדמנות נדירה ומיוחדת: דירות נעימות, מסוגננות, יוקרתיות במיקום מעולה, קרוב למרכז סווטי ולאס ורק חמש דקות נסיעה ברכב ממרכז חיי הלילה של סאני ביץ'. בין אם אתם קונים להשקעה, בית קבע או מגורים עונתיים, זהו השילוב המושלם של שלושה אלמנטים מרכזיים: מיקום מעולה, בנייה איכותית וחללי פנים מעוצבים בקפידה.
+                div.project-details-text(dir='rtl') היה אחד הדיירים הראשונים של דירות Fort Noks Premier Suites החדשות שלנו ב-Premier Fort Aparthotel!        
+                h3.project-details-sub-headline(dir='rtl') תוכנית תשלומים
+                div.project-details-text(dir='rtl')  10% מהמחיר שישולם בחתימת החוזה המקדמי.
+                div.project-details-text(dir='rtl')  10% מהמחיר לתשלום לאחר 3 חודשים.
+                div.project-details-text(dir='rtl')  את 80% הנותרים ניתן לשלם באמצעות תוכנית תשלומים דחויים של Fort Noks Ltd:
+                div.project-details-text(dir='rtl')   &nbsp<strong>●</strong> עד 1 בינואר 2027 תוכנית תשלומים נדחים ללא ריבית.
+                div.project-details-text(dir='rtl')   &nbsp<strong>●</strong> עד 1 בינואר 2032 דחוי תשלום עם ריבית שנתית של 3%.
+                div.project-details-text(dir='rtl')   &nbsp<strong>●</strong> עד 10 שנים דחיית תשלום בריבית שנתית של 5%.
+                div.project-details-text(dir='rtl')   &nbsp<strong>●</strong> במקרה של 50% תשלום ראשון בחתימה על החוזה המקדים – 3% הנחה ממחיר הרכישה.
+                h3.project-details-sub-headline(dir='rtl') על קבוצת Fort Noks Ltd
+                div.project-details-text(dir='rtl') Fort Noks Ltd הוקמה בשנת 1995. במהלך השנים הפכה לחברת הבנייה והניהול הגדולה ביותר באזור סאני ביץ'. המשימה שלנו היא להתמקד במתן מענה לצרכים של לקוחותינו על ידי הצעת מגוון רחב של דירות נופש, הממוקמות בכפרי נופש על חוף הים. אנו מחויבים להקשיב ולהבין את דרישות הלקוח שלנו, לספק צוות מקצועי ומנוסה.
+                div.project-details-text(dir='rtl') המתחמים שלנו ממוקמים באתרי הנופש הטובים ביותר על חוף הים של בולגריה: Elenite, Saint Vlas (Sveti Vlas), Sunny Beach, Ravda, במרחק של 30-40 קילומטרים מנמל התעופה של בורגס.
+                div.project-details-text(dir='rtl') רכישה מאיתנו תעניק לך לא רק השקעת נדל"ן, אלא את שירות האחזקה והניהול הטובים ביותר באזור. רוב המתחמים שלנו הם קו ראשון עם גישה מוגבלת עם כרטיסים מגנטיים אישיים, אבטחה 24 שעות וניטור וידאו. לא יהיה על מה לחשוב מלבד החופשה שלך. התשתית של המתחמים שלנו משתפרת מדי שנה, הודות לקשר התמידי בינינו לבין לקוחותינו.
+
+    .container-fluid.project-amenities-container
+        .row.project-amenities-headline-row.text-center.mx-5
+            .col-12.project-amenities-headline-col.p-0
+                h2.project-amenities-headline שירותים בפרויקט
+        .row.project-amenities-row.text-end.mx-5.justify-content-end 
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/pool-swimming-pool-svgrepo-com.svg' alt='אייקון של בריכת שחיה')
+                div.project-amenities-text(dir='rtl') בריכות שחייה
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/beach-umbrella-svgrepo-com.svg' alt='אייקון של חוף ים')
+                div.project-amenities-text חוף ים 
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/furniture-project.svg' alt='אייקון של ריהוט')
+                div.project-amenities-text דירות מרוהטות
+    
+    .container-fluid.project-map-container
+        .row.project-map-row.text-center.mx-2.justify-content-center 
+            .col-12.project-map-healine-col
+                h2.project-map-headline מיקום
+            .col-12.col-md-10.project-map-col
+                div.project-map(id='map' data-long=23.3402709779371 data-lat=42.641954031351645 data-title='Fort Noks Premier Suites') 
+
+    .container-fluid.project-video-container
+        .row.asset-video-row.mx-3.justify-content-center 
+            .col-12.col-md-10.asset-video-col.text-center(role="region" aria-labelledby="assetVideoDescription")
+                iframe(src='https://www.youtube.com/embed/UXDiYU7LqmA?si=oVP-4JU5MgKiCwli' frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen).asset-video                    
+            span.visually-hidden(id="assetVideoDescription") וידאו המציג את פרויקט Fort Noks Premier Suites                   
+    
+    .container-fluid.project-assets-container
+        .row.asset-related-assets-row.justify-content-center.mx-5.text-center
+            .col-12.project-assets-headline-col
+                h2.project-assets-headline נכסים זמינים בפרויקט
+            each asset in projectAssets
+                include ../_assetsCards
+        .row.mobile-asset-related-assets-row.justify-content-center.mx-1.text-center
+            .col-12.project-assets-headline-col
+                h2.project-assets-headline נכסים זמינים בפרויקט
+            each asset in projectAssets
+                include ../_mobileAssetsCards 
+
+    include ../_contactUsFixed  
+    include ../_contactUsFixedMobile

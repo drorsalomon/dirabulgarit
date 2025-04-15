@@ -1,0 +1,160 @@
+extends ../base
+
+block head
+    title Green Fort Suites
+    meta(name="description" content="Green Fort Suites – новый и самый престижный жилой комплекс Fort Noks на побережье Солнечного берега. Апартаменты с видом на море, 1–3 комнаты, бассейн, парковка, охрана 24/7. Идеально для жизни, отдыха или инвестиций.")
+    meta(name="robots" content="index, follow")
+    link(rel="canonical" href="https://www.dirabulgarit.com/ru/project/green-fort-suites")
+    link(rel="alternate" href="https://www.dirabulgarit.com/en/project/green-fort-suites" hreflang="en")
+    link(rel="alternate" href="https://www.dirabulgarit.com/project/green-fort-suites" hreflang="he")
+    link(rel="alternate" href="https://www.dirabulgarit.com/ru/project/green-fort-suites" hreflang="ru")
+
+    meta(property="og:title" content="Green Fort Suites")
+    meta(property="og:description" content="Green Fort Suites – новый и самый престижный жилой комплекс Fort Noks на побережье Солнечного берега. Апартаменты с видом на море, 1–3 комнаты, бассейн, парковка, охрана 24/7. Идеально для жизни, отдыха или инвестиций.")
+    meta(property="og:image" content="https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/green-fort-suites/1744367105494-green-fort-suites-6.webp")
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../../he/_headLinksScripts
+
+block content 
+
+    .container-fluid.project-main-image-container(role="img" aria-labelledby="greenFortSuitesMainImageDescription")
+        span.visually-hidden(id="greenFortSuitesMainImageDescription") Изображение зданий проекта Green Fort Suites
+        .row.project-main-image-row
+            .col.project-main-image-col.project-main-image-col-green-fort-suites
+                h1.project-main-image-headline.project-main-image-headline-green-fort-suites Green Fort Suites          
+    
+    .container-fluid.project-gallery-container
+        .row.project-gallery-headline-row.text-center.mx-2
+            .col-12.project-gallery-headline-col.p-0    
+                h2.project-gallery-headline Галерея
+        .row.project-gallery-row.text-center.mx-2
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/green-fort-suites/1744367105484-green-fort-suites-4.webp' alt='Изображение проекта Green Fort Suites' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/green-fort-suites/1744367105489-green-fort-suites-5.webp' alt='Изображение проекта Green Fort Suites' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/green-fort-suites/1744367105494-green-fort-suites-6.webp' alt='Изображение проекта Green Fort Suites' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/green-fort-suites/1744367105497-green-fort-suites-7.webp' alt='Изображение проекта Green Fort Suites' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/green-fort-suites/1744367105452-green-fort-suites-2.webp' alt='Изображение проекта Green Fort Suites' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/green-fort-suites/1744367105480-green-fort-suites-3.webp' alt='Изображение проекта Green Fort Suites' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+
+    #projectModal.modal.fade.asset-gallery-modal.text-center(tabindex='-1' aria-labelledby='projectModalLabel' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered
+            .asset-gallery-modal-content.modal-content
+                .row.d-flex
+                    .col-6.align-content-center
+                        div.text-start.px-4
+                            div.asset-gallery-img-text Green Fort Suites
+                    .col-6
+                        div.text-end.p-3
+                            button.btn-close.asset-gallery-modal-close-btn.p-2.my-auto(type='button' data-bs-dismiss='modal' aria-label='Close')
+                #projectCarousel.carousel.slide(data-bs-touch='true' data-bs-interval='30000' data-bs-ride='carousel')
+                    .carousel-inner.asset-modal-carousel-inner
+                        .carousel-item.asset-gallery-carousel-item.align-content-center.active
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/green-fort-suites/1744367105484-green-fort-suites-4.webp' alt='Изображение проекта Green Fort Suites') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/green-fort-suites/1744367105489-green-fort-suites-5.webp' alt='Изображение проекта Green Fort Suites') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/green-fort-suites/1744367105494-green-fort-suites-6.webp' alt='Изображение проекта Green Fort Suites') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/green-fort-suites/1744367105497-green-fort-suites-7.webp' alt='Изображение проекта Green Fort Suites') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/green-fort-suites/1744367105452-green-fort-suites-2.webp' alt='Изображение проекта Green Fort Suites') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/green-fort-suites/1744367105480-green-fort-suites-3.webp' alt='Изображение проекта Green Fort Suites') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/green-fort-suites/1744367105444-green-fort-suites-1.webp' alt='Изображение проекта Green Fort Suites') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/green-fort-suites/1744367105503-green-fort-suites-construction.webp' alt='Изображение проекта Green Fort Suites') 
+                    button.carousel-control-prev(type='button' data-bs-target='#projectCarousel' data-bs-slide='prev')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-prev-icon.asset-gallery-carousel-prev-icon(aria-hidden='true')
+                    button.carousel-control-next(type='button' data-bs-target='#projectCarousel' data-bs-slide='next')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-next-icon.asset-gallery-carousel-next-icon(aria-hidden='true')        
+    
+    .container-fluid.project-numbers-container
+        .row.project-numbers-row.text-end.justify-content-center.mx-5
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-buildings-number.project-numbers-buildings-number-green-fort-suites          
+                div.project-numbers-text Здания        
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-floors-number.project-numbers-floors-number-green-fort-suites          
+                div.project-numbers-text Этажи        
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-apartments-number.project-numbers-apartments-number-green-fort-suites         
+                div.project-numbers-text Квартиры
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-parking-spots-number.project-numbers-parking-spots-number-green-fort-suites         
+                div.project-numbers-text Парковочные места
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center   
+                div.project-numbers-end-number декабрь 2025
+                div.project-numbers-text Окончание строительства
+    
+    .container-fluid.project-details-container
+        .row.project-details-row.text-end.mx-5.justify-content-center
+            .col-12.project-details-headline-col.p-0.text-center
+                h2.project-details-headline Green Fort Suites
+            .col-10.project-details-headline-col.p-0.text-start
+                div.project-details-text Green Fort Suites – новейший жилой комплекс застройщика Форт Нокс. Расположение объективно лучшее на всем Черноморском побережье Болгарии. Элитный квартал Солнечного берега – „Зора“ (Рассвет).
+                h3.project-details-sub-headline Расположение
+                div.project-details-text Прекрасные апартаменты в центре Болгарской Ривьеры – вся бухта курорта Солнечный Берег перед ВамиОт Елените , к пляжу Робинзон, затем к городу Святой Влас и курорту Солнечный Берег, сливающемся с жемчужиной побережья – городом-музеем Несебар.
+                div.project-details-text Гарантированный вид на море – местность Зора на небольшом возвышении. Подножие горного массива Стара Планина – воздух самого большого горного массива Болгарии лечит и награждает долголетием. Море ласково шумит буквально у вас под ногами. Прекрасная пляжная полоса в 1-2 минутах ходьбы. Песчаные пляжи от 50 метров шириной и больше – можно прогуляться по песчаному берегу до старого города Несебар. Неподалеку – яхт-порт Марина Диневи, в непосредственной близости – рестораны, супермаркеты, аптеки, вся инфраструктура чудесного городка Святой Влас.
+                div.project-detail-img-container.d-flex.justify-content-center   
+                    img.project-details-img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/green-fort-suites/1744367105500-green-fort-suites-building-plan.webp' alt='Планы постройки Green Fort Suites')
+                div.project-details-text.text-center <i>Планы строительства Green Fort Suites</i>
+                h3.project-details-sub-headline Особенности проекта
+                div.project-details-text В десяти минутах езды – шумные дискотеки Солнечного берега и яхтенной марины. На территории есть гостевой паркинг, в том числе предусмотрены паркоместа, которые можно приобрести в собственность, надземные и подземные. Апартаменты и сьюты различной площади: однокомнатные площадью 40-60 метров, двухкомнатные 55 – 100 метров, трехкомнатные (апартаменты с двумя спальнями, большинство из которых – с незабываемым видом на море) – площадью от 80 до 110 квадратных метров. Уютный бассейн в центре просторного двора, детская площадка, большая площадь озеленения – цветники, газоны.
+                div.project-details-text В распоряжении собственников и гостей комплекса офис-рецепция и круглосуточная живая охрана. Ищете квартиру для постоянного проживания, для семейного отдыха с детьми, подбираете квартиру в Болгарии для инвестирования или апартамент под сдачу в аренду? Грин Форт Сьюты – лучший жилой комплекс на черноморском побережье Болгарии 2025 года!
+                h3.project-details-sub-headline План оплаты
+                div.project-details-text Първа вноска 10 % от продажната цена, платима при подписване на предварителен договор с Форт Нокс ООД; В срок до 3 месеца се плаща втора 10% вноска.
+                div.project-details-text Останалите 80% могат да бъдат платени с тримесечни вноски:
+                div.project-details-text &nbsp<strong>●</strong> в срок до 1 януари 2027 – плащане БЕЗ ОСКЪПЯВАНЕ!
+                div.project-details-text &nbsp<strong>●</strong> в срок до 1 януари 2032-  разсрочено плащане с 3% годишна лихва. 
+                div.project-details-text &nbsp<strong>●</strong> в срок до 10 години от подписването на договора – разсрочено плащане с 5% годишна лихва.
+                div.project-details-text &nbsp<strong>●</strong> В случай на плащане на вноска в размер над 50% при подписване на Предварителен договор 3% отстъпка от продажната цена.
+                h3.project-details-sub-headline О компании Fort Noks Ltd.
+                div.project-details-text Историята на Форт Нокс ООД започва през 1995 г. Дружеството е отговорен и надежден партньор. Като една от най-големите строителни и управляващи компании в България, нашата мисия е да се съсредоточим върху задоволяването на нуждите на нашите клиенти, предлагайки широка гама от апартаменти, разположени в крайбрежни ваканционни селища.
+                div.project-details-text Нашите апартаменти са разположени на брега на морето. Курортите Елените, Свети Влас, Слънчев бряг, Равда са идеални места за лятна почивка (близо до древния град Несебър, на 35-40 км от летище Бургас, на 90 км от летище Варна, водните паркове в Слънчев бряг, Елените, Равда, Несебър – на няколко минути път с кола). Според потребителите на tripadvisor и booking жилищните комплекси на Форт Нокс са най-добрите на българското черноморско крайбрежие, с най-високи оценки и отлични отзиви на гости.
+                div.project-details-text Повечето от ваканционните комплекси са на първа линия, в близост до морето, с контролиран достъп, денонощна охрана и видео наблюдение. Вашата почивка е всичко, за което да мислите – за останалото се грижим ние. Инфраструктурата на комплексите се подобрява всяка година поради постоянния контакт между нас и клиентите ни.
+
+    .container-fluid.project-amenities-container
+        .row.project-amenities-headline-row.text-center.mx-5
+            .col-12.project-amenities-headline-col.p-0
+                h2.project-amenities-headline Удобства
+        .row.project-amenities-row.text-end.mx-5.justify-content-start 
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/pool-swimming-pool-svgrepo-com.svg' alt='Значок бассейна')
+                div.project-amenities-text(dir='rtl') Бассейны
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/beach-umbrella-svgrepo-com.svg' alt='Значок пляжа')
+                div.project-amenities-text Пляж
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/playground-project-icon.svg' alt='Значок детской площадки')
+                div.project-amenities-text Детская площадка           
+    
+    .container-fluid.project-map-container
+        .row.project-map-row.text-center.mx-2.justify-content-center 
+            .col-12.project-map-headline-col
+                h2.project-map-headline Расположение
+            .col-12.col-md-10.project-map-col
+                div.project-map(id='map' data-long=27.732101 data-lat=42.711554 data-title='Green Fort Suites') 
+
+    .container-fluid.project-assets-container
+        .row.asset-related-assets-row.justify-content-center.mx-5.text-center
+            .col-12.project-assets-headline-col
+                h2.project-assets-headline Доступные объекты недвижимости в проекте
+            each asset in projectAssets
+                include ../_assetsCards
+        .row.mobile-asset-related-assets-row.justify-content-center.mx-1.text-center
+            .col-12.project-assets-headline-col
+                h2.project-assets-headline Доступные объекты недвижимости в проекте
+            each asset in projectAssets
+                include ../_mobileAssetsCards 
+
+    include ../_contactUsFixed  
+    include ../_contactUsFixedMobile 

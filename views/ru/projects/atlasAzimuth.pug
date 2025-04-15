@@ -1,0 +1,222 @@
+extends ../base
+
+block head
+    title Atlas Azimuth
+    meta(name="description" content="Discover the Atlas Azimuth project in the heart of Burgas, Bulgaria. Modern apartments with premium amenities, including a private kindergarten, gym, tennis courts, and an amphitheater. Ideal for families and professionals seeking quality living in a prime location.")
+    meta(name="robots" content="index, follow")
+    link(rel="canonical" href="https://www.dirabulgarit.com/en/project/atlas-azimuth")
+    link(rel="alternate" href="https://www.dirabulgarit.com/en/project/atlas-azimuth" hreflang="en")
+    link(rel="alternate" href="https://www.dirabulgarit.com/project/atlas-azimuth" hreflang="he")
+
+    meta(property="og:title" content="Atlas Azimuth")
+    meta(property="og:description" content="Discover the Atlas Azimuth project in the heart of Burgas, Bulgaria. Modern apartments with premium amenities, including a private kindergarten, gym, tennis courts, and an amphitheater. Ideal for families and professionals seeking quality living in a prime location.")
+    meta(property="og:image" content="https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412992-azimuth-project-10.webp")
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../../he/_headLinksScripts
+
+block content 
+
+    .container-fluid.project-main-image-container(role="img" aria-labelledby="azimuthMainImageDescription")
+        span.visually-hidden(id="azimuthMainImageDescription") An image of the Atlas Azimuth project buildings
+        .row.project-main-image-row
+            .col.project-main-image-col.project-main-image-col-atlas-azimuth 
+                h1.project-main-image-headline.project-main-image-headline-atlas-azimuth Atlas Azimuth    
+
+    .container-fluid.project-gallery-container
+        .row.project-gallery-headline-row.text-center.mx-2
+            .col-12.project-gallery-headline-col.p-0    
+                h2.project-gallery-headline Gallery
+        .row.project-gallery-row.text-center.mx-2
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412930-azimuth-project-1.webp' alt='image of Atlas Azimuth project' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412962-azimuth-project-4.webp' alt='image of Atlas Azimuth project' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413004-azimuth-project-12.webp' alt='image of Atlas Azimuth project' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")  
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413017-azimuth-project-14.webp' alt='image of Atlas Azimuth project' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413041-azimuth-project-18.webp' alt='image of Atlas Azimuth project' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413046-azimuth-project-19.webp' alt='image of Atlas Azimuth project' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+
+    #projectModal.modal.fade.asset-gallery-modal.text-center(tabindex='-1' aria-labelledby='projectModalLabel' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered
+            .asset-gallery-modal-content.modal-content
+                .row.d-flex
+                    .col-6.align-content-center
+                        div.text-start.px-4
+                            div.asset-gallery-img-text Atlas Azimuth
+                    .col-6
+                        div.text-end.p-3
+                            button.btn-close.asset-gallery-modal-close-btn.p-2.my-auto(type='button' data-bs-dismiss='modal' aria-label='Close')
+                #projectCarousel.carousel.slide(data-bs-touch='true' data-bs-interval='30000' data-bs-ride='carousel')
+                    .carousel-inner.asset-modal-carousel-inner
+                        .carousel-item.asset-gallery-carousel-item.align-content-center.active
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412930-azimuth-project-1.webp' alt='image of Atlas Azimuth project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412936-azimuth-project-2.webp' alt='image of Atlas Azimuth project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412955-azimuth-project-3.webp' alt='image of Atlas Azimuth project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412962-azimuth-project-4.webp' alt='image of Atlas Azimuth project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412967-azimuth-project-5.webp' alt='image of Atlas Azimuth project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412973-azimuth-project-6.webp' alt='image of Atlas Azimuth project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412979-azimuth-project-7.webp' alt='image of Atlas Azimuth project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412983-azimuth-project-8.webp' alt='image of Atlas Azimuth project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412988-azimuth-project-9.webp' alt='image of Atlas Azimuth project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412998-azimuth-project-11.webp' alt='image of Atlas Azimuth project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413004-azimuth-project-12.webp' alt='image of Atlas Azimuth project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413011-azimuth-project-13.webp' alt='image of Atlas Azimuth project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413017-azimuth-project-14.webp' alt='image of Atlas Azimuth project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413023-azimuth-project-15.webp' alt='image of Atlas Azimuth project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413031-azimuth-project-16.webp' alt='image of Atlas Azimuth project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413037-azimuth-project-17.webp' alt='image of Atlas Azimuth project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413041-azimuth-project-18.webp' alt='image of Atlas Azimuth project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413046-azimuth-project-19.webp' alt='image of Atlas Azimuth project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413051-azimuth-project-20.webp' alt='image of Atlas Azimuth project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413055-azimuth-project-21.webp' alt='image of Atlas Azimuth project') 
+                        .carousel-item.asset-gallery-carousel-item.align-content-center
+                            img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413062-azimuth-project-22.webp' alt='image of Atlas Azimuth project') 
+                    button.carousel-control-prev(type='button' data-bs-target='#projectCarousel' data-bs-slide='prev')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-prev-icon.asset-gallery-carousel-prev-icon(aria-hidden='true')
+                    button.carousel-control-next(type='button' data-bs-target='#projectCarousel' data-bs-slide='next')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-next-icon.asset-gallery-carousel-next-icon(aria-hidden='true')        
+    
+    .container-fluid.project-numbers-container
+        .row.project-numbers-row.text-end.justify-content-center.mx-5
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-buildings-number.project-numbers-buildings-number-atlas-azimuth         
+                div.project-numbers-text Buildings
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-buildings-number.project-numbers-commercial-number-atlas-azimuth         
+                div.project-numbers-text Commercial
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-floors-number.project-numbers-floors-number-atlas-azimuth         
+                div.project-numbers-text Floors        
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-apartments-number.project-numbers-apartments-number-atlas-azimuth        
+                div.project-numbers-text Apartments
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-parking-spots-number.project-numbers-parking-spots-number-atlas-azimuth        
+                div.project-numbers-text Parking Spots
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-parking-spots-number.project-numbers-area-number-atlas-azimuth      
+                div.project-numbers-text Area
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.px-xxl-2.text-center
+                div.project-numbers-start-number 2025         
+                div.project-numbers-text Construction Start
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.px-xxl-2.text-center
+                div.project-numbers-start-number 2028         
+                div.project-numbers-text Construction End
+    
+    .container-fluid.project-details-container
+        .row.project-details-row.text-end.mx-5.justify-content-center
+            .col-12.project-details-headline-col.p-0.text-center
+                h2.project-details-headline Atlas Azimuth Project in Burgas – Apartments for Sale in a Prestigious Residential Complex
+            .col-10.project-details-headline-col.p-0.text-start
+                div.project-details-text The Atlas Azimuth project is an ultra-modern residential complex in the heart of Burgas, designed for people seeking a high standard of living in a central location. The project offers the perfect blend of comfort, advanced amenities, and contemporary design, while ensuring easy access to all the key points of interest in the city. The Atlas Azimuth complex is just a short walk from the Medical University, close to shopping centers, health facilities, spacious parks, and main transportation routes – making it an ideal choice for families, professionals, and students.     
+                h3.project-details-sub-headline Modern Design and Advanced Amenities
+                div.project-details-text Atlas Azimuth provides not only spacious and well-designed apartments but also includes a range of advanced services aimed at offering residents a high-quality living experience. The project will feature a private kindergarten for residents, a stylish café, a supermarket stocked with household necessities, a hotel for guests, a fully equipped gym, sports fields, expansive parks, and public facilities. All these will be integrated into advanced architectural planning, with an emphasis on a green and well-maintained environment.
+                div.project-details-text The entire complex has been designed as a gated community, providing residents and tenants with full security and a sense of privacy. The entrances to the buildings will be monitored, and residents will enjoy elegantly designed common areas and leisure spaces that allow for relaxation and a convenient, luxurious lifestyle.
+                h3.project-details-sub-headline Sports and Recreation Facilities – A Living Experience You Won't Want to Leave
+                div.project-details-text One of the most prominent advantages of the Atlas Azimuth project is the variety of sports and recreational facilities that provide residents with opportunities for physical activity and leisure all year round. The complex will feature a fully equipped outdoor gym, a professional football field, and tennis courts with high-quality flooring and lighting, enabling training and games even in the late evening hours. In addition, the complex offers sports areas for individual and group use, allowing residents to stay active and maintain a healthy lifestyle in a comfortable and accessible environment.
+                div.project-detail-img-container.d-flex.justify-content-center   
+                    img.project-details-img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631413069-azimuth-project-map.webp' alt='Illustration of the buildings in the Atlas Azimuth project')
+                div.project-details-text.text-center <i>Atlas Azimuth Buildings</i>
+                h3.project-details-sub-headline Green Parks and Walking Paths
+                div.project-details-text The project places special emphasis on planning green spaces and landscaped areas. Residents of the Atlas Azimuth complex will enjoy direct access to large parks, illuminated walking paths, green lawns, and children’s facilities that encourage physical activity and outdoor fun. Among the parks in the complex, a winding walking path will be established, allowing for evening strolls or morning runs.
+                div.project-details-text At the center of the complex, a beautiful water mirror will be built, providing a sense of peace and tranquility to visitors and serving as an additional focal point for family activities or social gatherings. Additionally, the complex will feature a modern amphitheater for public events, concerts, and cultural performances, turning the area into a lively and bustling hub. 
+                h3.project-details-sub-headline Strategic Location and High Accessibility
+                div.project-details-text One of the main benefits of the "Azimuth" district in Burgas is its strategic location in the city center, ensuring convenient access to all essential urban services. The complex is situated close to main transportation routes, making it easy to reach other parts of the city and back. Residents will enjoy proximity to shopping centers, health facilities, leading educational institutions, and other public services – all within walking distance or a short drive.
+                h3.project-details-sub-headline Luxurious Interior Design and Spacious Apartments
+                div.project-details-text The apartments in the Atlas Azimuth project are designed with meticulous attention to the smallest details, combining modern elements with maximum comfort. Each apartment features open and bright spaces, high ceilings, spacious balconies, and large windows that allow abundant natural light to enter. The interior layout includes high-quality materials, modern designs, and functional layouts that provide each apartment with a homely and pleasant atmosphere. The apartments are available in various sizes and layouts, so every family or investor can find the apartment that suits their needs and lifestyle.
+                h3.project-details-sub-headline Transportation Solutions and Parking
+                div.project-details-text As part of the advanced infrastructure offered by the Atlas Azimuth project, the complex includes shaded parking for residents and guests, ensuring convenient and safe access to your home at any time of the day. Additionally, there are bus stations nearby, bike lanes, and quick access to major roads.
+                h3.project-details-sub-headline Construction Start and Investment Opportunity
+                div.project-details-text Construction is expected to begin at the start of 2025 and will last approximately 36 months. This is an excellent opportunity for investors and families looking to secure a place in the most advanced and modern residential complex in Burgas. Don’t miss the chance to be a part of a complex that combines luxury living, community services, and a high quality of life – join a growing and thriving community in the heart of Burgas.
+                div.project-details-text Atlas Azimuth Project – where comfort, luxury, and quality of life come together. Reserve your new apartment now!
+            
+    
+    .container-fluid.project-amenities-container
+        .row.project-amenities-headline-row.text-center.mx-5
+            .col-12.project-amenities-headline-col.p-0
+                h2.project-amenities-headline Project Amenities
+        .row.project-amenities-row.text-end.mx-5
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/shopping-project-icon.svg' alt='Icon of shopping bags')
+                div.project-amenities-text Shopping Center    
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/bakery-project-icon.svg' alt='Icon of a cupcake')
+                div.project-amenities-text Bakery
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/dog-park-project-icon.svg' alt='Icon of a dog')
+                div.project-amenities-text Dog Parks  
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/dumbbell-project-icon.svg' alt='Icon of weights')
+                div.project-amenities-text(dir='rtl') Fitness Areas 
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/football-project-icon.svg' alt='Icon of a football')
+                div.project-amenities-text Football Field
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/medical-center-project-icon.svg' alt='Icon of a first aid kit')
+                div.project-amenities-text Medical Center
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/parking-project-icon.svg' alt='Icon of parking spots')
+                div.project-amenities-text Roofed Parking         
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/playground-project-icon.svg' alt='Children\'s playground icon')
+                div.project-amenities-text Children's Playgrounds           
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/restrurant-project-icon.svg' alt='Food icon')
+                div.project-amenities-text Restaurants            
+
+    .container-fluid.project-mid-image-container.project-mid-image-container-atlas-azimuth(role="img" aria-labelledby="azimuthMidImageDescription")
+        span.visually-hidden(id="azimuthMidImageDescription") Image of the Atlas Azimuth project
+    
+    .container-fluid.project-map-container
+        .row.project-map-row.text-center.mx-2.justify-content-center 
+            .col-12.project-map-healine-col
+                h2.project-map-headline Location
+            .col-12.col-md-10.project-map-col
+                div.project-map(id='map' data-long=27.4472107812304 data-lat=42.53043823399184 data-title='Atlas Azimuth') 
+
+    .container-fluid.project-video-container
+        .row.asset-video-row.mx-3.justify-content-center 
+            .col-12.col-md-10.asset-video-col.text-center(role="region" aria-labelledby="assetVideoDescription")
+                iframe(src='https://www.youtube.com/embed/Giy-uwPVotU?si=I6IjuH8bj9B0Gdet' frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen).asset-video                    
+            span.visually-hidden(id="assetVideoDescription") Video of the Atlas Azimuth project          
+    
+    .container-fluid.project-assets-container
+        .row.asset-related-assets-row.justify-content-center.mx-5.text-center
+            .col-12.project-assets-headline-col
+                h2.project-assets-headline Available Properties In The Project
+            each asset in projectAssets
+                include ../_assetsCards
+        .row.mobile-asset-related-assets-row.justify-content-center.mx-1.text-center
+            .col-12.project-assets-headline-col
+                h2.project-assets-headline Available Properties In The Project
+            each asset in projectAssets
+                include ../_mobileAssetsCards    
+
+    include ../_contactUsFixed  
+    include ../_contactUsFixedMobile 
