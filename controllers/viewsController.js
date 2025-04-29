@@ -66,11 +66,11 @@ exports.getContactUsConfirm = (req, res) => {
     title: 'אישור שליחת פרטים ליצירת קשר',
   });
 };
-exports.getPricing = (req, res) => {
-  res.status(200).render(`${res.locals.lang}/pricing`, {
-    title: 'מחירון חבילות ליווי',
-  });
-};
+// exports.getPricing = (req, res) => {
+//   res.status(200).render(`${res.locals.lang}/pricing`, {
+//     title: 'מחירון חבילות ליווי',
+//   });
+// };
 exports.getPrivacy = (req, res) => {
   res.status(200).render(`${res.locals.lang}/privacy`, {
     title: 'תנאי פרטיות',

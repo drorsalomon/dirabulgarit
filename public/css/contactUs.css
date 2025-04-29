@@ -5,7 +5,7 @@
 .calendly-col {
   position: relative;
   background-color: #2078a9 !important;
-  height: 80rem;
+  height: 140rem;
   border-radius: 1rem;
 }
 
@@ -100,4 +100,34 @@
   border: none;
   -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+}
+
+.ru-contact-us-button {
+  width: 11rem !important;
+  height: 4rem !important;
+}
+
+.calendly-widget-container {
+  position: absolute;
+  height: fit-content;
+  top: 170%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.en-calendly-widget-container {
+  top: 172%;
+}
+
+.calendly-inline-widget {
+  height: 65rem;
+  width: 25rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=contactUs.css.map */

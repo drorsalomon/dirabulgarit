@@ -2,7 +2,7 @@
     .card.asset-card(data-slug=`${asset.slug}`)
         div.asset-card-img-container
             if asset.sold
-                .span.badge.asset-card-sold-badge.en-asset-card-sold-badge Продал 
+                .span.badge.asset-card-sold-badge.en-asset-card-sold-badge Продано 
             //- if asset.exclusive && !asset.sold
             //-     .span.badge.asset-card-exclusive-badge.en-asset-card-exclusive-badge Эксклюзивная недвижимость 
             img.card-img-top.asset-card-img(src=`${asset.mainImage}` alt=`${asset.name}` loading="lazy")

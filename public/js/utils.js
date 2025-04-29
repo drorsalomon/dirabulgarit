@@ -1,5 +1,7 @@
 import * as config from './config';
 import { switchLang } from './language';
+import { getFavoriteAssets } from './favoriteAssets';
+import { generatePDF } from './pdf';
 
 // ***** Currency *****
 export const switchSearchPriceCurrencyHtmlOnLoad = (priceInput, isEuro = true) => {
@@ -86,7 +88,29 @@ export const switchCurrency = (currencyIconSrc) => {
   }
 };
 
+export const addCurrencySwitchListener = (element, isMobile = false) => {
+  if (!element) return;
+
+  element.addEventListener('click', () => {
+    switchCurrency(element.src);
+    if (isMobile && config.Elements.mobileCurrencyDdBtn) {
+      config.Elements.mobileCurrencyDdBtn.click();
+    }
+  });
+};
+
 // ***** Language *****
+export const detectLanguageFromURL = () => {
+  const path = window.location.pathname;
+  if (path.includes(`/${config.EN_LANGUAGE}`)) {
+    localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.EN_LANGUAGE));
+  } else if (path.includes(`/${config.RU_LANGUAGE}`)) {
+    localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.RU_LANGUAGE));
+  } else {
+    localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.DEFAULT_LANGUAGE));
+  }
+};
+
 export const switchLanguageIconsSrc = (lang) => {
   const languageConfig = {
     [config.DEFAULT_LANGUAGE]: {
@@ -191,8 +215,6 @@ export const modifyUrl = (inputStr, part) => {
 };
 
 export const switchLanguage = (langIconSrc, href) => {
-  console.log(langIconSrc);
-
   const languages = [
     { icon: config.heIconSrc, lang: config.DEFAULT_LANGUAGE },
     { icon: config.enIconSrc, lang: config.EN_LANGUAGE },
@@ -206,6 +228,18 @@ export const switchLanguage = (langIconSrc, href) => {
 
   const updatedHref = modifyUrl(href, config.baseProdUrl);
   switchLang(selected.lang, updatedHref);
+};
+
+export const addLangSwitchListener = (element, isMobile = false) => {
+  if (!element) return;
+
+  element.addEventListener('click', () => {
+    const href = window.location.href;
+    switchLanguage(element.src, href);
+    if (isMobile && config.Elements.mobileLangDdBtn) {
+      config.Elements.mobileLangDdBtn.click();
+    }
+  });
 };
 
 export const reverseString = (s) => {
@@ -341,14 +375,10 @@ export const btnAddActive = (searchFilterObj, filterBtn, type, notModal = true, 
   });
 };
 
-const LANGUAGE_MAP = {
-  [config.DEFAULT_LANGUAGE]: 'he',
-  [config.EN_LANGUAGE]: 'en',
-  [config.RU_LANGUAGE]: 'ru',
-};
-
-const getLanguageText = (ddBtn, language) => {
-  return ddBtn.dataset[LANGUAGE_MAP[language] || 'en'];
+const getLanguageText = (language) => {
+  if (language === 'en') return 'price';
+  if (language === 'ru') return 'Стоимость';
+  return 'מחיר'; // default to English
 };
 
 const getCurrencySymbol = () => {
@@ -360,7 +390,7 @@ export const ddBtnTextSetter = (ddBtn, filterBtn, onLoad = false) => {
     const language = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY));
     const activeCount = Array.from(filterBtn).filter((btn) => btn.classList.contains('active')).length;
 
-    ddBtn.innerText = getLanguageText(ddBtn, language);
+    ddBtn.innerText = getLanguageText(language);
     if (activeCount > 0) {
       ddBtn.appendChild(document.createTextNode(` (${activeCount})`));
     }
@@ -410,8 +440,7 @@ export const priceInputSetter = (inputMin, inputMax, onLoad = false, notModal = 
       const displayMax = maxVal || `${currency}10,000,000`;
       const priceText = ` (${displayMin} - ${displayMax})`;
 
-      ddBtn.innerText = getLanguageText(ddBtn, language);
-      ddBtn.appendChild(document.createTextNode(priceText));
+      ddBtn.innerText = getLanguageText(language) + priceText;
     }
   };
 
@@ -436,7 +465,7 @@ export const clearSearchChoices = (searchFilterObj, ddBtn, filterBtn, input) => 
   searchFilterObj = emptySearchFilterObj;
   localStorage.setItem(config.FILTER_KEY, JSON.stringify(searchFilterObj));
   ddBtn.forEach((el) => {
-    if (!el.innerText.includes('מחיר') || !el.innerText.includes('price') || !el.innerText.includes('Цена')) {
+    if (!el.innerText.includes('מחיר') || !el.innerText.includes('price') || !el.innerText.includes('Стоимость')) {
       // el.innerText = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE ? el.dataset.he : el.dataset.en;
       if (JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE) {
         el.innerText = el.dataset.he;
@@ -470,6 +499,111 @@ export const clearDuplicates = (searchFilterObj) => {
   return searchFilterObj.oceanView;
 };
 
+// ***** Asset PDF button *****
+const extractUniqueText = (elements) => {
+  return Array.from(elements)
+    .map((el) => el.innerText.trim())
+    .filter((value, index, self) => self.indexOf(value) === index);
+};
+
+const getElementText = (element) => (element ? element.innerHTML.trim() : '');
+
+const collectPdfData = () => {
+  const pdfData = {
+    id: getElementText(config.Elements.assetId),
+    name: getElementText(config.Elements.assetName),
+    price: extractUniqueText(config.Elements.assetPrice)?.[0] || '',
+    project: getElementText(config.Elements.assetProject),
+    city: getElementText(config.Elements.assetCity),
+    type: getElementText(config.Elements.assetType),
+    sm: getElementText(config.Elements.assetSm),
+    oceanView: getElementText(config.Elements.assetOceanView),
+    rooms: getElementText(config.Elements.assetRooms),
+    bedrooms: getElementText(config.Elements.assetBedrooms),
+    bathrooms: getElementText(config.Elements.assetBathrooms),
+    terraces: getElementText(config.Elements.assetTerraces),
+    floor: getElementText(config.Elements.assetFloor),
+    parking: getElementText(config.Elements.assetParking),
+    windDirection: getElementText(config.Elements.assetWindDirections),
+    readiness: getElementText(config.Elements.assetReadiness),
+    maintenanceFee: getElementText(config.Elements.assetMaintenanceFee),
+    furnished: getElementText(config.Elements.assetFurnished),
+    yearBuilt: getElementText(config.Elements.assetYearBuilt),
+    description: extractUniqueText(config.Elements.assetDescription) || [],
+    amenities: Array.from(config.Elements.assetAmenities || []).map((el) => el.innerText.trim()) || [],
+    mainImage: config.Elements.assetMainImg?.src || '',
+    images: Array.from(config.Elements.assetThumbnailImgs || []).map((img) => img.src) || [],
+  };
+
+  if (config.Elements.mapBox && config.Elements.mapBox.dataset.long && config.Elements.mapBox.dataset.lat) {
+    pdfData.location = {
+      long: config.Elements.mapBox.dataset.long,
+      lat: config.Elements.mapBox.dataset.lat,
+      title: config.Elements.mapBox.dataset.title || '',
+    };
+  }
+
+  return pdfData;
+};
+
+export const setupPdfButtonListeners = () => {
+  if (!config.Elements.assetPdfBtn) return;
+
+  config.Elements.assetPdfBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const pdfData = collectPdfData();
+      generatePDF(pdfData);
+    });
+  });
+};
+
+// ***** Button Listeners *****
+const ROUTE_MAP = {
+  [config.DEFAULT_LANGUAGE]: '',
+  [config.EN_LANGUAGE]: '/en',
+  [config.RU_LANGUAGE]: '/ru',
+};
+
+const BUTTON_ROUTES = {
+  toContactUsBtn: '/contact-us',
+  toAboutBtn: '/about',
+  toBlogBtn: '/blog',
+  investGuideBtn: '/invest',
+  errorBtn: '', // Empty base path for errorBtn to allow language-specific roots
+};
+
+const getLanguagePrefix = () => {
+  const lang = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) || config.DEFAULT_LANGUAGE;
+  return ROUTE_MAP[lang] || '';
+};
+
+const navigateToPage = (basePath) => {
+  const prefix = getLanguagePrefix();
+
+  // For errorBtn, navigate to language-specific root
+  if (basePath === '') {
+    window.location.pathname = prefix || '/';
+    return;
+  }
+
+  window.location.pathname = `${prefix}${basePath}`;
+};
+
+const setupButtonListener = (button, basePath) => {
+  if (!button) return;
+
+  const elements = button.length !== undefined ? button : [button];
+  elements.forEach((el) => {
+    el.addEventListener('click', () => navigateToPage(basePath));
+  });
+};
+
+export const initializeNavigationButtons = () => {
+  Object.entries(BUTTON_ROUTES).forEach(([btnKey, basePath]) => {
+    setupButtonListener(config.Elements[btnKey], basePath);
+  });
+};
+
 export const getPageBySlug = (elementArray, page) => {
   elementArray.forEach((el) => {
     el.addEventListener('click', function (e) {
@@ -480,6 +614,11 @@ export const getPageBySlug = (elementArray, page) => {
       window.location.assign(baseUrl);
     });
   });
+};
+
+export const addSlugNavigation = (elements, pageType) => {
+  if (!elements) return;
+  getPageBySlug(elements, pageType);
 };
 
 export const addNavigator = async () => {
@@ -498,6 +637,7 @@ export const addNavigator = async () => {
   }
 };
 
+// ***** Favorite *****
 export const checkIfFavorite = (assetId) => {
   if (JSON.parse(localStorage.getItem(config.FAVORITE_KEY))) {
     const favoriteAssetArray = JSON.parse(localStorage.getItem(config.FAVORITE_KEY));
@@ -535,4 +675,34 @@ export const removeFromFavorite = (assetId) => {
     favoriteAssetArray.splice(index, 1);
   }
   localStorage.setItem(config.FAVORITE_KEY, JSON.stringify(favoriteAssetArray));
+};
+
+export const addFavoriteBtnListener = (button) => {
+  if (!button) return;
+
+  button.addEventListener('click', () => {
+    const favorites = JSON.parse(localStorage.getItem(config.FAVORITE_KEY));
+    getFavoriteAssets(favorites);
+  });
+};
+
+export const addAssetFavoriteListeners = (buttons) => {
+  if (!buttons || !config.Elements.assetId || !config.Elements.assetFavoriteIcon) return;
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const assetId = config.Elements.assetId.textContent;
+
+      config.Elements.assetFavoriteIcon.forEach((icon) => {
+        const isOutline = icon.src.includes(config.assetFavoriteIconOutlineSrc);
+        if (isOutline) {
+          addToFavorite(assetId);
+          icon.src = config.assetFavoriteIconFullSrc;
+        } else {
+          removeFromFavorite(assetId);
+          icon.src = config.assetFavoriteIconOutlineSrc;
+        }
+      });
+    });
+  });
 };

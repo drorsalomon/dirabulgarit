@@ -1,13 +1,11 @@
 import { filterAssets } from './asset';
 import { getBlogs } from './blog';
-import { getFavoriteAssets } from './favoriteAssets';
 import { displayMap } from './mapbox';
 import { loadLang } from './language';
-import { generatePDF } from './pdf';
-import { webinarRegistration } from './webinar';
 import * as config from './config';
 import * as utils from './utils';
 import * as animation from './animation';
+//import { webinarRegistration } from './webinar';
 
 window.onload = function () {
   if (window.innerWidth >= 992) {
@@ -19,7 +17,7 @@ window.onload = function () {
     const enableWidgetIcon = document.getElementById('enable-toolbar-trigger-svg');
     if (window.innerWidth >= 300 && window.innerWidth < 576) {
       config.Elements.whatsappWidget.style.display = 'block';
-      config.Elements.whatsappWidget.style.bottom = '120px';
+      config.Elements.whatsappWidget.style.bottom = '125px';
 
       enableWidget.style.display = 'block';
       enableWidget.style.top = '-120px';
@@ -28,10 +26,10 @@ window.onload = function () {
       enableWidgetIcon.style.width = '30px';
     } else if (window.innerWidth >= 576 && window.innerWidth < 768) {
       config.Elements.whatsappWidget.style.display = 'block';
-      config.Elements.whatsappWidget.style.bottom = '140px';
+      config.Elements.whatsappWidget.style.bottom = '148px';
 
       enableWidget.style.display = 'block';
-      enableWidget.style.top = '-140px';
+      enableWidget.style.top = '-145px';
       enableWidget.style.left = '-3px !important';
       enableWidgetIcon.style.height = '50px';
       enableWidgetIcon.style.width = '50px';
@@ -46,6 +44,10 @@ window.onload = function () {
       enableWidgetIcon.style.width = '50px';
     }
   }
+
+  // Detect and set language by url on page load
+  utils.detectLanguageFromURL();
+
   // If currency isn't set or currency is Euro
   if (!JSON.parse(localStorage.getItem(config.CURRENCY_KEY)) || JSON.parse(localStorage.getItem(config.CURRENCY_KEY)) === config.DEFAULT_CURRENCY) {
     // Set default currency
@@ -205,7 +207,7 @@ window.onload = function () {
     });
   }
 
-  // Search from and search modal user input
+  // Search form and search modal user input
   if (config.Elements.searchForm || config.Elements.modalSearchForm) {
     const searchFilterObj = JSON.parse(localStorage.getItem(config.FILTER_KEY));
 
@@ -274,75 +276,21 @@ window.addEventListener('pageshow', function () {
 });
 
 // Currency switch
-const addCurrencySwitchListener = (element, isMobile = false) => {
-  if (!element) return;
-
-  element.addEventListener('click', () => {
-    utils.switchCurrency(element.src);
-    if (isMobile && config.Elements.mobileCurrencyDdBtn) {
-      config.Elements.mobileCurrencyDdBtn.click();
-    }
-  });
-};
-
-addCurrencySwitchListener(config.Elements.notActiveCurrencyIcon);
-addCurrencySwitchListener(config.Elements.mobileNotActiveCurrencyIcon, true);
+utils.addCurrencySwitchListener(config.Elements.notActiveCurrencyIcon);
+utils.addCurrencySwitchListener(config.Elements.mobileNotActiveCurrencyIcon, true);
 
 // Language switch
-const addLangSwitchListener = (element, isMobile = false) => {
-  if (!element) return;
-
-  element.addEventListener('click', () => {
-    const href = window.location.href;
-    utils.switchLanguage(element.src, href);
-    if (isMobile && config.Elements.mobileLangDdBtn) {
-      config.Elements.mobileLangDdBtn.click();
-    }
-  });
-};
-
-addLangSwitchListener(config.Elements.firstNotActiveLangIcon);
-addLangSwitchListener(config.Elements.secondNotActiveLangIcon);
-addLangSwitchListener(config.Elements.firstMobileNotActiveLangIcon, true);
-addLangSwitchListener(config.Elements.secondMobileNotActiveLangIcon, true);
+utils.addLangSwitchListener(config.Elements.firstNotActiveLangIcon);
+utils.addLangSwitchListener(config.Elements.secondNotActiveLangIcon);
+utils.addLangSwitchListener(config.Elements.firstMobileNotActiveLangIcon, true);
+utils.addLangSwitchListener(config.Elements.secondMobileNotActiveLangIcon, true);
 
 // Favorite button listeners
-const addFavoriteBtnListener = (button) => {
-  if (!button) return;
-
-  button.addEventListener('click', () => {
-    const favorites = JSON.parse(localStorage.getItem(config.FAVORITE_KEY));
-    getFavoriteAssets(favorites);
-  });
-};
-
-addFavoriteBtnListener(config.Elements.favoriteBtn);
-addFavoriteBtnListener(config.Elements.mobileFavoriteBtn);
+utils.addFavoriteBtnListener(config.Elements.favoriteBtn);
+utils.addFavoriteBtnListener(config.Elements.mobileFavoriteBtn);
 
 // Asset favorite button logic
-const addAssetFavoriteListeners = (buttons) => {
-  if (!buttons || !config.Elements.assetId || !config.Elements.assetFavoriteIcon) return;
-
-  buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const assetId = config.Elements.assetId.textContent;
-
-      config.Elements.assetFavoriteIcon.forEach((icon) => {
-        const isOutline = icon.src.includes(config.assetFavoriteIconOutlineSrc);
-        console.log(icon);
-        if (isOutline) {
-          utils.addToFavorite(assetId);
-          icon.src = config.assetFavoriteIconFullSrc;
-        } else {
-          utils.removeFromFavorite(assetId);
-          icon.src = config.assetFavoriteIconOutlineSrc;
-        }
-      });
-    });
-  });
-};
-
-addAssetFavoriteListeners(config.Elements.assetFavoriteBtn);
+utils.addAssetFavoriteListeners(config.Elements.assetFavoriteBtn);
 
 // Map display
 if (config.Elements.mapBox && config.Elements.mapBox.dataset.long && config.Elements.mapBox.dataset.lat) {
@@ -393,115 +341,10 @@ if (config.Elements.shareBtnWhite)
   });
 
 // ***** Asset PDF button *****
-const extractUniqueText = (elements) => {
-  return Array.from(elements)
-    .map((el) => el.innerText.trim())
-    .filter((value, index, self) => self.indexOf(value) === index);
-};
-
-const getElementText = (element) => (element ? element.innerHTML.trim() : '');
-
-const collectPdfData = () => {
-  const pdfData = {
-    id: getElementText(config.Elements.assetId),
-    name: getElementText(config.Elements.assetName),
-    price: extractUniqueText(config.Elements.assetPrice)?.[0] || '',
-    project: getElementText(config.Elements.assetProject),
-    city: getElementText(config.Elements.assetCity),
-    type: getElementText(config.Elements.assetType),
-    sm: getElementText(config.Elements.assetSm),
-    oceanView: getElementText(config.Elements.assetOceanView),
-    rooms: getElementText(config.Elements.assetRooms),
-    bedrooms: getElementText(config.Elements.assetBedrooms),
-    bathrooms: getElementText(config.Elements.assetBathrooms),
-    terraces: getElementText(config.Elements.assetTerraces),
-    floor: getElementText(config.Elements.assetFloor),
-    parking: getElementText(config.Elements.assetParking),
-    windDirection: getElementText(config.Elements.assetWindDirections),
-    readiness: getElementText(config.Elements.assetReadiness),
-    maintenanceFee: getElementText(config.Elements.assetMaintenanceFee),
-    furnished: getElementText(config.Elements.assetFurnished),
-    yearBuilt: getElementText(config.Elements.assetYearBuilt),
-    description: extractUniqueText(config.Elements.assetDescription) || [],
-    amenities: Array.from(config.Elements.assetAmenities || []).map((el) => el.innerText.trim()) || [],
-    mainImage: config.Elements.assetMainImg?.src || '',
-    images: Array.from(config.Elements.assetThumbnailImgs || []).map((img) => img.src) || [],
-  };
-
-  if (config.Elements.mapBox && config.Elements.mapBox.dataset.long && config.Elements.mapBox.dataset.lat) {
-    pdfData.location = {
-      long: config.Elements.mapBox.dataset.long,
-      lat: config.Elements.mapBox.dataset.lat,
-      title: config.Elements.mapBox.dataset.title || '',
-    };
-  }
-
-  return pdfData;
-};
-
-const setupPdfButtonListeners = () => {
-  if (!config.Elements.assetPdfBtn) return;
-
-  config.Elements.assetPdfBtn.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const pdfData = collectPdfData();
-      generatePDF(pdfData);
-    });
-  });
-};
-
-// Initialize
-setupPdfButtonListeners();
+utils.setupPdfButtonListeners();
 
 // ***** Button Listeners *****
-const ROUTE_MAP = {
-  [config.DEFAULT_LANGUAGE]: '',
-  [config.EN_LANGUAGE]: '/en',
-  [config.RU_LANGUAGE]: '/ru',
-};
-
-const BUTTON_ROUTES = {
-  toContactUsBtn: '/contact-us',
-  toAboutBtn: '/about',
-  toBlogBtn: '/blog',
-  investGuideBtn: '/invest',
-  errorBtn: '', // Empty base path for errorBtn to allow language-specific roots
-};
-
-const getLanguagePrefix = () => {
-  const lang = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) || config.DEFAULT_LANGUAGE;
-  return ROUTE_MAP[lang] || '';
-};
-
-const navigateToPage = (basePath) => {
-  const prefix = getLanguagePrefix();
-
-  // For errorBtn, navigate to language-specific root
-  if (basePath === '') {
-    window.location.pathname = prefix || '/';
-    return;
-  }
-
-  window.location.pathname = `${prefix}${basePath}`;
-};
-
-const setupButtonListener = (button, basePath) => {
-  if (!button) return;
-
-  const elements = button.length !== undefined ? button : [button];
-  elements.forEach((el) => {
-    el.addEventListener('click', () => navigateToPage(basePath));
-  });
-};
-
-const initializeNavigationButtons = () => {
-  Object.entries(BUTTON_ROUTES).forEach(([btnKey, basePath]) => {
-    setupButtonListener(config.Elements[btnKey], basePath);
-  });
-};
-
-// Initialize
-initializeNavigationButtons();
+utils.initializeNavigationButtons();
 
 if (config.Elements.blogLink)
   config.Elements.blogLink.addEventListener('click', function (e) {
@@ -516,17 +359,13 @@ if (config.Elements.backToSearchResultsBtn)
     window.history.go(-1);
   });
 
-// Get pages by slug
-const addSlugNavigation = (elements, pageType) => {
-  if (!elements) return;
-  utils.getPageBySlug(elements, pageType);
-};
+// *****Get pages by slug *****
 // Asset Card
-addSlugNavigation(config.Elements.assetCards, 'asset');
+utils.addSlugNavigation(config.Elements.assetCards, 'asset');
 // Main Page Blog Buttons
-addSlugNavigation(config.Elements.mainPageBlogBtn, 'blog');
+utils.addSlugNavigation(config.Elements.mainPageBlogBtn, 'blog');
 // Blog Cards
-addSlugNavigation(config.Elements.blogCards, 'blog');
+utils.addSlugNavigation(config.Elements.blogCards, 'blog');
 
 // Add text to search dd buttons and fix price min-max user input
 if (config.Elements.searchDdBtnCity) utils.ddBtnTextSetter(config.Elements.searchDdBtnCity, config.Elements.searchFilterBtnCity);

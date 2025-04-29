@@ -49,7 +49,7 @@ block content
             .col-12.col-md-7.col-lg-8.col-xl-7.asset-details-gallery-col
                 div.asset-gallery-mainImage-container
                     if asset.sold
-                        .span.badge.asset-card-sold-badge.en-asset-card-sold-badge Продал
+                        .span.badge.asset-card-sold-badge.en-asset-card-sold-badge Продано
                     //- if asset.exclusive && !asset.sold
                     //-     .span.badge.asset-card-exclusive-badge.en-asset-card-exclusive-badge Эксклюзивная недвижимость
                     img.asset-gallery-mainImage.en-asset-gallery-mainImage(src=`${asset.mainImage}` alt=`${asset.name}` loading="lazy" data-bs-toggle="modal" data-bs-target="#assetModal")
@@ -66,7 +66,7 @@ block content
                 if asset.id   
                     div.assets-details-features 
                         img.assets-details-features-icon(src='/img/icons/hashtag-svgrepo-com-white.svg' alt='Значок номера')       
-                        span.assets-details-features-text <strong>ИДЕНТИФИКАТОР: </strong>
+                        span.assets-details-features-text <strong>ID: </strong>
                         span.asset-details-id= asset.id 
                 if asset.price && !asset.sold     
                     div.assets-details-features 
@@ -91,12 +91,12 @@ block content
                 if asset.sm
                     div.assets-details-features 
                         img.assets-details-features-icon(src='/img/icons/ruler-svgrepo-com-white.svg' alt='Значок линейки')       
-                        span.assets-details-features-text <strong>Область: </strong> 
+                        span.assets-details-features-text <strong>Площадь: </strong> 
                         span= asset.sm 
                 if asset.oceanView
                     div.assets-details-features 
                         img.assets-details-features-icon(src='/img/icons/ocean-sunset-svgrepo-com-white.svg' alt='Значок заката океана')       
-                        span.assets-details-features-text <strong>В море: </strong> 
+                        span.assets-details-features-text <strong>До моря: </strong> 
                         span= asset.oceanView 
                 if asset.rooms
                     div.assets-details-features 
@@ -121,7 +121,7 @@ block content
                 if asset.floor
                     div.assets-details-features 
                         img.assets-details-features-icon(src='/img/icons/floor-plan-svgrepo-com-white.svg' alt='Значок этажа здания')       
-                        span.assets-details-features-text <strong>Пол: </strong> 
+                        span.assets-details-features-text <strong>Этаж: </strong> 
                         span= asset.floor 
                 if asset.parking
                     div.assets-details-features 
@@ -168,7 +168,7 @@ block content
                         each text in asset.description.listTwo.listTwoText 
                             div.asset-details-description!= `● ` + text        
                 div.asset-btn-smallViewport-container.text-center
-                    button.btn-cta-asset.to-calendly-btn Связаться с нами
+                    button.btn-cta-asset.to-calendly-btn Связаться
                     button.share-btn-white
                         img.share-btn-icon(src='/img/icons/share-svgrepo-com-outline.svg' alt='Значок страницы "Поделиться"')   
             .col-md-12.col-xl-10.asset-details-description-middleViewport-col.en-asset-details-description-middleViewport-col
@@ -189,7 +189,7 @@ block content
                 div.asset-btn-middleViewport-container.text-center
                     button.asset-favorite-btn-white
                         img.favorite-btn-icon(src='/img/icons/heart-empty-svgrepo-com-outline.svg' alt='Heart Icon') 
-                    button.btn-cta-asset.to-calendly-btn Связаться с нами
+                    button.btn-cta-asset.to-calendly-btn Связаться
                     button.share-btn-white
                         img.share-btn-icon(src='/img/icons/share-svgrepo-com-outline.svg' alt='Share page icon')  
 
@@ -197,7 +197,7 @@ block content
         .container-fluid.asset-amenities-container.py-xxl-5
             .row.asset-amenities-row.mx-4.justify-content-center 
                 .col-10.asset-amenities-headline-col
-                    h2.asset-amenities-headline Удобства
+                    h2.asset-amenities-headline Преимущества
                 .col-10.asset-amenities-col
                     .row.asset-amenities-details-row.en-asset-amenities-details-row
                         if asset.amenities

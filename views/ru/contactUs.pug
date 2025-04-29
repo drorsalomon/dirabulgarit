@@ -19,8 +19,8 @@ block head
 block content 
     .container.py-5
         .row.calendly-row.mx-4
-            .col.calendly-col
-                div.calendly-text-container.text-center 
+            .col.calendly-col.ru-calendly-col
+                div.calendly-text-container.ru-calendly-text-container.text-center 
                     h1.calendly-text-headline Связаться с нами
                     div.calendly-text Вы можете <strong>оставить свои данные</strong>, и мы свяжемся с вами как можно скорее.
                     div#crmWebToEntityForm.crmWebToEntityForm
@@ -47,29 +47,9 @@ block content
                                     input.contact-us-checkbox-en(type='checkbox' aria-checked='false' class='zcwf_ckbox' id='Email_Opt_Out' aria-required='false' aria-label='Email Opt Out' name='Email Opt Out' aria-valuemax='50' maxlength='50')
                                     span.webinar-form-check-top-label.form-check-label(for='flexCheckDefault') Я даю согласие на получение соответствующей информации о недвижимости в Болгарии, которая может иногда носить рекламный характер.
                                 .col-12.contact-us-col
-                                    input.contact-us-button.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Send' title='Submit')
-                                    input.contact-us-button.mx-3(type='reset' class='zcwf_button' name='reset' value='Clear' title='Reset')
-                    //- div.calendly-text <strong>2.</strong> Вы можете выбрать консультанта, нажав кнопку, и запланировать <strong>видеосессию</strong> на удобное для вас время
-                    //- .dropdown.calendly-agents-dropdown
-                    //-     button.btn.btn-secondary.dropdown-toggle.calendly-agents-button.en-calendly-agents-button(type='button' data-bs-toggle='dropdown' aria-expanded='false') Choose Consultant
-                    //-     ul.dropdown-menu.calendly-agents-list
-                    //-         li
-                    //-             span.dropdown-item.calendly-agents-choice.calendly-agent-yeheli(data-agent='yeheli') Yeheli Samuels
-                    //-                 img.calendly-agent-img.en-calendly-agent-img(src='/img/yeheli-circle.jpeg' alt='Yeheli Samuels picture')
-                    //-         li
-                    //-             span.dropdown-item.calendly-agents-choice.calendly-agent-shimon(data-agent='shimon') Simon Shlomo     
-                    //-                 img.calendly-agent-img.en-calendly-agent-img(src='/img/shimon-circle.jpg' alt='Shimon Shlomo picture')
-                    //- div.calendly-widget-container.en-calendly-widget-container.calendly-widget-yeheli
-                    //-     <div class="calendly-inline-widget" data-url="https://calendly.com/yeheli/video-meeting-with-yeheli"></div>
-                    //-     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                    //- div.calendly-widget-container.en-calendly-widget-container.calendly-widget-shimon
-                    //-     <div class="calendly-inline-widget" data-url="https://calendly.com/simon-ekke/video-meeting-with-shimon"></div>
-                    //-     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> 
-
-
-
-
-
-
-
-
+                                    input.contact-us-button.ru-contact-us-button.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Отправлять' title='Submit')
+                                    input.contact-us-button.ru-contact-us-button.mx-3(type='reset' class='zcwf_button' name='reset' value='Прозрачный' title='Reset')
+                    div.calendly-text <strong>2.</strong> Вы можете запланировать <strong>видеосессию</strong> на удобное для вас время
+                    div.calendly-widget-container.ru-calendly-widget-container.calendly-widget-vita
+                        <div class="calendly-inline-widget" data-url="https://calendly.com/lvictory/digital"></div>
+                        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>

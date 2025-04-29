@@ -45,13 +45,17 @@
   }
 
   // ***** Hero *****
-  .en-hero-container {
-    height: 65rem;
+  .ru-hero-container {
+    height: 83rem;
   }
 
   // ***** Main Page About *****
   .mainpage-about-container {
     height: 70rem;
+  }
+
+  .ru-mainpage-about-container {
+    height: 80rem;
   }
 
   // ***** Reviews *****
@@ -79,6 +83,10 @@
   // ***** Why Bulgaria *****
   .mainpage-why-bulgaria-bg-video-container {
     height: 60rem;
+  }
+
+  .ru-mainpage-why-bulgaria-bg-video-container {
+    height: 75rem;
   }
 
   .en-invest-guide-btn-container {
@@ -111,11 +119,15 @@
 
   // ***** Contact Us *****
   .calendly-widget-container {
-    top: 174%;
+    top: 179%;
   }
 
   .en-calendly-widget-container {
-    top: 171%;
+    top: 175%;
+  }
+
+  .ru-calendly-widget-container {
+    top: 165%;
   }
 
   // ***** Footer *****
@@ -182,7 +194,8 @@
 
   // ***** Whatsapp Widget *****
   .whatsapp-widget-container {
-    width: 13rem !important;
+    width: 14rem !important;
+    height: 3.5rem !important;
   }
 
   .whatsapp-widget a {
@@ -225,8 +238,8 @@
     top: 16%;
   }
 
-  .en-hero-container {
-    height: 70rem;
+  .ru-hero-container {
+    height: 80rem;
   }
 
   .en-hero-text-col {
@@ -259,6 +272,14 @@
     height: 10rem;
   }
 
+  .ru-hero-container {
+    height: 83rem;
+  }
+
+  .ru-mainpage-about-container {
+    height: 75rem;
+  }
+
   // ***** How it works *****
   .mainpage-howitworks-text {
     font-size: $h6;
@@ -267,6 +288,10 @@
   // ***** Why Bulgaria *****
   .mainpage-why-bulgaria-bg-video-container {
     height: 45rem;
+  }
+
+  .ru-mainpage-why-bulgaria-bg-video-container {
+    height: 50rem;
   }
 
   // ***** Main Page Reviews *****
@@ -378,19 +403,31 @@
 
   // ***** Contact Us *****
   .calendly-col {
-    height: 68rem;
+    height: 140rem;
+  }
+
+  .ru-calendly-col {
+    height: 157rem;
   }
 
   .calendly-text-container {
-    top: 52%;
+    top: 27%;
+  }
+
+  .ru-calendly-text-container {
+    top: 28%;
   }
 
   .calendly-widget-container {
-    top: 191%;
+    top: 193%;
   }
 
   .en-calendly-widget-container {
-    top: 183%;
+    top: 188%;
+  }
+
+  .ru-calendly-widget-container {
+    top: 180%;
   }
 
   .calendly-inline-widget {
@@ -682,6 +719,10 @@
     top: 86%;
   }
 
+  .ru-hero-container {
+    height: 88rem;
+  }
+
   // ***** Search Selection *****
   .search-filter-options--btn {
     font-size: $h6 !important;
@@ -698,6 +739,10 @@
 
   .en-mainpage-about-container {
     height: 80rem;
+  }
+
+  .ru-mainpage-about-container {
+    height: 90rem;
   }
 
   .en-mainpage-about-button-col {
@@ -733,6 +778,10 @@
   // ***** Why Bulgaria *****
   .mainpage-why-bulgaria-bg-video-container {
     height: 45rem;
+  }
+
+  .ru-mainpage-why-bulgaria-bg-video-container {
+    height: 50rem;
   }
 
   .mainpage-why-bulgaria-tag {
@@ -886,6 +935,14 @@
   }
 
   // ***** Contact Us *****
+  .ru-calendly-col {
+    height: 150rem;
+  }
+
+  .ru-calendly-text-container {
+    top: 27%;
+  }
+
   .calendly-text-headline {
     font-size: $h3;
   }
@@ -935,7 +992,11 @@
   }
 
   .en-calendly-widget-container {
-    top: 190%;
+    top: 198%;
+  }
+
+  .ru-calendly-widget-container {
+    top: 195%;
   }
 
   // ***** Asset *****
@@ -1539,11 +1600,31 @@
 
   // ***** Contact Us *****
   .calendly-col {
-    height: 61rem;
+    height: 137rem;
+  }
+
+  .ru-calendly-col {
+    height: 145rem;
+  }
+
+  .calendly-text-container {
+    top: 25%;
+  }
+
+  .ru-calendly-text-container {
+    top: 27%;
+  }
+
+  .calendly-widget-container {
+    top: 207%;
   }
 
   .en-calendly-widget-container {
-    top: 191%;
+    top: 199%;
+  }
+
+  .ru-calendly-widget-container {
+    top: 192%;
   }
 
   .contact-us-container-fixed {
@@ -1967,6 +2048,10 @@
     height: 70rem;
   }
 
+  .ru-hero-container {
+    height: 77rem;
+  }
+
   .en-hero-text-col {
     top: 25%;
   }
@@ -2096,11 +2181,19 @@
   }
 
   .calendly-widget-container {
-    top: 195%;
+    top: 205%;
+  }
+
+  .en-calendly-text-container {
+    top: 27%;
   }
 
   .en-calendly-widget-container {
-    top: 188%;
+    top: 190%;
+  }
+
+  .ru-calendly-widget-container {
+    top: 189%;
   }
 
   .contact-us-button-fixed {
@@ -2407,7 +2500,6 @@
 
   .mainpage-hot-assets-row,
   .mainpage-howitworks-container,
-  .mainpage-rec-container,
   .pricing-cards-row,
   .search-results-filters-container,
   .search-results-container,
@@ -2520,6 +2612,10 @@
 
   .contact-us-container-fixed {
     width: 101% !important;
+  }
+
+  .en-calendly-widget-container {
+    top: 195%;
   }
 
   // ***** Project *****

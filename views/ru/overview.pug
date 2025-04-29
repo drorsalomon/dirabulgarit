@@ -18,38 +18,38 @@ block head
 
 block content 
     
-    .container-fluid.hero-container.en-hero-container(role="img" aria-labelledby="heroDescription")
+    .container-fluid.hero-container.ru-hero-container(role="img" aria-labelledby="heroDescription")
         .row.d-flex.align-items-center.justify-content-center                    
             .col-10.col-lg-8.hero-text-col.en-hero-text-col
                 .hero-border
-                h1.hero-headline Real Estate Investments in Bulgaria
+                h1.hero-headline Инвестиции в недвижимость в Болгарии
                 .hero-border.hero-bottom-border
-                div.hero-text The largest Bulgarian real estate website for Israelis
+                div.hero-text Крупнейший сайт недвижимости Болгарии для израильтян
         .row.hero-icons-row.en-hero-icons-row
             .col-6.col-xl-3.hero-icon-col
                 img.hero-icon(src='/img/icons/house-svgrepo-com-hero-white.svg' alt='House icon') 
-                .hero-icon-text(dir='rtl') Hundreds of properties of all kinds
+                .hero-icon-text(dir='rtl') Сотни объектов недвижимости
             .col-6.col-xl-3.hero-icon-col 
                 img.hero-icon(src='/img/icons/lighthouse-svgrepo-com-hero-white.svg' alt='Lighthouse icon') 
-                .hero-icon-text(dir='rtl') Full guidance throughout the investment process
+                .hero-icon-text(dir='rtl') Полное сопровождение на протяжении всего процесса
             .col-6.col-xl-3.hero-icon-col
                 img.hero-icon(src='/img/icons/stats-real-estate-svgrepo-com-hero-white.svg' alt='House and graph icon') 
-                .hero-icon-text(dir='rtl') Stable and attractive investment profits        
+                .hero-icon-text(dir='rtl') Стабильная инвестиционная прибыль
             .col-6.col-xl-3.hero-icon-col
                 img.hero-icon(src='/img/icons/money-bag-euro-svgrepo-com-hero-white.svg' alt='Euro money bag icon') 
-                .hero-icon-text(dir='rtl') Investment in an EU member developing country  
+                .hero-icon-text(dir='rtl') Инвестиции в развивающуюся страну-члена ЕС
         .row.hero-contact-us-row.en-hero-contact-us-row       
             .col-10.col-lg-8.hero-contact-us-col      
-                button.btn-cta-white.to-calendly-btn(aria-label='Open the Contact Us page') Contact Us         
+                button.btn-cta-white.to-calendly-btn(aria-label='Open the Contact Us page') Связаться          
 
     div.mainpage-search-modal-open-btn-container.text-center
-        h2.mainpage-search-headline Property Search
-        div.mainpage-search-text Press the search button and find a property to your liking
-        button.mainpage-search-modal-open-btn(data-bs-toggle="modal" data-bs-target="#searchModal" aria-label='Open property search modal') Open Search   
+        h2.mainpage-search-headline Поиск недвижимости
+        div.mainpage-search-text Нажмите кнопку поиска и найдите недвижимость по своему вкусу
+        button.mainpage-search-modal-open-btn(data-bs-toggle="modal" data-bs-target="#searchModal" aria-label='Открыть модальный поиск недвижимости') Открыть поиск  
 
     .container.d-flex.justify-content-center
         .mainpage-search-container.w-75   
-            h2.mainpage-search-headline.text-center Property Search
+            h2.mainpage-search-headline.text-center Поиск недвижимости
             include _searchForm
 
         include _searchModal  
@@ -58,90 +58,90 @@ block content
         .row.mainpage-hot-assets-row.justify-content-center
             .col-12.mainpage-hot-assets-headline-col
                 .row.text-center
-                    h2.mainpage-hot-assets-tag Recommended   
-                    h3.mainpage-hot-assets-headline Hot Investment Opportunities
+                    h2.mainpage-hot-assets-tag Рекомендации   
+                    h3.mainpage-hot-assets-headline Инвестиционные возможности 
             each asset in hotAssets
                 include _assetsCards
         .row.mobile-mainpage-hot-assets-row.justify-content-center.mx-1         
             .col-12.mainpage-hot-assets-headline-col
                 .row.text-center
-                    div.mainpage-hot-assets-tag Recommended  
-                    div.mainpage-hot-assets-headline Hot Investment Opportunities
+                    div.mainpage-hot-assets-tag Рекомендации  
+                    div.mainpage-hot-assets-headline Инвестиционные возможности 
             each asset in hotAssets
                 include _mobileAssetsCards       
 
-    .container-fluid.mainpage-about-container.overflow-hidden(role="img" aria-labelledby="aboutUsImageDescription")
-        span.visually-hidden(id="aboutUsImageDescription") Image of houses located on an alcove of the black sea in Burgas
+    .container-fluid.mainpage-about-container.ru-mainpage-about-container.overflow-hidden(role="img" aria-labelledby="aboutUsImageDescription")
+        span.visually-hidden(id="aboutUsImageDescription") Изображение домов, расположенных на берегу Черного моря в Бургасе
         .row.mainpage-about-row.align-items-center
             .col-10.col-lg-8.mainpage-about-text-col
-                h2.mainpage-about-tag About Us
-                h3.mainpage-about-headline Dira Bulgarit - Israeli Real Estate in Bulgaria
-                div.mainpage-about-text A highly experienced professional team with one goal - to guide Israeli investors on the way to successful investments in the Bulgarian real estate market.
+                h2.mainpage-about-tag О нас
+                h3.mainpage-about-headline Дира Булгарит - Израильская недвижимость в Болгарии
+                div.mainpage-about-text Высококвалифицированная команда, имеющая одну цель - помочь израильским инвесторам успешно вложить средства в болгарский рынок недвижимости
             .col-10.col-lg-8.mainpage-about-button-col.en-mainpage-about-button-col.my-md-5.my-lg-1
                 .row.justify-content-center 
                     .col-12.col-sm-4.my-4
-                        button.btn-cta-white.to-about-btn Meet The Team   
+                        button.btn-cta-white.ru-btn-cta-white.to-about-btn Познакомьтесь с командой    
 
     .container-fluid.d-flex.mainpage-howitworks-container 
         .row.mainpage-howitworks-row.align-items-center.justify-content-center.mx-4
             .col-12.mainpage-howitworks-maintext--col
-                h2.mainpage-howitworks-label The Process
-                h3.mainpage-howitworks-mainheadline How It Works    
-                div.mainpage-howitworks-maintext Dira Bulgarit personally and individually accompanies its clients throughout the entire process of purchasing the property, from the search phase to the closing phase    
+                h2.mainpage-howitworks-label Процесс
+                h3.mainpage-howitworks-mainheadline Как это работает  
+                div.mainpage-howitworks-maintext Dira Bulgarit лично и индивидуально сопровождает своих клиентов на протяжении всего процесса покупки недвижимости, от этапа поиска до этапа закрытия.    
             .col-12.col-md-6.col-xl-6.col.mainpage-howitworks-steps--col
                 div.mainpage-howitworks-icon--background
                     svg.bi.mainpage-howitworks-icon(aria-labelledby="howItWorkIconClipboard")
-                        title(id="howItWorkIconClipboard") Sketch board with a heart in its center icon
+                        title(id="howItWorkIconClipboard") Доска для рисования с изображением сердца в центре
                         use(xlink:href='/img/icons/clipboard.svg#clipboard')
-                div.mainpage-howitworks-headline Needs & Preferences      
-                div.mainpage-howitworks-text We will hold a video meeting with you to understand your needs and preferences      
+                div.mainpage-howitworks-headline Потребности и предпочтения    
+                div.mainpage-howitworks-text Мы проведем с вами видеовстречу, чтобы понять ваши потребности и предпочтения.      
             .col-12.col-md-6.col-xl-6.col.mainpage-howitworks-steps--col
                 div.mainpage-howitworks-icon--background
                     svg.bi.mainpage-howitworks-icon(aria-labelledby="howItWorkIconBinoculars")
-                        title(id="howItWorkIconBinoculars") Binoculars icon
+                        title(id="howItWorkIconBinoculars") Значок бинокля
                         use(xlink:href='/img/icons/binoculars.svg#binoculars')
-                div.mainpage-howitworks-headline Property Locating     
-                div.mainpage-howitworks-text We will present you a variety of properties according to your preferred criteria     
+                div.mainpage-howitworks-headline Поиск недвижимости     
+                div.mainpage-howitworks-text Мы представим Вам разнообразные объекты недвижимости в соответствии с Вашими предпочтительными критериями.     
             .col-12.col-md-6.col-xl-6.col.mainpage-howitworks-steps--col
                 div.mainpage-howitworks-icon--background
                     svg.bi.mainpage-howitworks-icon(aria-labelledby="howItWorkIconHouse")
                         title(id="howItWorkIconHouse") House Icon
                         use(xlink:href='/img/icons/house.svg#house')
-                div.mainpage-howitworks-headline Property Tour    
-                div.mainpage-howitworks-text We will accompany you on the ground and tour all the properties that you liked     
+                div.mainpage-howitworks-headline Тур по недвижимости   
+                div.mainpage-howitworks-text Мы будем сопровождать вас на месте и осмотрим все объекты недвижимости, которые вам понравились.     
             .col-12.col-md-6.col-xl-6.col.mainpage-howitworks-steps--col
                 div.mainpage-howitworks-icon--background
                     svg.bi.mainpage-howitworks-icon(aria-labelledby="howItWorkIconSearch")
-                        title(id="howItWorkIconSearch") Magnifying glass icon
+                        title(id="howItWorkIconSearch") Значок увеличительного стекла
                         use(xlink:href='/img/icons/search.svg#search')
-                div.mainpage-howitworks-headline Legal Review      
-                div.mainpage-howitworks-text We will conduct a comprehensive legal review of the property with the help of our legal advice in Bulgaria     
+                div.mainpage-howitworks-headline Юридический обзор      
+                div.mainpage-howitworks-text Мы проведем комплексную юридическую проверку недвижимости с помощью нашей юридической консультации в Болгарии.     
             .col-12.col-md-6.col-xl-6.col.mainpage-howitworks-steps--col
                 div.mainpage-howitworks-icon--background
                     svg.bi.mainpage-howitworks-icon(aria-labelledby="howItWorkIconEuro")
-                        title(id="howItWorkIconEuro") Euro currency icon
+                        title(id="howItWorkIconEuro") Значок валюты евро
                         use(xlink:href='/img/icons/euro-howitworks.svg#euro-howitworks')
-                div.mainpage-howitworks-headline Property Bid    
-                div.mainpage-howitworks-text We will help you formulate a fair price offer for the property and negotiate with the seller
+                div.mainpage-howitworks-headline Заявка на недвижимость    
+                div.mainpage-howitworks-text Мы поможем вам сформулировать справедливое ценовое предложение на недвижимость и провести переговоры с продавцом.
             .col-12.col-md-6.col-xl-6.col.mainpage-howitworks-steps--col
                 div.mainpage-howitworks-icon--background
-                    img.mainpage-howitworks-icon(src='/img/icons/handshake-svgrepo-com.svg' alt='Handshake icon') 
-                div.mainpage-howitworks-headline Guide      
-                div.mainpage-howitworks-text We will accompany you through the entire process from the stage of locating the property to after receiving the key                     
+                    img.mainpage-howitworks-icon(src='/img/icons/handshake-svgrepo-com.svg' alt='Значок рукопожатия') 
+                div.mainpage-howitworks-headline Гид      
+                div.mainpage-howitworks-text Мы будем сопровождать вас на протяжении всего процесса, от этапа поиска недвижимости до получения ключей.                     
 
     .container-fluid.mainpage-why-bulgaria-container
         .row.mainpage-why-bulgaria-row.align-items-center.justify-content-center 
             .col.mainpage-why-bulgaria-col
-                div.mainpage-why-bulgaria-bg-video-container(role="img" aria-labelledby="whyBulgariaDescription")
+                div.mainpage-why-bulgaria-bg-video-container.ru-mainpage-why-bulgaria-bg-video-container(role="img" aria-labelledby="whyBulgariaDescription")
                     video(autoplay muted loop).mainpage-why-bulgaria-bg-video
                         source(src='/videos/burgas-video-1080p.mp4' type='video/mp4')
-                    span.visually-hidden(id="whyBulgariaDescription") A video that shows the city of Burgas from a bird's eye view
+                    span.visually-hidden(id="whyBulgariaDescription") Видео, показывающее город Бургас с высоты птичьего полета
                 div.mainpage-why-bulgaria-text-container.w-75.text-center       
-                    h2.mainpage-why-bulgaria-tag Investment          
-                    h3.mainpage-why-bulgaria-headline Why Bulgaria?
-                    div.mainpage-why-bulgaria-text The Bulgarian economy is in constant growth due to the many investments in the country and its membership in the European Union. Real estate prices in the country are accessible and there is a high return on renting, especially in the tourist areas such as Burgas and Bansko. We have prepared a detailed investment guide for you to help you take the first steps towards the desired deal.
+                    h2.mainpage-why-bulgaria-tag Инвестиции          
+                    h3.mainpage-why-bulgaria-headline Почему Болгария?
+                    div.mainpage-why-bulgaria-text Болгарская экономика находится в постоянном росте благодаря многочисленным инвестициям в страну и ее членству в Европейском Союзе. Цены на недвижимость в стране доступны, а доходность от сдачи в аренду высокая, особенно в туристических зонах, таких как Бургас и Банско. Мы подготовили для вас подробное руководство по инвестициям, которое поможет вам сделать первые шаги к желаемой сделке.
                 div.invest-guide-btn-container.en-invest-guide-btn-container.my-xxs-4.my-xs-2.my-md-4.my-lg-1
-                    button.invest-guide-btn Investment Guide
+                    button.invest-guide-btn.ru-invest-guide-btn Инвестиционный путеводитель
 
     .container-fluid.mainpage-rec-container            
         .row.mx-4.justify-content-center
@@ -190,117 +190,117 @@ block content
                         span.carousel-control-next-icon.mainpage-reviews-carousel-next-icon(aria-hidden='true')
                         span.visually-hidden Next    
 
-    .container-fluid.mainpage-pricing-container.justify-content-center              
-        .row.mx-4.justify-content-center.mainpage-pricing-headline-row
-            .col-12.pricing-maintext-col.text-center
-                h2.pricing-tag For Your Choice 
-                h3.mainpage-pricing-headline Pricing                       
-        .row.justify-content-center.pricing-cards-row         
-            .col-12.col-sm-7.col-md-6.col-lg-4.col-xl-4.col-xxl-3.mx-xxl-5.p-xxs-0.p-med-1
-                .card.pricing-card-basic
-                    .card-body
-                        .container-fluid
-                            .row.pricing-card-body-row
-                                .col-12
-                                    .card-title.pricing-card-main-title Base
-                                    .card-title.pricing-card-secondary-title Property locating and paperwork Collection
-                                    .card-title.pricing-card-tertiary-title 3000€ + Tax
-                                .col-12.my-5
-                                    div.card-text-container.d-flex.align-content-center.py-3
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon') 
-                                        span.pricing-card-text Property location by customer demands
-                                    div.card-text-container.d-flex.align-content-center.py-3       
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sing icon')
-                                        span.pricing-card-text Physical or on-line property tour
-                                    div.card-text-container.d-flex.align-content-center.py-3
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
-                                        span.pricing-card-text Property legal check
-                                    div.card-text-container.d-flex.align-content-center.py-3    
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
-                                        span.pricing-card-text Property legal paperwork collection
-                                    div.card-text-container.d-flex.align-content-center.py-3  
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='X sign icon')
-                                        span.pricing-card-text Writing initial contract with a lawyer
-                                    div.card-text-container.d-flex.align-content-center.py-3    
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='אייקון שלי איקס')
-                                        span.pricing-card-text Writing and signing final contract with notary
-                                    div.card-text-container.d-flex.align-content-center.py-3    
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='X sign icon')
-                                        span.pricing-card-text Opening a bank account with the customer
-                                    div.card-text-container.d-flex.align-content-center.py-3    
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='X sign icon')                                      
-                                        span.pricing-card-text Renting and managing the property
-            .col-12.col-sm-7.col-md-6.col-lg-4.col-xl-4.col-xxl-3.mx-xxl-5
-                .card.pricing-card-plus
-                    .card-body
-                        .container-fluid
-                            .row.pricing-card-body-row
-                                .col-12
-                                    .card-title.pricing-card-main-title Plus
-                                    .card-title.pricing-card-secondary-title Final contract and opening a bank account
-                                    .card-title.pricing-card-tertiary-title 3990€ + Tax
-                                .col-12.my-5
-                                    div.card-text-container.d-flex.align-content-center.py-3
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon') 
-                                        span.pricing-card-text Property location by customer demands
-                                    div.card-text-container.d-flex.align-content-center.py-3       
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sing icon')
-                                        span.pricing-card-text Physical or on-line property tour
-                                    div.card-text-container.d-flex.align-content-center.py-3
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
-                                        span.pricing-card-text Property legal check
-                                    div.card-text-container.d-flex.align-content-center.py-3    
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
-                                        span.pricing-card-text Property legal paperwork collection
-                                    div.card-text-container.d-flex.align-content-center.py-3  
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sing icon')
-                                        span.pricing-card-text Writing initial contract with a lawyer
-                                    div.card-text-container.d-flex.align-content-center.py-3    
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
-                                        span.pricing-card-text Writing and signing final contract with notary
-                                    div.card-text-container.d-flex.align-content-center.py-3    
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
-                                        span.pricing-card-text Opening a bank account with the customer
-                                    div.card-text-container.d-flex.align-content-center.py-3    
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='X sign icon')                                    
-                                        span.pricing-card-text Renting and managing the property
-            .col-12.col-sm-7.col-md-6.col-lg-4.col-xl-4.col-xxl-3.mx-xxl-5
-                .card.pricing-card-premium
-                    .card-body
-                        .container-fluid
-                            .row.pricing-card-body-row
-                                .col-12.justify-content-center.pricing-premium-col 
-                                    .span.badge.en-pricing-premium-badge Best Value
-                                    .card-title.pricing-card-main-title Premium
-                                    .card-title.pricing-card-secondary-title Full customer service and property management
-                                    .card-title.pricing-card-tertiary-title 4990€ + Tax
-                                .col-12.my-5
-                                    div.card-text-container.d-flex.align-content-center.py-3
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon') 
-                                        span.pricing-card-text Property location by customer demands
-                                    div.card-text-container.d-flex.align-content-center.py-3       
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sing icon')
-                                        span.pricing-card-text Physical or on-line property tour
-                                    div.card-text-container.d-flex.align-content-center.py-3
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
-                                        span.pricing-card-text Property legal check
-                                    div.card-text-container.d-flex.align-content-center.py-3    
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
-                                        span.pricing-card-text Property legal paperwork collection
-                                    div.card-text-container.d-flex.align-content-center.py-3  
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sing icon')
-                                        span.pricing-card-text Writing initial contract with a lawyer
-                                    div.card-text-container.d-flex.align-content-center.py-3    
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
-                                        span.pricing-card-text Writing and signing final contract with notary
-                                    div.card-text-container.d-flex.align-content-center.py-3    
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
-                                        span.pricing-card-text Opening a bank account with the customer
-                                    div.card-text-container.d-flex.align-content-center.py-3    
-                                        img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')    
-                                        span.pricing-card-text Renting and managing the property
-            .col-12.en-mainpage-pricing-btn-container.text-center  
-                button.btn-cta.pricing-cta-btn.to-calendly-btn(aria-label='Go to contact us page') Contact Us
+    //- .container-fluid.mainpage-pricing-container.justify-content-center              
+    //-     .row.mx-4.justify-content-center.mainpage-pricing-headline-row
+    //-         .col-12.pricing-maintext-col.text-center
+    //-             h2.pricing-tag For Your Choice 
+    //-             h3.mainpage-pricing-headline Pricing                       
+    //-     .row.justify-content-center.pricing-cards-row         
+    //-         .col-12.col-sm-7.col-md-6.col-lg-4.col-xl-4.col-xxl-3.mx-xxl-5.p-xxs-0.p-med-1
+    //-             .card.pricing-card-basic
+    //-                 .card-body
+    //-                     .container-fluid
+    //-                         .row.pricing-card-body-row
+    //-                             .col-12
+    //-                                 .card-title.pricing-card-main-title Base
+    //-                                 .card-title.pricing-card-secondary-title Property locating and paperwork Collection
+    //-                                 .card-title.pricing-card-tertiary-title 3000€ + Tax
+    //-                             .col-12.my-5
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon') 
+    //-                                     span.pricing-card-text Property location by customer demands
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3       
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sing icon')
+    //-                                     span.pricing-card-text Physical or on-line property tour
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
+    //-                                     span.pricing-card-text Property legal check
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3    
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
+    //-                                     span.pricing-card-text Property legal paperwork collection
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3  
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='X sign icon')
+    //-                                     span.pricing-card-text Writing initial contract with a lawyer
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3    
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='אייקון שלי איקס')
+    //-                                     span.pricing-card-text Writing and signing final contract with notary
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3    
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='X sign icon')
+    //-                                     span.pricing-card-text Opening a bank account with the customer
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3    
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='X sign icon')                                      
+    //-                                     span.pricing-card-text Renting and managing the property
+    //-         .col-12.col-sm-7.col-md-6.col-lg-4.col-xl-4.col-xxl-3.mx-xxl-5
+    //-             .card.pricing-card-plus
+    //-                 .card-body
+    //-                     .container-fluid
+    //-                         .row.pricing-card-body-row
+    //-                             .col-12
+    //-                                 .card-title.pricing-card-main-title Plus
+    //-                                 .card-title.pricing-card-secondary-title Final contract and opening a bank account
+    //-                                 .card-title.pricing-card-tertiary-title 3990€ + Tax
+    //-                             .col-12.my-5
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon') 
+    //-                                     span.pricing-card-text Property location by customer demands
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3       
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sing icon')
+    //-                                     span.pricing-card-text Physical or on-line property tour
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
+    //-                                     span.pricing-card-text Property legal check
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3    
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
+    //-                                     span.pricing-card-text Property legal paperwork collection
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3  
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sing icon')
+    //-                                     span.pricing-card-text Writing initial contract with a lawyer
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3    
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
+    //-                                     span.pricing-card-text Writing and signing final contract with notary
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3    
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
+    //-                                     span.pricing-card-text Opening a bank account with the customer
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3    
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/xmark-large-svgrepo-com.svg' alt='X sign icon')                                    
+    //-                                     span.pricing-card-text Renting and managing the property
+    //-         .col-12.col-sm-7.col-md-6.col-lg-4.col-xl-4.col-xxl-3.mx-xxl-5
+    //-             .card.pricing-card-premium
+    //-                 .card-body
+    //-                     .container-fluid
+    //-                         .row.pricing-card-body-row
+    //-                             .col-12.justify-content-center.pricing-premium-col 
+    //-                                 .span.badge.en-pricing-premium-badge Best Value
+    //-                                 .card-title.pricing-card-main-title Premium
+    //-                                 .card-title.pricing-card-secondary-title Full customer service and property management
+    //-                                 .card-title.pricing-card-tertiary-title 4990€ + Tax
+    //-                             .col-12.my-5
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon') 
+    //-                                     span.pricing-card-text Property location by customer demands
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3       
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sing icon')
+    //-                                     span.pricing-card-text Physical or on-line property tour
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
+    //-                                     span.pricing-card-text Property legal check
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3    
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
+    //-                                     span.pricing-card-text Property legal paperwork collection
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3  
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sing icon')
+    //-                                     span.pricing-card-text Writing initial contract with a lawyer
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3    
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
+    //-                                     span.pricing-card-text Writing and signing final contract with notary
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3    
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')
+    //-                                     span.pricing-card-text Opening a bank account with the customer
+    //-                                 div.card-text-container.d-flex.align-content-center.py-3    
+    //-                                     img.card-icon.pricing-card-icon.en-pricing-card-icon(src='/img/icons/check-svgrepo-com.svg' alt='V sign icon')    
+    //-                                     span.pricing-card-text Renting and managing the property
+    //-         .col-12.en-mainpage-pricing-btn-container.text-center  
+    //-             button.btn-cta.pricing-cta-btn.to-calendly-btn(aria-label='Go to contact us page') Contact Us
 
     .container-fluid.mainpage-blog-container
         .row.mainpage-blog-headline-row.d-felx.justify-content-center
@@ -369,8 +369,8 @@ block content
         .row.mainpage-contact-us-headline-row.d-felx.justify-content-center
             .col-12.col-md-10.col-xl-8.mainpage-contact-us-headline-col
                 .row.text-center
-                    h2.mainpage-contact-us-tag Contact Us
-                    h3.mainpage-contact-us-headline Enter Your Contact Information And One Of Our Representatives will Get Back To You As Soon As Possible
+                    h2.mainpage-contact-us-tag Связаться
+                    h3.mainpage-contact-us-headline Свяжитесь с нами, и мы вернемся к вам как можно скорее 
         .row.mainpage-contact-us-row.d-felx.justify-content-center.mx-4
             .col-12.col-md-10.col-xl-8.mainpage-contact-us-col.text-center 
                 div#crmWebToEntityForm.crmWebToEntityForm
@@ -397,8 +397,8 @@ block content
                                 input.contact-us-checkbox-en(type='checkbox' aria-checked='false' class='zcwf_ckbox' id='Email_Opt_Out' aria-required='false' aria-label='Email Opt Out' name='Email Opt Out' aria-valuemax='50' maxlength='50')
                                 span.webinar-form-check-top-label.form-check-label(for='flexCheckDefault') Я даю согласие на получение соответствующей информации о недвижимости в Болгарии, которая может иногда носить рекламный характер.
                             .col-12.contact-us-col
-                                input.contact-us-button.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Send' title='Submit')                                                                   
-                                input.contact-us-button.mx-3(type='reset' class='zcwf_button' name='reset' value='Clear' title='Reset')    
+                                input.contact-us-button.ru-contact-us-button.mx-3(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Отправлять' title='Submit')                                                                   
+                                input.contact-us-button.ru-contact-us-button.mx-3(type='reset' class='zcwf_button' name='reset' value='Прозрачный' title='Reset')    
 
     include _contactUsFixed  
     include _contactUsFixedMobile                                

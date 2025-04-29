@@ -2224,18 +2224,30 @@ a:hover {
 .calendly-col {
   position: relative;
   background-color: #2078a9 !important;
-  height: 80rem;
+  height: 157rem;
   border-radius: 1rem;
+}
+
+.ru-calendly-col {
+  height: 177rem;
 }
 
 .calendly-text-container {
   text-align: right;
   position: absolute;
-  top: 52%;
+  top: 28%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.en-calendly-text-container {
+  top: 29%;
+}
+
+.ru-calendly-text-container {
+  top: 31%;
 }
 
 .calendly-text-headline {
@@ -2319,6 +2331,40 @@ a:hover {
   border: none;
   -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+}
+
+.ru-contact-us-button {
+  width: 11rem !important;
+  height: 4rem !important;
+}
+
+.calendly-widget-container {
+  position: absolute;
+  height: fit-content;
+  top: 177%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.en-calendly-widget-container {
+  top: 175%;
+}
+
+.ru-calendly-widget-container {
+  top: 165%;
+}
+
+.calendly-inline-widget {
+  height: 65rem;
+  width: 25rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .contact-us-confirm-main-container {
@@ -2973,6 +3019,13 @@ body {
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
 }
 
+.ru-btn-cta,
+.ru-btn-cta-white,
+.ru-invest-guide-btn {
+  width: 16rem;
+  height: 6rem;
+}
+
 .btn-cta,
 .btn-cta--offcanvas,
 .invest-guide-btn,
@@ -3097,7 +3150,7 @@ body {
   display: none;
   z-index: 101;
   background-color: #1bd741;
-  width: 11rem !important;
+  width: 12rem !important;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -3213,6 +3266,10 @@ body {
 
 .en-hero-container {
   height: 70rem;
+}
+
+.ru-hero-container {
+  height: 83rem;
 }
 
 .hero-text-col {
@@ -3672,8 +3729,8 @@ input[type=text]::placeholder {
   clip-path: polygon(0 7%, 100% 0, 100% 90%, 0 97%);
 }
 
-.en-mainpage-about-container {
-  height: 81rem;
+.ru-mainpage-about-container {
+  height: 85rem;
 }
 
 .mainpage-about-text-col {
@@ -3807,6 +3864,10 @@ input[type=text]::placeholder {
   overflow: hidden;
 }
 
+.ru-mainpage-why-bulgaria-bg-video-container {
+  height: 75rem;
+}
+
 .mainpage-why-bulgaria-bg-video {
   height: 100%;
   width: 100%;
@@ -3856,6 +3917,7 @@ input[type=text]::placeholder {
 .mainpage-rec-container {
   padding-top: 5rem;
   text-align: center;
+  background-color: #f7f7f7;
 }
 
 .mainpage-rec-maintext-col {
@@ -3939,121 +4001,6 @@ input[type=text]::placeholder {
 }
 
 .reviews-btn-container {
-  margin-bottom: 5rem;
-}
-
-.mainpage-pricing-container {
-  background-color: #f7f7f7;
-}
-
-.mainpage-pricing-headline-row {
-  padding-top: 5rem;
-}
-
-.pricing-tag {
-  color: #2078a9;
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-.mainpage-pricing-headline {
-  font-size: 3.4rem;
-  font-weight: 600;
-  color: #324762;
-  margin-bottom: 5rem;
-}
-
-.pricing-cards-row {
-  margin: 0 2rem 5rem 2rem !important;
-}
-
-.pricing-card-basic,
-.pricing-card-plus,
-.pricing-card-premium {
-  border-radius: 3rem !important;
-  margin-bottom: 5rem;
-  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-}
-
-.pricing-card-basic {
-  border: 2px solid #8e8e8e !important;
-}
-
-.pricing-card-plus {
-  border: 2px solid #324762 !important;
-}
-
-.pricing-card-premium {
-  border: 2px solid #2078a9 !important;
-  overflow: hidden;
-}
-
-.pricing-premium-col {
-  position: relative;
-}
-
-.pricing-premium-badge {
-  font-size: 1.2rem !important;
-  color: #ffffff;
-  background-color: #2078a9;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 13rem;
-  -webkit-transform-origin: top left;
-  -ms-transform-origin: top left;
-  transform-origin: top left;
-  margin: 6rem 0 0 -3rem;
-}
-
-.en-pricing-premium-badge {
-  font-size: 1.2rem !important;
-  color: #ffffff;
-  background-color: #2078a9;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 13rem;
-  -webkit-transform-origin: top right;
-  -ms-transform-origin: top right;
-  transform-origin: top right;
-  margin: 6rem -3rem 0 0;
-}
-
-.pricing-card-main-title,
-.pricing-card-tertiary-title {
-  font-size: 3.4rem;
-  font-weight: 600;
-  color: #324762 !important;
-}
-
-.pricing-card-secondary-title {
-  font-size: 1.6rem;
-  color: #5c5e64 !important;
-}
-
-.pricing-card-text {
-  font-size: 1rem;
-  color: #5c5e64 !important;
-}
-
-.pricing-card-icon {
-  width: 1.3rem;
-  height: 1.3rem;
-}
-
-.en-pricing-card-icon {
-  margin-right: 0.6rem;
-}
-
-.en-mainpage-pricing-btn-container {
   margin-bottom: 5rem;
 }
 

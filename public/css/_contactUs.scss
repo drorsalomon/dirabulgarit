@@ -7,18 +7,30 @@
 .calendly-col {
   position: relative;
   background-color: $text-color-secondary !important;
-  height: 80rem;
+  height: 157rem;
   border-radius: 1rem;
+}
+
+.ru-calendly-col {
+  height: 177rem;
 }
 
 .calendly-text-container {
   text-align: right;
   position: absolute;
-  top: 52%;
+  top: 28%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.en-calendly-text-container {
+  top: 29%;
+}
+
+.ru-calendly-text-container {
+  top: 31%;
 }
 
 .calendly-text-headline {
@@ -104,6 +116,40 @@
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
 }
 
+.ru-contact-us-button {
+  width: 11rem !important;
+  height: 4rem !important;
+}
+
+.calendly-widget-container {
+  position: absolute;
+  height: fit-content;
+  top: 177%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.en-calendly-widget-container {
+  top: 175%;
+}
+
+.ru-calendly-widget-container {
+  top: 165%;
+}
+
+.calendly-inline-widget {
+  height: 65rem;
+  width: 25rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 // .calendly-agents-button {
 //   color: $text-color-secondary !important;
 //   background-color: $bg-color-primary !important;
@@ -153,30 +199,4 @@
 // .en-calendly-agent-img {
 //   margin-right: 0;
 //   margin-left: 1rem;
-// }
-
-// .calendly-widget-container {
-//   position: absolute;
-//   height: fit-content;
-//   top: 170%;
-//   left: 50%;
-//   -webkit-transform: translate(-50%, -50%);
-//   -ms-transform: translate(-50%, -50%);
-//   transform: translate(-50%, -50%);
-//   display: none;
-// }
-
-// .en-calendly-widget-container {
-//   top: 172%;
-// }
-
-// .calendly-inline-widget {
-//   height: 65rem;
-//   width: 25rem;
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   -webkit-transform: translate(-50%, -50%);
-//   -ms-transform: translate(-50%, -50%);
-//   transform: translate(-50%, -50%);
 // }

@@ -11,7 +11,7 @@ export const webinarRegistration = async (userName, userPhone, userEmail, userIs
       url: `/user/webinar-registration/${urlParams}`,
     });
     if (res.data.status === 'success') {
-      window.location.href = `${config.baseProdUrl}user/webinar-registered`;
+      window.location.href = `${config.baseDevUrl}user/webinar-registered`;
     }
   } catch (err) {
     showAlert('error', err.response.data.message);
