@@ -8,7 +8,7 @@
     "dev": "nodemon -e js,pug server.js",
     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js --public-url .",
     "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js --public-url .",
-    "postinstall": "npm run build:js && node ./install-chrome.js"
+    "postinstall": "npm run build:js && npx puppeteer browsers install chrome"
   },
   "author": "Dror Salomon",
   "license": "ISC",
@@ -59,6 +59,6 @@
     "validator": "^13.11.0"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=24.0.0"
   }
 }
