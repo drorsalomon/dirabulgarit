@@ -146,43 +146,92 @@ block content
     .container-fluid.mainpage-rec-container            
         .row.mx-4.justify-content-center
             .col-12.mainpage-rec-maintext-col.text-center
-                h2.mainpage-rec-tag Recommendations   
-                h3.mainpage-rec-headline What Our Customers Say About Us
+                h2.mainpage-rec-tag Рекомендации   
+                h3.mainpage-rec-headline Что говорят о нас наши клиенты
             .col-12.col-md-10.reviews-carousel-col           
                 #reviewsCarousel.carousel.slide.text-center.reviews-carousel(data-bs-touch='true' data-bs-interval='15000' data-bs-ride='carousel')
                     .carousel-inner.reviews-carousel-inner
-                        .carousel-item.active.reviews-carousel-item.en-reviews-carousel-item
+                        .carousel-item.active.reviews-carousel-item.ru-reviews-carousel-item
                             .row.d-flex.justify-content-center.align-items-center
-                                .col-12.col-md-5.col-xl-4
-                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/avatar-img-1.jpg' alt='Image of the recommender Guy Avitan')
+                                .col-12.col-md-5.col-xl-4.d-flex.justify-content-center.align-items-center
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/rec-profile-img-tatiana-k.webp' alt='Изображение рекомендателя Татьяна К')
                                 .col-md-7.col-xl-8.text-center
-                                    div.mainpage-reviews-name Avi Cohen
-                                    div.mainpage-reviews-prof Armed Forces
-                                    div.mainpage-reviews-review.fst-italic "I was looking for a secure investment and came across Dira Bulgarit. I received professional guidance throughout the entire process, including property tours, legal assistance, and everything I needed to close the deal with confidence. Highly recommended!"
-                        .carousel-item.reviews-carousel-item.en-reviews-carousel-item
+                                    .reviews-text-wrapper.text-center
+                                        div.mainpage-reviews-name Татьяна К.
+                                        div.mainpage-reviews-prof Социальный работник
+                                        div.mainpage-reviews-review.fst-italic "Недавно завершили сделку по покупке квартиры-студии в Болгарии через компанию Инвест Кафе и хотим поделиться положительным опытом. С самого начала команда показала высокий уровень профессионализма. Нам подробно объяснили все этапы сделки, помогли подобрать варианты, соответствующие нашему бюджету и пожеланиям. Особенно порадовало, что консультанты компании (а именно Вита Лифшиц) хорошо ориентируются в местных юридических и административных тонкостях, что значительно упрощает процесс. Связь всегда была на отличном уровне - на все вопросы отвечали оперативно, документы готовились вовремя, и вся процедура прошла без неожиданностей. Также хотелось отметить, что нас сопровождали вплоть до подписания договора. Мы довольны своим выбором и благодарны Инвест Кафе за честность, прозрачность и поддержку на всех этапах. Если вы рассматриваете покупку недвижимости в Болгарии - смело рекомендуем эту компанию."
+                        .carousel-item.reviews-carousel-item.ru-reviews-carousel-item
                             .row.d-flex.justify-content-center.align-items-center
-                                .col-12.col-md-5.col-xl-4    
-                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/avatar-img-2.jpg' alt='Image of the recommender Eli Toldo')
+                                .col-12.col-md-5.col-xl-4.d-flex.justify-content-center.align-items-center
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/rec-profile-img-miriam-k.webp' alt='Изображение рекомендателя Мирьям К')
                                 .col-md-7.col-xl-8.text-center
-                                    div.mainpage-reviews-name Rami Levi
-                                    div.mainpage-reviews-prof Bus Driver
-                                    div.mainpage-reviews-review.fst-italic "The team at Dira Bulgarit helped me find an investment apartment that perfectly matched my budget and requirements. Everything was well-organized, clear, and with no surprises. In no time, I became a property owner in Bulgaria. Thank you!"
-                        .carousel-item.reviews-carousel-item.en-reviews-carousel-item
+                                    .reviews-text-wrapper.text-center
+                                        div.mainpage-reviews-name Мирьям К.
+                                        div.mainpage-reviews-prof
+                                        div.mainpage-reviews-review.fst-italic "Покупка недвижимости в Грузии через Invest Cafe оставила положительные впечатления. Агентство организовало поездку для выбора объекта: трансфер, проживание и осмотры были чётко спланированы. Сотрудники были всегда на связи, давали профессиональные советы и помогали с документами. Всё прошло быстро, удобно и без стресса. Рекомендую Invest Cafe как надёжное агентство для инвестиций в Грузии."
+                        .carousel-item.reviews-carousel-item.ru-reviews-carousel-item
                             .row.d-flex.justify-content-center.align-items-center
-                                .col-12.col-md-5.col-xl-4      
-                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/avatar-img-4.jpg' alt='Anonymous Avatar Image')
+                                .col-12.col-md-5.col-xl-4.d-flex.justify-content-center.align-items-center
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/rec-profile-img-marina-f.webp' alt='Изображение рекомендателя Марина Ф')
                                 .col-md-7.col-xl-8.text-center
-                                    div.mainpage-reviews-name Michal Erlich
-                                    div.mainpage-reviews-prof Lawyer
-                                    div.mainpage-reviews-review.fst-italic "I wasn’t sure how to start, but Dira Bulgarit provided all the information and support I needed. The process was quick and transparent, and I received personal attention every step of the way. I highly recommend them to anyone considering investing in Bulgaria!"
-                        .carousel-item.reviews-carousel-item.en-reviews-carousel-item
+                                    .reviews-text-wrapper.text-center
+                                        div.mainpage-reviews-name Марина Ф.
+                                        div.mainpage-reviews-prof Дизайнер интерьеров
+                                        div.mainpage-reviews-review.fst-italic "Человека увлечённого, азартного, болеющего за своё дело видно сразу. Вита – совершенно удивительный человек и высокий профессионал. Очень важно, что всё, что она предлагает, прожито ей на собственном опыте. Она очень искренне и щедро делится с вами своим опытом и знаниями, поэтому возникает полное доверие, уважение и восхищение профессионализмом! Очень надеюсь, что мой опыт покупки недвижимости в Болгарии – это только начало. Будет ещё и Греция, Кипр, Италия… в общем, мне понравилось, и всё только начинается!"
+                        .carousel-item.reviews-carousel-item.ru-reviews-carousel-item
                             .row.d-flex.justify-content-center.align-items-center
-                                .col-12.col-md-5.col-xl-4      
-                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/avatar-img-3.jpg' alt='Image of the recommender Rani Kroznitz')
+                                .col-12.col-md-5.col-xl-4.d-flex.justify-content-center.align-items-center
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/rec-profile-img-guzel.webp' alt='Изображение рекомендателя Гузель')
                                 .col-md-7.col-xl-8.text-center
-                                    div.mainpage-reviews-name Rani Kroznitz
-                                    div.mainpage-reviews-prof Project Manager
-                                    div.mainpage-reviews-review.fst-italic "I purchased two apartments through Dira Bulgarit, an apartment in a holiday complex in Sveti Vlas and a residential apartment in a new project built in Burgas. The team of Dira Bulgarit took care of everything, from finding the property to negotiating and signing the contract with the sellers. Since then, the team continues to monitor and handle everything in order to improve the investment For those looking to invest with peace of mind. This is the team you're looking for!"
+                                    .reviews-text-wrapper.text-center
+                                        div.mainpage-reviews-name Гузель
+                                        div.mainpage-reviews-prof 3D-программист
+                                        div.mainpage-reviews-review.fst-italic "Вита прелесть! Очень приятная в общении, очень компетентная и грамотная, отвечает на все вопросы, даже весьма щепетильные. Мы купили с ней квартиру в Греции, и она нас сопровождала на каждом этапе, всегда была на связи, решила все проблемы по ходу сделки. Мы остались очень довольны. Вита, спасибо тебе! И желаю дальнейших успехов в бизнесе!"
+                        .carousel-item.reviews-carousel-item.ru-reviews-carousel-item
+                            .row.d-flex.justify-content-center.align-items-center
+                                .col-12.col-md-5.col-xl-4.d-flex.justify-content-center.align-items-center
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/rec-profile-img-alex-n.webp' alt='Изображение рекомендателя Алекс Н')
+                                .col-md-7.col-xl-8.text-center
+                                    .reviews-text-wrapper.text-center
+                                        div.mainpage-reviews-name Алекс Н.
+                                        div.mainpage-reviews-prof Разработчик программного обеспечения
+                                        div.mainpage-reviews-review.fst-italic "Я купил квартиру через Инвест Кафе. Они были невероятно полезны на каждом этапе, даже с получением ипотеки в Израиле. Они действительно знают своё дело. Если вы хотите купить недвижимость за границей, это ваши люди!"
+                        .carousel-item.reviews-carousel-item.ru-reviews-carousel-item
+                            .row.d-flex.justify-content-center.align-items-center
+                                .col-12.col-md-5.col-xl-4.d-flex.justify-content-center.align-items-center
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/rec-profile-img-stas-k.webp' alt='Изображение рекомендателя Стас К')
+                                .col-md-7.col-xl-8.text-center
+                                    .reviews-text-wrapper.text-center
+                                        div.mainpage-reviews-name Стас К.
+                                        div.mainpage-reviews-prof Менеджер по контролю качества
+                                        div.mainpage-reviews-review.fst-italic "Я приобрёл квартиры в Греции и Болгарии через Инвест Кафе, и могу с уверенностью сказать, что это был отличный опыт. Агентство предоставило исключительный сервис на каждом этапе сделки, включая помощь в получении ипотеки. У команды глубокие знания рынка, и они работают с лучшими застройщиками в Греции и Болгарии. Больше всего меня впечатлила основательница компании – настоящий аналитик рынка с глубоким пониманием его динамики и тенденций. Инвест Кафе не только нашли мне отличные сделки, но и дали ценные советы по максимизации прибыли и долгосрочному планированию инвестиций. Я искренне рекомендую Инвест Кафе всем, кто ищет надёжного партнёра для покупки недвижимости за рубежом. С ними процесс покупки проходит гладко и приятно, а результаты превосходят ожидания!"
+                        .carousel-item.reviews-carousel-item.ru-reviews-carousel-item
+                            .row.d-flex.justify-content-center.align-items-center
+                                .col-12.col-md-5.col-xl-4.d-flex.justify-content-center.align-items-center
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/rec-profile-img-alexander-m.webp' alt='Изображение рекомендателя Алксандр Л.')
+                                .col-md-7.col-xl-8.text-center
+                                    .reviews-text-wrapper.text-center
+                                        div.mainpage-reviews-name Алксандр Л.
+                                        div.mainpage-reviews-prof музыкант
+                                        div.mainpage-reviews-review.fst-italic "Вита - замечательный и вдумчивый специалист своего дела. Я проходил ее онлайн курс по инвестициям и несколько раз консультировался с ней  по телефону. Могу с уверенностью порекомендовать ее как ответственного и надежного мастера своего дела."
+                        .carousel-item.reviews-carousel-item.ru-reviews-carousel-item
+                            .row.d-flex.justify-content-center.align-items-center
+                                .col-12.col-md-5.col-xl-4.d-flex.justify-content-center.align-items-center
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/rec-profile-img-rami-p.webp' alt='Изображение рекомендателя Надав П')
+                                .col-md-7.col-xl-8.text-center
+                                    .reviews-text-wrapper.text-center
+                                        div.mainpage-reviews-name Надав П
+                                        div.mainpage-reviews-prof Бухгалтер
+                                        div.mainpage-reviews-review.fst-italic "Я приобрёл квартиру в Болгарии через Инвест Кафе, и могу с уверенностью сказать, что это был отличный опыт. Агентство предоставило исключительный сервис на каждом этапе сделки, включая помощь в получении ипотеки. У команды глубокие знания рынка, и они работают с лучшими подрядчиками и застройщиками в Греции и Болгарии. Больше всего меня впечатлила основательница компании – настоящий аналитик рынка недвижимости с глубоким пониманием его особенностей и тенденций. Инвест Кафе не только нашли мне отличные сделки, но и дали ценные советы по максимизации прибыли и долгосрочному планированию инвестиций. Я настоятельно рекомендую Инвест Кафе всем, кто ищет надёжного партнёра для покупки недвижимости за рубежом. С ними процесс покупки прост, приятен, а результаты превосходят все ожидания!"
+                        .carousel-item.reviews-carousel-item.ru-reviews-carousel-item
+                            .row.d-flex.justify-content-center.align-items-center
+                                .col-12.col-md-5.col-xl-4.d-flex.justify-content-center.align-items-center
+                                    img.shadow-1-strong.mainpage-reviews-img(src='/img/rec-profile-img-anna-v.webp' alt='Изображение рекомендателя Надав П')
+                                .col-md-7.col-xl-8.text-center
+                                    .reviews-text-wrapper.text-center
+                                        div.mainpage-reviews-name Анна В
+                                        div.mainpage-reviews-prof UI/UX Specialist
+                                        div.mainpage-reviews-review.fst-italic "Огромная благодарность Вите за невероятную помощь в покупке студии в Болгарии! С самого начала чувствовалась уверенность, поддержка и искреннее участие. Вита всегда была на связи, отвечала на все вопросы, помогала с документами и подбирала варианты с учётом всех моих пожеланий. Благодаря ей процесс прошёл легко, спокойно и без стресса. Я получила именно то, о чём мечтала! Очень рада, что обратилась именно к ней, и с удовольствием рекомендую Виту всем, кто ищет надёжного и внимательного специалиста!"
                     button.carousel-control-prev(type='button' data-bs-target='#reviewsCarousel' data-bs-slide='prev')
                         span.carousel-control-prev-icon.mainpage-reviews-carousel-prev-icon(aria-hidden='true')
                         span.visually-hidden Previous
@@ -306,8 +355,8 @@ block content
         .row.mainpage-blog-headline-row.d-felx.justify-content-center
             .col-12.mainpage-blog-headline-col
                 .row.text-center
-                    h2.mainpage-blog-tag Important To Know
-                    h3.mainpage-blog-headline Selected Articles From Our Blog 
+                    h2.mainpage-blog-tag Важно знать
+                    h3.mainpage-blog-headline Избранные статьи из нашего блога 
         .row.mainpage-blog-cards-row.d-felx.justify-content-center.flex-md-row-reverse.mx-4 
             .col-12.col-md-6.col-lg-3
                 .card.mainpage-blog-card.en-mainpage-blog-card.py-3
@@ -363,7 +412,7 @@ block content
                                     button.mainpage-blog-card-btn(data-slug="What-type-of-property-should-you-invest-in-Bulgaria") Continue Reading
         .row.mainpage-blog-btn-row.d-felx.justify-content-center
             .col-12.text-center.py-3    
-                button.btn-cta.to-blog-btn Blog Page  
+                button.to-blog-btn Страница блога  
 
     .container-fluid.mainpage-contact-us-container
         .row.mainpage-contact-us-headline-row.d-felx.justify-content-center

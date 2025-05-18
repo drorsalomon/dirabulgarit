@@ -883,3 +883,8 @@ if (config.Elements.hotAssetsContainer || config.Elements.projectAssetsContainer
     card.style.opacity = 1;
   });
 }
+
+// Reviews carousel animation
+if (config.Elements.reviewsCarousel) {
+  animation.animateReviewsCarousel();
+}

@@ -52,6 +52,8 @@ export const Elements = {
   heroText: document.querySelector('.hero-text'),
   heroIcons: document.querySelector('.hero-icons-row'),
   hotAssetsContainer: document.querySelector('.mainpage-hot-assets-container'),
+  // Reviews Carousel
+  reviewsCarousel: document.querySelector('.reviews-carousel'),
   // Footer
   footerContainer: document.querySelector('.footer-container'),
   footerCopyContainer: document.querySelector('.footer-copyright-text'),

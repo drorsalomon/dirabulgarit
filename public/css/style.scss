@@ -268,6 +268,7 @@ body {
 .btn-cta-asset,
 .invest-guide-btn,
 .blog-card-btn,
+.to-blog-btn,
 .mainpage-blog-card-btn,
 .section-headline-cta-btn,
 .error-btn,
@@ -289,10 +290,9 @@ body {
   height: 6rem;
 }
 
-.btn-cta,
-.btn-cta--offcanvas,
 .invest-guide-btn,
 .blog-card-btn,
+.to-blog-btn,
 .section-headline-cta-btn,
 .error-btn,
 .mobile-asset-favorite-btn,
@@ -301,6 +301,13 @@ body {
   border: 1px solid $text-color-secondary;
   color: $bg-color-primary;
   background-color: $text-color-secondary;
+}
+
+.btn-cta,
+.btn-cta--offcanvas {
+  border: 1px solid $cta-color;
+  color: $bg-color-primary;
+  background-color: $cta-color;
 }
 
 .btn-cta:focus {
@@ -1225,21 +1232,31 @@ input[type='text']::placeholder {
   background-color: $bg-color-secondary !important;
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transition: height 0.4s ease; // Smooth height animation
+  min-height: 20rem; // Prevent collapse
+  overflow: hidden; // Prevent content overflow during transition
 }
 
 .reviews-carousel-item {
   border: none !important;
   background-color: $bg-color-secondary !important;
-  padding: 4rem;
-  height: 45rem;
-}
-
-.en-reviews-carousel-item {
-  height: 55rem;
+  padding: 2rem;
+  min-height: 20rem; // Minimum height to prevent collapse
+  height: auto; // Allow content to determine height
+  display: flex;
+  align-items: center; // Vertically center content
+  // Removed opacity to avoid overriding Bootstrap's display
 }
 
 .reviews-carousel-item.active {
   background-color: $bg-color-secondary !important;
+  // Rely on Bootstrap's display: block for active item
+}
+
+.he-reviews-carousel-item,
+.en-reviews-carousel-item,
+.ru-reviews-carousel-item {
+  height: auto; // Ensure no fixed height
 }
 
 .mainpage-reviews-img {
@@ -1249,7 +1266,6 @@ input[type='text']::placeholder {
   -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
   shape-outside: circle(50% at 50% 50%);
-  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -1268,6 +1284,16 @@ input[type='text']::placeholder {
 .mainpage-reviews-review {
   font-size: $h7;
   color: $text-color-primary;
+  max-width: 90%; // Prevent text from stretching too wide
+  margin: 0 auto;
+}
+
+.reviews-text-wrapper {
+  max-width: 100%;
+  text-align: right; // For Hebrew (RTL)
+  &[dir='ltr'] {
+    text-align: left; // For English/Russian (LTR)
+  }
 }
 
 .mainpage-reviews-carousel-prev-icon {
@@ -1278,10 +1304,6 @@ input[type='text']::placeholder {
 .mainpage-reviews-carousel-next-icon {
   margin-right: 0.5rem;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232078a9' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
-}
-
-.reviews-btn-container {
-  margin-bottom: 5rem;
 }
 
 // ***** Pricing *****

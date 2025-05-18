@@ -3005,6 +3005,7 @@ body {
 .btn-cta-asset,
 .invest-guide-btn,
 .blog-card-btn,
+.to-blog-btn,
 .mainpage-blog-card-btn,
 .section-headline-cta-btn,
 .error-btn,
@@ -3026,10 +3027,9 @@ body {
   height: 6rem;
 }
 
-.btn-cta,
-.btn-cta--offcanvas,
 .invest-guide-btn,
 .blog-card-btn,
+.to-blog-btn,
 .section-headline-cta-btn,
 .error-btn,
 .mobile-asset-favorite-btn,
@@ -3038,6 +3038,13 @@ body {
   border: 1px solid #2078a9;
   color: #ffffff;
   background-color: #2078a9;
+}
+
+.btn-cta,
+.btn-cta--offcanvas {
+  border: 1px solid #f28c38;
+  color: #ffffff;
+  background-color: #f28c38;
 }
 
 .btn-cta:focus {
@@ -3945,21 +3952,29 @@ input[type=text]::placeholder {
   background-color: #f7f7f7 !important;
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transition: height 0.4s ease;
+  min-height: 20rem;
+  overflow: hidden;
 }
 
 .reviews-carousel-item {
   border: none !important;
   background-color: #f7f7f7 !important;
-  padding: 4rem;
-  height: 45rem;
-}
-
-.en-reviews-carousel-item {
-  height: 55rem;
+  padding: 2rem;
+  min-height: 20rem;
+  height: auto;
+  display: flex;
+  align-items: center;
 }
 
 .reviews-carousel-item.active {
   background-color: #f7f7f7 !important;
+}
+
+.he-reviews-carousel-item,
+.en-reviews-carousel-item,
+.ru-reviews-carousel-item {
+  height: auto;
 }
 
 .mainpage-reviews-img {
@@ -3969,7 +3984,6 @@ input[type=text]::placeholder {
   -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
   shape-outside: circle(50% at 50% 50%);
-  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -3988,6 +4002,16 @@ input[type=text]::placeholder {
 .mainpage-reviews-review {
   font-size: 1.2rem;
   color: #5c5e64;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.reviews-text-wrapper {
+  max-width: 100%;
+  text-align: right;
+}
+.reviews-text-wrapper[dir=ltr] {
+  text-align: left;
 }
 
 .mainpage-reviews-carousel-prev-icon {
@@ -3998,10 +4022,6 @@ input[type=text]::placeholder {
 .mainpage-reviews-carousel-next-icon {
   margin-right: 0.5rem;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232078a9' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
-}
-
-.reviews-btn-container {
-  margin-bottom: 5rem;
 }
 
 .mainpage-blog-container {

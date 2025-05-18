@@ -207,3 +207,72 @@ export const animateCardsFadeIn = (element) => {
     observer.observe(card);
   });
 };
+
+// Reviews carousel smooth transition animations
+export const animateReviewsCarousel = () => {
+  const carousel = document.querySelector('#reviewsCarousel');
+  const carouselInner = document.querySelector('.reviews-carousel-inner');
+  const carouselItems = document.querySelectorAll('.reviews-carousel-item');
+
+  if (!carousel || !carouselInner || !carouselItems.length) {
+    console.error('Carousel elements not found');
+    return;
+  }
+
+  const setCarouselHeight = (item) => {
+    if (item) {
+      const originalStyles = {
+        display: item.style.display,
+        visibility: item.style.visibility,
+        position: item.style.position,
+      };
+      item.style.display = 'block';
+      item.style.visibility = 'hidden';
+      item.style.position = 'absolute';
+      const height = item.offsetHeight;
+      carouselInner.style.height = `${height}px`;
+      item.style.display = originalStyles.display;
+      item.style.visibility = originalStyles.visibility;
+      item.style.position = originalStyles.position;
+    }
+  };
+
+  const activeItem = carousel.querySelector('.reviews-carousel-item.active');
+  if (activeItem) {
+    setCarouselHeight(activeItem);
+  }
+
+  carousel.addEventListener('slide.bs.carousel', (event) => {
+    const nextItem = carouselItems[event.to];
+    if (nextItem) {
+      nextItem.style.display = 'block';
+      nextItem.style.position = 'absolute';
+    }
+  });
+
+  carousel.addEventListener('slid.bs.carousel', (event) => {
+    const nextItem = carouselItems[event.to];
+    if (nextItem) {
+      setTimeout(() => {
+        setCarouselHeight(nextItem);
+      }, 10);
+    }
+    carouselItems.forEach((item) => {
+      if (!item.classList.contains('active')) {
+        item.style.display = 'none';
+        item.style.position = 'absolute';
+      } else {
+        item.style.position = 'relative';
+      }
+    });
+  });
+
+  const handleResize = debounce(() => {
+    const currentActiveItem = carousel.querySelector('.reviews-carousel-item.active');
+    if (currentActiveItem) {
+      setCarouselHeight(currentActiveItem);
+    }
+  }, 100);
+
+  window.addEventListener('resize', handleResize);
+};
