@@ -164,9 +164,9 @@ window.onload = function () {
     const href = getCurrentPath();
 
     // Reset all
-    ['assetCatalogDdBtn', 'projectsDdBtn', 'commercialDdBtn'].forEach((btn) => {
-      config.Elements[btn].classList.remove('active-link', 'offcanvas-active-link');
-    });
+    // ['assetCatalogDdBtn', 'projectsDdBtn', 'commercialDdBtn'].forEach((btn) => {
+    //   config.Elements[btn].classList.remove('active-link', 'offcanvas-active-link');
+    // });
 
     if (!href) setActiveLinkClass(config.Elements.homePageLink, type);
     if (href === 'blog' || href === '/blog') setActiveLinkClass(config.Elements.blogLink, type);
