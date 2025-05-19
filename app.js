@@ -16,21 +16,22 @@ const viewRouter = require('./routes/viewRoutes');
 const assetRouter = require('./routes/assetRoutes');
 const userRouter = require('./routes/userRoutes');
 const projectRouter = require('./routes/projectRoutes');
-const commercialRouter = require('./routes/commercialRoutes');
-const landingRouter = require('./routes/landingRoutes');
 const blogRouter = require('./routes/blogRoutes');
 const apiRouter = require('./routes/apiRoutes');
 const enViewRouter = require('./routes/enViewRoutes');
 const enAssetRouter = require('./routes/enAssetRoutes');
 const enProjectRouter = require('./routes/enProjectRoutes');
-const enCommercialRouter = require('./routes/enCommercialRoutes');
 const enBlogRouter = require('./routes/enBlogRoutes');
 const ruViewRouter = require('./routes/ruViewRoutes');
 const ruAssetRouter = require('./routes/ruAssetRoutes');
 const ruProjectRouter = require('./routes/ruProjectRoutes');
-const ruCommercialRouter = require('./routes/ruCommercialRoutes');
 const ruBlogRouter = require('./routes/ruBlogRoutes');
 const { dailyAssetPriceNisUpdate, getZohoRefreshToken, deleteOldPDFs } = require('./services/cronJobs');
+
+//const commercialRouter = require('./routes/commercialRoutes');
+//const enCommercialRouter = require('./routes/enCommercialRoutes');
+//const ruCommercialRouter = require('./routes/ruCommercialRoutes');
+//const landingRouter = require('./routes/landingRoutes');
 
 // Start express app
 const app = express();
@@ -163,25 +164,25 @@ app.use('/', viewRouter);
 app.use('/asset', assetRouter);
 app.use('/user', userRouter);
 app.use('/project', projectRouter);
-app.use('/commercial', commercialRouter);
 app.use('/blog', blogRouter);
-app.use('/landing', landingRouter);
 app.use('/api', apiRouter);
+//app.use('/commercial', commercialRouter);
+//app.use('/landing', landingRouter);
 // English
 app.use('/en', enViewRouter);
 app.use('/en/asset', enAssetRouter);
 app.use('/en/project', enProjectRouter);
-app.use('/en/commercial', enCommercialRouter);
 app.use('/en/blog', enBlogRouter);
+//app.use('/en/commercial', enCommercialRouter);
 // Russian
 app.use('/ru', ruViewRouter);
 app.use('/ru/asset', ruAssetRouter);
 app.use('/ru/project', ruProjectRouter);
-app.use('/ru/commercial', ruCommercialRouter);
 app.use('/ru/blog', ruBlogRouter);
+//app.use('/ru/commercial', ruCommercialRouter);
 
-// dailyAssetPriceNisUpdate.start();
-// getZohoRefreshToken.start();
+dailyAssetPriceNisUpdate.start();
+//getZohoRefreshToken.start();
 deleteOldPDFs.start();
 
 app.all('*', (req, res, next) => {
