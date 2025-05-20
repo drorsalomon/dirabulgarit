@@ -8,12 +8,12 @@ export const switchSearchPriceCurrencyHtmlOnLoad = (priceInput, isEuro = true) =
   if (isEuro) {
     if (priceInput)
       priceInput.forEach((el) => {
-        if (!el.value) el.placeholder = '€' + el.placeholder;
+        if (!el.value) el.placeholder = el.placeholder;
       });
   } else {
     if (priceInput)
       priceInput.forEach((el) => {
-        if (!el.value) el.placeholder = '₪' + el.placeholder;
+        if (!el.value) el.placeholder = el.placeholder;
       });
   }
 };
@@ -415,7 +415,7 @@ export const priceInputSetter = (inputMin, inputMax, onLoad = false, notModal = 
   };
 
   const updatePriceDisplay = () => {
-    const currency = getCurrencySymbol();
+    const currency = getCurrencySymbol(); // e.g., '€'
     const language = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY));
 
     let minVal = cleanValue(inputMin.value);
@@ -431,13 +431,14 @@ export const priceInputSetter = (inputMin, inputMax, onLoad = false, notModal = 
     minVal = minVal ? formatNumber(minVal) : inputMin.placeholder;
     maxVal = maxVal ? formatNumber(maxVal) : inputMax.placeholder;
 
-    // Add currency symbol
+    // Add currency symbol to input fields
     inputMin.value = minVal ? `${currency}${minVal}` : '';
     inputMax.value = maxVal ? `${currency}${maxVal}` : '';
 
     if (notModal) {
-      const displayMin = minVal || `${currency}0`;
-      const displayMax = maxVal || `${currency}10,000,000`;
+      // Ensure currency symbol is included in display values
+      const displayMin = minVal ? `${currency}${minVal}` : `${currency}0`;
+      const displayMax = maxVal ? `${currency}${maxVal}` : `${currency}10,000,000`;
       const priceText = ` (${displayMin} - ${displayMax})`;
 
       ddBtn.innerText = getLanguageText(language) + priceText;

@@ -1,3 +1,4 @@
 User-agent: *
-Disallow: 
-Sitemap: https://www.dirabulgarit.com/sitemap.xml
+Allow: /
+Disallow: /api
+Sitemap: https://www.dirabulgarit.co.il/sitemap.xml

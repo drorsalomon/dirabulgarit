@@ -55,6 +55,10 @@ nav,
   margin: 0 0.5rem 0.2rem 0;
 }
 
+.ru-navbar-mobile-icon {
+  margin: 0 1rem 0.2rem 0;
+}
+
 .navbar-call-us-text {
   color: $bg-color-primary;
   font-size: $h7;
@@ -206,7 +210,7 @@ nav,
 }
 
 .mobile-lang-collapse-col-ru {
-  margin-left: 6.5rem !important;
+  margin-left: 5rem !important;
 }
 
 .mobile-lang-collapse-col-en {
