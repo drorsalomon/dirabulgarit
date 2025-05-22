@@ -20,7 +20,7 @@ exports.getSearchResults = catchAsync(async (req, res, next) => {
   try {
     mongooseQuery = {
       ...Utils.buildMongooseQuery(req.body.filter),
-      origin: { $ne: 'yeheli' },
+      origin: { $ne: 'yeheli', $ne: 'Bulgarian Resales' },
     };
     let sortOptions;
     if (req.params.sort === 'price') {
