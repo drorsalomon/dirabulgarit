@@ -65,22 +65,22 @@ window.onload = function () {
     utils.switchSearchPriceCurrencyHtmlOnLoad(config.Elements.priceInput, false);
   }
 
-  // If Language isn't set or language is Hebrew
-  if (!JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) || JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE) {
-    // Set default language
-    if (!JSON.parse(localStorage.getItem(config.LANGUAGE_KEY))) {
-      localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.DEFAULT_LANGUAGE));
-    }
-    if (config.Elements.langDdBtn) utils.switchLanguageIconsSrc(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
-  }
-  // If language is English
-  else if (JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.EN_LANGUAGE) {
-    utils.switchLanguageIconsSrc(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
-  }
-  // If language is Russian
-  else if (JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.RU_LANGUAGE) {
-    utils.switchLanguageIconsSrc(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
-  }
+  // // If Language isn't set or language is Hebrew
+  // if (!JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) || JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.DEFAULT_LANGUAGE) {
+  //   // Set default language
+  //   if (!JSON.parse(localStorage.getItem(config.LANGUAGE_KEY))) {
+  //     localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.DEFAULT_LANGUAGE));
+  //   }
+  //   if (config.Elements.langDdBtn) utils.switchLanguageIconsSrc(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
+  // }
+  // // If language is English
+  // else if (JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.EN_LANGUAGE) {
+  //   utils.switchLanguageIconsSrc(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
+  // }
+  // // If language is Russian
+  // else if (JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) === config.RU_LANGUAGE) {
+  //   utils.switchLanguageIconsSrc(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
+  // }
 
   //  Header dropdown menu click (project catalog)
   let projectsDdSubmenu = document.querySelectorAll('.projects-dropdown .dropdown-toggle');
