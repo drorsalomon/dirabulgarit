@@ -658,11 +658,16 @@ a:hover {
   border-color: #2078a9 !important;
 }
 
+.ru-search-results-filters-sort--btn {
+  width: 15rem;
+}
+
 .search-results-filters-sort--btn::after {
   margin-right: 1.5rem;
 }
 
-.en-search-results-filters-sort--btn::after {
+.en-search-results-filters-sort--btn::after,
+.ru-search-results-filters-sort--btn::after {
   margin-right: 0;
   margin-left: 1.5rem;
 }

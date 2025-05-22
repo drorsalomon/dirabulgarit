@@ -2,8 +2,9 @@ import axios from 'axios';
 import * as config from './config';
 import { filterAssets } from './asset';
 import { getBlogs } from './blog';
+import debounce from 'lodash.debounce';
 
-export const switchLang = async (language, href) => {
+export const switchLang = debounce(async (language, href) => {
   try {
     const res = await axios({
       method: 'POST',
@@ -11,11 +12,7 @@ export const switchLang = async (language, href) => {
       data: { language },
     });
     if (res.data.status === 'success') {
-      if (
-        href.includes(`${config.baseProdUrl}asset/search-results`) ||
-        href.includes(`${config.baseProdUrl}${config.EN_LANGUAGE}/asset/search-results`) ||
-        href.includes(`${config.baseProdUrl}${config.RU_LANGUAGE}/asset/search-results`)
-      ) {
+      if (href.includes('asset/search-results')) {
         filterAssets(
           JSON.parse(localStorage.getItem(config.FILTER_KEY)),
           JSON.parse(localStorage.getItem(config.SORT_KEY)),
@@ -23,20 +20,16 @@ export const switchLang = async (language, href) => {
           JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)),
           JSON.parse(localStorage.getItem(config.RES_PER_PAGE_KEY)),
         );
-      } else if (
-        href === `${config.baseProdUrl}blog` ||
-        href === `${config.baseProdUrl}${config.EN_LANGUAGE}/blog` ||
-        href === `${config.baseProdUrl}${config.RU_LANGUAGE}/blog`
-      ) {
+      } else if (href.includes('blog')) {
         getBlogs(JSON.parse(localStorage.getItem(config.PAGE_NUMBER_KEY)), JSON.parse(localStorage.getItem(config.RES_PER_PAGE_KEY)));
       } else {
-        window.location.href = href;
+        window.location.href = href; // Redirect for homepage
       }
     }
   } catch (err) {
     console.log(err);
   }
-};
+}, 300);
 
 export const loadLang = async (language) => {
   try {

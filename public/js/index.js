@@ -260,18 +260,19 @@ window.onload = function () {
 // Set language icon on browser back button
 window.addEventListener('pageshow', function () {
   const href = window.location.href;
+  const currentLang = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)) || config.DEFAULT_LANGUAGE;
+  let expectedLang = config.DEFAULT_LANGUAGE;
   if (href.includes(`${config.baseProdUrl}${config.EN_LANGUAGE}`)) {
-    utils.switchLanguageIconsSrc(config.EN_LANGUAGE);
-    localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.EN_LANGUAGE));
-    loadLang(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
+    expectedLang = config.EN_LANGUAGE;
   } else if (href.includes(`${config.baseProdUrl}${config.RU_LANGUAGE}`)) {
-    utils.switchLanguageIconsSrc(config.RU_LANGUAGE);
-    localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.RU_LANGUAGE));
-    loadLang(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
+    expectedLang = config.RU_LANGUAGE;
+  }
+  if (currentLang !== expectedLang) {
+    localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(expectedLang));
+    utils.switchLanguageIconsSrc(expectedLang);
+    loadLang(expectedLang);
   } else {
-    if (config.Elements.langDdBtn) utils.switchLanguageIconsSrc(config.DEFAULT_LANGUAGE);
-    localStorage.setItem(config.LANGUAGE_KEY, JSON.stringify(config.DEFAULT_LANGUAGE));
-    loadLang(JSON.parse(localStorage.getItem(config.LANGUAGE_KEY)));
+    utils.switchLanguageIconsSrc(currentLang);
   }
 });
 
