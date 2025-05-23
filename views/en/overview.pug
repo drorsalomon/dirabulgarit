@@ -70,13 +70,13 @@ block content
             each asset in hotAssets
                 include _mobileAssetsCards       
 
-    .container-fluid.mainpage-about-container.overflow-hidden(role="img" aria-labelledby="aboutUsImageDescription")
+    .container-fluid.mainpage-about-container.en-mainpage-about-container.overflow-hidden(role="img" aria-labelledby="aboutUsImageDescription")
         span.visually-hidden(id="aboutUsImageDescription") Image of houses located on an alcove of the black sea in Burgas
         .row.mainpage-about-row.align-items-center
             .col-10.col-lg-8.mainpage-about-text-col
                 h2.mainpage-about-tag About Us
-                h3.mainpage-about-headline Dira Bulgarit - Israeli Real Estate in Bulgaria
-                div.mainpage-about-text A highly experienced professional team with one goal - to guide Israeli investors on the way to successful investments in the Bulgarian real estate market.
+                h3.mainpage-about-headline Dira Bulgarit from Invest Cafe
+                div.mainpage-about-text An experienced professional team that guides Israeli investors on their way to successful investments in the Bulgarian real estate market. From first consultation and up to the key.
             .col-10.col-lg-8.mainpage-about-button-col.en-mainpage-about-button-col.my-md-5.my-lg-1
                 .row.justify-content-center 
                     .col-12.col-sm-4.my-4
@@ -116,25 +116,12 @@ block content
                         use(xlink:href='/img/icons/search.svg#search')
                 div.mainpage-howitworks-headline Legal Review      
                 div.mainpage-howitworks-text We will conduct a comprehensive legal review of the property with the help of our legal advice in Bulgaria     
-            .col-12.col-md-6.col-xl-6.col.mainpage-howitworks-steps--col
-                div.mainpage-howitworks-icon--background
-                    svg.bi.mainpage-howitworks-icon(aria-labelledby="howItWorkIconEuro")
-                        title(id="howItWorkIconEuro") Euro currency icon
-                        use(xlink:href='/img/icons/euro-howitworks.svg#euro-howitworks')
-                div.mainpage-howitworks-headline Property Bid    
-                div.mainpage-howitworks-text We will help you formulate a fair price offer for the property and negotiate with the seller
-            .col-12.col-md-6.col-xl-6.col.mainpage-howitworks-steps--col
-                div.mainpage-howitworks-icon--background
-                    img.mainpage-howitworks-icon(src='/img/icons/handshake-svgrepo-com.svg' alt='Handshake icon') 
-                div.mainpage-howitworks-headline Guide      
-                div.mainpage-howitworks-text We will accompany you through the entire process from the stage of locating the property to after receiving the key                     
 
     .container-fluid.mainpage-why-bulgaria-container
         .row.mainpage-why-bulgaria-row.align-items-center.justify-content-center 
             .col.mainpage-why-bulgaria-col
                 div.mainpage-why-bulgaria-bg-video-container(role="img" aria-labelledby="whyBulgariaDescription")
-                    video(autoplay muted loop).mainpage-why-bulgaria-bg-video
-                        source(src='/videos/burgas-video-1080p.mp4' type='video/mp4')
+                    video(muted loop loading="lazy" data-src="/videos/burgas-video-1080p.mp4").mainpage-why-bulgaria-bg-video
                     span.visually-hidden(id="whyBulgariaDescription") A video that shows the city of Burgas from a bird's eye view
                 div.mainpage-why-bulgaria-text-container.w-75.text-center       
                     h2.mainpage-why-bulgaria-tag Investment          

@@ -32,7 +32,7 @@
   .mainpage-about-container {
     height: 70rem;
   }
-  .ru-mainpage-about-container {
+  .en-mainpage-about-container {
     height: 80rem;
   }
   .carousel-control-prev {
@@ -172,7 +172,10 @@
     height: 55rem;
   }
   .en-mainpage-about-container {
-    height: 61rem;
+    height: 59rem;
+  }
+  .ru-mainpage-about-container {
+    height: 65rem;
   }
   .mainpage-about-text-col {
     top: 45%;
@@ -186,9 +189,6 @@
   }
   .ru-hero-container {
     height: 83rem;
-  }
-  .ru-mainpage-about-container {
-    height: 75rem;
   }
   .mainpage-howitworks-text {
     font-size: 1.6rem;
@@ -706,7 +706,7 @@
     height: 80rem;
   }
   .ru-mainpage-about-container {
-    height: 90rem;
+    height: 80rem;
   }
   .en-mainpage-about-button-col {
     top: 78%;
@@ -806,6 +806,15 @@
   }
   .en-mainpage-blog-card-text-col {
     height: 16rem !important;
+  }
+  .ru-mainpage-blog-card {
+    height: 55rem !important;
+  }
+  .ru-mainpage-blog-card-title-col {
+    height: 23rem !important;
+  }
+  .ru-mainpage-blog-card-text-col {
+    height: 21rem !important;
   }
   .mainpage-contact-us-tag {
     font-size: 2.4rem;
@@ -1328,7 +1337,7 @@
     font-size: 3.4rem;
   }
   .en-mainpage-about-container {
-    height: 70rem;
+    height: 75rem;
   }
   .en-mainpage-about-button-col {
     top: 80%;
@@ -1382,6 +1391,15 @@
   }
   .en-mainpage-blog-card-text-col {
     height: 28rem !important;
+  }
+  .ru-mainpage-blog-card {
+    height: 79rem !important;
+  }
+  .ru-mainpage-blog-card-title-col {
+    height: 34rem !important;
+  }
+  .ru-mainpage-blog-card-text-col {
+    height: 35rem !important;
   }
   .search-container {
     display: block;
@@ -2021,7 +2039,7 @@
     height: 70rem;
   }
   .ru-hero-container {
-    height: 77rem;
+    height: 60rem;
   }
   .en-hero-text-col {
     top: 25%;
@@ -2031,6 +2049,12 @@
   }
   .en-hero-contact-us-col {
     top: 125%;
+  }
+  .en-mainpage-about-container {
+    height: 67rem;
+  }
+  .ru-mainpage-about-container {
+    height: 70rem;
   }
   .asset-card-img {
     height: 20rem;
@@ -2066,6 +2090,15 @@
   }
   .en-mainpage-blog-card-text-col {
     height: 24rem !important;
+  }
+  .ru-mainpage-blog-card {
+    height: 70rem !important;
+  }
+  .ru-mainpage-blog-card-title-col {
+    height: 31rem !important;
+  }
+  .ru-mainpage-blog-card-text-col {
+    height: 28rem !important;
   }
   .asset-gallery-mainImage {
     height: 43rem;
@@ -2646,6 +2679,15 @@
   }
   .en-mainpage-blog-card-text-col {
     height: 19rem !important;
+  }
+  .ru-mainpage-blog-card {
+    height: 60rem !important;
+  }
+  .ru-mainpage-blog-card-title-col {
+    height: 26rem !important;
+  }
+  .ru-mainpage-blog-card-text-col {
+    height: 23rem !important;
   }
   .asset-gallery-thumbnail {
     height: 7rem;

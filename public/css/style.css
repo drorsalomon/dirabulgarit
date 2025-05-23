@@ -3740,13 +3740,17 @@ input[type=text]::placeholder {
   background-size: cover;
   background-position: center;
   position: relative;
-  height: 80rem;
+  height: 70rem;
   -webkit-clip-path: polygon(0 7%, 100% 0, 100% 90%, 0 97%);
   clip-path: polygon(0 7%, 100% 0, 100% 90%, 0 97%);
 }
 
+.en-mainpage-about-container {
+  height: 80rem;
+}
+
 .ru-mainpage-about-container {
-  height: 85rem;
+  height: 92rem;
 }
 
 .mainpage-about-text-col {
