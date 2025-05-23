@@ -52,6 +52,8 @@ export const Elements = {
   heroText: document.querySelector('.hero-text'),
   heroIcons: document.querySelector('.hero-icons-row'),
   hotAssetsContainer: document.querySelector('.mainpage-hot-assets-container'),
+  whyBulgariaVideoContainer: document.querySelector('.mainpage-why-bulgaria-bg-video-container'),
+  whyBulgariaVideo: document.querySelector('.mainpage-why-bulgaria-bg-video'),
   // Reviews Carousel
   reviewsCarousel: document.querySelector('.reviews-carousel'),
   // Footer

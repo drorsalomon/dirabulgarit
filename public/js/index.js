@@ -341,6 +341,11 @@ if (config.Elements.shareBtnWhite)
     });
   });
 
+// ***** Why Bulgaria Video Lazy Loading *****
+document.addEventListener('DOMContentLoaded', () => {
+  utils.lazyLoadVideo(config.Elements.whyBulgariaVideoContainer, config.Elements.whyBulgariaVideo, { rootMargin: '100px', threshold: 0 });
+});
+
 // ***** Asset PDF button *****
 utils.setupPdfButtonListeners();
 

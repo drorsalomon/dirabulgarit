@@ -4,10 +4,10 @@ block head
     title השקעות נדל"ן בבולגריה: מאות נכסים ודירות להשקעה | דירה בולגרית
     meta(name="description" content='השקעות נדל"ן בבולגריה עושים רק עם דירה בולגרית! חברה המציעה מאות נכסים ודירות להשקעה בבולגריה, וליווי מקצועי משלב החיפוש ועד שלב קבלת המפתח. לפרטים לחצו >>')
     meta(name="robots" content="index, follow")
-    link(rel="canonical" href="https://www.dirabulgarit.com")
-    link(rel="alternate" href="https://www.dirabulgarit.com/en" hreflang="en")
-    link(rel="alternate" href="https://www.dirabulgarit.com" hreflang="he")
-    link(rel="alternate" href="https://www.dirabulgarit.com/ru" hreflang="ru")
+    link(rel="canonical" href="https://www.dirabulgarit.co.il")
+    link(rel="alternate" href="https://www.dirabulgarit.co.il" hreflang="he")
+    link(rel="alternate" href="https://www.dirabulgarit.co.il/en" hreflang="en")
+    link(rel="alternate" href="https://www.dirabulgarit.co.il/ru" hreflang="ru")
     
     meta(property="og:title" content="השקעות נדל\"ן בבולגריה: מאות נכסים ודירות להשקעה | דירה בולגרית")
     meta(name='description' content='השקעות נדל"ן בבולגריה עושים רק עם דירה בולגרית! חברה המציעה מאות נכסים ודירות להשקעה בבולגריה, וליווי מקצועי משלב החיפוש ועד שלב קבלת המפתח. לפרטים לחצו >>')
@@ -137,12 +137,25 @@ block content
                 div.mainpage-howitworks-headline ליווי      
                 div.mainpage-howitworks-text נלווה אתכם בכל התהליך משלב איתור הנכס ועד לאחר קבלת המפתח   
 
+    //- .container-fluid.mainpage-why-bulgaria-container
+    //-     .row.mainpage-why-bulgaria-row.align-items-center.justify-content-center 
+    //-         .col.mainpage-why-bulgaria-col
+    //-             div.mainpage-why-bulgaria-bg-video-container(role="img" aria-labelledby="whyBulgariaDescription")
+    //-                 video(autoplay muted loop loading="lazy").mainpage-why-bulgaria-bg-video
+    //-                     source(src='/videos/burgas-video-1080p.mp4' type='video/mp4')
+    //-                 span.visually-hidden(id="whyBulgariaDescription") וידאו שמראה את העיר בורגס ממבט על
+    //-             div.mainpage-why-bulgaria-text-container.w-75.text-center       
+    //-                 h2.mainpage-why-bulgaria-tag השקעה          
+    //-                 h3.mainpage-why-bulgaria-headline(dir='rtl') אז למה בולגריה?
+    //-                 div.mainpage-why-bulgaria-text(dir='rtl') הכלכלה הבולגרית נמצאת בצמיחה מתמדת שנובעת מריבוי ההשקעות במדינה ובחברותה באיחוד האירופי. מחירי הנדל"ן במדינה הינם נגישים וישנה תשואה גבוהה על ההשכרה, ביחוד באזורים התיירותיים כמו בורגס ובנסקו. הכנו עבורכם מדריך השקעה מפורט בכדי לעזור לכם בצעדים הראשונים לעבר העסקה הנחשקת.
+    //-             div.invest-guide-btn-container
+    //-                 button.invest-guide-btn למדריך ההשקעה
+
     .container-fluid.mainpage-why-bulgaria-container
         .row.mainpage-why-bulgaria-row.align-items-center.justify-content-center 
             .col.mainpage-why-bulgaria-col
                 div.mainpage-why-bulgaria-bg-video-container(role="img" aria-labelledby="whyBulgariaDescription")
-                    video(autoplay muted loop loading="lazy").mainpage-why-bulgaria-bg-video
-                        source(src='/videos/burgas-video-1080p.mp4' type='video/mp4')
+                    video(muted loop loading="lazy" data-src="/videos/burgas-video-1080p.mp4").mainpage-why-bulgaria-bg-video
                     span.visually-hidden(id="whyBulgariaDescription") וידאו שמראה את העיר בורגס ממבט על
                 div.mainpage-why-bulgaria-text-container.w-75.text-center       
                     h2.mainpage-why-bulgaria-tag השקעה          

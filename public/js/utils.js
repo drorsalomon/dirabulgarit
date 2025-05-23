@@ -500,6 +500,39 @@ export const clearDuplicates = (searchFilterObj) => {
   return searchFilterObj.oceanView;
 };
 
+// Lazy load a video using Intersection Observer
+export const lazyLoadVideo = (containerSelector, videoSelector, options = { rootMargin: '100px', threshold: 0 }) => {
+  const videoContainer = containerSelector;
+  const video = videoSelector;
+  if (!video || !videoContainer) return;
+
+  const videoSrc = video.dataset.src;
+  if (!videoSrc) return;
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Add the video source
+        const source = document.createElement('source');
+        source.src = videoSrc;
+        source.type = 'video/mp4';
+        video.appendChild(source);
+
+        // Add loaded class for CSS transition
+        video.classList.add('loaded');
+
+        // Start playback
+        video.play().catch((err) => console.error('Video playback failed:', err));
+
+        // Stop observing once loaded
+        observer.unobserve(videoContainer);
+      }
+    });
+  }, options);
+
+  observer.observe(videoContainer);
+};
+
 // ***** Asset PDF button *****
 const extractUniqueText = (elements) => {
   return Array.from(elements)
