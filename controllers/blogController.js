@@ -1,7 +1,9 @@
 const Blog = require('../models/blogModel');
 const enBlog = require('../models/enBlogModel');
+const ruBlog = require('../models/ruBlogModel');
 const Asset = require('../models/assetModel');
 const enAsset = require('../models/enAssetModel');
+const ruAsset = require('../models/ruAssetModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 const Utils = require('../utils/utils');
@@ -12,32 +14,29 @@ let totalBlogs = '';
 let totalPages = '';
 let pageNumber = '';
 
+function getModelsByLang(lang) {
+  if (lang === 'en') return { BlogModel: enBlog, AssetModel: enAsset };
+  if (lang === 'ru') return { BlogModel: ruBlog, AssetModel: ruAsset };
+  return { BlogModel: Blog, AssetModel: Asset };
+}
+
 exports.getBlogs = catchAsync(async (req, res, next) => {
-  let sortOptions = { date: -1 };
+  const { BlogModel } = getModelsByLang(res.locals.lang);
+  const sortOptions = { date: -1 };
 
-  const totalBlogsArray = res.locals.lang === 'he' ? await Blog.find({}) : await enBlog.find({});
+  const totalBlogsArray = await BlogModel.find({});
 
-  const blogs =
-    res.locals.lang === 'he'
-      ? await Blog.find({})
-          .sort(sortOptions)
-          .skip((req.params.pageNumber - 1) * req.params.resPerPage)
-          .limit(parseInt(req.params.resPerPage))
-      : await enBlog
-          .find({})
-          .sort(sortOptions)
-          .skip((req.params.pageNumber - 1) * req.params.resPerPage)
-          .limit(parseInt(req.params.resPerPage));
+  const blogs = await BlogModel.find({})
+    .sort(sortOptions)
+    .skip((req.params.pageNumber - 1) * req.params.resPerPage)
+    .limit(parseInt(req.params.resPerPage));
+
+  if (!blogs) return next(new AppError('Could not find the requested blogs!', 404));
 
   totalBlogs = blogs.length;
-
   blogsArray = blogs;
-
   totalPages = Utils.populatePagesArray(totalBlogsArray, req.params.resPerPage);
-
   pageNumber = req.params.pageNumber;
-
-  if (!blogs) return next(new AppError('Could not find the requested hot assets!', 404));
 
   for (const blog of blogs) {
     blog.sectionOneTexts[0] = Utils.limitString(blog.sectionOneTexts[0], 350);
@@ -65,22 +64,25 @@ exports.renderBlogs = catchAsync(async (req, res, next) => {
 });
 
 exports.getBlog = catchAsync(async (req, res, next) => {
-  let blogAssets;
-  const blog = res.locals.lang === 'he' ? await Blog.findOne({ slug: req.params.slug }) : await enBlog.findOne({ slug: req.params.slug });
+  const { BlogModel, AssetModel } = getModelsByLang(res.locals.lang);
+  const blog = await BlogModel.findOne({ slug: req.params.slug });
+
   if (!blog) {
     return next(new AppError('Could not find the requested blog!', 404));
   }
 
-  let sortOptions = { project: 1, price: 1 };
-  const hotAssets =
-    res.locals.lang === 'he' ? await Asset.find({ hotAsset: true }).sort(sortOptions) : await enAsset.find({ hotAsset: true }).sort(sortOptions);
+  const sortOptions = { project: 1, price: 1 };
+  const hotAssets = await AssetModel.find({ hotAsset: true }).sort(sortOptions);
   if (!hotAssets) return next(new AppError('Could not find the requested hot assets!', 404));
 
+  let blogAssets;
   if (blog.blogAssets) {
-    blogAssets =
-      res.locals.lang === 'he'
-        ? await Asset.find({ city: blog.blogAssets, sold: false, origin: { $ne: 'yeheli' } }).sort(sortOptions)
-        : await enAsset.find({ city: blog.blogAssets, sold: false, origin: { $ne: 'yeheli' } }).sort(sortOptions);
+    blogAssets = await AssetModel.find({
+      city: blog.blogAssets,
+      sold: false,
+      origin: { $ne: 'yeheli' },
+    }).sort(sortOptions);
+
     if (!blogAssets) return next(new AppError('Could not find the requested blog assets!', 404));
   }
 
