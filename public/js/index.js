@@ -651,7 +651,6 @@ if (config.Elements.contactUsForm)
       false,
     );
   });
-
 if (config.Elements.contactUsPhoneInput)
   config.Elements.contactUsPhoneInput.addEventListener('input', function () {
     config.Elements.contactUsPhoneInput.setCustomValidity('');
@@ -665,25 +664,6 @@ if (config.Elements.contactUsEmailInput)
     if (config.Elements.contactUsEmailInput.validity.patternMismatch) {
       config.Elements.contactUsEmailInput.setCustomValidity('אנא הכניסו כתובת אימייל תקינה');
     }
-  });
-
-if (config.Elements.calendlyAgentsChoices)
-  config.Elements.calendlyAgentsChoices.forEach((el) => {
-    el.addEventListener('click', function (e) {
-      if (el.dataset.agent === 'yeheli') {
-        config.Elements.calendlyWidgetYeheli.style.display = 'block';
-        el.classList.add('search-results-filters-active');
-
-        config.Elements.calendlyWidgetShimon.style.display = 'none';
-        config.Elements.calendlyAgentShimon.classList.remove('search-results-filters-active');
-      } else if (el.dataset.agent === 'shimon') {
-        config.Elements.calendlyWidgetShimon.style.display = 'block';
-        el.classList.add('search-results-filters-active');
-
-        config.Elements.calendlyWidgetYeheli.style.display = 'none';
-        config.Elements.calendlyAgentYeheli.classList.remove('search-results-filters-active');
-      }
-    });
   });
 
 if (config.Elements.contactUsCloseBtnFixed)

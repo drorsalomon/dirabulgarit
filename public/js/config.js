@@ -150,12 +150,6 @@ export const Elements = {
   contactUsDescriptionInput: document.querySelector('.contact-us-description-input'),
   contactUsPhoneInvalid: document.querySelector('.contact-us-phone-invalid '),
   contactUsEmailInvalid: document.querySelector('.contact-us-email-invalid '),
-  calendlyAgentsBtn: document.querySelector('.calendly-agents-button'),
-  calendlyAgentsChoices: document.querySelectorAll('.calendly-agents-choice'),
-  calendlyWidgetYeheli: document.querySelector('.calendly-widget-yeheli'),
-  calendlyWidgetShimon: document.querySelector('.calendly-widget-shimon'),
-  calendlyAgentYeheli: document.querySelector('.calendly-agent-yeheli'),
-  calendlyAgentShimon: document.querySelector('.calendly-agent-shimon'),
   // Webinar
   webinarForm: document.querySelector('.webinar-form'),
   webinarFormInputName: document.querySelector('.webinar-input-name'),

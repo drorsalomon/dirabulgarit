@@ -33,13 +33,13 @@ block content
                             input.contact-us-honeypot-input(type='text' name='bot_check' style='display:none;' value='')
                             .row.contact-us-row.align-items-center
                                 .col-12.contact-us-col.d-flex.justify-content-end
-                                    input.contact-us-input.contact-us-name-input.form-control.en-search-filter-input(type='text' name='Last Name' maxlength='200' placeholder='Имя' aria-label='Имя' aria-describedby='basic-addon1' required)                            
-                                    .invalid-tooltip Пожалуйста, введите имя
+                                    input.contact-us-input.contact-us-name-input.form-control.en-search-filter-input(type='text' name='Last Name' maxlength="50" pattern='[A-Za-zА-Яа-яЁёא-ת\\s\'\\-]{2,50}' placeholder='Имя' aria-label='Имя' aria-describedby='basic-addon1' required)                            
+                                    .invalid-tooltip Пожалуйста, введите действительное имя
                                 .col-12.contact-us-col.d-flex.justify-content-end
-                                    input.contact-us-input.contact-us-phone-input.form-control.en-search-filter-input(type='text' name='Phone' maxlength='10' placeholder='Номер телефона' aria-label='Номер телефона' aria-describedby='basic-addon1' pattern='[0-9]{10}' required)
-                                    .invalid-tooltip.contact-us-phone-invalid Пожалуйста, введите действительный номер телефона.
+                                    input.contact-us-input.contact-us-phone-input.form-control.en-search-filter-input(type='text' name='Phone' maxlength="12" pattern='((02|03|04|08|09)[0-9]{7})|(((05[0-57-9])|(07[2-4,6-9])|(08[1,7,9])|(09[2-5,7,9])|(170)|(171)|(177)|(444)|(447))[0-9]{7})|(972((5[0-57-9])|(7[2-4,6-9])|(8[1,7,9])|(9[2-5,7,9])|(170)|(171)|(177)|(444)|(447))[0-9]{7})|(972(2|3|4|8|9)[0-9]{7})' placeholder='Номер телефона' aria-label='Номер телефона' aria-describedby='basic-addon1' required)
+                                    .invalid-tooltip.contact-us-phone-invalid Пожалуйста, введите действительный номер телефона
                                 .col-12.contact-us-col.d-flex.justify-content-end 
-                                    input.contact-us-input.contact-us-email-input.form-control.en-search-filter-input(type='email' ftype='email' autocomplete='false' name='Email' crmlabel='' maxlength='100' placeholder='Электронная почта  ' aria-label='Электронная почта' aria-describedby='basic-addon1' pattern='[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}' required)
+                                    input.contact-us-input.contact-us-email-input.form-control.en-search-filter-input(type='email' ftype='email' autocomplete='false' name='Email' crmlabel='' maxlength='100' placeholder='Электронная почта  ' aria-label='Электронная почта' aria-describedby='basic-addon1' pattern='^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$' required)
                                     .invalid-tooltip.contact-us-email-invalid Пожалуйста, введите действительный адрес электронной почты
                                 .col-12.contact-us-col.contact-us-last-col.d-flex.justify-content-end     
                                     textarea.contact-us-textarea.contact-us-description-input.form-control.en-search-filter-input(id='Description' name='Description' aria-label="Описание" rows="5" placeholder='ОписаниеХотите ли вы сообщить нам что-то еще?')

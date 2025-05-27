@@ -18,14 +18,14 @@
                         .col-md-2.contact-us-input-fixed-col
                             img.contact-us-fixed-logo(src='/img/footer-logo-eng.jpg' alt='Dira Bulgarit Logo')
                         .col-md-2.contact-us-input-fixed-col
-                            input.contact-us-input.contact-us-input.contact-us-name-input.form-control.en-search-filter-input(type='text' name='Last Name' maxlength='200' placeholder='Name' aria-label='Name' aria-describedby='basic-addon1' required)                            
-                            .invalid-tooltip.invalid-tooltip-fixed Name required 
+                            input.contact-us-input.contact-us-input.contact-us-name-input.form-control.en-search-filter-input(type='text' name='Last Name' maxlength="50" pattern='[A-Za-zА-Яа-яЁёא-ת\\s\'\\-]{2,50}' placeholder='Name' aria-label='Name' aria-describedby='basic-addon1' required)                            
+                            .invalid-tooltip.invalid-tooltip-fixed Please enter a valid name
                         .col-md-2.contact-us-input-fixed-col
-                            input.contact-us-input.contact-us-phone-input.form-control.en-search-filter-input(type='text' name='Phone' maxlength='10' placeholder='Phone number' aria-label='Phone number' aria-describedby='basic-addon1' pattern='[0-9]{10}' required)
-                            .invalid-tooltip.invalid-tooltip-fixed.contact-us-phone-invalid Phone number required
+                            input.contact-us-input.contact-us-phone-input.form-control.en-search-filter-input(type='text' name='Phone' maxlength="12" pattern='((02|03|04|08|09)[0-9]{7})|(((05[0-57-9])|(07[2-4,6-9])|(08[1,7,9])|(09[2-5,7,9])|(170)|(171)|(177)|(444)|(447))[0-9]{7})|(972((5[0-57-9])|(7[2-4,6-9])|(8[1,7,9])|(9[2-5,7,9])|(170)|(171)|(177)|(444)|(447))[0-9]{7})|(972(2|3|4|8|9)[0-9]{7})' placeholder='Phone number' aria-label='Phone number' aria-describedby='basic-addon1' required)
+                            .invalid-tooltip.invalid-tooltip-fixed.contact-us-phone-invalid Please enter a valid phone number
                         .col-md-2.contact-us-input-fixed-col
-                            input.contact-us-input.contact-us-email-input.form-control.en-search-filter-input(type='email' ftype='email' autocomplete='false' name='Email' crmlabel='' maxlength='100' placeholder='Email  ' aria-label='Email' aria-describedby='basic-addon1' pattern='[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}' required)
-                            .invalid-tooltip.invalid-tooltip-fixed.contact-us-email-invalid Email address required
+                            input.contact-us-input.contact-us-email-input.form-control.en-search-filter-input(type='email' ftype='email' autocomplete='false' name='Email' crmlabel='' maxlength='100' placeholder='Email  ' aria-label='Email' aria-describedby='basic-addon1' pattern='^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$' required)
+                            .invalid-tooltip.invalid-tooltip-fixed.contact-us-email-invalid Please enter a valid email address
                         .col-md-1.contact-us-fixed-bottom-col 
                             button.btn-cta-mobile-white.text-center(type='submit' id='formsubmit' class='formsubmit zcwf_button' value='שליחה' title='Submit')                
                                 img.btn-cta-mobile-icon(src='/img/icons/send-svgrepo-com.svg' alt='Send arrow Icon')
