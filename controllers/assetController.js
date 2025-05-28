@@ -20,7 +20,7 @@ exports.getSearchResults = catchAsync(async (req, res, next) => {
   try {
     mongooseQuery = {
       ...Utils.buildMongooseQuery(req.body.filter),
-      origin: { $in: 'vita' },
+      origin: { $in: ['vita', 'Bulgarian Resales'] },
     };
     let sortOptions;
     if (req.params.sort === 'price') {
@@ -30,18 +30,6 @@ exports.getSearchResults = catchAsync(async (req, res, next) => {
     }
     const totalAssetsArray = res.locals.lang === 'he' ? await Asset.find(mongooseQuery) : await enAsset.find(mongooseQuery);
     const totalAssets = totalAssetsArray.length;
-
-    // const assets =
-    //   res.locals.lang === 'he'
-    //     ? await Asset.find(mongooseQuery)
-    //         .sort(sortOptions)
-    //         .skip((req.params.pageNumber - 1) * req.params.resPerPage)
-    //         .limit(parseInt(req.params.resPerPage))
-    //     : await enAsset
-    //         .find(mongooseQuery)
-    //         .sort(sortOptions)
-    //         .skip((req.params.pageNumber - 1) * req.params.resPerPage)
-    //         .limit(parseInt(req.params.resPerPage));
 
     let assets;
 

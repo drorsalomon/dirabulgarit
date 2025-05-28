@@ -330,6 +330,34 @@ const emptyFilterObjBesideProjects = (filterObj) => {
   return emptyFilterObj;
 };
 
+const ddBtnTranslations = {
+  city: {
+    he: 'עיר',
+    en: 'City',
+    ru: 'Город',
+  },
+  oceanView: {
+    he: 'קרבה לים',
+    en: 'To Sea',
+    ru: 'Расстояние до моря',
+  },
+  rooms: {
+    he: 'חדרים',
+    en: 'Rooms',
+    ru: 'Кол-во комнат',
+  },
+  project: {
+    he: 'פרויקט',
+    en: 'Project',
+    ru: 'Проект',
+  },
+  price: {
+    he: 'מחיר',
+    en: 'Price',
+    ru: 'Стоимость',
+  },
+};
+
 export const btnAddActive = (searchFilterObj, filterBtn, type, notModal = true, ddBtn) => {
   filterBtn.forEach((el) => {
     if (type === 'city') {
@@ -338,7 +366,7 @@ export const btnAddActive = (searchFilterObj, filterBtn, type, notModal = true, 
           el.classList.add('active');
         }
         if (notModal) {
-          ddBtnTextSetter(ddBtn, filterBtn, true);
+          ddBtnTextSetter(ddBtn, filterBtn, type, true);
         }
       }
     }
@@ -348,7 +376,7 @@ export const btnAddActive = (searchFilterObj, filterBtn, type, notModal = true, 
           el.classList.add('active');
         }
         if (notModal) {
-          ddBtnTextSetter(ddBtn, filterBtn, true);
+          ddBtnTextSetter(ddBtn, filterBtn, type, true);
         }
       }
     }
@@ -358,7 +386,7 @@ export const btnAddActive = (searchFilterObj, filterBtn, type, notModal = true, 
           el.classList.add('active');
         }
         if (notModal) {
-          ddBtnTextSetter(ddBtn, filterBtn, true);
+          ddBtnTextSetter(ddBtn, filterBtn, type, true);
         }
       }
     }
@@ -368,29 +396,31 @@ export const btnAddActive = (searchFilterObj, filterBtn, type, notModal = true, 
           el.classList.add('active');
         }
         if (notModal) {
-          ddBtnTextSetter(ddBtn, filterBtn, true);
+          ddBtnTextSetter(ddBtn, filterBtn, type, true);
         }
       }
     }
   });
 };
 
-const getLanguageText = (language) => {
-  if (language === 'en') return 'price';
-  if (language === 'ru') return 'Стоимость';
-  return 'מחיר'; // default to English
+const getLanguageText = (language, type) => {
+  if (ddBtnTranslations[type] && ddBtnTranslations[type][language]) {
+    return ddBtnTranslations[type][language];
+  }
+  // Fallbacks if language/type not found
+  return ddBtnTranslations.price[language] || ddBtnTranslations.price.en;
 };
 
 const getCurrencySymbol = () => {
   return JSON.parse(localStorage.getItem(config.CURRENCY_KEY)) === 'euro' ? '€' : '₪';
 };
 
-export const ddBtnTextSetter = (ddBtn, filterBtn, onLoad = false) => {
+export const ddBtnTextSetter = (ddBtn, filterBtn, type, onLoad = false) => {
   const updateButtonText = () => {
     const language = JSON.parse(localStorage.getItem(config.LANGUAGE_KEY));
     const activeCount = Array.from(filterBtn).filter((btn) => btn.classList.contains('active')).length;
 
-    ddBtn.innerText = getLanguageText(language);
+    ddBtn.innerText = getLanguageText(language, type);
     if (activeCount > 0) {
       ddBtn.appendChild(document.createTextNode(` (${activeCount})`));
     }

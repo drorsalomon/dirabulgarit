@@ -80,7 +80,7 @@ exports.getBlog = catchAsync(async (req, res, next) => {
     blogAssets = await AssetModel.find({
       city: blog.blogAssets,
       sold: false,
-      origin: { $in: 'vita' },
+      origin: { $in: ['vita', 'Bulgarian Resales'] },
     }).sort(sortOptions);
 
     if (!blogAssets) return next(new AppError('Could not find the requested blog assets!', 404));
