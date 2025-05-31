@@ -1,0 +1,263 @@
+extends ../base
+
+block head
+    title Sinemorets Villas
+    meta(name="description" content="Sinemorets Villas: Luxury cottages by the sea in a stunning natural setting. 10 stylish homes with pools, privacy, and investment potential in Strandja Reserve.")
+    meta(name="robots" content="index, follow")
+    link(rel="canonical" href="https://www.dirabulgarit.co.il/en/project/sinemorets-villas")
+    link(rel="alternate" href="https://www.dirabulgarit.co.il/en/project/sinemorets-villas" hreflang="en")
+    link(rel="alternate" href="https://www.dirabulgarit.co.il/project/sinemorets-villas" hreflang="he")
+    link(rel="alternate" href="https://www.dirabulgarit.co.il/ru/project/sinemorets-villas" hreflang="ru")
+
+    meta(property="og:title" content="Sinemorets Villas")
+    meta(property="og:description" content="Sinemorets Villas: Luxury cottages by the sea in a stunning natural setting. 10 stylish homes with pools, privacy, and investment potential in Strandja Reserve.")
+    meta(property="og:image" content="https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868381-sinemorets-villas-1.webp")
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../../he/_headLinksScripts
+
+block content 
+
+    .container-fluid.project-main-image-container(role="img" aria-labelledby="sinemoretsVillasMainImageDescription")
+        span.visually-hidden(id="sinemoretsVillasMainImageDescription") An image of the Sinemorets Villas project buildings
+        .row.project-main-image-row
+            .col.project-main-image-col.project-main-image-col-sinemorets-villas 
+                h1.project-main-image-headline.project-main-image-headline-sinemorets-villas Sinemorets Villas
+    
+    .container-fluid.project-gallery-container
+        .row.project-gallery-headline-row.text-center.mx-2
+            .col-12.project-gallery-headline-col.p-0    
+                h2.project-gallery-headline Gallery
+        .row.project-gallery-row.text-center.mx-2
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868443-sinemorets-villas-12.webp' alt='Image of the Sinemorets Villas Project' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868414-sinemorets-villas-5.webp' alt='Image of the Sinemorets Villas Project' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868454-sinemorets-villas-14.webp' alt='Image of the Sinemorets Villas Project' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868485-sinemorets-villas-20.webp' alt='Image of the Sinemorets Villas Project' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868577-sinemorets-villas-53.webp' alt='Image of the Sinemorets Villas Project' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868491-sinemorets-villas-22.webp' alt='Image of the Sinemorets Villas Project' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+
+    #projectModal.modal.fade.asset-gallery-modal.text-center(tabindex='-1' aria-labelledby='projectModalLabel' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered
+            .asset-gallery-modal-content.modal-content
+                .row.d-flex
+                    .col-6.align-content-center
+                        div.text-start.px-4
+                            div.asset-gallery-img-text Sinemorets Villas
+                    .col-6
+                        div.text-end.p-3
+                            button.btn-close.asset-gallery-modal-close-btn.p-2.my-auto(type='button' data-bs-dismiss='modal' aria-label='Close')
+                #projectCarousel.carousel.slide(data-bs-touch='true' data-bs-interval='30000' data-bs-ride='carousel')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center.active
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868385-sinemorets-villas-2.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868406-sinemorets-villas-3.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868410-sinemorets-villas-4.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868414-sinemorets-villas-5.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868417-sinemorets-villas-6.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868422-sinemorets-villas-7.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868425-sinemorets-villas-8.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868429-sinemorets-villas-9.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868433-sinemorets-villas-10.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868438-sinemorets-villas-11.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868443-sinemorets-villas-12.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868448-sinemorets-villas-13.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868454-sinemorets-villas-14.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868459-sinemorets-villas-15.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868466-sinemorets-villas-16.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868474-sinemorets-villas-17.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868478-sinemorets-villas-18.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868482-sinemorets-villas-19.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868485-sinemorets-villas-20.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868487-sinemorets-villas-21.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868491-sinemorets-villas-22.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868495-sinemorets-villas-23.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868498-sinemorets-villas-24.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868504-sinemorets-villas-25.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868507-sinemorets-villas-26.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868510-sinemorets-villas-27.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868513-sinemorets-villas-28.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868516-sinemorets-villas-29.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868518-sinemorets-villas-30.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868520-sinemorets-villas-31.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868523-sinemorets-villas-33.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868526-sinemorets-villas-34.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868528-sinemorets-villas-35.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868535-sinemorets-villas-36.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868539-sinemorets-villas-37.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868542-sinemorets-villas-38.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868545-sinemorets-villas-39.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868547-sinemorets-villas-40.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868550-sinemorets-villas-41.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868551-sinemorets-villas-42.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868553-sinemorets-villas-43.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868556-sinemorets-villas-44.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868558-sinemorets-villas-45.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868560-sinemorets-villas-46.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868562-sinemorets-villas-47.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868564-sinemorets-villas-48.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868566-sinemorets-villas-49.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868569-sinemorets-villas-50.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868572-sinemorets-villas-51.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868575-sinemorets-villas-52.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868577-sinemorets-villas-53.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868580-sinemorets-villas-54.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868582-sinemorets-villas-apartment-plan-1.webp' alt='Image of the Sinemorets Villas Project')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868582-sinemorets-villas-apartment-plan-2.webp' alt='Image of the Sinemorets Villas Project')
+                    button.carousel-control-prev(type='button' data-bs-target='#projectCarousel' data-bs-slide='prev')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-prev-icon.asset-gallery-carousel-prev-icon(aria-hidden='true')
+                    button.carousel-control-next(type='button' data-bs-target='#projectCarousel' data-bs-slide='next')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-next-icon.asset-gallery-carousel-next-icon(aria-hidden='true')        
+    
+    .container-fluid.project-numbers-container
+        .row.project-numbers-row.text-end.justify-content-center.mx-5
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-buildings-number.project-numbers-buildings-number-sinemorets-villas      
+                div.project-numbers-text Houses        
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-floors-number.project-numbers-floors-number-sinemorets-villas      
+                div.project-numbers-text Floors        
+    
+    .container-fluid.project-details-container
+        .row.project-details-row.text-end.mx-5.justify-content-center
+            .col-12.project-details-headline-col.p-0.text-center
+                h2.project-details-headline Sinemorets Villas
+            .col-10.project-details-headline-col.p-0.text-start
+                div.project-details-text Welcome to the cottage village in Sinemorets - the ideal place for those who are looking for a luxurious holiday by the sea in a beautiful setting. Our town is located in a picturesque place, surrounded by sea and mountains, and offers a unique experience of relaxation in nature.
+                div.project-details-text "Sinemorets Village" is a gated community of 10 houses that form a harmonious ensemble of stylish buildings in the traditional Bulgarian style. Each of the houses has an area of 200 square meters, which provides plenty of space for family and friends to enjoy your own piece of paradise on the Black Sea coast. And the closed territory of the complex will ensure the privacy and safety of residents.
+                div.project-details-text The cottage town is located in the prestigious area of Sinemorets, just a few minutes walk from the beach. You will be able to enjoy many beach activities as well as try the local cuisine in the nearby restaurants and cafes. And yet, you will have access to a variety of activities, such as hiking and horseback riding through the forest and the coast, boat rental on the Veleka River, rafting on a sea excursion, fishing, windsurfing and much more.
+                div.project-details-text Year-round maintenance of the complex, your site, house and pool is organized by the management company, which guarantees your safety and convenience. A beautiful fence runs along the entire perimeter, and the village has only 1 entrance and 1 exit, which provides additional security.
+                div.project-details-text Don't miss your chance to live in luxury and harmony with nature in Sinemorets Village - an ideal solution for those who are looking for a place to live or relax in a beautiful and peaceful place by the sea.
+                h3.project-details-sub-headline About our houses
+                div.project-details-text Our cottages are the perfect combination of modern amenities and a cozy country-house atmosphere. Our company offers you to buy your own cottage in one of the most beautiful places on the Black Sea coast.
+                div.project-details-text Each cottage that we offer is designed in a modern style and equipped with everything necessary for a comfortable stay. Large windows in the rooms provide a beautiful view of the sea and mountains, and balconies allow you to enjoy the fresh sea air. We have used only the best and environmentally friendly materials in the construction of each house to guarantee the reliability and durability of our cottages.
+                div.project-details-text Each house has its own plot of land of 400 m2, which is demarcated by a hedge, planted with lawn, flowers and trees. Each plot has a parking space for a car and a swimming pool (optional). In addition, each house has its own terrace where you can enjoy a cup of coffee in the morning or dinner at sunset.
+                div.project-details-text On the ground floor there is a living room with a fireplace, a kitchen, a bedroom, a pantry with a boiler and a washing machine, a toilet and a shower, a covered terrace. On the second floor there are 2 bedrooms, an office (dressing room), 2 toilet rooms with a shower, an open terrace, 2 balconies, a hall, access to a non-residential attic for storage. Each house has its own plot of land with a swimming pool (separate option), covered and open terrace, where you can relax with family and friends.
+                div.project-detail-img-container.d-flex.justify-content-center   
+                    img.project-details-img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868582-sinemorets-villas-project-plan.webp' alt='Layout simulations of the Sinemorets Villas project')
+                div.project-details-text.text-center <i>Houses layout of the Sinemorets Villas project</i>
+                h3.project-details-sub-headline About the nature around the village
+                div.project-details-text Sinemorets is a unique place on the southern coast of the Black Sea, where majestic nature is combined with the conveniences of a modern urban lifestyle.
+                div.project-details-text Sinemorets is located at the confluence of two rivers - Veleka and Rezovska, in the heart of the Strandja Nature Reserve. This area is rich not only in beautiful views, but also in unique plant and animal species. Here live wild horses, lynxes, rare birds and many other animals that you will not find anywhere else.
+                div.project-details-text Veleka beach, located near the village, is considered one of the most beautiful places on the entire Black Sea coast. This is not just a sandy beach, but a unique corner of nature, where green forests, mountain slopes and rocks, dark forests and the purest sea water of the Black Sea on one side of the spit and the fresh water of the Veleka River on the other are combined. The Blue Flag award only emphasizes its uniqueness and environmental friendliness.
+                div.project-details-text The village of Sinemorets itself is famous for its cozy atmosphere, the hospitality of the locals and the many cafes and restaurants where you can try local dishes and drinks. On top of that, there is always plenty of entertainment to suit all tastes, from sporting events to cultural events and concerts.
+                div.project-details-text Sinemorets has everything you need for a comfortable and unforgettable vacation - beautiful nature, ecologically clean beach, comfortable accommodation and plenty of entertainment. Come and see for yourself - there is a place for everyone!
+                h3.project-details-sub-headline About Enki Group
+                div.project-details-text ENKI GROUP successfully implements construction projects, creating high-quality real estate. To accelerate execution and increase efficiency, we require additional working capital. We invite investors to become part of our success by offering them favorable investment conditions.
+                div.project-details-text Purchasing real estate in our projects is not just acquiring a housing but a profitable investment that provides stable income, high liquidity, and complete satisfaction of your needs.
+                div.project-details-text We carefully study current trends and buyer preferences to create projects that fully meet their expectations.
+                div.project-details-text Every detail of our properties, from architecture to layouts, is designed with comfort and functionality in mind for future owners.
+
+    .container-fluid.project-amenities-container
+        .row.project-amenities-headline-row.text-center.mx-5
+            .col-12.project-amenities-headline-col.p-0
+                h2.project-amenities-headline Amenities
+        .row.project-amenities-row.text-end.mx-5.justify-content-start 
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/pool-swimming-pool-svgrepo-com.svg' alt='Swimming pool icon')
+                div.project-amenities-text(dir='rtl') Swimming Pool
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/beach-umbrella-svgrepo-com.svg' alt='Beach icon')
+                div.project-amenities-text Beach
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/fence-yard-svgrepo-com.svg' alt='Fence icon')
+                div.project-amenities-text Gated Complex 
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/solar-energy-renewable-energy-svgrepo-com.svg' alt='Solar energy icon')
+                div.project-amenities-text Solar Panels
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/sauna-svgrepo-com.svg' alt='Sauna icon')
+                div.project-amenities-text Sauna
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/parking-project-icon.svg' alt='Parking icon')
+                div.project-amenities-text Parking
+
+    .container-fluid.project-mid-image-container.project-mid-image-container-sinemorets-villas(role="img" aria-labelledby="sinemoretsVillasMidImageDescription")
+        span.visually-hidden(id="sinemoretsVillasMidImageDescription") Image of the Sinemorets Villas project
+    
+    .container-fluid.project-map-container
+        .row.project-map-row.text-center.mx-2.justify-content-center 
+            .col-12.project-map-headline-col
+                h2.project-map-headline Location
+            .col-12.col-md-10.project-map-col
+                div.project-map(id='map' data-long=27.752190 data-lat=42.710146 data-title='Sinemorets Villas')     
+
+    .container-fluid.project-video-container
+        .row.asset-video-row.mx-3.justify-content-center 
+            .col-12.col-md-10.asset-video-col.text-center(role="region" aria-labelledby="assetVideoDescription")
+                iframe(src='https://www.youtube.com/embed/LlL_YH_uwlY?si=a0ji69owUO_FhqwJ' frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen).asset-video                    
+            span.visually-hidden(id="assetVideoDescription") A video showcasing the Sinemorets Villas project                
+
+    .container-fluid.project-assets-container
+        .row.asset-related-assets-row.justify-content-center.mx-5.text-center
+            .col-12.project-assets-headline-col
+                h2.project-assets-headline Available Properties In The Project
+            each asset in projectAssets
+                include ../_assetsCards
+        .row.mobile-asset-related-assets-row.justify-content-center.mx-1.text-center
+            .col-12.project-assets-headline-col
+                h2.project-assets-headline Available Properties In The Project
+            each asset in projectAssets
+                include ../_mobileAssetsCards 
+
+    include ../_contactUsFixed  
+    include ../_contactUsFixedMobile 

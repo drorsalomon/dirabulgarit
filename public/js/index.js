@@ -147,9 +147,17 @@ window.onload = function () {
     const map = {
       projectBurgasDdBtn: ['atlantis-aria-2', 'atlantis-aria-3', 'atlantis-euphoria', 'atlas-azimuth'],
       projectSofiaDdBtn: ['atlantis-barcode', 'atlantis-barcode-2', 'mountain-view-residence', 'vitosha-mountain-view', 'vitosha-mountain-boutique'],
-      projectSvetiDdBtn: ['villa-margarita', 'mellia-florance', 'fort-noks-premier-suites', 'premier-fort-beach', 'prestige-fort-beach'],
+      projectSvetiDdBtn: [
+        'villa-margarita',
+        'mellia-florance',
+        'fort-noks-premier-suites',
+        'premier-fort-beach',
+        'prestige-fort-beach',
+        'enkibuild-lighthouse',
+      ],
       projectNessebarDdBtn: ['nessebar-fort-residence'],
       projectSunnyDdBtn: ['green-fort-suites'],
+      projectSinemoretsDdBtn: ['sinemorets-villas'],
     };
 
     for (const [btn, projects] of Object.entries(map)) {
@@ -715,37 +723,6 @@ if (config.Elements.contactUsExpandBtnContainer)
 
 // Counter Animations
 const PROJECT_COUNTERS = {
-  aa2: [
-    { element: config.Elements.aa2ProjectApartmentsNumber, value: 159, suffix: '' },
-    { element: config.Elements.aa2ProjectParkingSpotsNumber, value: 174, suffix: '' },
-  ],
-  aa3: [
-    { element: config.Elements.aa3ProjectBuildingsNumber, value: 3, suffix: '' },
-    { element: config.Elements.aa3ProjectFloorsNumber, value: 9, suffix: '' },
-    { element: config.Elements.aa3ProjectApartmentsNumber, value: 210, suffix: '' },
-    { element: config.Elements.aa3ProjectParkingSpotsNumber, value: 250, suffix: '' },
-  ],
-  ae: [
-    { element: config.Elements.aeProjectBuildingsNumber, value: 6, suffix: '' },
-    { element: config.Elements.aeProjectFloorsNumber, value: 9, suffix: '' },
-    { element: config.Elements.aeProjectApartmentsNumber, value: 292, suffix: '' },
-    { element: config.Elements.aeProjectParkingSpotsNumber, value: 320, suffix: '' },
-    { element: config.Elements.aeProjectAreaNumber, value: 27955, suffix: 'area' },
-    { element: config.Elements.aeProjectGreenAreaNumber, value: 5200, suffix: 'area' },
-  ],
-  ab: [
-    { element: config.Elements.abProjectBuildingsNumber, value: 2, suffix: '' },
-    { element: config.Elements.abProjectFloorsNumber, value: 8, suffix: '' },
-    { element: config.Elements.abProjectApartmentsNumber, value: 93, suffix: '' },
-    { element: config.Elements.abProjectParkingSpotsNumber, value: 106, suffix: '' },
-    { element: config.Elements.abProjectAreaNumber, value: 9634, suffix: 'area' },
-  ],
-  ab2: [
-    { element: config.Elements.ab2ProjectBuildingsNumber, value: 2, suffix: '' },
-    { element: config.Elements.ab2ProjectApartmentsNumber, value: 225, suffix: '' },
-    { element: config.Elements.ab2ProjectParkingSpotsNumber, value: 243, suffix: '' },
-    { element: config.Elements.ab2ProjectAreaNumber, value: 7000, suffix: 'area' },
-  ],
   azimuth: [
     { element: config.Elements.azimuthProjectBuildingsNumber, value: 12, suffix: '' },
     { element: config.Elements.azimuthProjectCommercialNumber, value: 6, suffix: '' },
@@ -753,34 +730,6 @@ const PROJECT_COUNTERS = {
     { element: config.Elements.azimuthProjectApartmentsNumber, value: 2000, suffix: '' },
     { element: config.Elements.azimuthProjectParkingSpotsNumber, value: 144, suffix: '' },
     { element: config.Elements.azimuthProjectAreaNumber, value: 68000, suffix: 'area' },
-  ],
-  villaMargarita: [
-    { element: config.Elements.villaMargaritaProjectBuildingsNumber, value: 1, suffix: '' },
-    { element: config.Elements.villaMargaritaProjectFloorsNumber, value: 4, suffix: '' },
-    { element: config.Elements.villaMargaritaProjectApartmentsNumber, value: 72, suffix: '' },
-  ],
-  melliaFlorance: [
-    { element: config.Elements.melliaFloranceProjectBuildingsNumber, value: 1, suffix: '' },
-    { element: config.Elements.melliaFloranceProjectFloorsNumber, value: 5, suffix: '' },
-    { element: config.Elements.melliaFloranceProjectApartmentsNumber, value: 29, suffix: '' },
-  ],
-  mountainResidence: [
-    { element: config.Elements.mountainResidenceProjectBuildingsNumber, value: 1, suffix: '' },
-    { element: config.Elements.mountainResidenceProjectFloorsNumber, value: 6, suffix: '' },
-    { element: config.Elements.mountainResidenceProjectApartmentsNumber, value: 133, suffix: '' },
-    { element: config.Elements.mountainResidenceProjectParkingSpotsNumber, value: 129, suffix: '' },
-  ],
-  mountainView: [
-    { element: config.Elements.mountainViewProjectBuildingsNumber, value: 1, suffix: '' },
-    { element: config.Elements.mountainViewProjectFloorsNumber, value: 4, suffix: '' },
-    { element: config.Elements.mountainViewProjectApartmentsNumber, value: 67, suffix: '' },
-    { element: config.Elements.mountainViewProjectParkingSpotsNumber, value: 68, suffix: '' },
-  ],
-  mountainBoutique: [
-    { element: config.Elements.mountainBoutiqueProjectBuildingsNumber, value: 1, suffix: '' },
-    { element: config.Elements.mountainBoutiqueProjectFloorsNumber, value: 6, suffix: '' },
-    { element: config.Elements.mountainBoutiqueProjectApartmentsNumber, value: 46, suffix: '' },
-    { element: config.Elements.mountainBoutiqueProjectParkingSpotsNumber, value: 51, suffix: '' },
   ],
   fortNoksSuites: [
     { element: config.Elements.fortNoksSuitesProjectBuildingsNumber, value: 2, suffix: '' },
@@ -809,27 +758,95 @@ const PROJECT_COUNTERS = {
     { element: config.Elements.nessebarFortResidenceProjectFloorsNumber, value: 4, suffix: '' },
     { element: config.Elements.nessebarFortResidenceProjectApartmentsNumber, value: 84, suffix: '' },
   ],
-  camelot: [
-    { element: config.Elements.camelotProjectPriceNumber, value: 2800000, suffix: '€', format: true },
-    { element: config.Elements.camelotProjectFloorsNumber, value: 4, suffix: '' },
-    { element: config.Elements.camelotProjectAssetsNumber, value: 10, suffix: '' },
-    { element: config.Elements.camelotProjectParkingSpotsNumber, value: 80, suffix: '' },
-    { element: config.Elements.camelotProjectAreaNumber, value: 3390, suffix: 'area' },
-    { element: config.Elements.camelotProjectBuiltAreaNumber, value: 6660, suffix: 'area' },
+  enkibuildLighthouse: [
+    { element: config.Elements.enkibuildLighthouseProjectBuildingsNumber, value: 1, suffix: '' },
+    { element: config.Elements.enkibuildLighthouseProjectFloorsNumber, value: 3, suffix: '' },
+    { element: config.Elements.enkibuildLighthouseProjectApartmentsNumber, value: 6, suffix: '' },
   ],
-  sofiab5: [
-    { element: config.Elements.sofiab5ProjectPriceNumber, value: 2800, suffix: '€/\u{33A1}', format: true },
-    { element: config.Elements.sofiab5ProjectFloorsNumber, value: 3, suffix: '' },
-    { element: config.Elements.sofiab5ProjectAssetsNumber, value: 3, suffix: '' },
-    { element: config.Elements.sofiab5ProjectStoresNumber, value: 2, suffix: '' },
-    { element: config.Elements.sofiab5ProjectBuiltAreaNumber, value: 267, suffix: 'area' },
+  sinemoretsVillas: [
+    { element: config.Elements.sinemoretsVillasProjectBuildingsNumber, value: 10, suffix: '' },
+    { element: config.Elements.sinemoretsVillasProjectFloorsNumber, value: 2, suffix: '' },
   ],
-  samokov: [{ element: config.Elements.samokovProjectAreaNumber, value: 93000, suffix: 'area' }],
-  pomorie: [
-    { element: config.Elements.pomorieProjectPriceNumber, value: 653350, suffix: '€', format: true },
-    { element: config.Elements.pomorieProjectFloorsNumber, value: 3, suffix: '' },
-    { element: config.Elements.pomorieProjectBuiltAreaNumber, value: 850, suffix: 'area' },
-  ],
+  // aa2: [
+  //   { element: config.Elements.aa2ProjectApartmentsNumber, value: 159, suffix: '' },
+  //   { element: config.Elements.aa2ProjectParkingSpotsNumber, value: 174, suffix: '' },
+  // ],
+  // aa3: [
+  //   { element: config.Elements.aa3ProjectBuildingsNumber, value: 3, suffix: '' },
+  //   { element: config.Elements.aa3ProjectFloorsNumber, value: 9, suffix: '' },
+  //   { element: config.Elements.aa3ProjectApartmentsNumber, value: 210, suffix: '' },
+  //   { element: config.Elements.aa3ProjectParkingSpotsNumber, value: 250, suffix: '' },
+  // ],
+  // ae: [
+  //   { element: config.Elements.aeProjectBuildingsNumber, value: 6, suffix: '' },
+  //   { element: config.Elements.aeProjectFloorsNumber, value: 9, suffix: '' },
+  //   { element: config.Elements.aeProjectApartmentsNumber, value: 292, suffix: '' },
+  //   { element: config.Elements.aeProjectParkingSpotsNumber, value: 320, suffix: '' },
+  //   { element: config.Elements.aeProjectAreaNumber, value: 27955, suffix: 'area' },
+  //   { element: config.Elements.aeProjectGreenAreaNumber, value: 5200, suffix: 'area' },
+  // ],
+  // ab: [
+  //   { element: config.Elements.abProjectBuildingsNumber, value: 2, suffix: '' },
+  //   { element: config.Elements.abProjectFloorsNumber, value: 8, suffix: '' },
+  //   { element: config.Elements.abProjectApartmentsNumber, value: 93, suffix: '' },
+  //   { element: config.Elements.abProjectParkingSpotsNumber, value: 106, suffix: '' },
+  //   { element: config.Elements.abProjectAreaNumber, value: 9634, suffix: 'area' },
+  // ],
+  // ab2: [
+  //   { element: config.Elements.ab2ProjectBuildingsNumber, value: 2, suffix: '' },
+  //   { element: config.Elements.ab2ProjectApartmentsNumber, value: 225, suffix: '' },
+  //   { element: config.Elements.ab2ProjectParkingSpotsNumber, value: 243, suffix: '' },
+  //   { element: config.Elements.ab2ProjectAreaNumber, value: 7000, suffix: 'area' },
+  // ],
+  // villaMargarita: [
+  //   { element: config.Elements.villaMargaritaProjectBuildingsNumber, value: 1, suffix: '' },
+  //   { element: config.Elements.villaMargaritaProjectFloorsNumber, value: 4, suffix: '' },
+  //   { element: config.Elements.villaMargaritaProjectApartmentsNumber, value: 72, suffix: '' },
+  // ],
+  // melliaFlorance: [
+  //   { element: config.Elements.melliaFloranceProjectBuildingsNumber, value: 1, suffix: '' },
+  //   { element: config.Elements.melliaFloranceProjectFloorsNumber, value: 5, suffix: '' },
+  //   { element: config.Elements.melliaFloranceProjectApartmentsNumber, value: 29, suffix: '' },
+  // ],
+  // mountainResidence: [
+  //   { element: config.Elements.mountainResidenceProjectBuildingsNumber, value: 1, suffix: '' },
+  //   { element: config.Elements.mountainResidenceProjectFloorsNumber, value: 6, suffix: '' },
+  //   { element: config.Elements.mountainResidenceProjectApartmentsNumber, value: 133, suffix: '' },
+  //   { element: config.Elements.mountainResidenceProjectParkingSpotsNumber, value: 129, suffix: '' },
+  // ],
+  // mountainView: [
+  //   { element: config.Elements.mountainViewProjectBuildingsNumber, value: 1, suffix: '' },
+  //   { element: config.Elements.mountainViewProjectFloorsNumber, value: 4, suffix: '' },
+  //   { element: config.Elements.mountainViewProjectApartmentsNumber, value: 67, suffix: '' },
+  //   { element: config.Elements.mountainViewProjectParkingSpotsNumber, value: 68, suffix: '' },
+  // ],
+  // mountainBoutique: [
+  //   { element: config.Elements.mountainBoutiqueProjectBuildingsNumber, value: 1, suffix: '' },
+  //   { element: config.Elements.mountainBoutiqueProjectFloorsNumber, value: 6, suffix: '' },
+  //   { element: config.Elements.mountainBoutiqueProjectApartmentsNumber, value: 46, suffix: '' },
+  //   { element: config.Elements.mountainBoutiqueProjectParkingSpotsNumber, value: 51, suffix: '' },
+  // ],
+  // camelot: [
+  //   { element: config.Elements.camelotProjectPriceNumber, value: 2800000, suffix: '€', format: true },
+  //   { element: config.Elements.camelotProjectFloorsNumber, value: 4, suffix: '' },
+  //   { element: config.Elements.camelotProjectAssetsNumber, value: 10, suffix: '' },
+  //   { element: config.Elements.camelotProjectParkingSpotsNumber, value: 80, suffix: '' },
+  //   { element: config.Elements.camelotProjectAreaNumber, value: 3390, suffix: 'area' },
+  //   { element: config.Elements.camelotProjectBuiltAreaNumber, value: 6660, suffix: 'area' },
+  // ],
+  // sofiab5: [
+  //   { element: config.Elements.sofiab5ProjectPriceNumber, value: 2800, suffix: '€/\u{33A1}', format: true },
+  //   { element: config.Elements.sofiab5ProjectFloorsNumber, value: 3, suffix: '' },
+  //   { element: config.Elements.sofiab5ProjectAssetsNumber, value: 3, suffix: '' },
+  //   { element: config.Elements.sofiab5ProjectStoresNumber, value: 2, suffix: '' },
+  //   { element: config.Elements.sofiab5ProjectBuiltAreaNumber, value: 267, suffix: 'area' },
+  // ],
+  // samokov: [{ element: config.Elements.samokovProjectAreaNumber, value: 93000, suffix: 'area' }],
+  // pomorie: [
+  //   { element: config.Elements.pomorieProjectPriceNumber, value: 653350, suffix: '€', format: true },
+  //   { element: config.Elements.pomorieProjectFloorsNumber, value: 3, suffix: '' },
+  //   { element: config.Elements.pomorieProjectBuiltAreaNumber, value: 850, suffix: 'area' },
+  // ],
 };
 
 const getAreaSuffix = () => {

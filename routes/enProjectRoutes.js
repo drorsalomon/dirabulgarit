@@ -25,5 +25,7 @@ router.get('/green-fort-suites', projectController.getGreenFortSuites);
 router.get('/premier-fort-beach', projectController.getPremierFortBeach);
 router.get('/prestige-fort-beach', projectController.getPrestigeFortBeach);
 router.get('/nessebar-fort-residence', projectController.getNessebarFortResidence);
+router.get('/enkibuild-lighthouse', projectController.getEnkibuildLighthouse);
+router.get('/sinemorets-villas', projectController.getSinemoretsVillas);
 
 module.exports = router;

@@ -267,3 +267,47 @@ exports.getNessebarFortResidence = catchAsync(async (req, res) => {
     projectAssets,
   });
 });
+
+exports.getEnkibuildLighthouse = catchAsync(async (req, res) => {
+  let sortOptions = { sold: 1, price: 1 };
+  let projectAssets;
+
+  if (res.locals.lang === 'he') {
+    projectAssets = await Asset.find({ project: 'Lighthouse Premium Apartments' }).sort(sortOptions);
+  } else if (res.locals.lang === 'en') {
+    projectAssets = await enAsset.find({ project: 'Lighthouse Premium Apartments' }).sort(sortOptions);
+  } else if (res.locals.lang === 'ru') {
+    projectAssets = await ruAsset.find({ project: 'Lighthouse Premium Apartments' }).sort(sortOptions);
+  } else {
+    // Fallback if none match (optional)
+    projectAssets = [];
+  }
+  if (!projectAssets) return next(new AppError('Could not find the requested asset!', 404));
+
+  res.status(200).render(`${res.locals.lang}/projects/enkibuildLighthouse`, {
+    title: 'Lighthouse Premium Apartments',
+    projectAssets,
+  });
+});
+
+exports.getSinemoretsVillas = catchAsync(async (req, res) => {
+  let sortOptions = { sold: 1, price: 1 };
+  let projectAssets;
+
+  if (res.locals.lang === 'he') {
+    projectAssets = await Asset.find({ project: 'Sinemorets Villas' }).sort(sortOptions);
+  } else if (res.locals.lang === 'en') {
+    projectAssets = await enAsset.find({ project: 'Sinemorets Villas' }).sort(sortOptions);
+  } else if (res.locals.lang === 'ru') {
+    projectAssets = await ruAsset.find({ project: 'Sinemorets Villas' }).sort(sortOptions);
+  } else {
+    // Fallback if none match (optional)
+    projectAssets = [];
+  }
+  if (!projectAssets) return next(new AppError('Could not find the requested asset!', 404));
+
+  res.status(200).render(`${res.locals.lang}/projects/sinemoretsVillas`, {
+    title: 'Sinemorets Villas',
+    projectAssets,
+  });
+});

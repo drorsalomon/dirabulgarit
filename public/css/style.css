@@ -181,7 +181,7 @@ nav,
 }
 
 .navbar-logo {
-  height: 7.5rem;
+  height: 4.5rem;
 }
 
 .navbar-brand:hover,
@@ -1084,120 +1084,10 @@ a:hover {
   margin-bottom: 5rem !important;
 }
 
-.project-main-image-col.project-main-image-col-atlantis-aria-2 {
-  position: relative;
-  padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-2-images/1716487726018-One-bedroom-apartment-in-Atlantis-Aria-2-1.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 60rem;
-  width: 100%;
-}
-.project-main-image-col.project-main-image-col-atlantis-aria-3 {
-  position: relative;
-  padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1716801144895-atlantis-aria-3-3.webp");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 60rem;
-  width: 100%;
-}
-.project-main-image-col.project-main-image-col-atlantis-euphoria {
-  position: relative;
-  padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/euphoria-images/1716710316107-One-bedroom-apartment-with-east-exposure-euphoria-2.webp");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 60rem;
-  width: 100%;
-}
-.project-main-image-col.project-main-image-col-atlantis-barcode {
-  position: relative;
-  padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-images/1720087071095-atlantis-barcode-project-1.webp");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 60rem;
-  width: 100%;
-}
-.project-main-image-col.project-main-image-col-atlantis-barcode-2 {
-  position: relative;
-  padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-2-images/1732263638724-atlantis-barcode-2-project-7.webp");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 60rem;
-  width: 100%;
-}
 .project-main-image-col.project-main-image-col-atlas-azimuth {
   position: relative;
   padding: 0 !important;
   background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412992-azimuth-project-10.webp");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 60rem;
-  width: 100%;
-}
-.project-main-image-col.project-main-image-col-villa-margarita {
-  position: relative;
-  padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/villa-margarita-images/1735041996715-villa-margerita-1.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 60rem;
-  width: 100%;
-}
-.project-main-image-col.project-main-image-col-mellia-florance {
-  position: relative;
-  padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645777-mellia-florance-1.webp");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 60rem;
-  width: 100%;
-}
-.project-main-image-col.project-main-image-col-mountain-residence {
-  position: relative;
-  padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-mountain-view-residence-images/1735210321587-sofia-mountain-view-residence-6.webp");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 60rem;
-  width: 100%;
-}
-.project-main-image-col.project-main-image-col-mountain-view {
-  position: relative;
-  padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387897986-vitosha-mountain-view-1.webp");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 60rem;
-  width: 100%;
-}
-.project-main-image-col.project-main-image-col-mountain-boutique {
-  position: relative;
-  padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mountain-view-boutique-images1736851154917-mountain-view-boutique-1.webp");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -1260,10 +1150,10 @@ a:hover {
   height: 60rem;
   width: 100%;
 }
-.project-main-image-col.project-main-image-col-camelot {
+.project-main-image-col.project-main-image-col-enkibuild-lighthouse {
   position: relative;
   padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155260-camelot-20.webp");
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/enkibuild-lighthouse/1748510894774-enkibuild-lighthouse-1.webp");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -1271,32 +1161,10 @@ a:hover {
   height: 60rem;
   width: 100%;
 }
-.project-main-image-col.project-main-image-col-sofia-b5 {
+.project-main-image-col.project-main-image-col-sinemorets-villas {
   position: relative;
   padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-b4-images/1726409077363-sofia-b5-building-4.webp");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 60rem;
-  width: 100%;
-}
-.project-main-image-col.project-main-image-col-samokov {
-  position: relative;
-  padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/samokov-images/1727012351222-samokov-development-1.webp");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 60rem;
-  width: 100%;
-}
-.project-main-image-col.project-main-image-col-pomorie {
-  position: relative;
-  padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938822-pomorie-commercial-building-1.webp");
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868381-sinemorets-villas-1.webp");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -1305,106 +1173,7 @@ a:hover {
   width: 100%;
 }
 
-.project-main-image-headline.project-main-image-headline-atlantis-aria-3 {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 4.2rem;
-}
-.project-main-image-headline.project-main-image-headline-atlantis-euphoria {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 4.2rem;
-}
-.project-main-image-headline.project-main-image-headline-atlantis-barcode {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 4.2rem;
-}
-.project-main-image-headline.project-main-image-headline-atlantis-barcode-2 {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 4.2rem;
-}
 .project-main-image-headline.project-main-image-headline-atlas-azimuth {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 4.2rem;
-}
-.project-main-image-headline.project-main-image-headline-villa-margarita {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 4.2rem;
-}
-.project-main-image-headline.project-main-image-headline-mellia-florance {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 4.2rem;
-}
-.project-main-image-headline.project-main-image-headline-mountain-residence {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 4.2rem;
-}
-.project-main-image-headline.project-main-image-headline-mountain-view {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 4.2rem;
-}
-.project-main-image-headline.project-main-image-headline-mountain-boutique {
   position: absolute;
   top: 50%;
   left: 40%;
@@ -1470,10 +1239,10 @@ a:hover {
   color: #ffffff;
   font-size: 4.2rem;
 }
-.project-main-image-headline.project-main-image-headline-camelot {
+.project-main-image-headline.project-main-image-headline-enkibuild-lighthouse {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 40%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -1481,32 +1250,10 @@ a:hover {
   color: #ffffff;
   font-size: 4.2rem;
 }
-.project-main-image-headline.project-main-image-headline-sofia-b5 {
+.project-main-image-headline.project-main-image-headline-sinemorets-villas {
   position: absolute;
   top: 50%;
-  left: 43%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 4.2rem;
-}
-.project-main-image-headline.project-main-image-headline-samokov {
-  position: absolute;
-  top: 50%;
-  left: 46%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 4.2rem;
-}
-.project-main-image-headline.project-main-image-headline-pomorie {
-  position: absolute;
-  top: 50%;
-  left: 46%;
+  left: 40%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -1598,61 +1345,6 @@ a:hover {
   margin-bottom: 4rem;
 }
 
-.project-mid-image-container.project-mid-image-container-atlantis-aria-2 {
-  position: relative;
-  padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-2-images/1716717336291-a3_94k-scaled.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 53rem;
-  height: 60rem;
-  width: 100%;
-}
-.project-mid-image-container.project-mid-image-container-atlantis-aria-3 {
-  position: relative;
-  padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-aria-3-images/1718892982818-atlantis-aria-3-building.webp");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 53rem;
-  height: 60rem;
-  width: 100%;
-}
-.project-mid-image-container.project-mid-image-container-atlantis-euphoria {
-  position: relative;
-  padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/euphoria-images/1719320290027-atlantis-euphoria-middle-image.webp");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 65rem 45rem;
-  height: 60rem;
-  width: 100%;
-}
-.project-mid-image-container.project-mid-image-container-atlantis-barcode {
-  position: relative;
-  padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-images/1720087071323-atlantis-barcode-project-mid-image.webp");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 60rem;
-  width: 100%;
-}
-.project-mid-image-container.project-mid-image-container-atlantis-barcode-2 {
-  position: relative;
-  padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlantis-barcode-2-images/1732263638743-atlantis-barcode-2-project-13.webp");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 25rem;
-  height: 25rem;
-  width: 100%;
-}
 .project-mid-image-container.project-mid-image-container-atlas-azimuth {
   position: relative;
   padding: 0 !important;
@@ -1662,50 +1354,6 @@ a:hover {
   background-repeat: no-repeat;
   background-size: contain;
   height: 50rem;
-  width: 100%;
-}
-.project-mid-image-container.project-mid-image-container-villa-margarita {
-  position: relative;
-  padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/villa-margarita-images/1735041996753-villa-margerita-5.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 50rem;
-  width: 100%;
-}
-.project-mid-image-container.project-mid-image-container-mellia-florance {
-  position: relative;
-  padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mellia-florance-images/1735134645819-mellia-florance-4.webp");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 40rem;
-  width: 100%;
-}
-.project-mid-image-container.project-mid-image-container-mountain-residence {
-  position: relative;
-  padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-mountain-view-residence-images/1735210321595-sofia-mountain-view-residence-8.webp");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 30rem;
-  width: 100%;
-}
-.project-mid-image-container.project-mid-image-container-mountain-view {
-  position: relative;
-  padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387898022-vitosha-mountain-view-4.webp");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 30rem;
   width: 100%;
 }
 .project-mid-image-container.project-mid-image-container-premier-fort-beach {
@@ -1741,37 +1389,26 @@ a:hover {
   height: 20rem;
   width: 100%;
 }
-.project-mid-image-container.project-mid-image-container-camelot {
+.project-mid-image-container.project-mid-image-container-enkibuild-lighthouse {
   position: relative;
   padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155348-camelot-48.webp");
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/enkibuild-lighthouse/1748510894808-enkibuild-lighthouse-3.webp");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% 28rem;
-  height: 60rem;
+  background-size: contain;
+  height: 15rem;
   width: 100%;
 }
-.project-mid-image-container.project-mid-image-container-sofia-b5 {
+.project-mid-image-container.project-mid-image-container-sinemorets-villas {
   position: relative;
   padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-b4-images/1726409077338-sofia-b5-building-2.webp");
+  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868448-sinemorets-villas-13.webp");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% 15rem;
-  height: 25rem;
-  width: 100%;
-}
-.project-mid-image-container.project-mid-image-container-samokov {
-  position: relative;
-  padding: 0 !important;
-  background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/samokov-images/1727012351227-samokov-development-2.webp");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 30rem;
-  height: 40rem;
+  background-size: contain;
+  height: 15rem;
   width: 100%;
 }
 

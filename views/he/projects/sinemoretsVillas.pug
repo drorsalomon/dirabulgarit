@@ -1,0 +1,263 @@
+extends ../base
+
+block head
+    title Sinemorets Villas
+    meta(name="description" content='וילות סינמורץ: קוטג\'ים יוקרתיים ליד הים בסביבה טבעית מרהיבה. 10 בתים בסגנון בולגרי, עם בריכה ופרטיות, בלב שמורת סטרנדז\'ה. השקעה משתלמת!')
+    meta(name="robots" content="index, follow")
+    link(rel="canonical" href="https://www.dirabulgarit.co.il/project/sinemorets-villas")
+    link(rel="alternate" href="https://www.dirabulgarit.co.il/en/project/sinemorets-villas" hreflang="en")
+    link(rel="alternate" href="https://www.dirabulgarit.co.il/ru/project/sinemorets-villas" hreflang="ru")
+    link(rel="alternate" href="https://www.dirabulgarit.co.il/project/sinemorets-villas" hreflang="he")
+
+    meta(property="og:title" content="Sinemorets Villas")
+    meta(property="og:description" content='וילות סינמורץ: קוטג\'ים יוקרתיים ליד הים בסביבה טבעית מרהיבה. 10 בתים בסגנון בולגרי, עם בריכה ופרטיות, בלב שמורת סטרנדז\'ה. השקעה משתלמת!')
+    meta(property="og:image" content="https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868381-sinemorets-villas-1.webp")
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../_headLinksScripts
+
+block content 
+
+    .container-fluid.project-main-image-container(role="img" aria-labelledby="sinemoretsVillasMainImageDescription")
+        span.visually-hidden(id="sinemoretsVillasMainImageDescription") תמונה של בנייני המגורים בפרויקט Sinemorets Villas
+        .row.project-main-image-row
+            .col.project-main-image-col.project-main-image-col-sinemorets-villas
+                h1.project-main-image-headline.project-main-image-headline-sinemorets-villas Sinemorets Villas           
+    
+    .container-fluid.project-gallery-container
+        .row.project-gallery-headline-row.text-center.mx-2
+            .col-12.project-gallery-headline-col.p-0    
+                h2.project-gallery-headline גלריה
+        .row.project-gallery-row.text-center.mx-2
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868443-sinemorets-villas-12.webp' alt='תמונה של פרויקט Sinemorets Villas' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868414-sinemorets-villas-5.webp' alt='תמונה של פרויקט Sinemorets Villas' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868454-sinemorets-villas-14.webp' alt='תמונה של פרויקט Sinemorets Villas' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868485-sinemorets-villas-20.webp' alt='תמונה של פרויקט Sinemorets Villas' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868577-sinemorets-villas-53.webp' alt='תמונה של פרויקט Sinemorets Villas' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+            .col-12.col-sm-6.col-md-4.project-gallery-col 
+                img.project-gallery-image(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868491-sinemorets-villas-22.webp' alt='תמונה של פרויקט Sinemorets Villas' loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal")
+
+    #projectModal.modal.fade.asset-gallery-modal.text-center(tabindex='-1' aria-labelledby='projectModalLabel' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered
+            .asset-gallery-modal-content.modal-content
+                .row.d-flex
+                    .col-6.align-content-center
+                        div.text-start.px-4
+                            div.asset-gallery-img-text Sinemorets Villas
+                    .col-6
+                        div.text-end.p-3
+                            button.btn-close.asset-gallery-modal-close-btn.p-2.my-auto(type='button' data-bs-dismiss='modal' aria-label='Close')
+                #projectCarousel.carousel.slide(data-bs-touch='true' data-bs-interval='30000' data-bs-ride='carousel')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center.active
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868385-sinemorets-villas-2.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868406-sinemorets-villas-3.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868410-sinemorets-villas-4.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868414-sinemorets-villas-5.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868417-sinemorets-villas-6.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868422-sinemorets-villas-7.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868425-sinemorets-villas-8.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868429-sinemorets-villas-9.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868433-sinemorets-villas-10.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868438-sinemorets-villas-11.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868443-sinemorets-villas-12.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868448-sinemorets-villas-13.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868454-sinemorets-villas-14.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868459-sinemorets-villas-15.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868466-sinemorets-villas-16.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868474-sinemorets-villas-17.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868478-sinemorets-villas-18.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868482-sinemorets-villas-19.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868485-sinemorets-villas-20.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868487-sinemorets-villas-21.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868491-sinemorets-villas-22.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868495-sinemorets-villas-23.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868498-sinemorets-villas-24.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868504-sinemorets-villas-25.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868507-sinemorets-villas-26.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868510-sinemorets-villas-27.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868513-sinemorets-villas-28.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868516-sinemorets-villas-29.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868518-sinemorets-villas-30.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868520-sinemorets-villas-31.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868523-sinemorets-villas-33.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868526-sinemorets-villas-34.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868528-sinemorets-villas-35.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868535-sinemorets-villas-36.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868539-sinemorets-villas-37.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868542-sinemorets-villas-38.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868545-sinemorets-villas-39.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868547-sinemorets-villas-40.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868550-sinemorets-villas-41.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868551-sinemorets-villas-42.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868553-sinemorets-villas-43.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868556-sinemorets-villas-44.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868558-sinemorets-villas-45.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868560-sinemorets-villas-46.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868562-sinemorets-villas-47.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868564-sinemorets-villas-48.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868566-sinemorets-villas-49.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868569-sinemorets-villas-50.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868572-sinemorets-villas-51.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868575-sinemorets-villas-52.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868577-sinemorets-villas-53.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868580-sinemorets-villas-54.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868582-sinemorets-villas-apartment-plan-1.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    .carousel-item.asset-gallery-carousel-item.align-content-center
+                        img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868582-sinemorets-villas-apartment-plan-2.webp' alt='תמונה של פרויקט Sinemorets Villas')
+                    button.carousel-control-prev(type='button' data-bs-target='#projectCarousel' data-bs-slide='prev')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-prev-icon.asset-gallery-carousel-prev-icon(aria-hidden='true')
+                    button.carousel-control-next(type='button' data-bs-target='#projectCarousel' data-bs-slide='next')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-next-icon.asset-gallery-carousel-next-icon(aria-hidden='true')        
+    
+    .container-fluid.project-numbers-container
+        .row.project-numbers-row.text-end.justify-content-center.mx-5.flex-md-row-reverse
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-buildings-number.project-numbers-buildings-number-sinemorets-villas          
+                div.project-numbers-text בתים        
+            .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                div.project-numbers-floors-number.project-numbers-floors-number-sinemorets-villas          
+                div.project-numbers-text קומות        
+    
+    .container-fluid.project-details-container
+        .row.project-details-row.text-end.mx-5.justify-content-center
+            .col-12.project-details-headline-col.p-0.text-center
+                h2.project-details-headline Sinemorets Villas
+            .col-10.project-details-headline-col.p-0.text-end
+                div.project-details-text(dir='rtl') ברוכים הבאים לכפר הקוטג'ים בסינמורץ - המקום האידיאלי למי שמחפש חופשה יוקרתית ליד הים בסביבה יפהפייה. הכפר שלנו ממוקם במקום ציורי, מוקף בים והרים, ומציע חווית רגיעה ייחודית בטבע.
+                div.project-details-text(dir='rtl') "כפר סינמורץ" הוא מתחם סגור של 10 בתים המרכיבים אנסמבל הרמוני של מבנים מסוגננים בסגנון בולגרי מסורתי. כל בית משתרע על שטח של 200 מטרים רבועים, המספקים שפע של מקום למשפחה וחברים ליהנות מפיסת גן עדן משלהם בחוף הים השחור. השטח הסגור של המתחם מבטיח פרטיות ובטיחות לתושבים.
+                div.project-details-text(dir='rtl') כפר הקוטג'ים ממוקם באזור היוקרתי של סינמורץ, במרחק דקות הליכה ספורות מהחוף. תוכלו ליהנות מפעילויות חוף רבות וכן לטעום מהמטבח המקומי במסעדות ובבתי הקפה הסמוכים. בנוסף, תהיה לכם גישה למגוון פעילויות, כגון טיולי הליכה ורכיבה על סוסים ביער ובחוף, השכרת סירות בנהר ולקה, רפטינג בטיול ימי, דיג, גלישת רוח ועוד.
+                div.project-details-text(dir='rtl') תחזוקה שנתית של המתחם, המגרש, הבית והבריכה מאורגנת על ידי חברת הניהול, המבטיחה את בטיחותכם ונוחותכם. גדר יפה מקיפה את כל המתחם, ולכפר יש כניסה ויציאה אחת בלבד, המספקות ביטחון נוסף.
+                div.project-details-text(dir='rtl') אל תחמיצו את ההזדמנות לחיות ביוקרה ובהרמוניה עם הטבע בכפר סינמורץ - פתרון אידיאלי למי שמחפש מקום מגורים או נופש במקום יפה ושליו ליד הים.
+                h3.project-details-sub-headline(dir='rtl') אודות הבתים שלנו
+                div.project-details-text(dir='rtl') הקוטג'ים שלנו הם שילוב מושלם של נוחות מודרנית ואווירה נעימה של בית כפרי. החברה שלנו מציעה לכם לרכוש קוטג' משלכם באחד המקומות היפים ביותר בחוף הים השחור.
+                div.project-details-text(dir='rtl') כל קוטג' שאנו מציעים מעוצב בסגנון מודרני ומצויד בכל הדרוש לשהייה נוחה. חלונות גדולים בחדרים מספקים נוף יפהפה לים ולהרים, ומרפסות מאפשרות ליהנות מאוויר הים הצח. השתמשנו רק בחומרים האיכותיים והידידותיים לסביבה בבניית כל בית כדי להבטיח את אמינותו ועמידותו של הקוטג'.
+                div.project-details-text(dir='rtl') לכל בית יש מגרש משלו בשטח של 400 מ"ר, המופרד על ידי גדר חיה, נטוע בדשא, פרחים ועצים. בכל מגרש יש מקום חניה לרכב ובריכה (אופציונלית). בנוסף, לכל בית יש טרסה משלו שבה תוכלו ליהנות מכוס קפה בבוקר או מארוחת ערב בשקיעה.
+                div.project-details-text(dir='rtl') בקומת הקרקע יש סלון עם אח, מטבח, חדר שינה, מחסן עם דוד ומכונת כביסה, שירותים ומקלחת, וטרסה מקורה. בקומה השנייה יש 2 חדרי שינה, משרד (חדר ארונות), 2 חדרי שירותים עם מקלחת, טרסה פתוחה, 2 מרפסות, מסדרון, וגישה לעליית גג לא מגורים לאחסון. לכל בית יש מגרש משלו עם בריכה (אפשרות נפרדת), טרסה מקורה ופתוחה, שבה תוכלו להירגע עם משפחה וחברים.
+                div.project-detail-img-container.d-flex.justify-content-center   
+                    img.project-details-img(src='https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sinemorets-villas/1748606868582-sinemorets-villas-project-plan.webp' alt='סימולציות פריסה של פרויקט וילות סינמורץ')
+                div.project-details-text.text-center(dir='rtl') <i>פריסת בתים של פרויקט Sinemorets Villas</i>
+                h3.project-details-sub-headline(dir='rtl') אודות הטבע סביב הכפר
+                div.project-details-text(dir='rtl') סינמורץ הוא מקום ייחודי בחוף הדרומי של הים השחור, שבו טבע מרהיב משתלב עם הנוחות של אורח חיים עירוני מודרני.
+                div.project-details-text(dir='rtl') סינמורץ ממוקמת במפגש של שני נהרות - ולקה ורזובסקה, בלב שמורת הטבע סטרנדז'ה. אזור זה עשיר לא רק בנופים יפים, אלא גם במיני צמחים ובעלי חיים ייחודיים. כאן חיים סוסי פרא, לינקסים, ציפורים נדירות ובעלי חיים רבים אחרים שלא תמצאו בשום מקום אחר.
+                div.project-details-text(dir='rtl') חוף ולקה, הממוקם ליד הכפר, נחשב לאחד המקומות היפים ביותר בכל חוף הים השחור. זהו לא רק חוף חולי, אלא פינה ייחודית של טבע, שבה יערות ירוקים, מדרונות הרים וסלעים, יערות כהים ומי הים השחור הצלולים ביותר מצד אחד של השפך ומי הנהר ולקה המתוקים מצדו השני משתלבים יחד. פרס הדגל הכחול רק מדגיש את ייחודיותו ואת הידידותיות שלו לסביבה.
+                div.project-details-text(dir='rtl') הכפר סינמורץ עצמו מפורסם באווירה הנעימה שלו, באירוח החם של המקומיים ובריבוי בתי הקפה והמסעדות שבהם תוכלו לטעום ממנות ומשקאות מקומיים. בנוסף, תמיד יש שפע של בידור לכל טעם, מאירועי ספורט ועד אירועים תרבותיים וקונצרטים.
+                div.project-details-text(dir='rtl') בסינמורץ יש כל מה שצריך לחופשה נוחה ובלתי נשכחת - טבע יפהפה, חוף נקי מבחינה אקולוגית, לינה נוחה ושפע של בידור. בואו וראו בעצמכם - יש מקום לכולם!
+                h3.project-details-sub-headline(dir='rtl') על קבוצת Enki
+                div.project-details-text(dir='rtl') קבוצת אנקי מיישמת בהצלחה פרויקטים של בנייה, ויוצרת נדל"ן באיכות גבוהה. כדי להאיץ את הביצוע ולהגביר את היעילות, אנו זקוקים להון חוזר נוסף. אנו מזמינים משקיעים להפוך לחלק מההצלחה שלנו על ידי הצעת תנאי השקעה נוחים.
+                div.project-details-text(dir='rtl') רכישת נדל"ן בפרויקטים שלנו היא לא רק רכישת דיור אלא השקעה רווחית המספקת הכנסה יציבה, נזילות גבוהה וסיפוק מלא של צרכיכם.
+                div.project-details-text(dir='rtl') אנו חוקרים בקפידה מגמות נוכחיות והעדפות קונים כדי ליצור פרויקטים העונים באופן מלא על ציפיותיהם.
+                div.project-details-text(dir='rtl') כל פרט בנכסים שלנו, מהארכיטקטורה ועד לפריסות, תוכנן מתוך מחשבה על נוחות ופונקציונליות עבור הבעלים העתידיים.
+
+    .container-fluid.project-amenities-container
+        .row.project-amenities-headline-row.text-center.mx-5
+            .col-12.project-amenities-headline-col.p-0
+                h2.project-amenities-headline שירותים בפרויקט
+        .row.project-amenities-row.text-end.mx-5.justify-content-end 
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/pool-swimming-pool-svgrepo-com.svg' alt='אייקון של בריכת שחיה')
+                div.project-amenities-text(dir='rtl') בריכת שחייה
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/beach-umbrella-svgrepo-com.svg' alt='אייקון של חוף ים')
+                div.project-amenities-text חוף ים 
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/fence-yard-svgrepo-com.svg' alt='אייקון של גדר')
+                div.project-amenities-text מתחם מגודר 
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/solar-energy-renewable-energy-svgrepo-com.svg' alt='אייקון של אנרגיה סולרית')
+                div.project-amenities-text פאנלים סולארים
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/sauna-svgrepo-com.svg' alt='אייקון של סאונה')
+                div.project-amenities-text סאונה
+            .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                img.project-amenities-icon(src='/img/icons/parking-project-icon.svg' alt='אייקון של חניה')
+                div.project-amenities-text חנייה
+
+    .container-fluid.project-mid-image-container.project-mid-image-container-sinemorets-villas(role="img" aria-labelledby="sinemoretsVillasMidImageDescription")
+        span.visually-hidden(id="sinemoretsVillasMidImageDescription") תמונה של פרויקט Sinemorets Villas
+    
+    .container-fluid.project-map-container
+        .row.project-map-row.text-center.mx-2.justify-content-center 
+            .col-12.project-map-healine-col
+                h2.project-map-headline מיקום
+            .col-12.col-md-10.project-map-col
+                div.project-map(id='map' data-long=27.752190 data-lat=42.710146 data-title='Sinemorets Villas')  
+                
+    .container-fluid.project-video-container
+        .row.asset-video-row.mx-3.justify-content-center 
+            .col-12.col-md-10.asset-video-col.text-center(role="region" aria-labelledby="assetVideoDescription")
+                iframe(src='https://www.youtube.com/embed/LlL_YH_uwlY?si=a0ji69owUO_FhqwJ' frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen).asset-video                    
+            span.visually-hidden(id="assetVideoDescription") סרטון המציג את פרויקט וילות Sinemorets                
+    
+    .container-fluid.project-assets-container
+        .row.asset-related-assets-row.justify-content-center.mx-5.text-center
+            .col-12.project-assets-headline-col
+                h2.project-assets-headline נכסים זמינים בפרויקט
+            each asset in projectAssets
+                include ../_assetsCards
+        .row.mobile-asset-related-assets-row.justify-content-center.mx-1.text-center
+            .col-12.project-assets-headline-col
+                h2.project-assets-headline נכסים זמינים בפרויקט
+            each asset in projectAssets
+                include ../_mobileAssetsCards 
+
+    include ../_contactUsFixed  
+    include ../_contactUsFixedMobile

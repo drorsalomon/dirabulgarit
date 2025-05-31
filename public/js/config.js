@@ -27,6 +27,7 @@ export const Elements = {
   projectSvetiDdBtn: document.querySelector('.project-sveti-dropdown-btn'),
   projectNessebarDdBtn: document.querySelector('.project-nessebar-dropdown-btn'),
   projectSunnyDdBtn: document.querySelector('.project-sunny-dropdown-btn'),
+  projectSinemoretsDdBtn: document.querySelector('.project-sinemorets-dropdown-btn'),
   commercialDdBtn: document.querySelector('.commercial-dropdown-btn'),
   blogLink: document.querySelector('.blog-nav-link'),
   currencyDdBtn: document.querySelector('.currency-dropdown-btn'),
@@ -157,34 +158,8 @@ export const Elements = {
   webinarFormInputEmail: document.querySelector('.webinar-input-email'),
   webinarFormCheck: document.querySelector('.webinar-form-check'),
   webinarFormBtn: document.querySelector('.landing-webinar-button'),
-  // PROJECTS
+  // ***** PROJECTS *****
   projectAssetsContainer: document.querySelector('.project-assets-container'),
-  // Atlantis Aria 2
-  aa2ProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlantis-aria-2'),
-  aa2ProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlantis-aria-2'),
-  // Atlantis Aria 3
-  aa3ProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-atlantis-aria-3'),
-  aa3ProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-atlantis-aria-3'),
-  aa3ProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlantis-aria-3'),
-  aa3ProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlantis-aria-3'),
-  // Atlantis Euphoria
-  aeProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-atlantis-euphoria'),
-  aeProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-atlantis-euphoria'),
-  aeProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlantis-euphoria'),
-  aeProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlantis-euphoria'),
-  aeProjectAreaNumber: document.querySelector('.project-numbers-area-number-atlantis-euphoria'),
-  aeProjectGreenAreaNumber: document.querySelector('.project-numbers-green-area-number-atlantis-euphoria'),
-  // Atlantis Barcode
-  abProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-atlantis-barcode'),
-  abProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-atlantis-barcode'),
-  abProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlantis-barcode'),
-  abProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlantis-barcode'),
-  abProjectAreaNumber: document.querySelector('.project-numbers-area-number-atlantis-barcode'),
-  // Atlantis Barcode 2
-  ab2ProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-atlantis-barcode-2'),
-  ab2ProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlantis-barcode-2'),
-  ab2ProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlantis-barcode-2'),
-  ab2ProjectAreaNumber: document.querySelector('.project-numbers-area-number-atlantis-barcode-2'),
   // Atlas Azimuth
   azimuthProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-atlas-azimuth'),
   azimuthProjectCommercialNumber: document.querySelector('.project-numbers-commercial-number-atlas-azimuth'),
@@ -192,29 +167,6 @@ export const Elements = {
   azimuthProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlas-azimuth'),
   azimuthProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlas-azimuth'),
   azimuthProjectAreaNumber: document.querySelector('.project-numbers-area-number-atlas-azimuth'),
-  // Villa Margarita
-  villaMargaritaProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-villa-margarita'),
-  villaMargaritaProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-villa-margarita'),
-  villaMargaritaProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-villa-margarita'),
-  // Mellia Florance
-  melliaFloranceProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-mellia-florance'),
-  melliaFloranceProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-mellia-florance'),
-  melliaFloranceProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-mellia-florance'),
-  // Mountain View Residence
-  mountainResidenceProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-mountain-residence'),
-  mountainResidenceProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-mountain-residence'),
-  mountainResidenceProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-mountain-residence'),
-  mountainResidenceProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-mountain-residence'),
-  // Vitosah Mountain View
-  mountainViewProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-mountain-view'),
-  mountainViewProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-mountain-view'),
-  mountainViewProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-mountain-view'),
-  mountainViewProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-mountain-view'),
-  // Vitosah Mountain Boutique
-  mountainBoutiqueProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-mountain-boutique'),
-  mountainBoutiqueProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-mountain-boutique'),
-  mountainBoutiqueProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-mountain-boutique'),
-  mountainBoutiqueProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-mountain-boutique'),
   // Fort Noks Suites
   fortNoksSuitesProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-fort-noks-suites'),
   fortNoksSuitesProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-fort-noks-suites'),
@@ -237,25 +189,81 @@ export const Elements = {
   nessebarFortResidenceProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-nessebar-fort-residence'),
   nessebarFortResidenceProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-nessebar-fort-residence'),
   nessebarFortResidenceProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-nessebar-fort-residence'),
+  // Enkibuild Lighthouse
+  enkibuildLighthouseProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-enkibuild-lighthouse'),
+  enkibuildLighthouseProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-enkibuild-lighthouse'),
+  enkibuildLighthouseProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-enkibuild-lighthouse'),
+  // Sinemorets Villas
+  sinemoretsVillasProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-sinemorets-villas'),
+  sinemoretsVillasProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-sinemorets-villas'),
+  // Atlantis Aria 2
+  // aa2ProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlantis-aria-2'),
+  // aa2ProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlantis-aria-2'),
+  // Atlantis Aria 3
+  // aa3ProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-atlantis-aria-3'),
+  // aa3ProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-atlantis-aria-3'),
+  // aa3ProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlantis-aria-3'),
+  // aa3ProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlantis-aria-3'),
+  // Atlantis Euphoria
+  // aeProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-atlantis-euphoria'),
+  // aeProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-atlantis-euphoria'),
+  // aeProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlantis-euphoria'),
+  // aeProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlantis-euphoria'),
+  // aeProjectAreaNumber: document.querySelector('.project-numbers-area-number-atlantis-euphoria'),
+  // aeProjectGreenAreaNumber: document.querySelector('.project-numbers-green-area-number-atlantis-euphoria'),
+  // Atlantis Barcode
+  // abProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-atlantis-barcode'),
+  // abProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-atlantis-barcode'),
+  // abProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlantis-barcode'),
+  // abProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlantis-barcode'),
+  // abProjectAreaNumber: document.querySelector('.project-numbers-area-number-atlantis-barcode'),
+  // Atlantis Barcode 2
+  // ab2ProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-atlantis-barcode-2'),
+  // ab2ProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-atlantis-barcode-2'),
+  // ab2ProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlantis-barcode-2'),
+  // ab2ProjectAreaNumber: document.querySelector('.project-numbers-area-number-atlantis-barcode-2'),
+  // Villa Margarita
+  // villaMargaritaProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-villa-margarita'),
+  // villaMargaritaProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-villa-margarita'),
+  // villaMargaritaProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-villa-margarita'),
+  // Mellia Florance
+  // melliaFloranceProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-mellia-florance'),
+  // melliaFloranceProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-mellia-florance'),
+  // melliaFloranceProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-mellia-florance'),
+  // Mountain View Residence
+  // mountainResidenceProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-mountain-residence'),
+  // mountainResidenceProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-mountain-residence'),
+  // mountainResidenceProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-mountain-residence'),
+  // mountainResidenceProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-mountain-residence'),
+  // Vitosah Mountain View
+  // mountainViewProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-mountain-view'),
+  // mountainViewProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-mountain-view'),
+  // mountainViewProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-mountain-view'),
+  // mountainViewProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-mountain-view'),
+  // Vitosah Mountain Boutique
+  // mountainBoutiqueProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-mountain-boutique'),
+  // mountainBoutiqueProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-mountain-boutique'),
+  // mountainBoutiqueProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-mountain-boutique'),
+  // mountainBoutiqueProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-mountain-boutique'),
   // Camelot
-  camelotProjectPriceNumber: document.querySelector('.project-numbers-price-number-camelot'),
-  camelotProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-camelot'),
-  camelotProjectAssetsNumber: document.querySelector('.project-numbers-assets-number-camelot'),
-  camelotProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-camelot'),
-  camelotProjectAreaNumber: document.querySelector('.project-numbers-area-number-camelot'),
-  camelotProjectBuiltAreaNumber: document.querySelector('.project-numbers-built-area-number-camelot'),
+  // camelotProjectPriceNumber: document.querySelector('.project-numbers-price-number-camelot'),
+  // camelotProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-camelot'),
+  // camelotProjectAssetsNumber: document.querySelector('.project-numbers-assets-number-camelot'),
+  // camelotProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-camelot'),
+  // camelotProjectAreaNumber: document.querySelector('.project-numbers-area-number-camelot'),
+  // camelotProjectBuiltAreaNumber: document.querySelector('.project-numbers-built-area-number-camelot'),
   // Sofia B5
-  sofiab5ProjectPriceNumber: document.querySelector('.project-numbers-price-number-sofia-b5'),
-  sofiab5ProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-sofia-b5'),
-  sofiab5ProjectAssetsNumber: document.querySelector('.project-numbers-assets-number-sofia-b5'),
-  sofiab5ProjectStoresNumber: document.querySelector('.project-numbers-stores-number-sofia-b5'),
-  sofiab5ProjectBuiltAreaNumber: document.querySelector('.project-numbers-built-area-number-sofia-b5'),
+  // sofiab5ProjectPriceNumber: document.querySelector('.project-numbers-price-number-sofia-b5'),
+  // sofiab5ProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-sofia-b5'),
+  // sofiab5ProjectAssetsNumber: document.querySelector('.project-numbers-assets-number-sofia-b5'),
+  // sofiab5ProjectStoresNumber: document.querySelector('.project-numbers-stores-number-sofia-b5'),
+  // sofiab5ProjectBuiltAreaNumber: document.querySelector('.project-numbers-built-area-number-sofia-b5'),
   // Samokov
-  samokovProjectAreaNumber: document.querySelector('.project-numbers-area-number-samokov'),
+  // samokovProjectAreaNumber: document.querySelector('.project-numbers-area-number-samokov'),
   // Pomorie
-  pomorieProjectPriceNumber: document.querySelector('.project-numbers-price-number-pomorie'),
-  pomorieProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-pomorie'),
-  pomorieProjectBuiltAreaNumber: document.querySelector('.project-numbers-built-area-number-pomorie'),
+  // pomorieProjectPriceNumber: document.querySelector('.project-numbers-price-number-pomorie'),
+  // pomorieProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-pomorie'),
+  // pomorieProjectBuiltAreaNumber: document.querySelector('.project-numbers-built-area-number-pomorie'),
 };
 
 export const baseDevUrl = 'http://127.0.0.1:8000/';
