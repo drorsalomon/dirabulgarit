@@ -376,6 +376,10 @@ if (config.Elements.backToSearchResultsBtn)
 // *****Get pages by slug *****
 // Asset Card
 utils.addSlugNavigation(config.Elements.assetCards, 'asset');
+// Project links
+utils.addSlugNavigation(config.Elements.projectLinks, 'project');
+utils.addSlugNavigation(config.Elements.footerProjectLink, 'project');
+utils.addSlugNavigation(config.Elements.sitemapProjectLink, 'project');
 // Main Page Blog Buttons
 utils.addSlugNavigation(config.Elements.mainPageBlogBtn, 'blog');
 // Blog Cards
@@ -825,27 +829,6 @@ const PROJECT_COUNTERS = {
   //   { element: config.Elements.mountainBoutiqueProjectFloorsNumber, value: 6, suffix: '' },
   //   { element: config.Elements.mountainBoutiqueProjectApartmentsNumber, value: 46, suffix: '' },
   //   { element: config.Elements.mountainBoutiqueProjectParkingSpotsNumber, value: 51, suffix: '' },
-  // ],
-  // camelot: [
-  //   { element: config.Elements.camelotProjectPriceNumber, value: 2800000, suffix: '€', format: true },
-  //   { element: config.Elements.camelotProjectFloorsNumber, value: 4, suffix: '' },
-  //   { element: config.Elements.camelotProjectAssetsNumber, value: 10, suffix: '' },
-  //   { element: config.Elements.camelotProjectParkingSpotsNumber, value: 80, suffix: '' },
-  //   { element: config.Elements.camelotProjectAreaNumber, value: 3390, suffix: 'area' },
-  //   { element: config.Elements.camelotProjectBuiltAreaNumber, value: 6660, suffix: 'area' },
-  // ],
-  // sofiab5: [
-  //   { element: config.Elements.sofiab5ProjectPriceNumber, value: 2800, suffix: '€/\u{33A1}', format: true },
-  //   { element: config.Elements.sofiab5ProjectFloorsNumber, value: 3, suffix: '' },
-  //   { element: config.Elements.sofiab5ProjectAssetsNumber, value: 3, suffix: '' },
-  //   { element: config.Elements.sofiab5ProjectStoresNumber, value: 2, suffix: '' },
-  //   { element: config.Elements.sofiab5ProjectBuiltAreaNumber, value: 267, suffix: 'area' },
-  // ],
-  // samokov: [{ element: config.Elements.samokovProjectAreaNumber, value: 93000, suffix: 'area' }],
-  // pomorie: [
-  //   { element: config.Elements.pomorieProjectPriceNumber, value: 653350, suffix: '€', format: true },
-  //   { element: config.Elements.pomorieProjectFloorsNumber, value: 3, suffix: '' },
-  //   { element: config.Elements.pomorieProjectBuiltAreaNumber, value: 850, suffix: 'area' },
   // ],
 };
 

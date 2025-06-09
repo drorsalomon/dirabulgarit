@@ -22,6 +22,7 @@ export const Elements = {
   homePageLink: document.querySelector('.homepage-link'),
   assetCatalogDdBtn: document.querySelector('.assets-catalog-dropdown-btn'),
   projectsDdBtn: document.querySelector('.projects-dropdown-btn'),
+  projectLinks: document.querySelectorAll('.projects-dropdown-item'),
   projectBurgasDdBtn: document.querySelector('.project-burgas-dropdown-btn'),
   projectSofiaDdBtn: document.querySelector('.project-sofia-dropdown-btn'),
   projectSvetiDdBtn: document.querySelector('.project-sveti-dropdown-btn'),
@@ -60,6 +61,7 @@ export const Elements = {
   // Footer
   footerContainer: document.querySelector('.footer-container'),
   footerCopyContainer: document.querySelector('.footer-copyright-text'),
+  footerProjectLink: document.querySelectorAll('.footer-project-link'),
   // Search Form
   searchForm: document.querySelector('.search-form'),
   searchDdBtn: document.querySelectorAll('.search-filter-dropdown--btn'),
@@ -151,6 +153,8 @@ export const Elements = {
   contactUsDescriptionInput: document.querySelector('.contact-us-description-input'),
   contactUsPhoneInvalid: document.querySelector('.contact-us-phone-invalid '),
   contactUsEmailInvalid: document.querySelector('.contact-us-email-invalid '),
+  // Sitemap
+  sitemapProjectLink: document.querySelectorAll('.siteMap-project-link'),
   // Webinar
   webinarForm: document.querySelector('.webinar-form'),
   webinarFormInputName: document.querySelector('.webinar-input-name'),
@@ -168,10 +172,10 @@ export const Elements = {
   azimuthProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-atlas-azimuth'),
   azimuthProjectAreaNumber: document.querySelector('.project-numbers-area-number-atlas-azimuth'),
   // Fort Noks Suites
-  fortNoksSuitesProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-fort-noks-suites'),
-  fortNoksSuitesProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-fort-noks-suites'),
-  fortNoksSuitesProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-fort-noks-suites'),
-  fortNoksSuitesProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-fort-noks-suites'),
+  fortNoksSuitesProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-fort-noks-premier-suites'),
+  fortNoksSuitesProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-fort-noks-premier-suites'),
+  fortNoksSuitesProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-fort-noks-premier-suites'),
+  fortNoksSuitesProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-fort-noks-premier-suites'),
   // Green Fort Suites
   greenFortSuitesProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-green-fort-suites'),
   greenFortSuitesProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-green-fort-suites'),
@@ -190,9 +194,9 @@ export const Elements = {
   nessebarFortResidenceProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-nessebar-fort-residence'),
   nessebarFortResidenceProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-nessebar-fort-residence'),
   // Enkibuild Lighthouse
-  enkibuildLighthouseProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-enkibuild-lighthouse'),
-  enkibuildLighthouseProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-enkibuild-lighthouse'),
-  enkibuildLighthouseProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-enkibuild-lighthouse'),
+  enkibuildLighthouseProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-lighthouse-premium-apartments'),
+  enkibuildLighthouseProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-lighthouse-premium-apartments'),
+  enkibuildLighthouseProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-lighthouse-premium-apartments'),
   // Sinemorets Villas
   sinemoretsVillasProjectBuildingsNumber: document.querySelector('.project-numbers-buildings-number-sinemorets-villas'),
   sinemoretsVillasProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-sinemorets-villas'),
@@ -245,25 +249,6 @@ export const Elements = {
   // mountainBoutiqueProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-mountain-boutique'),
   // mountainBoutiqueProjectApartmentsNumber: document.querySelector('.project-numbers-apartments-number-mountain-boutique'),
   // mountainBoutiqueProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-mountain-boutique'),
-  // Camelot
-  // camelotProjectPriceNumber: document.querySelector('.project-numbers-price-number-camelot'),
-  // camelotProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-camelot'),
-  // camelotProjectAssetsNumber: document.querySelector('.project-numbers-assets-number-camelot'),
-  // camelotProjectParkingSpotsNumber: document.querySelector('.project-numbers-parking-spots-number-camelot'),
-  // camelotProjectAreaNumber: document.querySelector('.project-numbers-area-number-camelot'),
-  // camelotProjectBuiltAreaNumber: document.querySelector('.project-numbers-built-area-number-camelot'),
-  // Sofia B5
-  // sofiab5ProjectPriceNumber: document.querySelector('.project-numbers-price-number-sofia-b5'),
-  // sofiab5ProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-sofia-b5'),
-  // sofiab5ProjectAssetsNumber: document.querySelector('.project-numbers-assets-number-sofia-b5'),
-  // sofiab5ProjectStoresNumber: document.querySelector('.project-numbers-stores-number-sofia-b5'),
-  // sofiab5ProjectBuiltAreaNumber: document.querySelector('.project-numbers-built-area-number-sofia-b5'),
-  // Samokov
-  // samokovProjectAreaNumber: document.querySelector('.project-numbers-area-number-samokov'),
-  // Pomorie
-  // pomorieProjectPriceNumber: document.querySelector('.project-numbers-price-number-pomorie'),
-  // pomorieProjectFloorsNumber: document.querySelector('.project-numbers-floors-number-pomorie'),
-  // pomorieProjectBuiltAreaNumber: document.querySelector('.project-numbers-built-area-number-pomorie'),
 };
 
 export const baseDevUrl = 'http://127.0.0.1:8000/';

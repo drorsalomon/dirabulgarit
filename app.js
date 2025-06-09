@@ -27,10 +27,6 @@ const ruAssetRouter = require('./routes/ruAssetRoutes');
 const ruProjectRouter = require('./routes/ruProjectRoutes');
 const ruBlogRouter = require('./routes/ruBlogRoutes');
 const { dailyAssetPriceNisUpdate, getZohoRefreshToken, deleteOldPDFs } = require('./services/cronJobs');
-
-//const commercialRouter = require('./routes/commercialRoutes');
-//const enCommercialRouter = require('./routes/enCommercialRoutes');
-//const ruCommercialRouter = require('./routes/ruCommercialRoutes');
 //const landingRouter = require('./routes/landingRoutes');
 
 // Start express app
@@ -166,20 +162,17 @@ app.use('/user', userRouter);
 app.use('/project', projectRouter);
 app.use('/blog', blogRouter);
 app.use('/api', apiRouter);
-//app.use('/commercial', commercialRouter);
 //app.use('/landing', landingRouter);
 // English
 app.use('/en', enViewRouter);
 app.use('/en/asset', enAssetRouter);
 app.use('/en/project', enProjectRouter);
 app.use('/en/blog', enBlogRouter);
-//app.use('/en/commercial', enCommercialRouter);
 // Russian
 app.use('/ru', ruViewRouter);
 app.use('/ru/asset', ruAssetRouter);
 app.use('/ru/project', ruProjectRouter);
 app.use('/ru/blog', ruBlogRouter);
-//app.use('/ru/commercial', ruCommercialRouter);
 
 dailyAssetPriceNisUpdate.start();
 //getZohoRefreshToken.start();

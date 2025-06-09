@@ -21,7 +21,7 @@
   height: 60rem;
   width: 100%;
 }
-.project-main-image-col.project-main-image-col-fort-noks-suites {
+.project-main-image-col.project-main-image-col-fort-noks-premier-suites {
   position: relative;
   padding: 0 !important;
   background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/fort-noks-premier-suits/fort-noks-premier-suits1744278279030-fort-noks-premier-suits-3.webp");
@@ -76,7 +76,7 @@
   height: 60rem;
   width: 100%;
 }
-.project-main-image-col.project-main-image-col-enkibuild-lighthouse {
+.project-main-image-col.project-main-image-col-lighthouse-premium-apartments {
   position: relative;
   padding: 0 !important;
   background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0.6), rgba(37, 48, 70, 0.6)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/enkibuild-lighthouse/1748510894774-enkibuild-lighthouse-1.webp");
@@ -110,7 +110,7 @@
   color: #ffffff;
   font-size: 4.2rem;
 }
-.project-main-image-headline.project-main-image-headline-fort-noks-suites {
+.project-main-image-headline.project-main-image-headline-fort-noks-premier-suites {
   position: absolute;
   top: 50%;
   left: 40%;
@@ -165,7 +165,7 @@
   color: #ffffff;
   font-size: 4.2rem;
 }
-.project-main-image-headline.project-main-image-headline-enkibuild-lighthouse {
+.project-main-image-headline.project-main-image-headline-lighthouse-premium-apartments {
   position: absolute;
   top: 50%;
   left: 40%;
@@ -315,7 +315,7 @@
   height: 20rem;
   width: 100%;
 }
-.project-mid-image-container.project-mid-image-container-enkibuild-lighthouse {
+.project-mid-image-container.project-mid-image-container-lighthouse-premium-apartments {
   position: relative;
   padding: 0 !important;
   background-image: linear-gradient(to right bottom, rgba(37, 48, 70, 0), rgba(37, 48, 70, 0)), url("https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/enkibuild-lighthouse/1748510894808-enkibuild-lighthouse-3.webp");

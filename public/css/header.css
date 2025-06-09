@@ -143,6 +143,10 @@ nav,
   margin-top: 1rem;
 }
 
+.projects-dropdown-item {
+  cursor: pointer;
+}
+
 .dropdown-menu {
   position: static;
   float: none;

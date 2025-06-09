@@ -17,7 +17,7 @@
   &.project-main-image-col-atlas-azimuth {
     @include projectBackgroundImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/atlas-azimuth-images/1727631412992-azimuth-project-10.webp');
   }
-  &.project-main-image-col-fort-noks-suites {
+  &.project-main-image-col-fort-noks-premier-suites {
     @include projectBackgroundImage(
       'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/fort-noks-premier-suits/fort-noks-premier-suits1744278279030-fort-noks-premier-suits-3.webp'
     );
@@ -36,7 +36,7 @@
       'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/nessebar-fort-residence/1744635596814-nessebar-fort-residence-2.webp'
     );
   }
-  &.project-main-image-col-enkibuild-lighthouse {
+  &.project-main-image-col-lighthouse-premium-apartments {
     @include projectBackgroundImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/enkibuild-lighthouse/1748510894774-enkibuild-lighthouse-1.webp');
   }
   &.project-main-image-col-sinemorets-villas {
@@ -87,21 +87,6 @@
   //     'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/mountain-view-boutique-images1736851154917-mountain-view-boutique-1.webp'
   //   );
   // }
-
-  // &.project-main-image-col-camelot {
-  //   @include projectBackgroundImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155260-camelot-20.webp');
-  // }
-  // &.project-main-image-col-sofia-b5 {
-  //   @include projectBackgroundImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-b4-images/1726409077363-sofia-b5-building-4.webp');
-  // }
-  // &.project-main-image-col-samokov {
-  //   @include projectBackgroundImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/samokov-images/1727012351222-samokov-development-1.webp');
-  // }
-  // &.project-main-image-col-pomorie {
-  //   @include projectBackgroundImage(
-  //     'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/pomorie-commercial-building-images/1728904938822-pomorie-commercial-building-1.webp'
-  //   );
-  // }
 }
 
 .project-main-image-headline {
@@ -109,7 +94,7 @@
     @include projectHeadline(40%);
     font-size: $h2;
   }
-  &.project-main-image-headline-fort-noks-suites {
+  &.project-main-image-headline-fort-noks-premier-suites {
     @include projectHeadline(40%);
     font-size: $h2;
   }
@@ -129,7 +114,7 @@
     @include projectHeadline(40%);
     font-size: $h2;
   }
-  &.project-main-image-headline-enkibuild-lighthouse {
+  &.project-main-image-headline-lighthouse-premium-apartments {
     @include projectHeadline(40%);
     font-size: $h2;
   }
@@ -172,22 +157,6 @@
   // }
   // &.project-main-image-headline-mountain-boutique {
   //   @include projectHeadline(40%);
-  //   font-size: $h2;
-  // }
-  // &.project-main-image-headline-camelot {
-  //   @include projectHeadline(50%);
-  //   font-size: $h2;
-  // }
-  // &.project-main-image-headline-sofia-b5 {
-  //   @include projectHeadline(43%);
-  //   font-size: $h2;
-  // }
-  // &.project-main-image-headline-samokov {
-  //   @include projectHeadline(46%);
-  //   font-size: $h2;
-  // }
-  // &.project-main-image-headline-pomorie {
-  //   @include projectHeadline(46%);
   //   font-size: $h2;
   // }
 }
@@ -304,7 +273,7 @@
       20rem
     );
   }
-  &.project-mid-image-container-enkibuild-lighthouse {
+  &.project-mid-image-container-lighthouse-premium-apartments {
     @include projectMiddleImage(
       'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/enkibuild-lighthouse/1748510894808-enkibuild-lighthouse-3.webp',
       contain,
@@ -379,23 +348,6 @@
   //     'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-vitosha-mountain-view-images/1735387898022-vitosha-mountain-view-4.webp',
   //     contain,
   //     30rem
-  //   );
-  // }
-  // &.project-mid-image-container-camelot {
-  //   @include projectMiddleImage('https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/camelot-images/1725787155348-camelot-48.webp', 100% 28rem, 60rem);
-  // }
-  // &.project-mid-image-container-sofia-b5 {
-  //   @include projectMiddleImage(
-  //     'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/sofia-b4-images/1726409077338-sofia-b5-building-2.webp',
-  //     100% 15rem,
-  //     25rem
-  //   );
-  // }
-  // &.project-mid-image-container-samokov {
-  //   @include projectMiddleImage(
-  //     'https://dirabulgaritbucket.s3.eu-north-1.amazonaws.com/samokov-images/1727012351227-samokov-development-2.webp',
-  //     100% 30rem,
-  //     40rem
   //   );
   // }
 }

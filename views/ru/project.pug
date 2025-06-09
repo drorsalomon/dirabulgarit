@@ -1,0 +1,187 @@
+extends ./base
+
+block head
+    title=`${project.name}`
+    meta(name="description" content=`${project.metaDescription}`)
+    meta(name="robots" content="index, follow")
+    link(rel="canonical" href=`https://www.dirabulgarit.com/ru/project/${project.slug}`)
+    link(rel="alternate" href=`https://www.dirabulgarit.com/ru/project/${project.slug}` hreflang="ru")
+    link(rel="alternate" href=`https://www.dirabulgarit.com/en/project/${project.slug}` hreflang="en")
+    link(rel="alternate" href=`https://www.dirabulgarit.com/project/${project.slug}` hreflang="he")
+
+    meta(property="og:title" content=`${project.name}`)
+    meta(property="og:description" content=`${project.metaDescription}`)
+    meta(property="og:image" content=`${project.mainImage}`)
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="630")
+    include ../he/_headLinksScripts
+
+block content 
+    .container-fluid.project-main-image-container(role="img" aria-labelledby=`${project.mainImageHiddenClass}`)
+        span.visually-hidden(id=`${project.mainImageHiddenClass}`)=`${project.mainImageHiddenDescription}`
+        .row.project-main-image-row
+            .col.project-main-image-col(class=`project-main-image-col-${project.slug}`)
+                h1.project-main-image-headline(class=`project-main-image-headline-${project.slug}`)=`${project.name}`
+    
+    .container-fluid.project-gallery-container
+        .row.project-gallery-headline-row.text-center.mx-2
+            .col-12.project-gallery-headline-col.p-0    
+                h2.project-gallery-headline Галерея
+        .row.project-gallery-row.text-center.mx-2
+            each image in projectGalleryImages
+                .col-12.col-sm-6.col-md-4.project-gallery-col 
+                    img.project-gallery-image(src=`${image.src}` alt=`${image.alt}` loading="lazy" data-bs-toggle="modal" data-bs-target="#projectModal") 
+
+    #projectModal.modal.fade.asset-gallery-modal.text-center(tabindex='-1' aria-labelledby='projectModalLabel' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered
+            .asset-gallery-modal-content.modal-content
+                .row.d-flex
+                    .col-6.align-content-center
+                        div.text-start.px-4
+                            div.asset-gallery-img-text=`${project.name}`
+                    .col-6
+                        div.text-end.p-3
+                            button.btn-close.asset-gallery-modal-close-btn.p-2.my-auto(type='button' data-bs-dismiss='modal' aria-label='Close')
+                #projectCarousel.carousel.slide(data-bs-touch='true' data-bs-interval='30000' data-bs-ride='carousel')
+                    .carousel-inner.asset-modal-carousel-inner
+                        each image in projectModalImages
+                            if image.active
+                                .carousel-item.asset-gallery-carousel-item.align-content-center.active
+                                    img(src=`${image.src}` alt=`${image.alt}`) 
+                            else
+                                .carousel-item.asset-gallery-carousel-item.align-content-center
+                                    img(src=`${image.src}` alt=`${image.alt}`) 
+                    button.carousel-control-prev(type='button' data-bs-target='#projectCarousel' data-bs-slide='prev')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-prev-icon.asset-gallery-carousel-prev-icon(aria-hidden='true')
+                    button.carousel-control-next(type='button' data-bs-target='#projectCarousel' data-bs-slide='next')
+                        div.carousel-icon-container.d-flex.align-content-center.justify-content-center
+                            span.carousel-control-next-icon.asset-gallery-carousel-next-icon(aria-hidden='true')        
+    
+    .container-fluid.project-numbers-container
+        .row.project-numbers-row.text-end.justify-content-center.mx-5.flex-md-row-reverse
+            if projectNumbersBuildings
+                .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                    div.project-numbers-buildings-number(class=`project-numbers-buildings-number-${project.slug}`)          
+                    div.project-numbers-text Здания        
+            if projectNumbersCommercial
+                .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                    div.project-numbers-buildings-number(class=`project-numbers-commercial-number-${project.slug}`)         
+                    div.project-numbers-text Коммерческий       
+            if projectNumbersFloors
+                .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                    div.project-numbers-floors-number(class=`project-numbers-floors-number-${project.slug}`)          
+                    div.project-numbers-text Этажи        
+            if projectNumbersApartments
+                .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                    div.project-numbers-apartments-number(class=`project-numbers-apartments-number-${project.slug}`)          
+                    div.project-numbers-text Квартиры
+            if projectNumbersParking
+                .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                    div.project-numbers-parking-spots-number(class=`project-numbers-parking-spots-number-${project.slug}`)        
+                    div.project-numbers-text Парковочные места
+            if projectNumbersArea
+                .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                    div.project-numbers-area-number(class=`project-numbers-area-number-${project.slug}` dir='rtl') 
+                    div.project-numbers-text Область
+            if projectNumbersGreenArea    
+                .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                    div.project-numbers-green-area-number(class=`project-numbers-green-area-number-${project.slug}` dir='rtl')   
+                    div.project-numbers-text Зеленые зоны
+            if projectNumbersBuildStart    
+                .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center
+                    div.project-numbers-start-number=projectNumbersBuildStart        
+                    div.project-numbers-text Начало строительства
+            if projectNumbersBuildEnd    
+                .col-12.col-md-6.col-xl-3.project-numbers-headline-col.p-0.text-center   
+                    div.project-numbers-end-number=projectNumbersBuildEnd 
+                    div.project-numbers-text Окончание строительства
+    
+    if projectTexts 
+        .container-fluid.project-details-container
+            .row.project-details-row.text-end.mx-5.justify-content-center
+                .col-12.project-details-headline-col.p-0.text-center
+                    h2.project-details-headline=`${project.name}`
+                .col-10.project-details-headline-col.p-0.text-start
+                    each text in projectTexts
+                        if text.textType === 'sub-headline'
+                            h3.project-details-sub-headline!=text.content
+                        else if text.textType === 'text'
+                            div.project-details-text!=text.content
+                        else if text.textType === 'image-1'
+                            div.project-detail-img-container.d-flex.justify-content-center   
+                                img.project-details-img(src=`${projectTextImg[0].src}` alt=`${projectTextImg[0].alt}`)
+                            div.project-details-text.text-center(dir='rtl')!=projectTextImg[0].text
+                        else if text.textType === 'image-2'
+                            div.project-detail-img-container.d-flex.justify-content-center   
+                                img.project-details-img(src=`${projectTextImg[1].src}` alt=`${projectTextImg[1].alt}`)
+                            div.project-details-text.text-center(dir='rtl')!=projectTextImg[1].text
+                        else if text.textType === 'image-3'
+                            div.project-detail-img-container.d-flex.justify-content-center   
+                                img.project-details-img(src=`${projectTextImg[3].src}` alt=`${projectTextImg[3].alt}`)
+                            div.project-details-text.text-center(dir='rtl')!=projectTextImg[3].text
+
+    if projectAmenities 
+        .container-fluid.project-amenities-container
+            .row.project-amenities-headline-row.text-center.mx-5
+                .col-12.project-amenities-headline-col.p-0
+                    h2.project-amenities-headline Удобства
+            .row.project-amenities-row.text-end.mx-5.justify-content-end 
+                each amenity in projectAmenities
+                    .col-12.col-sm-6.col-lg-4.project-amenities-col.p-0.text-center
+                        img.project-amenities-icon(src=`${amenity.src}` alt=`${amenity.alt}`)
+                        div.project-amenities-text=amenity.amenity
+
+    if project.midImageHiddenDescription
+        .container-fluid.project-mid-image-container(class=`project-mid-image-container-${project.slug}` role="img" aria-labelledby=`${project.midImageHiddenClass}`)
+            span.visually-hidden(id=`${project.midImageHiddenClass}`)=`${project.midImageHiddenDescription}`
+       
+    if project.location.coordinates[0]  
+        .container-fluid.project-map-container
+            .row.project-map-row.text-center.mx-2.justify-content-center 
+                .col-12.project-map-healine-col
+                    h2.project-map-headline Расположение
+                .col-12.col-md-10.project-map-col
+                    div.project-map(id='map' data-long=`${project.location.coordinates[0]}` data-lat=`${project.location.coordinates[1]}` data-title=`${project.name}`) 
+
+    if project.videoURL   
+        .container-fluid.project-video-container
+                .row.asset-video-row.mx-3.justify-content-center 
+                    .col-12.col-md-10.asset-video-col.text-center(role="region" aria-labelledby=`${project.videoHiddenClass}`)
+                        iframe(src=`${project.videoURL}` frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen).asset-video                    
+                    span.visually-hidden(id=`${project.videoHiddenClass}`)=`${project.videoHiddenDescription}`      
+
+    if project.installments      
+        .container-fluid.project-installment-scheme-container
+            .row.project-installment-scheme-row.text-center.mx-5.justify-content-center 
+                .col-12.project-installment-scheme-healine-col
+                    h2.project-installment-scheme-headline Планы оплаты
+                .col-12.project-installment-scheme-table-col.d-lg-flex.justify-content-lg-center   
+                    table.table-responsive.project-installment-scheme-table
+                        thead.project-installment-table-head
+                            tr
+                            th.project-installment-table-th(scope='col') 
+                            each title in project.installments.titles
+                                th.project-installment-table-th(scope='col')=title
+                        tbody.table-group-divider
+                            each plan in project.installments.plans     
+                                tr
+                                th.project-installment-table-th(scope='row')=plan.title
+                                each detail in plan.details    
+                                    td=detail           
+    
+    if projectAssets   
+        .container-fluid.project-assets-container
+            .row.asset-related-assets-row.justify-content-center.mx-5.text-center
+                .col-12.project-assets-headline-col
+                    h2.project-assets-headline Доступные объекты недвижимости в проекте
+                each asset in projectAssets
+                    include ./_assetsCards
+            .row.mobile-asset-related-assets-row.justify-content-center.mx-1.text-center
+                .col-12.project-assets-headline-col
+                    h2.project-assets-headline Доступные объекты недвижимости в проекте
+                each asset in projectAssets
+                    include ./_mobileAssetsCards 
+
+    include ./_contactUsFixed  
+    include ./_contactUsFixedMobile
